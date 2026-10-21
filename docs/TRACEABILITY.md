@@ -53,6 +53,6 @@ Status: **Done** = implemented and covered by an executed automated test; **Part
 | NFR-03 web vitals | **Not measured** | — | |
 | A11Y-01 | Partial | semantic markup, labels, skip link, focus styles, aria-live | **no screen-reader/axe/keyboard audit run** |
 | SEO-01/02 | Partial | titles, canonical, sitemap, robots, noindex, breadcrumbs JSON-LD | sitemap cached 10 min; no OG images |
-| ANA-01 | Partial | search-zero, view, official-link events (no PII) | no dashboards; save/plan/enquiry events not recorded |
+| ANA-01 | Partial | search-zero, view, official-link, save, plan, enquiry, consultation events (no PII) | `AnalyticsTest`. No reporting dashboard or consent banner yet |
 | OPS-01..07 | Partial | docs + CI file | not executed on infrastructure |
 | UAT-01..10, 14(15) | Covered by automated tests where feasible | see tests | UAT-11..13, 16: R2/ops |

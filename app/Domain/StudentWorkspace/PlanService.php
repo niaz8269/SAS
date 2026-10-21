@@ -5,6 +5,7 @@ namespace App\Domain\StudentWorkspace;
 use App\Domain\Communication\ReminderScheduler;
 use App\Domain\Editorial\AuditLog;
 use App\Enums\PlanStatus as P;
+use App\Models\AnalyticsEvent;
 use App\Models\ApplicationPlan;
 use App\Models\SavedScholarship;
 use App\Models\ScholarshipCycle;
@@ -36,6 +37,9 @@ class PlanService
     {
         // Saving does not create an application and does not enable marketing consent (STU-03).
         $saved = SavedScholarship::firstOrCreate(['user_id' => $user->id, 'cycle_id' => $cycle->id]);
+        if ($saved->wasRecentlyCreated) {
+            AnalyticsEvent::track('scholarship_saved', $cycle->id);
+        }
         $this->reminders->syncUserCycle($user, $cycle);
 
         return $saved;
@@ -64,6 +68,7 @@ class PlanService
                 $plan->tasks()->create(['requirement_id' => $r->id, 'title' => Str::limit($r->text, 180), 'snapshot_text' => $r->text, 'is_custom' => false]);
             }
             AuditLog::record('plan.created', $plan, null, ['cycle_id' => $cycle->id], null, $user);
+            AnalyticsEvent::track('plan_created', $cycle->id);
             $this->reminders->syncUserCycle($user, $cycle);
 
             return $plan;

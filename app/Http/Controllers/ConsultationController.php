@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AnalyticsEvent;
 use App\Models\Consultation;
 use App\Models\Service;
 use Illuminate\Http\Request;
@@ -39,6 +40,7 @@ class ConsultationController extends Controller
         $consultation->user_id = $request->user()?->id;
         $consultation->status = 'requested';
         $consultation->save();
+        AnalyticsEvent::track('consultation_requested', null, ['service' => $consultation->service_id !== null]);
 
         return redirect()->route('consultations.thanks')->with('consultation_reference', $consultation->reference);
     }

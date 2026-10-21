@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Enums\EnquiryStatus;
 use App\Mail\EnquiryReceived;
 use App\Mail\StaffEnquiryAlert;
+use App\Models\AnalyticsEvent;
 use App\Models\Enquiry;
 use App\Models\EnquiryMessage;
 use App\Models\ScholarshipCycle;
@@ -74,6 +75,8 @@ class EnquiryController extends Controller
 
             return $enquiry;
         });
+
+        AnalyticsEvent::track('enquiry_submitted', $enquiry->cycle_id, ['category' => $enquiry->category, 'service' => $enquiry->service_id !== null]);
 
         // Queued after the enquiry is stored. A mail failure is retried by the queue and never rolls the enquiry back.
         $link = route('enquiries.show', ['enquiry' => $enquiry->public_id, 'token' => $token]);

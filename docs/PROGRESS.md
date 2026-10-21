@@ -22,8 +22,8 @@ Last updated: 2026-10-22. Release in scope: **R1**.
 6. **No Content-Security-Policy** (Alpine/Livewire need a plan); see DEPLOYMENT.md.
 7. **Content**: no real scholarship, destination, article or service content exists. Demo records are fictional and `[DEMO]`-labelled. Service pages are seeded as unpublished drafts. Legal pages are drafts. The 50-cycle / 5-destination / 8-service-page / 5-guide launch baseline is an editorial task, not code.
 8. **Live-content edits are not staged**: only reviewers/administrators may edit a published cycle and the change is immediate. A staged-revision model is R2 (partner moderation).
-9. **Static analysis** is level 1: Larastan at level 2+ reports ~60 findings that are mostly enum-cast and relation typing noise; not yet triaged.
-10. Importer runs synchronously (limit 5,000 rows); no progress UI. Analytics events are limited to search-zero, detail view and official-link click. Email bounce/suppression handling is not built.
+9. **Static analysis** is level 1. Level 2 reports 74 findings, triaged 2026-10-23: all are Larastan not inferring enum casts and untyped relation generics (no real defects). Raising the level needs PHPDoc generics on ~40 models.
+10. Importer runs synchronously (limit 5,000 rows); no progress UI. Analytics records search-zero, detail view, official-link click, save, plan, enquiry and consultation events (no personal data); there is no reporting UI yet. Email bounce/suppression handling is not built.
 11. `docs/TRACEABILITY.md` lists per-requirement status.
 
 ## Open owner decisions (see DECISIONS.md)
