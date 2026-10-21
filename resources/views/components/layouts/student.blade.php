@@ -8,6 +8,8 @@
         ['Profile', route('student.profile.edit'), 'student.profile.*'],
         ['My enquiries', route('student.enquiries.index'), 'student.enquiries.*'],
         ['Notifications', route('student.notifications.index'), 'student.notifications.*'],
+        ['Security', route('student.security'), 'student.security'],
+        ['Privacy and data', route('student.privacy'), 'student.privacy*'],
     ];
 @endphp
 <!DOCTYPE html>

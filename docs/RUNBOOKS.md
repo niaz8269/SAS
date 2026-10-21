@@ -45,7 +45,7 @@ Rich text is sanitised on output (`App\Support\Html`). Editors cannot publish; r
 
 1. Restore the latest DB backup to an isolated instance; run `php artisan migrate --force`.
 2. Confirm row counts, log in, open a published scholarship and a student document download.
-3. Replay deletion requests recorded since the backup (PRIV-04): deleted users' data must not be reactivated. *No deletion-request workflow exists yet (see PROGRESS.md), so there is nothing to replay today.*
+3. Replay deletions (PRIV-04): `php artisan sas:replay-deletions`. The `deletion_tombstones` table (keyed email hashes only) must survive the restore; if the restore replaced it with an older copy, re-apply the tombstones kept from the live system first. Confirm deleted users and their documents are gone before reopening access.
 4. Record time taken against RTO 8 h.
 
 ## Incident basics

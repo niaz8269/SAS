@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\TwoFactorChallengeController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\CorrectionController;
 use App\Http\Controllers\EnquiryController;
@@ -64,6 +65,8 @@ Route::middleware('guest')->group(function () {
     Route::post('/forgot-password', [PasswordResetController::class, 'email'])->middleware('throttle:password-reset')->name('password.email');
     Route::get('/reset-password/{token}', [PasswordResetController::class, 'reset'])->name('password.reset');
     Route::post('/reset-password', [PasswordResetController::class, 'update'])->middleware('throttle:password-reset')->name('password.update');
+    Route::get('/two-factor-challenge', [TwoFactorChallengeController::class, 'create'])->name('two-factor.challenge');
+    Route::post('/two-factor-challenge', [TwoFactorChallengeController::class, 'store'])->middleware('throttle:login')->name('two-factor.store');
 });
 Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')->name('logout');
 
@@ -107,6 +110,17 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::delete('/documents/{document:public_id}', [Student\DocumentController::class, 'destroy'])->name('documents.destroy');
 
     Route::get('/enquiries', Student\EnquiryListController::class)->name('enquiries.index');
+
+    Route::get('/security', [Student\SecurityController::class, 'show'])->name('security');
+    Route::post('/security/enable', [Student\SecurityController::class, 'enable'])->middleware('throttle:login')->name('security.enable');
+    Route::post('/security/disable', [Student\SecurityController::class, 'disable'])->middleware('throttle:login')->name('security.disable');
+    Route::post('/security/recovery-codes', [Student\SecurityController::class, 'regenerate'])->middleware('throttle:login')->name('security.recovery');
+
+    Route::get('/privacy', [Student\PrivacyController::class, 'show'])->name('privacy');
+    Route::post('/privacy/export', [Student\PrivacyController::class, 'export'])->middleware('throttle:login')->name('privacy.export');
+    Route::post('/privacy/delete-request', [Student\PrivacyController::class, 'requestDeletion'])->middleware('throttle:login')->name('privacy.delete.request');
+    Route::get('/privacy/delete/{token}', [Student\PrivacyController::class, 'confirm'])->name('privacy.delete.confirm');
+    Route::delete('/privacy/delete/{token}', [Student\PrivacyController::class, 'destroy'])->middleware('throttle:login')->name('privacy.delete.destroy');
     Route::get('/notifications', [Student\NotificationController::class, 'index'])->name('notifications.index');
     Route::put('/notifications/preferences', [Student\NotificationController::class, 'update'])->name('notifications.update');
     Route::post('/notifications/read-all', [Student\NotificationController::class, 'readAll'])->name('notifications.read-all');

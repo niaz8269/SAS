@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Domain\Identity\TwoFactor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,6 +27,15 @@ class LoginController extends Controller
         if (! $user->isActive()) {
             Auth::logout();
             throw ValidationException::withMessages(['email' => 'This account is not active. Please contact support.']);
+        }
+
+        // Anyone with an authenticator app (students who opted in, and all staff) must pass the challenge before a session exists.
+        if (app(TwoFactor::class)->enabled($user)) {
+            Auth::guard('web')->logout();
+            $request->session()->regenerate();
+            $request->session()->put('mfa', ['user_id' => $user->id, 'remember' => $request->boolean('remember'), 'at' => now()->timestamp]);
+
+            return redirect()->route('two-factor.challenge');
         }
 
         $request->session()->regenerate();

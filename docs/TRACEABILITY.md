@@ -9,7 +9,7 @@ Status: **Done** = implemented and covered by an executed automated test; **Part
 | CORE-03/05 no guarantees, no portal passwords | Done (content) | copy on pages, `legal` drafts | manual review |
 | CORE-04 sponsored labelled | Done | `sponsored`/`sponsored_label`, card + detail badge | admin test covers permission gate |
 | AUTH-01 email/password, verification, reset, logout | Done | `Auth\*Controller` | `AuthAndIsolationTest` |
-| AUTH-02 staff MFA, rate limits, session revoke | Partial | Filament required TOTP; limiters; `User::suspend` | `AdminPanelTest` (forced MFA set-up, suspension). **Student MFA option not built** |
+| AUTH-02 staff MFA, rate limits, session revoke | Done | Filament required TOTP; optional student TOTP + recovery codes; challenge applied to any account with an authenticator (so staff cannot bypass it via the site login); limiters; `User::suspend` | `AdminPanelTest`, `PrivacyAndMfaTest` |
 | AUTH-03 policies on every object | Done | policies + route keys + Filament scoping | `AuthAndIsolationTest`, `DocumentTest`, `AdminPanelTest` |
 | AUTH-04 assignment-scoped access | Done (enquiries) | `EnquiryPolicy`, resource query scope | `test_enquiry_policy_…`, advisor scoping test. Case-file access is R2 |
 | AUTH-05 separate publish/refund/role permissions; no escalation | Done (R1 perms) | `config/sas.php`, guarded attributes | registration/profile escalation tests, role tests |
@@ -46,9 +46,9 @@ Status: **Done** = implemented and covered by an executed automated test; **Part
 | SEC-03 private downloads, 5 min links | Partial | policy-checked stream (local) / S3 temporary URL | S3 path not exercised |
 | SEC-04 SSRF | Done by construction | importer never fetches URLs; `safeUrl` validation | `ImportTest::test_dangerous_urls…` |
 | PRIV-01 data inventory/minimal logging | Partial | audits exclude contents | no formal inventory document |
-| PRIV-02 export and deletion requests | **Not done** | — | planned |
+| PRIV-02 export and deletion requests | Done | `AccountPrivacy`, `Student\PrivacyController` (password re-auth, emailed single-use 24 h link, typed confirmation) | `PrivacyAndMfaTest`. Retention periods for financial records are an R2/owner matter |
 | PRIV-03 retention | Partial | `sas:retention-cleanup` (disabled until `retention.approved`) | only rejected-upload purge |
-| PRIV-04 deletion replay | Not done | — | depends on PRIV-02 |
+| PRIV-04 deletion replay | Done | tombstones (keyed email hash only) + `php artisan sas:replay-deletions` | `PrivacyAndMfaTest::test_restoring_a_backup…`. Not yet exercised with a real backup restore |
 | NFR-02 load | **Not tested** | — | no 10k/50k dataset run |
 | NFR-03 web vitals | **Not measured** | — | |
 | A11Y-01 | Partial | semantic markup, labels, skip link, focus styles, aria-live | **no screen-reader/axe/keyboard audit run** |

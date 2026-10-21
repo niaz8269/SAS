@@ -9,14 +9,14 @@ Last updated: 2026-10-22. Release in scope: **R1**.
 - **Scholarship domain**: programme/cycle split, routes, versioned deadlines (exact/date-only/rolling/not-announced/route-dependent), evidence, editorial workflow with separation of duties, CSV importer (staged, validated, idempotent, never publishes), correction-driven re-review.
 - **Student workspace**: registration with email verification, profile (grades kept in original scale), saved scholarships, application plans with checklist snapshots and "requirements updated" prompt, student-reported submission, private document vault (quarantine, scan, opaque keys, owner-only download), notification preferences, deadline reminders (30/14/7/1 days), enquiry list.
 - **Staff admin (Filament, `/admin`)**: required authenticator-app MFA, role-based navigation, cycles with workflow buttons, deadline history/change action, sources/benefits/requirements/criteria, enquiries (assignment-scoped, public replies vs internal notes), consultation confirmation, services, articles, destinations, taxonomies, imports, users/roles, audit log, operations dashboard.
-- **Automated tests: 153 tests, 728 assertions, all passing** (`php vendor/bin/phpunit`, run 2026-10-22). Pint applied; `phpstan` level 1 clean; asset build succeeds.
+- **Automated tests: 171 tests, 851 assertions, all passing** (`php vendor/bin/phpunit`, run 2026-10-22). Pint applied; `phpstan` level 1 clean; asset build succeeds.
 - Homepage rendered with headless Edge at 1440 px and compared with the mockup direction (forest green / ivory / lime): layout matches in structure. Real data is demo-only.
 
 ## Not done, not verified, or limited (read this before relying on the build)
 
 1. **R2/R3 not built** (by design): payments, orders, quotes, slot booking, partner portal, feeds.
-2. **PRIV-02/04 not built**: account export, deletion requests and deletion replay. Needed before launch.
-3. **Student MFA option** not built (staff MFA is enforced).
+2. ~~PRIV-02/04~~ **Built 2026-10-23**: account export, verified erasure, tombstones and `sas:replay-deletions`. Not yet run against a real backup restore. Self-service erasure is refused for staff accounts.
+3. ~~Student MFA~~ **Built 2026-10-23** (optional TOTP + recovery codes at `/student/security`).
 4. **Never run against real infrastructure**: MySQL 8.4, Redis/Horizon, S3 buckets, a real ClamAV daemon, a real mail provider. The ClamAV adapter and S3 download path are untested; tests use the fake scanner and a fake disk. Horizon is not installed.
 5. **Not measured**: NFR-02 load test (10k programmes/50k cycles), web vitals, WCAG audit (no axe/screen-reader/keyboard pass), restore drill. Responsive behaviour was only visually inspected at desktop width; a 390 px capture could not be assessed reliably (headless Edge enforces a minimum window width), so **360/390/768/1024 px are unverified**. The Filament admin was exercised through Livewire tests, not looked at in a browser. The built-in browser pane refused to open localhost, so no interactive browser session was possible.
 6. **No Content-Security-Policy** (Alpine/Livewire need a plan); see DEPLOYMENT.md.
@@ -33,7 +33,6 @@ Domain/entity/jurisdictions, prices and refund terms, gateway/tax (R2), email pr
 ## Next steps
 
 1. Owner decisions above; supply licensed imagery and real content (editorial team through the admin and CSV template).
-2. Build PRIV-02/04 (export + deletion requests) and the student MFA option.
 3. Stand up staging (MySQL, Redis + Horizon, S3, ClamAV, mail), run the suite there, add Horizon, perform load test, accessibility audit (axe + manual), restore drill, then UAT.
 4. Add a CSP in report-only mode; triage Larastan level 2+.
 5. R2 planning once the gateway and service packages are decided.
