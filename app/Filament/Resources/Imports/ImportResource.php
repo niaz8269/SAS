@@ -11,7 +11,6 @@ use App\Models\Import;
 use BackedEnum;
 use Filament\Actions\ViewAction;
 use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
@@ -61,7 +60,9 @@ class ImportResource extends Resource
         return $table->columns([
             TextColumn::make('created_at')->dateTime('j M Y H:i')->sortable(),
             TextColumn::make('filename'),
-            TextColumn::make('status')->badge()->color(fn ($s) => match ($s) { 'committed' => 'success', 'validated' => 'info', 'failed' => 'danger', default => 'gray' }),
+            TextColumn::make('status')->badge()->color(fn ($s) => match ($s) {
+                'committed' => 'success', 'validated' => 'info', 'failed' => 'danger', default => 'gray'
+            }),
             TextColumn::make('total_rows')->label('Rows'), TextColumn::make('valid_rows')->label('Valid'), TextColumn::make('error_rows')->label('Errors')->color('danger'),
         ])->recordActions([ViewAction::make()])->defaultSort('id', 'desc');
     }

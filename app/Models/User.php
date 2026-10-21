@@ -19,6 +19,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 
 // AUTH-05: only these attributes are mass assignable. Status, roles and MFA columns never are.
 #[Fillable(['name', 'email', 'password', 'phone', 'phone_country_code', 'timezone'])]
@@ -75,7 +76,7 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
     public function suspend(): void
     {
         $this->forceFill(['status' => 'suspended', 'suspended_at' => now()])->save();
-        \Illuminate\Support\Facades\DB::table('sessions')->where('user_id', $this->id)->delete();
+        DB::table('sessions')->where('user_id', $this->id)->delete();
     }
 
     public function studentProfile(): HasOne

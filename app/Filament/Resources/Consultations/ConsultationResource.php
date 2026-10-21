@@ -2,8 +2,10 @@
 
 namespace App\Filament\Resources\Consultations;
 
+use App\Domain\Editorial\AuditLog;
 use App\Filament\Resources\Consultations\Pages\ManageConsultations;
 use App\Models\Consultation;
+use App\Models\User;
 use BackedEnum;
 use Carbon\CarbonImmutable;
 use Filament\Actions\Action;
@@ -69,7 +71,9 @@ class ConsultationResource extends Resource
         return $table->columns([
             TextColumn::make('reference')->searchable(),
             TextColumn::make('name')->searchable(),
-            TextColumn::make('status')->badge()->color(fn ($state) => match ($state) { 'confirmed' => 'success', 'requested' => 'warning', default => 'gray' }),
+            TextColumn::make('status')->badge()->color(fn ($state) => match ($state) {
+                'confirmed' => 'success', 'requested' => 'warning', default => 'gray'
+            }),
             TextColumn::make('preferred_from')->label('Preferred from')->date(),
             TextColumn::make('preferred_to')->label('to')->date()->placeholder('-'),
             TextColumn::make('student_timezone')->label('Student zone'),
@@ -84,7 +88,7 @@ class ConsultationResource extends Resource
                         Select::make('timezone')->options(array_combine(\DateTimeZone::listIdentifiers(), \DateTimeZone::listIdentifiers()))->searchable()->required()
                             ->default(fn (Consultation $r) => $r->student_timezone),
                         TextInput::make('duration')->label('Minutes')->numeric()->default(30)->required()->minValue(10)->maxValue(240),
-                        Select::make('advisor_id')->label('Advisor')->options(fn () => \App\Models\User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'service_manager']))->where('status', 'active')->pluck('name', 'id'))
+                        Select::make('advisor_id')->label('Advisor')->options(fn () => User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'service_manager']))->where('status', 'active')->pluck('name', 'id'))
                             ->required()->default(fn () => auth()->id()),
                     ])
                     ->action(function (Consultation $record, array $data) {
@@ -92,7 +96,7 @@ class ConsultationResource extends Resource
                             'confirmed_start_utc' => CarbonImmutable::parse($data['start'], $data['timezone'])->utc(), 'duration_minutes' => (int) $data['duration'],
                             'advisor_id' => $data['advisor_id'], 'status' => 'confirmed',
                         ])->save();
-                        \App\Domain\Editorial\AuditLog::record('consultation.confirmed', $record);
+                        AuditLog::record('consultation.confirmed', $record);
                         Notification::make()->title('Consultation confirmed')->success()->send();
                     }),
                 Action::make('complete')->label('Mark completed')->visible(fn (Consultation $r) => $r->status === 'confirmed' && static::canEdit($r))

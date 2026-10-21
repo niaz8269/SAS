@@ -17,6 +17,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 /** The enduring programme. Annual calls live in Scholarship cycles (DATA-01). */
 class ScholarshipProgrammeResource extends Resource
@@ -45,7 +46,7 @@ class ScholarshipProgrammeResource extends Resource
     {
         return $schema->components([
             TextInput::make('title')->required()->maxLength(190)->live(onBlur: true)
-                ->afterStateUpdated(fn ($state, $set, $get) => $get('slug') ?: $set('slug', \Illuminate\Support\Str::slug($state))),
+                ->afterStateUpdated(fn ($state, $set, $get) => $get('slug') ?: $set('slug', Str::slug($state))),
             TextInput::make('slug')->required()->alphaDash()->unique(ignoreRecord: true),
             Select::make('funder_id')->relationship('funder', 'name')->searchable()->preload()
                 ->createOptionForm([TextInput::make('name')->required(), TextInput::make('slug')->required()->alphaDash()]),

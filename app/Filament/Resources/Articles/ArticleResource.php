@@ -21,6 +21,7 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 /** ADM-03 guides. Editors draft; only people who can publish may set an article to Published. Every save keeps a revision. */
 class ArticleResource extends Resource
@@ -49,7 +50,7 @@ class ArticleResource extends Resource
 
         return $schema->components([
             TextInput::make('title')->required()->maxLength(190)->live(onBlur: true)
-                ->afterStateUpdated(fn ($state, $set, $get) => $get('slug') ?: $set('slug', \Illuminate\Support\Str::slug($state))),
+                ->afterStateUpdated(fn ($state, $set, $get) => $get('slug') ?: $set('slug', Str::slug($state))),
             TextInput::make('slug')->required()->alphaDash()->unique(ignoreRecord: true),
             Select::make('category')->options(['guide' => 'Guide', 'news' => 'News', 'destination' => 'Destination', 'visa' => 'Visa', 'writing' => 'Writing'])->default('guide'),
             Select::make('status')->options(fn () => $canPublish() ? ['draft' => 'Draft', 'in_review' => 'In review', 'published' => 'Published', 'archived' => 'Archived'] : ['draft' => 'Draft', 'in_review' => 'In review'])->default('draft')->required(),
@@ -69,7 +70,9 @@ class ArticleResource extends Resource
     {
         return $table->columns([
             TextColumn::make('title')->searchable()->limit(60),
-            TextColumn::make('status')->badge()->color(fn ($state) => match ($state) { 'published' => 'success', 'in_review' => 'warning', default => 'gray' }),
+            TextColumn::make('status')->badge()->color(fn ($state) => match ($state) {
+                'published' => 'success', 'in_review' => 'warning', default => 'gray'
+            }),
             TextColumn::make('published_at')->dateTime('j M Y')->sortable(),
             TextColumn::make('author.name')->label('Author'),
         ])->recordActions([

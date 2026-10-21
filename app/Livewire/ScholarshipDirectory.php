@@ -3,9 +3,11 @@
 namespace App\Livewire;
 
 use App\Domain\Scholarship\ScholarshipSearch;
+use App\Enums\ApplicationStatus;
 use App\Models\AnalyticsEvent;
 use App\Models\Country;
 use App\Models\DegreeLevel;
+use App\Models\ScholarshipCycle;
 use App\Models\Subject;
 use Livewire\Attributes\Url;
 use Livewire\Component;
@@ -128,7 +130,7 @@ class ScholarshipDirectory extends Component
             'subject' => Subject::orderBy('name')->pluck('name', 'slug')->all(),
             'funding' => ['full' => 'Fully funded (verified)', 'partial' => 'Partial funding', 'tuition_only' => 'Tuition only', 'stipend_only' => 'Stipend only'],
             'mode' => ['on_campus' => 'On campus', 'online' => 'Online', 'hybrid' => 'Hybrid'],
-            'status' => \App\Enums\ApplicationStatus::options(),
+            'status' => ApplicationStatus::options(),
             'language' => [], 'intake' => [],
         ];
 
@@ -136,8 +138,8 @@ class ScholarshipDirectory extends Component
             'results' => $results,
             'labels' => $labels,
             'active' => $this->activeFilters($labels),
-            'languages' => \App\Models\ScholarshipCycle::visible()->whereNotNull('teaching_language')->distinct()->orderBy('teaching_language')->pluck('teaching_language'),
-            'intakes' => \App\Models\ScholarshipCycle::visible()->distinct()->orderBy('intake_year')->pluck('intake_year'),
+            'languages' => ScholarshipCycle::visible()->whereNotNull('teaching_language')->distinct()->orderBy('teaching_language')->pluck('teaching_language'),
+            'intakes' => ScholarshipCycle::visible()->distinct()->orderBy('intake_year')->pluck('intake_year'),
         ]);
     }
 }

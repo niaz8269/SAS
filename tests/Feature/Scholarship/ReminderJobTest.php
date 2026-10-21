@@ -3,11 +3,12 @@
 namespace Tests\Feature\Scholarship;
 
 use App\Domain\Communication\Preferences;
+use App\Domain\Communication\ReminderScheduler;
 use App\Domain\Scholarship\ChangeDeadline;
+use App\Domain\Scholarship\DeadlineService;
 use App\Jobs\SendReminderEvent;
 use App\Models\NotificationEvent;
 use App\Models\SavedScholarship;
-use App\Models\ScholarshipCycle;
 use App\Models\User;
 use App\Notifications\DeadlineReminderNotification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -31,7 +32,7 @@ class ReminderJobTest extends TestCase
         }
         $cycle = $this->publishedCycle([], ['date_type' => 'exact', 'local_closes_at' => '2027-03-31 12:00', 'source_timezone' => 'UTC']);
         SavedScholarship::create(['user_id' => $user->id, 'cycle_id' => $cycle->id]);
-        app(\App\Domain\Communication\ReminderScheduler::class)->syncUserCycle($user, $cycle);
+        app(ReminderScheduler::class)->syncUserCycle($user, $cycle);
 
         return [$user, $cycle];
     }
@@ -47,8 +48,8 @@ class ReminderJobTest extends TestCase
         $this->travelTo('2027-03-24 12:00:00'); // 7 days before
         $event = $this->due(7);
 
-        (new SendReminderEvent($event->id))->handle(app(\App\Domain\Scholarship\DeadlineService::class));
-        (new SendReminderEvent($event->id))->handle(app(\App\Domain\Scholarship\DeadlineService::class));
+        (new SendReminderEvent($event->id))->handle(app(DeadlineService::class));
+        (new SendReminderEvent($event->id))->handle(app(DeadlineService::class));
 
         $this->assertSame(1, $user->notifications()->count());
         $this->assertSame('sent', $event->fresh()->status);
@@ -75,7 +76,7 @@ class ReminderJobTest extends TestCase
         // Simulate a crash mid-send: the in-app channel was already delivered, the mail channel was not.
         $event->deliveries()->create(['channel' => 'database', 'status' => 'sent', 'attempt' => 1]);
         Notification::fake();
-        (new SendReminderEvent($event->id))->handle(app(\App\Domain\Scholarship\DeadlineService::class));
+        (new SendReminderEvent($event->id))->handle(app(DeadlineService::class));
 
         Notification::assertSentTo($user, DeadlineReminderNotification::class, fn ($n) => $n->channels === ['mail']);
         Notification::assertSentToTimes($user, DeadlineReminderNotification::class, 1); // only the missing channel
@@ -89,7 +90,7 @@ class ReminderJobTest extends TestCase
         Mail::shouldReceive('mailer')->andThrow(new \RuntimeException('smtp down'));
 
         try {
-            (new SendReminderEvent($event->id))->handle(app(\App\Domain\Scholarship\DeadlineService::class));
+            (new SendReminderEvent($event->id))->handle(app(DeadlineService::class));
             $this->fail('expected exception');
         } catch (\Throwable) {
         }
@@ -106,7 +107,7 @@ class ReminderJobTest extends TestCase
         [$user] = $this->setup1();
         $this->travelTo('2027-03-24 12:00:00');
         Preferences::set($user, 'deadline_reminders', 'in_app', false); // opted out after the event was scheduled
-        (new SendReminderEvent($this->due(7)->id))->handle(app(\App\Domain\Scholarship\DeadlineService::class));
+        (new SendReminderEvent($this->due(7)->id))->handle(app(DeadlineService::class));
         $this->assertSame(0, $user->notifications()->count());
         $this->assertSame('skipped', $this->due(7)->status);
         $this->assertSame('no_consent', $this->due(7)->reason);
@@ -130,7 +131,7 @@ class ReminderJobTest extends TestCase
         app(ChangeDeadline::class)($cycle->fresh(), ['date_type' => 'exact', 'local_closes_at' => '2027-05-31 12:00', 'source_timezone' => 'UTC'], null, 'Extension');
         NotificationEvent::whereKey($staleId)->update(['status' => 'pending', 'reason' => null]); // force the worst case
 
-        (new SendReminderEvent($staleId))->handle(app(\App\Domain\Scholarship\DeadlineService::class));
+        (new SendReminderEvent($staleId))->handle(app(DeadlineService::class));
         $this->assertSame(0, $user->notifications()->count());
         $this->assertSame('cancelled', NotificationEvent::find($staleId)->status);
         $this->assertSame('deadline_changed', NotificationEvent::find($staleId)->reason);
@@ -140,7 +141,7 @@ class ReminderJobTest extends TestCase
     {
         [$user, $cycle] = $this->setup1();
         $this->travelTo('2027-03-24 12:00:00');
-        $svc = app(\App\Domain\Scholarship\DeadlineService::class);
+        $svc = app(DeadlineService::class);
 
         $cycle->update(['publication_state' => 'archived']);
         (new SendReminderEvent($this->due(7)->id))->handle($svc);
@@ -158,7 +159,7 @@ class ReminderJobTest extends TestCase
     {
         [$user] = $this->setup1();
         $this->travelTo('2027-03-10 12:00:00');
-        (new SendReminderEvent($this->due(7)->id))->handle(app(\App\Domain\Scholarship\DeadlineService::class));
+        (new SendReminderEvent($this->due(7)->id))->handle(app(DeadlineService::class));
         $this->assertSame('pending', $this->due(7)->status);
         $this->assertSame(0, $user->notifications()->count());
     }
@@ -170,7 +171,7 @@ class ReminderJobTest extends TestCase
         Preferences::ensureDefaults($user);
         $cycle = $this->publishedCycle([], ['date_type' => 'date_only', 'closes_on' => '2027-03-31']);
         SavedScholarship::create(['user_id' => $user->id, 'cycle_id' => $cycle->id]);
-        app(\App\Domain\Communication\ReminderScheduler::class)->syncUserCycle($user, $cycle);
+        app(ReminderScheduler::class)->syncUserCycle($user, $cycle);
         $this->travelTo('2027-03-24 12:00:00');
         $this->artisan('sas:dispatch-reminders');
 
@@ -185,7 +186,7 @@ class ReminderJobTest extends TestCase
         [$user, $cycle] = $this->setup1(['in_app' => false, 'mail' => true]);
         $this->travelTo('2027-03-24 12:00:00');
         Notification::fake();
-        (new SendReminderEvent($this->due(7)->id))->handle(app(\App\Domain\Scholarship\DeadlineService::class));
+        (new SendReminderEvent($this->due(7)->id))->handle(app(DeadlineService::class));
         Notification::assertSentTo($user, DeadlineReminderNotification::class, function ($n) use ($user) {
             $mail = $n->toMail($user);
 

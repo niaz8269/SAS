@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ScholarshipCycles\RelationManagers;
 
 use App\Domain\Scholarship\ChangeDeadline;
+use App\Domain\Scholarship\DeadlineService;
 use App\Enums\DeadlineType;
 use App\Models\CycleDeadline;
 use Filament\Actions\Action;
@@ -33,7 +34,7 @@ class DeadlinesRelationManager extends CycleRelationManager
             TextColumn::make('route.name')->label('Route')->placeholder('Whole call'),
             TextColumn::make('date_type')->badge()->formatStateUsing(fn ($state) => $state instanceof DeadlineType ? $state->label() : $state),
             TextColumn::make('display')->label('Deadline')->state(function (CycleDeadline $r) {
-                $d = app(\App\Domain\Scholarship\DeadlineService::class)->describe($r);
+                $d = app(DeadlineService::class)->describe($r);
 
                 return $d['primary'].($d['note'] ? ' ('.$d['note'].')' : '');
             })->wrap(),

@@ -7,15 +7,15 @@ use App\Filament\Resources\Enquiries\Pages\EditEnquiry;
 use App\Filament\Resources\Enquiries\Pages\ListEnquiries;
 use App\Filament\Resources\Enquiries\RelationManagers\MessagesRelationManager;
 use App\Models\Enquiry;
+use App\Models\User;
 use BackedEnum;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\Placeholder;
 use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
-use Filament\Schemas\Components\Text;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
@@ -58,11 +58,11 @@ class EnquiryResource extends Resource
                 TextInput::make('email')->disabled()->dehydrated(false),
                 TextInput::make('phone')->disabled()->dehydrated(false),
                 TextInput::make('contact_preference')->disabled()->dehydrated(false),
-                \Filament\Forms\Components\Textarea::make('message')->disabled()->dehydrated(false)->rows(6)->columnSpanFull(),
+                Textarea::make('message')->disabled()->dehydrated(false)->rows(6)->columnSpanFull(),
             ]),
             Section::make('Handling')->columns(2)->schema([
                 Select::make('status')->options(EnquiryStatus::options())->required(),
-                Select::make('owner_id')->label('Assigned to')->options(fn () => \App\Models\User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager']))->where('status', 'active')->pluck('name', 'id'))
+                Select::make('owner_id')->label('Assigned to')->options(fn () => User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager']))->where('status', 'active')->pluck('name', 'id'))
                     ->searchable()->placeholder('Unassigned')->disabled(fn () => ! auth()->user()->can('enquiries.assign')),
                 TextInput::make('next_action')->maxLength(190),
                 DateTimePicker::make('next_action_at'),

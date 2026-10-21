@@ -2,11 +2,13 @@
 
 namespace Tests\Feature\Admin;
 
+use App\Domain\Editorial\CycleWorkflow;
 use App\Enums\Role;
 use App\Filament\Resources\Articles\Pages\ManageArticles;
 use App\Filament\Resources\Consultations\Pages\ManageConsultations;
 use App\Filament\Resources\Enquiries\Pages\EditEnquiry;
 use App\Filament\Resources\Enquiries\Pages\ListEnquiries;
+use App\Filament\Resources\Enquiries\RelationManagers\MessagesRelationManager;
 use App\Filament\Resources\ScholarshipCycles\Pages\CreateScholarshipCycle;
 use App\Filament\Resources\ScholarshipCycles\Pages\EditScholarshipCycle;
 use App\Filament\Resources\ScholarshipCycles\Pages\ListScholarshipCycles;
@@ -16,10 +18,12 @@ use App\Models\Article;
 use App\Models\Consultation;
 use App\Models\Enquiry;
 use App\Models\ScholarshipCycle;
+use App\Models\ScholarshipProgramme;
 use App\Models\SourceEvidence;
 use App\Models\User;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\DB;
 use Livewire\Livewire;
 use Tests\Concerns\BuildsScholarships;
 use Tests\TestCase;
@@ -103,7 +107,7 @@ class AdminPanelTest extends TestCase
     public function test_editor_creates_a_draft_and_cannot_set_state_or_placement(): void
     {
         $editor = $this->staff(Role::Editor);
-        $programme = \App\Models\ScholarshipProgramme::factory()->create();
+        $programme = ScholarshipProgramme::factory()->create();
 
         Livewire::test(CreateScholarshipCycle::class)->fillForm([
             'programme_id' => $programme->id, 'cycle_key' => '2029', 'slug' => '2029', 'intake_year' => 2029, 'funding_type' => 'unknown',
@@ -147,7 +151,7 @@ class AdminPanelTest extends TestCase
     {
         $reviewer = $this->staff(Role::Reviewer);
         $cycle = $this->draftWithSource($reviewer);
-        app(\App\Domain\Editorial\CycleWorkflow::class)->submitForReview($cycle, $reviewer);
+        app(CycleWorkflow::class)->submitForReview($cycle, $reviewer);
 
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->callAction('approve');
         $this->assertSame('in_review', $cycle->fresh()->publication_state->value);
@@ -221,7 +225,7 @@ class AdminPanelTest extends TestCase
     {
         $advisor = $this->staff(Role::Advisor);
         $enquiry = $this->enquiry(['owner_id' => $advisor->id]);
-        $rm = \App\Filament\Resources\Enquiries\RelationManagers\MessagesRelationManager::class;
+        $rm = MessagesRelationManager::class;
 
         Livewire::test($rm, ['ownerRecord' => $enquiry, 'pageClass' => EditEnquiry::class])
             ->callTableAction('create', data: ['visibility' => 'internal', 'body' => 'Looks like a duplicate'])
@@ -300,11 +304,11 @@ class AdminPanelTest extends TestCase
     {
         $this->staff(Role::SuperAdmin);
         $victim = User::factory()->create();
-        \Illuminate\Support\Facades\DB::table('sessions')->insert(['id' => 'abc', 'user_id' => $victim->id, 'payload' => '', 'last_activity' => time()]);
+        DB::table('sessions')->insert(['id' => 'abc', 'user_id' => $victim->id, 'payload' => '', 'last_activity' => time()]);
 
         Livewire::test(EditUser::class, ['record' => $victim->getKey()])->fillForm(['name' => $victim->name, 'status' => 'suspended', 'roles' => []])->call('save');
         $this->assertSame('suspended', $victim->fresh()->status);
-        $this->assertSame(0, \Illuminate\Support\Facades\DB::table('sessions')->where('user_id', $victim->id)->count());
+        $this->assertSame(0, DB::table('sessions')->where('user_id', $victim->id)->count());
     }
 
     public function test_cycle_list_filters_and_renders(): void

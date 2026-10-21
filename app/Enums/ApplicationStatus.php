@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum ApplicationStatus : string
+enum ApplicationStatus: string
 {
     case Upcoming = 'upcoming';
     case Open = 'open';
@@ -29,4 +29,3 @@ enum ApplicationStatus : string
         return collect(self::cases())->mapWithKeys(fn (self $c) => [$c->value => $c->label()])->all();
     }
 }
-

@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum DeadlineType : string
+enum DeadlineType: string
 {
     case Exact = 'exact';
     case DateOnly = 'date_only';
@@ -27,4 +27,3 @@ enum DeadlineType : string
         return collect(self::cases())->mapWithKeys(fn (self $c) => [$c->value => $c->label()])->all();
     }
 }
-

@@ -11,7 +11,6 @@ use App\Models\NotificationEvent;
 use App\Models\SavedScholarship;
 use App\Models\ScholarshipCycle;
 use App\Models\User;
-use Carbon\CarbonImmutable;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Validation\ValidationException;
 use Tests\TestCase;

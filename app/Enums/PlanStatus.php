@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum PlanStatus : string
+enum PlanStatus: string
 {
     case Interested = 'interested';
     case Preparing = 'preparing';
@@ -33,4 +33,3 @@ enum PlanStatus : string
         return collect(self::cases())->mapWithKeys(fn (self $c) => [$c->value => $c->label()])->all();
     }
 }
-

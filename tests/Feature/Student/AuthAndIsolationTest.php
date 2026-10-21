@@ -8,6 +8,7 @@ use App\Models\ApplicationPlan;
 use App\Models\Document;
 use App\Models\Enquiry;
 use App\Models\User;
+use Filament\Facades\Filament;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
@@ -144,7 +145,7 @@ class AuthAndIsolationTest extends TestCase
     {
         $student = User::factory()->create();
         $this->actingAs($student)->get('/admin')->assertForbidden(); // non-staff never reach the panel
-        $this->assertFalse($student->canAccessPanel(\Filament\Facades\Filament::getPanel('admin')));
+        $this->assertFalse($student->canAccessPanel(Filament::getPanel('admin')));
 
         $this->actingAs($student)->put('/student/profile', ['name' => 'New', 'timezone' => 'UTC', 'role' => 'super_admin', 'status' => 'suspended', 'is_admin' => 1])->assertRedirect();
         $this->assertSame([], $student->fresh()->roleKeys());

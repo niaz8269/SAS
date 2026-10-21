@@ -8,7 +8,6 @@ use App\Models\Country;
 use BackedEnum;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Textarea;
@@ -22,6 +21,7 @@ use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Model;
 
 /** Countries double as nationality values and, when flagged, as study-destination pages (PUB-04). */
 class CountryResource extends Resource
@@ -41,7 +41,7 @@ class CountryResource extends Resource
         return 'taxonomy.manage';
     }
 
-    public static function canDelete(\Illuminate\Database\Eloquent\Model $record): bool
+    public static function canDelete(Model $record): bool
     {
         return false; // restricted: referenced by cycles and profiles (SCHEMA-06)
     }

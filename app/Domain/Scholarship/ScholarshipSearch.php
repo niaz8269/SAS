@@ -3,7 +3,6 @@
 namespace App\Domain\Scholarship;
 
 use App\Enums\ApplicationStatus;
-use App\Enums\PublicationState;
 use App\Models\ScholarshipCycle;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
@@ -28,8 +27,8 @@ class ScholarshipSearch
                 $like = '%'.str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $term).'%';
                 $q->where(function (Builder $w) use ($like) {
                     $w->whereHas('programme', fn ($p) => $p->where('title', 'like', $like)->orWhere('summary', 'like', $like)
-                            ->orWhereHas('funder', fn ($x) => $x->where('name', 'like', $like))
-                            ->orWhereHas('universities', fn ($x) => $x->where('name', 'like', $like)))
+                        ->orWhereHas('funder', fn ($x) => $x->where('name', 'like', $like))
+                        ->orWhereHas('universities', fn ($x) => $x->where('name', 'like', $like)))
                         ->orWhereHas('universities', fn ($x) => $x->where('name', 'like', $like))
                         ->orWhereHas('subjects', fn ($x) => $x->where('name', 'like', $like)
                             ->orWhereHas('aliases', fn ($a) => $a->where('alias', 'like', $like)))

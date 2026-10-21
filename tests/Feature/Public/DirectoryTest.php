@@ -7,6 +7,8 @@ use App\Models\Country;
 use App\Models\DegreeLevel;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
+use App\Models\Subject;
+use App\Models\SubjectAlias;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 use Tests\Concerns\BuildsScholarships;
@@ -116,8 +118,8 @@ class DirectoryTest extends TestCase
     {
         $cycle = $this->publishedCycle();
         $cycle->programme->update(['title' => 'Quantum Futures Scholarship']);
-        $subject = \App\Models\Subject::create(['name' => 'Physics', 'slug' => 'physics']);
-        \App\Models\SubjectAlias::create(['subject_id' => $subject->id, 'alias' => 'astrophysics']);
+        $subject = Subject::create(['name' => 'Physics', 'slug' => 'physics']);
+        SubjectAlias::create(['subject_id' => $subject->id, 'alias' => 'astrophysics']);
         $cycle->subjects()->attach($subject);
 
         Livewire::test(ScholarshipDirectory::class)->set('q', 'quantum')->assertSee('Quantum Futures');

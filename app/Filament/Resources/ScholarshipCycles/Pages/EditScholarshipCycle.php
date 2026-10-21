@@ -2,7 +2,9 @@
 
 namespace App\Filament\Resources\ScholarshipCycles\Pages;
 
+use App\Domain\Editorial\AuditLog;
 use App\Domain\Editorial\CycleWorkflow;
+use App\Domain\Scholarship\DeadlineService;
 use App\Enums\ApplicationStatus;
 use App\Enums\PublicationState as S;
 use App\Filament\Resources\ScholarshipCycles\ScholarshipCycleResource;
@@ -69,9 +71,9 @@ class EditScholarshipCycle extends EditRecord
                     $cycle = $this->getRecord();
                     $suspended = $cycle->application_status === ApplicationStatus::Suspended;
                     $cycle->forceFill(['application_status' => ($suspended ? ApplicationStatus::DeadlineUnconfirmed : ApplicationStatus::Suspended)->value])->save();
-                    \App\Domain\Editorial\AuditLog::record($suspended ? 'cycle.resumed' : 'cycle.suspended', $cycle, null, null, null, $user());
+                    AuditLog::record($suspended ? 'cycle.resumed' : 'cycle.suspended', $cycle, null, null, null, $user());
                     if ($suspended) {
-                        app(\App\Domain\Scholarship\DeadlineService::class)->refresh($cycle);
+                        app(DeadlineService::class)->refresh($cycle);
                     }
                     $this->getRecord()->refresh();
                     Notification::make()->title($suspended ? 'Applications resumed' : 'Applications suspended')->success()->send();

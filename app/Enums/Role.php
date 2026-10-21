@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum Role : string
+enum Role: string
 {
     case SuperAdmin = 'super_admin';
     case Administrator = 'administrator';
@@ -35,4 +35,3 @@ enum Role : string
         return collect(self::cases())->mapWithKeys(fn (self $c) => [$c->value => $c->label()])->all();
     }
 }
-

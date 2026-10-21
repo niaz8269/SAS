@@ -31,6 +31,7 @@ use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * Annual / intake-specific calls. Permissions come from ScholarshipCyclePolicy; workflow transitions from CycleWorkflow.
@@ -53,7 +54,7 @@ class ScholarshipCycleResource extends Resource
         return 'cycle_key';
     }
 
-    public static function getRecordTitle(?\Illuminate\Database\Eloquent\Model $record): ?string
+    public static function getRecordTitle(?Model $record): ?string
     {
         return $record?->label();
     }

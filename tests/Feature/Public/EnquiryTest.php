@@ -7,6 +7,7 @@ use App\Mail\StaffEnquiryAlert;
 use App\Models\Consultation;
 use App\Models\Enquiry;
 use App\Models\EnquiryMessage;
+use App\Models\ScholarshipCycle;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Mail;
@@ -149,7 +150,7 @@ class EnquiryTest extends TestCase
 
     public function test_correction_report_triggers_immediate_review(): void
     {
-        $cycle = \App\Models\ScholarshipCycle::factory()->published()->create();
+        $cycle = ScholarshipCycle::factory()->published()->create();
         $this->post('/corrections', ['cycle_id' => $cycle->id, 'message' => 'The deadline on the official site is different.'])->assertRedirect('/');
         $this->assertDatabaseHas('correction_reports', ['cycle_id' => $cycle->id, 'status' => 'new']);
         $this->assertTrue($cycle->fresh()->needsRecheck() || $cycle->fresh()->review_due_at->lte(now()));

@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Domain\Editorial\AuditLog;
 use App\Enums\Role;
 use App\Models\User;
 use Illuminate\Console\Command;
@@ -31,7 +32,7 @@ class MakeStaff extends Command
             $created = true;
         }
         $user->userRoles()->firstOrCreate(['role' => $role->value]);
-        \App\Domain\Editorial\AuditLog::record('user.role_granted_cli', $user, null, ['role' => $role->value]);
+        AuditLog::record('user.role_granted_cli', $user, null, ['role' => $role->value]);
 
         $this->info(($created ? 'Created' : 'Updated').' '.$user->email.' as '.$role->label().'.');
         if ($created && ! $this->option('no-mail')) {

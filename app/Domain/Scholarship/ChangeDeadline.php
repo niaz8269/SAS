@@ -21,7 +21,7 @@ class ChangeDeadline
     public function __construct(private DeadlineService $service, private ReminderScheduler $reminders) {}
 
     /**
-     * @param array{date_type:string,local_closes_at?:?string,closes_on?:?string,local_opens_at?:?string,opens_on?:?string,source_timezone?:?string,source_text?:?string} $input
+     * @param  array{date_type:string,local_closes_at?:?string,closes_on?:?string,local_opens_at?:?string,opens_on?:?string,source_timezone?:?string,source_text?:?string}  $input
      */
     public function __invoke(ScholarshipCycle $cycle, array $input, ?User $actor = null, ?string $reason = null, ?int $routeId = null): CycleDeadline
     {

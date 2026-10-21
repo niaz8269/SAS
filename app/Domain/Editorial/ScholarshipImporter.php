@@ -31,6 +31,7 @@ use Illuminate\Support\Str;
 class ScholarshipImporter
 {
     public const SCHEMA_VERSION = '1';
+
     public const MAX_ROWS = 5000;
 
     public const COLUMNS = [

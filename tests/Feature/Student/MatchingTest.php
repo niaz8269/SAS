@@ -9,6 +9,7 @@ use App\Models\CycleCriterion;
 use App\Models\DegreeLevel;
 use App\Models\ScholarshipCycle;
 use App\Models\StudentProfile;
+use App\Models\Subject;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -65,7 +66,7 @@ class MatchingTest extends TestCase
         // Subject restrictions not confirmed => unknown, so overall stays "more information".
         $this->assertSame(MatchResult::MoreInformation, app(MatchingService::class)->evaluate($profile, $cycle)['result']);
 
-        $subject = \App\Models\Subject::create(['name' => 'Physics', 'slug' => 'physics']);
+        $subject = Subject::create(['name' => 'Physics', 'slug' => 'physics']);
         $cycle->subjects()->attach($subject);
         $profile->update(['subject_interest_ids' => [$subject->id]]);
         $result = app(MatchingService::class)->evaluate($profile->fresh(), $cycle->fresh());

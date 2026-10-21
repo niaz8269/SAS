@@ -9,6 +9,8 @@ use App\Enums\Role;
 use App\Models\CycleDeadline;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
+use App\Models\ScholarshipRoute;
+use App\Models\SourceEvidence;
 use App\Models\User;
 use Database\Seeders\TaxonomySeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -85,8 +87,8 @@ class ImportTest extends TestCase
         $this->assertSame(1, ScholarshipProgramme::count());
         $this->assertSame(1, ScholarshipCycle::count());
         $this->assertSame(1, CycleDeadline::count());
-        $this->assertSame(1, \App\Models\ScholarshipRoute::count());
-        $this->assertSame(1, \App\Models\SourceEvidence::count());
+        $this->assertSame(1, ScholarshipRoute::count());
+        $this->assertSame(1, SourceEvidence::count());
     }
 
     public function test_a_changed_deadline_in_a_reimport_creates_a_new_version(): void
@@ -199,7 +201,7 @@ class ImportTest extends TestCase
         $import = app(ScholarshipImporter::class)->stage($this->csv([$this->row(['programme_title' => '=HYPERLINK("http://evil","x")', 'source_url' => 'javascript:1'])]), 'f.csv');
         $csv = ScholarshipImporter::errorCsv($import);
         $this->assertStringContainsString("\"'=HYPERLINK", $csv);
-        $this->assertStringNotContainsString("\"=HYPERLINK", $csv);
+        $this->assertStringNotContainsString('"=HYPERLINK', $csv);
         $this->assertSame("'+1", ScholarshipImporter::neutralise('+1'));
         $this->assertSame("'@SUM(A1)", ScholarshipImporter::neutralise('@SUM(A1)'));
         $this->assertSame('plain', ScholarshipImporter::neutralise('plain'));

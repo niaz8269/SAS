@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, intl, pdo_sqlite, zip, fileinfo, gd, bcmath
+          coverage: none
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: composer install --no-interaction --prefer-dist
+      - run: cp .env.example .env && php artisan key:generate
+      - run: npm ci
+      - run: npm run build
+      - run: composer audit
+      - run: npm audit --omit=dev
+      - run: vendor/bin/pint --test
+      - run: vendor/bin/phpstan analyse --no-progress --memory-limit=1G
+      - run: vendor/bin/phpunit

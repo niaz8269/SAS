@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum ScanStatus : string
+enum ScanStatus: string
 {
     case Pending = 'pending';
     case Available = 'available';
@@ -23,4 +23,3 @@ enum ScanStatus : string
         return collect(self::cases())->mapWithKeys(fn (self $c) => [$c->value => $c->label()])->all();
     }
 }
-

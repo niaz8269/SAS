@@ -7,6 +7,7 @@ use App\Jobs\ScanDocumentJob;
 use App\Models\Document;
 use App\Models\DocumentVersion;
 use App\Models\User;
+use Illuminate\Contracts\Filesystem\Filesystem;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -21,7 +22,7 @@ class DocumentService
     private const DANGEROUS = ['php', 'phtml', 'phar', 'exe', 'dll', 'bat', 'cmd', 'com', 'sh', 'js', 'jar', 'vbs', 'ps1', 'msi',
         'scr', 'zip', 'rar', '7z', 'tar', 'gz', 'html', 'htm', 'svg', 'py', 'rb', 'pl', 'cgi', 'asp', 'aspx', 'jsp', 'lnk', 'iso'];
 
-    public function disk(): \Illuminate\Contracts\Filesystem\Filesystem
+    public function disk(): Filesystem
     {
         return Storage::disk(config('sas.uploads.disk'));
     }

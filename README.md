@@ -1,58 +1,61 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# SAS – Scholorship Application Services
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Laravel 13 / PHP 8.4 / Livewire 4 / Filament 5 / Tailwind 4 application for scholarship discovery, student application planning and enquiry-led support services. This repository implements **release R1** of `Requirements.md` (the brand spelling is the owner's).
 
-## About Laravel
+Start with [docs/PROGRESS.md](docs/PROGRESS.md) (what works, what was tested, what is missing), then [docs/IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md) and [docs/DECISIONS.md](docs/DECISIONS.md).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Local setup
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Requirements: PHP 8.4 (extensions: mbstring, intl, pdo_sqlite or pdo_mysql, zip, fileinfo, gd, bcmath), Composer 2, Node 20+.
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed          # reference data + draft service catalogue (production-safe)
+npm install && npm run build
+php artisan serve
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Demonstration records (fictional, every title prefixed `[DEMO]`; refuses to run in production):
 
-## Contributing
+```bash
+php artisan migrate:fresh --seed --seeder=DemoSeeder
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Demo logins use `demo-<role>@example.test` / `demo-password-123`. Staff must set up an authenticator app on first sign-in at `/admin`.
 
-## Code of Conduct
+Create a real staff account (random password + reset link; MFA enforced at first login):
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+php artisan sas:make-staff you@example.org "Your Name" super_admin
+```
 
-## Security Vulnerabilities
+Run the scheduler and a queue worker (reminders, scans, mail):
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+php artisan schedule:work
+php artisan queue:work --queue=default,reminders,scanning,mail
+```
 
-## License
+## Quality gates
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+php vendor/bin/phpunit          # or: php artisan test
+php vendor/bin/pint --test      # formatting
+php vendor/bin/phpstan analyse  # Larastan, level 1 (see PROGRESS.md for why not higher)
+composer audit && npm audit --omit=dev
+npm run build
+```
+
+## Where things are
+
+| Area | Location |
+|---|---|
+| Business rules (deadlines, workflow, matching, reminders, importer, documents) | `app/Domain/*` |
+| Public site, auth, student workspace | `app/Http/Controllers`, `app/Livewire`, `resources/views` |
+| Staff administration | `app/Filament` (panel at `/admin`) |
+| Permissions | `config/sas.php` (`permissions`), `app/Policies` |
+| Schema | `database/migrations`; field notes in [docs/DATA_DICTIONARY.md](docs/DATA_DICTIONARY.md) |
+| Requirement → code → test map | [docs/TRACEABILITY.md](docs/TRACEABILITY.md) |
+| Deployment and operations | [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md), [docs/RUNBOOKS.md](docs/RUNBOOKS.md) |

@@ -3,13 +3,17 @@
 namespace Tests\Feature\Documents;
 
 use App\Domain\Documents\DocumentService;
+use App\Domain\Documents\Scanner;
 use App\Enums\ScanStatus;
 use App\Jobs\ScanDocumentJob;
+use App\Models\ApplicationPlan;
 use App\Models\Document;
 use App\Models\DocumentVersion;
+use App\Models\ScholarshipCycle;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\Storage;
 use Tests\TestCase;
@@ -49,7 +53,7 @@ class DocumentTest extends TestCase
         Storage::disk('private_documents')->assertMissing('released/'.$version->storage_key);
         Queue::assertPushed(ScanDocumentJob::class);
 
-        (new ScanDocumentJob($version->id))->handle(app(DocumentService::class), app(\App\Domain\Documents\Scanner::class));
+        (new ScanDocumentJob($version->id))->handle(app(DocumentService::class), app(Scanner::class));
         $version->refresh();
         $this->assertSame(ScanStatus::Available, $version->scan_status);
         Storage::disk('private_documents')->assertExists('released/'.$version->storage_key);
@@ -112,7 +116,7 @@ class DocumentTest extends TestCase
         $this->upload($user, $this->pdf());
         $v = DocumentVersion::firstOrFail();
 
-        $down = new class implements \App\Domain\Documents\Scanner
+        $down = new class implements Scanner
         {
             public function scan($stream): array
             {
@@ -130,7 +134,7 @@ class DocumentTest extends TestCase
 
     public function test_dangerous_and_mismatched_files_are_refused(): void
     {
-        $this->withoutMiddleware(\Illuminate\Routing\Middleware\ThrottleRequests::class); // 11 rapid attempts below
+        $this->withoutMiddleware(ThrottleRequests::class); // 11 rapid attempts below
         $user = User::factory()->create();
         $cases = [
             'executable' => $this->pdf('setup.exe', 'MZ binary'),
@@ -217,9 +221,9 @@ class DocumentTest extends TestCase
         $user = User::factory()->create();
         $this->upload($user, $this->pdf());
         $doc = Document::firstOrFail();
-        $cycle = \App\Models\ScholarshipCycle::factory()->published()->create();
+        $cycle = ScholarshipCycle::factory()->published()->create();
         $this->actingAs($user)->post('/student/applications', ['cycle_id' => $cycle->id]);
-        $plan = \App\Models\ApplicationPlan::firstOrFail();
+        $plan = ApplicationPlan::firstOrFail();
         $this->post(route('student.applications.documents.attach', $plan), ['document' => $doc->public_id])->assertRedirect();
 
         $this->delete(route('student.documents.destroy', $doc))->assertSessionHas('error');
@@ -234,9 +238,9 @@ class DocumentTest extends TestCase
         $b = User::factory()->create();
         $this->upload($a, $this->pdf());
         $doc = Document::firstOrFail();
-        $cycle = \App\Models\ScholarshipCycle::factory()->published()->create();
+        $cycle = ScholarshipCycle::factory()->published()->create();
         $this->actingAs($b)->post('/student/applications', ['cycle_id' => $cycle->id]);
-        $plan = \App\Models\ApplicationPlan::where('user_id', $b->id)->firstOrFail();
+        $plan = ApplicationPlan::where('user_id', $b->id)->firstOrFail();
         $this->post(route('student.applications.documents.attach', $plan), ['document' => $doc->public_id])->assertForbidden();
         $this->assertDatabaseCount('document_associations', 0);
     }

@@ -60,7 +60,9 @@ class CorrectionReportResource extends Resource
             TextColumn::make('created_at')->since()->sortable(),
             TextColumn::make('cycle.programme.title')->label('Listing')->placeholder('General'),
             TextColumn::make('message')->limit(80)->wrap(),
-            TextColumn::make('status')->badge()->color(fn ($s) => match ($s) { 'new' => 'danger', 'reviewing' => 'warning', 'resolved' => 'success', default => 'gray' }),
+            TextColumn::make('status')->badge()->color(fn ($s) => match ($s) {
+                'new' => 'danger', 'reviewing' => 'warning', 'resolved' => 'success', default => 'gray'
+            }),
         ])->filters([SelectFilter::make('status')->options(['new' => 'New', 'reviewing' => 'Reviewing', 'resolved' => 'Resolved', 'rejected' => 'Rejected'])->default('new')])
             ->recordActions([EditAction::make()->mutateDataUsing(fn (array $data) => $data + ['handled_by' => auth()->id()])])->defaultSort('id', 'desc');
     }

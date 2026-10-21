@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum PublicationState : string
+enum PublicationState: string
 {
     case Draft = 'draft';
     case InReview = 'in_review';
@@ -29,4 +29,3 @@ enum PublicationState : string
         return collect(self::cases())->mapWithKeys(fn (self $c) => [$c->value => $c->label()])->all();
     }
 }
-

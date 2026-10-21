@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum MatchResult : string
+enum MatchResult: string
 {
     case PotentialMatch = 'potential_match';
     case CriterionNotMet = 'criterion_not_met';
@@ -23,4 +23,3 @@ enum MatchResult : string
         return collect(self::cases())->mapWithKeys(fn (self $c) => [$c->value => $c->label()])->all();
     }
 }
-

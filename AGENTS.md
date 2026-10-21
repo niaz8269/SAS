@@ -1,47 +1,11 @@
-<laravel-boost-guidelines>
-# Laravel Application
+# Notes for coding agents
 
-This repository contains a Laravel application. Complete the following setup before working on the user's request.
-
-## Prerequisites
-
-Verify that PHP and Composer are available:
-
-```sh
-php -v
-composer -V
-```
-
-If either command is unavailable, detect the user's operating system and install the prerequisites with the appropriate command:
-
-macOS:
-
-```sh
-/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.5)"
-```
-
-Windows PowerShell:
-
-```powershell
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.5'))
-```
-
-Linux:
-
-```sh
-/bin/bash -c "$(curl -fsSL https://php.new/install/linux/8.5)"
-```
-
-After installation, ask the user to restart their terminal. If the agent needs the restarted shell to continue, ask the user to reopen their terminal and rerun their original prompt.
-
-## Agent Setup
-
-Install Laravel Boost from the application root before making application changes:
-
-```sh
-composer require laravel/boost --dev
-php artisan boost:install
-```
-
-Boost replaces these bootstrap instructions with guidelines tailored to the application. After installation, read `AGENTS.md` again and continue with the user's original request using the generated guidelines.
-</laravel-boost-guidelines>
+- Read `docs/PROGRESS.md` first; it says what is done and what is not. Business rules come from `Requirements.md` (requirement IDs are cited in code comments and `docs/TRACEABILITY.md`).
+- Keep rules in `app/Domain/*` actions/services. Controllers, Livewire components, Filament pages and jobs call them; do not duplicate rules in UI code.
+- Brand spelling is intentionally "Scholorship". Do not "fix" it.
+- Never invent scholarship data, prices, testimonials, statistics or partnerships. Unknown stays "Not confirmed".
+- Never display a closing time for a date-only deadline; only `exact` deadlines have an instant and a countdown.
+- Models guard sensitive columns (`user_id`, `status`, `owner_id`, roles). Set them explicitly in trusted code (`forceFill` or relations), never from request data.
+- Filament closures are resolved by parameter NAME: name the query parameter `$query` and the form data `$data`.
+- Windows/PowerShell 5.1: write files with UTF-8 *without* BOM (a BOM before `<?php` breaks PHP). `Get-Content` without `-Encoding utf8` corrupts non-ASCII text.
+- Tests: `php vendor/bin/phpunit`. Do not report a test as passing unless it was run.

@@ -10,6 +10,8 @@ use App\Models\Country;
 use App\Models\CycleBenefit;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipRoute;
+use App\Models\Service;
+use App\Models\User;
 use App\Support\Html;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\Concerns\BuildsScholarships;
@@ -154,9 +156,9 @@ class PublicPagesTest extends TestCase
 
     public function test_service_page_without_a_price_says_request_a_quotation(): void
     {
-        $service = \App\Models\Service::factory()->create(['price_basis' => null]);
+        $service = Service::factory()->create(['price_basis' => null]);
         $this->get(route('services.show', $service))->assertOk()->assertSee('Request a quotation')->assertDontSee('$');
-        $draft = \App\Models\Service::factory()->create(['published' => false]);
+        $draft = Service::factory()->create(['published' => false]);
         $this->get(route('services.show', $draft))->assertNotFound();
     }
 
@@ -172,7 +174,7 @@ class PublicPagesTest extends TestCase
 
     public function test_private_areas_send_noindex_and_no_store_headers(): void
     {
-        $user = \App\Models\User::factory()->create();
+        $user = User::factory()->create();
         $r = $this->actingAs($user)->get('/student')->assertOk();
         $this->assertStringContainsString('no-store', $r->headers->get('Cache-Control'));
         $this->assertSame('noindex, nofollow', $r->headers->get('X-Robots-Tag'));

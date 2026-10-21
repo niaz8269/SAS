@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum EnquiryStatus : string
+enum EnquiryStatus: string
 {
     case New = 'new';
     case Assigned = 'assigned';
@@ -31,4 +31,3 @@ enum EnquiryStatus : string
         return collect(self::cases())->mapWithKeys(fn (self $c) => [$c->value => $c->label()])->all();
     }
 }
-

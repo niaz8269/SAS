@@ -6,11 +6,12 @@ use App\Domain\Communication\ReminderScheduler;
 use App\Domain\Editorial\AuditLog;
 use App\Enums\PlanStatus as P;
 use App\Models\ApplicationPlan;
-use App\Models\ApplicationTask;
 use App\Models\SavedScholarship;
 use App\Models\ScholarshipCycle;
 use App\Models\User;
+use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 /**
@@ -60,7 +61,7 @@ class PlanService
 
             // APP-02: checklist is a snapshot of the requirements at this moment.
             foreach ($cycle->requirements as $r) {
-                $plan->tasks()->create(['requirement_id' => $r->id, 'title' => \Illuminate\Support\Str::limit($r->text, 180), 'snapshot_text' => $r->text, 'is_custom' => false]);
+                $plan->tasks()->create(['requirement_id' => $r->id, 'title' => Str::limit($r->text, 180), 'snapshot_text' => $r->text, 'is_custom' => false]);
             }
             AuditLog::record('plan.created', $plan, null, ['cycle_id' => $cycle->id], null, $user);
             $this->reminders->syncUserCycle($user, $cycle);
@@ -84,7 +85,7 @@ class PlanService
             foreach ($cycle->requirements as $r) {
                 $task = $byRequirement->get($r->id);
                 if (! $task) {
-                    $plan->tasks()->create(['requirement_id' => $r->id, 'title' => \Illuminate\Support\Str::limit($r->text, 180), 'snapshot_text' => $r->text, 'requirement_updated' => true]);
+                    $plan->tasks()->create(['requirement_id' => $r->id, 'title' => Str::limit($r->text, 180), 'snapshot_text' => $r->text, 'requirement_updated' => true]);
                 } elseif ($task->snapshot_text !== $r->text) {
                     $task->update(['requirement_updated' => true, 'snapshot_text' => $r->text]); // completion state is kept
                 }
@@ -112,7 +113,7 @@ class PlanService
             if (! filter_var($data['confirm_submitted'] ?? false, FILTER_VALIDATE_BOOLEAN)) {
                 throw ValidationException::withMessages(['confirm_submitted' => 'Confirm that you submitted this application on the official website.']);
             }
-            $plan->submitted_at = ! empty($data['submitted_at']) ? \Carbon\CarbonImmutable::parse($data['submitted_at']) : now();
+            $plan->submitted_at = ! empty($data['submitted_at']) ? CarbonImmutable::parse($data['submitted_at']) : now();
             $plan->submission_reference = $data['submission_reference'] ?? null;
             $plan->evidence_note = $data['evidence_note'] ?? null;
             $plan->status_source = 'student_reported';
