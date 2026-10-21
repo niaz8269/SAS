@@ -34,7 +34,7 @@ class DocumentController extends Controller
         ], ['acknowledge.accepted' => 'Please confirm you understand how your document is stored.']);
 
         $file = $request->file('file');
-        $service->store($request->user(), $file, $data['type'], $data['title'] ?: pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME));
+        $service->store($request->user(), $file, $data['type'], $data['title'] ?? pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME));
 
         return back()->with('status', 'Uploaded. The file is checked for malware before it becomes available.');
     }
@@ -61,7 +61,7 @@ class DocumentController extends Controller
         $headers = ['Cache-Control' => 'private, no-store, max-age=0', 'X-Content-Type-Options' => 'nosniff', 'Content-Type' => $version->mime];
 
         // Object storage: a short-lived signed URL after the policy check. Local disks stream through the app.
-        if (method_exists($disk, 'providesTemporaryUrls') && $disk->providesTemporaryUrls()) {
+        if (config('filesystems.disks.'.config('sas.uploads.disk').'.driver') === 's3') {
             return redirect()->away($disk->temporaryUrl($path, now()->addMinutes(config('sas.uploads.download_ttl_minutes')), [
                 'ResponseContentDisposition' => 'attachment; filename="'.addslashes($version->original_name).'"',
             ]));

@@ -95,7 +95,7 @@ class DocumentService
         $this->disk()->put($this->quarantinePath($key), fopen($file->getRealPath(), 'r'));
 
         $document = DB::transaction(function () use ($user, $file, $type, $title, $document, $key, $mime) {
-            $document ??= Document::create(['user_id' => $user->id, 'type' => $type, 'title' => $title]);
+            $document ??= $user->documents()->create(['type' => $type, 'title' => $title]); // user_id is set by the relation, never mass-assigned
             $version = $document->versions()->create([
                 'version' => ($document->versions()->max('version') ?? 0) + 1,
                 'original_name' => Str::limit(basename($file->getClientOriginalName()), 180, ''),

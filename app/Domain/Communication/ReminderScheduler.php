@@ -40,8 +40,23 @@ class ReminderScheduler
         }
     }
 
+    /** A cycle is tracked while it is saved or has a plan that is still being prepared. */
+    public function isTracked(User $user, ScholarshipCycle $cycle): bool
+    {
+        return SavedScholarship::where(['user_id' => $user->id, 'cycle_id' => $cycle->id])->exists()
+            || ApplicationPlan::where(['user_id' => $user->id, 'cycle_id' => $cycle->id])
+                ->whereIn('status', array_map(fn ($s) => $s->value, self::ACTIVE_PLAN))->exists();
+    }
+
     public function syncUserCycle(User $user, ScholarshipCycle $cycle): void
     {
+        if (! $this->isTracked($user, $cycle)) {
+            NotificationEvent::where('user_id', $user->id)->where('cycle_id', $cycle->id)->where('status', 'pending')
+                ->update(['status' => 'cancelled', 'reason' => 'no_longer_tracked']);
+
+            return;
+        }
+
         $cycle->unsetRelation('currentDeadlines');
         $deadline = $this->reminderDeadline($cycle);
 
