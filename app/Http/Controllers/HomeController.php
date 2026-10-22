@@ -10,6 +10,8 @@ use App\Models\HomeSection;
 use App\Models\ScholarshipCycle;
 use App\Models\Service;
 use App\Models\Subject;
+use App\Models\Testimonial;
+use App\Models\TrustItem;
 
 class HomeController extends Controller
 {
@@ -36,6 +38,8 @@ class HomeController extends Controller
 
         return view('public.home', [
             'sections' => HomeSection::ordered(),
+            'trustItems' => TrustItem::where('enabled', true)->orderBy('sort')->orderBy('id')->get(),
+            'testimonials' => Testimonial::visible()->orderBy('sort')->orderBy('id')->limit(6)->get(),
             'degrees' => DegreeLevel::orderBy('sort')->get(),
             'destinationsAll' => Country::destinations()->get(),
             'subjects' => Subject::orderBy('name')->get(),

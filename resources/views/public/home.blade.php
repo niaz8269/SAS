@@ -190,6 +190,56 @@
     </section>
     @break
 
+@case('trust')
+    @if ($trustItems->isNotEmpty())
+    @php $points = $trustItems->where('kind', 'point'); $partners = $trustItems->where('kind', 'partner'); @endphp
+    <section class="bg-forest-50/60 py-12" aria-labelledby="trust">
+        <div class="container-page">
+            <h2 id="trust" class="section-title">{{ $s->heading }}</h2>
+            @if ($s->subheading)<p class="mt-1 text-muted">{{ $s->subheading }}</p>@endif
+            @if ($points->isNotEmpty())
+                <ul class="mt-6 grid gap-4 md:grid-cols-3">
+                    @foreach ($points as $t)
+                        <li class="card p-5"><h3 class="font-bold">@if ($t->url)<a class="hover:underline" href="{{ $href($t->url) }}">{{ $t->title }}</a>@else{{ $t->title }}@endif</h3>@if ($t->text)<p class="mt-1 text-sm text-muted">{{ $t->text }}</p>@endif</li>
+                    @endforeach
+                </ul>
+            @endif
+            @if ($partners->isNotEmpty())
+                <ul class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4" aria-label="Partners and accreditations">
+                    @foreach ($partners as $t)
+                        <li>
+                            @php $logo = $t->image_path ? $media($t->image_path) : null; @endphp
+                            @if ($t->url)<a href="{{ $href($t->url) }}" rel="noopener" class="inline-flex items-center gap-2">@endif
+                            @if ($logo)<img src="{{ $logo }}" alt="{{ $t->title }}" class="h-10 w-auto max-w-[9rem] object-contain" loading="lazy">@else<span class="font-semibold">{{ $t->title }}</span>@endif
+                            @if ($t->url)</a>@endif
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
+        </div>
+    </section>
+    @endif
+    @break
+
+@case('testimonials')
+    @if ($testimonials->isNotEmpty())
+    <section class="container-page py-12" aria-labelledby="testimonials">
+        <h2 id="testimonials" class="section-title">{{ $s->heading }}</h2>
+        @if ($s->subheading)<p class="mt-1 text-muted">{{ $s->subheading }}</p>@endif
+        <ul class="mt-6 grid gap-5 md:grid-cols-3">
+            @foreach ($testimonials as $t)
+                <li class="card flex h-full flex-col p-6">
+                    <blockquote class="flex-1 text-sm">&ldquo;{{ $t->quote }}&rdquo;</blockquote>
+                    <footer class="mt-4 flex items-center gap-3">
+                        @if ($t->photo_path)<img src="{{ $media($t->photo_path) }}" alt="" class="h-10 w-10 rounded-full object-cover" loading="lazy">@endif
+                        <span><span class="block font-semibold">{{ $t->name }}</span>@if ($t->context)<span class="block text-xs text-muted">{{ $t->context }}</span>@endif</span>
+                    </footer>
+                </li>
+            @endforeach
+        </ul>
+    </section>
+    @endif
+    @break
 @case('custom')
     <x-content-block :block="$s" />
     @break
