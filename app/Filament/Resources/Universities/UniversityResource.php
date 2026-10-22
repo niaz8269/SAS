@@ -44,6 +44,7 @@ class UniversityResource extends Resource
             TextInput::make('slug')->required()->unique(ignoreRecord: true)->alphaDash(),
             Select::make('country_id')->relationship('country', 'name')->searchable()->preload(),
             TextInput::make('name_zh')->label('Name (Chinese)'),
+            TextInput::make('name_en_official')->label('Wording on the official site (reference)')->disabled()->dehydrated(false),
             TextInput::make('province')->label('Province (English)'),
             TextInput::make('province_zh')->label('Province (Chinese)'),
             TextInput::make('city')->label('City (English)'),

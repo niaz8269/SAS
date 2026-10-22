@@ -44,6 +44,7 @@ class UniversityProgrammeResource extends Resource
             Select::make('university_id')->label('University')->relationship('university', 'name')->searchable()->preload(false)->required()->columnSpanFull(),
             Select::make('level')->options(UniversityProgramme::LEVELS)->required(),
             TextInput::make('name_en')->label('Programme name (English)')->maxLength(255)->helperText('Saving a changed English name marks it as checked by staff.'),
+            TextInput::make('name_en_official')->label('Wording on the official site (reference)')->disabled()->dehydrated(false)->helperText('Copied from campuschina.org; it has typos, so it is shown for comparison only.'),
             TextInput::make('name_zh')->label('Programme name (Chinese)')->required()->maxLength(255),
             TextInput::make('teaching_language')->label('Teaching language')->maxLength(48)->helperText('English or Chinese wording both work; the list shows it in English.'),
             TextInput::make('duration_years')->label('Duration (years)')->numeric()->minValue(0)->maxValue(12),
@@ -65,6 +66,7 @@ class UniversityProgrammeResource extends Resource
                     ->color(fn ($s) => match ($s) {
                         'official', 'staff' => 'success', 'translated' => 'warning', default => 'gray'
                     }),
+                TextColumn::make('name_en_official')->label('Official site wording')->placeholder('—')->wrap()->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('level')->badge()->formatStateUsing(fn ($state) => UniversityProgramme::LEVELS[$state] ?? $state),
                 IconColumn::make('csc_eligible')->label('CSC star')->boolean(),
                 TextColumn::make('duration_years')->label('Years')->numeric(1),
