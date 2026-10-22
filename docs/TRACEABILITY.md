@@ -32,7 +32,7 @@ Status: **Done** = implemented and covered by an executed automated test; **Part
 | APP-01/02 plan states, checklist snapshot, requirements prompt | Done | `PlanService` | `PlanTest` |
 | FILE-01/02/03 upload validation, quarantine, scan, opaque keys | Done (with fake scanner) | `DocumentService`, `ScanDocumentJob` | `DocumentTest`. **ClamAV adapter never run against a real clamd** |
 | MATCH-01/02 rule indications | Done | `MatchingService` | `MatchingTest` |
-| NOT-01/02/03 reminders, preferences, retry safety | Done | `ReminderScheduler`, `SendReminderEvent`, `Preferences` | `ReminderJobTest`. Provider bounce/suppression handling not built |
+| NOT-01/02/03 reminders, preferences, retry safety | Done | `ReminderScheduler`, `SendReminderEvent`, `Preferences` | `ReminderJobTest`, `EmailSuppressionTest` (provider-neutral bounce/complaint webhook; no provider adapter yet) |
 | COM-01 enquiry threads, internal notes hidden | Done | `EnquiryController`, admin messages | `EnquiryTest`, `AdminPanelTest` |
 | SVC-01 catalogue | Done | `Service`, admin, seeder | — |
 | SVC-02..05 writing/evaluation/attestation/visa case workflows | Not done (R2) | enquiry-led only | `required_inputs` documented on service pages |

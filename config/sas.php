@@ -13,6 +13,8 @@ return [
     'contact_email' => env('SAS_CONTACT_EMAIL', 'hello@example.com'),
     'accessibility_email' => env('SAS_ACCESSIBILITY_EMAIL', 'accessibility@example.com'),
     'staff_notification_email' => env('SAS_STAFF_NOTIFICATION_EMAIL'),
+    // Shared secret for the signed email-delivery webhook. Empty = endpoint disabled.
+    'mail_webhook_secret' => env('SAS_MAIL_WEBHOOK_SECRET'),
 
     /*
      * Role => permissions (AUTH-05: publish, refund and role-management are separately grantable).

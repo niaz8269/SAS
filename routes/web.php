@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\TwoFactorChallengeController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\CorrectionController;
+use App\Http\Controllers\EmailWebhookController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
@@ -50,6 +51,8 @@ Route::get('/consultation/requested', [ConsultationController::class, 'thanks'])
 
 Route::get('/corrections/new', [CorrectionController::class, 'create'])->name('corrections.create');
 Route::post('/corrections', [CorrectionController::class, 'store'])->middleware('throttle:enquiries')->name('corrections.store');
+
+Route::post('/webhooks/email/{provider}', EmailWebhookController::class)->middleware('throttle:120,1')->name('webhooks.email');
 
 /*
 |--------------------------------------------------------------------------

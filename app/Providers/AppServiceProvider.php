@@ -6,6 +6,7 @@ use App\Domain\Documents\ClamAvScanner;
 use App\Domain\Documents\FakeScanner;
 use App\Domain\Documents\Scanner;
 use App\Domain\Editorial\AuditLog;
+use App\Listeners\BlockSuppressedRecipients;
 use App\Models\CycleBenefit;
 use App\Models\CycleCriterion;
 use App\Models\CycleRequirement;
@@ -15,6 +16,8 @@ use App\Models\SourceEvidence;
 use App\Models\User;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Events\MessageSending;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\URL;
@@ -53,6 +56,8 @@ class AppServiceProvider extends ServiceProvider
 
             return $user?->hasPermission($ability) ? true : false;
         });
+
+        Event::listen(MessageSending::class, BlockSuppressedRecipients::class);
 
         // Child records of a LIVE cycle can be changed directly by reviewers; every such change is audited.
         foreach ([CycleRequirement::class, CycleBenefit::class, ScholarshipRoute::class, CycleCriterion::class, SourceEvidence::class] as $model) {

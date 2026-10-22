@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Domain\Communication\EmailSuppressions;
 use App\Domain\Communication\Preferences;
 use App\Domain\Scholarship\DeadlineService;
 use App\Models\NotificationDelivery;
@@ -79,7 +80,11 @@ class SendReminderEvent implements ShouldBeUnique, ShouldQueue
 
         $channels = [];
         if (Preferences::enabled($user, 'deadline_reminders', 'mail')) {
-            $channels[] = 'mail';
+            if (app(EmailSuppressions::class)->isSuppressed($user->email)) {
+                NotificationDelivery::firstOrCreate(['event_id' => $event->id, 'channel' => 'mail', 'status' => 'suppressed'], ['attempt' => $event->attempts + 1]);
+            } else {
+                $channels[] = 'mail';
+            }
         }
         if (Preferences::enabled($user, 'deadline_reminders', 'in_app')) {
             $channels[] = 'database';

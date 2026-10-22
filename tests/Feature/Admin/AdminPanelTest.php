@@ -81,12 +81,12 @@ class AdminPanelTest extends TestCase
     public function test_navigation_access_matches_each_role(): void
     {
         $matrix = [
-            [Role::Editor, ['scholarship-cycles' => 200, 'imports' => 200, 'articles' => 200, 'users' => 403, 'audits' => 403, 'enquiries' => 403, 'services' => 403]],
+            [Role::Editor, ['email-suppressions' => 403, 'scholarship-cycles' => 200, 'imports' => 200, 'articles' => 200, 'users' => 403, 'audits' => 403, 'enquiries' => 403, 'services' => 403]],
             [Role::Reviewer, ['scholarship-cycles' => 200, 'imports' => 403, 'articles' => 200, 'users' => 403, 'audits' => 403]],
             [Role::Advisor, ['enquiries' => 200, 'consultations' => 200, 'scholarship-cycles' => 403, 'users' => 403, 'imports' => 403, 'services' => 403]],
             [Role::ServiceManager, ['enquiries' => 200, 'services' => 200, 'scholarship-cycles' => 403, 'users' => 403]],
             [Role::Finance, ['enquiries' => 403, 'scholarship-cycles' => 403, 'users' => 403, 'audits' => 403, 'imports' => 403]],
-            [Role::Administrator, ['users' => 200, 'audits' => 200, 'enquiries' => 200, 'services' => 200, 'scholarship-cycles' => 200]],
+            [Role::Administrator, ['users' => 200, 'audits' => 200, 'email-suppressions' => 200, 'enquiries' => 200, 'services' => 200, 'scholarship-cycles' => 200]],
         ];
         foreach ($matrix as [$role, $paths]) {
             $this->staff($role);

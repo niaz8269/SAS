@@ -15,6 +15,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias(['active' => EnsureUserIsActive::class]);
+        $middleware->preventRequestForgery(except: ['webhooks/*']); // authenticated by HMAC signature instead
         $middleware->web(append: [SecurityHeaders::class, EnsureUserIsActive::class]);
         $middleware->trustProxies(at: env('TRUSTED_PROXIES') ? explode(',', env('TRUSTED_PROXIES')) : null);
     })
