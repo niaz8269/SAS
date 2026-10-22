@@ -46,3 +46,13 @@ Wording is the project's own paraphrase of facts; no source text was copied. Thi
 | Tsinghua graduate admissions and scholarships (CGS, BGS) | yz.tsinghua.edu.cn 2027-entry notice (university) | Who can apply, September-February window, RMB 800 fee, CGS/BGS coverage | No Tsinghua-specific scholarships described; deadlines set per programme. |
 ### Still to do for China
 CAS-TWAS President's Fellowship (official page found only for the 2017 call), Jiangsu Jasmine and Zhejiang provincial awards (no current official notice), the other Type B / Silk Road / Bilateral universities, Tsinghua-specific and other individual university awards, and the CSC portal itself (campuschina.org and studyinchina.csc.edu.cn block automated access; their facts are taken from consulate and university pages).
+
+## global-2026-10-batch1.csv (checked 2026-10-22) - first non-China batch
+
+| Programme | Source read | What it supports | Gaps |
+|---|---|---|---|
+| Chevening Scholarships (UK), 2027-28 | chevening.org timeline, eligibility and coverage pages (government) | Full eligibility rules, itemised coverage, cycle timeline, offer deadline 8 July 2027 17:00 BST | Closing day given only as "October 2026, 11:00 UTC; see your country page", so the cycle may already be closed. |
+| Erasmus Mundus Joint Masters | Erasmus+ page (European Commission) | Who can apply, how scholarships work, usual Oct-Jan window | No amounts; each master sets its own deadline and host countries (no destination recorded). |
+| Turkiye Burslari | turkiyeburslari.gov.tr overview (government) | Levels and support categories | No eligibility, amounts or dates on the pages read; the calendar page was not available. |
+
+Not yet researched: Fulbright (country-specific), DAAD (hundreds of programmes), Australia Awards (the DFAT page timed out), Korean GKS (page returned 404), Gates Cambridge, Commonwealth, and everything else.

@@ -28,14 +28,16 @@ class SeedDataTest extends TestCase
         }
 
         $cycles = ScholarshipCycle::with('evidence', 'routes', 'currentDeadlines')->get();
-        $this->assertGreaterThanOrEqual(13, $cycles->count());
+        $this->assertGreaterThanOrEqual(16, $cycles->count());
         foreach ($cycles as $c) {
             $this->assertSame(PublicationState::Draft, $c->publication_state, $c->external_key);
             $this->assertFalse($c->fully_funded_verified);
             $this->assertNull($c->published_at);
             $this->assertNotEmpty($c->evidence->first()->url);
             $this->assertNotSame('aggregator', $c->evidence->first()->publisher_type);
-            $this->assertSame(['CN'], $c->destinations->pluck('code')->all());
+            if (str_starts_with($c->external_key, 'cn-')) {
+                $this->assertSame(['CN'], $c->destinations->pluck('code')->all(), $c->external_key);
+            }
             $this->assertCount(1, $c->currentDeadlines);
         }
         // The only exact-time deadline is one whose source states the hour and zone.
