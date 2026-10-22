@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Domain\Catalogue\ChinaPlaces;
 use App\Models\Country;
 use App\Models\University;
 use App\Models\UniversityProgramme;
@@ -45,10 +46,14 @@ class ImportCscCatalogue extends Command
 
                 continue;
             }
-            [$province, $city] = $this->location((string) ($row['loc'] ?? ''));
+            [$provinceZh, $cityZh] = $this->location((string) ($row['loc'] ?? ''));
+            $places = ChinaPlaces::cities($cityZh);
+            $provinceZh = $provinceZh ?: $places['province_zh'];
+            $province = ChinaPlaces::province($provinceZh);
+            $city = $places['city'] ?? (in_array($province, ['Beijing', 'Shanghai', 'Tianjin', 'Chongqing'], true) ? $province : null);
             $key = ! empty($row['key']) ? (string) $row['key'] : null;
 
-            DB::transaction(function () use ($row, $nameZh, $province, $city, $key, $china, $checked, &$unis, &$progs) {
+            DB::transaction(function () use ($row, $nameZh, $province, $city, $provinceZh, $cityZh, $key, $china, $checked, &$unis, &$progs) {
                 $uni = University::where('name_zh', $nameZh)->first() ?? new University;
                 if (! $uni->exists) {
                     $uni->name = $nameZh; // English name still to be added by an editor
@@ -56,7 +61,7 @@ class ImportCscCatalogue extends Command
                     $uni->name_zh = $nameZh;
                 }
                 $uni->fill(['country_id' => $china->id, 'city' => $city])->forceFill([
-                    'province' => $province, 'csc_key' => $key ?? $uni->csc_key,
+                    'province' => $province, 'province_zh' => $provinceZh, 'city_zh' => $cityZh, 'csc_key' => $key ?? $uni->csc_key,
                     'source_url' => ($key ?? $uni->csc_key) ? 'https://www.campuschina.org/zh/universities_art/index.html?key='.($key ?? $uni->csc_key) : 'https://www.campuschina.org/zh/universities/index.html',
                     'catalogue_checked_at' => $checked,
                 ])->save();

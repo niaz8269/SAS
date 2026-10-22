@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Editorial;
 
+use App\Domain\Catalogue\ChinaPlaces;
 use App\Models\Country;
 use App\Models\University;
 use App\Models\UniversityProgramme;
@@ -66,5 +67,16 @@ class EnglishNamesTest extends TestCase
         $this->artisan('sas:import-english-names', ['file' => $this->file(['法学' => '法学', '北京大学' => '']), '--type' => 'programmes']);
         $this->assertNull($p->fresh()->name_en);
         $this->assertSame('法学', $p->fresh()->displayName());
+    }
+
+    public function test_places_and_languages_are_shown_in_english(): void
+    {
+        $this->assertSame('Guangzhou, Zhuhai, Shenzhen', ChinaPlaces::cities('广州、珠海、深圳')['city']);
+        $this->assertSame('Fuxin, Huludao', ChinaPlaces::cities('阜新；辽宁, 葫芦岛')['city']);
+        $this->assertSame('Nanning', ChinaPlaces::cities('南宁市')['city']);
+        $this->assertSame('Tibet (Xizang)', ChinaPlaces::province('西藏'));
+        foreach (['汉语' => 'Chinese', '中文' => 'Chinese', '英语' => 'English', '英文' => 'English', '汉语,英语' => 'Chinese and English', '汉语Chinese/英语English' => 'Chinese and English', '双语' => 'Bilingual (Chinese and English)', null => 'Not listed'] as $raw => $en) {
+            $this->assertSame($en, UniversityProgramme::languageLabelFor($raw === '' ? null : $raw));
+        }
     }
 }

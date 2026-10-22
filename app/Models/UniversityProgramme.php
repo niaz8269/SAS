@@ -43,13 +43,27 @@ class UniversityProgramme extends Model
         return self::LEVELS[$this->level] ?? $this->level;
     }
 
+    /** The source writes languages in Chinese, sometimes with the English word attached ("汉语Chinese"); this is the English label. */
+    public static function languageLabelFor(?string $raw): string
+    {
+        $raw = trim((string) $raw);
+        if ($raw === '') {
+            return 'Not listed';
+        }
+        $chinese = (bool) preg_match('/汉语|中文|Chinese/u', $raw);
+        $english = (bool) preg_match('/英语|英文|English/u', $raw);
+
+        return match (true) {
+            $chinese && $english => 'Chinese and English',
+            $chinese => 'Chinese',
+            $english => 'English',
+            str_contains($raw, '双语') => 'Bilingual (Chinese and English)',
+            default => $raw,
+        };
+    }
+
     public function languageLabel(): string
     {
-        return match ($this->teaching_language) {
-            '汉语', '中文', '汉语、英语' => 'Chinese',
-            '英语' => 'English',
-            null, '' => 'Not listed',
-            default => $this->teaching_language,
-        };
+        return self::languageLabelFor($this->teaching_language);
     }
 }

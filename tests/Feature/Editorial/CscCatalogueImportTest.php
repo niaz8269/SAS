@@ -28,7 +28,7 @@ class CscCatalogueImportTest extends TestCase
         $this->artisan('sas:import-csc-catalogue', ['file' => $file])->assertSuccessful();
 
         $uni = University::where('name_zh', '测试大学')->firstOrFail();
-        $this->assertSame('北京', $uni->province);
+        $this->assertSame('Beijing', $uni->province);
         $this->assertSame(1, University::where('name_zh', '测试大学')->count());
         $this->assertSame(2, UniversityProgramme::count());
         $p = UniversityProgramme::where('name_zh', '社会医学')->firstOrFail();

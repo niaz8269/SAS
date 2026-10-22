@@ -45,7 +45,7 @@ class UniversityProgrammeResource extends Resource
             Select::make('level')->options(UniversityProgramme::LEVELS)->required(),
             TextInput::make('name_en')->label('Programme name (English)')->maxLength(255)->helperText('Saving a changed English name marks it as checked by staff.'),
             TextInput::make('name_zh')->label('Programme name (Chinese)')->required()->maxLength(255),
-            TextInput::make('teaching_language')->label('Teaching language')->maxLength(48),
+            TextInput::make('teaching_language')->label('Teaching language')->maxLength(48)->helperText('English or Chinese wording both work; the list shows it in English.'),
             TextInput::make('duration_years')->label('Duration (years)')->numeric()->minValue(0)->maxValue(12),
             TextInput::make('tuition_cny')->label('Tuition (CNY per year)')->numeric()->minValue(0),
             Toggle::make('csc_eligible')->label('Marked open to Chinese Government Scholarship applicants'),
@@ -68,12 +68,16 @@ class UniversityProgrammeResource extends Resource
                 TextColumn::make('level')->badge()->formatStateUsing(fn ($state) => UniversityProgramme::LEVELS[$state] ?? $state),
                 IconColumn::make('csc_eligible')->label('CSC star')->boolean(),
                 TextColumn::make('duration_years')->label('Years')->numeric(1),
-                TextColumn::make('teaching_language')->label('Language')->placeholder('Not listed'),
+                TextColumn::make('teaching_language')->label('Language')->getStateUsing(fn (UniversityProgramme $r) => $r->languageLabel()),
                 TextColumn::make('tuition_cny')->label('Tuition CNY/yr')->numeric()->sortable()->placeholder('Not listed'),
             ])
             ->filters([
                 SelectFilter::make('level')->options(UniversityProgramme::LEVELS),
-                SelectFilter::make('teaching_language')->label('Language')->options(fn () => UniversityProgramme::query()->whereNotNull('teaching_language')->distinct()->orderBy('teaching_language')->pluck('teaching_language', 'teaching_language')->all()),
+                SelectFilter::make('teaching_language')->label('Language')
+                    ->options(fn () => UniversityProgramme::query()->whereNotNull('teaching_language')->distinct()->pluck('teaching_language')->map(fn ($l) => UniversityProgramme::languageLabelFor($l))->unique()->sort()->mapWithKeys(fn ($l) => [$l => $l])->all())
+                    ->query(fn ($query, array $data) => filled($data['value'] ?? null)
+                        ? $query->whereIn('teaching_language', UniversityProgramme::query()->whereNotNull('teaching_language')->distinct()->pluck('teaching_language')->filter(fn ($l) => UniversityProgramme::languageLabelFor($l) === $data['value'])->all())
+                        : $query),
                 TernaryFilter::make('csc_eligible')->label('CSC star'),
                 SelectFilter::make('university_id')->label('University')->relationship('university', 'name')->searchable()->preload(false),
                 SelectFilter::make('name_en_source')->label('English name')->options(['official' => 'Official', 'translated' => 'Translated, to verify', 'staff' => 'Checked by staff']),
