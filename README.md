@@ -4,7 +4,15 @@ Laravel 13 / PHP 8.4 / Livewire 4 / Filament 5 / Tailwind 4 application for scho
 
 Start with [docs/PROGRESS.md](docs/PROGRESS.md) (what works, what was tested, what is missing), then [docs/IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md) and [docs/DECISIONS.md](docs/DECISIONS.md).
 
-## Local setup
+## Run it locally (Windows)
+
+```powershell
+.\scripts\dev.ps1 -Fresh     # migrate + fictional demo data, then start server, queue worker and scheduler
+```
+
+Open http://127.0.0.1:8000. Staff admin is at `/admin` (`demo-reviewer@example.test` / `demo-password-123`; set up an authenticator app on first login). Student demo: `demo-student@example.test`. Mail goes to `storage/logs/laravel.log`. The script sets `SAS_SCANNER=fake` in your local `.env` so uploads are released locally; never use that outside local development.
+
+## Local setup (manual)
 
 Requirements: PHP 8.4 (extensions: mbstring, intl, pdo_sqlite or pdo_mysql, zip, fileinfo, gd, bcmath), Composer 2, Node 20+.
 
