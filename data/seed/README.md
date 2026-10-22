@@ -65,3 +65,11 @@ CAS-TWAS President's Fellowship (official page found only for the 2017 call), Fu
 | Turkiye Burslari | turkiyeburslari.gov.tr overview (government) | Levels and support categories | No eligibility, amounts or dates on the pages read; the calendar page was not available. |
 
 Not yet researched: Fulbright (country-specific), DAAD (hundreds of programmes), Australia Awards (the DFAT page timed out), Korean GKS (page returned 404), Gates Cambridge, Commonwealth, and everything else.
+## global-2026-10-batch2.csv (checked 2026-10-22)
+
+| Programme | Source read | What it supports | Gaps |
+|---|---|---|---|
+| Commonwealth Master's Scholarships (UK), 2027-28 | cscuk.fcdo.gov.uk Master's page (government) | Itemised coverage and stipend rates, 43 eligible countries, eligibility, nominator route | Closing time given (16:00 BST on a Tuesday 20 October) but no year on the page; 2026 is inferred. Eligible countries are listed in the text, not as structured nationality criteria, so matching reports them as unconfirmed. |
+| Global Korea Scholarship (GKS) | studyinkorea.go.kr GKS tab (government) | Tracks, parent-nationality rule, age and GPA limits, coverage items | No allowance amounts or exact dates; application was not open when checked. |
+
+Tried but not seeded: Gates Cambridge (the pages returned only a short description, no eligibility or dates), Australia Awards (the DFAT pages timed out), Fulbright and DAAD (not attempted: country-specific and database-style, needing a different approach).

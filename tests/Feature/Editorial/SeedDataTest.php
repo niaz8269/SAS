@@ -28,7 +28,7 @@ class SeedDataTest extends TestCase
         }
 
         $cycles = ScholarshipCycle::with('evidence', 'routes', 'currentDeadlines')->get();
-        $this->assertGreaterThanOrEqual(19, $cycles->count());
+        $this->assertGreaterThanOrEqual(21, $cycles->count());
         foreach ($cycles as $c) {
             $this->assertSame(PublicationState::Draft, $c->publication_state, $c->external_key);
             $this->assertFalse($c->fully_funded_verified);
@@ -42,7 +42,7 @@ class SeedDataTest extends TestCase
         }
         // The only exact-time deadline is one whose source states the hour and zone.
         $exact = $cycles->filter(fn ($c) => $c->currentDeadlines->first()->date_type->value === 'exact')->pluck('external_key')->all();
-        $this->assertSame(['cn-pku-grad-2026'], array_values($exact));
+        $this->assertEqualsCanonicalizing(['cn-pku-grad-2026', 'gb-commonwealth-masters-2027'], array_values($exact));
         $this->assertSame('2026-03-09 01:00:00', ScholarshipCycle::where('external_key', 'cn-pku-grad-2026')->first()->currentDeadlines->first()->closes_at_utc->utc()->format('Y-m-d H:i:s'));
         $this->assertSame('2026-11-30', ScholarshipCycle::where('external_key', 'cn-yenching-2027')->first()->currentDeadlines->first()->closes_on->toDateString());
 
