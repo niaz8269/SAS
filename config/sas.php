@@ -30,7 +30,7 @@ return [
         'advisor' => ['enquiries.assigned', 'consultations.assigned'],
         'specialist' => ['enquiries.assigned'],
         'editor' => ['content.draft', 'import.stage', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],
-        'reviewer' => ['content.draft', 'content.review', 'content.publish', 'articles.manage', 'corrections.manage'],
+        'reviewer' => ['content.draft', 'content.review', 'content.publish', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],
         'finance' => ['finance.view'], // R2
         'partner_manager' => ['partner.submit'], // R2
     ],

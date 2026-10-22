@@ -78,4 +78,15 @@ class UniversityCatalogueAdminTest extends TestCase
         Filament::setCurrentPanel('admin');
         $this->actingAs(User::factory()->create())->get('/admin/university-programmes')->assertForbidden();
     }
+
+    public function test_universities_appear_in_the_sidebar_for_every_role_that_manages_reference_data(): void
+    {
+        foreach ([Role::SuperAdmin, Role::Administrator, Role::Editor, Role::Reviewer] as $role) {
+            $this->staff($role);
+            $html = $this->get('/admin')->assertOk()->getContent();
+            $this->assertStringContainsString('/admin/universities', $html);
+            $this->assertStringContainsString('/admin/university-programmes', $html);
+            $this->get('/admin/universities')->assertOk();
+        }
+    }
 }
