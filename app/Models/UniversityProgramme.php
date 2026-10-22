@@ -18,6 +18,21 @@ class UniversityProgramme extends Model
         return ['csc_eligible' => 'boolean', 'duration_years' => 'float', 'tuition_cny' => 'integer'];
     }
 
+    protected static function booted(): void
+    {
+        static::saving(function (self $p) {
+            if ($p->exists && $p->isDirty('name_en') && ! $p->isDirty('name_en_source')) {
+                $p->name_en_source = 'staff';
+            }
+        });
+    }
+
+    /** The English name, falling back to the Chinese one so a row is never blank. */
+    public function displayName(): string
+    {
+        return $this->name_en ?: $this->name_zh;
+    }
+
     public function university(): BelongsTo
     {
         return $this->belongsTo(University::class);

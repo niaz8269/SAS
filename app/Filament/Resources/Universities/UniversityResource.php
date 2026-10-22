@@ -40,7 +40,7 @@ class UniversityResource extends Resource
     public static function form(Schema $schema): Schema
     {
         return $schema->components([
-            TextInput::make('name')->required()->maxLength(190),
+            TextInput::make('name')->label('Name (English)')->required()->maxLength(190),
             TextInput::make('slug')->required()->unique(ignoreRecord: true)->alphaDash(),
             Select::make('country_id')->relationship('country', 'name')->searchable()->preload(),
             TextInput::make('name_zh')->label('Name (Chinese)'),
@@ -56,7 +56,12 @@ class UniversityResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('name')->searchable()->sortable(),
+                TextColumn::make('name')->label('Name (English)')->searchable()->sortable(),
+                TextColumn::make('name_en_source')->label('English name')->badge()->placeholder('—')->toggleable()
+                    ->formatStateUsing(fn ($s) => ['official' => 'official', 'translated' => 'to verify', 'staff' => 'checked by staff'][$s] ?? $s)
+                    ->color(fn ($s) => match ($s) {
+                        'official', 'staff' => 'success', 'translated' => 'warning', default => 'gray'
+                    }),
                 TextColumn::make('name_zh')->label('Chinese name')->searchable()->toggleable(),
                 TextColumn::make('country.name'),
                 TextColumn::make('province')->sortable()->toggleable(),

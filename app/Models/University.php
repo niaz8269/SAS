@@ -20,6 +20,16 @@ class University extends Model
         return $this->hasMany(UniversityProgramme::class);
     }
 
+    protected static function booted(): void
+    {
+        // An English name typed in the admin is marked as staff-entered so a later import never overwrites it.
+        static::saving(function (self $u) {
+            if ($u->exists && $u->isDirty('name') && ! $u->isDirty('name_en_source')) {
+                $u->name_en_source = 'staff';
+            }
+        });
+    }
+
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);

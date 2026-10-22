@@ -40,7 +40,7 @@ class UniversityCatalogueAdminTest extends TestCase
         return [$a, $b, $p];
     }
 
-    public function test_editor_can_browse_and_filter_programmes_but_not_change_them(): void
+    public function test_staff_can_browse_filter_and_search_programmes_in_english_or_chinese(): void
     {
         $this->staff(Role::SuperAdmin);
         [$a, , $p] = $this->catalogue();
@@ -53,8 +53,8 @@ class UniversityCatalogueAdminTest extends TestCase
             ->searchTable('法学')
             ->assertCountTableRecords(1);
 
-        $this->assertFalse(UniversityProgrammeResource::canEdit($p));
-        $this->assertFalse(UniversityProgrammeResource::canCreate());
+        $this->assertTrue(UniversityProgrammeResource::canEdit($p));
+        $this->assertTrue(UniversityProgrammeResource::canCreate());
     }
 
     public function test_university_list_shows_programme_counts_and_filters_by_having_programmes(): void
