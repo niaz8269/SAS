@@ -26,7 +26,7 @@
         <section class="card mt-5 p-5">
             <h2 class="text-lg font-bold">Turn on two-step verification</h2>
             <ol class="mt-2 list-decimal space-y-1 pl-5 text-sm"><li>Scan this code with an authenticator app, or type the key.</li><li>Enter the 6-digit code it shows.</li></ol>
-            <div class="mt-3 w-44">{!! $qr !!}</div>
+            <img src="{{ $qr }}" alt="QR code to scan with your authenticator app" width="176" height="176" class="mt-3 h-44 w-44 max-w-full">
             <p class="mt-2 text-sm">Key: <code class="font-mono">{{ $secret }}</code></p>
             <form method="POST" action="{{ route('student.security.enable') }}" class="mt-4 flex items-end gap-2">@csrf
                 <div><label for="code" class="label">Code</label><input id="code" name="code" inputmode="numeric" autocomplete="one-time-code" required class="input @error('code') input-error @enderror">@error('code')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>

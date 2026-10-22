@@ -238,7 +238,7 @@ class PrivacyAndMfaTest extends TestCase
     public function test_a_student_can_turn_on_two_step_verification_with_a_valid_code(): void
     {
         $user = User::factory()->create();
-        $this->actingAs($user)->get('/student/security')->assertOk()->assertSee('Turn on two-step verification');
+        $this->actingAs($user)->get('/student/security')->assertOk()->assertSee('Turn on two-step verification')->assertSee('<img src="data:image/svg+xml;base64,', false);
         $secret = session('mfa_setup_secret');
 
         $this->post('/student/security/enable', ['code' => '000000'])->assertSessionHasErrors('code');

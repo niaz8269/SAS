@@ -38,6 +38,7 @@
     body { @apply bg-ivory text-ink antialiased; font-family: var(--font-sans); }
     h1, h2, h3, h4 { font-family: var(--font-display); @apply tracking-tight text-ink; }
     a { @apply underline-offset-2; }
+    input[type='checkbox'], input[type='radio'] { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
     :focus-visible { outline: 3px solid var(--color-forest-600); outline-offset: 2px; border-radius: 4px; }
     [x-cloak] { display: none !important; }
 }

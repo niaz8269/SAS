@@ -63,9 +63,11 @@
 
                 <fieldset>
                     <legend class="label">Application status</legend>
+                    <div class="space-y-2">
                     @foreach (['open' => 'Open', 'upcoming' => 'Upcoming', 'rolling' => 'Rolling', 'deadline_unconfirmed' => 'Deadline unconfirmed'] as $v => $l)
                         <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $v }}" wire:model.live="status" class="rounded border-slate-300 text-forest-700"> {{ $l }}</label>
                     @endforeach
+                    </div>
                 </fieldset>
 
                 <fieldset>

@@ -51,7 +51,7 @@ Status: **Done** = implemented and covered by an executed automated test; **Part
 | PRIV-04 deletion replay | Done | tombstones (keyed email hash only) + `php artisan sas:replay-deletions` | `PrivacyAndMfaTest::test_restoring_a_backup…`. Not yet exercised with a real backup restore |
 | NFR-02 load | **Not tested** | — | no 10k/50k dataset run |
 | NFR-03 web vitals | **Not measured** | — | |
-| A11Y-01 | Partial | semantic markup, labels, skip link, focus styles, aria-live | **no screen-reader/axe/keyboard audit run** |
+| A11Y-01 | Partial | semantic markup, labels, skip link, focus styles, aria-live | automated axe pass at 360/768/1280 px is clean; **manual keyboard and screen-reader audit not done** |
 | SEO-01/02 | Partial | titles, canonical, sitemap, robots, noindex, breadcrumbs JSON-LD | sitemap cached 10 min; no OG images |
 | ANA-01 | Partial | search-zero, view, official-link, save, plan, enquiry, consultation events (no PII) | `AnalyticsTest`. No reporting dashboard or consent banner yet |
 | OPS-01..07 | Partial | docs + CI file | not executed on infrastructure |
