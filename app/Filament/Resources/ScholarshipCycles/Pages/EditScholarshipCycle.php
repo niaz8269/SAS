@@ -6,6 +6,7 @@ use App\Domain\Editorial\AuditLog;
 use App\Domain\Editorial\CycleRevisions;
 use App\Domain\Editorial\CycleWorkflow;
 use App\Domain\Scholarship\DeadlineService;
+use App\Domain\Scholarship\SearchIndexer;
 use App\Enums\ApplicationStatus;
 use App\Enums\PublicationState as S;
 use App\Filament\Resources\ScholarshipCycles\ScholarshipCycleResource;
@@ -111,6 +112,11 @@ class EditScholarshipCycle extends EditRecord
                     Notification::make()->title($suspended ? 'Applications resumed' : 'Applications suspended')->success()->send();
                 }),
         ];
+    }
+
+    protected function afterSave(): void
+    {
+        app(SearchIndexer::class)->reindex($this->getRecord()->fresh());
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Domain\Editorial;
 
+use App\Domain\Scholarship\SearchIndexer;
 use App\Models\CycleReview;
 use App\Models\CycleRevision;
 use App\Models\ScholarshipCycle;
@@ -147,6 +148,7 @@ class CycleRevisions
             foreach ($revision->changes['relations'] ?? [] as $r => $ids) {
                 $cycle->{$r}()->sync($ids);
             }
+            app(SearchIndexer::class)->reindex($cycle->fresh());
             $revision->update(['status' => 'applied', 'decided_by' => $reviewer->id, 'decided_at' => now(), 'decision_notes' => $notes, 'override' => $override]);
             CycleReview::create(['cycle_id' => $cycle->id, 'reviewer_id' => $reviewer->id, 'from_state' => $cycle->publication_state->value,
                 'to_state' => $cycle->publication_state->value, 'notes' => 'Revision applied. '.$notes, 'override' => $override]);

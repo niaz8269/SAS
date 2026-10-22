@@ -1,5 +1,10 @@
 <?php
 
+use App\Domain\Scholarship\ScholarshipSearch;
+use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\DB;
+
 // NFR-02 style check: 10k programmes / 50k cycles on a SCRATCH MySQL/MariaDB database named sas_perf (it is wiped by seed).
 // usage: php scripts/perf-check.php seed   (once)   then   php scripts/perf-check.php run
 // Edit the DB_* values below for your server. Never point this at a real database.
@@ -17,10 +22,6 @@ $root = dirname(__DIR__);
 require $root.'/vendor/autoload.php';
 $app = require $root.'/bootstrap/app.php';
 $app->make(Kernel::class)->bootstrap();
-use App\Domain\Scholarship\ScholarshipSearch;
-use Illuminate\Contracts\Console\Kernel;
-use Illuminate\Pagination\Paginator;
-use Illuminate\Support\Facades\DB;
 
 $mode = $argv[1] ?? 'run';
 if ($mode === 'seed') {
@@ -93,6 +94,7 @@ if ($mode === 'seed') {
             DB::table($t)->insert($rows);
         }
     }
+    DB::statement("INSERT INTO cycle_search_index (cycle_id, search_text) SELECT c.id, LOWER(CONCAT(p.title, ' ', COALESCE(p.summary, ''), ' ', COALESCE(c.summary, ''))) FROM scholarship_cycles c JOIN scholarship_programmes p ON p.id = c.programme_id");
     echo "seeded\n";
     exit;
 }

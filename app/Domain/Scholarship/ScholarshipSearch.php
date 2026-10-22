@@ -23,20 +23,15 @@ class ScholarshipSearch
             ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities']);
 
         if ($f['q'] !== '') {
-            foreach (preg_split('/\s+/', $f['q']) as $term) {
-                $like = '%'.str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $term).'%';
-                $q->where(function (Builder $w) use ($like) {
-                    $w->whereHas('programme', fn ($p) => $p->where('title', 'like', $like)->orWhere('summary', 'like', $like)
-                        ->orWhereHas('funder', fn ($x) => $x->where('name', 'like', $like))
-                        ->orWhereHas('universities', fn ($x) => $x->where('name', 'like', $like)))
-                        ->orWhereHas('universities', fn ($x) => $x->where('name', 'like', $like))
-                        ->orWhereHas('subjects', fn ($x) => $x->where('name', 'like', $like)
-                            ->orWhereHas('aliases', fn ($a) => $a->where('alias', 'like', $like)))
-                        ->orWhere('scholarship_cycles.summary', 'like', $like);
-                });
-            }
+            // One EXISTS against the narrow index table; every term must appear (AND).
+            $terms = preg_split('/\s+/', mb_strtolower($f['q']));
+            $q->whereExists(function ($s) use ($terms) {
+                $s->selectRaw('1')->from('cycle_search_index')->whereColumn('cycle_search_index.cycle_id', 'scholarship_cycles.id');
+                foreach ($terms as $term) {
+                    $s->where('cycle_search_index.search_text', 'like', '%'.str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $term).'%');
+                }
+            });
         }
-
         if ($f['destination']) {
             $q->whereHas('destinations', fn ($x) => $x->whereIn('countries.slug', $f['destination']));
         }

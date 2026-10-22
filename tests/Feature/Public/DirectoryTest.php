@@ -2,13 +2,20 @@
 
 namespace Tests\Feature\Public;
 
+use App\Domain\Editorial\CycleWorkflow;
+use App\Domain\Scholarship\SearchIndexer;
+use App\Enums\Role;
 use App\Livewire\ScholarshipDirectory;
 use App\Models\Country;
 use App\Models\DegreeLevel;
+use App\Models\Funder;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
+use App\Models\SourceEvidence;
 use App\Models\Subject;
 use App\Models\SubjectAlias;
+use App\Models\University;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
 use Tests\Concerns\BuildsScholarships;
@@ -121,6 +128,7 @@ class DirectoryTest extends TestCase
         $subject = Subject::create(['name' => 'Physics', 'slug' => 'physics']);
         SubjectAlias::create(['subject_id' => $subject->id, 'alias' => 'astrophysics']);
         $cycle->subjects()->attach($subject);
+        app(SearchIndexer::class)->reindex($cycle->fresh());
 
         Livewire::test(ScholarshipDirectory::class)->set('q', 'quantum')->assertSee('Quantum Futures');
         Livewire::test(ScholarshipDirectory::class)->set('q', 'astrophysics')->assertSee('Quantum Futures');
@@ -129,7 +137,9 @@ class DirectoryTest extends TestCase
 
     public function test_like_wildcards_in_keywords_are_escaped(): void
     {
-        $this->publishedCycle()->programme->update(['title' => 'Plain Award']);
+        $c = $this->publishedCycle();
+        $c->programme->update(['title' => 'Plain Award']);
+        app(SearchIndexer::class)->reindex($c->fresh());
         Livewire::test(ScholarshipDirectory::class)->set('q', '%')->assertSee('No scholarships match');
     }
 
@@ -139,5 +149,36 @@ class DirectoryTest extends TestCase
         Livewire::test(ScholarshipDirectory::class)->set('destination', ['china'])->set('q', 'x')
             ->call('removeFilter', 'destination', 'china')->assertSet('destination', [])->assertSet('q', 'x')
             ->call('clearAll')->assertSet('q', '');
+    }
+
+    public function test_the_search_text_covers_funder_university_subject_aliases_and_is_rebuilt_by_the_command(): void
+    {
+        $cycle = $this->publishedCycle();
+        $funder = Funder::create(['name' => 'Zephyr Foundation', 'slug' => 'zephyr']);
+        $cycle->programme->update(['funder_id' => $funder->id, 'title' => 'Plain Award']);
+        $uni = University::create(['name' => 'Northgate Institute', 'slug' => 'northgate']);
+        $cycle->universities()->attach($uni);
+
+        $this->artisan('sas:reindex-search')->expectsOutput('Reindexed 1 cycle(s).')->assertSuccessful();
+
+        foreach (['zephyr', 'NORTHGATE', 'plain award'] as $term) {
+            Livewire::test(ScholarshipDirectory::class)->set('q', $term)->assertSee('Plain Award');
+        }
+        Livewire::test(ScholarshipDirectory::class)->set('q', 'zephyr plain')->assertSee('Plain Award'); // terms are AND-ed
+        Livewire::test(ScholarshipDirectory::class)->set('q', 'zephyr missingword')->assertSee('No scholarships match');
+    }
+
+    public function test_publishing_indexes_the_cycle_so_it_is_findable_immediately(): void
+    {
+        $editor = User::factory()->role(Role::Editor)->create();
+        $reviewer = User::factory()->role(Role::Reviewer)->create();
+        $cycle = ScholarshipCycle::factory()->create(['created_by' => $editor->id, 'summary' => 'Unique pelican wording']);
+        SourceEvidence::create(['cycle_id' => $cycle->id, 'url' => 'https://example.org', 'publisher' => 'F', 'publisher_type' => 'funder', 'checked_at' => now()]);
+        $wf = app(CycleWorkflow::class);
+        $wf->submitForReview($cycle, $editor);
+        $wf->approve($cycle->fresh(), $reviewer);
+        $wf->publish($cycle->fresh(), $reviewer);
+
+        Livewire::test(ScholarshipDirectory::class)->set('q', 'pelican')->assertSee($cycle->programme->title);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Domain\Editorial;
 
 use App\Domain\Scholarship\ChangeDeadline;
+use App\Domain\Scholarship\SearchIndexer;
 use App\Enums\DeadlineType;
 use App\Enums\PublicationState;
 use App\Models\Country;
@@ -220,6 +221,7 @@ class ScholarshipImporter
         $evidence->save();
 
         $this->applyDeadline($cycle, $row, $route?->id, $by);
+        app(SearchIndexer::class)->reindex($cycle->fresh());
     }
 
     private function applyDeadline(ScholarshipCycle $cycle, array $row, ?int $routeId, ?User $by): void

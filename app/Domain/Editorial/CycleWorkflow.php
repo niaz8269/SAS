@@ -4,6 +4,7 @@ namespace App\Domain\Editorial;
 
 use App\Domain\Communication\ReminderScheduler;
 use App\Domain\Scholarship\DeadlineService;
+use App\Domain\Scholarship\SearchIndexer;
 use App\Enums\PublicationState as S;
 use App\Models\CycleReview;
 use App\Models\ScholarshipCycle;
@@ -78,6 +79,7 @@ class CycleWorkflow
                 'evidence_id' => $evidence->id, 'archived_at' => null,
             ]);
             $this->scheduleReview($cycle);
+            app(SearchIndexer::class)->reindex($cycle);
             $this->deadlines->refresh($cycle);
             $this->reminders->syncCycle($cycle->fresh(['programme']));
 
