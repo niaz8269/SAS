@@ -73,3 +73,13 @@ Not yet researched: Fulbright (country-specific), DAAD (hundreds of programmes),
 | Global Korea Scholarship (GKS) | studyinkorea.go.kr GKS tab (government) | Tracks, parent-nationality rule, age and GPA limits, coverage items | No allowance amounts or exact dates; application was not open when checked. |
 
 Tried but not seeded: Gates Cambridge (the pages returned only a short description, no eligibility or dates), Australia Awards (the DFAT pages timed out), Fulbright and DAAD (not attempted: country-specific and database-style, needing a different approach).
+## global-2026-10-batch3.csv (checked 2026-10-22)
+
+| Programme | Source read | What it supports | Gaps |
+|---|---|---|---|
+| Gates Cambridge Scholarship, 2027-28 entry | gatescambridge.org eligibility and timeline pages (funder) | Who can apply, eligible and excluded courses, both selection rounds with dates | Coverage not stated on the pages read. Round 2 deadline depends on the course (8 Dec 2026 or 6 Jan 2027). |
+| Rhodes Scholarship (2028 entry) | rhodeshouse.ox.ac.uk (funder) | Itemised coverage, GBP 1,700 monthly stipend (2025-26), reopens 2027 | No eligible constituencies, age or criteria (linked pages not read); no dates. |
+| Knight-Hennessy Scholars (Stanford) | knight-hennessy.stanford.edu (university) | Coverage categories, what the programme looks for | No eligibility rules, amounts or deadlines on the page read. |
+| Swiss Government Excellence Scholarships, 2027-28 | sbfi.admin.ch (government) | CHF 2,450 monthly, age limit 35, 183 eligible countries, route via Swiss embassies, application opened 20 Aug 2026 | Country-by-country deadlines not on the page. |
+
+Tried and failed: Stipendium Hungaricum (the Tempus site was down), MEXT (the page returned 404).
