@@ -44,8 +44,17 @@ Wording is the project's own paraphrase of facts; no source text was copied. Thi
 | International Chinese Language Teachers Scholarship (CLEC) | SYSU 2026 guide, MTCSOL master's (university) | Age, HSK/HSKK, recommendation rules, RMB 3,000 monthly allowance, deadline 15 May 2026 Beijing time | CLEC's own site was unreachable; one university's master's route only. |
 | CGS Bilateral Program (Type A) | SYSU 2026 guide (university) | Eligibility, documents, two-portal process, CSCA for bachelor's | Rolling channel with no final date on the page; amounts follow the CSC's annual announcement. |
 | Tsinghua graduate admissions and scholarships (CGS, BGS) | yz.tsinghua.edu.cn 2027-entry notice (university) | Who can apply, September-February window, RMB 800 fee, CGS/BGS coverage | No Tsinghua-specific scholarships described; deadlines set per programme. |
+## china-priority-2026-10-batch4.csv (checked 2026-10-22)
+
+| Programme | Source read | What it supports | Gaps |
+|---|---|---|---|
+| Shanghai Jiao Tong University international graduate scholarships | SJTU 2026 graduate admissions guide (university) | Scholarships by level, channels (Type B agency 10248 / Type A), age limits, fee, round deadlines | No stipend amounts on the page. |
+| Zhejiang University doctoral scholarship routes | ZJU 2026 doctoral guide (university) | All routes with per-route deadlines, eligibility, fee | No amounts or language thresholds on the page read. |
+| Marine Scholarship of China | Tongji University notice, 2026 intake (university) | Countries, levels, fields, RMB 3,000/3,500 allowance, agency 10247, window 25 Oct to 20 Dec 2025 | One host university; no next call found. |
+
+Fudan's international office page returned only notice titles, so Fudan was not seeded.
 ### Still to do for China
-CAS-TWAS President's Fellowship (official page found only for the 2017 call), Jiangsu Jasmine and Zhejiang provincial awards (no current official notice), the other Type B / Silk Road / Bilateral universities, Tsinghua-specific and other individual university awards, and the CSC portal itself (campuschina.org and studyinchina.csc.edu.cn block automated access; their facts are taken from consulate and university pages).
+CAS-TWAS President's Fellowship (official page found only for the 2017 call), Fudan (2026 CGS / Silk Road / Shanghai Government windows seen only in search snippets), Jiangsu Jasmine (no current official notice), other Type B / Silk Road / Bilateral universities, and the CSC portal itself (blocks automated access; its facts come from consulate and university pages).
 
 ## global-2026-10-batch1.csv (checked 2026-10-22) - first non-China batch
 
