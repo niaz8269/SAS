@@ -10,7 +10,7 @@ Start with [docs/PROGRESS.md](docs/PROGRESS.md) (what works, what was tested, wh
 .\scripts\dev.ps1 -Fresh     # migrate + fictional demo data, then start server, queue worker and scheduler
 ```
 
-Open http://127.0.0.1:8000. Staff admin is at `/admin` (`demo-reviewer@example.test` / `demo-password-123`; set up an authenticator app on first login). Student demo: `demo-student@example.test`. Mail goes to `storage/logs/laravel.log`. The script sets `SAS_SCANNER=fake` in your local `.env` so uploads are released locally; never use that outside local development.
+Open http://127.0.0.1:8000. (The script runs PHP's built-in server with opcache disabled: the opcache DLL in XAMPP's PHP 8.4 crashes the server on the second request, which looks like the site randomly going offline.) Staff admin is at `/admin` (`demo-reviewer@example.test` / `demo-password-123`; set up an authenticator app on first login). Student demo: `demo-student@example.test`. Mail goes to `storage/logs/laravel.log`. The script sets `SAS_SCANNER=fake` in your local `.env` so uploads are released locally; never use that outside local development.
 
 ## Local setup (manual)
 

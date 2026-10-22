@@ -30,7 +30,8 @@ if ($Fresh) { php artisan migrate:fresh --force --seed --seeder=DemoSeeder } els
 
 $shell = (Get-Command powershell.exe).Source
 foreach ($cmd in @(
-    'php artisan serve --host=127.0.0.1 --port=8000',
+    # Not `artisan serve`: XAMPP's php_opcache.dll crashes the built-in server on the second request, so opcache is switched off here.
+    "Set-Location '$root\public'; php -d opcache.enable=0 -d opcache.enable_cli=0 -S 127.0.0.1:8000 -t '$root\public' '$root\vendor\laravel\framework\src\Illuminate\Foundation\resources\server.php'",
     'php artisan queue:work --queue=default,mail,reminders,scanning --tries=3 --sleep=2',
     'php artisan schedule:work'
 )) {
