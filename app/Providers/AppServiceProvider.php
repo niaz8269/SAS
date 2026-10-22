@@ -6,6 +6,7 @@ use App\Domain\Documents\ClamAvScanner;
 use App\Domain\Documents\FakeScanner;
 use App\Domain\Documents\Scanner;
 use App\Domain\Editorial\AuditLog;
+use App\Domain\Site\Site;
 use App\Listeners\BlockSuppressedRecipients;
 use App\Models\CycleBenefit;
 use App\Models\CycleCriterion;
@@ -44,6 +45,9 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->isProduction()) {
             URL::forceHttps(); // SEC-01
         }
+
+        // Staff-edited brand name, tagline and contact details override config/sas.php so every view and email reads the live value.
+        Site::applyToConfig();
 
         Password::defaults(fn () => Password::min(10)->letters()->numbers());
 

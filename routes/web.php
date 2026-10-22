@@ -36,6 +36,7 @@ Route::get('/resources/{article:slug}', [PageController::class, 'resource'])->na
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/partners', [PageController::class, 'partners'])->name('partners');
 Route::get('/legal/{page}', [PageController::class, 'legal'])->name('legal.show');
+Route::get('/pages/{slug}', [PageController::class, 'cms'])->where('slug', '[A-Za-z0-9_-]+')->name('pages.show');
 Route::get('/sitemap.xml', [PageController::class, 'sitemap'])->name('sitemap');
 Route::get('/robots.txt', [PageController::class, 'robots'])->name('robots');
 

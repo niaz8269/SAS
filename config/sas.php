@@ -24,7 +24,7 @@ return [
         'super_admin' => ['*'],
         'administrator' => [
             'content.draft', 'content.override', 'import.stage', 'users.manage', 'audit.view', 'reports.view',
-            'enquiries.view_all', 'enquiries.assign', 'services.manage', 'articles.manage', 'taxonomy.manage', 'corrections.manage',
+            'enquiries.view_all', 'enquiries.assign', 'services.manage', 'articles.manage', 'taxonomy.manage', 'corrections.manage', 'site.manage',
         ],
         'service_manager' => ['services.manage', 'enquiries.view_all', 'enquiries.assign', 'reports.view'],
         'advisor' => ['enquiries.assigned', 'consultations.assigned'],

@@ -6,6 +6,7 @@ use App\Domain\Scholarship\DeadlineService;
 use App\Models\Article;
 use App\Models\Country;
 use App\Models\DegreeLevel;
+use App\Models\HomeSection;
 use App\Models\ScholarshipCycle;
 use App\Models\Service;
 use App\Models\Subject;
@@ -34,6 +35,7 @@ class HomeController extends Controller
             ->filter(fn ($c) => $deadlines->isClosingSoon($c));
 
         return view('public.home', [
+            'sections' => HomeSection::ordered(),
             'degrees' => DegreeLevel::orderBy('sort')->get(),
             'destinationsAll' => Country::destinations()->get(),
             'subjects' => Subject::orderBy('name')->get(),

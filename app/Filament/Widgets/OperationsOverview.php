@@ -18,6 +18,8 @@ class OperationsOverview extends StatsOverviewWidget
 {
     protected static ?int $sort = 1;
 
+    protected static bool $isLazy = false;
+
     protected ?string $heading = 'Operations';
 
     protected function getStats(): array

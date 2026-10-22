@@ -1,16 +1,8 @@
 @props(['title' => null, 'description' => null, 'canonical' => null, 'noindex' => false, 'og_image' => null])
 @php
     $fullTitle = ($title ? $title.' | ' : '').config('sas.brand.name');
-    $desc = $description ?? 'Find verified, officially sourced scholarships worldwide and get expert support at every step of your study abroad journey.';
-    $nav = [
-        ['Home', route('home'), request()->routeIs('home')],
-        ['Scholarships', route('scholarships.index'), request()->routeIs('scholarships.*')],
-        ['Study Destinations', route('destinations.index'), request()->routeIs('destinations.*')],
-        ['Our Services', route('services.index'), request()->routeIs('services.*')],
-        ['Resources', route('resources.index'), request()->routeIs('resources.*')],
-        ['About', route('about'), request()->routeIs('about')],
-        ['Contact', route('contact'), request()->routeIs('contact')],
-    ];
+    $desc = $description ?? \App\Domain\Site\Site::get('default_meta_description', 'Find verified, officially sourced scholarships worldwide and get expert support at every step of your study abroad journey.');
+    $nav = \App\Domain\Site\Site::menu('header');
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr">
@@ -40,9 +32,9 @@
 
         <nav aria-label="Primary" class="hidden lg:block">
             <ul class="flex items-center gap-1 text-sm font-medium">
-                @foreach ($nav as [$label, $url, $active])
-                    <li><a href="{{ $url }}" @if($active) aria-current="page" @endif
-                           class="rounded-md px-3 py-2 hover:bg-forest-50 {{ $active ? 'text-forest-800 font-semibold border-b-2 border-forest-700 rounded-b-none' : 'text-ink' }}">{{ $label }}</a></li>
+                @foreach ($nav as $item)
+                    <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif
+                           class="rounded-md px-3 py-2 hover:bg-forest-50 {{ $item['active'] ? 'text-forest-800 font-semibold border-b-2 border-forest-700 rounded-b-none' : 'text-ink' }}">{{ $item['label'] }}</a></li>
                 @endforeach
             </ul>
         </nav>
@@ -68,8 +60,8 @@
     <div id="mobile-nav" x-show="open" x-cloak x-transition.opacity class="border-t border-line bg-white lg:hidden" x-trap.noscroll="open">
         <nav aria-label="Mobile" class="container-page py-4">
             <ul class="space-y-1 text-base font-medium">
-                @foreach ($nav as [$label, $url, $active])
-                    <li><a href="{{ $url }}" @if($active) aria-current="page" @endif class="block rounded-md px-3 py-3 hover:bg-forest-50 {{ $active ? 'bg-forest-50 text-forest-800' : '' }}">{{ $label }}</a></li>
+                @foreach ($nav as $item)
+                    <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif class="block rounded-md px-3 py-3 hover:bg-forest-50 {{ $item['active'] ? 'bg-forest-50 text-forest-800' : '' }}">{{ $item['label'] }}</a></li>
                 @endforeach
             </ul>
             <div class="mt-4 grid gap-2">
@@ -84,6 +76,15 @@
         </nav>
     </div>
 </header>
+
+@if (\App\Domain\Site\Site::get('announcement_enabled') === '1' && \App\Domain\Site\Site::get('announcement_text'))
+    <div class="bg-forest-800 px-4 py-2 text-center text-sm text-white" role="region" aria-label="Announcement">
+        {{ \App\Domain\Site\Site::get('announcement_text') }}
+        @if ($aUrl = \App\Domain\Site\Site::get('announcement_url'))
+            <a href="{{ \App\Domain\Site\Site::href($aUrl) }}" class="ml-2 font-semibold underline">Learn more</a>
+        @endif
+    </div>
+@endif
 
 <x-flash />
 

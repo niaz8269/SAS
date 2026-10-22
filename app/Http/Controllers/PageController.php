@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\CmsPage;
 use App\Models\Country;
 use App\Models\ScholarshipCycle;
 use App\Models\Service;
@@ -57,21 +58,34 @@ class PageController extends Controller
         return view('public.resources.show', ['article' => $article]);
     }
 
+    /** A published page written in the admin replaces the built-in page with the same slug. */
+    private function cmsOverride(string $slug)
+    {
+        $page = CmsPage::published()->where('slug', $slug)->first();
+
+        return $page ? view('public.cms-page', ['page' => $page]) : null;
+    }
+
     public function about()
     {
-        return view('public.about');
+        return $this->cmsOverride('about') ?? view('public.about');
     }
 
     public function partners()
     {
-        return view('public.partners');
+        return $this->cmsOverride('partners') ?? view('public.partners');
     }
 
     public function legal(string $page)
     {
         abort_unless(in_array($page, ['privacy', 'terms', 'refunds', 'accessibility'], true), 404);
 
-        return view('public.legal', ['page' => $page]);
+        return $this->cmsOverride($page) ?? view('public.legal', ['page' => $page]);
+    }
+
+    public function cms(string $slug)
+    {
+        return $this->cmsOverride($slug) ?? abort(404);
     }
 
     public function sitemap()
@@ -82,6 +96,7 @@ class PageController extends Controller
             Country::destinations()->where('guidance_published', true)->get()->each(fn ($c) => $urls->push(route('destinations.show', $c)));
             Service::published()->get()->each(fn ($s) => $urls->push(route('services.show', $s)));
             Article::published()->get()->each(fn ($a) => $urls->push(route('resources.show', $a)));
+            CmsPage::published()->whereNotIn('slug', ['about', 'partners', 'privacy', 'terms', 'refunds', 'accessibility'])->get()->each(fn ($p) => $urls->push(route('pages.show', $p->slug)));
             ScholarshipCycle::visible()->with('programme')->get()->each(fn ($c) => $urls->push(route('scholarships.show', [$c->programme->slug, $c->slug])));
 
             return view('public.sitemap', ['urls' => $urls])->render();

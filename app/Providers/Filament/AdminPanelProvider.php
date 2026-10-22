@@ -34,7 +34,7 @@ class AdminPanelProvider extends PanelProvider
             // AUTH-02: staff must use multi-factor authentication. Accounts without it are sent to set it up before anything else.
             ->multiFactorAuthentication([AppAuthentication::make()->recoverable()], isRequired: true)
             ->colors(['primary' => Color::Emerald])
-            ->navigationGroups(['Editorial', 'Service desk', 'Content', 'Reference data', 'Administration'])
+            ->navigationGroups(['Website', 'Editorial', 'Service desk', 'Content', 'Reference data', 'Administration'])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([Dashboard::class])

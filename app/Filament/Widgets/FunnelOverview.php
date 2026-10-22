@@ -11,6 +11,8 @@ class FunnelOverview extends StatsOverviewWidget
 {
     protected static ?int $sort = 2;
 
+    protected static bool $isLazy = false;
+
     protected ?string $heading = 'Student funnel, last 30 days';
 
     public static function canView(): bool
