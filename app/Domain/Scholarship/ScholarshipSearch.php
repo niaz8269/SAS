@@ -73,14 +73,17 @@ class ScholarshipSearch
             $q->whereIn('application_status', $f['status']);
         }
         if ($f['deadline_from'] || $f['deadline_to']) {
-            $q->whereHas('currentDeadlines', function ($d) use ($f) {
-                $d->whereIn('date_type', ['exact', 'date_only']);
-                if ($f['deadline_from']) {
-                    $d->where(fn ($x) => $x->where('closes_at_utc', '>=', $f['deadline_from'].' 00:00:00')->orWhere('closes_on', '>=', $f['deadline_from']));
-                }
-                if ($f['deadline_to']) {
-                    $d->where(fn ($x) => $x->where('closes_at_utc', '<=', $f['deadline_to'].' 23:59:59')->orWhere('closes_on', '<=', $f['deadline_to']));
-                }
+            // Two index-friendly branches instead of one OR-ed predicate: exact instants and calendar dates.
+            $q->where(function (Builder $w) use ($f) {
+                $w->whereHas('currentDeadlines', function ($d) use ($f) {
+                    $d->where('date_type', 'exact')
+                        ->when($f['deadline_from'], fn ($x) => $x->where('closes_at_utc', '>=', $f['deadline_from'].' 00:00:00'))
+                        ->when($f['deadline_to'], fn ($x) => $x->where('closes_at_utc', '<=', $f['deadline_to'].' 23:59:59'));
+                })->orWhereHas('currentDeadlines', function ($d) use ($f) {
+                    $d->where('date_type', 'date_only')
+                        ->when($f['deadline_from'], fn ($x) => $x->where('closes_on', '>=', $f['deadline_from']))
+                        ->when($f['deadline_to'], fn ($x) => $x->where('closes_on', '<', date('Y-m-d', strtotime($f['deadline_to'].' +1 day')))); // exclusive next day: correct for DATE columns and SQLite's datetime strings
+                });
             });
         }
 

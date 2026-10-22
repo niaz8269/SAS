@@ -49,7 +49,7 @@ Status: **Done** = implemented and covered by an executed automated test; **Part
 | PRIV-02 export and deletion requests | Done | `AccountPrivacy`, `Student\PrivacyController` (password re-auth, emailed single-use 24 h link, typed confirmation) | `PrivacyAndMfaTest`. Retention periods for financial records are an R2/owner matter |
 | PRIV-03 retention | Partial | `sas:retention-cleanup` (disabled until `retention.approved`) | only rejected-upload purge |
 | PRIV-04 deletion replay | Done | tombstones (keyed email hash only) + `php artisan sas:replay-deletions` | `PrivacyAndMfaTest::test_restoring_a_backup…`. Not yet exercised with a real backup restore |
-| NFR-02 load | **Not tested** | — | no 10k/50k dataset run |
+| NFR-02 load | Partial | composite listing index; two-branch deadline-range filter | single-user timings at 10k/50k on MariaDB all under 1.5 s p95 (keyword ~1.2 s); **no 100-user concurrency test** |
 | NFR-03 web vitals | **Not measured** | — | |
 | A11Y-01 | Partial | semantic markup, labels, skip link, focus styles, aria-live | automated axe pass at 360/768/1280 px is clean; **manual keyboard and screen-reader audit not done** |
 | SEO-01/02 | Partial | titles, canonical, sitemap, robots, noindex, breadcrumbs JSON-LD | sitemap cached 10 min; no OG images |
