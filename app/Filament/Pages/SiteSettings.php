@@ -4,10 +4,10 @@ namespace App\Filament\Pages;
 
 use App\Domain\Editorial\AuditLog;
 use App\Domain\Site\Site;
+use App\Filament\Support\MediaPicker;
 use App\Filament\Support\SafeUrl;
 use BackedEnum;
 use Filament\Actions\Action;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -69,9 +69,8 @@ class SiteSettings extends Page
                 TextInput::make('brand_name')->label('Site name')->placeholder(config('sas.brand.name'))->maxLength(120),
                 TextInput::make('brand_short')->label('Short name (logo text)')->placeholder(config('sas.brand.short'))->maxLength(30),
                 TextInput::make('tagline')->placeholder(config('sas.brand.tagline'))->maxLength(160)->columnSpanFull(),
-                FileUpload::make('logo_path')->label('Logo image (optional)')->disk('public_media')->directory('site')->visibility('public')
-                    ->image()->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])->maxSize(2048)
-                    ->helperText('PNG, JPG or WebP up to 2 MB. Replaces the built-in leaf mark in the header.')->columnSpanFull(),
+                MediaPicker::make('logo_path')->label('Logo image (optional)')->columnSpanFull()
+                    ->helperText('Replaces the built-in leaf mark in the header. Pick from the media library or use the + to upload.'),
                 Textarea::make('default_meta_description')->label('Default search-engine description')->rows(2)->maxLength(300)->columnSpanFull(),
             ]),
             Section::make('Contact and legal')->columns(2)->schema([

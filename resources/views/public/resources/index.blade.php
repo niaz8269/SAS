@@ -1,9 +1,11 @@
-<x-layouts.public title="Resources" description="Guides and articles on scholarships, applications and studying abroad.">
+@php $intro = \App\Models\PageBlock::builtIn('resources', 'intro'); $emptyMsg = \App\Models\PageBlock::builtIn('resources', 'empty'); @endphp
+<x-layouts.public title="Resources" :description="$intro?->subheading ?: 'Guides and articles on scholarships, applications and studying abroad.'">
+    <x-page-blocks page="resources" position="top" />
     <section class="container-page py-10">
-        <h1 class="text-3xl font-extrabold sm:text-4xl">Resources</h1>
-        <p class="mt-2 max-w-3xl text-muted">Practical guides for international students.</p>
+        <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Resources' }}</h1>
+        <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Practical guides for international students.' }}</p>
         @if ($articles->isEmpty())
-            <p class="card mt-6 p-6 text-sm text-muted">Guides will appear here once they are published.</p>
+            <p class="card mt-6 p-6 text-sm text-muted">{{ $emptyMsg?->body ?: 'Guides will appear here once they are published.' }}</p>
         @else
             <div class="mt-6 grid gap-5 md:grid-cols-3">
                 @foreach ($articles as $a)
@@ -15,4 +17,5 @@
             <div class="mt-6">{{ $articles->links() }}</div>
         @endif
     </section>
+    <x-page-blocks page="resources" position="bottom" />
 </x-layouts.public>

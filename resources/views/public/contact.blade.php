@@ -1,8 +1,10 @@
-<x-layouts.public title="Contact" description="Send an enquiry to the team. We reply by email or phone as you prefer.">
+@php $intro = \App\Models\PageBlock::builtIn('contact', 'intro'); $aside = \App\Models\PageBlock::builtIn('contact', 'aside'); @endphp
+<x-layouts.public title="Contact" :description="$intro?->subheading ?: 'Send an enquiry to the team. We reply by email or phone as you prefer.'">
+    <x-page-blocks page="contact" position="top" />
     <div class="container-page grid gap-8 py-10 lg:grid-cols-[1fr_320px]">
         <div>
-            <h1 class="text-3xl font-extrabold sm:text-4xl">Contact us</h1>
-            <p class="mt-2 text-muted">Ask a question or tell us what help you need. Enquiries are free and never create a charge. Please do not include passport numbers or other sensitive details here.</p>
+            <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Contact us' }}</h1>
+            <p class="mt-2 text-muted">{{ $intro?->body ?: 'Ask a question or tell us what help you need. Enquiries are free and never create a charge. Please do not include passport numbers or other sensitive details here.' }}</p>
 
             @if ($cycle)
                 <p class="mt-4 rounded-md bg-forest-50 px-4 py-3 text-sm">About: <strong>{{ $cycle->programme->title }} {{ $cycle->cycle_key }}</strong></p>
@@ -60,11 +62,16 @@
                 <button class="btn-primary btn-lg">Send enquiry</button>
             </form>
         </div>
+        @if (! $aside || $aside->enabled)
         <aside class="card h-fit p-5 text-sm">
-            <h2 class="font-bold">Other ways to reach us</h2>
+            <h2 class="font-bold">{{ $aside?->heading ?: 'Other ways to reach us' }}</h2>
             <p class="mt-2">Email: <a class="text-forest-700 underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a></p>
-            <p class="mt-2 text-muted">If the form does not work for you, email us and we will reply.</p>
-            <p class="mt-4"><a class="text-forest-700 underline" href="{{ route('consultations.create') }}">Request a consultation</a></p>
+            <p class="mt-2 text-muted">{{ $aside?->body ?: 'If the form does not work for you, email us and we will reply.' }}</p>
+            @if ($aside ? $aside->cta_label : true)
+                <p class="mt-4"><a class="text-forest-700 underline" href="{{ $aside ? \App\Domain\Site\Site::href($aside->cta_url) : route('consultations.create') }}">{{ $aside?->cta_label ?: 'Request a consultation' }}</a></p>
+            @endif
         </aside>
+        @endif
     </div>
+    <x-page-blocks page="contact" position="bottom" />
 </x-layouts.public>

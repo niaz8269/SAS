@@ -191,30 +191,7 @@
     @break
 
 @case('custom')
-    <section class="container-page py-10" aria-labelledby="sec-{{ $s->id }}">
-        <div class="grid items-center gap-8 {{ $s->image_path ? 'lg:grid-cols-2' : '' }}">
-            <div>
-                @if ($s->eyebrow)<p class="eyebrow">{{ $s->eyebrow }}</p>@endif
-                <h2 id="sec-{{ $s->id }}" class="section-title mt-1">{{ $s->heading }}</h2>
-                @if ($s->subheading)<p class="mt-1 text-muted">{{ $s->subheading }}</p>@endif
-                @if ($s->body)<p class="mt-3 whitespace-pre-line">{{ $s->body }}</p>@endif
-                @if ($s->cta_label || $s->cta2_label)
-                <div class="mt-5 flex flex-wrap gap-3">
-                    @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="btn-primary">{{ $s->cta_label }}</a>@endif
-                    @if ($s->cta2_label)<a href="{{ $href($s->cta2_url) }}" class="btn-outline">{{ $s->cta2_label }}</a>@endif
-                </div>
-                @endif
-            </div>
-            @if ($s->image_path)<img src="{{ $media($s->image_path) }}" alt="" class="w-full rounded-2xl object-cover" loading="lazy">@endif
-        </div>
-        @if (! empty($s->items))
-            <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                @foreach ($s->items as $item)
-                    <li class="card p-5"><h3 class="font-bold">{{ $item['title'] ?? '' }}</h3><p class="mt-1 text-sm text-muted">{{ $item['text'] ?? '' }}</p></li>
-                @endforeach
-            </ul>
-        @endif
-    </section>
+    <x-content-block :block="$s" />
     @break
 
 @endswitch

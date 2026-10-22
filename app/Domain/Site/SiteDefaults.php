@@ -7,6 +7,39 @@ use Illuminate\Support\Facades\DB;
 /** The site's original wording and navigation, stored as ordinary rows so staff can edit, reorder, hide or delete them. */
 class SiteDefaults
 {
+    /** Built-in blocks of the list pages and the contact page. Built-ins can be edited or hidden; staff can add more. */
+    public static function seedPageBlocks(): void
+    {
+        $now = now();
+        $blocks = [
+            ['directory', 'intro', 'Directory: heading and introduction', 'Scholarship directory',
+                'Every listing links to its official source and shows when it was last checked. This is a curated selection, not every scholarship in the world.',
+                'Search officially sourced scholarships by destination, degree, subject, funding and deadline. No account needed.'],
+            ['destinations', 'intro', 'Destinations: heading and introduction', 'Study destinations',
+                'Each guide shows its sources and the date it was last reviewed. Visa and entry rules change: always confirm with the official authority.',
+                'Study destination guides with costs, official sources and the scholarships available there.'],
+            ['destinations', 'empty', 'Destinations: message when none are published', null,
+                'Destination guides will appear here once they have been reviewed and published.', null],
+            ['services', 'intro', 'Services: heading and introduction', 'Support beyond the scholarship',
+                'Professional help at each step. Every service starts with a free enquiry; we confirm scope, deliverables and any fee with you before work begins. No service guarantees scholarship selection, admission, attestation acceptance or a visa decision.',
+                'Advisory, writing, document evaluation, translation, attestation, admissions and visa support for international students.'],
+            ['services', 'empty', 'Services: message when none are published', null, 'Service pages will appear here once published.', null],
+            ['resources', 'intro', 'Resources: heading and introduction', 'Resources', 'Practical guides for international students.',
+                'Guides and articles on scholarships, applications and studying abroad.'],
+            ['resources', 'empty', 'Resources: message when none are published', null, 'Guides will appear here once they are published.', null],
+            ['contact', 'intro', 'Contact: heading and introduction', 'Contact us',
+                'Ask a question or tell us what help you need. Enquiries are free and never create a charge. Please do not include passport numbers or other sensitive details here.',
+                'Send an enquiry to the team. We reply by email or phone as you prefer.'],
+            ['contact', 'aside', 'Contact: side box', 'Other ways to reach us',
+                'If the form does not work for you, email us and we will reply.', null],
+        ];
+        foreach ($blocks as $i => [$page, $key, $label, $heading, $body, $meta]) {
+            DB::table('page_blocks')->insert(['page' => $page, 'key' => $key, 'label' => $label, 'position' => 'top', 'enabled' => true, 'sort' => ($i + 1) * 10,
+                'heading' => $heading, 'body' => $body, 'subheading' => $meta, 'created_at' => $now, 'updated_at' => $now]);
+        }
+        DB::table('page_blocks')->where(['page' => 'contact', 'key' => 'aside'])->update(['cta_label' => 'Request a consultation', 'cta_url' => '/consultation']);
+    }
+
     public static function seed(): void
     {
         $now = now();

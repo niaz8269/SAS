@@ -33,7 +33,7 @@ class CmsPageResource extends Resource
 
     protected static string|\UnitEnum|null $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 5;
 
     protected static ?string $modelLabel = 'page';
 
@@ -56,7 +56,7 @@ class CmsPageResource extends Resource
             TextInput::make('slug')->required()->alphaDash()->maxLength(120)->unique(ignoreRecord: true)
                 ->helperText('The web address. "about", "partners", "privacy", "terms", "refunds" and "accessibility" replace the built-in pages; any other slug is served at /pages/your-slug.'),
             Textarea::make('meta_description')->label('Search-engine description')->rows(2)->maxLength(300)->columnSpanFull(),
-            RichEditor::make('body')->columnSpanFull()->helperText('Headings, lists, links and tables are kept. Scripts and embedded code are always removed.'),
+            RichEditor::make('body')->columnSpanFull()->fileAttachmentsDisk('public_media')->fileAttachmentsDirectory('media/attachments')->fileAttachmentsVisibility('public')->helperText('Headings, lists, links and tables are kept. Scripts and embedded code are always removed.'),
             Toggle::make('published')->helperText('Unpublished pages are not visible, and the built-in page is shown instead.'),
         ]);
     }

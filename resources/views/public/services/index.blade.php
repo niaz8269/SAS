@@ -1,9 +1,11 @@
-<x-layouts.public title="Our services" description="Advisory, writing, document evaluation, translation, attestation, admissions and visa support for international students.">
+@php $intro = \App\Models\PageBlock::builtIn('services', 'intro'); $emptyMsg = \App\Models\PageBlock::builtIn('services', 'empty'); @endphp
+<x-layouts.public title="Our services" :description="$intro?->subheading ?: 'Advisory, writing, document evaluation, translation, attestation, admissions and visa support for international students.'">
+    <x-page-blocks page="services" position="top" />
     <section class="container-page py-10">
-        <h1 class="text-3xl font-extrabold sm:text-4xl">Support beyond the scholarship</h1>
-        <p class="mt-2 max-w-3xl text-muted">Professional help at each step. Every service starts with a free enquiry; we confirm scope, deliverables and any fee with you before work begins. No service guarantees scholarship selection, admission, attestation acceptance or a visa decision.</p>
+        <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Support beyond the scholarship' }}</h1>
+        <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Professional help at each step. Every service starts with a free enquiry; we confirm scope, deliverables and any fee with you before work begins. No service guarantees scholarship selection, admission, attestation acceptance or a visa decision.' }}</p>
         @if ($services->isEmpty())
-            <p class="card mt-6 p-6 text-sm text-muted">Service pages will appear here once published. You can still <a class="text-forest-700 underline" href="{{ route('contact') }}">send us an enquiry</a>.</p>
+            <p class="card mt-6 p-6 text-sm text-muted">{{ $emptyMsg?->body ?: 'Service pages will appear here once published.' }} You can still <a class="text-forest-700 underline" href="{{ route('contact') }}">send us an enquiry</a>.</p>
         @else
             <ul class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 @foreach ($services as $s)
@@ -16,4 +18,5 @@
             </ul>
         @endif
     </section>
+    <x-page-blocks page="services" position="bottom" />
 </x-layouts.public>

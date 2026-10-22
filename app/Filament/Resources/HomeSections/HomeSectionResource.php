@@ -4,12 +4,12 @@ namespace App\Filament\Resources\HomeSections;
 
 use App\Filament\Concerns\ChecksPermission;
 use App\Filament\Resources\HomeSections\Pages\ManageHomeSections;
+use App\Filament\Support\MediaPicker;
 use App\Filament\Support\SafeUrl;
 use App\Models\HomeSection;
 use BackedEnum;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -69,9 +69,8 @@ class HomeSectionResource extends Resource
                 Textarea::make('text')->rows(2)->maxLength(400),
             ])->reorderable()->collapsible()->defaultItems(0)->columnSpanFull()
                 ->helperText('Used by the hero (three bullets), "How the platform works" and added sections.'),
-            FileUpload::make('image_path')->label('Image (optional)')->disk('public_media')->directory('home')->visibility('public')
-                ->image()->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])->maxSize(4096)->columnSpanFull()
-                ->helperText('Hero: replaces the built-in illustration. Added sections: shown beside the text. PNG, JPG or WebP up to 4 MB.'),
+            MediaPicker::make('image_path')->label('Image (optional)')->columnSpanFull()
+                ->helperText('Hero: replaces the built-in illustration. Added sections: shown beside the text. Pick from the media library or use the + to upload.'),
         ])->columns(2);
     }
 
