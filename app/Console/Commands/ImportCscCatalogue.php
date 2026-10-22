@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Country;
 use App\Models\University;
 use App\Models\UniversityProgramme;
+use Carbon\CarbonImmutable;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
@@ -34,7 +35,7 @@ class ImportCscCatalogue extends Command
             return self::FAILURE;
         }
         $china = Country::where('code', 'CN')->firstOrFail();
-        $checked = $this->option('checked') ? \Carbon\CarbonImmutable::parse($this->option('checked')) : now();
+        $checked = $this->option('checked') ? CarbonImmutable::parse($this->option('checked')) : now();
         $unis = $progs = $skipped = 0;
 
         foreach ($data as $row) {
