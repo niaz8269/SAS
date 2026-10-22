@@ -28,7 +28,12 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->brandName('SAS Staff')
+            ->brandName('SAS Admin')
+            ->brandLogo(fn () => view('filament.brand'))
+            ->brandLogoHeight('2rem')
+            ->sidebarCollapsibleOnDesktop()
+            ->maxContentWidth('full')
+            ->unsavedChangesAlerts()
             ->login()
             ->profile() // where staff set up and manage their authenticator app
             // AUTH-02: staff must use multi-factor authentication. Accounts without it are sent to set it up before anything else.
