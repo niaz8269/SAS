@@ -157,13 +157,15 @@ class AdminPanelTest extends TestCase
         $this->assertSame('in_review', $cycle->fresh()->publication_state->value);
     }
 
-    public function test_editors_cannot_edit_a_published_cycle_but_reviewers_can(): void
+    public function test_editors_may_open_a_published_cycle_to_propose_changes_but_cannot_change_its_child_records(): void
     {
         $cycle = ScholarshipCycle::factory()->published()->create();
         $this->staff(Role::Editor);
-        $this->get('/admin/scholarship-cycles/'.$cycle->id.'/edit')->assertForbidden();
+        $this->get('/admin/scholarship-cycles/'.$cycle->id.'/edit')->assertOk();
+        $this->assertFalse(auth()->user()->can('editDirect', $cycle));
         $this->staff(Role::Reviewer);
         $this->get('/admin/scholarship-cycles/'.$cycle->id.'/edit')->assertOk();
+        $this->assertTrue(auth()->user()->can('editDirect', $cycle));
     }
 
     public function test_deadline_relation_manager_records_a_new_version_and_refuses_bad_input(): void

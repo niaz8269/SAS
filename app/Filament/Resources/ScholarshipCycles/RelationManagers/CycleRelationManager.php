@@ -15,6 +15,6 @@ abstract class CycleRelationManager extends RelationManager
 
     public function isReadOnly(): bool
     {
-        return ! auth()->user()?->can('update', $this->getOwnerRecord());
+        return ! auth()->user()?->can('editDirect', $this->getOwnerRecord());
     }
 }

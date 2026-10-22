@@ -24,7 +24,7 @@ Status: **Done** = implemented and covered by an executed automated test; **Part
 | DIR-05/06/07 detail, unknowns, route deadlines | Done | `scholarships/show` | `PublicPagesTest` |
 | DATA-01 programme vs cycle | Done | schema, importer | `ImportTest` (new year → new cycle) |
 | DATA-02 evidence required, aggregator insufficient | Done | `CycleWorkflow` | `WorkflowTest` |
-| DATA-03 workflow, no self-approval, override with reason | Done | `CycleWorkflow` + admin buttons | `WorkflowTest`, `AdminPanelTest` |
+| DATA-03 workflow, no self-approval, override with reason | Done | `CycleWorkflow` + admin buttons; staged edits to live cycles via `CycleRevisions` | `WorkflowTest`, `AdminPanelTest`, `RevisionTest` |
 | DATA-04 review cadence, needs recheck | Done | `scheduleReview`, `needsRecheck`, promotion filter | `PublicPagesTest`, workflow test |
 | DEAD-01..04 deadlines | Done | `DeadlineService`, `ChangeDeadline` | `DeadlineTest` |
 | STU-01/02 profile, scales not converted | Done | `ProfileController`, `MatchingService` | `PlanTest`, `MatchingTest` |

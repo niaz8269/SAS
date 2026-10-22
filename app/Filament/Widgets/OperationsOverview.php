@@ -5,6 +5,7 @@ namespace App\Filament\Widgets;
 use App\Enums\PublicationState;
 use App\Models\ApplicationPlan;
 use App\Models\CorrectionReport;
+use App\Models\CycleRevision;
 use App\Models\Enquiry;
 use App\Models\NotificationEvent;
 use App\Models\ScholarshipCycle;
@@ -27,6 +28,8 @@ class OperationsOverview extends StatsOverviewWidget
         if ($user->can('content.review') || $user->can('content.draft')) {
             $stats[] = Stat::make('Awaiting review', ScholarshipCycle::where('publication_state', PublicationState::InReview->value)->count())
                 ->description('Listings submitted by editors');
+            $stats[] = Stat::make('Pending changes to live listings', CycleRevision::where('status', 'pending')->count())
+                ->description('Proposed edits waiting for a second person');
             $stats[] = Stat::make('Overdue source checks', ScholarshipCycle::visible()->where('review_due_at', '<', now())->count())
                 ->description('Shown as "Needs recheck" and not promoted')->color('warning');
             $stats[] = Stat::make('Closing in 7 days', ScholarshipCycle::visible()->whereBetween('next_closing_sort', [now(), now()->addDays(7)])->count())

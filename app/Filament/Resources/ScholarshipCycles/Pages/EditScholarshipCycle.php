@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ScholarshipCycles\Pages;
 
 use App\Domain\Editorial\AuditLog;
+use App\Domain\Editorial\CycleRevisions;
 use App\Domain\Editorial\CycleWorkflow;
 use App\Domain\Scholarship\DeadlineService;
 use App\Enums\ApplicationStatus;
@@ -13,6 +14,7 @@ use Filament\Forms\Components\Textarea;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Support\Arr;
 use Illuminate\Validation\ValidationException;
 
 /** Workflow buttons call the same CycleWorkflow actions as everything else; the UI never decides a transition itself. */
@@ -25,6 +27,21 @@ class EditScholarshipCycle extends EditRecord
         $wf = app(CycleWorkflow::class);
         $user = fn () => auth()->user();
         $state = fn (): S => $this->getRecord()->publication_state;
+
+        $revisions = app(CycleRevisions::class);
+        $pending = fn () => $revisions->pending($this->getRecord());
+        $runRevision = function (callable $fn, string $success): void {
+            try {
+                $fn();
+                $this->getRecord()->refresh();
+                $this->fillForm();
+                Notification::make()->title($success)->success()->send();
+            } catch (ValidationException $e) {
+                Notification::make()->title('Cannot continue')->body(collect($e->errors())->flatten()->implode(' '))->danger()->send();
+            } catch (AuthorizationException $e) {
+                Notification::make()->title('Not allowed')->body($e->getMessage())->danger()->send();
+            }
+        };
 
         $run = function (callable $fn, string $success): void {
             try {
@@ -41,6 +58,21 @@ class EditScholarshipCycle extends EditRecord
 
         return [
             Action::make('state')->label(fn () => 'State: '.$state()->label())->color('gray')->disabled()->badge(),
+            Action::make('pendingRevision')->label(fn () => 'Pending change from '.($pending()?->proposer?->name ?? 'a colleague'))->color('warning')->badge()->disabled()
+                ->visible(fn () => $pending() !== null),
+            Action::make('applyRevision')->label('Review pending change')->color('success')->icon('heroicon-o-check')
+                ->visible(fn () => $pending() !== null && ($user()->can('content.review') || ($user()->can('content.override') && $pending()->proposed_by === $user()->id)))
+                ->modalHeading('Pending change to the live listing')
+                ->modalContent(fn () => view('filament.revision-diff', ['rows' => $revisions->diff($pending())]))
+                ->schema([
+                    Textarea::make('notes')->label('Review notes'),
+                    Textarea::make('override_reason')->label('Override reason')->helperText('Only for administrators approving their own change. Recorded in the audit log.'),
+                ])->modalSubmitActionLabel('Approve and apply')
+                ->action(fn (array $data) => $runRevision(fn () => $revisions->apply($pending(), $user(), $data['notes'] ?? null, $data['override_reason'] ?? null), 'Change applied to the live listing')),
+            Action::make('rejectRevision')->label('Reject pending change')->color('danger')->icon('heroicon-o-x-mark')
+                ->visible(fn () => $pending() !== null && ($user()->can('content.review') || $pending()->proposed_by === $user()->id))
+                ->schema([Textarea::make('notes')->required()->label('Reason')])
+                ->action(fn (array $data) => $runRevision(fn () => $revisions->reject($pending(), $user(), $data['notes']), 'Pending change closed')),
             Action::make('submit')->label('Submit for review')->icon('heroicon-o-paper-airplane')
                 ->visible(fn () => in_array($state(), [S::Draft, S::ChangesRequested], true) && $user()->can('content.draft'))
                 ->requiresConfirmation()->modalDescription('At least one source (URL, publisher, checked date) must be recorded first.')
@@ -79,6 +111,30 @@ class EditScholarshipCycle extends EditRecord
                     Notification::make()->title($suspended ? 'Applications resumed' : 'Applications suspended')->success()->send();
                 }),
         ];
+    }
+
+    /**
+     * Edits to a LIVE cycle never apply directly. They are staged as a proposal that a second person approves, and the form
+     * is reset to the live values. Placement flags (not factual claims) are saved directly for people who may publish.
+     */
+    protected function beforeSave(): void
+    {
+        $record = $this->getRecord();
+        if ($record->publication_state !== S::Published) {
+            return;
+        }
+        $user = auth()->user();
+        $state = $this->form->getState();
+
+        if ($user->can('content.publish')) {
+            $record->forceFill(Arr::only($state, ['featured', 'sponsored', 'sponsored_label']))->save();
+        }
+        $revision = app(CycleRevisions::class)->propose($record, $user, $state);
+        Notification::make()->title($revision ? 'Change submitted for review. The public listing is unchanged until it is approved.' : 'Saved. No content changes to review.')
+            ->success()->send();
+        $record->refresh();
+        $this->fillForm();
+        $this->halt();
     }
 
     /** Placement and verification flags need the matching permission even if a request is tampered with. */

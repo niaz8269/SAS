@@ -5,6 +5,13 @@ namespace App\Providers;
 use App\Domain\Documents\ClamAvScanner;
 use App\Domain\Documents\FakeScanner;
 use App\Domain\Documents\Scanner;
+use App\Domain\Editorial\AuditLog;
+use App\Models\CycleBenefit;
+use App\Models\CycleCriterion;
+use App\Models\CycleRequirement;
+use App\Models\ScholarshipCycle;
+use App\Models\ScholarshipRoute;
+use App\Models\SourceEvidence;
 use App\Models\User;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
@@ -46,6 +53,18 @@ class AppServiceProvider extends ServiceProvider
 
             return $user?->hasPermission($ability) ? true : false;
         });
+
+        // Child records of a LIVE cycle can be changed directly by reviewers; every such change is audited.
+        foreach ([CycleRequirement::class, CycleBenefit::class, ScholarshipRoute::class, CycleCriterion::class, SourceEvidence::class] as $model) {
+            foreach (['saved', 'deleted'] as $event) {
+                $model::$event(function ($row) use ($event) {
+                    $cycle = $row->cycle_id ? ScholarshipCycle::find($row->cycle_id) : null;
+                    if ($cycle?->isPublished()) {
+                        AuditLog::record('cycle.child_changed', $cycle, null, ['record' => class_basename($row), 'id' => $row->getKey(), 'event' => $event, 'changed' => array_keys($row->getChanges())]);
+                    }
+                });
+            }
+        }
 
         // AUTH-02: rate-limit login, registration, reset, verification, enquiries and uploads.
         RateLimiter::for('login', fn (Request $r) => [

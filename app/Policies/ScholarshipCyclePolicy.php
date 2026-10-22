@@ -23,8 +23,25 @@ class ScholarshipCyclePolicy
         return $user->hasPermission('content.draft');
     }
 
-    /** Editors edit drafts; only people who can publish may edit live content (changes to live content are not staged in R1). */
+    /**
+     * May open the edit page. On a LIVE cycle anyone who can draft may open it to PROPOSE a change; the proposal is staged
+     * and a second person approves it (CycleRevisions), so opening the form never changes what the public sees.
+     */
     public function update(User $user, ScholarshipCycle $cycle): bool
+    {
+        if (! $user->hasPermission('content.draft')) {
+            return false;
+        }
+
+        return match ($cycle->publication_state) {
+            S::Draft, S::ChangesRequested, S::Published => true,
+            S::InReview, S::Approved => $user->hasPermission('content.publish') || $user->hasPermission('content.override'),
+            S::Archived => false,
+        };
+    }
+
+    /** May change the cycle's child records (routes, requirements, deadlines...) immediately. Live ones are reviewer-only and audited. */
+    public function editDirect(User $user, ScholarshipCycle $cycle): bool
     {
         if (! $user->hasPermission('content.draft')) {
             return false;
