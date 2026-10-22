@@ -37,5 +37,12 @@ Wording is the project's own paraphrase of facts; no source text was copied. Thi
 | Peking University scholarships for international graduate students (CSC, PKUS, BGS) | isd.pku.edu.cn notice, 12 Jan 2026 (university) | Three scholarships from one application; exact deadlines 9 Mar 09:00 and 17 Mar 24:00 Beijing time | Notice does not print the year beside the dates (dated January 2026, so 2026 assumed); no cash amounts. |
 | UNESCO/PRC Great Wall Co-Sponsored Fellowships, 2026-27 | unesco.org/en/fellowships/greatwall (funder) | 75 fellowships (27 new), age limits, route via National Commissions, deadline 23 Jan 2026 | Benefits not listed; the page was updated after the deadlines yet still says open. |
 
+## china-priority-2026-10-batch3.csv (checked 2026-10-22)
+
+| Programme | Source read | What it supports | Gaps |
+|---|---|---|---|
+| International Chinese Language Teachers Scholarship (CLEC) | SYSU 2026 guide, MTCSOL master's (university) | Age, HSK/HSKK, recommendation rules, RMB 3,000 monthly allowance, deadline 15 May 2026 Beijing time | CLEC's own site was unreachable; one university's master's route only. |
+| CGS Bilateral Program (Type A) | SYSU 2026 guide (university) | Eligibility, documents, two-portal process, CSCA for bachelor's | Rolling channel with no final date on the page; amounts follow the CSC's annual announcement. |
+| Tsinghua graduate admissions and scholarships (CGS, BGS) | yz.tsinghua.edu.cn 2027-entry notice (university) | Who can apply, September-February window, RMB 800 fee, CGS/BGS coverage | No Tsinghua-specific scholarships described; deadlines set per programme. |
 ### Still to do for China
-CAS-TWAS President's Fellowship (official page found only for the 2017 call), Confucius / Chinese Language Teachers scholarship (official site unreachable), Jiangsu Jasmine, Zhejiang, the other Type B and Silk Road universities, Tsinghua and other individual university awards, the CSC portal itself (campuschina.org blocked automated access).
+CAS-TWAS President's Fellowship (official page found only for the 2017 call), Jiangsu Jasmine and Zhejiang provincial awards (no current official notice), the other Type B / Silk Road / Bilateral universities, Tsinghua-specific and other individual university awards, and the CSC portal itself (campuschina.org and studyinchina.csc.edu.cn block automated access; their facts are taken from consulate and university pages).

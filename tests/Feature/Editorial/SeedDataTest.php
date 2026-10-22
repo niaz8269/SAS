@@ -28,7 +28,7 @@ class SeedDataTest extends TestCase
         }
 
         $cycles = ScholarshipCycle::with('evidence', 'routes', 'currentDeadlines')->get();
-        $this->assertGreaterThanOrEqual(10, $cycles->count());
+        $this->assertGreaterThanOrEqual(13, $cycles->count());
         foreach ($cycles as $c) {
             $this->assertSame(PublicationState::Draft, $c->publication_state, $c->external_key);
             $this->assertFalse($c->fully_funded_verified);
