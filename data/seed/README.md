@@ -26,3 +26,16 @@ Rows become drafts without a reviewer, `fully_funded_verified` stays off, and no
 - Individual Chinese university scholarships, and every other country: not researched yet.
 
 Wording is the project's own paraphrase of facts; no source text was copied. Third-party aggregator sites were deliberately not used as evidence.
+
+## china-priority-2026-10-batch2.csv (checked 2026-10-22)
+
+| Programme | Source read | What it supports | Gaps |
+|---|---|---|---|
+| CAS-ANSO Scholarship (Degree Program), 2026 call | anso.org.cn call page (funder) | Eligibility (born on/after 1 Jan 1996 master's, 1991 PhD), how to apply via UCAS/USTC, deadline 31 Jan 2026 Beijing time | Coverage list is an image the tool could not read, so amounts are unknown. No 2027 call listed yet. |
+| Silk Road Program (Chinese Government Scholarship) | HUST 2026 notice (university) | Countries, HSK/CSCA rules, CNY 2,500 monthly stipend, fee, deadline 20 May 2026 | One university only; other universities differ. No time zone stated. Recorded as a single undergraduate example. |
+| CGS University Program (Type B) | SUFE 2026 notice (university) | Stipends, agency number, three-stage timeline, deadline 28 Feb 2026 | One university only. |
+| Peking University scholarships for international graduate students (CSC, PKUS, BGS) | isd.pku.edu.cn notice, 12 Jan 2026 (university) | Three scholarships from one application; exact deadlines 9 Mar 09:00 and 17 Mar 24:00 Beijing time | Notice does not print the year beside the dates (dated January 2026, so 2026 assumed); no cash amounts. |
+| UNESCO/PRC Great Wall Co-Sponsored Fellowships, 2026-27 | unesco.org/en/fellowships/greatwall (funder) | 75 fellowships (27 new), age limits, route via National Commissions, deadline 23 Jan 2026 | Benefits not listed; the page was updated after the deadlines yet still says open. |
+
+### Still to do for China
+CAS-TWAS President's Fellowship (official page found only for the 2017 call), Confucius / Chinese Language Teachers scholarship (official site unreachable), Jiangsu Jasmine, Zhejiang, the other Type B and Silk Road universities, Tsinghua and other individual university awards, the CSC portal itself (campuschina.org blocked automated access).
