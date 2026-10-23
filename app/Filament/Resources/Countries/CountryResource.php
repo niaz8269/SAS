@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Countries;
 
 use App\Filament\Concerns\ChecksPermission;
 use App\Filament\Resources\Countries\Pages\ManageCountries;
+use App\Filament\Support\MediaPicker;
 use App\Models\Country;
 use BackedEnum;
 use Filament\Actions\EditAction;
@@ -59,6 +60,7 @@ class CountryResource extends Resource
                 Toggle::make('is_destination')->label('Is a study destination'),
                 Toggle::make('guidance_published')->label('Guide is published'),
                 Toggle::make('featured')->label('Featured on the homepage'),
+                MediaPicker::make('image_path')->label('Card photo')->columnSpanFull()->helperText('Shown on the destination cards and the guide page. Blank = a bundled illustration of the country. Use a photo you have the right to publish.'),
                 Textarea::make('summary')->rows(2),
                 RichEditor::make('study_guidance')->columnSpanFull(),
                 Repeater::make('cost_notes')->schema([

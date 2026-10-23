@@ -123,9 +123,7 @@
         @else
             <ul class="mt-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
                 @foreach ($destinations as $c)
-                    <li><a href="{{ route('destinations.show', $c) }}" class="group relative flex h-40 items-end overflow-hidden rounded-xl bg-gradient-to-br from-navy-700 to-navy-900 p-4 text-white">
-                        <span class="absolute inset-0 opacity-20" style="background: radial-gradient(circle at 80% 20%, #caa249, transparent 55%)" aria-hidden="true"></span>
-                        <span class="relative text-lg font-bold group-hover:underline">{{ $c->name }} <span aria-hidden="true">&rarr;</span></span></a></li>
+                    <li><x-destination-card :country="$c" size="sm" /></li>
                 @endforeach
             </ul>
         @endif
@@ -183,8 +181,11 @@
 
 @case('consultation')
     <section class="container-page pb-4">
-        <div class="flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-navy-800 p-8 text-white">
-            <div><h2 class="text-2xl font-extrabold !text-white">{{ $s->heading }}</h2>@if ($s->body)<p class="mt-1 text-navy-100">{{ $s->body }}</p>@endif</div>
+        <div class="flex flex-wrap items-center justify-between gap-6 rounded-2xl border border-gold/60 bg-white p-6 shadow-sm sm:p-8">
+            <div class="flex items-center gap-5">
+                <img src="{{ asset('images/sas-seal.png') }}" alt="" class="hidden h-20 w-20 shrink-0 sm:block" width="80" height="80" loading="lazy">
+                <div><h2 class="text-2xl font-extrabold">{{ $s->heading }}</h2>@if ($s->body)<p class="mt-1 text-muted">{{ $s->body }}</p>@endif</div>
+            </div>
             @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="btn-gold btn-lg">{{ $s->cta_label }} <span aria-hidden="true">&rarr;</span></a>@endif
         </div>
     </section>

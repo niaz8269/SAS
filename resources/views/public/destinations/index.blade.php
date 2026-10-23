@@ -9,9 +9,7 @@
         @else
             <ul class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
                 @foreach ($countries as $c)
-                    <li><a href="{{ route('destinations.show', $c) }}" class="group relative flex h-48 items-end overflow-hidden rounded-xl bg-gradient-to-br from-navy-700 to-navy-900 p-5 text-white">
-                        <span class="absolute inset-0 opacity-25" style="background: radial-gradient(circle at 85% 15%, #caa249, transparent 55%)" aria-hidden="true"></span>
-                        <span class="relative"><span class="block text-xl font-bold group-hover:underline">{{ $c->name }}</span><span class="text-sm text-navy-100">{{ \Illuminate\Support\Str::limit($c->summary, 70) }}</span></span></a></li>
+                    <li><x-destination-card :country="$c" /></li>
                 @endforeach
             </ul>
         @endif
