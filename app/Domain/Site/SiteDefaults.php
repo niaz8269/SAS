@@ -61,7 +61,7 @@ class SiteDefaults
 
         $sections = [
             ['hero', 'Hero and search box', 'Global scholarships. Brighter futures.', "Your ambition.\nA world of possibilities.",
-                'Search scholarships worldwide', 'Discover officially sourced scholarships and get expert support at every step. Browsing is free and never needs an account.',
+                'Search scholarships worldwide', 'Verified scholarship opportunities drawn from official sources, with professional guidance from your first enquiry through to admission.',
                 'Explore Scholarships', '/scholarships', 'Our services', '/services', [
                     ['title' => 'Explore opportunities', 'text' => 'Search by destination, degree and subject.'],
                     ['title' => 'Get expert guidance', 'text' => 'Advisory and application support.'],
