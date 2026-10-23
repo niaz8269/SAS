@@ -92,7 +92,7 @@ return [
         'images/destinations/sa.jpg' => ['name' => 'Ibrahim Abdullah', 'url' => 'https://unsplash.com/photos/kingdom-centre-skyscraper-in-riyadh-_UxsPARhtOg', 'subject' => 'Kingdom Centre, Riyadh'],
         'images/destinations/se.jpg' => ['name' => 'Ana Bórquez', 'url' => 'https://unsplash.com/photos/white-boat-on-water-near-city-buildings-during-daytime-uF4PfwZPOR8', 'subject' => 'Riddarholmen, Stockholm'],
         'images/destinations/uz.jpg' => ['name' => 'Aleksander Stypczynski', 'url' => 'https://unsplash.com/photos/a-large-building-with-many-pillars-and-arches-l3AwHYiUGG0', 'subject' => 'The Registan, Samarkand'],
-        'images/hero-graduates.jpg' => ['name' => 'Pang Yuhao', 'url' => 'https://unsplash.com/photos/people-throwing-hats-on-air-_kd5cxwZOK4', 'subject' => 'Graduates throwing their caps'],
+        'images/hero-globe.jpg' => ['name' => 'Arpit Rastogi', 'url' => 'https://unsplash.com/photos/white-and-brown-desk-globe-xv7DTjnx2YQ', 'subject' => 'Desk globe (homepage banner)'],
     ],
 
     'deadlines' => [
