@@ -65,12 +65,12 @@ class SiteDefaults
                 'Explore Scholarships', '/scholarships', 'Our services', '/services', [
                     ['title' => 'Explore opportunities', 'text' => 'Search by destination, degree and subject.'],
                     ['title' => 'Get expert guidance', 'text' => 'Advisory and application support.'],
-                    ['title' => 'Take the next step', 'text' => 'Plan and track on official portals.'],
+                    ['title' => 'Take the next step', 'text' => 'Plan each application and track every step.'],
                 ]],
             ['degrees', 'Browse by degree', null, 'Browse by degree', null, null, null, null, null, null, null],
             ['featured', 'Featured scholarships', 'Featured opportunities', 'Find your next opportunity', null, null, 'View all scholarships', '/scholarships', null, null, null],
             ['closing_soon', 'Closing soon', null, 'Closing soon', null,
-                'Only calls with a confirmed upcoming closing date are listed. Always check the official page for the latest information.',
+                'Only calls with a confirmed upcoming closing date are listed. Dates can change: ask us for the latest information.',
                 'View upcoming deadlines', '/scholarships?sort=closing', null, null, null],
             ['destinations', 'Study destinations', null, 'Where will your future take you?', 'Discover study destinations and the scholarships available there.', null,
                 'Explore all destinations', '/destinations', null, null, null],
@@ -78,7 +78,7 @@ class SiteDefaults
                 'Learn more about our services', '/services', null, null, null],
             ['how', 'How the platform works', null, 'How the platform works', null, null, null, null, null, null, [
                 ['title' => 'Discover', 'text' => 'Search verified scholarship calls. Every call shows its official source and when it was last checked.'],
-                ['title' => 'Plan', 'text' => 'Save scholarships, build an application checklist and keep documents in a private vault. You apply on the official website.'],
+                ['title' => 'Plan', 'text' => 'Save scholarships, build an application checklist and keep documents in a private vault, and ask our team for support.'],
                 ['title' => 'Get support', 'text' => 'Ask for advice, writing help, document evaluation, attestation or visa guidance when you need it.'],
             ]],
             ['resources', 'Latest resources', null, 'Latest resources', null, null, 'All guides', '/resources', null, null, null],

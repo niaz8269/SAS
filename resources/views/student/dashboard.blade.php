@@ -1,6 +1,6 @@
 <x-layouts.student title="Dashboard">
     <h1 class="text-2xl font-extrabold">Welcome, {{ \Illuminate\Support\Str::before($user->name, ' ') }}</h1>
-    <p class="mt-1 text-sm text-muted">Your private workspace. Applications are made on each scholarship's official website; here you plan and track them.</p>
+    <p class="mt-1 text-sm text-muted">Your private workspace: plan each application, keep your documents and track what is done.</p>
 
     <div class="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <a href="{{ route('student.saved.index') }}" class="card p-4 hover:border-navy-500"><p class="text-3xl font-extrabold">{{ $savedCount }}</p><p class="text-sm text-muted">Saved scholarships</p></a>
@@ -18,7 +18,7 @@
             @endforelse
             @if ($unconfirmed->isNotEmpty())
                 <h3 class="mt-4 text-sm font-semibold">Deadline not confirmed</h3>
-                <ul class="mt-1 list-disc pl-5 text-sm text-muted">@foreach ($unconfirmed as $c)<li><a class="underline" href="{{ route('scholarships.show', [$c->programme->slug, $c->slug]) }}">{{ $c->label() }}</a>: check the official page; no reminders are scheduled</li>@endforeach</ul>
+                <ul class="mt-1 list-disc pl-5 text-sm text-muted">@foreach ($unconfirmed as $c)<li><a class="underline" href="{{ route('scholarships.show', [$c->programme->slug, $c->slug]) }}">{{ $c->label() }}</a>: the date is not confirmed, so no reminders are scheduled</li>@endforeach</ul>
             @endif
         </section>
 

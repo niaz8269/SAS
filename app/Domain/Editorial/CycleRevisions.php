@@ -20,7 +20,7 @@ class CycleRevisions
 {
     /** Scalar columns covered by revisions. Placement flags are not: they are not factual claims about the award. */
     public const FIELDS = ['programme_id', 'cycle_key', 'slug', 'intake_year', 'intake_term', 'funding_type', 'fully_funded_verified', 'funding_summary',
-        'teaching_language', 'delivery_mode', 'any_nationality', 'summary', 'eligibility_notes', 'age_experience_notes'];
+        'teaching_language', 'delivery_mode', 'any_nationality', 'summary', 'eligibility_notes', 'age_experience_notes', 'institutions_note', 'programmes_note'];
 
     /** Relation name => pivot id list. */
     public const RELATIONS = ['destinations', 'nationalities', 'degreeLevels', 'subjects', 'universities'];

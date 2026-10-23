@@ -19,9 +19,9 @@
                     @break
                 @case('terms')
                     <h2>Information, not a guarantee</h2>
-                    <p>Scholarship information is summarised from official sources and may change. Always confirm on the official website. SAS does not guarantee scholarship selection, admission, attestation acceptance or visa approval.</p>
+                    <p>Scholarship information is summarised from official sources and may change. Always confirm the latest details with us or the funder. SAS does not guarantee scholarship selection, admission, attestation acceptance or visa approval.</p>
                     <h2>Applications</h2>
-                    <p>You apply on the official website of each scholarship. Tracking an application in your workspace does not submit it. We never ask for passwords to university, embassy or scholarship portals.</p>
+                    <p>Tracking an application in your workspace does not submit it. We never ask for passwords to university, embassy or scholarship accounts.</p>
                     <h2>Services</h2>
                     <p>Services start with an enquiry. Scope, deliverables, any fee and revision limits are confirmed with you before work starts.</p>
                     @break

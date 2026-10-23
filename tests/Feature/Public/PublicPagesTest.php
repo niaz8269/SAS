@@ -26,13 +26,13 @@ class PublicPagesTest extends TestCase
         return route('scholarships.show', [$c->programme->slug, $c->slug]);
     }
 
-    public function test_published_detail_page_is_readable_without_login_and_shows_three_distinct_actions(): void
+    public function test_published_detail_page_is_readable_without_login_and_never_shows_the_application_portal(): void
     {
         $cycle = $this->publishedCycle([], $this->exactDeadline());
         $this->get($this->url($cycle))->assertOk()
-            ->assertSee('Apply on official website')->assertSee('Track this application')->assertSee('Get application assistance')
-            ->assertSee('apply.example.org')                                // provider domain is shown
-            ->assertSee('does not mean an application was submitted');       // tracking never implies submission
+            ->assertSee('Get application support')->assertSee('Track this application')->assertSee('Application timeline')->assertSee('Universities and programmes')
+            ->assertDontSee('Apply on official website')->assertDontSee('apply.example.org')->assertDontSee('/go/', false)
+            ->assertSee('does not mean an application was submitted'); // tracking never implies submission
     }
 
     public function test_drafts_and_in_review_cycles_are_404_on_the_public_site(): void

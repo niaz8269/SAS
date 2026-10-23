@@ -49,7 +49,7 @@
     </div>
     <div class="border-t border-navy-800">
         <p class="container-page py-4 text-xs text-navy-300">
-            &copy; {{ now()->year }} {{ config('sas.brand.name') }}. Scholarship details are summarised from official sources and can change: always confirm on the official website.
+            &copy; {{ now()->year }} {{ config('sas.brand.name') }}. Scholarship details are summarised from official sources and can change: always confirm the latest details with us or the funder.
             SAS is an information and support service. It does not guarantee scholarship selection, admission or visa approval.
             @if ($note = \App\Domain\Site\Site::get('footer_note')) {{ $note }} @endif
         </p>

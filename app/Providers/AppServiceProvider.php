@@ -10,6 +10,7 @@ use App\Domain\Site\Site;
 use App\Listeners\BlockSuppressedRecipients;
 use App\Models\CycleBenefit;
 use App\Models\CycleCriterion;
+use App\Models\CycleMilestone;
 use App\Models\CycleRequirement;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipRoute;
@@ -64,7 +65,7 @@ class AppServiceProvider extends ServiceProvider
         Event::listen(MessageSending::class, BlockSuppressedRecipients::class);
 
         // Child records of a LIVE cycle can be changed directly by reviewers; every such change is audited.
-        foreach ([CycleRequirement::class, CycleBenefit::class, ScholarshipRoute::class, CycleCriterion::class, SourceEvidence::class] as $model) {
+        foreach ([CycleMilestone::class, CycleRequirement::class, CycleBenefit::class, ScholarshipRoute::class, CycleCriterion::class, SourceEvidence::class] as $model) {
             foreach (['saved', 'deleted'] as $event) {
                 $model::$event(function ($row) use ($event) {
                     $cycle = $row->cycle_id ? ScholarshipCycle::find($row->cycle_id) : null;

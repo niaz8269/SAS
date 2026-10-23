@@ -4,7 +4,6 @@
     $deadlinesByRoute = $cycle->currentDeadlines->groupBy(fn ($d) => $d->route_id ?? 0);
     $institutions = $cycle->universities->isNotEmpty() ? $cycle->universities : $programme->universities;
     $title = $programme->title.' '.$cycle->cycle_key;
-    $firstRoute = $cycle->routes->first(fn ($r) => filled($r->application_url));
 @endphp
 <x-layouts.public :title="$title" :description="\Illuminate\Support\Str::limit(strip_tags($cycle->summary ?: $programme->summary), 155)">
     <x-slot:head>
@@ -39,40 +38,96 @@
 
     <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_340px]">
         <div class="space-y-8">
-            {{-- Deadlines per route (DIR-07): routes are never merged into one misleading date. --}}
-            <section aria-labelledby="deadlines" class="card p-6">
-                <h2 id="deadlines" class="text-xl font-bold">Deadlines and application routes</h2>
-                @if ($cycle->routes->isEmpty() && $cycle->currentDeadlines->isEmpty())
-                    <p class="mt-3 text-sm text-muted">Not confirmed. Check the official source below.</p>
-                @endif
-                @foreach ($cycle->routes as $route)
-                    @php($rd = $deadlinesByRoute->get($route->id)?->first())
-                    <div class="mt-4 rounded-lg border border-line p-4">
-                        <div class="flex flex-wrap items-center justify-between gap-2">
-                            <h3 class="font-semibold">{{ $route->name }} <span class="badge-neutral ml-1">{{ str_replace('_', ' ', $route->route_type) }}</span></h3>
-                            @if ($route->application_url)
-                                <a href="{{ route('scholarships.out', $route) }}" rel="noopener nofollow" target="_blank" class="btn-primary !py-1.5">Apply on official website <span class="text-xs font-normal opacity-80">({{ $route->application_domain }})</span></a>
-                            @endif
-                        </div>
-                        @if ($rd)
-                            @php($i = $svc->describe($rd, auth()->user()?->timezone))
-                            <p class="mt-2 text-sm"><span class="font-medium">Closing:</span> {{ $i['primary'] }} @if($i['note'])<span class="text-muted">· {{ $i['note'] }}</span>@endif</p>
-                            @if ($i['secondary'])<p class="text-xs text-muted">{{ $i['secondary'] }}</p>@endif
-                            @if ($rd->source_text)<p class="text-xs text-muted">Published as: “{{ $rd->source_text }}”</p>@endif
-                        @else
-                            <p class="mt-2 text-sm text-muted">Closing date: Not confirmed</p>
+            {{-- Full timeline (DIR-07): every stage is shown; a stage the source does not date says so. Routes are never merged into one misleading date. --}}
+            @php
+                $ms = $cycle->milestones->groupBy('kind');
+                $stage = function ($kinds) use ($ms) { return collect($kinds)->flatMap(fn ($k) => $ms->get($k, collect()))->values(); };
+            @endphp
+            <section aria-labelledby="timeline" class="card p-6">
+                <h2 id="timeline" class="text-xl font-bold">Application timeline</h2>
+                <ol class="mt-4 space-y-3">
+                    <li class="rounded-lg border border-line p-4">
+                        <h3 class="font-semibold">Applications open</h3>
+                        @forelse ($stage(['opens']) as $m)
+                            <p class="mt-1 text-sm">@if ($m->label)<span class="text-muted">{{ $m->label }}:</span> @endif{{ $m->display() }}</p>
+                            @if ($m->source_text)<p class="text-xs text-muted">Published as: “{{ $m->source_text }}”</p>@endif
+                        @empty
+                            <p class="mt-1 text-sm text-muted">Not announced yet</p>
+                        @endforelse
+                    </li>
+                    <li class="rounded-lg border border-line p-4">
+                        <h3 class="font-semibold">Application deadline</h3>
+                        @if ($deadlinesByRoute->has(0))
+                            @php($gi = $svc->describe($deadlinesByRoute->get(0)->first(), auth()->user()?->timezone))
+                            <p class="mt-1 text-sm">{{ $gi['primary'] }} @if($gi['note'])<span class="text-muted">· {{ $gi['note'] }}</span>@endif</p>
+                            @if ($gi['secondary'])<p class="text-xs text-muted">{{ $gi['secondary'] }}</p>@endif
+                            @if ($deadlinesByRoute->get(0)->first()->source_text)<p class="text-xs text-muted">Published as: “{{ $deadlinesByRoute->get(0)->first()->source_text }}”</p>@endif
                         @endif
-                        @if ($route->fee_notes)<p class="mt-1 text-sm text-muted">Application fee: {{ $route->fee_notes }}</p>@endif
-                    </div>
+                        @foreach ($cycle->routes as $route)
+                            @php($rd = $deadlinesByRoute->get($route->id)?->first())
+                            @if ($rd)
+                                @php($i = $svc->describe($rd, auth()->user()?->timezone))
+                                <p class="mt-1 text-sm">@if ($cycle->routes->count() > 1 || $deadlinesByRoute->has(0))<span class="text-muted">{{ $route->name }}:</span> @endif{{ $i['primary'] }} @if($i['note'])<span class="text-muted">· {{ $i['note'] }}</span>@endif</p>
+                                @if ($i['secondary'])<p class="text-xs text-muted">{{ $i['secondary'] }}</p>@endif
+                                @if ($rd->source_text)<p class="text-xs text-muted">Published as: “{{ $rd->source_text }}”</p>@endif
+                            @endif
+                        @endforeach
+                        @if (! $deadlinesByRoute->has(0) && $cycle->routes->every(fn ($r) => ! $deadlinesByRoute->get($r->id)))
+                            <p class="mt-1 text-sm text-muted">Not announced yet</p>
+                        @endif
+                    </li>
+                    <li class="rounded-lg border border-line p-4">
+                        <h3 class="font-semibold">Interviews and tests</h3>
+                        @forelse ($stage(['interview', 'test']) as $m)
+                            <p class="mt-1 text-sm"><span class="text-muted">{{ $m->label ?: \App\Models\CycleMilestone::KINDS[$m->kind] }}:</span> {{ $m->display() }}</p>
+                            @if ($m->source_text)<p class="text-xs text-muted">Published as: “{{ $m->source_text }}”</p>@endif
+                        @empty
+                            <p class="mt-1 text-sm text-muted">Not announced yet</p>
+                        @endforelse
+                    </li>
+                    <li class="rounded-lg border border-line p-4">
+                        <h3 class="font-semibold">Final results</h3>
+                        @forelse ($stage(['results']) as $m)
+                            <p class="mt-1 text-sm">@if ($m->label)<span class="text-muted">{{ $m->label }}:</span> @endif{{ $m->display() }}</p>
+                            @if ($m->source_text)<p class="text-xs text-muted">Published as: “{{ $m->source_text }}”</p>@endif
+                        @empty
+                            <p class="mt-1 text-sm text-muted">Not announced yet</p>
+                        @endforelse
+                    </li>
+                    @foreach ($stage(['other']) as $m)
+                        <li class="rounded-lg border border-line p-4">
+                            <h3 class="font-semibold">{{ $m->label ?: 'Other date' }}</h3>
+                            <p class="mt-1 text-sm">{{ $m->display() }}</p>
+                            @if ($m->source_text)<p class="text-xs text-muted">Published as: “{{ $m->source_text }}”</p>@endif
+                        </li>
+                    @endforeach
+                </ol>
+                @foreach ($cycle->routes as $route)
+                    @if ($route->fee_notes)<p class="mt-3 text-sm text-muted">{{ $route->name }}: application fee {{ $route->fee_notes }}</p>@endif
                 @endforeach
-                @if ($deadlinesByRoute->has(0))
-                    @php($gi = $svc->describe($deadlinesByRoute->get(0)->first(), auth()->user()?->timezone))
-                    <p class="mt-4 text-sm"><span class="font-medium">Overall deadline:</span> {{ $gi['primary'] }} @if($gi['note'])<span class="text-muted">· {{ $gi['note'] }}</span>@endif</p>
-                    @if ($gi['secondary'])<p class="text-xs text-muted">{{ $gi['secondary'] }}</p>@endif
-                @endif
-                <p class="mt-4 text-xs text-muted">Where the source does not state a closing time we show the date only and do not assume an hour. Different routes can close on different dates.</p>
+                <p class="mt-4 text-xs text-muted">Where the source does not state a time we show the date only and do not assume an hour. "Not announced yet" means the source gives no date. Dates can change: ask us for the latest.</p>
             </section>
 
+            <section aria-labelledby="institutions" class="card p-6">
+                <h2 id="institutions" class="text-xl font-bold">Universities and programmes</h2>
+                @php($unis = $institutions)
+                @if ($unis->isNotEmpty())
+                    <h3 class="mt-3 font-semibold">Universities included</h3>
+                    <ul class="mt-2 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2">
+                        @foreach ($unis->take(12) as $u)
+                            <li>@if ($u->published && $u->csc_key)<a class="text-navy-700 underline" href="{{ route('universities.show', $u) }}">{{ $u->name }}</a>@else{{ $u->name }}@endif</li>
+                        @endforeach
+                    </ul>
+                    @if ($unis->count() > 12)<p class="mt-2 text-sm text-muted">and {{ $unis->count() - 12 }} more. <a class="text-navy-700 underline" href="{{ route('universities.index') }}">Browse all universities</a>.</p>@endif
+                @endif
+                @if ($cycle->institutions_note)<p class="mt-3 text-sm">{{ $cycle->institutions_note }}</p>@endif
+                @if ($unis->isEmpty() && ! $cycle->institutions_note)<p class="mt-3 text-sm text-muted">Participating universities: not confirmed.</p>@endif
+                <h3 class="mt-5 font-semibold">Programmes offered</h3>
+                @if ($cycle->programmes_note)<p class="mt-2 text-sm whitespace-pre-line">{{ $cycle->programmes_note }}</p>@else<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
+                @if ($cycle->destinations->contains('code', 'CN') && $unis->isNotEmpty())
+                    <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('programmes.index', ['csc' => 1]) }}">Browse programmes listed as open to Chinese Government Scholarship applicants</a></p>
+                @endif
+            </section>
             <section aria-labelledby="funding" class="card p-6">
                 <h2 id="funding" class="text-xl font-bold">Funding</h2>
                 @if ($cycle->funding_summary)<p class="mt-2">{{ $cycle->funding_summary }}</p>@endif
@@ -146,12 +201,8 @@
             <div class="card space-y-4 p-5">
                 <h2 class="text-lg font-bold">What would you like to do?</h2>
                 <div>
-                    @if ($firstRoute)
-                        <a href="{{ route('scholarships.out', $firstRoute) }}" target="_blank" rel="noopener nofollow" class="btn-primary w-full">Apply on official website</a>
-                        <p class="mt-1 text-xs text-muted">Opens {{ $firstRoute->application_domain }} in a new tab. You apply there; SAS does not submit anything for you.</p>
-                    @else
-                        <p class="text-sm text-muted">No official application link has been confirmed yet. Use the source links below.</p>
-                    @endif
+                    <a href="{{ route('contact', ['category' => 'advisory', 'cycle' => $cycle->id]) }}" class="btn-primary w-full">Get application support</a>
+                    <p class="mt-1 text-xs text-muted">Ask our team about this call. We give advice and help with your documents; no guarantee of selection, admission or a visa.</p>
                 </div>
                 <div>
                     @if ($plan)
@@ -160,10 +211,6 @@
                         <form method="POST" action="{{ route('student.applications.store') }}">@csrf<input type="hidden" name="cycle_id" value="{{ $cycle->id }}"><button class="btn-outline w-full">Track this application</button></form>
                     @endif
                     <p class="mt-1 text-xs text-muted">Creates a private checklist in your workspace. It does not mean an application was submitted.</p>
-                </div>
-                <div>
-                    <a href="{{ route('contact', ['category' => 'writing', 'cycle' => $cycle->id]) }}" class="btn-gold w-full">Get application assistance</a>
-                    <p class="mt-1 text-xs text-muted">Send an enquiry about advice or writing help for this call. No guarantee of selection.</p>
                 </div>
                 @auth
                     <form method="POST" action="{{ $saved ? route('student.saved.destroy', $cycle) : route('student.saved.store') }}">

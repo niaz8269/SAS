@@ -70,7 +70,7 @@
                         <select id="status-select" name="status" x-model="s" class="input">@foreach (\App\Enums\PlanStatus::options() as $v => $l)<option value="{{ $v }}">{{ $l }}</option>@endforeach</select>
                         @error('status')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
                     <div x-show="s === 'submitted'" x-cloak class="space-y-3 rounded-md bg-ivory-deep p-3">
-                        <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="confirm_submitted" value="1" class="mt-1 rounded border-slate-300 text-navy-700"><span>I confirm I submitted this application on the official website.</span></label>
+                        <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="confirm_submitted" value="1" class="mt-1 rounded border-slate-300 text-navy-700"><span>I confirm I submitted this application.</span></label>
                         @error('confirm_submitted')<p class="field-error" role="alert">{{ $message }}</p>@enderror
                         <div><label for="sub-at" class="label">Date submitted</label><input id="sub-at" type="date" name="submitted_at" max="{{ now()->toDateString() }}" class="input"></div>
                         <div><label for="sub-ref" class="label">Reference (optional)</label><input id="sub-ref" name="submission_reference" class="input"></div>

@@ -15,7 +15,7 @@
         <h2 class="mt-8 text-xl font-bold">What we do not do</h2>
         <ul class="mt-2 list-disc space-y-2 pl-6">
             <li>We do not cover every scholarship in the world. The directory is a curated selection.</li>
-            <li>You apply on the official website of each scholarship. We do not submit applications for you and we never ask for your portal passwords.</li>
+            <li>We never ask for your passwords to university, embassy or scholarship accounts, and we do not guarantee selection, admission or visa approval.</li>
             <li>We do not guarantee scholarship selection, admission, attestation acceptance or visa approval.</li>
         </ul>
 

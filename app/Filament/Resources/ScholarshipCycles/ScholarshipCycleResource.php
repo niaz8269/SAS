@@ -11,6 +11,7 @@ use App\Filament\Resources\ScholarshipCycles\RelationManagers\BenefitsRelationMa
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\CriteriaRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\DeadlinesRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\EvidenceRelationManager;
+use App\Filament\Resources\ScholarshipCycles\RelationManagers\MilestonesRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\RequirementsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\ReviewsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\RoutesRelationManager;
@@ -94,6 +95,8 @@ class ScholarshipCycleResource extends Resource
                 Select::make('subjects')->relationship('subjects', 'name')->multiple()->preload()->searchable(),
                 Select::make('universities')->label('Host institutions')->relationship('universities', 'name')->multiple()->preload()->searchable(),
                 Textarea::make('summary')->rows(3)->columnSpanFull(),
+                Textarea::make('institutions_note')->label('Universities taking part (text)')->rows(2)->columnSpanFull()->helperText('For example: any UK university offering an eligible course. Specific universities go in Host institutions above.'),
+                Textarea::make('programmes_note')->label('Programmes and fields offered')->rows(3)->columnSpanFull(),
                 Textarea::make('eligibility_notes')->rows(3)->columnSpanFull(),
                 Textarea::make('age_experience_notes')->rows(2)->columnSpanFull(),
             ]),
@@ -132,7 +135,7 @@ class ScholarshipCycleResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RoutesRelationManager::class, DeadlinesRelationManager::class, EvidenceRelationManager::class, BenefitsRelationManager::class,
+            RoutesRelationManager::class, DeadlinesRelationManager::class, MilestonesRelationManager::class, EvidenceRelationManager::class, BenefitsRelationManager::class,
             RequirementsRelationManager::class, CriteriaRelationManager::class, ReviewsRelationManager::class,
         ];
     }
