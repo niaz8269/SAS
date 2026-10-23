@@ -35,10 +35,8 @@
 
 @layer base {
     html { scroll-behavior: smooth; }
-    /* Large monitors (24 to 32 inch): scale everything up so the layout is not a small island in a wide screen. */
-    @media (min-width: 1920px) { html { font-size: 112.5%; } }
-    @media (min-width: 2560px) { html { font-size: 131.25%; } }
-    @media (min-width: 3200px) { html { font-size: 150%; } }
+    /* Large monitors (24 to 32 inch and beyond): from 1440px up, the whole interface scales in proportion to the screen width, so it looks exactly as it does on a 1440px laptop, just bigger, with the same margins and full-screen proportions. */
+    @media (min-width: 1440px) { html { font-size: calc(100vw / 90); } }
     body { @apply bg-ivory text-ink antialiased; font-family: var(--font-sans); }
     h1, h2, h3, h4 { font-family: var(--font-display); @apply tracking-tight text-ink; }
     a { @apply underline-offset-2; }
