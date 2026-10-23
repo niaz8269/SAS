@@ -9,25 +9,25 @@
 @switch(str_starts_with($s->key, 'custom-') ? 'custom' : $s->key)
 
 @case('hero')
-    <section class="relative isolate overflow-hidden bg-navy-900">
+    <section class="hero relative isolate overflow-hidden bg-navy-900">
         <img src="{{ $s->image_path ? $media($s->image_path) : asset('images/hero-graduates.jpg') }}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" width="1400" height="933" fetchpriority="high">
         <div class="absolute inset-0 -z-10 bg-gradient-to-b from-navy-900/80 via-navy-800/55 to-navy-900/85" aria-hidden="true"></div>
         <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(202,162,73,0.18),transparent_60%)]" aria-hidden="true"></div>
-        <div class="container-page relative flex flex-col items-center py-16 text-center sm:py-24 lg:py-28">
+        <div class="container-page hero-inner relative flex flex-col items-center text-center">
             @if ($s->eyebrow)<p class="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true"></span>{{ $s->eyebrow }}</p>@endif
-            <h1 class="mt-6 max-w-4xl text-4xl font-extrabold leading-[1.06] text-white [text-shadow:0_2px_24px_rgba(10,34,80,0.55)] sm:text-5xl lg:text-6xl">{!! nl2br(e($s->heading)) !!}</h1>
-            <div class="mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></div>
-            @if ($s->body)<p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">{{ $s->body }}</p>@endif
-            <div class="mt-9 flex flex-wrap justify-center gap-3">
+            <h1 class="hero-title mt-[clamp(0.75rem,2.5vh,1.5rem)] max-w-5xl font-extrabold text-white [text-shadow:0_2px_24px_rgba(10,34,80,0.55)]">{!! nl2br(e($s->heading)) !!}</h1>
+            <div class="mt-[clamp(0.75rem,2.5vh,1.5rem)] h-1 w-24 rounded-full bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></div>
+            @if ($s->body)<p class="hero-lead mt-[clamp(0.75rem,2.5vh,1.5rem)] max-w-2xl leading-relaxed text-white/85">{{ $s->body }}</p>@endif
+            <div class="mt-[clamp(1rem,4vh,2.25rem)] flex flex-wrap justify-center gap-3">
                 @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="btn-gold btn-lg rounded-lg shadow-lg shadow-black/20">{{ $s->cta_label }} <span aria-hidden="true">&rarr;</span></a>@endif
                 @if ($s->cta2_label)<a href="{{ $href($s->cta2_url) }}" class="btn btn-lg rounded-lg border border-white/70 bg-white/10 text-white backdrop-blur transition hover:bg-white hover:text-navy-900">{{ $s->cta2_label }}</a>@endif
             </div>
             @if (! empty($s->items))
-            <ul class="mt-12 grid w-full max-w-4xl gap-6 border-t border-white/20 pt-8 text-sm sm:grid-cols-3">
+            <ul class="mt-[clamp(1.25rem,5vh,3rem)] grid w-full max-w-4xl grid-cols-3 gap-2 border-t border-white/20 pt-[clamp(0.75rem,3vh,2rem)] text-xs sm:gap-6 sm:text-sm [@media(max-height:700px)]:hidden">
                 @foreach ($s->items as $item)
                     <li class="flex flex-col items-center gap-2">
                         <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-bold text-navy-900" aria-hidden="true">{{ $loop->iteration }}</span>
-                        <span><strong class="text-white">{{ $item['title'] ?? '' }}</strong><br><span class="text-white/75">{{ $item['text'] ?? '' }}</span></span>
+                        <span><strong class="text-white">{{ $item['title'] ?? '' }}</strong><span class="hidden sm:inline"><br><span class="text-white/75">{{ $item['text'] ?? '' }}</span></span></span>
                     </li>
                 @endforeach
             </ul>

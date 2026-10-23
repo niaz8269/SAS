@@ -35,6 +35,10 @@
 
 @layer base {
     html { scroll-behavior: smooth; }
+    /* Large monitors (24 to 32 inch): scale everything up so the layout is not a small island in a wide screen. */
+    @media (min-width: 1920px) { html { font-size: 112.5%; } }
+    @media (min-width: 2560px) { html { font-size: 131.25%; } }
+    @media (min-width: 3200px) { html { font-size: 150%; } }
     body { @apply bg-ivory text-ink antialiased; font-family: var(--font-sans); }
     h1, h2, h3, h4 { font-family: var(--font-display); @apply tracking-tight text-ink; }
     a { @apply underline-offset-2; }
@@ -75,6 +79,12 @@
     .badge-neutral { @apply badge bg-slate-100 text-slate-700; }
     .badge-warn { @apply badge bg-warn-soft text-warn; }
     .badge-alert { @apply badge bg-alert-soft text-alert; }
+
+    /* Hero: exactly one screen tall below the header (never taller than the viewport on laptops and monitors); text sizes follow both width and height. */
+    .hero { min-height: calc(100svh - 4.75rem); display: flex; align-items: center; }
+    .hero-inner { padding-block: clamp(2rem, 6vh, 6rem); }
+    .hero-title { font-size: clamp(2rem, min(7.2vw, 8.4vh + 0.5rem), 4.75rem); line-height: 1.06; }
+    .hero-lead { font-size: clamp(1rem, min(2.4vw, 2.6vh + 0.35rem), 1.35rem); }
 
     .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-navy-600; }
     .section-title { @apply text-2xl font-extrabold sm:text-3xl; }
