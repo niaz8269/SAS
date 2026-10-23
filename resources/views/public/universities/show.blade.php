@@ -18,7 +18,7 @@
                 @if ($university->summary)<div class="mt-4 whitespace-pre-line">{{ $university->summary }}</div>@endif
             </div>
             <figure>
-                <img src="{{ $university->imageUrl() }}" alt="" class="aspect-[16/10] w-full rounded-xl object-cover" loading="lazy" width="640" height="400">
+                <img src="{{ $university->imageUrl() }}" alt="" class="aspect-video w-full rounded-xl object-cover" loading="lazy" width="960" height="540">
                 @if ($credit = $university->imageCredit())<figcaption class="mt-1 text-xs text-muted">{{ $credit['subject'] }}: photo {{ $credit['name'] }}{{ ! empty($credit['url']) ? ' on Unsplash' : '' }}. <a class="underline" href="{{ route('credits') }}">Image credits</a></figcaption>@endif
             </figure>
         </div>

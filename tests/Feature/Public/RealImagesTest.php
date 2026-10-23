@@ -24,6 +24,26 @@ class RealImagesTest extends TestCase
         }
     }
 
+    public function test_all_bundled_cover_photos_have_exactly_the_same_width_and_height(): void
+    {
+        foreach (array_merge(glob(public_path('images/destinations/*.jpg')), glob(public_path('images/cities/*.jpg'))) as $file) {
+            [$w, $h] = getimagesize($file);
+            $this->assertSame([960, 540], [$w, $h], basename($file));
+        }
+    }
+
+    public function test_cover_photos_are_displayed_in_one_shared_16_by_9_frame_everywhere(): void
+    {
+        $china = Country::firstOrCreate(['code' => 'CN'], ['name' => 'China', 'slug' => 'china', 'is_destination' => true, 'guidance_published' => true, 'featured' => true, 'summary' => 'x']);
+        University::create(['name' => 'Peking University', 'slug' => 'pku', 'csc_key' => 'A', 'province' => 'Beijing', 'country_id' => $china->id]);
+        foreach (['/', '/destinations', '/universities', '/universities/pku', '/destinations/china'] as $url) {
+            $html = $this->get($url)->assertOk()->getContent();
+            $this->assertStringNotContainsString('aspect-[16/', $html, $url);
+            $this->assertStringNotContainsString('aspect-[3/2]', $html, $url);
+            $this->assertStringContainsString('aspect-video', $html, $url);
+        }
+    }
+
     public function test_universities_show_a_photo_of_their_province_or_fall_back_to_china(): void
     {
         $china = Country::firstOrCreate(['code' => 'CN'], ['name' => 'China', 'slug' => 'china']);

@@ -5,7 +5,7 @@
     $institutions = $cycle->universities->isNotEmpty() ? $cycle->universities : $programme->universities;
 @endphp
 <article class="card flex h-full flex-col overflow-hidden transition hover:shadow-md">
-    <a href="{{ $url }}" tabindex="-1" aria-hidden="true"><img src="{{ $programme->imageUrl($cycle) }}" alt="" class="aspect-[16/7] w-full object-cover" loading="lazy" width="600" height="262"></a>
+    <a href="{{ $url }}" tabindex="-1" aria-hidden="true"><img src="{{ $programme->imageUrl($cycle) }}" alt="" class="aspect-video w-full object-cover" loading="lazy" width="960" height="540"></a>
     <div class="flex flex-1 flex-col p-5">
     <div class="flex flex-wrap items-center gap-2">
         @if ($cycle->sponsored)<span class="badge-warn">{{ $cycle->sponsored_label ?: 'Sponsored' }}</span>@endif

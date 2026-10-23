@@ -21,7 +21,7 @@ class MediaPicker
                     ->image()->acceptedFileTypes(['image/png', 'image/jpeg', 'image/webp'])->maxSize(4096),
             ])
             ->createOptionUsing(fn (array $data) => MediaFile::register($data['file'])->path)
-            ->helperText('Pick from the media library, or use the + to upload. Manage all files under Website, Media library.');
+            ->helperText('Pick from the media library, or use the + to upload. Cover photos are shown in 16:9 and cropped to fit, so use a wide photo. Manage all files under Website, Media library.');
     }
 
     /** @return array<string, string> path => HTML label with a thumbnail */

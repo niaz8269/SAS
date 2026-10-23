@@ -27,7 +27,7 @@
             <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($universities as $u)
                     <li class="card flex flex-col overflow-hidden">
-                        <a href="{{ route('universities.show', $u) }}" tabindex="-1" aria-hidden="true"><img src="{{ $u->imageUrl() }}" alt="" class="aspect-[16/7] w-full object-cover" loading="lazy" width="600" height="262"></a>
+                        <a href="{{ route('universities.show', $u) }}" tabindex="-1" aria-hidden="true"><img src="{{ $u->imageUrl() }}" alt="" class="aspect-video w-full object-cover" loading="lazy" width="960" height="540"></a>
                         <div class="flex flex-1 flex-col p-5">
                             <h2 class="text-lg font-bold"><a class="hover:underline" href="{{ route('universities.show', $u) }}">{{ $u->name }}</a></h2>
                             @if ($u->name_zh)<p class="text-sm text-muted" lang="zh-Hans">{{ $u->name_zh }}</p>@endif

@@ -31,7 +31,7 @@
                 <figure class="relative mx-auto w-full max-w-lg"><img src="{{ $media($s->image_path) }}" alt="" class="w-full rounded-2xl object-cover" loading="eager"></figure>
             @else
                 <figure class="relative mx-auto w-full max-w-lg">
-                    <img src="{{ asset('images/hero-graduates.jpg') }}" alt="Graduates in caps and gowns throwing their caps into the air at sunset" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-md" width="800" height="600" fetchpriority="high">
+                    <img src="{{ asset('images/hero-graduates.jpg') }}" alt="Graduates in caps and gowns throwing their caps into the air at sunset" class="aspect-video w-full rounded-2xl object-cover shadow-md" width="960" height="540" fetchpriority="high">
                     <figcaption class="mt-1 text-center text-xs text-muted">Photo: {{ config('sas.image_credits')['images/hero-graduates.jpg']['name'] }} on Unsplash. <a class="underline" href="{{ route('credits') }}">Image credits</a></figcaption>
                 </figure>
             @endif
