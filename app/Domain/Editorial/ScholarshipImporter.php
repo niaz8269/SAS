@@ -411,7 +411,7 @@ class ScholarshipImporter
         return preg_match('/^[=+\-@\t\r]/', $cell) ? "'".$cell : $cell;
     }
 
-    private static function csvLine(array $cells): string
+    public static function csvLine(array $cells): string
     {
         return implode(',', array_map(fn ($c) => '"'.str_replace('"', '""', self::neutralise((string) $c)).'"', $cells))."\r\n";
     }

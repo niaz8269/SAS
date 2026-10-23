@@ -45,14 +45,15 @@ return [
         'administrator' => [
             'content.draft', 'content.override', 'import.stage', 'users.manage', 'audit.view', 'reports.view',
             'enquiries.view_all', 'enquiries.assign', 'services.manage', 'articles.manage', 'taxonomy.manage', 'corrections.manage', 'site.manage',
+            'cases.manage', 'finance.view', 'invoices.manage', 'partners.manage',
         ],
-        'service_manager' => ['services.manage', 'enquiries.view_all', 'enquiries.assign', 'reports.view'],
-        'advisor' => ['enquiries.assigned', 'consultations.assigned'],
-        'specialist' => ['enquiries.assigned'],
+        'service_manager' => ['services.manage', 'enquiries.view_all', 'enquiries.assign', 'reports.view', 'cases.manage', 'partners.manage'],
+        'advisor' => ['enquiries.assigned', 'consultations.assigned', 'cases.assigned'],
+        'specialist' => ['enquiries.assigned', 'cases.assigned'],
         'editor' => ['content.draft', 'import.stage', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],
         'reviewer' => ['content.draft', 'content.review', 'content.publish', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],
-        'finance' => ['finance.view'], // R2
-        'partner_manager' => ['partner.submit'], // R2
+        'finance' => ['finance.view', 'invoices.manage', 'reports.view'],
+        'partner_manager' => ['partner.submit'],
     ],
     'staff_roles' => ['super_admin', 'administrator', 'service_manager', 'advisor', 'specialist', 'editor', 'reviewer', 'finance'],
 

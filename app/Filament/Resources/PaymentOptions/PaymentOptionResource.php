@@ -60,7 +60,7 @@ class PaymentOptionResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->searchable(),
-                TextColumn::make('kind')->badge()->formatStateUsing(fn ($s) => PaymentOption::KINDS[$s] ?? $s),
+                TextColumn::make('kind')->badge()->formatStateUsing(fn ($state) => PaymentOption::KINDS[$state] ?? $state),
                 TextColumn::make('instructions')->limit(60),
                 ToggleColumn::make('enabled')->disabled(fn () => ! static::allowed()),
             ])

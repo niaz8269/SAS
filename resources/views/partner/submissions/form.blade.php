@@ -1,0 +1,25 @@
+@php($editing = $submission->exists)
+<x-layouts.partner :title="$editing ? 'Edit submission' : 'Submit a scholarship'">
+    <h1 class="text-2xl font-extrabold">{{ $editing ? 'Edit your submission' : 'Submit a scholarship' }}</h1>
+    <p class="mt-1 text-sm text-muted">Give only what the official page states. If you are not sure of something, leave it empty. Our editors check every submission against the official page before anything is published.</p>
+    <form method="POST" action="{{ $editing ? route('partner.submissions.update', $submission) : route('partner.submissions.store') }}" class="card mt-5 grid gap-4 p-5 sm:grid-cols-2">
+        @csrf
+        @if ($editing)@method('PUT')@endif
+        <div class="sm:col-span-2"><label class="label" for="title">Scholarship name *</label><input id="title" name="title" class="input" required maxlength="190" value="{{ old('title', $submission->title) }}">@error('title')<p class="field-error">{{ $message }}</p>@enderror</div>
+        <div><label class="label" for="funder_name">Funder or awarding body</label><input id="funder_name" name="funder_name" class="input" maxlength="190" value="{{ old('funder_name', $submission->funder_name) }}"></div>
+        <div><label class="label" for="country_id">Where it is held</label><select id="country_id" name="country_id" class="input"><option value="">Not sure</option>@foreach ($countries as $c)<option value="{{ $c->id }}" @selected((int) old('country_id', $submission->country_id) === $c->id)>{{ $c->name }}</option>@endforeach</select></div>
+        <fieldset class="sm:col-span-2"><legend class="label">Degree levels</legend>
+            <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm">@foreach ($degrees as $d)<label class="flex items-center gap-2"><input type="checkbox" name="degree_codes[]" value="{{ $d->code }}" @checked(in_array($d->code, old('degree_codes', $submission->degree_codes ?? []), true))> {{ $d->name }}</label>@endforeach</div></fieldset>
+        <div><label class="label" for="cycle_year">Intake year</label><input id="cycle_year" name="cycle_year" type="number" min="2020" max="2060" class="input" value="{{ old('cycle_year', $submission->cycle_year) }}"></div>
+        <div><label class="label" for="intake_term">Intake term</label><input id="intake_term" name="intake_term" class="input" maxlength="60" placeholder="Autumn, Spring, September ..." value="{{ old('intake_term', $submission->intake_term) }}"></div>
+        <div><label class="label" for="funding_type">Funding</label><select id="funding_type" name="funding_type" class="input">@foreach (\App\Models\PartnerSubmission::FUNDING as $k => $v)<option value="{{ $k }}" @selected(old('funding_type', $submission->funding_type) === $k)>{{ $v }}</option>@endforeach</select></div>
+        <div><label class="label" for="teaching_language">Teaching language</label><input id="teaching_language" name="teaching_language" class="input" maxlength="80" value="{{ old('teaching_language', $submission->teaching_language) }}"></div>
+        <div class="sm:col-span-2"><label class="label" for="funding_summary">What the funding covers</label><textarea id="funding_summary" name="funding_summary" rows="2" class="input" maxlength="2000">{{ old('funding_summary', $submission->funding_summary) }}</textarea></div>
+        <div class="sm:col-span-2"><label class="label" for="summary">Short summary</label><textarea id="summary" name="summary" rows="3" class="input" maxlength="4000">{{ old('summary', $submission->summary) }}</textarea></div>
+        <div class="sm:col-span-2"><label class="label" for="eligibility">Who can apply</label><textarea id="eligibility" name="eligibility" rows="3" class="input" maxlength="4000">{{ old('eligibility', $submission->eligibility) }}</textarea></div>
+        <div><label class="label" for="deadline_on">Closing date</label><input id="deadline_on" name="deadline_on" type="date" class="input" value="{{ old('deadline_on', $submission->deadline_on?->format('Y-m-d')) }}"><p class="field-hint">A date only. If the official page gives a time, put it in the note.</p>@error('deadline_on')<p class="field-error">{{ $message }}</p>@enderror</div>
+        <div><label class="label" for="deadline_note">Note about the date</label><input id="deadline_note" name="deadline_note" class="input" maxlength="300" placeholder="For example: 17:00 Beijing time, varies by country" value="{{ old('deadline_note', $submission->deadline_note) }}"></div>
+        <div class="sm:col-span-2"><label class="label" for="official_url">Official page that states these details *</label><input id="official_url" name="official_url" type="url" required class="input" maxlength="500" placeholder="https://" value="{{ old('official_url', $submission->official_url) }}">@error('official_url')<p class="field-error">{{ $message }}</p>@enderror</div>
+        <div class="sm:col-span-2 flex flex-wrap gap-3"><button class="btn-primary btn-lg rounded-lg">{{ $editing ? 'Send changes' : 'Send to the editors' }}</button><a class="btn-outline btn-lg rounded-lg" href="{{ route('partner.submissions.index') }}">Cancel</a></div>
+    </form>
+</x-layouts.partner>

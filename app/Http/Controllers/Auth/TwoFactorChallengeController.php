@@ -45,6 +45,6 @@ class TwoFactorChallengeController extends Controller
         Auth::guard('web')->login($user, $remember);
         $request->session()->regenerate();
 
-        return $user->isStaff() ? redirect()->intended('/admin') : redirect()->intended(route('student.dashboard'));
+        return redirect()->intended($user->homeUrl());
     }
 }

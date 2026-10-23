@@ -15,6 +15,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -45,6 +46,11 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
     public function userRoles(): HasMany
     {
         return $this->hasMany(UserRole::class);
+    }
+
+    public function partnerOrganisation(): BelongsTo
+    {
+        return $this->belongsTo(PartnerOrganisation::class, 'partner_organisation_id');
     }
 
     public function applicationPlans(): HasMany
@@ -100,6 +106,16 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
         }
 
         return false;
+    }
+
+    /** Where this person lands after signing in: staff to the admin panel, partners to the partner area, everyone else to the student workspace. */
+    public function homeUrl(): string
+    {
+        return match (true) {
+            $this->isStaff() => '/admin',
+            $this->hasRole(Role::PartnerManager) => route('partner.home'),
+            default => route('student.dashboard'),
+        };
     }
 
     public function isStaff(): bool

@@ -12,6 +12,8 @@ use App\Http\Controllers\EmailWebhookController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\Partner\OrganisationController;
+use App\Http\Controllers\Partner\SubmissionController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ScholarshipController;
 use App\Http\Controllers\Student;
@@ -100,6 +102,8 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::post('/saved-scholarships', [Student\SavedScholarshipController::class, 'store'])->name('saved.store');
     Route::delete('/saved-scholarships/{cycle}', [Student\SavedScholarshipController::class, 'destroy'])->name('saved.destroy');
 
+    Route::get('/cases', [Student\CaseController::class, 'index'])->name('cases.index');
+    Route::get('/cases/{case:public_id}', [Student\CaseController::class, 'show'])->name('cases.show');
     Route::get('/applications', [Student\ApplicationController::class, 'index'])->name('applications.index');
     Route::post('/applications', [Student\ApplicationController::class, 'store'])->name('applications.store');
     Route::get('/applications/{plan:public_id}', [Student\ApplicationController::class, 'show'])->name('applications.show');
@@ -141,4 +145,14 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
 | Partner area. R1: informational only; moderated self-service submissions arrive in R2.
 |--------------------------------------------------------------------------
 */
-Route::get('/partner', PartnerController::class)->middleware(['auth', 'active', 'verified'])->name('partner.home');
+Route::prefix('partner')->name('partner.')->middleware(['auth', 'active', 'verified'])->group(function () {
+    Route::get('/', PartnerController::class)->name('home');
+    Route::get('/submissions', [SubmissionController::class, 'index'])->name('submissions.index');
+    Route::get('/submissions/new', [SubmissionController::class, 'create'])->name('submissions.create');
+    Route::post('/submissions', [SubmissionController::class, 'store'])->middleware('throttle:enquiries')->name('submissions.store');
+    Route::get('/submissions/{submission:public_id}', [SubmissionController::class, 'show'])->name('submissions.show');
+    Route::get('/submissions/{submission:public_id}/edit', [SubmissionController::class, 'edit'])->name('submissions.edit');
+    Route::put('/submissions/{submission:public_id}', [SubmissionController::class, 'update'])->name('submissions.update');
+    Route::get('/organisation', [OrganisationController::class, 'edit'])->name('organisation.edit');
+    Route::put('/organisation', [OrganisationController::class, 'update'])->name('organisation.update');
+});

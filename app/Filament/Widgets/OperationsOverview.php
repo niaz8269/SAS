@@ -7,8 +7,11 @@ use App\Models\ApplicationPlan;
 use App\Models\CorrectionReport;
 use App\Models\CycleRevision;
 use App\Models\Enquiry;
+use App\Models\Invoice;
 use App\Models\NotificationEvent;
+use App\Models\PartnerSubmission;
 use App\Models\ScholarshipCycle;
+use App\Models\ServiceCase;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Support\Facades\DB;
@@ -47,7 +50,22 @@ class OperationsOverview extends StatsOverviewWidget
         } elseif ($user->can('enquiries.assigned')) {
             $stats[] = Stat::make('My open enquiries', Enquiry::where('owner_id', $user->id)->whereNotIn('status', ['closed', 'converted'])->count());
         }
-        if ($user->can('reports.view')) {
+        if ($user->can('cases.manage') || $user->can('cases.assigned')) {
+            $cases = ServiceCase::query()->when(! $user->can('cases.manage'), fn ($q) => $q->where('advisor_id', $user->id));
+            $stats[] = Stat::make($user->can('cases.manage') ? 'Open student cases' : 'My open cases', (clone $cases)->whereNotIn('status', ['closed', 'withdrawn', 'rejected', 'accepted'])->count())->description('New, in progress or submitted');
+            $stats[] = Stat::make('Waiting for an outcome', (clone $cases)->where('status', 'submitted')->count())->description('Submitted to the funder');
+            if ($user->can('cases.manage')) {
+                $stats[] = Stat::make('Cases without a counsellor', ServiceCase::whereNull('advisor_id')->whereNotIn('status', ['closed', 'withdrawn', 'rejected'])->count())->color('warning');
+            }
+        }
+        if ($user->can('finance.view')) {
+            $due = Invoice::where('status', 'issued')->sum('amount_cents');
+            $stats[] = Stat::make('Awaiting payment', Invoice::money((int) $due))->description(Invoice::where('status', 'issued')->count().' invoices');
+            $stats[] = Stat::make('Refunds due', Invoice::where('refund_status', 'due')->count())->description(Invoice::money((int) Invoice::where('refund_status', 'due')->sum('refund_cents')))->color(Invoice::where('refund_status', 'due')->exists() ? 'danger' : 'success');
+        }
+        if ($user->can('partners.manage')) {
+            $stats[] = Stat::make('Partner submissions to check', PartnerSubmission::whereIn('status', ['submitted', 'in_review'])->count())->description('Waiting for editors')->color('warning');
+        }        if ($user->can('reports.view')) {
             $stats[] = Stat::make('Failed jobs', DB::table('failed_jobs')->count())->color(DB::table('failed_jobs')->count() ? 'danger' : 'success');
             $stats[] = Stat::make('Failed reminders', NotificationEvent::where('status', 'failed')->count());
             $stats[] = Stat::make('Active application plans', ApplicationPlan::whereNotIn('status', ['withdrawn', 'unsuccessful'])->count());

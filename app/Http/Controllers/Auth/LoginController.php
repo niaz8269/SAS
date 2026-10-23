@@ -40,9 +40,7 @@ class LoginController extends Controller
 
         $request->session()->regenerate();
 
-        return $user->isStaff()
-            ? redirect()->intended('/admin')
-            : redirect()->intended(route('student.dashboard'));
+        return redirect()->intended($user->homeUrl());
     }
 
     public function destroy(Request $request)

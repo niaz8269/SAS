@@ -25,7 +25,7 @@ npm install && npm run build
 php artisan serve
 ```
 
-The project ships no demo content (every public record is real). Demo LOGINS, one per role and with no content, come from `php artisan db:seed --class=DemoAccountsSeeder` (password `demo-password-123`; local only, refused in production). Create your own staff account with `php artisan sas:make-staff you@example.com "Your Name" super_admin`; staff must set up an authenticator app on first sign-in at `/admin`. `php artisan sas:remove-demo-data` removes any leftover fictional `[DEMO]` records (add `--with-accounts` to delete the demo logins too).
+The project ships no demo content (every public record is real). Demo LOGINS, one per role (see docs/PORTALS.md for every portal, role and login) and with no content, come from `php artisan db:seed --class=DemoAccountsSeeder` (password `demo-password-123`; local only, refused in production). Create your own staff account with `php artisan sas:make-staff you@example.com "Your Name" super_admin`; staff must set up an authenticator app on first sign-in at `/admin`. `php artisan sas:remove-demo-data` removes any leftover fictional `[DEMO]` records (add `--with-accounts` to delete the demo logins too).
 
 Create a real staff account (random password + reset link; MFA enforced at first login):
 

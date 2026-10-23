@@ -3,15 +3,22 @@
 namespace Database\Seeders;
 
 use App\Enums\Role;
+use App\Models\PartnerOrganisation;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
 /**
  * Test LOGINS ONLY, one per role, so every portal can be tried. It creates no scholarships, universities, articles or any other
  * public content (that must always be real). Refuses to run in production: `php artisan db:seed --class=DemoAccountsSeeder`.
+ *
+ * Staff must use an authenticator app, so every demo staff account is given the same well-known demo secret and recovery codes
+ * (local only): add the secret JBSWY3DPEHPK3PXP to any authenticator app, or sign in with a recovery code, for example
+ * demo-code-0001 (each code works once; run the seeder again to restore them).
  */
 class DemoAccountsSeeder extends Seeder
 {
+    public const MFA_SECRET = 'JBSWY3DPEHPK3PXP';
+
     public function run(): void
     {
         if (app()->isProduction()) {
@@ -21,12 +28,18 @@ class DemoAccountsSeeder extends Seeder
         }
 
         $password = env('SAS_DEMO_PASSWORD', 'demo-password-123');
+        $codes = collect(range(1, 8))->map(fn ($i) => sprintf('demo-code-%04d', $i))->all();
 
-        foreach ([Role::Administrator, Role::Editor, Role::Reviewer, Role::ServiceManager, Role::Advisor, Role::Specialist, Role::PartnerManager] as $role) {
+        foreach ([Role::SuperAdmin, Role::Administrator, Role::Editor, Role::Reviewer, Role::ServiceManager, Role::Advisor, Role::Specialist, Role::Finance] as $role) {
             $user = User::firstOrCreate(['email' => 'demo-'.$role->value.'@example.test'], ['name' => 'Demo '.$role->label(), 'password' => $password]);
-            $user->forceFill(['email_verified_at' => now()])->save();
+            $user->forceFill(['email_verified_at' => now(), 'app_authentication_secret' => self::MFA_SECRET, 'app_authentication_recovery_codes' => $codes])->save();
             $user->userRoles()->firstOrCreate(['role' => $role->value]);
         }
+
+        $org = PartnerOrganisation::firstOrCreate(['name' => 'Demo Partner University (test account)'], ['kind' => 'university', 'contact_email' => 'demo-partner@example.test']);
+        $partner = User::firstOrCreate(['email' => 'demo-'.Role::PartnerManager->value.'@example.test'], ['name' => 'Demo '.Role::PartnerManager->label(), 'password' => $password]);
+        $partner->forceFill(['email_verified_at' => now(), 'partner_organisation_id' => $org->id])->save();
+        $partner->userRoles()->firstOrCreate(['role' => Role::PartnerManager->value]);
 
         $student = User::firstOrCreate(['email' => 'demo-student@example.test'], ['name' => 'Demo Student', 'password' => $password]);
         $student->forceFill(['email_verified_at' => now()])->save();

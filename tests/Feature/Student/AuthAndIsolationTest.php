@@ -7,6 +7,7 @@ use App\Enums\Role;
 use App\Models\ApplicationPlan;
 use App\Models\Document;
 use App\Models\Enquiry;
+use App\Models\PartnerOrganisation;
 use App\Models\User;
 use Filament\Facades\Filament;
 use Illuminate\Auth\Notifications\VerifyEmail;
@@ -170,7 +171,12 @@ class AuthAndIsolationTest extends TestCase
     public function test_partner_area_is_restricted_to_partner_managers(): void
     {
         $this->actingAs(User::factory()->create())->get('/partner')->assertForbidden();
-        $this->actingAs(User::factory()->role(Role::PartnerManager)->create())->get('/partner')->assertOk();
+        $noOrganisation = User::factory()->role(Role::PartnerManager)->create();
+        $this->actingAs($noOrganisation)->get('/partner')->assertForbidden(); // a partner account must belong to an active organisation
+        $org = PartnerOrganisation::create(['name' => 'Isolation Test University', 'kind' => 'university']);
+        $partner = User::factory()->role(Role::PartnerManager)->create();
+        $partner->forceFill(['partner_organisation_id' => $org->id])->save();
+        $this->actingAs($partner)->get('/partner')->assertOk();
     }
 
     public function test_deleting_the_account_data_paths_do_not_expose_other_rows(): void
