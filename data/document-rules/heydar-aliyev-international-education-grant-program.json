@@ -1,0 +1,23 @@
+{
+  "slug": "heydar-aliyev-international-education-grant-program",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf"
+  ],
+  "rules": [
+    {"kind": "nomination_letter", "level": null, "requirement": "required", "note": "Completed nomination form, submitted in the first stage to the authority in your country (ministry, embassy or similar) that nominates candidates."},
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Copy of a valid passport that confirms your identity. Upload as PDF, notarised, in Azerbaijani, Turkish, English or Russian, or with a notarised English translation."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Copy of your diploma from school or university. Notarised, in Azerbaijani, Turkish, English or Russian, or with a notarised English translation. Your marks must be at least 70 out of 100 (or 7 out of 10)."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Copy of your transcript from school or university. Notarised, in Azerbaijani, Turkish, English or Russian, or with a notarised English translation. Marks must be at least 70/100 (7/10)."},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "Medical certificate with HIV/AIDS and hepatitis B/C tests, from a clinic in your country of residence, dated within 3 months before you apply and showing you are fit to travel and study."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Your CV or resume."},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Motivation letter."},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Only if you will study in English: IELTS 5.0 (TOEFL 40) for undergraduate, IELTS 5.5 (TOEFL 50) for postgraduate, or your previous education was in English."},
+    {"kind": "english_language", "level": "bachelor", "requirement": "optional", "note": "Only if you will study in English: IELTS 5.0 or TOEFL 40, or your previous education was in English."},
+    {"kind": "english_language", "level": "master", "requirement": "optional", "note": "Only if you will study in English: IELTS 5.5 or TOEFL 50, or your previous education was in English."},
+    {"kind": "english_language", "level": "doctorate", "requirement": "optional", "note": "Only if you will study in English: IELTS 5.5 or TOEFL 50, or your previous education was in English."},
+    {"kind": "language_certificate", "level": null, "requirement": "optional", "note": "Only if you will study in Russian, Turkish or Azerbaijani: proof of that language, or your previous education was in it. If you will study in Azerbaijani, proof of English, Russian or Turkish is accepted."},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Local and international awards, if you have any."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ]
+}

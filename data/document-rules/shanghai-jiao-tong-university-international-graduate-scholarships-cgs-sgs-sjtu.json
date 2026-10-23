@@ -1,0 +1,22 @@
+{
+  "slug": "shanghai-jiao-tong-university-international-graduate-scholarships-cgs-sgs-sjtu",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/271",
+    "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/270"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Scan of the photo page of a private ordinary passport. If it has under 12 months left from the registration date, renew it and apply with the new one."},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "ID photo as a JPG file under 200 KB, at least 295 x 413 pixels."},
+    {"kind": "degree_certificate", "level": "master", "requirement": "required", "note": "Scan of your bachelor's degree certificate. If you have not graduated yet, upload an official letter from your university with your expected graduation date."},
+    {"kind": "degree_certificate", "level": "doctorate", "requirement": "required", "note": "Scans of your bachelor's and master's degree certificates. If you have not graduated yet, upload an official letter from your university with your expected graduation date."},
+    {"kind": "transcript", "level": "master", "requirement": "required", "note": "Scan of your undergraduate transcript."},
+    {"kind": "transcript", "level": "doctorate", "requirement": "required", "note": "Scans of your undergraduate and graduate transcripts."},
+    {"kind": "language_certificate", "level": null, "requirement": "required", "note": "Proof of language proficiency meeting SJTU's Language Requirements for International Graduate Programs (see the PDF linked on the SJTU page)."},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Personal statement (submitted together with your study plan)."},
+    {"kind": "study_plan", "level": null, "requirement": "required", "note": "Study plan (submitted together with your personal statement)."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two academic recommendation letters, from associate professors or above, or from senior professionals in a related academic field."},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "optional", "note": "Supervisor acceptance letter. Required only if you apply to one of the schools listed on the SJTU page for your degree level; contact a potential supervisor first."},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Documents not in English or Chinese need a translation by an authorised translation agency; upload both the original and the translation."}
+  ]
+}

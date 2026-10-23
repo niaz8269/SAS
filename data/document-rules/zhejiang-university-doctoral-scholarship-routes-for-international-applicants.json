@@ -1,0 +1,23 @@
+{
+  "slug": "zhejiang-university-doctoral-scholarship-routes-for-international-applicants",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://iczu.zju.edu.cn/admissionsen/2024/1030/c68990a2981900/page.htm",
+    "https://iczu.zju.edu.cn/admissionsen/woctoralwwegreewwrograms/list.htm",
+    "https://iczu.zju.edu.cn/admissionsen/2022/0530/c68995a2590720/page.htm"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Upload the passport information page. The passport must be valid beyond March 1, 2027; renew it first if not."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Highest degree certificate. If you have not graduated yet, upload a pre-graduation or student status certificate; the original or notarised degree certificate is due by registration."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Transcripts for both your master's and bachelor's studies. If you are still studying, upload transcripts up to your current stage."},
+    {"kind": "language_certificate", "level": null, "requirement": "required", "note": "Language proficiency certificate meeting ZJU's language requirements for international graduate applicants."},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Personal statement in Chinese or English, at least 1,500 words: study and work background, reasons for applying and your study proposal."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two letters, in principle from full or associate professors in your field. Each must show the professor's signature, phone number and email."},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "optional", "note": "ZJU Supervisor Provisional Acceptance Form (2026 version), filled in by the supervisor. Required only if your programme's catalogue entry asks for it."},
+    {"kind": "publications", "level": null, "requirement": "optional", "note": "Published papers or other academic achievements, if you have them."},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "Foreigner Physical Examination Form, fully completed, with the doctor's signature, hospital stamp and sealed photo. Valid for 6 months. Needed for the CSC Type B route.", "source": "https://iczu.zju.edu.cn/admissionsen/2022/0530/c68995a2590720/page.htm"},
+    {"kind": "police_clearance", "level": null, "requirement": "required", "note": "Non-criminal record certificate from the local public security authority, issued within 6 months before you apply. Needed for the CSC Type B route.", "source": "https://iczu.zju.edu.cn/admissionsen/2022/0530/c68995a2590720/page.htm"},
+    {"kind": "other", "level": null, "requirement": "required", "note": "Hand-signed ZJU Commitments form (PDF). Former Chinese citizens or people born abroad to a Chinese parent also upload the nationality documents named in the guide. Non-English/Chinese papers need notarised translations."}
+  ]
+}

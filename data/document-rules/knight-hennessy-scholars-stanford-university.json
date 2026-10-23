@@ -1,0 +1,25 @@
+{
+  "slug": "knight-hennessy-scholars-stanford-university",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/your-applications",
+    "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/transcripts-test-scores",
+    "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/recommendation-letters",
+    "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/resume",
+    "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/short-answers-essay",
+    "https://knight-hennessy.stanford.edu/admission/after-you-apply/video-statement-invitation"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. Do not put a photo on your resume.", "source": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/resume"},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Only if your transcript does not show the degree conferred and its date; then submit a diploma or similar document if you have one.", "source": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/transcripts-test-scores"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "A transcript for each institution attended for one academic year or longer. Unofficial is accepted; non-English needs an official English translation.", "source": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/transcripts-test-scores"},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "One-page resume on US Letter paper, reverse-chronological, with no photo or hyperlinks.", "source": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/resume"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two letters in English, due by the deadline. No family; friends generally do not qualify. You may not write or edit your own letter. Separate from your graduate programme's letters.", "source": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/recommendation-letters"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "One essay (550 words) plus three short answers (250, 250 and 150 words). Check the current prompts on the KHS site.", "source": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/short-answers-essay"},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "Only if your Stanford graduate programme requires them (e.g. GRE, GMAT). KHS sets no minimum; the programme does. Submit by the later of the programme or KHS deadline.", "source": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/transcripts-test-scores"},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Only if your Stanford graduate programme requires it (TOEFL accepted by all programmes, IELTS by most). Check your programme's minimum and score validity.", "source": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/transcripts-test-scores"},
+    {"kind": "video_statement", "level": null, "requirement": "optional", "note": "Only if invited (about 500 applicants, rolling in January). Then it is required: up to 2 minutes, face visible, recorded in the online application, topic is teaching something to your cohort.", "source": "https://knight-hennessy.stanford.edu/admission/after-you-apply/video-statement-invitation"}
+  ],
+  "new_kinds": []
+}

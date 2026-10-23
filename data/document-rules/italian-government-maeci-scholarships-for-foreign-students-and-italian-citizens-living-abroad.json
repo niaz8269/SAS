@@ -1,0 +1,19 @@
+{
+  "slug": "italian-government-maeci-scholarships-for-foreign-students-and-italian-citizens-living-abroad",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://ambalkuwait.esteri.it/wp-content/uploads/2026/03/Call-for-applications-26-27-ENG.pdf",
+    "https://www.esteri.it/en/servizi-opportunita/opportunita/borse-di-studio/per-cittadini-stranieri/borsestudio_stranieri/"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Legible copy of a valid passport or identity document, uploaded when you register on the Study in Italy portal. Without it you are excluded."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Certificate of the degree you need for your programme. If you do not have it yet, declare this on the portal and upload it later if asked."},
+    {"kind": "language_certificate", "level": "master", "requirement": "required", "note": "Proof of Italian B2, or English B2 for programmes taught entirely in English. If you do not have it yet, declare this on the portal and upload it later if asked. Your university may ask for more."},
+    {"kind": "pre_admission_letter", "level": "doctorate", "requirement": "required", "note": "Admission letter to the PhD programme (pre-admission letters are not valid). If you do not have it yet, declare this and upload your supervisor's invitation letter instead."},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "optional", "note": "Only for research-project scholarships: the invitation letter from your supervisor in Italy."},
+    {"kind": "research_proposal", "level": null, "requirement": "optional", "note": "Only for research-project scholarships: your research project."},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ],
+  "new_kinds": []
+}

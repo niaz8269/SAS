@@ -86,6 +86,6 @@ class CscDocumentRulesSeeder extends Seeder
     private function put(int $kindId, int $programmeId, ?int $levelId, string $requirement, string $note): void
     {
         $rule = DocumentRule::firstOrNew(['kind_id' => $kindId, 'programme_id' => $programmeId, 'degree_level_id' => $levelId]);
-        $rule->fill(['requirement' => $requirement, 'note' => $note])->save();
+        $rule->fill(['requirement' => $requirement, 'note' => $note, 'source_url' => 'https://id.china-embassy.gov.cn/eng/whjy/lxxx/202510/t20251027_11741682.htm', 'checked_on' => '2026-10-24'])->save();
     }
 }

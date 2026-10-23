@@ -1,0 +1,20 @@
+{
+  "slug": "tsinghua-university-graduate-admissions-and-scholarships-for-international-students-cgs-and-bgs",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm",
+    "https://www.sigs.tsinghua.edu.cn/en/2026/0917/c7519a293346/page.htm"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Upload the bio page of your personal ordinary passport. Colour scan of the original, not a phone photo.", "source": "https://www.sigs.tsinghua.edu.cn/en/2026/0917/c7519a293346/page.htm"},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Degree certificate with authentication: CSCSE for degrees from outside mainland China, CSSD for mainland degrees. If you have not graduated yet, an expected-graduation certificate can go in first.", "source": "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm"},
+    {"kind": "transcript", "level": "master", "requirement": "required", "note": "Undergraduate transcript. If it does not show your overall GPA, also upload a separate GPA certificate from your university.", "source": "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm"},
+    {"kind": "transcript", "level": "doctorate", "requirement": "required", "note": "Transcripts of both your graduate and undergraduate studies. If a transcript does not show the overall GPA, also upload a separate GPA certificate from your university.", "source": "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Personal statement, entered directly in the online application system.", "source": "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm"},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "A brief description of your research experience or research plan, uploaded with your application.", "source": "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two letters, from scholars at associate professor level or above, or from senior professionals in a related academic field.", "source": "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm"},
+    {"kind": "language_certificate", "level": null, "requirement": "required", "note": "Chinese (HSK) or English test score report, as set by your programme in the catalogue. Some schools waive it.", "source": "https://www.sigs.tsinghua.edu.cn/en/2026/0917/c7519a293346/page.htm"},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Nationality status documents, only if applicable (for example if you formerly held Chinese nationality). Some programmes also ask for extra documents; check your programme's remarks.", "source": "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm"}
+  ]
+}

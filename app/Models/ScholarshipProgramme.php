@@ -30,6 +30,11 @@ class ScholarshipProgramme extends Model
         return $this->hasMany(ScholarshipCycle::class, 'programme_id');
     }
 
+    public function documentRules(): HasMany
+    {
+        return $this->hasMany(DocumentRule::class, 'programme_id');
+    }
+
     public function universities(): BelongsToMany
     {
         return $this->belongsToMany(University::class, 'programme_university', 'programme_id');

@@ -1,0 +1,21 @@
+{
+  "slug": "uaeu-graduate-research-fellowships-for-international-phd-students",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml",
+    "https://www.uaeu.ac.ae/en/cgs/admission.shtml",
+    "https://www.uaeu.ac.ae/en/cgs/docs/phd_scholarship_and_fellowship_application_form.docx"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Copy of your valid passport. If you live in the UAE, also a copy of your identity card.", "source": "https://www.uaeu.ac.ae/en/cgs/admission.shtml"},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Personal photo.", "source": "https://www.uaeu.ac.ae/en/cgs/admission.shtml"},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Certified copies of your master's and bachelor's degrees.", "source": "https://www.uaeu.ac.ae/en/cgs/admission.shtml"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Certified copies of your master's and bachelor's transcripts. Documents for the fellowship form must be in English.", "source": "https://www.uaeu.ac.ae/en/cgs/admission.shtml"},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "CV with a list of your relevant publications.", "source": "https://www.uaeu.ac.ae/en/cgs/docs/phd_scholarship_and_fellowship_application_form.docx"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Statement of research interest, 300 words at most.", "source": "https://www.uaeu.ac.ae/en/cgs/docs/phd_scholarship_and_fellowship_application_form.docx"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two letters from people who supervised your academic or research work.", "source": "https://www.uaeu.ac.ae/en/cgs/docs/phd_scholarship_and_fellowship_application_form.docx"},
+    {"kind": "english_language", "level": null, "requirement": "required", "note": "IELTS Academic 6.5 or equivalent (or TOEFL), less than two years old, for English-taught programmes. Exemptions exist for some master's graduates from English-speaking countries.", "source": "https://www.uaeu.ac.ae/en/cgs/admission.shtml"},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "You may attach certifications and standardised test scores such as the GRE, if you have them.", "source": "https://www.uaeu.ac.ae/en/cgs/docs/phd_scholarship_and_fellowship_application_form.docx"},
+    {"kind": "other", "level": null, "requirement": "required", "note": "Equivalency letter (certificate recognition) from the UAE Ministry of Education for your previous degree.", "source": "https://www.uaeu.ac.ae/en/cgs/admission.shtml"}
+  ]
+}

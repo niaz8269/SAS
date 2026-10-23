@@ -1,0 +1,16 @@
+{
+  "slug": "manaaki-new-zealand-scholarships",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.nzscholarships.govt.nz/how-to-apply-for-a-scholarship/",
+    "https://www.nzscholarships.govt.nz/check-eligibility-criteria/",
+    "https://www.nzscholarships.govt.nz/7-preferred-candidates-what-next/"
+  ],
+  "rules": [
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Upload a copy of the academic transcript for your qualification, including the grading scale. If shortlisted you will also need verified English-translated copies.", "source": "https://www.nzscholarships.govt.nz/how-to-apply-for-a-scholarship/"},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not asked at application. If you are shortlisted you will be asked for verified English-translated copies of your completion certificates.", "source": "https://www.nzscholarships.govt.nz/how-to-apply-for-a-scholarship/"},
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Needed if you are shortlisted and take the IELTS test: valid passport and a digital colour copy. Your preferred institution may later ask for verified copies of official documents.", "source": "https://www.nzscholarships.govt.nz/check-eligibility-criteria/"},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Not needed when you apply. Only if shortlisted: IELTS, TOEFL, PTE Academic or Cambridge Advanced; IELTS 6.5 overall for postgraduate, 6.0 for undergraduate. Not needed for study in the Pacific.", "source": "https://www.nzscholarships.govt.nz/check-eligibility-criteria/"}
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "slug": "hbku-graduate-scholarship-stipend-and-tuition-waiver-for-international-students",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.hbku.edu.qa/en/scholarship",
+    "https://www.hbku.edu.qa/cse/admission-requirements",
+    "https://www.hbku.edu.qa/chss/admission-requirements",
+    "https://www.hbku.edu.qa/cis/admission-requirements",
+    "https://www.hbku.edu.qa/chls/admission-requirements"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Electronic copy of your passport with the online application. All documents must be PDF.", "source": "https://www.hbku.edu.qa/cse/admission-requirements"},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Final transcripts and graduation statements are required for all previous university studies.", "source": "https://www.hbku.edu.qa/cse/admission-requirements"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Official electronic transcripts explaining the grading system. Non-English or non-Arabic ones need an official translation. Send originals on enrolment if admitted on copies.", "source": "https://www.hbku.edu.qa/cse/admission-requirements"},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Current CV covering qualifications, experience, publications, research projects, honours and conference presentations.", "source": "https://www.hbku.edu.qa/cse/admission-requirements"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Personal statement of 300 to 500 words. Incomplete or too-short statements are not accepted. Requirements can vary by programme.", "source": "https://www.hbku.edu.qa/cse/admission-requirements"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two letters, one from an academic referee. Some health and life sciences programmes ask for two or three. You enter referee details in the online application.", "source": "https://www.hbku.edu.qa/chls/admission-requirements"},
+    {"kind": "english_language", "level": null, "requirement": "required", "note": "IELTS 6.5 or TOEFL 79 (some programmes differ). Scores no more than two years old. Exemptions are possible; see HBKU admissions.", "source": "https://www.hbku.edu.qa/cse/admission-requirements"},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "GRE or GMAT is not required for master's. For PhD it is required in Sustainable Energy and Sustainable Environment, and optional in some other science programmes.", "source": "https://www.hbku.edu.qa/cse/admission-requirements"},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "optional", "note": "Required by the College of Islamic Studies (1,000 to 2,000 words, max 5 pages) and the PhD in Humanities and Social Sciences (1,000 to 2,000 words). Not listed for science colleges.", "source": "https://www.hbku.edu.qa/chss/admission-requirements"},
+    {"kind": "writing_sample", "level": null, "requirement": "optional", "note": "Required only by the College of Islamic Studies: 15 to 20 pages of academic writing, properly cited, in English and/or Arabic.", "source": "https://www.hbku.edu.qa/cis/admission-requirements"}
+  ]
+}

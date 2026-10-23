@@ -1,0 +1,18 @@
+{
+  "slug": "qatar-university-international-students-scholarship-undergraduate",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.qu.edu.qa/students/admission/scholarships/types",
+    "https://www.qu.edu.qa/sites/en_US/students/admission/undergraduate/admission-requirements/application-checklist",
+    "https://cisco.qu.edu.qa/en-us/students/admission/undergraduate/apply"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Upload a copy of your passport with the online application (non-Qatari applicants).", "source": "https://www.qu.edu.qa/sites/en_US/students/admission/undergraduate/admission-requirements/application-checklist"},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Passport-size photograph uploaded with the online application.", "source": "https://www.qu.edu.qa/sites/en_US/students/admission/undergraduate/admission-requirements/application-checklist"},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Original, final, official, certified high school transcript, with copies. Send an attested true copy first and the original by post. Applications without it are not considered. Minimum average 95%.", "source": "https://www.qu.edu.qa/sites/en_US/students/admission/undergraduate/admission-requirements/application-checklist"},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "Health certificate issued inside Qatar, no more than six months old from the examination date.", "source": "https://www.qu.edu.qa/sites/en_US/students/admission/undergraduate/admission-requirements/application-checklist"},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "The scholarship committee may consider IELTS or TOEFL scores.", "source": "https://www.qu.edu.qa/students/admission/scholarships/types"},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "The committee may consider SAT, ACT or QU Math Placer scores. Foundation Program colleges: send official score reports to the QU Testing Center to seek exemption.", "source": "https://www.qu.edu.qa/students/admission/scholarships/types"}
+  ]
+}

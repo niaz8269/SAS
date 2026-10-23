@@ -1,0 +1,18 @@
+{
+  "slug": "saudi-government-university-scholarships-for-international-students-study-in-saudi",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.moe.gov.sa/en/education/ResidentsAndvisitors/Pages/PublicUniversitiesScholarships.aspx",
+    "https://object.moe.gov.sa/studyinsaudi/Profile_en-US.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Certificates and identification papers must be attested by the authorities the university specifies.", "source": "https://object.moe.gov.sa/studyinsaudi/Profile_en-US.pdf"},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Your previous qualification certificate, attested by the authorities the university specifies. If you studied outside Saudi Arabia, an equivalency of the qualification is needed.", "source": "https://object.moe.gov.sa/studyinsaudi/Profile_en-US.pdf"},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "You must pass the medical examination set by Saudi law and the Ministry of Education."},
+    {"kind": "police_clearance", "level": null, "requirement": "required", "note": "A certificate from your country's security services showing no criminal record."},
+    {"kind": "recommendation", "level": null, "requirement": "optional", "note": "Only if the university asks for a recommendation from a body or person it specifies."},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Approval from your government to study in Saudi Arabia, only if your country requires it for its students."}
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "slug": "global-korea-scholarship-gks",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://boston.mofa.go.kr/us-boston-en/brd/m_4558/view.do?seq=761392",
+    "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848",
+    "https://bgd.mofa.go.kr/bd-en/brd/m_2124/view.do?seq=760082"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Proof of citizenship: passport or ID copy for you. Parents' proof is under parents' documents. Embassies may need extra items; follow your embassy's notice.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": "bachelor", "requirement": "required", "note": "Colour photo attached to the application form.", "source": "https://bgd.mofa.go.kr/bd-en/brd/m_2124/view.do?seq=760082"},
+    {"kind": "degree_certificate", "level": "bachelor", "requirement": "required", "note": "High school graduation certificate. Apostille or attestation is not needed at the first stage in some embassies; follow your embassy's notice.", "source": "https://bgd.mofa.go.kr/bd-en/brd/m_2124/view.do?seq=760082"},
+    {"kind": "degree_certificate", "level": "master", "requirement": "required", "note": "Bachelor's degree certificate. If you graduate by July 31, you may apply with a certificate of expected graduation and send the final certificate later.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "degree_certificate", "level": "doctorate", "requirement": "required", "note": "Master's degree certificate. If you graduate by July 31, you may apply with a certificate of expected graduation and send the final certificate later.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "transcript", "level": "bachelor", "requirement": "required", "note": "Academic transcript of your high school curriculum.", "source": "https://bgd.mofa.go.kr/bd-en/brd/m_2124/view.do?seq=760082"},
+    {"kind": "transcript", "level": "master", "requirement": "required", "note": "Bachelor's transcript. If your grades are not on a 4.0, 4.3, 4.5, 5.0 or 100-point scale, add a university-confirmed converted GPA transcript.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "transcript", "level": "doctorate", "requirement": "required", "note": "Master's transcript. If your grades are not on a 4.0, 4.3, 4.5, 5.0 or 100-point scale, add a university-confirmed converted GPA transcript.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Personal statement, on the official application form."},
+    {"kind": "study_plan", "level": null, "requirement": "required", "note": "Study plan, on the official application form."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "One recommendation letter on the official form, completed and signed by the recommender. Upload a scan; shortlisted candidates post the original.", "source": "https://boston.mofa.go.kr/us-boston-en/brd/m_4558/view.do?seq=761392"},
+    {"kind": "recommendation", "level": "bachelor", "requirement": "optional", "note": "Not sent with the application in some embassies; only the final successful candidate is asked for a sealed letter after the interview. Follow your embassy's notice.", "source": "https://bgd.mofa.go.kr/bd-en/brd/m_2124/view.do?seq=760082"},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "Personal Medical Assessment (self-health statement) form from the Study in Korea system.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "birth_certificate", "level": null, "requirement": "required", "note": "Your birth certificate as proof of citizenship and family relationship. Non-English documents may need a certified translation.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "guardian_documents", "level": null, "requirement": "required", "note": "Proof of citizenship for both parents: passport or ID, and their marriage certificate (or divorce or death certificate if applicable).", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "language_certificate", "level": null, "requirement": "optional", "note": "TOPIK, or TOEFL iBT / IELTS, if you have a score. TOPIK Level 3 or above earns extra points for graduate applicants.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"},
+    {"kind": "employment_letter", "level": "master", "requirement": "optional", "note": "Employment certificate, only if applicable.", "source": "https://boston.mofa.go.kr/us-boston-en/brd/m_4558/view.do?seq=761392"},
+    {"kind": "employment_letter", "level": "doctorate", "requirement": "optional", "note": "Employment certificate, only if applicable.", "source": "https://boston.mofa.go.kr/us-boston-en/brd/m_4558/view.do?seq=761392"},
+    {"kind": "publications", "level": null, "requirement": "optional", "note": "Published books, awards or similar materials, if you have them. They need no apostille.", "source": "https://boston.mofa.go.kr/us-boston-en/brd/m_4558/view.do?seq=761392"},
+    {"kind": "other", "level": null, "requirement": "required", "note": "GKS Applicant Agreement and consent forms, from the Study in Korea system. Shortlisted candidates sign the printed originals.", "source": "https://rou.mofa.go.kr/ro-ro/brd/m_24731/view.do?seq=761848"}
+  ]
+}

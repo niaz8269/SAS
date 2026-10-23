@@ -1,0 +1,20 @@
+{
+  "slug": "sultan-qaboos-university-international-students-postgraduate-scholarship",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.squ.edu.om/ps/en-us/required-documents",
+    "https://www.squ.edu.om/ps/en-us/application-submission-guidelines",
+    "https://www.squ.edu.om/ps/en-us/scholarships"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Personal documents: passport, plus ID or residence card if you have one. Upload as JPG or PDF."},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Personal photo, part of the personal documents."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Certified certificates for your bachelor's (and higher diploma or PG certificate, if any). Degrees from outside Oman need authentication and equivalency from Oman's Ministry of Higher Education."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Official transcripts for your bachelor's (and higher diploma or PG certificate, if any)."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Your CV."},
+    {"kind": "english_language", "level": null, "requirement": "required", "note": "IELTS or TOEFL iBT certificate. Applications are cancelled if it is not attached."},
+    {"kind": "employment_letter", "level": null, "requirement": "required", "note": "Study leave or employer approval letter, as listed in the official table."},
+    {"kind": "research_proposal", "level": null, "requirement": "not_needed", "note": "Not required for master's programmes."},
+    {"kind": "recommendation", "level": null, "requirement": "not_needed", "note": "Not required for master's programmes."}
+  ]
+}

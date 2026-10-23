@@ -130,6 +130,7 @@ class ScholarshipCycleResource extends Resource
         ])->filters([
             SelectFilter::make('publication_state')->options(PublicationState::options())->label('State'),
             Filter::make('needs_recheck')->label('Needs recheck')->query(fn (Builder $query) => $query->where('publication_state', 'published')->where('review_due_at', '<', now())),
+            Filter::make('no_document_rules')->label('No SAS document rules yet')->query(fn (Builder $query) => $query->whereDoesntHave('documentRules')),
             Filter::make('closing_7')->label('Closing within 7 days')->query(fn (Builder $query) => $query->whereBetween('next_closing_sort', [now(), now()->addDays(7)])),
         ])->deferFilters(false)->recordActions([EditAction::make()])->defaultSort('id', 'desc');
     }

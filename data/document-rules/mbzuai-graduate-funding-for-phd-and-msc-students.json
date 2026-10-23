@@ -1,0 +1,22 @@
+{
+  "slug": "mbzuai-graduate-funding-for-phd-and-msc-students",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://staticcdn.mbzuai.ac.ae/mbzuaiwpprd01/2024/07/Admission-Policy.pdf",
+    "https://staticcdn.mbzuai.ac.ae/mbzuaiwpprd01/PDF/MBZUAI_Application_Instructions_New_MSc-PhD.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Complete degree certificate in English (bachelor's and, for a PhD with a master's, master's). Notarised copies at application, attested documents after admission. Final-year students may start with a transcript copy."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Complete transcript in English. Notarised copies at application, attested documents after admission. Final-year students may apply with a copy and send the official one on admission."},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Statement of purpose, a 500 to 1,000 word essay on your motivation, background, career goals and study plans."},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "Research statement of 1 to 3 pages on your past research and what you want to work on. You must write it yourself without faculty help."},
+    {"kind": "recommendation", "level": "master", "requirement": "required", "note": "At least two letters; one from a course instructor or research advisor and one from a current or previous work supervisor. Referees are emailed after you submit."},
+    {"kind": "recommendation", "level": "doctorate", "requirement": "required", "note": "Three letters; at least one from a course instructor or research advisor and one from a current or previous work supervisor. Referees are emailed after you submit."},
+    {"kind": "english_language", "level": null, "requirement": "required", "note": "TOEFL iBT 90, IELTS Academic 6.5 or EmSAT English 1550, valid during the application. A waiver can be requested if all your schooling and degrees were in English in a reference English-speaking country."},
+    {"kind": "test_scores", "level": "master", "requirement": "optional", "note": "GRE General score may be submitted."},
+    {"kind": "test_scores", "level": "doctorate", "requirement": "optional", "note": "GRE is needed if you apply with a bachelor's degree only (at least 150 verbal, 150 quantitative, 3 writing); optional with a master's degree."},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "If you list online Math or programming courses in the application, upload their completion certificates."}
+  ]
+}

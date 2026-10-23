@@ -1,0 +1,20 @@
+{
+  "slug": "schwarzman-scholars",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.schwarzmanscholars.org/admissions/application-instructions/",
+    "https://www.schwarzmanscholars.org/admissions/",
+    "https://www.schwarzmanscholars.org/frequently-asked-questions/"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not needed to apply, but a valid passport is required if you are admitted. The programme advises having one before you apply, as interviews may involve travel."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not uploaded at application: your transcript must show the degree conferred. You must finish your undergraduate degree by 1 August of your enrolment year and have it verified before orientation."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "A scanned official transcript for each undergraduate and graduate degree you attended, showing your name, institution and degree. Not password-protected. No screenshots of grade websites.", "source": "https://www.schwarzmanscholars.org/admissions/application-instructions/"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Three letters, submitted online by your recommenders: one academic, at least one on leadership. No relatives. Emailed, mailed or applicant-uploaded letters are not accepted.", "source": "https://www.schwarzmanscholars.org/admissions/application-instructions/"},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Your most recent resume or CV, maximum two pages.", "source": "https://www.schwarzmanscholars.org/admissions/application-instructions/"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Leadership Essay (750 words) and Statement of Purpose (500 words), plus two short answers of 100 words each. Going over the limits may disqualify you.", "source": "https://www.schwarzmanscholars.org/admissions/application-instructions/"},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Needed unless English is your native language or you studied at least two years in English. Minimums: TOEFL iBT 100, IELTS 7, Cambridge C1/C2 185, Duolingo 130. Some tests are valid two years.", "source": "https://www.schwarzmanscholars.org/admissions/application-instructions/"},
+    {"kind": "video_statement", "level": null, "requirement": "optional", "note": "Highly recommended but not required: a short self-introduction video (about one minute) shared as an unlisted YouTube or Vimeo link.", "source": "https://www.schwarzmanscholars.org/admissions/application-instructions/"}
+  ]
+}

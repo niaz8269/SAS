@@ -1,0 +1,19 @@
+{
+  "slug": "chevening-scholarships",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://chevening.org/resource-hub/guidance/prepare-your-application/",
+    "https://chevening.org/resource-hub/guidance/references/",
+    "https://chevening.org/resource-hub/guidance/online-application-system/",
+    "https://chevening.org/resource-hub/guidance/eligibility/"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. You enter your passport number in the online form; no passport copy is requested.", "source": "https://chevening.org/resource-hub/guidance/online-application-system/"},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Needed if you are invited to interview. Official original from your university showing degree and grade; no English translation needed. Must be in hand by the interview.", "source": "https://chevening.org/resource-hub/guidance/prepare-your-application/"},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. Chevening states that undergraduate degree transcripts will not be accepted in place of the degree certificate.", "source": "https://chevening.org/resource-hub/guidance/prepare-your-application/"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two reference letters in English (notarised translation if another language), addressed to the British embassy or high commission. Upload at least 7 working days before your interview. You collect them yourself.", "source": "https://chevening.org/resource-hub/guidance/references/"},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "required", "note": "At least one unconditional offer from a UK university course you chose on the form, needed by the deadline on the application timeline.", "source": "https://chevening.org/resource-hub/guidance/prepare-your-application/"}
+  ],
+  "new_kinds": []
+}

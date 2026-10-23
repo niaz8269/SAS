@@ -1,0 +1,18 @@
+{
+  "slug": "banach-nawa-programme-prof-stefan-banach-scholarship-programme",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.nawa.gov.pl/images/Banach/2026/Banach-2026---Call-for-applications-EN.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Scan of the passport page with your personal data. The passport must be a document that allows you to cross borders."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "First-cycle (bachelor) diploma from a programme country, as a scan of the original. If you have not graduated yet, upload the university certificate NAWA describes (name, programme, completion date, average grade, stamp)."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Diploma supplement showing your average grade for the whole course and the grades for each subject. Documents not in Polish or English need a certified translation."},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "required", "note": "Proof that you are in the admission process for full-time master's studies at a Polish university (admission decision, acceptance letter, registration confirmation or university reply). Not needed for the Polish-language path."},
+    {"kind": "language_certificate", "level": null, "requirement": "required", "note": "Proof of the language you will study in: Polish B2 or English B2 for full studies, or Polish B1 for the one-year preparatory course. Accepted certificates are in the call's appendices."},
+    {"kind": "video_statement", "level": null, "requirement": "required", "note": "Video self-presentation in Polish or English, 1 to 3 minutes, explaining why you chose your field and want to study in Poland. No other people may appear in it."},
+    {"kind": "recommendation", "level": null, "requirement": "optional", "note": "Optional letter of recommendation from a Polish diplomatic mission for your region. You may include it but you do not have to."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ],
+  "new_kinds": []
+}

@@ -1,0 +1,17 @@
+{
+  "slug": "si-scholarship-for-global-professionals",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Photocopy of a valid passport or national ID card clearly showing your name, citizenship and photograph."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Use SI's CV template, maximum three pages. Other formats, including Europass, lead to disqualification."},
+    {"kind": "employment_letter", "level": null, "requirement": "required", "note": "Proof of work and leadership experience on SI's form, typed, printed, signed by the referee, stamped by the organisation or a notary, and uploaded as one PDF."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two reference letters from two different referees on SI's template, signed and stamped. One must be based on work experience; the other may be from work or outside engagements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. SI only accepts the listed documents; your degree and transcripts go to University Admissions."},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. SI only accepts the listed documents; your degree and transcripts go to University Admissions."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ],
+  "new_kinds": []
+}

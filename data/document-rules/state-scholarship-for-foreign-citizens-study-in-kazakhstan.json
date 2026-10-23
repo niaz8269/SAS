@@ -1,0 +1,21 @@
+{
+  "slug": "state-scholarship-for-foreign-citizens-study-in-kazakhstan",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions",
+    "https://astanait.edu.kz/scholarship-foreign",
+    "https://kaznpu.kz/docs/28_02_eng.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Scanned copy of your identification document (your passport).", "source": "https://astanait.edu.kz/scholarship-foreign"},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Scanned copy of your previous education document (school certificate, bachelor's or master's diploma). Needs a notarised translation into Kazakh, Russian or English if it is in another language.", "source": "https://astanait.edu.kz/scholarship-foreign"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Transcript that comes with your previous education document. Needs a notarised translation into Kazakh, Russian or English if it is in another language.", "source": "https://astanait.edu.kz/scholarship-foreign"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Motivational essay in Kazakh, Russian or English.", "source": "https://astanait.edu.kz/scholarship-foreign"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "One recommendation letter in Kazakh, Russian or English, from the school or university where you studied, or from your employer.", "source": "https://astanait.edu.kz/scholarship-foreign"},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "A medical certificate for studying abroad, plus a certificate showing you do not have HIV/AIDS, both issued by an official health authority in your country of residence.", "source": "https://astanait.edu.kz/scholarship-foreign"},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "optional", "note": "Letter of invitation from a Kazakhstan university, if you have one.", "source": "https://astanait.edu.kz/scholarship-foreign"},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "PhD research proposal in Kazakh, Russian or English. Listed in the ministry's programme brochure (2020 edition).", "source": "https://kaznpu.kz/docs/28_02_eng.pdf"},
+    {"kind": "language_certificate", "level": "doctorate", "requirement": "required", "note": "International certificate confirming your knowledge of a foreign language. Listed in the ministry's programme brochure (2020 edition).", "source": "https://kaznpu.kz/docs/28_02_eng.pdf"},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ]
+}

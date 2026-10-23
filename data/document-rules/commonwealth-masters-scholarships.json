@@ -1,0 +1,17 @@
+{
+  "slug": "commonwealth-masters-scholarships",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Proof of citizenship or refugee status: a valid passport or national ID card showing your photo, date of birth and country of citizenship."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Full transcripts for all higher education qualifications, plus to-date transcripts for current courses (or explain why unavailable). All pages needed. Non-English: certified translation."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "At least two signed PDF references on institutional letterhead (or an email showing the sender's details), in the referee's own words. Referees upload by the deadline."},
+    {"kind": "english_language", "level": null, "requirement": "not_needed", "note": "The Commonwealth Scholarship Commission does not require an IELTS test."},
+    {"kind": "medical", "level": null, "requirement": "optional", "note": "Only after selection: a Health and Disability Form is needed before the Confirmation of Award is issued."}
+  ],
+  "new_kinds": []
+}

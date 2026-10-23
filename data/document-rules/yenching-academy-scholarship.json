@@ -1,0 +1,20 @@
+{
+  "slug": "yenching-academy-scholarship",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
+    "https://yenchingacademy.pku.edu.cn/info/1040/4236.htm"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Valid passport; applicants must not be Chinese citizens. Former residents of mainland China, Hong Kong, Macao or Taiwan need extra citizenship papers and proof that Chinese nationality was cancelled.", "source": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Diploma(s) or certificate(s) of enrolment. Documents not in English or Chinese need a certified English translation stating the degree type (also for Latin diplomas).", "source": "https://yenchingacademy.pku.edu.cn/info/1040/4236.htm"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Official transcripts, in English.", "source": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Personal statement in English, 750 words or less.", "source": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"},
+    {"kind": "research_proposal", "level": null, "requirement": "required", "note": "Statement of Research Interest in English, up to 1,500 words, not counting citations.", "source": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Curriculum vitae in English, two pages at most.", "source": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two academic letters in Chinese or English, from full or associate professors (or equivalent) in your intended field.", "source": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Needed unless English is your native language or your degree was taught in English. Minimums: IELTS Academic 7.0, TOEFL iBT 100, Cambridge 185. Scores must come directly from the test body.", "source": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Only if you receive an offer: a credential evaluation of your undergraduate degree (CSCSE for overseas degrees). Based on the September 2025 instructions; confirm for 2027.", "source": "https://yenchingacademy.pku.edu.cn/info/1040/4236.htm"}
+  ]
+}

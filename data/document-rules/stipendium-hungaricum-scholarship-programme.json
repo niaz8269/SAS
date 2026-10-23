@@ -1,0 +1,24 @@
+{
+  "slug": "stipendium-hungaricum-scholarship-programme",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.hec.gov.pk/english/scholarshipsgrants/lao/SHSP/Pages/How-to-Apply.aspx",
+    "https://www.hec.gov.pk/english/scholarshipsgrants/lao/SHSP/Pages/Additional-Instructions.aspx"
+  ],
+  "rules": [
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Recent photo taken no more than two years before you submit."},
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Data page of your passport showing your personal data and photo. If you have no passport, upload your national ID card."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "School certificate for your level, with a translation if it is not in the programme language or Hungarian. If you are still studying, upload your final degree by 1 August."},
+    {"kind": "degree_certificate", "level": "bachelor", "requirement": "required", "note": "Secondary school graduation certificate or equivalent, with a translation if it is not in the programme language or Hungarian."},
+    {"kind": "degree_certificate", "level": "master", "requirement": "required", "note": "Bachelor's degree certificate or equivalent, with a translation if it is not in the programme language or Hungarian. If you are still studying, upload the final degree by 1 August."},
+    {"kind": "degree_certificate", "level": "diploma", "requirement": "required", "note": "Secondary school graduation certificate, with a translation if it is not in the programme language or Hungarian."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Transcript of records covering all semesters or years of your highest completed study, with a translation if needed."},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Motivation letter of at least one page, Times New Roman 12 pt, in the programme language or Hungarian."},
+    {"kind": "language_certificate", "level": null, "requirement": "required", "note": "Proof of language level required by the host institution, as a scan. If your earlier studies were in the programme language, upload proof of that instead. Add a translation if needed."},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "Research plan of at least 2 pages, Times New Roman 12 pt, in the programme language, listing your sources. Universities check it for plagiarism."},
+    {"kind": "recommendation", "level": "doctorate", "requirement": "required", "note": "Signed letter from a former or current academic tutor or supervisor with a scientific degree who knows your work, in the programme language or Hungarian."},
+    {"kind": "other", "level": "doctorate", "requirement": "optional", "note": "Statement of a supervisor at the host institution agreeing to supervise you. Needed only if the doctoral school asks for it, and it may be sent after the deadline."},
+    {"kind": "medical", "level": null, "requirement": "optional", "note": "Do not upload it now. Only scholarship recipients need a medical certificate on the official template, which you bring to Hungary for the medical exam."}
+  ],
+  "new_kinds": []
+}

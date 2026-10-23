@@ -36,6 +36,7 @@ class Requirements
                     'kind' => $kind,
                     'requirement' => $rule?->requirement ?? $kind->default_requirement,
                     'note' => $rule?->note,
+                    'source' => $rule?->source_url,
                     'documents' => $mine,
                     'state' => $this->state($mine),
                 ];

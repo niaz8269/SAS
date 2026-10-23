@@ -1,0 +1,20 @@
+{
+  "slug": "marine-scholarship-of-china",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://mgg.tongji.edu.cn/_upload/article/files/02/3f/7232f7dd40b5a2d85605e25140d2/e399499a-53d5-445f-9e02-caab4a5ee976.pdf",
+    "https://study.tongji.edu.cn/en/info/1049/1005.htm"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Copy of your passport."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Highest degree certificate. Chinese or English copies are fine; other languages need notarisation by a Chinese embassy/consulate plus a notarised Chinese or English translation. Final-year students: official proof of status and award date."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Original transcript listing all courses, signed or sealed by the issuer (an unsigned photocopy is invalid). Other languages need a notarised Chinese or English translation."},
+    {"kind": "study_plan", "level": null, "requirement": "required", "note": "Your study or research plan in China, in Chinese or English."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two recommendation letters in Chinese or English, from professors or associate professors."},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "Photocopy of the Foreigner Physical Examination Form (from the CSC website), fully completed in Chinese or English, with the doctor's signature and hospital seal; blanks make it invalid."},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Only for English-taught programmes: official proof of English ability (for example IELTS or TOEFL). Not needed if you are from an English-speaking country."},
+    {"kind": "chinese_language", "level": null, "requirement": "optional", "note": "Only for Chinese-taught programmes: HSK 5 with a score of 180 or more. If your highest degree was taught in Chinese, a certificate confirming that is needed instead."},
+    {"kind": "other", "level": null, "requirement": "required", "note": "Two signed printed copies each of the CSC scholarship application form (CSC agency no. 10247, category Marine Scholarship of China) and the Tongji International Student application form."}
+  ]
+}

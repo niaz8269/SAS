@@ -52,6 +52,14 @@ class DocumentRuleForm
         };
     }
 
+    /** A link to the official page the rule comes from. */
+    public static function sourceColumn(): TextColumn
+    {
+        return TextColumn::make('source_url')->label('Source')->placeholder('None recorded')->limit(28)
+            ->url(fn ($record) => $record->source_url && str_starts_with($record->source_url, 'https://') ? $record->source_url : null, shouldOpenInNewTab: true)
+            ->toggleable();
+    }
+
     public static function requirementColumn(): TextColumn
     {
         return TextColumn::make('requirement')->label('Document is')->badge()

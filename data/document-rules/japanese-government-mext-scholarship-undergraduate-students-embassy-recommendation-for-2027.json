@@ -1,0 +1,18 @@
+{
+  "slug": "japanese-government-mext-scholarship-undergraduate-students-embassy-recommendation-for-2027",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.studyinjapan.go.jp/en/smap-stopj-applications-undergraduate.html",
+    "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Photo attached to the application form: 4.5 x 3.5 cm, taken within 6 months, upper body, full face, no hat. Write your name and nationality on the back.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Certificate of graduation from upper secondary school (or of prospective graduation). University students and graduates also need the university certificate or an enrolment certificate. Attested copies are accepted.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Transcripts for all school years of upper secondary school (and of university if you attend or attended one), showing the grade scale and grades. Japanese or English, or add a translation.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Letter from a class teacher or the principal of the last school you attended, issued by that school or university. Any format is accepted.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "The 2027 Certificate of Health form, filled in and signed by a medical doctor.", "source": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-undergraduate.html"},
+    {"kind": "language_certificate", "level": null, "requirement": "optional", "note": "Only if you have a Japanese or English certificate showing your name and level or score, issued within the last 2 years. Submit copies.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Direct Placement Preference Form: only if you choose Social Sciences and Humanities and are eligible for direct placement, or want direct placement in any field. Submitted after you pass the first screening.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"}
+  ]
+}

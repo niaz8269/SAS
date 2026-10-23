@@ -1,0 +1,21 @@
+{
+  "slug": "kfupm-graduate-scholarship-full-time-ms-and-phd",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://cgis.kfupm.edu.sa/admission/admissionrequirement",
+    "https://cgis.kfupm.edu.sa/admission/kfupm-scholarship"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": "doctorate", "requirement": "required", "note": "Official degree certificates for your B.S. (and M.S. for the regular PhD). The official page says transcripts and degree certificates are required for admission."},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "transcript", "level": "doctorate", "requirement": "required", "note": "Official transcripts for your B.S. (and M.S. for the regular PhD). The official page says transcripts and degree certificates are required for admission."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two letters, preferably from teachers of your university (or graduate) courses, sent through the online recommendation system. Not listed for the Direct-Entry PhD."},
+    {"kind": "english_language", "level": null, "requirement": "required", "note": "TOEFL, IELTS or Duolingo score. Waived for KFUPM graduates and graduates of English-speaking countries. A TOEFL score must be sent directly to the College of Graduate Studies."},
+    {"kind": "statement", "level": "master", "requirement": "optional", "note": "One-page statement of purpose on your career and research goals. Listed for the project-based MS and business MS programmes."},
+    {"kind": "video_statement", "level": "master", "requirement": "optional", "note": "Introductory video of at most 2 minutes on who you are and why you apply. Listed for the project-based MS programmes only."},
+    {"kind": "test_scores", "level": "master", "requirement": "optional", "note": "GMAT or GRE is optional for the business MS programmes and can support your file."}
+  ]
+}

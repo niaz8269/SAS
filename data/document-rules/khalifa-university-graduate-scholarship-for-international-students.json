@@ -1,0 +1,21 @@
+{
+  "slug": "khalifa-university-graduate-scholarship-for-international-students",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.ku.ac.ae/graduate-admissions-required-documents/",
+    "https://www.ku.ac.ae/admissions/graduate-admissions/graduate-admissions-requirements"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Valid passport. If you live in the UAE, also upload a valid UAE visa and your UAE national ID card."},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Passport-style photograph on a white background."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Certified copy of your bachelor's and/or master's certificate, as applicable."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Official transcript that shows the grading scale."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "A detailed CV."},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Statement of Purpose of 500 to 1,000 words."},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "Research Statement of 500 to 1,000 words: your research interests, relevant experience and an example project you would like to join. PhD applicants only."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two referee recommendations, submitted through an online form.", "source": "https://www.ku.ac.ae/admissions/graduate-admissions/graduate-admissions-requirements"},
+    {"kind": "english_language", "level": null, "requirement": "required", "note": "IELTS, TOEFL or EmSAT result. Upload it even if you think you qualify for an exemption. TOEFL scores can be sent directly with code 0960."},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "GRE score report where required (KU code 0822). Required for direct PhD applicants without a master's degree."},
+    {"kind": "other", "level": null, "requirement": "required", "note": "Equivalency certificate from the UAE Ministry of Education, for degrees earned outside the UAE."}
+  ]
+}

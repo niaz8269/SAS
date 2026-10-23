@@ -11,6 +11,7 @@ use App\Models\Invoice;
 use App\Models\NotificationEvent;
 use App\Models\PartnerSubmission;
 use App\Models\ScholarshipCycle;
+use App\Models\ScholarshipProgramme;
 use App\Models\ServiceCase;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
@@ -63,6 +64,10 @@ class OperationsOverview extends StatsOverviewWidget
             $due = Invoice::where('status', 'issued')->sum('amount_cents');
             $stats[] = Stat::make('Awaiting payment', Invoice::money((int) $due))->description(Invoice::where('status', 'issued')->count().' invoices');
             $stats[] = Stat::make('Refunds due', Invoice::where('refund_status', 'due')->count())->description(Invoice::money((int) Invoice::where('refund_status', 'due')->sum('refund_cents')))->color(Invoice::where('refund_status', 'due')->exists() ? 'danger' : 'success');
+        }
+        if ($user->can('documents.manage')) {
+            $stats[] = Stat::make('Scholarships without document rules', ScholarshipProgramme::whereHas('cycles', fn ($q) => $q->visible())->whereDoesntHave('documentRules')->count())
+                ->description('Students get the default document list')->color('warning');
         }
         if ($user->can('partners.manage')) {
             $stats[] = Stat::make('Partner submissions to check', PartnerSubmission::whereIn('status', ['submitted', 'in_review'])->count())->description('Waiting for editors')->color('warning');

@@ -1,0 +1,26 @@
+{
+  "slug": "swiss-government-excellence-scholarships-research-and-art",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships-at-a-glance",
+    "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships",
+    "https://www.sbfi.admin.ch/en/faq-swiss-government-excellence-scholarships"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Copy of your passport. If you hold dual citizenship, submit copies of both passports."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Certificates from your previous universities. If not in English, French, Italian or German, add certified translations."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Transcripts from your previous universities. If not in English, French, Italian or German, add certified translations."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Complete CV: education, degrees, awards, positions, publications, teaching and practical experience (for art: exhibitions or concerts)."},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Letter of motivation, maximum 2 pages: why you want to stay in Switzerland and how it affects your career and plans after the scholarship."},
+    {"kind": "research_proposal", "level": null, "requirement": "required", "note": "Research scholarships only (not art). Detailed plan with milestones and timeline on the official FCS/ESKAS form, maximum 5 pages including a summary for non-specialists. Submit one proposal only.", "source": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships-at-a-glance"},
+    {"kind": "supervisor_letter", "level": null, "requirement": "required", "note": "Research scholarships only: letter of support from your Swiss academic supervisor, plus the supervisor's short CV (max 2 pages). You must find the supervisor; applications without the letter are excluded."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two letters. You enter the email addresses of two professors in your field; they upload their letters through the online application system."},
+    {"kind": "portfolio", "level": null, "requirement": "optional", "note": "Art scholarships only (required there): a PDF with links or QR codes to your work samples. Music: three different styles (composers send scores). Visual arts: three artworks with sketches."},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "optional", "note": "Art scholarships: admission (or admission under review) from a Swiss university of the arts or music is required. PhD via a graduate school: admission confirmation. Individual PhDs do not need it."},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Only if you already live in Switzerland: residence permit or registration confirmation. Your entry date must not be earlier than 1 August 2026."}
+  ],
+  "new_kinds": [
+    {"key": "supervisor_letter", "name": "Supervisor support letter", "description": "Letter from the academic supervisor or host institution supporting or accepting the applicant's project."}
+  ]
+}

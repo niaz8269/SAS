@@ -1,0 +1,21 @@
+{
+  "slug": "beijing-government-scholarship-for-international-students",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html",
+    "https://osao.bfsu.edu.cn/info/2472/6842.htm"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. Your host university may still ask for a passport copy."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Your highest degree or school-leaving certificate (high school for bachelor, bachelor for master, master for doctorate), or equivalent.", "source": "https://osao.bfsu.edu.cn/info/2472/6842.htm"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Academic transcripts. Category A normally needs an average of 85 or GPA 3.6; Category B or C an average of 80 or GPA 3.0.", "source": "https://osao.bfsu.edu.cn/info/2472/6842.htm"},
+    {"kind": "recommendation", "level": "master", "requirement": "required", "note": "Two letters in Chinese or English from referees who are associate professors or above in a relevant field. Some host universities list them as optional, so check yours."},
+    {"kind": "recommendation", "level": "doctorate", "requirement": "required", "note": "Two letters in Chinese or English from referees who are associate professors or above in a relevant field. Some host universities list them as optional, so check yours."},
+    {"kind": "chinese_language", "level": null, "requirement": "optional", "note": "Only if your programme is taught in Chinese: HSK Level 4 or higher (bachelor, master and doctorate)."},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Only if your programme is taught in English and English is not your native language. Category A example: TOEFL 85 or IELTS 6.5, or equivalent."},
+    {"kind": "csca", "level": "bachelor", "requirement": "required", "note": "CSCA score report (China Scholastic Competency Assessment) for undergraduate applicants.", "source": "https://osao.bfsu.edu.cn/info/2472/6842.htm"},
+    {"kind": "pre_admission_letter", "level": "diploma", "requirement": "required", "note": "For the undergraduate preparatory programme: a pre-admission letter from the admitting institution.", "source": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Signed Beijing Government Scholarship application form from your host university. If you do not meet the academic score rule, you may add other proof of your academic or research ability."}
+  ]
+}

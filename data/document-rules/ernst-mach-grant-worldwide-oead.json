@@ -1,0 +1,21 @@
+{
+  "slug": "ernst-mach-grant-worldwide-oead",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant/faq-ernst-mach-grant-worldwide",
+    "https://oead.at/fileadmin/Dokumente/oead.at/IHK/MPC/SRL_INCOMING_fuer_24-29_--_2024-05-21_genehmigt.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Valid biometric passport. An ID card is only accepted for applicants from the EU."},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "required", "note": "Confirmation of supervision from an Austrian academic supervisor, on the OeAD template with date, signature and stamp, not older than six months. It must also confirm the project can be done in English."},
+    {"kind": "recommendation", "level": null, "requirement": "optional", "note": "Letters of recommendation can be uploaded. Free wording, but with letterhead, date, signature and stamp, not older than six months. Your Austrian supervisor cannot write one."},
+    {"kind": "other", "level": "doctorate", "requirement": "required", "note": "Written proof that you are doing your PhD at your home university."},
+    {"kind": "employment_letter", "level": "postdoctoral", "requirement": "optional", "note": "Written proof of your employment at your home university, if you work there as a lecturer or researcher."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Copies of your diplomas, if applicable. Documents not in English or German need the original plus a rough English or German translation (no certified translation needed)."},
+    {"kind": "research_proposal", "level": null, "requirement": "not_needed", "note": "No upload needed. You describe your planned research in the online application form, so keep to the minimum word counts."},
+    {"kind": "english_language", "level": null, "requirement": "not_needed", "note": "No language test certificate is needed, but your English should be good enough for your field."},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ],
+  "new_kinds": []
+}

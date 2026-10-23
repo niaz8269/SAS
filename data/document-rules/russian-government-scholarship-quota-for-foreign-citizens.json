@@ -1,0 +1,18 @@
+{
+  "slug": "russian-government-scholarship-quota-for-foreign-citizens",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://education-in-russia.com/news/kak-podat-zayavku-na-kvotu-pravitelstva-rossii-na-obuchenie-v-2026-27-uchebnom-godu",
+    "https://bangladesh.rs.gov.ru/en/announcement/russian-government-scholarship-quota/",
+    "https://education-in-russia.com/settings/static/media/Instruction(en).pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Scan of your passport, the one you plan to use to enter Russia. After a successful interview you also upload a certified translation of it.", "source": "https://bangladesh.rs.gov.ru/en/announcement/russian-government-scholarship-quota/"},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "A photograph, uploaded to your Education in Russia profile. Files must be JPEG, PNG or PDF, up to 10 MB.", "source": "https://bangladesh.rs.gov.ru/en/announcement/russian-government-scholarship-quota/"},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Scan of your document of education (school certificate or diploma). If you are still studying, upload a certificate from your place of study instead. A certified translation is needed after the interview.", "source": "https://education-in-russia.com/news/kak-podat-zayavku-na-kvotu-pravitelstva-rossii-na-obuchenie-v-2026-27-uchebnom-godu"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Scan of your grades (transcript or diploma supplement). A certified translation is needed after the interview.", "source": "https://education-in-russia.com/news/kak-podat-zayavku-na-kvotu-pravitelstva-rossii-na-obuchenie-v-2026-27-uchebnom-godu"},
+    {"kind": "statement", "level": "doctorate", "requirement": "required", "note": "Postgraduate (and residency) applicants also upload a motivation letter, abstract or article on the research you plan to do.", "source": "https://education-in-russia.com/news/kak-podat-zayavku-na-kvotu-pravitelstva-rossii-na-obuchenie-v-2026-27-uchebnom-godu"},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "Medical certificates for HIV, hepatitis B/C and tuberculosis, with a certified translation. You upload these only after a successful interview, when you are recommended for the final stage.", "source": "https://bangladesh.rs.gov.ru/en/announcement/russian-government-scholarship-quota/"},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Files confirming achievements in student competitions or sport, if you have them. They can give you a competitive advantage.", "source": "https://education-in-russia.com/settings/static/media/Instruction(en).pdf"}
+  ]
+}

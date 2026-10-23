@@ -1,0 +1,18 @@
+{
+  "slug": "turkiye-burslari-turkiye-scholarships",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://turkiyeburslari.gov.tr/applysteps",
+    "https://turkiyeburslari.gov.tr/scholarshipsprograms"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "A valid identity document: ID card or passport."},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "A photograph of you taken within the last year."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Diploma or temporary graduation certificate of your latest completed level (high school for bachelor, bachelor for master, master for doctorate)."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Transcript of your latest completed level."},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "National exam results, if any. International exam results (GRE, GMAT, SAT and similar) only if your chosen university or programme requires them."},
+    {"kind": "language_certificate", "level": null, "requirement": "optional", "note": "International language test results (for example TOEFL, DELF) only if your chosen university or programme requires them."},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "A proposal for your research topic. Doctoral applications only.", "source": "https://turkiyeburslari.gov.tr/applysteps"},
+    {"kind": "writing_sample", "level": "doctorate", "requirement": "required", "note": "A written example of research you have carried out. Doctoral applications only.", "source": "https://turkiyeburslari.gov.tr/applysteps"}
+  ]
+}

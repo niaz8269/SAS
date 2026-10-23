@@ -1,0 +1,19 @@
+{
+  "slug": "kaust-fellowship-for-ms-and-phd-students",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://admissions.kaust.edu.sa/how-to-apply/entry-requirements",
+    "https://admissions.kaust.edu.sa/info-and-contact/faqs"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "A clear copy of the passport page showing your picture and personal details."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Official transcript from every institution attended. If not in English, upload the original and a certified English translation. A partial or unofficial record is accepted at application if you are still studying."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Include your name as in your passport, date of birth, contact details, education, work experience, research and publications, and other skills."},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Statement of purpose of about 750 words: past work, preparation for your field, academic plans, career goals and why you chose the programme."},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Three referees. You enter their details and they submit the letters directly; personal email addresses are not accepted. Academic referees are normally expected."},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Official IELTS, TOEFL iBT, PTE Academic or Cambridge C1/C2 score if available. Some degrees are exempt. You must meet the minimum before enrolment."},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "GRE or PGAT scores are not required but a strong score may help; valid for 5 years."}
+  ]
+}

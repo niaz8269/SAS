@@ -1,0 +1,25 @@
+{
+  "slug": "czech-government-scholarships-for-developing-countries-foreign-development-cooperation-programme",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf",
+    "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Photocopy of your passport, if you have one."},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "A current photograph is attached to the printed, personally signed application form."},
+    {"kind": "degree_certificate", "level": "master", "requirement": "required", "note": "Legalised copy of your bachelor's diploma with its Diploma Supplement, apostilled or super-legalised, with a certified translation into Czech (English translation if Czech is not possible in your country)."},
+    {"kind": "degree_certificate", "level": "doctorate", "requirement": "required", "note": "Legalised copy of your master's diploma with its Diploma Supplement, apostilled or super-legalised, with a certified translation into Czech (English translation if Czech is not possible in your country)."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "List of completed subjects and examinations with scope and grades, with a certified translation. Needed if your degree is not yet complete; otherwise your diploma comes with its Diploma Supplement."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "CV focused on your studies and employment."},
+    {"kind": "statement", "level": "master", "requirement": "required", "note": "Motivation letter of one A4 page, stressing how you will apply what you learn and how your home country will benefit after you graduate."},
+    {"kind": "statement", "level": "doctorate", "requirement": "required", "note": "Motivation letter of two A4 pages describing the issues you want to focus on in your doctoral studies and how your home country will benefit after you graduate."},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "Your ideas about the focus of the dissertation, 3 to 5 pages."},
+    {"kind": "publications", "level": "doctorate", "requirement": "required", "note": "Overview of your publication activity. Other documents showing your qualifications and scientific activity can be added if applicable."},
+    {"kind": "recommendation", "level": "doctorate", "requirement": "required", "note": "Two letters of recommendation from professors teaching at an academic institution."},
+    {"kind": "birth_certificate", "level": null, "requirement": "required", "note": "Legalised copy of your birth certificate with a certified translation into Czech."},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "Medical confirmation of your health, not more than two months old, on the official form (Annex 4), with a certified translation into English or Czech unless issued in one of them."},
+    {"kind": "other", "level": null, "requirement": "required", "note": "Three declarations signed by your own hand: acceptance of the scholarship terms (Annex 1), acceptance of the health services terms (Annex 2), and affirmation of return to your home country after studies (Annex 3)."}
+  ],
+  "new_kinds": []
+}

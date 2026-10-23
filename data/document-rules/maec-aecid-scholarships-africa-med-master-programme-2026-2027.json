@@ -1,0 +1,20 @@
+{
+  "slug": "maec-aecid-scholarships-africa-med-master-programme-2026-2027",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.aecid.gob.es/activos",
+    "https://www.boe.es/boe/dias/2026/07/01/pdfs/BOE-B-2026-22411.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Copy of your valid national passport, as a PDF. Documents must be in force and in Spanish, or come with a translation (it need not be official)."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Curriculum vitae of one page at most, as a PDF. Supporting documents can be asked for later."},
+    {"kind": "employment_letter", "level": null, "requirement": "required", "note": "Proof of your employment or dependence on a public body. Your contract cannot be temporary: you must be a permanent civil servant or public employee."},
+    {"kind": "other", "level": null, "requirement": "required", "note": "Written authorisation from your hierarchical superior allowing you to study a master's in Spain in 2026-2027."},
+    {"kind": "pre_admission_letter", "level": null, "requirement": "required", "note": "Proof of your admission to the master's programme in Spain for 2026-2027 that you are applying for the grant to study."},
+    {"kind": "language_certificate", "level": null, "requirement": "required", "note": "Document proving your knowledge of Spanish. Not needed for citizens of Equatorial Guinea."},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Only if your master's is taught in a language other than Spanish: proof of your knowledge of that language."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ]
+}

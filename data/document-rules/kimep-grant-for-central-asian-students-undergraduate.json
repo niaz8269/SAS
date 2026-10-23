@@ -1,0 +1,19 @@
+{
+  "slug": "kimep-grant-for-central-asian-students-undergraduate",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/",
+    "https://www.kimep.kz/prospective-students/files/2026/04/HowToApplyENGUgradINL.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Electronic copy of your ID or passport, uploaded with the grant registration form."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Copy of your school certificate. Upload it with its supplement. Documents in other languages need a notarised translation into Kazakh, Russian or English."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "The supplement (marks) that comes with your school certificate. Every mark on all pages counts, and the grant asks for a score of 4.50 out of 5 (90%)."},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Valid IELTS Academic, TOEFL iBT, Duolingo, CEFR, Cambridge FCE, LanguageCert or PTE Academic copy, if you have one. The grant asks for about IELTS 5.5 (B2)."},
+    {"kind": "other", "level": null, "requirement": "optional", "note": "Certificates for prizes in national or international olympiads and competitions from the last three years (school grades 9 to 11), if you have them."},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Digital photo in the Photo field of the KIMEP application: JPEG, 300 ppi, at least 8 MP, high quality.", "source": "https://www.kimep.kz/prospective-students/files/2026/04/HowToApplyENGUgradINL.pdf"},
+    {"kind": "financial_proof", "level": null, "requirement": "required", "note": "For KIMEP admission: bank statement showing at least USD 3,000 for one semester of tuition, or the letter awarding you a scholarship.", "source": "https://www.kimep.kz/prospective-students/files/2026/04/HowToApplyENGUgradINL.pdf"},
+    {"kind": "police_clearance", "level": null, "requirement": "required", "note": "For KIMEP admission: criminal record certificate, as required by Kazakhstan's migration law.", "source": "https://www.kimep.kz/prospective-students/files/2026/04/HowToApplyENGUgradINL.pdf"},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "For KIMEP admission: vaccination records and medical examination form 075 with chest X-ray, handed to the KIMEP Medical Center on arrival in Almaty.", "source": "https://www.kimep.kz/prospective-students/files/2026/04/HowToApplyENGUgradINL.pdf"}
+  ]
+}

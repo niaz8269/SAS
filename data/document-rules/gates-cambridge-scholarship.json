@@ -1,0 +1,24 @@
+{
+  "slug": "gates-cambridge-scholarship",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.gatescambridge.org/apply/how-to-apply/",
+    "https://www.gatescambridge.org/apply/frequently-asked-questions/",
+    "https://www.postgraduate.study.cam.ac.uk/apply/how/supporting-documents"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Cambridge asks for transcripts and certificates for each degree you have taken. PDF under 2MB, not encrypted; non-English documents need a registered translator's full translation.", "source": "https://www.postgraduate.study.cam.ac.uk/apply/how/supporting-documents"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Official transcripts for each degree. If still studying, an interim or unofficial transcript is fine; you will need the final one if you get an offer. PDF under 2MB.", "source": "https://www.postgraduate.study.cam.ac.uk/apply/how/supporting-documents"},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "A CV uploaded through the Cambridge Applicant Portal.", "source": "https://www.postgraduate.study.cam.ac.uk/apply/how/supporting-documents"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Two academic references for Cambridge admission plus one separate Gates Cambridge reference that ranks you against the scholarship criteria. Referees submit online by the deadline.", "source": "https://www.gatescambridge.org/apply/how-to-apply/"},
+    {"kind": "statement", "level": null, "requirement": "optional", "note": "Cambridge lists a personal statement as a standard document; check your course page. The four Gates selection questions (200-300 words each) are answered in the online form.", "source": "https://www.postgraduate.study.cam.ac.uk/apply/how/supporting-documents"},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "PhD applicants only. Usually uploaded with your Cambridge documents; if not, you must submit it for the Gates Cambridge application. Use a separate tailored proposal for each course.", "source": "https://www.gatescambridge.org/apply/how-to-apply/"},
+    {"kind": "research_proposal", "level": "master", "requirement": "optional", "note": "Gates Cambridge does not require a research proposal for non-PhD degrees. Your course page may ask for one.", "source": "https://www.gatescambridge.org/apply/how-to-apply/"},
+    {"kind": "english_language", "level": null, "requirement": "optional", "note": "Only if English is not your first language. For most courses it is needed only once you hold an offer. Gates Cambridge itself sets no English test requirement.", "source": "https://www.gatescambridge.org/apply/frequently-asked-questions/"},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "GRE only if your course page asks for it; GMAT is not accepted.", "source": "https://www.postgraduate.study.cam.ac.uk/apply/how/supporting-documents"},
+    {"kind": "writing_sample", "level": null, "requirement": "optional", "note": "Written work only if your course asks for it.", "source": "https://www.postgraduate.study.cam.ac.uk/apply/how/supporting-documents"}
+  ],
+  "new_kinds": []
+}

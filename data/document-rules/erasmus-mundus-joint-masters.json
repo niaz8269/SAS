@@ -1,0 +1,15 @@
+{
+  "slug": "erasmus-mundus-joint-masters",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters",
+    "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/erasmus-mundus"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. You apply to each Joint Master's consortium, so check that programme's own page; it may add items."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. You apply to each Joint Master's consortium, so check that programme's own page; it may add items."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. You need a bachelor's degree or recognised equivalent, or be in your final year; the programme's own page says what proof it asks for.", "source": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters"},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements. You apply to each Joint Master's consortium, so check that programme's own page; it may add items."}
+  ],
+  "new_kinds": []
+}

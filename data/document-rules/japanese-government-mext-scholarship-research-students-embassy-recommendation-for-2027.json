@@ -1,0 +1,22 @@
+{
+  "slug": "japanese-government-mext-scholarship-research-students-embassy-recommendation-for-2027",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html",
+    "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Photo attached to the application form: 4.5 x 3.5 cm, taken within 6 months, upper body, full face, no hat. Write your name and nationality on the back.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Certificate of graduation or degree certificate (graduate-school degree: both undergraduate and graduate). Not yet graduated: certificate of prospective graduation. A copy attested by the university is accepted.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Transcript for all years of university attended (graduate degree: undergraduate and graduate), showing the grade scale and grades. A degree certificate does not replace it. Japanese or English, or add a translation.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"},
+    {"kind": "research_proposal", "level": null, "requirement": "required", "note": "The 2027 \"Field of Study and Research Plan\" form: your past and present field of study and your research theme and plan in Japan. It is used to place you at a university.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Letter from the president, dean or academic advisor of the university you attend or last attended. Any format is accepted.", "source": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html"},
+    {"kind": "medical", "level": null, "requirement": "required", "note": "The 2027 Certificate of Health form, filled in and signed by a medical doctor.", "source": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html"},
+    {"kind": "publications", "level": null, "requirement": "optional", "note": "Abstracts of your theses (graduation thesis and presented papers are fine), if you have written any. Put your name on the first page.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"},
+    {"kind": "language_certificate", "level": null, "requirement": "optional", "note": "Only if you have a Japanese or English certificate showing your name and level or score, issued within the last 2 years. Submit copies.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"},
+    {"kind": "employment_letter", "level": null, "requirement": "optional", "note": "Only if you are currently employed: recommendation letter from your present employer. Any format is accepted.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"},
+    {"kind": "portfolio", "level": null, "requirement": "optional", "note": "Only if you will major in fine arts or music: photographs of your own works or a recording of a musical performance.", "source": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"},
+    {"kind": "other", "level": null, "requirement": "required", "note": "The 2027 Placement Preference Application Form (university placement preferences), submitted with the other forms to the Japanese embassy or consulate in your country.", "source": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html"}
+  ]
+}

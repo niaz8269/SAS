@@ -52,6 +52,7 @@ class RulesRelationManager extends RelationManager
                 TextColumn::make('degreeLevel.name')->label('Degree level')->placeholder('Every level'),
                 DocumentRuleForm::requirementColumn(),
                 TextColumn::make('note')->wrap()->limit(80),
+                DocumentRuleForm::sourceColumn(),
             ])
             ->headerActions([CreateAction::make()->label('Add a rule')->authorize(fn () => auth()->user()->can('create', DocumentRule::class))])
             ->recordActions([EditAction::make(), DeleteAction::make()]);

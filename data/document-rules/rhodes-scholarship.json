@@ -1,0 +1,21 @@
+{
+  "slug": "rhodes-scholarship",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.rhodeshouse.ox.ac.uk/scholarships/application-overview/",
+    "https://www.rhodeshouse.ox.ac.uk/media/2eelpwyn/saudi-arabia-information-for-candidates-document-2027-final.pdf",
+    "https://www.rhodeshouse.ox.ac.uk/media/1okp0aaj/germany-information-for-candidates-document-2027-final.pdf",
+    "https://www.rhodeshouse.ox.ac.uk/media/2utdknf2/hong-kong-information-for-candidates-document-2027-final.pdf"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Evidence that you meet the citizenship criteria (usually a copy of your valid passport). Exact proof differs by constituency; check your 'Information for Candidates' document. English translation if needed.", "source": "https://www.rhodeshouse.ox.ac.uk/media/2eelpwyn/saudi-arabia-information-for-candidates-document-2027-final.pdf"},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "Head-and-shoulders colour photograph (jpg). The selection committee does not see it until after final shortlisting.", "source": "https://www.rhodeshouse.ox.ac.uk/media/2eelpwyn/saudi-arabia-information-for-candidates-document-2027-final.pdf"},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Official transcript from each college or university attended, showing grades to date. If not in English, upload the original and a certified English translation.", "source": "https://www.rhodeshouse.ox.ac.uk/media/2eelpwyn/saudi-arabia-information-for-candidates-document-2027-final.pdf"},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Complete the Rhodes CV template PDF (not more than 2 pages; extra pages are not read).", "source": "https://www.rhodeshouse.ox.ac.uk/media/2eelpwyn/saudi-arabia-information-for-candidates-document-2027-final.pdf"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Personal statement of no more than 1,000 words, in your own voice, in English.", "source": "https://www.rhodeshouse.ox.ac.uk/media/2eelpwyn/saudi-arabia-information-for-candidates-document-2027-final.pdf"},
+    {"kind": "study_plan", "level": null, "requirement": "required", "note": "Academic statement of study, maximum 450 words, explaining why Oxford and your chosen course are your next academic step.", "source": "https://www.rhodeshouse.ox.ac.uk/media/2eelpwyn/saudi-arabia-information-for-candidates-document-2027-final.pdf"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Several referees, with at least three academic and one character referee; the total number differs by constituency (for example 4 to 5). Letters on headed paper, signed, submitted online by the deadline.", "source": "https://www.rhodeshouse.ox.ac.uk/media/2eelpwyn/saudi-arabia-information-for-candidates-document-2027-final.pdf"}
+  ],
+  "new_kinds": []
+}

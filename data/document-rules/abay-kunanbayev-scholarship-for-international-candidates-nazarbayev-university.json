@@ -1,0 +1,20 @@
+{
+  "slug": "abay-kunanbayev-scholarship-for-international-candidates-nazarbayev-university",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://nu.edu.kz/admissions/international-admission/international-admission_general/",
+    "https://nu.edu.kz/admissions/how-to-apply/masters/financial-aid-end-scholarships-masters/",
+    "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/financial-aid-scholarships-phd/"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Scanned copy of your passport. There is no separate scholarship application: you apply to your programme and the committee recommends top candidates for the scholarship. Each school has its own checklist, so check yours.", "source": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/financial-aid-scholarships-phd/"},
+    {"kind": "photo", "level": null, "requirement": "required", "note": "A 3x4 photo uploaded to the Profile section of your admissions account.", "source": "https://nu.edu.kz/admissions/how-to-apply/masters/financial-aid-end-scholarships-masters/"},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Degree diplomas (bachelor's, and master's for PhD) or equivalents. Documents must be in English or have a notarised English translation. Final-year students can upload a current transcript.", "source": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/financial-aid-scholarships-phd/"},
+    {"kind": "transcript", "level": null, "requirement": "required", "note": "Official academic transcripts of your degrees, in English or with a notarised English translation.", "source": "https://nu.edu.kz/admissions/international-admission/international-admission_general/"},
+    {"kind": "recommendation", "level": null, "requirement": "required", "note": "Letters of recommendation are sent by your referees through an online form after you submit. For PhD programmes, two confidential letters (at least one academic) from the last 12 months. Check your school's number.", "source": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/financial-aid-scholarships-phd/"},
+    {"kind": "english_language", "level": null, "requirement": "required", "note": "IELTS or TOEFL iBT sent to NU by the test centre (online or home editions not accepted) plus a scan in your account. Some schools ask for IELTS 6.5. Exempt if your degree was taught in English, with a letter from your university.", "source": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/financial-aid-scholarships-phd/"},
+    {"kind": "statement", "level": null, "requirement": "required", "note": "Statement of purpose about your studies, your interest in the programme and your career goals (500 words at the School of Computing and AI). Check your school for the length.", "source": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/financial-aid-scholarships-phd/"},
+    {"kind": "test_scores", "level": null, "requirement": "optional", "note": "GRE or GMAT certificate. Recommended by some schools and required by others, so check your programme.", "source": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/financial-aid-scholarships-phd/"},
+    {"kind": "cv", "level": null, "requirement": "optional", "note": "A CV of one page is asked by some schools (for example the School of Computing and AI for PhD). Check your programme.", "source": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/financial-aid-scholarships-phd/"}
+  ]
+}

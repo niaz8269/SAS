@@ -1,0 +1,25 @@
+{
+  "slug": "france-excellence-eiffel-scholarship-programme-2027-session",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://www.universite-paris-saclay.fr/en/admission/bourses-et-aides-financieres/france-excellence-eiffel-scholarship",
+    "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence"
+  ],
+  "rules": [
+    {"kind": "passport", "level": null, "requirement": "required", "note": "Copy of your passport (ID page) or national ID card."},
+    {"kind": "cv", "level": null, "requirement": "required", "note": "Resume of 1 to 2 pages, in French or English."},
+    {"kind": "degree_certificate", "level": null, "requirement": "required", "note": "Your higher education degrees. For master's applicants: degrees already awarded."},
+    {"kind": "transcript", "level": "master", "requirement": "required", "note": "Transcripts since your first year of higher education, plus the official ranking certificate for your last degree or completed years."},
+    {"kind": "transcript", "level": "doctorate", "requirement": "required", "note": "Transcripts for the last three years."},
+    {"kind": "statement", "level": "master", "requirement": "required", "note": "Professional project of 1 to 2 pages, in French or English."},
+    {"kind": "statement", "level": "doctorate", "requirement": "required", "note": "Motivation letter or professional project of 1 to 2 pages, in French or English."},
+    {"kind": "recommendation", "level": "master", "requirement": "optional", "note": "A recommendation letter from someone outside your university, such as an internship supervisor, may support your professional project."},
+    {"kind": "recommendation", "level": "doctorate", "requirement": "required", "note": "Scientific evaluation by a full professor or research director in your field, who must not have co-published with your expected supervisor."},
+    {"kind": "language_certificate", "level": null, "requirement": "optional", "note": "French certificate only if your programme is taught in French and French is not the language of instruction in your country or university. PhD: research-language certificate if you are preselected and it applies."},
+    {"kind": "research_proposal", "level": "doctorate", "requirement": "required", "note": "Presentation of your research project and a progress report, 1 to 5 pages."},
+    {"kind": "financial_proof", "level": "doctorate", "requirement": "required", "note": "Overall financing plan for your whole PhD (a template is available)."},
+    {"kind": "other", "level": "doctorate", "requirement": "optional", "note": "Cotutelle agreement or co-supervision certificate signed by both sides (needed for 12- or 18-month awards). Add your registration certificate for the current year if you are enrolled."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ],
+  "new_kinds": []
+}

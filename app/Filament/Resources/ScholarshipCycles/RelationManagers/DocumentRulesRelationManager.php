@@ -2,11 +2,17 @@
 
 namespace App\Filament\Resources\ScholarshipCycles\RelationManagers;
 
+use App\Domain\Documents\RulesCopier;
 use App\Filament\Support\DocumentRuleForm;
 use App\Models\DocumentRule;
+use App\Models\ScholarshipProgramme;
+use Filament\Actions\Action;
 use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
+use Filament\Notifications\Notification;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Schemas\Components\Utilities\Get;
 use Filament\Schemas\Schema;
@@ -56,8 +62,24 @@ class DocumentRulesRelationManager extends RelationManager
                 TextColumn::make('degreeLevel.name')->label('Degree level')->placeholder('Every level'),
                 DocumentRuleForm::requirementColumn(),
                 TextColumn::make('note')->wrap()->limit(80),
+                DocumentRuleForm::sourceColumn(),
+                TextColumn::make('checked_on')->label('Checked')->date('j M Y')->placeholder('Not checked')->toggleable(),
             ])
-            ->headerActions([CreateAction::make()->label('Add a rule')->authorize(fn () => auth()->user()->can('create', DocumentRule::class))])
+            ->headerActions([
+                CreateAction::make()->label('Add a rule')->authorize(fn () => auth()->user()->can('create', DocumentRule::class)),
+                Action::make('copyRules')->label('Copy rules from another scholarship')->icon('heroicon-o-document-duplicate')
+                    ->authorize(fn () => auth()->user()->can('create', DocumentRule::class))
+                    ->schema([
+                        Select::make('from')->label('Copy from')->required()->searchable()
+                            ->options(fn () => ScholarshipProgramme::whereHas('documentRules')->where('id', '!=', $this->getOwnerRecord()->programme_id)->orderBy('title')->pluck('title', 'id')->all()),
+                        Toggle::make('replace')->label('Replace the rules this scholarship already has')->helperText('Off: keep existing rules and add only the missing ones.'),
+                    ])
+                    ->modalDescription('Starts this scholarship from another one\'s rules. The copied rules are marked "Not checked": compare them with this scholarship\'s own official requirements and adjust.')
+                    ->action(function (array $data) {
+                        $added = app(RulesCopier::class)->copy(ScholarshipProgramme::findOrFail($data['from']), $this->getOwnerRecord()->programme, (bool) ($data['replace'] ?? false));
+                        Notification::make()->title($added.' '.($added === 1 ? 'rule' : 'rules').' copied')->success()->send();
+                    }),
+            ])
             ->recordActions([EditAction::make(), DeleteAction::make()]);
     }
 }

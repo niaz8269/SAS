@@ -1,0 +1,16 @@
+{
+  "slug": "icesco-uzbekistan-scholarship-programme",
+  "checked_on": "2026-10-24",
+  "sources": [
+    "https://icesco.org/en/tashkent-state-medical-university/",
+    "https://icesco.org/central-asian-university-for-environmental-and-climate-change-studies",
+    "https://icesco.org/en/international-scholarships/"
+  ],
+  "rules": [
+    {"kind": "english_language", "level": "bachelor", "requirement": "required", "note": "Proof of English: IELTS 5.0 or equivalent (Tashkent State Medical University) or IELTS 5.5, TOEFL iBT 46 or an English-medium secondary school certificate (Central Asian university, which also lets you sit its own exam)."},
+    {"kind": "passport", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "photo", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "degree_certificate", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."},
+    {"kind": "transcript", "level": null, "requirement": "optional", "note": "Not listed in the official requirements."}
+  ]
+}

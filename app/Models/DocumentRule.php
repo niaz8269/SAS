@@ -16,6 +16,11 @@ class DocumentRule extends Model
 
     protected $guarded = ['id'];
 
+    protected function casts(): array
+    {
+        return ['checked_on' => 'date'];
+    }
+
     public function kind(): BelongsTo
     {
         return $this->belongsTo(DocumentKind::class, 'kind_id');
