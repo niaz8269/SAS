@@ -39,8 +39,20 @@ class University extends Model
         return asset($this->bundledImage());
     }
 
+    /** Credits for the campus photographs under public/images/universities, keyed by university slug. */
+    public static function photoCredits(): array
+    {
+        static $credits;
+
+        return $credits ??= is_file($p = base_path('data/seed/university-photos.json')) ? (json_decode(file_get_contents($p), true) ?: []) : [];
+    }
+
     private function bundledImage(): string
     {
+        $own = 'images/universities/'.$this->slug.'.jpg';
+        if (file_exists(public_path($own))) {
+            return $own;
+        }
         $city = 'images/cities/'.Str::slug((string) $this->province).'.jpg';
 
         return file_exists(public_path($city)) ? $city : 'images/destinations/cn.jpg';
@@ -53,6 +65,10 @@ class University extends Model
             $credit = MediaFile::where('path', $this->image_path)->value('credit');
 
             return $credit ? ['name' => $credit, 'url' => null, 'subject' => $this->name] : null;
+        }
+
+        if ($c = self::photoCredits()[$this->slug] ?? null) {
+            return ['name' => $c['artist'].' ('.$c['license'].')', 'url' => $c['url'], 'subject' => $this->name, 'source' => 'Wikimedia Commons'];
         }
 
         return config('sas.image_credits')[$this->bundledImage()] ?? null;

@@ -19,7 +19,7 @@
             </div>
             <figure>
                 <img src="{{ $university->imageUrl() }}" alt="" class="aspect-video w-full rounded-xl object-cover" loading="lazy" width="960" height="540">
-                @if ($credit = $university->imageCredit())<figcaption class="mt-1 text-xs text-muted">{{ $credit['subject'] }}: photo {{ $credit['name'] }}{{ ! empty($credit['url']) ? ' on Unsplash' : '' }}. <a class="underline" href="{{ route('credits') }}">Image credits</a></figcaption>@endif
+                @if ($credit = $university->imageCredit())<figcaption class="mt-1 text-xs text-muted">{{ $credit['subject'] }}: photo {{ $credit['name'] }}{{ ! empty($credit['url']) ? ' via '.($credit['source'] ?? 'Unsplash') : '' }}. <a class="underline" href="{{ route('credits') }}">Image credits</a></figcaption>@endif
             </figure>
         </div>
 

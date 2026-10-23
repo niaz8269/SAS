@@ -88,7 +88,7 @@ class PageController extends Controller
     /** Credits for the bundled photographs and for library photos staff have credited. */
     public function credits()
     {
-        return view('public.credits', ['bundled' => config('sas.image_credits'), 'library' => MediaFile::whereNotNull('credit')->where('credit', '!=', '')->orderBy('name')->get()]);
+        return view('public.credits', ['bundled' => config('sas.image_credits'), 'universityPhotos' => University::photoCredits(), 'library' => MediaFile::whereNotNull('credit')->where('credit', '!=', '')->orderBy('name')->get()]);
     }
 
     public function cms(string $slug)
