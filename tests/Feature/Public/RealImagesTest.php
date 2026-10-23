@@ -86,13 +86,16 @@ class RealImagesTest extends TestCase
         Country::where('code', 'US')->update(['summary' => 'Our own words.']);
         $this->seed(DestinationGuidesSeeder::class);
 
-        foreach (['CN', 'DE', 'TR', 'GB', 'KR', 'JP', 'NZ', 'CH'] as $code) {
+        foreach (array_diff(array_keys(DestinationGuidesSeeder::GUIDES), ['US']) as $code) {
             $c = Country::where('code', $code)->first();
             $this->assertTrue($c->is_destination && $c->guidance_published, $code);
             $this->assertNotEmpty($c->guidance_sources, $code);
             $this->assertFileExists(public_path('images/destinations/'.strtolower($code).'.jpg'));
         }
         $this->assertSame('Our own words.', Country::where('code', 'US')->value('summary'));
+        foreach (array_keys(DestinationGuidesSeeder::GUIDES) as $code) {
+            $this->assertFileExists(public_path('images/destinations/'.strtolower($code).'.jpg'), $code);
+        }
         $this->get('/destinations')->assertOk()->assertSee('Japan')->assertSee('images/destinations/jp.jpg', false);
     }
 }
