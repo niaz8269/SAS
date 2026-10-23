@@ -84,7 +84,7 @@
     .badge-alert { @apply badge bg-alert-soft text-alert; }
 
     /* Hero: exactly one screen tall below the header (never taller than the viewport on laptops and monitors); text sizes follow both width and height. */
-    .hero { min-height: calc(100svh - 4.75rem); display: flex; align-items: center; }
+    .hero { min-height: calc(100svh - 5.5rem); display: flex; align-items: center; }
     .hero-inner { padding-block: clamp(2rem, 6vh, 6rem); }
     .hero-title { font-size: clamp(2rem, min(7.2vw, 8.4vh + 0.5rem), 4.75rem); line-height: 1.06; }
     .hero-lead { font-size: clamp(1rem, min(2.4vw, 2.6vh + 0.35rem), 1.35rem); }

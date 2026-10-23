@@ -34,10 +34,10 @@
 
 <header class="sticky top-0 z-40 border-b border-line bg-white/90 shadow-[0_1px_0_rgba(18,58,122,0.04),0_8px_24px_-16px_rgba(18,58,122,0.25)] backdrop-blur-md" x-data="{ open: false }" @keydown.escape.window="open = false">
     <div class="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-gold" aria-hidden="true"></div>
-    <div class="container-page flex h-[4.5rem] items-center justify-between gap-4">
-        <a href="{{ route('home') }}" class="shrink-0" aria-label="{{ config('sas.brand.name') }} – home"><x-brand /></a>
+    <div class="flex h-[5.25rem] w-full items-center justify-between gap-4 pl-1.5 pr-4 sm:pr-6 lg:pr-8">
+        <a href="{{ route('home') }}" class="shrink-0" aria-label="{{ config('sas.brand.name') }} – home"><x-brand class="[&_img]:!h-14 sm:[&_img]:!h-[4.25rem] [&_img]:!max-w-none" /></a>
 
-        <nav aria-label="Primary" class="hidden min-w-0 flex-1 justify-center xl:flex">
+        <nav aria-label="Primary" class="hidden min-w-0 flex-1 justify-center min-[1330px]:flex">
             <ul class="flex items-center gap-0.5 whitespace-nowrap text-sm font-medium">
                 @foreach ($nav as $item)
                     <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif
@@ -47,7 +47,7 @@
             </ul>
         </nav>
 
-        <div class="hidden shrink-0 items-center gap-2 whitespace-nowrap xl:ml-3 xl:flex">
+        <div class="hidden shrink-0 items-center gap-2 whitespace-nowrap min-[1330px]:ml-3 min-[1330px]:flex">
             @auth
                 <a href="{{ auth()->user()->isStaff() ? url('/admin') : route('student.dashboard') }}" class="rounded-lg px-2.5 py-2 text-sm font-medium text-ink transition hover:bg-navy-50">{{ auth()->user()->isStaff() ? 'Staff admin' : 'Student dashboard' }}</a>
             @else
@@ -57,13 +57,13 @@
             <a href="{{ route('consultations.create') }}" class="btn-primary rounded-lg px-3.5 py-2.5 shadow-sm shadow-navy-900/20">Book a Consultation <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-white transition hover:bg-navy-50 xl:hidden" @click="open = !open"
+        <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-white transition hover:bg-navy-50 min-[1330px]:hidden" @click="open = !open"
                 :aria-expanded="open.toString()" aria-controls="mobile-nav" aria-label="Menu">
             <svg x-show="!open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
             <svg x-show="open" x-cloak class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
         </button>
     </div>
-    <div id="mobile-nav" x-show="open" x-cloak x-transition.opacity class="border-t border-line bg-white xl:hidden" x-trap.noscroll="open">
+    <div id="mobile-nav" x-show="open" x-cloak x-transition.opacity class="border-t border-line bg-white min-[1330px]:hidden" x-trap.noscroll="open">
         <nav aria-label="Mobile" class="container-page py-4">
             <ul class="space-y-1 text-base font-medium">
                 @foreach ($nav as $item)
