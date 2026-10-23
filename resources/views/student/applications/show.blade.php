@@ -26,6 +26,20 @@
         </div>
     @endif
 
+    <section id="language" class="card mt-5 p-5" aria-labelledby="lang-h">
+        <h2 id="lang-h" class="font-bold">Language you want to study in</h2>
+        @if (count($languageOptions) > 1)
+            <form method="POST" action="{{ route('student.applications.language.update', $plan) }}" class="mt-2 flex flex-wrap items-end gap-2">
+                @csrf @method('PUT')
+                <div><label for="study-language" class="label">Choose English, or the official language of {{ $cycle->destinations->pluck('name')->implode(', ') ?: ($cycle->programme->hostCountry?->name ?? 'the country') }}</label>
+                    <select id="study-language" name="study_language" class="input"><option value="">Not chosen yet</option>@foreach ($languageOptions as $l)<option value="{{ $l }}" @selected($plan->study_language === $l)>{{ $l }}</option>@endforeach</select></div>
+                <button class="btn-outline">Save</button>
+            </form>
+        @else
+            <p class="mt-1 text-sm">English. No other official language is listed for this scholarship's country.</p>
+        @endif
+    </section>
+
     @include('student._document-checklist', ['rows' => $rows, 'docProgress' => $docProgress, 'levels' => $levels, 'levelId' => $levelId, 'levelAction' => route('student.applications.level.update', $plan)])
 
     <section class="card mt-5 p-5" aria-labelledby="ready-h">

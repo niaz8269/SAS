@@ -94,7 +94,7 @@ class ApplyFlowTest extends TestCase
         $plan = app(PlanService::class)->create($student, $cycle);
 
         $this->actingAs($student)->get(route('student.applications.show', $plan))->assertOk()
-            ->assertSeeInOrder(['Pre-admission letter', 'Other documents you can add', 'Passport (home page)', 'CSCA score report']);
+            ->assertSeeInOrder(['Pre-admission letter', 'Other documents you can add', 'Passport', 'CSCA score report']);
     }
 
     public function test_each_scholarship_shows_its_own_list_and_the_degree_level_changes_it(): void
@@ -136,10 +136,10 @@ class ApplyFlowTest extends TestCase
 
         $this->upload($student, 'passport');
         $progress = fn ($plan) => app(Requirements::class)->progress(app(Requirements::class)->forScholarship($plan->cycle, null, $student->id));
-        $this->assertNotContains('Passport (home page)', $progress($planA)['missing']);
-        $this->assertNotContains('Passport (home page)', $progress($planB)['missing']);
-        $this->assertContains('CV', $progress($planB)['missing'], 'a document only Award B asks for is still missing there');
-        $this->assertNotContains('CV', $progress($planA)['missing']);
+        $this->assertNotContains('Passport', $progress($planA)['missing']);
+        $this->assertNotContains('Passport', $progress($planB)['missing']);
+        $this->assertContains('CV (resume)', $progress($planB)['missing'], 'a document only Award B asks for is still missing there');
+        $this->assertNotContains('CV (resume)', $progress($planA)['missing']);
     }
 
     public function test_the_checklist_upload_works_from_a_plan_page_and_the_dashboard_tracks_progress(): void
@@ -191,7 +191,7 @@ class ApplyFlowTest extends TestCase
         $student = User::factory()->create();
         $plan = app(PlanService::class)->create($student, $a);
 
-        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertSee('Available after you upload: Passport (home page)');
+        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertSee('Available after you upload: Passport');
         $this->post(route('student.applications.review', $plan))->assertSessionHas('error');
         $this->assertNull($plan->refresh()->review_requested_at);
         $this->assertSame(0, Enquiry::count());

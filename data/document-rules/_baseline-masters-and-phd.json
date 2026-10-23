@@ -1,0 +1,32 @@
+{
+  "baseline": true,
+  "checked_on": "2026-10-24",
+  "sources": [],
+  "rules": [
+    {"kind": "passport", "level": "master", "requirement": "required", "note": "Valid for more than 1.5 years, with two blank visa pages."},
+    {"kind": "photo", "level": "master", "requirement": "required", "note": "Passport-size, clear, white background."},
+    {"kind": "degree_certificate", "level": "master", "requirement": "required", "note": "Notarised copies of your bachelor's and master's degrees."},
+    {"kind": "transcript", "level": "master", "requirement": "required", "note": "Notarised final transcripts or marks sheets of your bachelor's and master's."},
+    {"kind": "english_language", "level": "master", "requirement": "required", "note": "An English proficiency letter."},
+    {"kind": "recommendation", "level": "master", "requirement": "required", "note": "Two recommendation letters."},
+    {"kind": "study_plan", "level": "master", "requirement": "required", "note": "Study plan or personal statement, 800 to 1,000 words."},
+    {"kind": "medical", "level": "master", "requirement": "required", "note": "The physical examination form."},
+    {"kind": "cv", "level": "master", "requirement": "required", "note": "Your resume."},
+    {"kind": "employment_letter", "level": "master", "requirement": "optional", "note": "Any experience letter, if you have one."},
+    {"kind": "police_clearance", "level": "master", "requirement": "required", "note": "A police no criminal record certificate."},
+    {"kind": "publications", "level": "master", "requirement": "optional", "note": "Your thesis, research articles or research papers, if you have any."},
+
+    {"kind": "passport", "level": "doctorate", "requirement": "required", "note": "Valid for more than 1.5 years, with two blank visa pages."},
+    {"kind": "photo", "level": "doctorate", "requirement": "required", "note": "Passport-size, clear, white background."},
+    {"kind": "degree_certificate", "level": "doctorate", "requirement": "required", "note": "Notarised copies of your bachelor's and master's degrees."},
+    {"kind": "transcript", "level": "doctorate", "requirement": "required", "note": "Notarised final transcripts or marks sheets of your bachelor's and master's."},
+    {"kind": "english_language", "level": "doctorate", "requirement": "required", "note": "An English proficiency letter."},
+    {"kind": "recommendation", "level": "doctorate", "requirement": "required", "note": "Two recommendation letters."},
+    {"kind": "study_plan", "level": "doctorate", "requirement": "required", "note": "Study plan or personal statement, 1,000 to 1,500 words."},
+    {"kind": "medical", "level": "doctorate", "requirement": "required", "note": "The physical examination form."},
+    {"kind": "cv", "level": "doctorate", "requirement": "required", "note": "Your resume."},
+    {"kind": "employment_letter", "level": "doctorate", "requirement": "optional", "note": "Any experience letter, if you have one."},
+    {"kind": "police_clearance", "level": "doctorate", "requirement": "required", "note": "A police no criminal record certificate."},
+    {"kind": "publications", "level": "doctorate", "requirement": "optional", "note": "Your thesis, research articles or research papers, if you have any."}
+  ]
+}

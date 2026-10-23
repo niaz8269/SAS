@@ -21,8 +21,15 @@ class Country extends Model
             'featured' => 'boolean',
             'cost_notes' => 'array',
             'guidance_sources' => 'array',
+            'official_languages' => 'array',
             'guidance_reviewed_at' => 'date',
         ];
+    }
+
+    /** @return list<string> the country's official language(s): staff-set, else config/languages.php, else none known */
+    public function officialLanguages(): array
+    {
+        return array_values($this->official_languages ?: config('languages.official.'.strtoupper((string) $this->code), []));
     }
 
     public function scopeDestinations(Builder $q): Builder

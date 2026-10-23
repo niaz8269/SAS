@@ -34,9 +34,11 @@ class Requirements
 
         return DocumentKind::where('active', true)->with('rules')->orderBy('sort')->orderBy('name')->get()
             ->map(function (DocumentKind $kind) use ($programmeId, $levelId, $documents) {
-                $rule = $kind->rules
+                $candidates = $kind->rules
                     ->filter(fn ($r) => ($r->programme_id === null || $r->programme_id === $programmeId) && ($r->degree_level_id === null || $r->degree_level_id === $levelId))
-                    ->sortByDesc(fn ($r) => [$r->specificity(), $r->id])->first();
+                    ->sortByDesc(fn ($r) => [$r->specificity(), $r->id]);
+                // A rule saying "not listed in the official requirements" only fills a gap: SAS's own rule for the degree level still applies.
+                $rule = $candidates->first(fn ($r) => ! $r->isNotListed()) ?? $candidates->first();
                 $mine = $documents->get($kind->key, collect());
 
                 return [

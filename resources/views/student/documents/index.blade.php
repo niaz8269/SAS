@@ -6,7 +6,7 @@
         @csrf
         <h2 class="text-lg font-bold">Upload a document</h2>
         <div class="grid gap-3 sm:grid-cols-2">
-            <div><label for="file" class="label">File (PDF, DOCX, JPEG or PNG, up to {{ config('sas.uploads.max_kb') / 1024 }} MB)</label><input id="file" type="file" name="file" required accept=".pdf,.docx,.jpg,.jpeg,.png" class="input @error('file') input-error @enderror">@error('file')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
+            <div><label for="file" class="label">Files (PDF, DOCX, JPEG or PNG, you can choose several, up to {{ config('sas.uploads.max_kb') / 1024 }} MB)</label><input id="file" type="file" name="files[]" multiple required accept=".pdf,.docx,.jpg,.jpeg,.png" class="input @error('file') input-error @enderror @error('files') input-error @enderror">@error('file')<p class="field-error" role="alert">{{ $message }}</p>@enderror @error('files')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
             <div><label for="type" class="label">Type</label><select id="type" name="type" class="input">@foreach (\App\Models\DocumentKind::options() as $k => $l)<option value="{{ $k }}" @selected(old('type') === $k)>{{ $l }}</option>@endforeach</select></div>
         </div>
         <div><label for="title" class="label">Title (optional)</label><input id="title" name="title" value="{{ old('title') }}" class="input"></div>

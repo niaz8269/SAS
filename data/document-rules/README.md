@@ -39,6 +39,16 @@ Rules edited by hand in the admin are overwritten if the same document, scholars
 * `rules[].source`: optional, a more specific official page; defaults to the first of `sources`.
 * Never guess. If the official pages do not say, do not add a rule for that document; the default applies.
 
+## The SAS baseline for Master's and PhD
+
+`_baseline-masters-and-phd.json` (`"baseline": true`, no slug, no sources) is SAS's own list for every Master's and PhD application:
+passport (valid more than 1.5 years, two blank visa pages), white-background photo, notarised degrees and transcripts, English
+proficiency letter, two recommendation letters, study plan or personal statement (800 to 1,000 words for a master's, 1,000 to 1,500
+for a PhD), physical examination form, CV, police no criminal record certificate, and optionally an experience letter and
+thesis or research papers. A scholarship's own rule beats the baseline, except a rule that only says "Not listed in the official
+requirements", which fills a gap and so leaves the baseline in force. Some universities and embassies ask for more: add those
+as rules on the scholarship.
+
 ## Document type keys
 
 photo, passport, degree_certificate, transcript, study_plan, research_proposal, recommendation, medical, chinese_language,

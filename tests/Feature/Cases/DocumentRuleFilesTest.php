@@ -23,9 +23,10 @@ class DocumentRuleFilesTest extends TestCase
             $name = basename($file);
             $d = json_decode(preg_replace('/^\xEF\xBB\xBF/', '', file_get_contents($file)), true);
             $this->assertIsArray($d, "$name is not valid JSON");
-            $this->assertSame(basename($file, '.json'), $d['slug'] ?? null, "$name: the file name must be the scholarship slug");
+            $baseline = ($d['baseline'] ?? false) === true; // SAS's own rules for a degree level: no slug, no funder source
+            $baseline || $this->assertSame(basename($file, '.json'), $d['slug'] ?? null, "$name: the file name must be the scholarship slug");
             $this->assertMatchesRegularExpression('/^\d{4}-\d{2}-\d{2}$/', $d['checked_on'] ?? '', "$name: checked_on");
-            $this->assertNotEmpty($d['sources'] ?? [], "$name: no sources");
+            $baseline || $this->assertNotEmpty($d['sources'] ?? [], "$name: no sources");
             foreach ($d['sources'] as $url) {
                 $this->assertStringStartsWith('https://', $url, "$name: source");
             }
@@ -44,9 +45,10 @@ class DocumentRuleFilesTest extends TestCase
                 $this->assertNotContains($key, $seen, "$name: duplicate rule $key");
                 $seen[] = $key;
             }
-            foreach (['passport', 'photo', 'degree_certificate', 'transcript'] as $basic) {
+            foreach ($baseline ? [] : ['passport', 'photo', 'degree_certificate', 'transcript'] as $basic) {
                 $this->assertContains($basic, array_column($d['rules'], 'kind'), "$name: no explicit $basic rule (the default would be mandatory)");
             }
+            $baseline && $this->assertNotContains(null, array_column($d['rules'], 'level'), "$name: a baseline rule needs a degree level");
         }
     }
 }

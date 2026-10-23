@@ -43,7 +43,7 @@ class ApplicationReview
             $enquiry = new Enquiry([
                 'category' => 'advisory', 'name' => $student->name, 'email' => $student->email, 'phone' => $student->phone, 'contact_preference' => 'email',
                 'cycle_id' => $plan->cycle_id,
-                'message' => 'Please review my application for '.$plan->cycle->displayName().' (degree: '.$level.'). All '.$progress['required'].' mandatory documents are uploaded and my application form is '.$percent.'% complete. Sent from my SAS workspace.',
+                'message' => 'Please review my application for '.$plan->cycle->displayName().' (degree: '.$level.', language of study: '.($plan->study_language ?: 'not chosen').'). All '.$progress['required'].' mandatory documents are uploaded and my application form is '.$percent.'% complete. Sent from my SAS workspace.',
                 'consent_text' => 'I asked SAS to review my application and agree that SAS may contact me by email about it.', 'consent_at' => now(),
                 'view_token_hash' => hash('sha256', Str::random(40)), 'view_token_expires_at' => now()->addDays(30),
             ]);

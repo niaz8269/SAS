@@ -117,6 +117,7 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::get('/applications/{plan:public_id}', [Student\ApplicationController::class, 'show'])->name('applications.show');
     Route::patch('/applications/{plan:public_id}', [Student\ApplicationController::class, 'update'])->name('applications.update');
     Route::post('/applications/{plan:public_id}/request-review', [Student\ApplicationController::class, 'requestReview'])->middleware('throttle:enquiries')->name('applications.review');
+    Route::put('/applications/{plan:public_id}/study-language', [Student\ApplicationController::class, 'language'])->name('applications.language.update');
     Route::put('/applications/{plan:public_id}/degree-level', [Student\ApplicationController::class, 'level'])->name('applications.level.update');
     Route::delete('/applications/{plan:public_id}', [Student\ApplicationController::class, 'destroy'])->name('applications.destroy');
     Route::post('/applications/{plan:public_id}/acknowledge', [Student\ApplicationController::class, 'acknowledge'])->name('applications.acknowledge');

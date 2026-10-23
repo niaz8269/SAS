@@ -10,6 +10,7 @@ use App\Models\Document;
 use App\Models\DocumentAssociation;
 use App\Models\DocumentKind;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Validation\Rule;
 
 /** FILE-01..03 / SEC-03. Upload, list, preview, download and delete are authorised independently. */
@@ -27,17 +28,23 @@ class DocumentController extends Controller
 
     public function store(Request $request, DocumentService $service)
     {
+        // One file ("file") or several at once ("files[]"): each becomes its own document of the chosen type.
         $data = $request->validate([
-            'file' => ['required', 'file'],
+            'file' => ['required_without:files', 'file'],
+            'files' => ['required_without:file', 'array', 'max:10'],
+            'files.*' => ['file'],
             'type' => ['required', Rule::in(array_keys(DocumentKind::options()))],
             'title' => ['nullable', 'string', 'max:190'],
             'acknowledge' => ['accepted'],
-        ], ['acknowledge.accepted' => 'Please confirm you understand how your document is stored.']);
+        ], ['acknowledge.accepted' => 'Please confirm you understand how your document is stored.', 'files.max' => 'Please upload at most 10 files at a time.']);
 
-        $file = $request->file('file');
-        $service->store($request->user(), $file, $data['type'], $data['title'] ?? pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME));
+        $files = array_values(array_filter(array_merge(Arr::wrap($request->file('files')), Arr::wrap($request->file('file')))));
+        foreach ($files as $file) {
+            $title = count($files) === 1 && filled($data['title'] ?? null) ? $data['title'] : pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
+            $service->store($request->user(), $file, $data['type'], $title);
+        }
 
-        return back()->with('status', 'Uploaded. The file is checked for malware before it becomes available.');
+        return back()->with('status', (count($files) === 1 ? 'Uploaded.' : count($files).' files uploaded.').' Each file is checked for malware before it becomes available.');
     }
 
     public function storeVersion(Request $request, Document $document, DocumentService $service)
@@ -83,6 +90,8 @@ class DocumentController extends Controller
         AuditLog::record('document.deleted', $document, ['title' => $document->title], null, null, $request->user());
         $service->delete($document);
 
-        return redirect()->route('student.documents.index')->with('status', 'Document deleted.');
+        $response = $request->boolean('back') ? back() : redirect()->route('student.documents.index'); // the checklist asks to come back to the same page
+
+        return $response->with('status', 'Document deleted.');
     }
 }

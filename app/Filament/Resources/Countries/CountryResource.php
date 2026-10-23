@@ -11,6 +11,7 @@ use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\TagsInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
@@ -55,6 +56,8 @@ class CountryResource extends Resource
                 TextInput::make('code')->label('ISO code')->required()->length(2)->unique(ignoreRecord: true)->dehydrateStateUsing(fn ($s) => strtoupper($s)),
                 TextInput::make('slug')->required()->alphaDash()->unique(ignoreRecord: true),
                 TextInput::make('demonym')->label('Nationality adjective'),
+                TagsInput::make('official_languages')->label('Official language(s)')->placeholder('Add a language')->columnSpanFull()
+                    ->helperText('Students applying to a scholarship here can choose English or these languages as the language they will study in. Leave empty to use the built-in list.'),
             ]),
             Section::make('Destination guide')->description('Published guidance must carry source links and a last-reviewed date. Do not present unverified visa rules as current.')->schema([
                 Toggle::make('is_destination')->label('Is a study destination'),

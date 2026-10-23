@@ -19,9 +19,11 @@ class RulesImporter
     /** @return array{errors:string[],created:int,updated:int,rules:int,programme:?string} */
     public function import(array $file, bool $dryRun = false): array
     {
-        $report = ['errors' => [], 'created' => 0, 'updated' => 0, 'rules' => 0, 'programme' => $file['slug'] ?? null];
-        $programme = ScholarshipProgramme::where('slug', $file['slug'] ?? '')->first();
-        if (! $programme) {
+        // A baseline file ('baseline': true) holds SAS's own rules for a degree level, not for one scholarship; it needs no slug or source.
+        $baseline = ($file['baseline'] ?? false) === true;
+        $report = ['errors' => [], 'created' => 0, 'updated' => 0, 'rules' => 0, 'programme' => $baseline ? 'baseline' : ($file['slug'] ?? null)];
+        $programme = $baseline ? null : ScholarshipProgramme::where('slug', $file['slug'] ?? '')->first();
+        if (! $baseline && ! $programme) {
             $report['errors'][] = 'No scholarship with slug "'.($file['slug'] ?? '').'".';
 
             return $report;
@@ -38,7 +40,7 @@ class RulesImporter
         if (empty($file['rules'])) {
             $report['errors'][] = 'The file has no rules.';
         }
-        if (! $sources) {
+        if (! $sources && ! $baseline) {
             $report['errors'][] = 'At least one https source URL is required.';
         }
 
@@ -86,7 +88,7 @@ class RulesImporter
             }
             $kinds = DocumentKind::pluck('id', 'key');
             foreach ($plan as [$key, $level, $requirement, $note, $source]) {
-                $rule = DocumentRule::firstOrNew(['kind_id' => $kinds[$key], 'programme_id' => $programme->id, 'degree_level_id' => $level ? $levels[$level] : null]);
+                $rule = DocumentRule::firstOrNew(['kind_id' => $kinds[$key], 'programme_id' => $programme?->id, 'degree_level_id' => $level ? $levels[$level] : null]);
                 $rule->exists ? $report['updated']++ : $report['created']++;
                 $rule->fill(['requirement' => $requirement, 'note' => $note, 'source_url' => $source, 'checked_on' => $checked])->save();
             }

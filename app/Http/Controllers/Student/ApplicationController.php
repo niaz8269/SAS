@@ -7,6 +7,7 @@ use App\Domain\Cases\CaseService;
 use App\Domain\Documents\Requirements;
 use App\Domain\StudentWorkspace\ApplicationReview;
 use App\Domain\StudentWorkspace\PlanService;
+use App\Domain\StudentWorkspace\StudyLanguages;
 use App\Enums\PlanStatus;
 use App\Http\Controllers\Controller;
 use App\Models\ApplicationPlan;
@@ -52,6 +53,16 @@ class ApplicationController extends Controller
         return redirect()->to(route('student.applications.show', $plan).'#checklist')->with('status', 'Degree level saved. The document list follows it.');
     }
 
+    public function language(Request $request, ApplicationPlan $plan, StudyLanguages $languages)
+    {
+        $this->authorize('update', $plan);
+        $plan->loadMissing('cycle.destinations', 'cycle.programme.hostCountry');
+        $data = $request->validate(['study_language' => ['nullable', 'string', Rule::in($languages->optionsFor($plan->cycle))]]);
+        $plan->update(['study_language' => $data['study_language'] ?? null]);
+
+        return redirect()->to(route('student.applications.show', $plan).'#language')->with('status', 'Language of study saved.');
+    }
+
     /** "I am ready: please review my application." Goes to SAS staff as an enquiry; needs every mandatory document. */
     public function requestReview(Request $request, ApplicationPlan $plan, ApplicationReview $review)
     {
@@ -65,14 +76,14 @@ class ApplicationController extends Controller
         return redirect()->route('student.applications.show', $plan)->with('status', 'Sent. SAS will review your application and contact you by email. Your reference is '.$enquiry->reference.'.');
     }
 
-    public function show(Request $request, ApplicationPlan $plan, PlanService $plans, Requirements $requirements, ApplicationFormService $forms)
+    public function show(Request $request, ApplicationPlan $plan, PlanService $plans, Requirements $requirements, ApplicationFormService $forms, StudyLanguages $languages)
     {
         $this->authorize('view', $plan); // 403 for another user's plan id (UAT-07)
-        $plan->load(['cycle.programme', 'cycle.currentDeadlines', 'cycle.routes', 'cycle.degreeLevels', 'tasks']);
+        $plan->load(['cycle.programme.hostCountry', 'cycle.currentDeadlines', 'cycle.routes', 'cycle.degreeLevels', 'cycle.destinations', 'tasks']);
         $rows = $requirements->forScholarship($plan->cycle, $plan->degree_level_id, $request->user()->id);
 
         return view('student.applications.show', [
-            'formPercent' => $forms->percent($forms->formFor($request->user())),
+            'formPercent' => $forms->percent($forms->formFor($request->user())), 'languageOptions' => $languages->optionsFor($plan->cycle),
             'rows' => $rows, 'docProgress' => $requirements->progress($rows), 'levelId' => $requirements->effectiveLevel($plan->cycle, $plan->degree_level_id),
             'levels' => $plan->cycle->degreeLevels->isNotEmpty() ? $plan->cycle->degreeLevels : DegreeLevel::orderBy('sort')->get(),
             'plan' => $plan, 'progress' => $plans->progress($plan), 'changed' => $plans->requirementsChanged($plan),
