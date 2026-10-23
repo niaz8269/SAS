@@ -61,7 +61,7 @@ class UniversityCataloguePagesTest extends TestCase
     {
         [$pku] = $this->seedCatalogue();
         $this->get('/universities/peking-university')->assertOk()->assertSee('Peking University')->assertSee('Computer Science and Technology')
-            ->assertSee('Chinese Language and Literature')->assertSee('campuschina.org')->assertSee('Programme lists, tuition')->assertDontSee('Clinical Medicine');
+            ->assertSee('Chinese Language and Literature')->assertDontSee('campuschina.org')->assertDontSee('Official listing')->assertDontSee('Programme lists, tuition')->assertDontSee('Clinical Medicine');
         $this->get('/universities/peking-university?level=bachelor')->assertSee('Chinese Language and Literature')->assertDontSee('Computer Science and Technology');
         $this->get('/universities/peking-university?csc=1')->assertSee('Computer Science and Technology')->assertDontSee('Chinese Language and Literature');
         $this->get('/universities/peking-university?language=English')->assertSee('Computer Science and Technology')->assertDontSee('Chinese Language and Literature');

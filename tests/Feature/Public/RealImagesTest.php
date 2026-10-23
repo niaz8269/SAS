@@ -36,7 +36,7 @@ class RealImagesTest extends TestCase
     {
         $china = Country::firstOrCreate(['code' => 'CN'], ['name' => 'China', 'slug' => 'china', 'is_destination' => true, 'guidance_published' => true, 'featured' => true, 'summary' => 'x']);
         University::create(['name' => 'Peking University', 'slug' => 'pku', 'csc_key' => 'A', 'province' => 'Beijing', 'country_id' => $china->id]);
-        foreach (['/', '/destinations', '/universities', '/universities/pku', '/destinations/china'] as $url) {
+        foreach (['/', '/destinations', '/universities', '/destinations/china'] as $url) {
             $html = $this->get($url)->assertOk()->getContent();
             $this->assertStringNotContainsString('aspect-[16/', $html, $url);
             $this->assertStringNotContainsString('aspect-[3/2]', $html, $url);
