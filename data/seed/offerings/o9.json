@@ -1,0 +1,451 @@
+[
+ {
+  "external_key": "cz-government-scholarship-development-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Selected follow-up Master's programmes (two years). English-language track open to all eligible countries: about 126 programmes at 18 Czech universities in the official 2026 list (engineering, natural sciences, business and law, ICT, agriculture, economics and political science, among others). Czech-language track only for citizens of Bosnia and Herzegovina, Georgia, Ukraine and Belarus (democratic forces): one-year Czech language course at Charles University's Institute for Language and Preparatory Studies, funded by the scholarship, then selected areas of study (economics, international relations and political science, journalism, finance and insurance, management and administration, natural sciences, ICT, engineering, agriculture and veterinary).",
+     "source_text": "Selected follow-up Master’s study programmes (two-year-long programmes)",
+     "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries"
+    },
+    "programmes": [
+     {
+      "name": "Agricultural Engineering",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Engineering; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Forest Science in Global Change",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Forestry and Wood Sciences; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Agri-food Systems and Rural Development",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "International Development and Agricultural Economics",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Tropical Crop Management and Ecology",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Wildlife and Livestock Production, Management and Conservation",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "General Agriculture",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of AgriSciences; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "International Master of Horticultural Science",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Horticulture; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Multifunctional Agriculture",
+      "institution": "University of South Bohemia in České Budějovice",
+      "detail": "Faculty of Agriculture and Technology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Fishery and Protection of Waters",
+      "institution": "University of South Bohemia in České Budějovice",
+      "detail": "Faculty of Fisheries & Protection of Waters; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Innovation Project Management",
+      "institution": "Czech Technical University in Prague",
+      "detail": "Masaryk Institute of Advanced Studies; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Business Administration",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Economics and Management; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Economics and Management",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Economics and Management; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Business Administration",
+      "institution": "Institute of Technology and Business in České Budějovice",
+      "detail": "Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Business Management",
+      "institution": "Masaryk University",
+      "detail": "Faculty of Economics and Administration; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Finance",
+      "institution": "Masaryk University",
+      "detail": "Faculty of Economics and Administration; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Economics and Management",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Business and Economics; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Digital Society, Social Innovation and Global Citizenship",
+      "institution": "Palacky University in Olomouc",
+      "detail": "Faculty of Law; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "International and European Law",
+      "institution": "Palacky University in Olomouc",
+      "detail": "Faculty of Law; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Management",
+      "institution": "Prague University of Economics and Business",
+      "detail": "Faculty of Business Administration; Business, administration and law",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Selected Doctoral programmes (three- to four-year-long), taught in English: about 118 programmes at 16 Czech universities in the official 2026 list (mainly natural sciences, engineering, agriculture and veterinary; also business, economics, ICT). Requires a completed master's programme; English test during application.",
+     "source_text": "Selected Doctoral study programmes (three- to four-year-long programmes)",
+     "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries"
+    },
+    "programmes": [
+     {
+      "name": "Agricultural Chemistry",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Animal Science",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Applied Animal Science",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Crop Science",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Plant Protection",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Plant Sciences",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Engineering of Agricultural Technological systems",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Engineering; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Sustainable Rural Development",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Tropical Agrobiology and Bioresource Management",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Forest Ecology",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Forestry and Wood Technology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Forest Phytology",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Forestry and Wood Technology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Landscape Management and Engineering",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Forestry and Wood Technology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Silviculture",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Forestry and Wood Technology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "European Horticulture",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Horticulture; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Ph.D. in Horticulture",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Horticulture; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Fishery",
+      "institution": "University of South Bohemia in České Budějovice",
+      "detail": "Faculty of Fisheries & Protection of Waters; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Animal Husbandry, Animal Nutrition and Biochemistry",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Animal Protection, Welfare and Behaviour",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Food Hygiene and Technology",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Veterinary Ecology and Wildlife Diseases",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary",
+      "source_text": null,
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor"
+  ],
+  "catalogue_url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries",
+  "notes": [
+   "Programme names come from the official xlsx lists linked on the msmt.gov.cz page (columns: area of study, university, faculty, study programme). Only the first 20 rows per level are listed here in spreadsheet order; full lists: master's https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx ; doctoral https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx ; Czech-language areas of study https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_areas_of_study_for_programmes_offered_in_Czech_2026-1.xlsx",
+   "Lists are for the 2027/2028 call (applications 21 Aug - 30 Sep 2026), now closed. The spreadsheets contain a few placeholder codes (e.g. 'TBS') for programmes not yet accredited.",
+   "Completed bachelor's / master's are entry requirements, not funded levels."
+  ]
+ },
+ {
+  "external_key": "it-maeci-government-scholarships-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master's Degree programmes (Laurea Magistrale, 2nd cycle) at public or legally recognised Italian institutions, attended in person; 9-month scholarship period, potentially renewable. No field restriction or programme list in the call (any discipline). Italian- or English-taught programmes (B2 in the language of instruction). AFAM (Higher Education for Fine Arts, Music and Dance) programmes, 1st and 2nd cycle, are also funded for 9 months, potentially renewable.",
+     "source_text": "Master's Degree programmes (Laurea Magistrale, 2nd cycle)",
+     "url": "https://ambabidjan.esteri.it/wp-content/uploads/2026/03/Bando-26-27-ENG.pdf"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "PhD programmes in Italy, 9-month scholarship period, potentially renewable; applicant must hold the admission letter to the PhD programme. Research projects under academic supervision (including co-tutorships) are funded separately for 9 months, not renewable, at universities, public research institutions, recognised museums and archives. Any discipline; no programme list.",
+     "source_text": "Scholarships for PhD programmes are awarded for a period of study of 9 (nine) months and are potentially renewable.",
+     "url": "https://ambabidjan.esteri.it/wp-content/uploads/2026/03/Bando-26-27-ENG.pdf"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral"
+  ],
+  "catalogue_url": "https://www.universitaly.it/",
+  "notes": [
+   "Source is the full English call text for 2026-2027 (Bando-26-27-ENG.pdf, 13 pages) hosted on the Italian Embassy in Abidjan site (MAECI network), plus the Panama embassy notice. The call could not be fetched from esteri.it or studyinitaly.esteri.it (bot check; ListaBandi still shows only the 2025-26 call as closed). Deadline 26 March 2026; no 2027-28 call published.",
+   "Bachelor's (Laurea triennale) and single-cycle degrees are covered only as renewals of 'Costruiamo il futuro' scholarships awarded under the 2025-26 call (art. 1.6), so bachelor is not an open level. AFAM 1st cycle is also covered but the call does not call it bachelor.",
+   "Research projects: call states no level (age limit 40, supervisor invitation letter); not coded as postdoctoral.",
+   "Also offered: 3-month 'Italofonia' Italian language and culture courses (A2 required), not a degree level."
+  ]
+ },
+ {
+  "external_key": "nl-nl-scholarship-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Full-time bachelor's programmes at participating Dutch institutions (11 research universities and 23 universities of applied sciences/arts listed for 2026-2027). EUR 5,000 paid in the first year, not a full-tuition scholarship. No general field restriction on the Study in NL page; eligible programmes and fields are set by each institution on its own scholarship page.",
+     "source_text": "You are applying for a full-time bachelor’s or master’s programme at one of the participating Dutch higher education institutions.",
+     "url": "https://www.studyinnl.org/finances/nl-scholarship"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Full-time master's programmes at the same participating institutions (research universities: Eindhoven University of Technology, Maastricht University, Radboud University, University of Groningen, University of Twente, Utrecht University, VU Amsterdam, Wageningen University & Research and others). Eligible programmes are defined per institution.",
+     "source_text": "You are applying for a full-time bachelor’s or master’s programme at one of the participating Dutch higher education institutions.",
+     "url": "https://www.studyinnl.org/finances/nl-scholarship"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "doctorate"
+  ],
+  "catalogue_url": "https://www.studyinnl.org/finances/nl-scholarship",
+  "notes": [
+   "The page does not list programmes; it links to each participating institution's NL Scholarship page and says to check the institution's website for the fields of study for this academic year. The participating list changes every year.",
+   "Requirements on page: non-EEA nationality; no degree from an education institution in the Netherlands. Formerly known as Holland Scholarship."
+  ]
+ },
+ {
+  "external_key": "at-ernst-mach-grant-worldwide-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Research stay of 1 to 9 months at an Austrian university for postgraduates pursuing a doctoral/PhD programme outside Austria. All disciplines. Age limit 35. The Austrian supervisor must confirm the project can be carried out in English; all Austrian universities are eligible hosts (non-university research institutes case by case). Stays are for academic year 2027/28, full calendar months only.",
+     "source_text": "Postgraduates pursuing a doctoral/PhD programme outside Austria",
+     "url": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant/faq-ernst-mach-grant-worldwide"
+    },
+    "programmes": []
+   },
+   {
+    "code": "postdoctoral",
+    "confirmed": true,
+    "summary": {
+     "detail": "Research stay of 1 to 9 months at an Austrian university for postgraduates and post-docs who finished their studies at a non-Austrian university after 30 September 2025, and for post-docs working as lecturers or researchers at a university outside Austria. All disciplines.",
+     "source_text": "Post-docs who are working as lecturers or researchers at a university outside Austria",
+     "url": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant/faq-ernst-mach-grant-worldwide"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "master"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "Main page: 'young researchers from all disciplines and countries (except Austria)', duration '1 to 9 months'. Funds a research stay, not a degree programme, so there are no programmes to list.",
+   "Current Austrian university students and people permanently resident in Austria are excluded.",
+   "Other Ernst Mach strands (FH, Follow-Up, ASEA-UNINET) are separate programmes."
+  ]
+ },
+ {
+  "external_key": "se-si-scholarship-global-professionals-2027",
+  "status": "partly",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Full-time, one- or two-year English-taught master's studies at Swedish universities within four study fields: Governance, Public Health, Entrepreneurship and Innovation, and STEM (Science, Technology, Engineering and Mathematics). Only master's programmes on SI's eligible list qualify; the 2027/2028 list is due on the page on 13 November 2026. Stockholm School of Economics and Konstfack applicants go through separate intakes.",
+     "source_text": "The scholarship supports full-time, one- or two-year master’s studies at Swedish universities",
+     "url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "doctorate"
+  ],
+  "catalogue_url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+  "notes": [
+   "The list of eligible master's programmes for 2027/2028 is published on 13 November 2026; as of 2026-10-23 no programmes can be named, hence partly. Programmes are applied for via University Admissions (admission is a precondition).",
+   "Page fetched via curl (WebFetch returned 403). Open to citizens of 34 listed countries; page says information may be subject to changes."
+  ]
+ }
+]

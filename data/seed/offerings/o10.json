@@ -1,0 +1,313 @@
+[
+ {
+  "external_key": "ru-government-quota-2026",
+  "status": "partly",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Any field at the host universities: 'All programs at all study levels are available under the quota.' Most programmes are taught in Russian; the quota covers preparatory Russian courses. Duration not stated on the page.",
+     "source_text": "The Quota provides for studies in a wide range of fields at the following levels: Bachelor's degrees",
+     "url": "https://en.misis.ru/applicants/scholarships/quota/"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Any field at the host universities. NUST MISIS says its English-taught master's programmes do not require Russian. Duration not stated.",
+     "source_text": "Master's degrees",
+     "url": "https://en.misis.ru/applicants/scholarships/quota/"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Postgraduate studies ('PhD equivalents'). Residency and postgraduate applicants must also submit a motivation letter and a research summary or article.",
+     "source_text": "Postgraduate studies (PhD equivalents)",
+     "url": "https://en.misis.ru/applicants/scholarships/quota/"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": null,
+  "notes": [
+   "Programmes not enumerated: the quota is open to all disciplines at many universities. The only official page read that gives levels is the host university NUST MISIS page; it mentions '120+ study programs' for MISIS only (fields named: Materials Science, IT, Economics, Linguistics).",
+   "The federal portal education-in-russia.com is a JavaScript app and returned no readable text via fetch; the Rossotrudnichestvo/Russian House Dhaka page returned only a browser-check page. So the federal programme search page could not be confirmed: catalogue_url is null and status is partly.",
+   "Non-official sources and the earlier pass mention specialist programmes and residency as extra levels under the quota; these are not recorded as codes. MISIS lists only bachelor, master and postgraduate.",
+   "Latest published call on the host page is 2027/28 (deadlines 15 Dec 2026 for CIS, 15 Jan 2027 for others)."
+  ]
+ },
+ {
+  "external_key": "es-aecid-africa-med-master-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Up to 30 grants of 11 months (1 Sep 2026 to 31 Jul 2027, not renewable) for official, in-person university master's degrees in Spain of at most 60 ECTS credits. No field restriction in the call; the applicant must show admission to the master's applied for. Spanish knowledge required (except Equatorial Guinea); if the master is taught in another language, knowledge of that language is also required. Open only to permanent public employees of the listed African and Middle Eastern countries.",
+     "source_text": "másteres universitarios (oficiales) de carácter presencial en España de 60 créditos ECTS como máximo",
+     "url": "https://www.infosubvenciones.es/bdnstrans/GE/es/convocatoria/916186"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "doctorate",
+   "postdoctoral"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "Full call text read via the BDNS API (convocatoria 916186, document 'CV 26-27 AFRICA-MED MASTER.pdf', signed 29 June 2026); it names no specific master's programmes or universities, so none are listed. The BOE extract (BOE-B-2026-22411) and Spanish Embassy notices agree.",
+   "Official sources are Spanish only; quotes are in Spanish. The 2026-27 call is closed."
+  ]
+ },
+ {
+  "external_key": "kz-state-scholarship-foreign-citizens-2026",
+  "status": "partly",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "490 scholarships. Applies 'for the full period of study'. Fields, duration and universities are not stated in the notice.",
+     "source_text": "Bachelor's degree - 490",
+     "url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "50 scholarships. Fields, duration and universities are not stated in the notice.",
+     "source_text": "Master's degree - 50",
+     "url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "10 scholarships (PhD / doctoral). Fields, duration and universities are not stated in the notice.",
+     "source_text": "PhD (doctoral) - 10",
+     "url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "postdoctoral",
+   "diploma"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "The Bolashak notice gives only levels and places (550 in total) for 'higher and/or postgraduate education institutions'; it names no programmes or universities. Application and any programme choices are on studyin.kz, which returned an error when previously checked and was not re-read.",
+   "Application documents may be completed in Kazakh, Russian or English; language of instruction is not stated."
+  ]
+ },
+ {
+  "external_key": "kz-nu-abay-kunanbayev-scholarship-2027",
+  "status": "partly",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Merit-based scholarship for top international applicants recommended for admission, stated in the Tuition fees section of the NU master's regular admissions page. The NU international admissions page says the scholarship covers the tuition fee, medical insurance and a monthly stipend, and that candidates are recommended by the admissions committee of each school. NU FAQ: all master's and PhD programmes are taught in English except the Executive MBA (English with simultaneous interpretation into Russian).",
+     "source_text": "There are merit-based \"Abay Kunanbayev\" scholarships for top international applicants recommended for admission.",
+     "url": "https://nu.edu.kz/admissions/how-to-apply/masters/regular-admissions-masters/"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Same sentence appears in the Tuition fees section of the NU doctoral (PhD) regular admissions page. Programmes are taught in English. The same page lists doctoral tuition of USD 23,500 for 2025/2026 (except Doctor of Public Management).",
+     "source_text": "There are merit-based \"Abay Kunanbayev\" scholarships for top international applicants recommended for admission.",
+     "url": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/regular-admissions-phd/"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "Bachelor/Foundation is NOT supported: the NU foundation-undergraduate regular admissions page and its Financial Aid & Scholarships page do not mention the Abay Kunanbayev scholarship. The general international admissions page (heading 'Abai Scholarship') says 'top international candidates' without naming a level. A web-search summary claiming undergraduate wording could not be matched to any official page text.",
+   "Programmes are not enumerated: the pages do not tie the scholarship to named programmes; it is awarded on recommendation of each school's admissions committee. Master's schools on the NU page: SCAI, SSH, School of Medicine, SOE, GSB, GSPP, GSE; the PhD page lists the same schools. NU's 'All programs (A-Z)' page is linked from its admissions pages but its address was not fetched, so catalogue_url is null.",
+   "Contact for scholarship details given on the international page: international.admissions@nu.edu.kz."
+  ]
+ },
+ {
+  "external_key": "kz-kimep-central-asian-students-grant-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "10 grants; 100% tuition; held for 4 academic years (not extended) while meeting GPA and credit conditions. For 2025 and 2026 graduates of secondary and vocational school who are citizens of Kyrgyzstan, Tajikistan, Turkmenistan or Uzbekistan. The grant entry names no specific programme (other grants on the same page name the BISB, BSCS, BLLB and BIL programmes).",
+     "source_text": "Ұсыну мерзімі: 4 академиялық жылға (ұзартылмайды)",
+     "url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "master",
+   "doctorate"
+  ],
+  "catalogue_url": "https://www.kimep.kz/prospective-students/kz/bachelor/",
+  "notes": [
+   "Read in Kazakh (English URLs redirect to /kz/). Official Kazakh grant title: 'Орталық Азия елдерінің студенттеріне арналған гранттары'; no English title is shown on the page.",
+   "The KIMEP bachelor page (Kazakh) lists undergraduate programme headings by school; only Computer Science and Information System appear in English there. They are not listed as scholarship programmes because the grant is not tied to them."
+  ]
+ },
+ {
+  "external_key": "kz-kimep-international-students-grant-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "10 grants; 50% tuition; held for 4 academic years (not extended) while meeting GPA (3.50; 3.00 for BLLB and BIL) and credit conditions. For 2026 graduates of secondary and vocational school who are citizens of countries other than Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan and Uzbekistan. The grant entry names no specific programme.",
+     "source_text": "Ұсыну мерзімі: 4 академиялық жылға (ұзартылмайды)",
+     "url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "master",
+   "doctorate"
+  ],
+  "catalogue_url": "https://www.kimep.kz/prospective-students/kz/bachelor/",
+  "notes": [
+   "Read in Kazakh (English URLs redirect to /kz/). Official Kazakh grant title: 'Халықаралық студенттерге арналған грант'; no English title shown.",
+   "The page's retention rule names the programmes 'Құқықтану (BLLB)' and 'Халықаралық құқық (BIL)' only for a lower GPA threshold, not as a restriction of the grant.",
+   "KIMEP's English 2026-2027 catalogue (kimep.kz/about/files/2026/06/Catalog-2026-2027.pdf) names undergraduate degrees such as Bachelor of Accounting and Auditing (BACTA) and Bachelor of Finance (BFIN); not tied to this grant, so not listed."
+  ]
+ },
+ {
+  "external_key": "az-heydar-aliyev-international-education-grant-2026",
+  "status": "partly",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Bachelor's 4-5 years; general medicine 5-6 years (period set by the approved programme of each specialty). Full-time. Languages of study: English, Russian, Turkish or Azerbaijani (English needs IELTS 5 / TOEFL 40 for undergraduate). Candidates choose up to 3 specialties at different Azerbaijani higher education institutions.",
+     "source_text": "scholarships on full-time basis at the Bachelor's (including general medicine education)",
+     "url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master's 1.5-2 years; medical residency 2-5 years. English requires IELTS 5.5 / TOEFL 50 for postgraduate programmes.",
+     "source_text": "Master's (including medical residency)",
+     "url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Doctoral (PhD) 3 years. Applicants must be under 45 on 15.09.2026.",
+     "source_text": "Doctoral (PhD) Program 3 years",
+     "url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf"
+    },
+    "programmes": []
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "Preparatory courses (including language preparatory courses), 6 months to 1 year, determined by the higher education institution.",
+     "source_text": "as well as the preparatory courses",
+     "url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "postdoctoral"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "The call PDF lists 'List of participating higher educational institutions' and 'List of programs' as Annexes 4 and 5, but the published 10-page PDF does not contain the annexes, and the Study in Azerbaijan programme and financial-support pages link only the PDF. No programme or university list could be confirmed, so status is partly. 100 students annually; open to citizens of OIC and Non-Aligned Movement members, small island developing states and countries with ties to Azerbaijan (Annex 2).",
+   "The site's general Universities section (studyinazerbaijan.edu.az/universities) is not stated to be the grant's list, so it is not given as catalogue_url."
+  ]
+ },
+ {
+  "external_key": "uz-icesco-uzbekistan-scholarship-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "First phase: five fully funded scholarships at two Uzbek universities (3 at Tashkent State Medical University, 2 at Central Asian University of Environmental and Climate Change Studies). Each covers tuition fees, student housing, a monthly stipend and health coverage in public healthcare institutions. English proficiency required (Tashkent State Medical University: B1 / IELTS 5.0; the environmental university: IELTS 5.5 or equivalent, or its entrance examination). Duration not stated.",
+     "source_text": "Tashkent State Medical University will provide three scholarships for applicants to the bachelor's program in General Medicine.",
+     "url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/"
+    },
+    "programmes": [
+     {
+      "name": "General Medicine",
+      "institution": "Tashkent State Medical University",
+      "detail": "Bachelor's, 3 scholarships",
+      "source_text": "bachelor's program in General Medicine",
+      "url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/"
+     },
+     {
+      "name": "Environmental and Sustainable Management",
+      "institution": "Central Asian University of Environmental and Climate Change Studies",
+      "detail": "Bachelor's; 2 scholarships shared across the three programmes",
+      "source_text": "two bachelor's scholarships in Environmental and Sustainable Management, Environment and Economics, and Environmental Science and Public Administration",
+      "url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/"
+     },
+     {
+      "name": "Environment and Economics",
+      "institution": "Central Asian University of Environmental and Climate Change Studies",
+      "detail": "Bachelor's; 2 scholarships shared across the three programmes",
+      "source_text": "Environment and Economics",
+      "url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/"
+     },
+     {
+      "name": "Environmental Science and Public Administration",
+      "institution": "Central Asian University of Environmental and Climate Change Studies",
+      "detail": "Bachelor's; the ICESCO scholarships page words this as 'Ecology and Public Administration'",
+      "source_text": "Environmental Science and Public Administration",
+      "url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "master",
+   "doctorate",
+   "postdoctoral"
+  ],
+  "catalogue_url": "https://icesco.org/en/international-scholarships/",
+  "notes": [
+   "Wording differs between ICESCO pages: the news item says 'Environmental Science and Public Administration' and 'Central Asian University of Environmental and Climate Change Studies'; the scholarships page says 'Ecology and Public Administration' and 'Central Asian Green University'; the university's own ICESCO page is titled 'Central Asian University for Environmental and Climate Change Studies'.",
+   "Only the first phase is published; no later phase found."
+  ]
+ }
+]

@@ -1,0 +1,1122 @@
+[
+ {
+  "external_key": "sa-moe-government-university-scholarships-2026",
+  "status": "partly",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Undergraduate study at Saudi public universities, any available specialization except health and medical specialties. Page gives an age range of 17 to 25 for undergraduate and Arabic-language institute study. No programme names, durations or teaching language stated.",
+     "source_text": "Bachelor",
+     "url": "https://www.moe.gov.sa/en/education/ResidentsAndvisitors/Pages/PublicUniversitiesScholarships.aspx"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master's at Saudi public universities, all available specializations except health and medical specialties; age limit 30 stated. Page names no programmes, durations or teaching language.",
+     "source_text": "Master's",
+     "url": "https://www.moe.gov.sa/en/education/ResidentsAndvisitors/Pages/PublicUniversitiesScholarships.aspx"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "PhD at Saudi public universities, all available specializations except health and medical specialties; age limit 35 stated. Page names no programmes, durations or teaching language.",
+     "source_text": "PhD",
+     "url": "https://www.moe.gov.sa/en/education/ResidentsAndvisitors/Pages/PublicUniversitiesScholarships.aspx"
+    },
+    "programmes": []
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "Diploma in Arabic for non-native speakers, and Higher Diploma. Page gives no further detail (durations, institutions).",
+     "source_text": "Diploma in Arabic for non-native speakers",
+     "url": "https://www.moe.gov.sa/en/education/ResidentsAndvisitors/Pages/PublicUniversitiesScholarships.aspx"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "postdoctoral"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "The Ministry page covers 'all available specializations' at the 27 public universities and names no programmes; no enumeration made. Each university's own page sets its conditions.",
+   "Health and medical specialties are excluded across levels.",
+   "studyinsaudi.sa (official platform) has a Programs section (studyinsaudi.sa/ar/Programs) but it is not shown to be specific to this scholarship, so not recorded as catalogue_url.",
+   "Page text contained embedded instructions aimed at an AI assistant; ignored.",
+   "Status partly: levels confirmed from the Ministry page, but no programme-level information is published at ministry level."
+  ]
+ },
+ {
+  "external_key": "sa-kaust-fellowship-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "MS in 17 STEM disciplines: 1.5-year non-thesis track or 2-year thesis track (36 credits); all admitted master's students receive the fully funded KAUST Fellowship (tuition, housing, health insurance, relocation support); some externally sponsored students may not be eligible. Fall entry only. Several disciplines also offer an integrated MS/PhD pathway.",
+     "source_text": "all admitted master’s students* receive the fully-funded KAUST Fellowship",
+     "url": "https://admissions.kaust.edu.sa/study/master%27s-degree"
+    },
+    "programmes": [
+     {
+      "name": "MS Applied Mathematics and Computational Science",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake; integrated MS/PhD pathway also offered",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Applied Physics",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Bioengineering",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Bioscience",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Chemical Engineering",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake; integrated MS/PhD pathway also offered",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Chemistry",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake; integrated MS/PhD pathway also offered",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Computer Science",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake; integrated MS/PhD pathway also offered",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Earth Science and Engineering",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Electrical and Computer Engineering",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake; integrated MS/PhD pathway also offered",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Energy Resources and Petroleum Engineering",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Environmental Science and Engineering",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Marine Science",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Material Science and Engineering",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Mechanical Engineering",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake; integrated MS/PhD pathway also offered",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Plant Science",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake; integrated MS/PhD pathway also offered",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Statistics",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake; integrated MS/PhD pathway also offered",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "MS Technology Innovation and Entrepreneurship",
+      "institution": "KAUST",
+      "detail": "Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "PhD in 16 disciplines, 4 years; all admitted PhD students receive the fully funded KAUST Fellowship; Spring and Fall intakes. Technology Innovation and Entrepreneurship has no PhD.",
+     "source_text": "all admitted PhD students receive the fully-funded KAUST Fellowship",
+     "url": "https://admissions.kaust.edu.sa/study/phd-degree"
+    },
+    "programmes": [
+     {
+      "name": "PhD Applied Mathematics and Computational Science",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Applied Physics",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Bioengineering",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Bioscience",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Chemical Engineering",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Chemistry",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Computer Science",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Earth Science and Engineering",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Electrical and Computer Engineering",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Energy Resources and Petroleum Engineering",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Environmental Science and Engineering",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Marine Science",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Material Science and Engineering",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Mechanical Engineering",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Plant Science",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     },
+     {
+      "name": "PhD Statistics",
+      "institution": "KAUST",
+      "detail": "Spring and Fall 2027 intake",
+      "source_text": null,
+      "url": "https://admissions.kaust.edu.sa/study/programs-of-study"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral",
+   "diploma"
+  ],
+  "catalogue_url": "https://admissions.kaust.edu.sa/study/programs-of-study",
+  "notes": [
+   "Programme names copied from the Programs of Study table (Fall 2027 / Spring and Fall 2027 intake): 17 programmes with MS, 16 with PhD.",
+   "MS/PhD pathway ('M.S./Ph.D. combines your admission to M.S. and Ph.D. into a single track') is listed for Applied Mathematics and Computational Science, Chemical Engineering, Chemistry, Computer Science, Electrical and Computer Engineering, Mechanical Engineering, Plant Science, Statistics.",
+   "The FAQ says the fellowship is given automatically to admitted students, with exceptions for partnership or external sponsorship.",
+   "WebFetch of admissions.kaust.edu.sa/study/degree-programs returned 404; content taken from the /study pages."
+  ]
+ },
+ {
+  "external_key": "sa-kfupm-graduate-scholarship-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Thesis-based MS (research-based, 2 years as listed for the M.Sc. entries) for full-time scholarship students; the scholarship page gives no separate MS funding terms. The programmes below are the first 20 of 29 M.Sc. entries on KFUPM's thesis-based master's and PhD catalogue; the remaining entries are further engineering and science MS entries (for example Geology and Geophysics (Thesis Option), Industrial and Systems Engineering, Materials Science and Engineering, Mathematics, Mechanical Engineering, Petroleum Engineering, Physics, Systems and Control Engineering (Thesis option)). Project-based (MX) master's are a separate set.",
+     "source_text": "Full-time MS or Ph.D. students",
+     "url": "https://cgis.kfupm.edu.sa/admission/kfupm-scholarship"
+    },
+    "programmes": [
+     {
+      "name": "Master of Science in Aerospace Engineering",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Applied Statistics",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Architectural Engineering",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Architecture (Thesis Option)",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Business Studies - Accounting",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Business Studies - Finance",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Business Studies - Management",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Business Studies - Management Information System",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Business Studies - Marketing",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Business Studies - Operations Management",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Chemical Engineering",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Chemistry",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Civil Engineering - Geotechnical Engineering",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Civil Engineering - Structures and Civil Engineering Materials",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Civil Engineering - Transportation Engineering",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Civil Engineering - Water Resources and Environmental Engineering",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Computer Engineering",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Computer Science",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Electrical Engineering",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Master of Science in Environmental Sciences",
+      "institution": "KFUPM",
+      "detail": "2 years (as listed on the catalogue)",
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Scholarships offered for all PhD programmes and PhD - Direct Entry programmes; the Direct Entry PhD lasts five years with full scholarship for the first four. Benefits listed: stipend by category, free housing, medical/dental care, subsidised meals, no tuition fee; air tickets for international students only.",
+     "source_text": "We offer scholarships for all PhD programs and PhD - Direct Entry Programs.",
+     "url": "https://cgis.kfupm.edu.sa/admission/kfupm-scholarship"
+    },
+    "programmes": [
+     {
+      "name": "Doctor of Philosophy in Aerospace Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Bioengineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Business Administration",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Chemical Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Chemistry",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Civil Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Computer Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Computer Science",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Construction and Building Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Electrical Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Geology",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Geophysics",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Industrial and Systems Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Materials Science and Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Mathematics",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Mechanical Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Petroleum Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Physics",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     },
+     {
+      "name": "Doctor of Philosophy in Systems and Control Engineering",
+      "institution": "KFUPM",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral",
+   "diploma"
+  ],
+  "catalogue_url": "https://www.kfupm.edu.sa/study/master-of-science-thesis-based-phd",
+  "notes": [
+   "The scholarship page does not itself name MS programmes; the programme lists are from KFUPM's official thesis-based Master of Science and Ph.D. catalogue, matching the 'MS (Thesis-Based) and PhD' window on cgis.kfupm.edu.sa/apply. Project-based (MX) master's are on a separate page and apply window and are not listed.",
+   "The catalogue also lists 'Master in Geology' and 'Master in Geophysics' (M.T) and an Executive Master of Business Administration (M.T); not included in the 20.",
+   "Catalogue durations for the PhD entries are unitless numbers (3 or 4), so not recorded.",
+   "PhD - Direct Entry (for four-year bachelor's holders) typically takes four to five years per the catalogue; the scholarship page says five years with four funded. No separate Direct Entry programme names are given."
+  ]
+ },
+ {
+  "external_key": "ae-mbzuai-graduate-funding-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "M.Sc. in AI and related fields. Fee-paying by default; merit-based funding may be available through a faculty-sponsored research or teaching assistantship, or an approved government scholarship (UAE nationals); funding is not guaranteed. Funded students receive free tuition, a monthly stipend (AED 15,500 international / 37,500 UAE nationals), annual return airfare, health insurance and a UAE residence visa. Applicants need a STEM degree with CGPA 3.0 or 3.5 depending on programme.",
+     "source_text": "The funding model and benefits described on this page apply to the Ph.D. and M.Sc. programs.",
+     "url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions"
+    },
+    "programmes": [
+     {
+      "name": "Master of Science in Artificial Intelligence",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/msc-programs"
+     },
+     {
+      "name": "Master of Science in Artificial Intelligence - Computer Vision (M.Sc.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/msc-programs"
+     },
+     {
+      "name": "Master of Science in Artificial Intelligence - Machine Learning (M.Sc.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/msc-programs"
+     },
+     {
+      "name": "Master of Science in Artificial Intelligence - Natural Language Processing (M.Sc.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/msc-programs"
+     },
+     {
+      "name": "Master of Science in Computational Biology (M.Sc.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/msc-programs"
+     },
+     {
+      "name": "Master of Science in Computer Science (M.Sc.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/msc-programs"
+     },
+     {
+      "name": "Master of Science in Robotics (M.Sc.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/msc-programs"
+     },
+     {
+      "name": "Master of Science in Statistics and Data Science (M.Sc.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/msc-programs"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Ph.D. in AI and related fields. Year 1 is centrally funded by the University while matching with a faculty advisor; funding then moves to the advisor, subject to a confirmed advisor match and satisfactory progress. Monthly stipend AED 17,500 international / 43,500 UAE nationals.",
+     "source_text": "All doctoral programs offer a full scholarship including tuition, accommodation, healthcare, student visa, and a generous monthly stipend.",
+     "url": "https://mbzuai.ac.ae/academics/phd-programs"
+    },
+    "programmes": [
+     {
+      "name": "Doctor of Philosophy in Artificial Intelligence",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     },
+     {
+      "name": "Doctor of Philosophy in Artificial Intelligence - Computer Vision (Ph.D.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     },
+     {
+      "name": "Doctor of Philosophy in Artificial Intelligence - Machine Learning (Ph.D.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     },
+     {
+      "name": "Doctor of Philosophy in Artificial Intelligence - Natural Language Processing (Ph.D.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     },
+     {
+      "name": "Doctor of Philosophy in Computational Biology (Ph.D.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     },
+     {
+      "name": "Doctor of Philosophy in Computer Science (Ph.D.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     },
+     {
+      "name": "Doctor of Philosophy in Human-Computer Interaction (Ph.D.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     },
+     {
+      "name": "Doctor of Philosophy in Robotics (Ph.D.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     },
+     {
+      "name": "Doctor of Philosophy in Statistics and Data Science (Ph.D.)",
+      "institution": "MBZUAI",
+      "detail": null,
+      "source_text": null,
+      "url": "https://mbzuai.ac.ae/academics/phd-programs"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral",
+   "diploma"
+  ],
+  "catalogue_url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions",
+  "notes": [
+   "Master in Applied Artificial Intelligence (MAAI) is NOT eligible for University or faculty-sponsored funding (fee-based, AED 170,000 total tuition, 34 credit hours), so it is excluded from the master's programmes list.",
+   "MBZUAI has an undergraduate programme page, but the funding section covers only Ph.D. and M.Sc., so bachelor is not offered under this funding.",
+   "Computational Biology and Human-Computer Interaction are new (inaugural cohorts 2026); the HCI page says the M.Sc. will follow shortly after, so no M.Sc. HCI is listed.",
+   "Programme names copied from the official Master's and Ph.D. programme pages. WebFetch got HTTP 403; pages read in the browser pane."
+  ]
+ },
+ {
+  "external_key": "ae-khalifa-university-graduate-scholarship-international-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "For international students enrolled full-time in graduate programmes. Master's benefits by tier: Tier I and II full tuition, textbooks, free accommodation (eligible full-time students), medical insurance, flights, UAE visa fee; Tier III 50% tuition waiver; Tier IV textbooks, insurance, flights and visa only. The scholarship page names no specific programmes; the list is from the university's graduate programmes catalogue (21 unique master's programmes; first 20 shown, the remaining one is Master of Public Health).",
+     "source_text": "pursuing a Master's degree at Khalifa University",
+     "url": "https://www.ku.ac.ae/scholarship/graduate-research-teaching-scholarship-for-international-students"
+    },
+    "programmes": [
+     {
+      "name": "MSc in Aerospace Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences; concentrations: Space Systems and Technology; Guidance, Navigation, and Control Systems",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Chemical Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences; concentrations: Food Process Engineering and Technology; Metallurgical Engineering",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Civil and Infrastructural Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Electrical and Computer Engineering",
+      "institution": "Khalifa University",
+      "detail": "Listed under both the College of Engineering and Physical Sciences and the College of Computing and Mathematical Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Engineering Systems and Management",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences; concentrations: Technology Management, Innovation and Entrepreneurship; Complex Systems Acquisition and Management",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Health Systems Management",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences; listed as NEW",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Materials Science and Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences; concentrations: Space Systems and Technology; Metallurgical Engineering",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Mechanical Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences; concentration: Space Systems and Technology",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Nuclear Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Petroleum Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MEng in Health, Safety and Environmental Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences; fully online, part-time only",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Applied Chemistry",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Medical Physics",
+      "institution": "Khalifa University",
+      "detail": "College of Engineering and Physical Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Applied Mathematics",
+      "institution": "Khalifa University",
+      "detail": "College of Computing and Mathematical Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Computational Data Science",
+      "institution": "Khalifa University",
+      "detail": "College of Computing and Mathematical Sciences; concentrations: Computational Systems; Data Analytics",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Computer Science",
+      "institution": "Khalifa University",
+      "detail": "College of Computing and Mathematical Sciences; concentration: Artificial Intelligence",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Robotics and Autonomous Systems",
+      "institution": "Khalifa University",
+      "detail": "College of Computing and Mathematical Sciences; listed as NEW",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Biomedical Engineering",
+      "institution": "Khalifa University",
+      "detail": "College of Medicine and Health Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Digital Health",
+      "institution": "Khalifa University",
+      "detail": "College of Medicine and Health Sciences; listed as NEW",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "MSc in Molecular Life Sciences",
+      "institution": "Khalifa University",
+      "detail": "College of Medicine and Health Sciences",
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Doctoral students. Research Path (work commitment, full-time only): Tier I full tuition with AED 20,000 basic monthly stipend plus an additional AED 20,000 allowance; Tier II same with AED 10,000 additional; Tier III 75% tuition waiver and AED 20,000 stipend; Tier IV 50% waiver and free accommodation. Study Path (no work commitment): Tier I full tuition and AED 4,000 monthly stipend; Tier II 75% waiver and AED 2,000 stipend; Tier III 50% waiver; Tier IV 25% waiver. The scholarship page names no specific programmes; the list is from the university's graduate programmes catalogue (20 PhD programmes listed).",
+     "source_text": "pursuing a Doctoral degree at Khalifa University",
+     "url": "https://www.ku.ac.ae/scholarship/graduate-research-teaching-scholarship-for-international-students"
+    },
+    "programmes": [
+     {
+      "name": "PhD in Chemistry",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Earth Sciences",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Physics",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Aerospace Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Chemical Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Civil Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Electrical Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Engineering Systems and Management",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Materials Science and Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Mechanical Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Nuclear Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Petroleum Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Mathematics",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Computer Science",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Computer and Information Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Robotics",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Biomedical Engineering",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Biomedical Sciences",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Molecular Life Sciences",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     },
+     {
+      "name": "PhD in Public Health",
+      "institution": "Khalifa University",
+      "detail": null,
+      "source_text": null,
+      "url": "https://www.ku.ac.ae/academics/graduate-programs"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral",
+   "diploma"
+  ],
+  "catalogue_url": "https://www.ku.ac.ae/academics/graduate-programs",
+  "notes": [
+   "The scholarship page does not tie the scholarship to specific programmes; it covers graduate programmes at the university generally, so the university's graduate programmes catalogue is used.",
+   "Catalogue page has internal discrepancies: the overview says 20 master's and six PhD programmes, but the lists show 21 unique master's and 20 PhD programmes. The detailed lists were used. The same list is at ku.ac.ae/master.",
+   "Durations and teaching language are not stated on the catalogue page; PhD concentrations are not named.",
+   "Direct bachelor's-to-PhD applicants are mentioned on the postgraduate admissions page (full-time only) but are not shown to be covered by the scholarship."
+  ]
+ }
+]

@@ -1,0 +1,264 @@
+[
+    {
+        "external_key":  "cn-pku-grad-2026",
+        "status":  "partly",
+        "official_title":  "2026 Scholarship Applications Are Now Open for Prospective International Graduate Students of Peking University",
+        "title_url":  "https://isd.pku.edu.cn/en/detail.php?id=819",
+        "title_action":  "keep",
+        "degrees":  {
+                        "codes":  [
+                                      "master",
+                                      "doctorate"
+                                  ],
+                        "confirmed":  true,
+                        "quote":  "Chinese Government Scholarship covers 2-3 years for a master\u0027s and 4-5 years for a doctorate; PKUS 4 years for a doctorate; BGS 2-3 years master\u0027s and 4-5 years doctorate (as summarised from the official notice)",
+                        "url":  "https://isd.pku.edu.cn/en/detail.php?id=819"
+                    },
+        "opens":  {
+                      "date_type":  "not_announced",
+                      "starts_on":  null,
+                      "ends_on":  null,
+                      "phrase":  "open now",
+                      "source_text":  "Notice dated 12 January 2026: \"Complete the Peking University online scholarship application (open now until Beijing Time 9:00a.m. on March 9)\"; no opening date is stated.",
+                      "url":  "https://isd.pku.edu.cn/en/detail.php?id=819",
+                      "call_year":  "2026"
+                  },
+        "closes":  {
+                       "type":  "exact",
+                       "local_datetime":  "2026-03-09 09:00",
+                       "timezone":  "Asia/Shanghai",
+                       "source_text":  "open now until Beijing Time 9:00a.m. on March 9; CSC application open now until Beijing Time at 24:00 on March 17",
+                       "url":  "https://isd.pku.edu.cn/en/detail.php?id=819",
+                       "call_year":  "2026",
+                       "latest_call_is_past":  true
+                   },
+        "matches_current":  {
+                                "title":  true,
+                                "degrees":  true,
+                                "opens":  false,
+                                "closes":  true
+                            },
+        "notes":  [
+                      "The year is not printed beside \u0027March 9\u0027 or \u0027March 17\u0027; 2026 is read from the notice title (\u00272026 Scholarship Applications\u0027) and the page date 12 January 2026. Downgrade to date_only/unconfirmed if you will not accept that.",
+                      "The website\u0027s current opens value (26 October 2026 to 25 December 2026) is NOT supported by any official page I could reach. isd.pku.edu.cn/en/ home page and searches of pku.edu.cn show no 2027 notice; the only PKU graduate scholarship call published is the 2026 one (now closed). The Oct 26-Dec 25 2026 window may come from a source I could not find; it should be removed or its source re-checked.",
+                      "CSC application on the same page closes midnight (24:00) Beijing Time on March 17 (year not printed).",
+                      "id=730 (\u00272026 Application Information for International Students\u0027) returned \u0027content does not exist or has been deleted\u0027.",
+                      "Certificate download available from the Application Status page \u0027since February 25\u0027 (no year)."
+                  ]
+    },
+    {
+        "external_key":  "cn-sjtu-grad-2026",
+        "status":  "confirmed",
+        "official_title":  "2026 SJTU International Graduate Admissions Guide",
+        "title_url":  "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/268",
+        "title_action":  "keep",
+        "degrees":  {
+                        "codes":  [
+                                      "master",
+                                      "doctorate"
+                                  ],
+                        "confirmed":  true,
+                        "quote":  "Master\u0027s degree program applicants; Doctoral degree program applicants",
+                        "url":  "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/268"
+                    },
+        "opens":  {
+                      "date_type":  "date_only",
+                      "starts_on":  "2025-10-15",
+                      "ends_on":  null,
+                      "phrase":  "October 15, 2025",
+                      "source_text":  "October 15, 2025: Opening of 2026 applications",
+                      "url":  "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/268",
+                      "call_year":  "2026"
+                  },
+        "closes":  {
+                       "type":  "route_dependent",
+                       "source_text":  "December 15, 2025: Deadline for 1st Round of Chinese Government Scholarship (apply through SJTU); February 15, 2026: Deadline for the Final Round of Chinese Government Scholarship; March 31, 2026: Deadline for the SGS Scholarship and SJTU Scholarship applications; May 31, 2026: Deadline for self-supported applications. Beijing Time; no hour given.",
+                       "url":  "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/268",
+                       "call_year":  "2026",
+                       "latest_call_is_past":  true
+                   },
+        "matches_current":  {
+                                "title":  true,
+                                "degrees":  true,
+                                "opens":  true,
+                                "closes":  false
+                            },
+        "notes":  [
+                      "Closing differs by scholarship: CGS 15 Dec 2025 (round 1) / 15 Feb 2026 (final round); SGS and SJTU Scholarship 31 Mar 2026; self-supported 31 May 2026. The website\u0027s single date 15 Feb 2026 is only the final CGS round, so route_dependent is more accurate (or keep 15 Feb 2026 as the CGS date).",
+                      "No 2027 SJTU international graduate guide was found; searches only show 2026 guide and school-level 2027 pages (e.g. SAIF Round 1 on Dec 15, 2026), which are not this record."
+                  ]
+    },
+    {
+        "external_key":  "cn-tsinghua-grad-2027",
+        "status":  "partly",
+        "official_title":  "Admission to Graduate Programs of Tsinghua University 2027 (For International Students)",
+        "title_url":  "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm",
+        "title_action":  "keep",
+        "degrees":  {
+                        "codes":  [
+                                      "master",
+                                      "doctorate"
+                                  ],
+                        "confirmed":  true,
+                        "quote":  "Tsinghua offers master\u0027s and doctoral programs across 54 schools and departments (as summarised from the official 2027 notice; page itself could not be fetched directly)",
+                        "url":  "https://yz.tsinghua.edu.cn/en/info/1035/1581.htm"
+                    },
+        "opens":  {
+                      "date_type":  "month",
+                      "starts_on":  null,
+                      "ends_on":  null,
+                      "phrase":  "mid-September 2026",
+                      "source_text":  "Official 2027 notice/reminder: the international application system had not yet opened and is expected to be accessible \u0027from mid-September 2026 to February 2027\u0027; application period generally \u0027from September to February of the following year\u0027.",
+                      "url":  "https://yz.tsinghua.edu.cn/en/info/1035/1583.htm",
+                      "call_year":  "2027"
+                  },
+        "closes":  {
+                       "type":  "route_dependent",
+                       "source_text":  "Deadlines and application rounds for international graduate students differ by department/school and programme; see \u0027Remarks of Application\u0027 in each programme catalogue. Winter break 21 January to 17 February 2027 may delay verification.",
+                       "url":  "https://yz.tsinghua.edu.cn/en/info/1035/1583.htm",
+                       "call_year":  "2027",
+                       "latest_call_is_past":  false
+                   },
+        "matches_current":  {
+                                "title":  true,
+                                "degrees":  true,
+                                "opens":  true,
+                                "closes":  true
+                            },
+        "notes":  [
+                      "yz.tsinghua.edu.cn and www.tsinghua.edu.cn refused connections (ECONNREFUSED) from here, so page text was only available through search-tool summaries of the official pages 1581, 1582, 1583; exact quotes could not be re-read. Browser pane also failed.",
+                      "Opening: the notice says the system was expected from mid-September 2026; I could not confirm whether it has actually opened as of 2026-10-23. Tsinghua Shenzhen International Graduate School (sigs.tsinghua.edu.cn, 2026/0917 notice) says 2027 admissions are open, with closing 17:00 Beijing Time on May 15, 2027 (school-level, not general).",
+                      "Programme-level examples from Tsinghua pages: Advanced Computing first round before Dec 15, 2026 17:00; Global MBA rounds 19 Oct 2026, 14 Dec 2026, 22 Feb 2027, 31 Mar 2027.",
+                      "Related page \u0027https://yz.tsinghua.edu.cn/en/info/1027/1117.htm\u0027 is titled \u00272026 Chinese Government Scholarship (Scholarship for 2027 is coming soon)\u0027; no 2027 scholarship dates found.",
+                      "Website title adds \u0027(CGS and BGS)\u0027 and \u0027and Scholarships\u0027; the official site name is \u0027THU Graduate Admissions for International Students\u0027, so the difference is descriptive and kept."
+                  ]
+    },
+    {
+        "external_key":  "cn-zju-doctoral-2026",
+        "status":  "confirmed",
+        "official_title":  "Application Guide for Doctoral Degree Programs 2026",
+        "title_url":  "https://iczu.zju.edu.cn/admissionsen/woctoralwwegreewwrograms/list.htm",
+        "title_action":  "keep",
+        "degrees":  {
+                        "codes":  [
+                                      "doctorate"
+                                  ],
+                        "confirmed":  true,
+                        "quote":  "Doctoral Degree Programs (three to four academic years); applicants must be Master\u0027s degree holders",
+                        "url":  "https://iczu.zju.edu.cn/admissionsen/woctoralwwegreewwrograms/list.htm"
+                    },
+        "opens":  {
+                      "date_type":  "not_announced",
+                      "starts_on":  null,
+                      "ends_on":  null,
+                      "phrase":  null,
+                      "source_text":  "The page lists only deadlines per funding source; no opening date for the online application system is stated.",
+                      "url":  "https://iczu.zju.edu.cn/admissionsen/woctoralwwegreewwrograms/list.htm",
+                      "call_year":  "2026"
+                  },
+        "closes":  {
+                       "type":  "route_dependent",
+                       "source_text":  "Self-funded \u0027February 28, 2026\u0027; CSC Type B \u0027December 31, 2025\u0027; CSC Type A \u0027check with your country\u0027s international student dispatch department\u0027; China Studies Program Ph.D. in China Fellowship, Zhejiang Government Scholarship, ZJU International School of Medicine Scholarship, ZJE Hai Scholarship, ZJU College of Optical Science and Engineering Scholarship \u0027February 28, 2026\u0027; China-ASEAN Oceanic Scholarship \u0027May 31,2026\u0027. Times are Beijing time.",
+                       "url":  "https://iczu.zju.edu.cn/admissionsen/woctoralwwegreewwrograms/list.htm",
+                       "call_year":  "2026",
+                       "latest_call_is_past":  true
+                   },
+        "matches_current":  {
+                                "title":  true,
+                                "degrees":  true,
+                                "opens":  true,
+                                "closes":  true
+                            },
+        "notes":  [
+                      "No 2027 doctoral guide was found (only the 2026 guide, 2024 guide and a 2027 passport-expiry requirement \u0027after March 1, 2027\u0027).",
+                      "Page titles on the page: \u0027Doctoral Degree Programs\u0027, \u0027Application Guide for Doctoral Degree Programs 2026\u0027, \u0027Catalog of Chinese-taught/English-taught Doctoral Degree Programs 2026\u0027. The website title is a descriptive grouping and is kept."
+                  ]
+    },
+    {
+        "external_key":  "cn-yenching-2027",
+        "status":  "partly",
+        "official_title":  "Yenching Fellowship",
+        "title_url":  "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm",
+        "title_action":  "change",
+        "degrees":  {
+                        "codes":  [
+                                      "master"
+                                  ],
+                        "confirmed":  true,
+                        "quote":  "Yenching Academy of Peking University Master\u0027s Program in China Studies ... two years in duration",
+                        "url":  "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm"
+                    },
+        "opens":  {
+                      "date_type":  "date_only",
+                      "starts_on":  "2026-09-01",
+                      "ends_on":  null,
+                      "phrase":  "starting September 1, 2026",
+                      "source_text":  "applications for the 2027 cohort of Yenching Scholars starting September 1, 2026",
+                      "url":  "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
+                      "call_year":  "2027"
+                  },
+        "closes":  {
+                       "type":  "exact",
+                       "local_datetime":  "2026-11-30 09:00",
+                       "timezone":  "Asia/Shanghai",
+                       "source_text":  "November 30, 2026 (9:00 am Beijing time)",
+                       "url":  "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
+                       "call_year":  "2027",
+                       "latest_call_is_past":  false
+                   },
+        "matches_current":  {
+                                "title":  false,
+                                "degrees":  false,
+                                "opens":  true,
+                                "closes":  false
+                            },
+        "notes":  [
+                      "Closing: the Admissions page gives \u00279:00 am Beijing time\u0027, so the instant is fixed; the website currently shows date only (30 November 2026, no time). The home page (yenchingacademy.pku.edu.cn) itself states \u0027November 30, 2026\u0027 without time.",
+                      "Degrees: the website\u0027s degrees_now is empty. The official 2026-entry page (29 October 2025) calls it a \u0027Master\u0027s Program in China Studies\u0027 (two years). The 2027 Admissions page itself does not use the word master\u0027s, and applicants need \u0027a minimum of a Bachelor\u0027s degree\u0027.",
+                      "Title: official pages never use \u0027Yenching Academy Scholarship\u0027. They use \u0027Yenching Academy of Peking University Master\u0027s Program in China Studies\u0027 (programme) and \u0027Yenching Fellowship\u0027 (funding, covers the first academic year plus a second-year Yenching Fellowship); \u0027Yenching Scholars\u0027 for students. \u0027Yenching Fellowship\u0027 is the scholarship name; alternative acceptable title: \u0027Yenching Academy of Peking University Master\u0027s Program in China Studies (Yenching Fellowship)\u0027. Judgement call for the caller.",
+                      "HMT (Hong Kong, Macao, Taiwan) route for the previous intake closed 12:00 noon on January 9, 2026; the 2027 HMT deadline was not retrieved. Applicants from mainland China follow separate PKU Graduate School guidance.",
+                      "No separate 2027 international instruction page was found; the 2025 and 2026 instruction pages exist."
+                  ]
+    },
+    {
+        "external_key":  "cn-schwarzman-2028",
+        "status":  "confirmed",
+        "official_title":  "Schwarzman Scholars",
+        "title_url":  "https://www.schwarzmanscholars.org/admissions/",
+        "title_action":  "keep",
+        "degrees":  {
+                        "codes":  [
+                                      "master"
+                                  ],
+                        "confirmed":  true,
+                        "quote":  "Schwarzman Scholars is a prestigious one-year, fully funded master\u0027s program in global affairs at Tsinghua University.",
+                        "url":  "https://www.schwarzmanscholars.org/"
+                    },
+        "opens":  {
+                      "date_type":  "month",
+                      "starts_on":  "2027-04-01",
+                      "ends_on":  null,
+                      "phrase":  "April 2027 (U.S. and global applicants); March 2027 (Chinese citizens)",
+                      "source_text":  "Application Period: Apr 2027 - Sep 2027 for U.S. and Global applicants; Mar 2027 - May 2027 for applicants with Chinese citizenship (Mainland, Hong Kong, Macau, Taiwan). Program begins Aug 2028.",
+                      "url":  "https://www.schwarzmanscholars.org/admissions/",
+                      "call_year":  "2028-29"
+                  },
+        "closes":  {
+                       "type":  "not_announced",
+                       "source_text":  "Only month ranges are given (application period ends Sep 2027 for U.S./Global; May 2027 for Chinese citizens); no exact closing date or time is published.",
+                       "url":  "https://www.schwarzmanscholars.org/admissions/",
+                       "call_year":  "2028-29",
+                       "latest_call_is_past":  false
+                   },
+        "matches_current":  {
+                                "title":  true,
+                                "degrees":  true,
+                                "opens":  false,
+                                "closes":  true
+                            },
+        "notes":  [
+                      "Opens: the page gives different months by route (Apr 2027 for U.S./Global, Mar 2027 for Chinese citizens), so route_dependent; the website\u0027s \u0027Apr 2027\u0027 is the U.S./Global start only. If you prefer a single value, use month \u0027Apr 2027\u0027 with a note on the Chinese-citizen route.",
+                      "Selection cycle: Oct-Nov 2027 (U.S./Global), Jun-Jul 2027 (Chinese citizenship). The admissions page does not state degree level; the home page and about page do (\u0027one-year master\u0027s in global affairs\u0027)."
+                  ]
+    }
+]

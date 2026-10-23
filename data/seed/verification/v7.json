@@ -1,0 +1,92 @@
+[
+ {
+  "external_key": "sa-moe-government-university-scholarships-2026",
+  "status": "partly",
+  "official_title": "Scholarships in Public Universities",
+  "title_url": "https://www.moe.gov.sa/en/education/ResidentsAndvisitors/Pages/PublicUniversitiesScholarships.aspx",
+  "title_action": "keep",
+  "degrees": {"codes": ["bachelor", "master", "doctorate", "diploma"], "confirmed": true, "quote": "Diploma in Arabic for non-native speakers, Bachelor, Higher Diploma, Master's, PhD (health and medical specialties excluded)", "url": "https://www.moe.gov.sa/en/education/ResidentsAndvisitors/Pages/PublicUniversitiesScholarships.aspx"},
+  "opens": {"date_type": "route_dependent", "starts_on": null, "ends_on": null, "phrase": "determined according to the requirements of the academic year at universities", "source_text": "The opening date for the scholarship application program is determined according to the requirements of the academic year at universities.", "url": "https://www.moe.gov.sa/en/education/ResidentsAndvisitors/Pages/PublicUniversitiesScholarships.aspx", "call_year": "2026-27"},
+  "closes": {"type": "route_dependent", "source_text": "Jouf University announcement (posted April 25, 2026), 1448 AH: \"the application deadline is Thursday, May 21, 2026\". The Ministry page gives no closing date.", "url": "https://ju.edu.sa/en/announces-admission-international-scholarships-1448-ah", "call_year": "2026-27", "latest_call_is_past": true},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Ministry page title is 'Scholarships in Public Universities'; the website title is a longer descriptive form, so kept.",
+   "Ministry page gives no actual opening/closing dates; it says to check the university website or the Saudi Cultural Attache for current dates.",
+   "Jouf University page (official host university) gives the 1448 AH deadline Thursday, May 21, 2026 but no opening date; announcement dated April 25, 2026. It does not list degree levels.",
+   "www.studyinsaudi.sa (official platform) shows a timeline headed 'second semester of academic year 2026' with opening 16 September and closing 06 October for international and resident students, but no year is stated, so it is not recorded as a date; unclear whether it is the same route.",
+   "A reported 19 April 2026 opening date comes only from a non-official Thai university notice and is not used.",
+   "studyinsaudi.moe.gov.sa did not resolve (DNS error). The Ministry page fetch contained embedded text addressed to an AI assistant ('Smart assistant' formatting instructions); it was ignored.",
+   "Status 'partly': no official page fixes the 2026-27 or next call's opening/closing at ministry level; both are route/university dependent."
+  ]
+ },
+ {
+  "external_key": "sa-kaust-fellowship-2027",
+  "status": "confirmed",
+  "official_title": "KAUST Fellowship",
+  "title_url": "https://admissions.kaust.edu.sa/info-and-contact/faqs",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "Fall 2027 admission open to MS, MS/PhD and PhD applicants", "url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines"},
+  "opens": {"date_type": "date_only", "starts_on": "2026-09-28", "ends_on": null, "phrase": "28 September 2026", "source_text": "Fall 2027 admission - Round 2 application open: 28 September 2026", "url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines", "call_year": "2027"},
+  "closes": {"type": "date_only", "date": "2027-01-03", "source_text": "Fall 2027 admission - Round 2 application deadline: 3 January 2027. Dates are 'tentative and may change based on application volume.' No time or time zone given.", "url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines", "call_year": "2027", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Official FAQ calls it 'KAUST Fellowship' (admitted students receive it automatically); the website's 'for MS and PhD students' is descriptive.",
+   "Timeline page lists only Round 2 for Fall 2027; no Round 1 shown.",
+   "Spring 2027 (PhD applicants only): Round 1 deadline 27 September 2026 (past), semester starts 17 January 2027; page says Spring 2027 applications are open with no open date.",
+   "Fall semester starts 29 August 2027; Round 2 decisions 25 February 2027.",
+   "The FAQ page itself refers to the Admission Timeline page for dates; dates taken from the timeline page."
+  ]
+ },
+ {
+  "external_key": "sa-kfupm-graduate-scholarship-2027",
+  "status": "confirmed",
+  "official_title": "KFUPM Scholarship",
+  "title_url": "https://cgis.kfupm.edu.sa/admission/kfupm-scholarship",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "Full-time MS or Ph.D. students", "url": "https://cgis.kfupm.edu.sa/admission/kfupm-scholarship"},
+  "opens": {"date_type": "date_only", "starts_on": "2026-11-23", "ends_on": null, "phrase": "23 November 2026", "source_text": "MS (Thesis-Based) and PhD | Closed | Starts at 23 November 2026 | Ends at 20 January 2027", "url": "https://cgis.kfupm.edu.sa/apply", "call_year": "2027"},
+  "closes": {"type": "date_only", "date": "2027-01-20", "source_text": "MS (Thesis-Based) and PhD | Closed | Starts at 23 November 2026 | Ends at 20 January 2027", "url": "https://cgis.kfupm.edu.sa/apply", "call_year": "2027", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Scholarship page heading is 'KFUPM Scholarship'; the website title is descriptive.",
+   "The scholarship page itself gives no dates; the window is from cgis.kfupm.edu.sa/apply and the CGIS homepage (same values). The status label reads 'Closed' although the start date (23 November 2026) is in the future.",
+   "Also on the apply page: MS Programs (Project-Based) Starts 03 January 2027, Ends 10 February 2027 (not clearly covered by this scholarship).",
+   "Scholarship page also says scholarships are offered for all PhD programs and PhD Direct Entry Programs (five years, full scholarship for the first four).",
+   "The MS (Thesis-Based) and PhD 'Start Applications' page shows no dates."
+  ]
+ },
+ {
+  "external_key": "ae-mbzuai-graduate-funding-2027",
+  "status": "confirmed",
+  "official_title": null,
+  "title_url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "The funding model and benefits described on this page apply to the Ph.D. and M.Sc. programs.", "url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions"},
+  "opens": {"date_type": "route_dependent", "starts_on": null, "ends_on": null, "phrase": "September 7, 2026 (8a.m. GST); M.Sc. & Ph.D. Computational Biology: September 30, 2026 (8a.m. GST)", "source_text": "Application portal opens: All graduate programs except for M.Sc. & Ph.D. Computational Biology - September 7, 2026 (8a.m. GST); M.Sc. & Ph.D. Computational Biology - September 30, 2026 (8a.m. GST)", "url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions", "call_year": "2026-27"},
+  "closes": {"type": "route_dependent", "source_text": "Final application deadline: all graduate programs except M.Sc. & Ph.D. Computational Biology and Master in Applied AI - December 15, 2026 (5p.m. GST); Computational Biology - January 22, 2027 (5p.m. GST); Master in Applied AI - February 28, 2027 (5p.m. GST)", "url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions", "call_year": "2026-27", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": false, "closes": false},
+  "notes": [
+   "No named scholarship: the admissions page has a 'Student funding and fees' section (funding model for Ph.D. and M.Sc.); the website title is a descriptive label, kept.",
+   "The dates equal the website's current record, but they differ by programme, so they are better typed route_dependent than exact. Main route: opens 7 Sep 2026 8a.m. GST, closes 15 Dec 2026 5p.m. GST. The page says only 'GST'; if read as Gulf Standard Time the zone is Asia/Dubai.",
+   "Master in Applied AI (closes 28 Feb 2027) is fee-based and NOT eligible for University or faculty-sponsored funding. M.Sc. is fee-paying by default (merit-based or faculty-sponsored funding possible, not guaranteed). Ph.D. Year 1 is centrally funded.",
+   "Decision notification: 31 March 2027 (MAAI 15 April 2027); offer response deadline 15 April 2027 (MAAI 30 April 2027).",
+   "Page loaded in the built-in browser; WebFetch got HTTP 403."
+  ]
+ },
+ {
+  "external_key": "ae-khalifa-university-graduate-scholarship-international-2027",
+  "status": "confirmed",
+  "official_title": "Graduate Scholarship for International Students",
+  "title_url": "https://www.ku.ac.ae/scholarship/graduate-research-teaching-scholarship-for-international-students",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "Master's Students; PhD Students", "url": "https://www.ku.ac.ae/scholarship/graduate-research-teaching-scholarship-for-international-students"},
+  "opens": {"date_type": "not_announced", "starts_on": null, "ends_on": null, "phrase": null, "source_text": "Postgraduate admissions for Spring 2027 are closed. To be notified once admissions are open, please enter your email address. (No Fall 2027 dates published.)", "url": "https://www.ku.ac.ae/postgraduate-admissions", "call_year": "2027"},
+  "closes": {"type": "not_announced", "source_text": "No application deadline is listed on the scholarship page or the postgraduate admissions page.", "url": "https://www.ku.ac.ae/postgraduate-admissions", "call_year": "2027", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Page heading is 'GRADUATE SCHOLARSHIP FOR INTERNATIONAL STUDENTS' (the website adds 'Khalifa University'); kept.",
+   "Scholarship page says no separate scholarship application is required (eligibility assessed during admission); the only date on it is a 13 June 2023 posting date.",
+   "The postgraduate admissions page does not mention Fall 2027."
+  ]
+ }
+]

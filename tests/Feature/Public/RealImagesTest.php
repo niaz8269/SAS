@@ -44,11 +44,11 @@ class RealImagesTest extends TestCase
         }
     }
 
-    public function test_universities_show_a_photo_of_their_province_or_fall_back_to_china(): void
+    public function test_universities_show_a_photo_of_their_province_or_fall_back_to_their_country(): void
     {
         $china = Country::firstOrCreate(['code' => 'CN'], ['name' => 'China', 'slug' => 'china']);
         $bj = University::create(['name' => 'Peking University', 'slug' => 'pku', 'csc_key' => 'A', 'province' => 'Beijing', 'country_id' => $china->id]);
-        $hu = University::create(['name' => 'Hunan University', 'slug' => 'hnu', 'csc_key' => 'B', 'province' => 'Hunan', 'country_id' => $china->id]);
+        $hu = University::create(['name' => 'Tibet University', 'slug' => 'tu', 'csc_key' => 'B', 'province' => 'Tibet', 'country_id' => $china->id]);
 
         $this->assertStringEndsWith('images/cities/beijing.jpg', $bj->imageUrl());
         $this->assertStringEndsWith('images/destinations/cn.jpg', $hu->imageUrl());

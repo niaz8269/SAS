@@ -1,0 +1,143 @@
+[
+ {
+  "external_key": "gb-chevening-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "One-year taught master's at a UK university; courses must be full-time, UK-based, start in the autumn term and lead to a taught master's qualification. Any subject among eligible courses; the application must list three eligible courses. No subject list is published, ineligible courses do not appear in the course finder.", "source_text": "pursue one-year master's degrees in the UK", "url": "https://www.chevening.org/scholarships/"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["bachelor", "doctorate", "postdoctoral", "diploma"],
+  "catalogue_url": "https://www.chevening.org/scholarships/find-a-course/",
+  "notes": [
+   "Programmes not enumerated: the official course finder covers eligible courses at every UK university.",
+   "Page text was read through a summarising fetch tool, so wording may be lightly paraphrased apart from the short quoted fragments.",
+   "https://www.chevening.org/scholarships/choose-your-courses/ returned 404; the find-a-course page was used instead.",
+   "No official page read states that MBAs or distance learning are excluded; not recorded."
+  ]
+ },
+ {
+  "external_key": "gb-commonwealth-masters-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "One-year full-time taught master's at an approved UK university or higher education institution with a CSC part-funding agreement. Offered under the six CSC development themes (themes not named on this page). MBA not funded; one degree only; a second master's would not normally be funded. Language of study not stated.", "source_text": "The CSC funds one-year taught Master's programmes only.", "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["bachelor", "doctorate", "postdoctoral", "diploma"],
+  "catalogue_url": "https://cscuk.fcdo.gov.uk/uk-universities",
+  "notes": [
+   "Programmes not enumerated: no programme list is published; eligible universities are listed at the catalogue URL (path given by the scholarship page, not opened separately).",
+   "The six development themes are on a separate CSC Development Themes page that was not read.",
+   "The 2027/28 round is closed.",
+   "Page read through a summarising fetch tool; fragments in quotation marks are as returned."
+  ]
+ },
+ {
+  "external_key": "gb-gates-cambridge-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "Eligible master's courses at Cambridge: MPhil, MLitt, MRes, LLM (master's must be full time). Excluded: PGCert, PGDip, MSt, MASt, MBA, EMBA, MFin, PGCE and the Graduate Course in Medicine. No field restriction beyond these course types.", "source_text": "Courses eligible for the Gates Cambridge Scholarship include MPhil, MLitt, MRes, LLM and PhDs.", "url": "https://www.gatescambridge.org/apply/frequently-asked-questions/"},
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "PhD, full time or part time (part-time is described as a pilot); excluded doctoral-type courses: BusD, Doctor of Education, MD (Doctor of Medicine).", "source_text": "PhD (full-time or part-time*)", "url": "https://www.gatescambridge.org/apply/eligibility/"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["bachelor", "postdoctoral", "diploma"],
+  "catalogue_url": "https://www.postgraduate.study.cam.ac.uk/courses",
+  "notes": [
+   "Programmes not enumerated: any eligible course across the University of Cambridge Course Directory.",
+   "Eligibility page also lists 'one-year postgraduate course (full-time)' and MLitt (full-time) as eligible types, and says undergraduate degrees and MASt are not considered.",
+   "Pages read through a summarising fetch tool."
+  ]
+ },
+ {
+  "external_key": "gb-rhodes-2028",
+  "status": "partly",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "Most full-time postgraduate courses at the University of Oxford in almost any field, normally a two-year award. Professional courses (MPP, MBA, MFE) get a one-year tenure only. Not covered: PGCert, PGDip (including PGCE), DClinPsych, graduate-entry/accelerated Medicine, part-time study.", "source_text": "most full-time postgraduate courses in almost any field offered by Oxford University", "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/the-rhodes-scholarship/"},
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "DPhil: direct entry supported for up to three years of fees and stipend; the 1+3 route from a Rhodes-funded one-year master's is supported for up to four years. Four-year CDT/DTP programmes only if another funder covers one year. MPhil-to-DPhil route not available.", "source_text": "a DPhil (PhD) is funded for up to three years of fees and stipend", "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/the-rhodes-scholarship/"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["postdoctoral", "diploma"],
+  "catalogue_url": null,
+  "notes": [
+   "Bachelor is not recorded as a level: the FAQ allows a 'Second BA' only via 'Senior Status' (a two-year undergraduate course) as an exception; the main page describes postgraduate study.",
+   "No programme list published; degree choice needs Rhodes Trust approval under the Conditions of Tenure (not read). The FAQ refers to the University's course listings without a link in the fetched text.",
+   "Applications currently closed; reopening expected 2027 for 2028 entry.",
+   "Pages read through a summarising fetch tool, so quotes are as returned and may be lightly condensed."
+  ]
+ },
+ {
+  "external_key": "us-knight-hennessy-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "Admission to a full-time Stanford graduate degree programme; master's degrees named include MA, MBA, MFA, MPP, MS (also JD, MD, DMA listed generically). The list is illustrative. Excluded: Honors Cooperative Program, Master of Liberal Arts, Master of Legal Studies (MLS), MA/MS degrees added by current Stanford PhD students within their PhD discipline.", "source_text": "including, but not limited to, DMA, JD, MA, MBA, MD, MFA, MPP, MS, or PhD programs", "url": "https://knight-hennessy.stanford.edu/admission/eligibility"},
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "PhD programmes at Stanford (full-time graduate degree programmes); Doctor of Science of Law (JSD) is excluded. Eligibility rules stated for the 2027 cohort and may change.", "source_text": "including, but not limited to, DMA, JD, MA, MBA, MD, MFA, MPP, MS, or PhD programs", "url": "https://knight-hennessy.stanford.edu/admission/eligibility"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["bachelor", "postdoctoral", "diploma"],
+  "catalogue_url": null,
+  "notes": [
+   "Programmes not enumerated: any Stanford graduate programme not excluded; no scholarship-specific programme list published (the page links to Stanford graduate admissions).",
+   "Eligibility page did not state a funding duration; not recorded.",
+   "Page read through a summarising fetch tool."
+  ]
+ },
+ {
+  "external_key": "ch-swiss-excellence-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "Art scholarships (Master in Arts): funding for a first Master's degree at a Swiss art school or conservatory; applicant holds a bachelor's or equivalent and no master's yet. 12 months, extendable to 21 months. Music, visual arts and other artistic domains such as dance, acting or writing; limited list of countries; needs admission letter or proof of application from a Swiss University of the Arts or Music.", "source_text": "Art scholarships (first Master's)", "url": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships-at-a-glance"},
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "PhD scholarships: 12 months, renewable up to 36 months total, any academic field, at a Swiss university or recognised research institute; master's or equivalent required. Research fellowships: one-year (6 to 12 months) research project as part of doctoral studies at a Swiss institution, any discipline, supervisor letter required.", "source_text": "Research fellowships (PhD students), PhD scholarships", "url": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships-at-a-glance"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["bachelor", "postdoctoral", "diploma"],
+  "catalogue_url": null,
+  "notes": [
+   "Postdoctoral not offered from 2027-28: Swiss embassy page states 'As of the academic year 2027-2028, no postdoctoral scholarships will be awarded.' The SBFI at-a-glance page offers none.",
+   "No programme list published; study language not stated on the SBFI page (transcripts need translation if not in English, French, Italian or German).",
+   "Page read through a summarising fetch tool; table values as returned."
+  ]
+ }
+]

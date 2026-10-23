@@ -16,6 +16,18 @@
                 </li>
             @endforeach
         </ul>
+        @if (! empty($cityPhotos))
+            <h2 class="mt-10 text-2xl font-bold">City photographs</h2>
+            <p class="mt-2 text-sm text-muted">Skyline photographs from Wikimedia Commons, shown on universities that have no campus photo of their own.</p>
+            <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+                @foreach ($cityPhotos as $slug => $c)
+                    <li class="card flex items-center gap-3 p-3">
+                        <img src="{{ asset('images/cities/'.$slug.'.jpg') }}" alt="" class="h-14 w-24 shrink-0 rounded object-cover" width="96" height="54" loading="lazy">
+                        <span class="text-sm"><strong>{{ $c['subject'] }}</strong><br><a class="text-navy-700 underline" rel="noopener" href="{{ $c['url'] }}">{{ $c['artist'] }}</a>, {{ $c['license'] }}</span>
+                    </li>
+                @endforeach
+            </ul>
+        @endif
         @if (! empty($universityPhotos))
             <h2 class="mt-10 text-2xl font-bold">University photographs</h2>
             <p class="mt-2 text-sm text-muted">Campus photographs from Wikimedia Commons, cropped to 16:9. Each links to its file page with the author and licence.</p>

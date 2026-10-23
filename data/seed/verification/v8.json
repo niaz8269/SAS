@@ -1,0 +1,220 @@
+[
+ {
+  "external_key": "ae-uaeu-graduate-research-fellowship-international-phd-2027",
+  "status": "confirmed",
+  "official_title": "Graduate Research Fellowships for International PhD Students",
+  "title_url": "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "Graduate Research Fellowships for International PhD Students; \"Student must have and maintain a GPA of 3.5 or higher at the PhD level.\"",
+   "url": "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml"
+  },
+  "opens": {
+   "date_type": "not_announced",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "TBA",
+   "source_text": "UAEU Graduate Programs Information and Admission Deadlines AY 2026-2027: PhD, For Fall 2027 Admission, From (Start): TBA",
+   "url": "https://www.uaeu.ac.ae/en/cgs/pdf/admission-deadlines-for-2026-2027.pdf",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "not_announced",
+   "source_text": "UAEU Graduate Programs Information and Admission Deadlines AY 2026-2027: PhD, For Fall 2027 Admission, To (Deadline): TBA; For Spring 2027 Admission: \"-\"",
+   "url": "https://www.uaeu.ac.ae/en/cgs/pdf/admission-deadlines-for-2026-2027.pdf",
+   "call_year": "2026-27",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Official page title omits the leading 'UAEU' (prefix difference only); the fellowship page itself gives no application dates: 'Opportunities for Fellowships are normally available at the time of the student's admission into the PhD program.'",
+   "Fellowship page is stamped 'Mar 15, 2026' (a content-update date, not a call date).",
+   "Previous cycle (AY 2025-2026 PDF): PhD Fall 2026 admission window began 1 February 2026 and ended 30 April 2026 or 31 March 2026 depending on row (not cleanly legible); not the current call."
+  ]
+ },
+ {
+  "external_key": "qa-hbku-graduate-scholarship-international-2027",
+  "status": "confirmed",
+  "official_title": "Scholarship Guidelines for HBKU Graduate Programs",
+  "title_url": "https://www.hbku.edu.qa/en/scholarship",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "Stipends table: \"International PhD 9,000 QAR ... International Master's 7,000 QAR\"; tuition waivers for PhD and MS/MA programs",
+   "url": "https://www.hbku.edu.qa/en/scholarship"
+  },
+  "opens": {
+   "date_type": "date_only",
+   "starts_on": "2026-10-01",
+   "ends_on": null,
+   "phrase": "01 Oct 2026",
+   "source_text": "Online graduate admission application opens to the public: 01 Oct 2026",
+   "url": "https://www.hbku.edu.qa/en/graduate-admissions",
+   "call_year": "2027"
+  },
+  "closes": {
+   "type": "date_only",
+   "date": "2027-02-01",
+   "source_text": "Admission application deadline for international graduate applicants: 01 Feb 2027",
+   "url": "https://www.hbku.edu.qa/en/graduate-admissions",
+   "call_year": "2027",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Official page is a generic guidelines page, not a named international scholarship: 'You are considered for scholarships during the admissions process; no separate application is needed.' The current title is a descriptive label; no official scholarship name exists.",
+   "Dates come from the HBKU graduate admissions page and the chss/chls admission-requirements pages (01 Oct 2026 / 01 Feb 2027). Several college grad-recruitment pages (cse, cpp, cl, sem, chss, chls, cis) still show the previous cycle (01 Oct 2025 / 01 Feb 2026).",
+   "Page also covers J.D., LL.M. and Certificate programs; international stipends are listed only for PhD and Master's. No time or time zone given for the deadline.",
+   "Separate route: deadline for Qatari and resident applicants seeking funding is 15 Mar 2027."
+  ]
+ },
+ {
+  "external_key": "qa-qu-international-students-scholarship-2027",
+  "status": "confirmed",
+  "official_title": "International Students Scholarship",
+  "title_url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor"
+   ],
+   "confirmed": true,
+   "quote": "Qatar University offers this scholarship to international students who apply to undergraduate programs",
+   "url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types"
+  },
+  "opens": {
+   "date_type": "not_announced",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": null,
+   "source_text": "Spring 2027 Semester, International applicants Timeline: \"Please note that the application dates for international students have not yet been determined.\"",
+   "url": "https://www.qu.edu.qa/en-us/students/admission/undergraduate/Pages/application-timeline.aspx",
+   "call_year": "2027"
+  },
+  "closes": {
+   "type": "not_announced",
+   "source_text": "Spring 2027 Semester, International applicants Timeline: \"Please note that the application dates for international students have not yet been determined.\"; scholarship page: apply \"during the announced application period\"",
+   "url": "https://www.qu.edu.qa/en-us/students/admission/undergraduate/Pages/application-timeline.aspx",
+   "call_year": "2027",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Current title adds 'Qatar University' and '(undergraduate)'; descriptive only.",
+   "The Spring 2027 scholarship timeline page (scholarships-timeline.aspx) lists only resident/current-student scholarships (e.g. 11 October 2026 to 11 November 2026) and does not list the International Students Scholarship.",
+   "The 1 March 2026 to 25 March 2026 admission window on the undergraduate timeline page is the general window shown above the notice; the page states dates for international students are not yet determined."
+  ]
+ },
+ {
+  "external_key": "om-squ-international-postgraduate-scholarship-2027",
+  "status": "confirmed",
+  "official_title": "International Students Scholarships",
+  "title_url": "https://www.squ.edu.om/ps/en-us/scholarships",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "master"
+   ],
+   "confirmed": true,
+   "quote": "Number of scholarship: 2 for Masters",
+   "url": "https://www.squ.edu.om/ps/en-us/scholarships"
+  },
+  "opens": {
+   "date_type": "date_only",
+   "starts_on": "2026-10-15",
+   "ends_on": null,
+   "phrase": "15 October 2026",
+   "source_text": "Announcement of Postgraduate Programs, Academic Year 2027-2028, For Omani and International Students: 15 October 2026 - 14 January 2027 (Application Period)",
+   "url": "https://www.squ.edu.om/Portals/42/announcement/Programs%20announcement-EN.png",
+   "call_year": "2027-28"
+  },
+  "closes": {
+   "type": "date_only",
+   "date": "2027-01-14",
+   "source_text": "Application Period: 15 October 2026 - 14 January 2027",
+   "url": "https://www.squ.edu.om/Portals/42/announcement/Programs%20announcement-EN.png",
+   "call_year": "2027-28",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "The dated period is the SQU postgraduate admission application period (announcement graphic on the Deanship home page https://www.squ.edu.om/ps/en-us/, dated 15 October 2026), not a separate scholarship application: scholarship page says 'Nomination is automatic and does not require submitting an application to compete for the scholarship'; announcement says admitted students meeting the general scholarship criteria 'are automatically considered for scholarships and sponsorships'.",
+   "Announcement also gives: application evaluation 20 January 2027 - 21 March 2027; admission results 31 March 2027 - 30 April 2027; commencement of study September 2027. No time or time zone given.",
+   "The separate 'SQU Scholarships' scheme on the same page (118 for both master's and PhD, nominated by the International Students Section) is general; the dedicated International Students Scholarships allocation is Masters only.",
+   "Current title adds 'Sultan Qaboos University' and 'Postgraduate'; descriptive only (official page says 'International Students Scholarships')."
+  ]
+ },
+ {
+  "external_key": "pl-banach-nawa-2027",
+  "status": "partly",
+  "official_title": "Banach NAWA Programme",
+  "title_url": "https://nawa.gov.pl/en/students/foreign-students/the-banach-scholarship-programme/call-for-proposals",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "master"
+   ],
+   "confirmed": true,
+   "quote": "Banach NAWA programme offers scholarships for full-time second-cycle studies conducted in Polish or English",
+   "url": "https://nawa.gov.pl/en/students/foreign-students/the-banach-scholarship-programme/about-the-programme"
+  },
+  "opens": {
+   "date_type": "not_announced",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": null,
+   "source_text": "Announcement No. 16/2026 of April 13, 2026 (studies or preparatory course from winter semester 2026/27) states only the closing date; no opening date is given. No 2027/28 call is published.",
+   "url": "https://nawa.gov.pl/en/students/foreign-students/the-banach-scholarship-programme/call-for-proposals",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "exact",
+   "local_datetime": "2026-05-08 15:00",
+   "timezone": "Europe/Warsaw",
+   "source_text": "The call for applications will continue until May 8, 2026, 3:00:00 p.m. local time (Warsaw) or until 300 applications are submitted in each of country groups no. 1-3 and 200 applications in the group no. 4",
+   "url": "https://nawa.gov.pl/images/Banach/2026/Banach-2026---Call-for-applications-EN.pdf",
+   "call_year": "2026-27",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": false
+  },
+  "notes": [
+   "Only the 2026/27 call (Announcement No. 16/2026 of April 13, 2026) is published and it is past. No 2027/28 call on nawa.gov.pl as of 2026-10-23 (call-for-proposals page shows only the 2026 announcement; other entries are closed calls 2025 and earlier).",
+   "Official wording: page heading 'Banach NAWA Scholarship Programme'; announcement says 'Banach NAWA Programme' and 'Prof. Stefan Banach Programme'.",
+   "The call closed earlier for a country group if 300 (groups 1-3) or 200 (group 4) applications were reached.",
+   "Current record lists closes as not_announced and cites the 2026 call as reference; per brief rule 3 the past call's exact deadline is reported here, so closes is marked as differing."
+  ]
+ }
+]

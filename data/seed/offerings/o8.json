@@ -1,0 +1,156 @@
+[
+    {
+        "external_key": "ae-uaeu-graduate-research-fellowship-international-phd-2027",
+        "status": "confirmed",
+        "levels": [
+            {
+                "code": "doctorate",
+                "confirmed": true,
+                "summary": {
+                    "detail": "PhD fellowship for international students; no discipline restriction stated and no named programmes. Awarded for a maximum of 4 years (one semester extension possible on request with justification). Partial package including full tuition waiver; full-time enrolment of at least 9 graduate credits per semester; at least 10 hours per week as research assistant; GPA 3.5 or higher; one paper in a refereed, indexed journal required. Language of study not stated on the page.",
+                    "source_text": "Fellowships are awarded for a maximum period of 4 years.",
+                    "url": "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml"
+                },
+                "programmes": []
+            }
+        ],
+        "levels_not_offered": [
+            "master",
+            "bachelor",
+            "postdoctoral",
+            "diploma"
+        ],
+        "catalogue_url": null,
+        "notes": [
+            "Page names no specific PhD programmes; fellowships are normally available at the time of the student's admission into the PhD program.",
+            "Master's level appears only as a prior GPA requirement (3.5 in the Master's), not as a funded level."
+        ]
+    },
+    {
+        "external_key": "qa-hbku-graduate-scholarship-international-2027",
+        "status": "confirmed",
+        "levels": [
+            {
+                "code": "master",
+                "confirmed": true,
+                "summary": {
+                    "detail": "Tuition waivers: STEM MS (College of Science and Engineering, College of Health and Life Sciences) 75%; SHAPE MS and MA (College of Islamic Studies, College of Humanities and Social Sciences, College of Public Policy) 60%; MS Economics (School of Economics and Management) 0% waiver; LL.M. (College of Law) 0% waiver. International Master's stipend 7,000 QAR for 21 months. Awards not guaranteed, merit or need based; stipend recipients work 10 hours per week as research assistants. Language of instruction not stated on the scholarship page. No separate application needed; considered during admission.",
+                    "source_text": "International Master's 7,000 QAR",
+                    "url": "https://www.hbku.edu.qa/en/scholarship"
+                },
+                "programmes": []
+            },
+            {
+                "code": "doctorate",
+                "confirmed": true,
+                "summary": {
+                    "detail": "PhD STEM (College of Science and Engineering, College of Health and Life Sciences) and PhD SHAPE and S.J.D. (College of Islamic Studies, College of Humanities and Social Sciences, College of Law): 100% tuition waiver. International PhD stipend 9,000 QAR for 45 months. Individual programmes are not named on the scholarship page.",
+                    "source_text": "International PhD 9,000 QAR",
+                    "url": "https://www.hbku.edu.qa/en/scholarship"
+                },
+                "programmes": []
+            }
+        ],
+        "levels_not_offered": [
+            "bachelor",
+            "postdoctoral"
+        ],
+        "catalogue_url": "https://catalog.hbku.edu.qa/",
+        "notes": [
+            "Scholarship page gives funding categories by college, not named programmes; individual programmes are in the catalogue (https://catalog.hbku.edu.qa/) and the programme listing https://www.hbku.edu.qa/programs, not enumerated here.",
+            "Guidelines do not apply to students funded by external sources.",
+            "Table-row wording (percentages, colleges) was taken from a tool-read summary of the page; verify exact phrasing before quoting verbatim.",
+            "Diploma entry is borderline (certificate tuition category only); consider showing only master and doctorate on the website."
+        ]
+    },
+    {
+        "external_key": "qa-qu-international-students-scholarship-2027",
+        "status": "confirmed",
+        "levels": [
+            {
+                "code": "bachelor",
+                "confirmed": true,
+                "summary": {
+                    "detail": "For international applicants to undergraduate programmes; applicant must meet the admission requirements of the college applied to. No programmes named. Minimum high school average 95%; recipients keep a minimum cumulative GPA of 3.0 out of 4.0 and complete at least 12 hours per semester; funded until graduation within the study plan period. Transfer, visiting, non-degree and second-bachelor's applicants are not eligible.",
+                    "source_text": "Qatar University offers this scholarship to international students who apply to undergraduate programs",
+                    "url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types"
+                },
+                "programmes": []
+            }
+        ],
+        "levels_not_offered": [
+            "master",
+            "doctorate",
+            "postdoctoral",
+            "diploma"
+        ],
+        "catalogue_url": null,
+        "notes": [
+            "No eligible or excluded colleges or programmes are named on the scholarship page; the undergraduate programme list was not read as part of this scholarship."
+        ]
+    },
+    {
+        "external_key": "om-squ-international-postgraduate-scholarship-2027",
+        "status": "confirmed",
+        "levels": [
+            {
+                "code": "master",
+                "confirmed": true,
+                "summary": {
+                    "detail": "2 places for Masters; all colleges and all majors, full-time study only. Full scholarship covering tuition fees plus a 250 OR allowance; application fees and bridging courses not covered. For non-residents of Oman; must be unconditionally admitted with minimum undergraduate CGPA 3.00 out of 4.00 or equivalent. Nominated by the International Students Section, no application.",
+                    "source_text": "Number of scholarship: 2 for Masters",
+                    "url": "https://www.squ.edu.om/ps/en-us/scholarships"
+                },
+                "programmes": []
+            }
+        ],
+        "levels_not_offered": [
+            "doctorate",
+            "bachelor",
+            "postdoctoral",
+            "diploma"
+        ],
+        "catalogue_url": null,
+        "notes": [
+            "The separate general 'SQU Scholarships' scheme on the same page (118 for both master's and PhD) is not the International Students Scholarships allocation, which lists Masters only.",
+            "Wording 'all colleges and all majors' is from a tool-read summary of the page."
+        ]
+    },
+    {
+        "external_key": "pl-banach-nawa-2027",
+        "status": "partly",
+        "levels": [
+            {
+                "code": "master",
+                "confirmed": true,
+                "summary": {
+                    "detail": "Full-time second-cycle studies in Polish or English at universities supervised by the Minister of Science and Higher Education that have a framework agreement with NAWA; any field offered by those universities (applicant chooses). Free education at public universities; monthly scholarship PLN 2,500. Entry needs B2 in the language of instruction. Duration not stated in the call. Based on the 2026/27 call (latest published; closed 8 May 2026).",
+                    "source_text": "scholarships for second-cycle studies or preparatory course from the winter semester 2026/27",
+                    "url": "https://nawa.gov.pl/images/Banach/2026/Banach-2026---Call-for-applications-EN.pdf"
+                },
+                "programmes": []
+            },
+            {
+                "code": "diploma",
+                "confirmed": true,
+                "summary": {
+                    "detail": "One-year NAWA preparatory course (Polish language, B1 minimum, and subjects related to the planned field of study) preceding second-cycle studies in Polish; English-track holders get a Polish language and culture course in September/October 2026.",
+                    "source_text": "The NAWA preparatory course preceding studies in Poland lasts one academic year",
+                    "url": "https://nawa.gov.pl/images/Banach/2026/Banach-2026---Call-for-applications-EN.pdf"
+                },
+                "programmes": []
+            }
+        ],
+        "levels_not_offered": [
+            "bachelor",
+            "doctorate",
+            "postdoctoral"
+        ],
+        "catalogue_url": "https://study.gov.pl/studyfinder",
+        "notes": [
+            "Only the 2026/27 call (Announcement No. 16/2026 of 13 April 2026) is published and it is past; no 2027/28 call found.",
+            "The call tells applicants to choose a field from the offers of participating universities (https://study.gov.pl/studyfinder in English); no field restrictions or named programmes.",
+            "Open to citizens of 36 listed countries; requires a first-cycle degree obtained no earlier than 2024."
+        ]
+    }
+]

@@ -1,0 +1,211 @@
+[
+ {
+  "external_key": "cn-csc-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {"detail": "Degree-seeking undergraduate study at Chinese universities approved by the programme; applicant must be a high school graduate under 25. Chinese-taught programmes need HSK Level 3 (Chinese language programmes exempt); bachelor's applicants must take the CSCA. Majors available at each university are listed in the Study in China (CSC) system, not named on the embassy pages. Funding in the 2026/2027 call covers AY 2026/2027 only.", "source_text": "be a high school graduate under the age of 25 when applying for undergraduate programs", "url": "https://montreal.china-consulate.gov.cn/jy/202510/t20251028_11742748.htm"},
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "Degree-seeking master's study; applicant must be a bachelor's holder under 35. Chinese-taught programmes need HSK Level 4; other-language programmes need IELTS/TOEFL per the university. Majors available at each university are listed on the CSC website, not named on the embassy pages.", "source_text": "be a bachelor's degree holder under the age of 35 when applying for master's programs", "url": "https://montreal.china-consulate.gov.cn/jy/202510/t20251028_11742748.htm"},
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "Degree-seeking doctoral study; applicant must be a master's holder under 40. Chinese-taught programmes need HSK Level 4; other-language programmes need IELTS/TOEFL per the university. Majors available at each university are listed on the CSC website.", "source_text": "be a master's degree holder under the age of 40 when applying for doctoral programs", "url": "https://montreal.china-consulate.gov.cn/jy/202510/t20251028_11742748.htm"},
+    "programmes": []
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {"detail": "Non-degree General scholar (high school graduate under 45) and Senior scholar (master's holder or associate professor or above, under 50) categories also exist.", "source_text": "be a master's degree holder or an associate professor (or above) under the age of 50", "url": "https://montreal.china-consulate.gov.cn/jy/202510/t20251028_11742748.htm"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["postdoctoral"],
+  "catalogue_url": "https://www.campuschina.org",
+  "notes": [
+   "Umbrella scheme: no single programme list exists. Each university's available majors are in the Study in China / CSC programme search (campuschina.org, csc.edu.cn), which returned HTTP 412 to fetch and rendered blank in the browser pane, so no catalogue content could be read. Montreal consulate text: 'Available majors for each university are on the CSC website (campuschina.org)'.",
+   "Montreal page: Type A, agency number 1244, deadline February 22, 2026, candidates recommended by the Quebec ministry (MES). US embassy page says 'Grand under this application only covers the AY 2026/2027 funding' and gives a 'Degree seeking program at Bachelor, Master or Doctoral level'; it also states online application opens February 16, 2026 (the earlier pass recorded this as a deadline; the US page's exact meaning of the date was not resolved here).",
+   "Official-site wording for the bachelor Chinese-language requirement differs by category: Chinese-taught undergraduate or general scholar HSK Level 3.",
+   "Durations are not stated on the embassy pages; none recorded."
+  ]
+ },
+ {
+  "external_key": "cn-csc-bilateral-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {"detail": "SYSU's 2026 list of majors for this programme names about 90 bachelor's majors across sciences, engineering, medicine, humanities, law, management and languages, nearly all Chinese-taught, mostly 4 years (some 5). Applications for majors outside the approved list are invalid. Applicants generally no older than 25. Programme list is not enumerated here; see the SYSU attachment.", "source_text": "recruits international students (bachelor's, master's, and doctoral levels) worldwide under this program", "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm"},
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "SYSU's 2026 list names over 100 master's majors, mostly Chinese-taught, 2 to 3 years; a few English-taught (for example Materials Engineering, Microbiology, Civil Engineering, Computer Class). Applicants generally no older than 35. Majors outside the approved list are invalid.", "source_text": "Applications for majors outside the approved list will be considered invalid.", "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm"},
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "SYSU's 2026 list names about 100 doctoral majors, mostly Chinese-taught, 3 to 4 years; a few English-taught (for example Nuclear Science and Technology, Civil Engineering). Applicants generally no older than 40.", "source_text": "recruits international students (bachelor's, master's, and doctoral levels) worldwide under this program", "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm"},
+    "programmes": []
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {"detail": "General scholar and Senior scholar (non-degree) categories are also open under the Bilateral Program (HUST page lists General Scholar, Senior Scholar and Chinese Language Student candidates).", "source_text": "General Scholar, Senior Scholar, and Chinese Language Student candidates", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["postdoctoral"],
+  "catalogue_url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm",
+  "notes": [
+   "Majors are set per university and subject to Ministry of Education approval; many universities participate. Only SYSU's list was read (2026 PDF: https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf). Counts above are approximate because some major names did not extract from the PDF. This is the 2026 list; no 2027 SYSU list found.",
+   "HUST page (2027 CGS categories): Type A Bilateral Program 'Applicants for undergraduate, postgraduate and scholar programs'; lists no named majors.",
+   "csc.edu.cn and campuschina.org could not be read (HTTP 412 / blank in browser pane)."
+  ]
+ },
+ {
+  "external_key": "cn-cgs-typeb-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "Postgraduate only; each participating university sets its own programme list. NWPU: master's students supported for no more than 3 academic years; may register for a Chinese-taught or English-taught programme where available. BFSU 2026-2027: Chinese and/or English teaching, 2, 3 or 4 year study periods from Sep. 1, 2027 (length per degree not specified).", "source_text": "Applicants for postgraduate programs ONLY.", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "Postgraduate only; each participating university sets its own programme list. NWPU: doctoral students supported for no more than 4 academic years; Chinese-taught or English-taught programme where available. BFSU: academic degrees 'Doctoral/master's degree'.", "source_text": "This scholarship only supports master's students for no more than 3 academic years or doctoral students for no more than 4 academic years.", "url": "https://gs.nwpu.edu.cn/info/2312/9734.htm"},
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": ["bachelor", "postdoctoral"],
+  "catalogue_url": "https://osao.bfsu.edu.cn/info/2462/6792.htm",
+  "notes": [
+   "No central programme list: programmes are the graduate majors each Chinese university opens for this route (NWPU directs applicants to Program Search at csc.edu.cn/studyinchina or campuschina.org, which could not be read). BFSU's master/doctoral majors page (https://osao.bfsu.edu.cn/info/1042/1982.htm) returned HTTP 404. Other universities' pages seen in search (e.g. ECUST excludes some English-taught professional master's majors) are university-specific and were not enumerated.",
+   "NWPU page is internally inconsistent: it says 'It only supports graduate students' but its eligibility text also mentions undergraduate applicants; HUST and BFSU pages state postgraduate only.",
+   "HUST: Type B Chinese University Program, agency number 10487, application period October 15, 2026 to February 25, 2027."
+  ]
+ },
+ {
+  "external_key": "cn-silkroad-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {"detail": "Only for citizens of designated Silk Road countries (HUST lists Russia, Malaysia, Mongolia, Laos, Indonesia, Cambodia, Thailand, Bangladesh, Vietnam, Pakistan). Bachelor's places seen are Chinese-medium, 4 to 5 years, a few named majors per university; HSK 4 (180+) at HUST.", "source_text": "Bachelor's Programs (Chinese-medium instruction ONLY):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+    "programmes": [
+     {"name": "Software Engineering", "institution": "Huazhong University of Science and Technology", "detail": "4 years, Chinese", "source_text": "Duration: 4 years.", "url": "https://iso.hust.edu.cn/info/1194/4986.htm"},
+     {"name": "Architecture", "institution": "Huazhong University of Science and Technology", "detail": "5 years, Chinese", "source_text": "Duration: 5 years.", "url": "https://iso.hust.edu.cn/info/1194/4986.htm"},
+     {"name": "Business Economics", "institution": "Nankai University", "detail": "Chinese-taught; HSK 5 (210+); 2026 call", "source_text": "Business Economics", "url": "https://ensie.nankai.edu.cn/info/1047/1347.htm"},
+     {"name": "Business Administration", "institution": "Nankai University", "detail": "Chinese-taught; HSK 5 (210+); 2026 call", "source_text": "Business Administration", "url": "https://ensie.nankai.edu.cn/info/1047/1347.htm"},
+     {"name": "Finance", "institution": "Nankai University", "detail": "Chinese-taught; HSK 5 (210+); 2026 call", "source_text": "Finance", "url": "https://ensie.nankai.edu.cn/info/1047/1347.htm"},
+     {"name": "Chinese Language and Literature (direction: Chinese and Other languages translation)", "institution": "Beijing Foreign Studies University", "detail": "4 years, Chinese; 'Program for Cultivating Local Chinese Translation Talents from Silk Road Countries'; 2026 call", "source_text": "Period of schooling: 4 years.", "url": "https://osao.bfsu.edu.cn/info/2462/6802.htm"}
+    ]
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "Master's places are offered at some host universities only: HUST (English-medium, three fields) and Nankai (two programmes). Designated-country citizens only; Nankai applicants under 35.", "source_text": "Master's & Doctoral Programs (English-medium instruction):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+    "programmes": [
+     {"name": "Computer Science and Technology", "institution": "Huazhong University of Science and Technology", "detail": "English-medium; master's and doctoral", "source_text": "Master's & Doctoral Programs (English-medium instruction):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+     {"name": "Civil Engineering", "institution": "Huazhong University of Science and Technology", "detail": "English-medium; master's and doctoral", "source_text": "Master's & Doctoral Programs (English-medium instruction):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+     {"name": "Chemistry", "institution": "Huazhong University of Science and Technology", "detail": "English-medium; master's and doctoral", "source_text": "Master's & Doctoral Programs (English-medium instruction):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+     {"name": "International Business", "institution": "Nankai University", "detail": "Chinese or English; 2026 call", "source_text": "International Business", "url": "https://ensie.nankai.edu.cn/info/1047/1347.htm"},
+     {"name": "International Affairs and Public Policy", "institution": "Nankai University", "detail": "English; 2026 call", "source_text": "International Affairs and Public Policy", "url": "https://ensie.nankai.edu.cn/info/1047/1347.htm"}
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "Doctoral places at HUST (English-medium, three fields) and Shaanxi Normal University (five English-taught Ph.D. programmes, 4 years, master's holders under 40, 2026-2027 call).", "source_text": "Master's & Doctoral Programs (English-medium instruction):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+    "programmes": [
+     {"name": "Computer Science and Technology", "institution": "Huazhong University of Science and Technology", "detail": "English-medium", "source_text": "Master's & Doctoral Programs (English-medium instruction):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+     {"name": "Civil Engineering", "institution": "Huazhong University of Science and Technology", "detail": "English-medium", "source_text": "Master's & Doctoral Programs (English-medium instruction):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+     {"name": "Chemistry", "institution": "Huazhong University of Science and Technology", "detail": "English-medium", "source_text": "Master's & Doctoral Programs (English-medium instruction):", "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"},
+     {"name": "Curriculum and Instruction", "institution": "Shaanxi Normal University", "detail": "Ph.D., English, 4 years", "source_text": "Ph.D.", "url": "https://study.snnu.edu.cn/en/info/1066/1826.htm"},
+     {"name": "Educational Technology", "institution": "Shaanxi Normal University", "detail": "Ph.D., English, 4 years", "source_text": "Ph.D.", "url": "https://study.snnu.edu.cn/en/info/1066/1826.htm"},
+     {"name": "Comparative Education", "institution": "Shaanxi Normal University", "detail": "Ph.D., English, 4 years", "source_text": "Ph.D.", "url": "https://study.snnu.edu.cn/en/info/1066/1826.htm"},
+     {"name": "Higher Education", "institution": "Shaanxi Normal University", "detail": "Ph.D., English, 4 years", "source_text": "Ph.D.", "url": "https://study.snnu.edu.cn/en/info/1066/1826.htm"},
+     {"name": "Theoretical Economics", "institution": "Shaanxi Normal University", "detail": "Ph.D., English, 4 years", "source_text": "Ph.D.", "url": "https://study.snnu.edu.cn/en/info/1066/1826.htm"}
+    ]
+   }
+  ],
+  "levels_not_offered": ["postdoctoral", "diploma"],
+  "catalogue_url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm",
+  "notes": [
+   "Levels differ by university; the scheme is a Type B route run by each host. Programmes above are those named on each host's page; other host universities exist that were not checked.",
+   "HUST 2027 page: master's/doctoral deadline February 25, 2027; bachelor's April 30, 2027. HUST bachelor programme durations are from the 2026 guide (https://iso.hust.edu.cn/info/1194/4986.htm). Nankai, BFSU and SNNU pages are the 2026 / 2026-2027 calls (latest found).",
+   "SNNU eligible nationalities: Uzbekistan, Kyrgyzstan, Tajikistan, Pakistan, Russia, Vietnam, Malaysia, Thailand, Hungary, Republic of Korea (differs from HUST's list), so eligible countries vary by host.",
+   "Nankai page: 'The final list of programs is subject to the approval of the China Scholarship Council.'",
+   "csc.edu.cn and campuschina.org could not be read."
+  ]
+ },
+ {
+  "external_key": "cn-marine-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {"detail": "Master's study in oceanography or related specialties; applicant needs a related bachelor's degree and is usually under 40. Duration 2 to 3 years. Chinese-taught programmes need HSK 5 (180+); other languages need the university's language certificates. Support lasts at most 4 years in total.", "source_text": "for a master's or doctoral degree in oceanography or other related specialties", "url": "https://study.tongji.edu.cn/en/info/1049/1005.htm"},
+    "programmes": [
+     {"name": "Law of the Sea", "institution": "Xiamen University (School of Law)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Physical Oceanography", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Chemistry", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Biology", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Geology", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Physics", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Biotechnology", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Affairs", "institution": "Xiamen University (Coastal and Ocean Management Institute)", "detail": "English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Environmental Science", "institution": "Xiamen University (College of Environment and Ecology)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Environmental Engineering", "institution": "Xiamen University (College of Environment and Ecology)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Environmental Management", "institution": "Xiamen University (College of Environment and Ecology)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Ecology", "institution": "Xiamen University (College of Environment and Ecology)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Engineering", "institution": "Xiamen University (School of Architecture and Civil Engineering)", "detail": "Chinese-medium, master's only", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"}
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {"detail": "Doctoral study in oceanography or related specialties; applicant needs a related master's degree and is usually under 45. Duration 4 years. Support lasts at most 4 years in total.", "source_text": "The longest period of Marine Scholarship of China support is 4 years.", "url": "https://study.tongji.edu.cn/en/info/1049/1005.htm"},
+    "programmes": [
+     {"name": "Law of the Sea", "institution": "Xiamen University (School of Law)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Physical Oceanography", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Chemistry", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Biology", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Geology", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Physics", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Biotechnology", "institution": "Xiamen University (College of Ocean and Earth Science)", "detail": "Chinese-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Marine Affairs", "institution": "Xiamen University (Coastal and Ocean Management Institute)", "detail": "English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Environmental Science", "institution": "Xiamen University (College of Environment and Ecology)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Environmental Engineering", "institution": "Xiamen University (College of Environment and Ecology)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Environmental Management", "institution": "Xiamen University (College of Environment and Ecology)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"},
+     {"name": "Ecology", "institution": "Xiamen University (College of Environment and Ecology)", "detail": "Chinese-medium and English-medium", "source_text": null, "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm"}
+    ]
+   }
+  ],
+  "levels_not_offered": ["bachelor", "postdoctoral", "diploma"],
+  "catalogue_url": "https://admissions.xmu.edu.cn/info/1038/1865.htm",
+  "notes": [
+   "Tongji (2026 call page): fields are 'Marine science, geophysics and other marine affairs related majors', mainly in the School of Ocean and Earth Science, School of Environmental Science and Engineering, School of Civil Engineering, and College of Electronics and Information Engineering (no named degree programmes, so none listed for Tongji).",
+   "Xiamen programme list is from its 2026 application guide; the guide's table does not clearly show which level each English-medium law and ocean entry belongs to, so the level/language assignment above follows the tool-extracted reading and should be checked against the page before relying on it. The page carries a pubdate of 2024/11/05 although it describes the 2026 call.",
+   "Ocean University of China page (https://sie.ouc.edu.cn/english/2025/1215/c18044a513188/page.htm) gives no levels or majors and refers to a separate 'High Level Graduate Student' page.",
+   "Tongji page is internally inconsistent (heading 2026, body says 'for the year 2025'). No 2027 Marine Scholarship notice found.",
+   "csc.edu.cn and campuschina.org could not be read."
+  ]
+ }
+]

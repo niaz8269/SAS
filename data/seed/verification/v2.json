@@ -1,0 +1,185 @@
+[
+  {
+    "external_key": "cn-anso-2026",
+    "status": "confirmed",
+    "official_title": "CAS-ANSO Scholarship (Degree Program)",
+    "title_url": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["master", "doctorate"],
+      "confirmed": true,
+      "quote": "100 to 200 Master's students and 300 PhD students every year",
+      "url": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html"
+    },
+    "opens": {
+      "date_type": "date_only",
+      "starts_on": "2025-10-15",
+      "ends_on": null,
+      "phrase": "15th October 2025",
+      "source_text": "Application period opens on 15th October 2025 (page heading: CAS-ANSO Scholarship (Degree Program) 2026 Call for Applications). USTC and UCAS dates may differ slightly.",
+      "url": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html",
+      "call_year": "2026"
+    },
+    "closes": {
+      "type": "date_only",
+      "date": "2026-01-31",
+      "source_text": "31st January 2026 (Beijing Time) for applicants and referees. No time of day stated.",
+      "url": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html",
+      "call_year": "2026",
+      "latest_call_is_past": true
+    },
+    "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+    "notes": [
+      "Official page heading is 'CAS-ANSO Scholarship (Degree Program) 2026 Call for Applications'; the programme name without the call label matches the website title.",
+      "The ANSO scholarship listing page shows 'ANNOUNCEMENT: Results of the 2026 CAS-ANSO Scholarship' (June 2026) and no 2027 call as of 2026-10-23.",
+      "The page says USTC and UCAS dates may differ slightly and applicants may not apply to both USTC and UCAS."
+    ]
+  },
+  {
+    "external_key": "cn-bgs-2026",
+    "status": "partly",
+    "official_title": "Beijing Government Scholarship",
+    "title_url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["bachelor", "master", "doctorate"],
+      "confirmed": true,
+      "quote": "degree programs, including undergraduate, master's, and doctoral students",
+      "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+    },
+    "opens": {
+      "date_type": "route_dependent",
+      "starts_on": null,
+      "ends_on": null,
+      "phrase": null,
+      "source_text": "Applicants \"submit applications directly to the relevant institutions\"; the page gives no opening date.",
+      "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html",
+      "call_year": "2026-27"
+    },
+    "closes": {
+      "type": "route_dependent",
+      "source_text": "Application deadlines are determined by each institution and published in the \"Studying in Beijing\" section of the portal. The page lists no specific dates.",
+      "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html",
+      "call_year": "2026-27",
+      "latest_call_is_past": false
+    },
+    "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+    "notes": [
+      "Official page is titled 'Application Procedures for Beijing Government Scholarship for International Students' (published 2026-01-23); body text calls it 'Beijing Government Scholarship (BGS)'. Website title 'Beijing Government Scholarship for International Students' is not materially different.",
+      "The page also says the scholarship covers non-degree programs (preparatory, visiting students, research scholars); not added to degree codes.",
+      "No dates published by the Beijing government page. The example host-university dates in the current record were not re-verified in this pass; the Beijing 'Studying in Beijing' index page did not list scholarship dates either. Status 'partly' because only route-dependent dates are supported.",
+      "Third-party guides (propakistani.pk etc.) give 15 March 2026; not used because they are not official."
+    ]
+  },
+  {
+    "external_key": "cn-sgs-2026",
+    "status": "partly",
+    "official_title": "Shanghai Government Scholarship for International Students",
+    "title_url": "https://edu.sh.gov.cn/study_en_scholarships/20240904/5d8add31c7ce44a4b1e0d5bdfafe1495.html",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["bachelor", "master", "doctorate"],
+      "confirmed": true,
+      "quote": "undergraduate, master's, and doctoral degree programs",
+      "url": "https://en.shmtu.edu.cn/2024/0311/c6274a230382/page.htm"
+    },
+    "opens": {
+      "date_type": "route_dependent",
+      "starts_on": null,
+      "ends_on": null,
+      "phrase": "generally from February to April",
+      "source_text": "Application period is generally from February to April. (Shanghai Municipal Education Commission guide, dated Dec 1, 2025; no year, exact dates set by each university.)",
+      "url": "https://edu.sh.gov.cn/study_en_scholarships/20240904/5d8add31c7ce44a4b1e0d5bdfafe1495.html",
+      "call_year": "2026"
+    },
+    "closes": {
+      "type": "route_dependent",
+      "source_text": "Application period is generally from February to April. Each university sets its own window, e.g. Shanghai Maritime University: December 1, 2025 - April 30, 2026; Shanghai University of Finance and Economics (undergraduate): January 1, 2026 to March 31, 2026; Shanghai University of Medicine & Health Sciences: January 1, 2026 to July 31, 2026.",
+      "url": "https://edu.sh.gov.cn/study_en_scholarships/20240904/5d8add31c7ce44a4b1e0d5bdfafe1495.html",
+      "call_year": "2026",
+      "latest_call_is_past": true
+    },
+    "matches_current": {"title": true, "degrees": true, "opens": true, "closes": false},
+    "notes": [
+      "Closing differs by university, so it should be route_dependent rather than the single date 30 April 2026 (Shanghai Maritime University only).",
+      "The official Shanghai Municipal Education Commission guide (edu.sh.gov.cn, dated Dec 1, 2025) also mentions a pre-college track; not added as a degree code. It is the only item on the commission's scholarships page and mentions no 2027 call.",
+      "University pages: SHMTU https://en.shmtu.edu.cn/2024/0311/c6274a230382/page.htm (December 1, 2025 - April 30, 2026); SUFE https://intlstu.sufe.edu.cn/33/70/c12473a209776/page.htm (undergraduate only, 'starts from January 1, 2026 and closes on March 31, 2026'); SHSMU https://www.shsmu.edu.cn/iso/ENGLISH/Admission/Scholarship.htm ('January 1, 2026 to July 31, 2026').",
+      "The per-university windows for later intakes listed in the current record (Shanghai Engineering Science, Shanghai Theatre Academy) were not re-verified in this pass.",
+      "Status 'partly': no single official opening or closing date exists; only per-university windows."
+    ]
+  },
+  {
+    "external_key": "cn-clec-teachers-2026",
+    "status": "confirmed",
+    "official_title": "International Chinese Language Teachers Scholarship",
+    "title_url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["bachelor", "master", "doctorate", "diploma"],
+      "confirmed": true,
+      "quote": "Scholarship for Doctor's Degree in International Chinese Language Education; Scholarship for Master's Degree in International Chinese Language Education; Scholarship for Bachelor's Degree in Chinese Language and Literature",
+      "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"
+    },
+    "opens": {
+      "date_type": "date_only",
+      "starts_on": "2026-03-01",
+      "ends_on": null,
+      "phrase": "March 1, 2026",
+      "source_text": "Online registration will be available from March 1, 2026 on the International Chinese Language Teachers Scholarship website",
+      "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm",
+      "call_year": "2026"
+    },
+    "closes": {
+      "type": "route_dependent",
+      "source_text": "Deadlines (Beijing Time) by programme start: Apr 15, 2026 (for programs commencing in July,2026); May 15, 2026 (for programs commencing in September,2026); Sep 15, 2026 (for programs commencing in December,2026); Oct 31, 2026 (for programs commencing in March 2027).",
+      "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm",
+      "call_year": "2026",
+      "latest_call_is_past": false
+    },
+    "matches_current": {"title": true, "degrees": false, "opens": true, "closes": false},
+    "notes": [
+      "Degrees: the BLCU guide lists doctor's, master's and bachelor's degree scholarships plus one-year, one-semester and four-week non-degree study programmes (coded 'diploma' for the non-degree programmes). The current record lists master only, which matches the Sun Yat-sen University page (MTCSOL master's) but not the programme as a whole. Nanjing University lists master's, bachelor's, one-year and one-semester; SJTU lists only the bachelor's in Chinese Language.",
+      "Closing differs by programme start date and by university. Next open round as of 2026-10-23: 31 Oct 2026 (Beijing Time) for programmes commencing March 2027 (one-semester programme; BLCU, Shanghai University of Finance and Economics https://intlstu.sufe.edu.cn/ef/5b/c18056a257883/page.htm 'before October 31, 2026', and Central South University 2027 Spring Semester guide https://intl.csu.edu.cn/info/1195/3988.htm 'before October 31', review by November 10, no year printed). The 15 May 2026 deadline in the current record is for September 2026 programmes (SYSU, BLCU, SUFE, CSU).",
+      "SUFE says Application starts from March 15, 2026 (university-level); BLCU, SJTU state registration from March 1, 2026.",
+      "CLEC's own guide and website (cis.chinese.cn) could not be loaded (404); facts rest on host-university pages (BLCU, SUFE, CSU, NJU, SJTU, SYSU) which reproduce the CLEC 2026 guide.",
+      "Host-university page of record: SYSU https://iso.sysu.edu.cn/en/application/scholarship/1420914.htm (master's, 'May 15th, 2026', marked CLOSED)."
+    ]
+  },
+  {
+    "external_key": "cn-unesco-greatwall-2026",
+    "status": "partly",
+    "official_title": "UNESCO/The People's Republic of China - The Great Wall Co-Sponsored Fellowships Programme 2026-2027",
+    "title_url": "https://www.unesco.org/en/fellowships/greatwall",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["master", "doctorate"],
+      "confirmed": true,
+      "quote": "Master's degree: bachelor's degree, no older than 35; Doctoral degree: master's degree, no older than 40",
+      "url": "https://www.unesco.org/en/fellowships/greatwall"
+    },
+    "opens": {
+      "date_type": "not_announced",
+      "starts_on": null,
+      "ends_on": null,
+      "phrase": null,
+      "source_text": "The 2026-2027 edition is now open for applications. (No opening date given; page last updated 26 June 2026.)",
+      "url": "https://www.unesco.org/en/fellowships/greatwall",
+      "call_year": "2026-27"
+    },
+    "closes": {
+      "type": "date_only",
+      "date": "2026-01-23",
+      "source_text": "Candidates submit to their National Commission no later than Friday, 23 January 2026; National Commissions nominate to UNESCO by Tuesday, 10 February 2026; candidates not notified by 15 August 2026 should assume they were unsuccessful. No time or time zone stated.",
+      "url": "https://www.unesco.org/en/fellowships/greatwall",
+      "call_year": "2026-27",
+      "latest_call_is_past": true
+    },
+    "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+    "notes": [
+      "The official page H1 is the full title with 'Programme 2026-2027'; the website's shorter title is the same programme name reordered, so kept.",
+      "The page also offers one-year Visiting Scholar programmes (General Scholar: high school diploma; Senior Scholar: master's degree or associate professor) which are non-degree; not coded as degrees. The page says bachelor's degree programmes are not available.",
+      "Candidates must also register in the Chinese Government Scholarship Information System; 'Applications without online registration will not be considered.'",
+      "No 2027-2028 edition mentioned on the page as of 2026-10-23. The page is marked 'now open' on 26 June 2026 even though the 23 January 2026 deadline had passed, so the page may be outdated. Status 'partly' because no opening date is published."
+    ]
+  }
+]

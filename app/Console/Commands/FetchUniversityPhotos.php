@@ -16,7 +16,7 @@ use Illuminate\Support\Str;
  */
 class FetchUniversityPhotos extends Command
 {
-    protected $signature = 'sas:fetch-university-photos {--limit=0 : stop after this many universities} {--only= : slug or part of a name} {--force : redo universities that already have a photo} {--dry-run} {--shard= : k/n, process only universities whose id % n == k (lets several runs share the work)}';
+    protected $signature = 'sas:fetch-university-photos {--limit=0 : stop after this many universities} {--only= : slug or part of a name} {--force : redo universities that already have a photo} {--cities : fetch a skyline photo for each province instead (used when a university has no photo of its own)} {--dry-run} {--shard= : k/n, process only universities whose id % n == k (lets several runs share the work)}';
 
     protected $description = 'Fetch openly licensed campus photographs for universities from Wikimedia Commons.';
 
@@ -24,8 +24,18 @@ class FetchUniversityPhotos extends Command
 
     private const BAD_FILE = '/logo|seal|emblem|badge|crest|\bmap\b|flag|coat[_ ]of|signature|diagram|\.svg|\.gif|\.pdf|\.tif|portrait|poster|plaque|banner/i';
 
+    private const CITIES = [
+        'liaoning' => ['Dalian', 'Shenyang'], 'heilongjiang' => ['Harbin'], 'jiangsu' => ['Nanjing', 'Suzhou'], 'jiangxi' => ['Nanchang'], 'jilin' => ['Changchun'],
+        'hubei' => ['Wuhan'], 'sichuan' => ['Chengdu'], 'inner-mongolia' => ['Hohhot'], 'guizhou' => ['Guiyang'], 'anhui' => ['Hefei'], 'shandong' => ['Jinan', 'Qingdao'],
+        'gansu' => ['Lanzhou'], 'fujian' => ['Xiamen', 'Fuzhou'], 'ningxia' => ['Yinchuan'], 'qinghai' => ['Xining'], 'hunan' => ['Changsha'], 'hainan' => ['Haikou', 'Sanya'],
+        'hebei' => ['Shijiazhuang'], 'yunnan' => ['Kunming'], 'shanxi' => ['Taiyuan'], 'xinjiang' => ['Urumqi'], 'henan' => ['Zhengzhou'],
+    ];
+
     public function handle(): int
     {
+        if ($this->option('cities')) {
+            return $this->cities();
+        }
         $path = base_path('data/seed/university-photos.json');
         $credits = is_file($path) ? json_decode(file_get_contents($path), true) : [];
         $http = Http::withUserAgent('SAS-scholarships-site/1.0 (webai.auto@gmail.com)')->timeout(40)->retry(2, 800, throw: false);
@@ -83,7 +93,41 @@ class FetchUniversityPhotos extends Command
         return self::SUCCESS;
     }
 
-    /** Adds one credit to the shared file under a lock, so several runs can work at the same time. */
+    /** One skyline photo per province for universities that have no photo of their own: the first city that has an openly licensed one. */
+    private function cities(): int
+    {
+        $http = Http::withUserAgent('SAS-scholarships-site/1.0 (webai.auto@gmail.com)')->timeout(40)->retry(2, 800, throw: false);
+        $path = base_path('data/seed/city-photos.json');
+        $credits = is_file($path) ? json_decode(file_get_contents($path), true) : [];
+        @mkdir(public_path('images/cities'), 0775, true);
+        foreach (self::CITIES as $province => $cities) {
+            $file = public_path("images/cities/{$province}.jpg");
+            if (! $this->option('force') && is_file($file)) {
+                continue;
+            }
+            foreach ($cities as $city) {
+                $r = $http->get(self::API, ['action' => 'query', 'format' => 'json', 'titles' => $city, 'redirects' => 1, 'prop' => 'pageprops|pageimages', 'ppprop' => 'wikibase_item', 'piprop' => 'name'])->json('query.pages') ?? [];
+                $p = array_values($r)[0] ?? null;
+                $photo = $p ? $this->pickPhoto($http, ['title' => $city, 'qid' => $p['pageprops']['wikibase_item'] ?? null, 'pageimage' => $p['pageimage'] ?? null]) : null;
+                if (! $photo) {
+                    $this->line("-  {$province}: no openly licensed photo for {$city}");
+
+                    continue;
+                }
+                $this->info("OK {$province}: {$city} - {$photo['title']} ({$photo['license']})");
+                if (! $this->option('dry-run') && $this->saveCropped($http->get($photo['thumb'])->body(), $file)) {
+                    $credits[$province] = ['subject' => $city, 'artist' => $photo['artist'], 'license' => $photo['license'], 'url' => $photo['page']];
+                    ksort($credits);
+                    file_put_contents($path, json_encode($credits, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)."\n");
+                }
+                break;
+            }
+        }
+
+        return self::SUCCESS;
+    }
+
+    /** Adds one credit to the shared file  under a lock, so several runs can work at the same time. */
     private function record(string $path, string $slug, array $credit): void
     {
         $h = fopen($path, 'c+');

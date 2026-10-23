@@ -1,0 +1,105 @@
+[
+ {
+  "external_key": "gb-chevening-2027",
+  "status": "partly",
+  "official_title": "Chevening Scholarships",
+  "title_url": "https://www.chevening.org/scholarships/",
+  "title_action": "keep",
+  "degrees": {"codes": ["master"], "confirmed": true, "quote": "pursue one-year master's degrees in the UK", "url": "https://www.chevening.org/scholarships/"},
+  "opens": {"date_type": "month", "starts_on": null, "ends_on": null, "phrase": "August 2026", "source_text": "Application timeline row: 'August 2026 - Applications open'", "url": "https://www.chevening.org/scholarships/application-timeline/", "call_year": "2026-27"},
+  "closes": {"type": "route_dependent", "source_text": "Timeline row 'October 2026 - Applications close'; 'Please refer to your country page for the deadline'; page refers to 11:00 UTC", "url": "https://www.chevening.org/scholarships/application-timeline/", "call_year": "2026-27", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Closing is given only as month (October 2026) plus an 11:00 UTC time; the exact day is on each country page, which was not read, so closing is route dependent.",
+   "The timeline page does not use the label 2026-27; it ends with studies beginning September/October 2027.",
+   "Running text on the eligibility/timeline pages says 'Chevening Scholarship'; the scholarships page uses 'Chevening Scholarships'."
+  ]
+ },
+ {
+  "external_key": "gb-commonwealth-masters-2027",
+  "status": "partly",
+  "official_title": "Commonwealth Master's Scholarships",
+  "title_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+  "title_action": "keep",
+  "degrees": {"codes": ["master"], "confirmed": true, "quote": "full-time taught Master's study at a UK university", "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/"},
+  "opens": {"date_type": "not_announced", "starts_on": null, "ends_on": null, "phrase": null, "source_text": "The official page does not state when applications opened or will open.", "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/", "call_year": "2027/28"},
+  "closes": {"type": "date_only", "date": null, "source_text": "The closing date for applications was 16:00 BST on Tuesday 20 October.", "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/", "call_year": "2027/28", "latest_call_is_past": true},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": false},
+  "notes": [
+   "The page prints no year with '20 October', so no full date is recorded (year not inferred, per rule). The current record's exact 2026-10-20 16:00 Europe/London rests on an inferred year; the page does print 16:00 BST. If the inference is accepted, 20 October 2026 is a Tuesday.",
+   "Page says the 2027/28 round is closed; no next-round date is published.",
+   "A web-search summary mentioned an opening date of Tuesday 8 September 2026 from a pre-opening announcement; it was not seen on the official page and is not used.",
+   "Nominators set their own closing dates and nominate candidates to the CSC 'by December 2026'."
+  ]
+ },
+ {
+  "external_key": "gb-gates-cambridge-2027",
+  "status": "confirmed",
+  "official_title": "Gates Cambridge Scholarships",
+  "title_url": "https://www.gatescambridge.org/",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "Courses eligible for the Gates Cambridge Scholarship include MPhil, MLitt, MRes, LLM and PhDs.", "url": "https://www.gatescambridge.org/apply/frequently-asked-questions/"},
+  "opens": {"date_type": "date_only", "starts_on": "2026-09-11", "ends_on": null, "phrase": "11th September 2026", "source_text": "Timeline: Round 1 and Round 2 'Applications open' 11th September 2026", "url": "https://www.gatescambridge.org/apply/timeline/", "call_year": "2027/8"},
+  "closes": {"type": "route_dependent", "source_text": "Round 1 (US citizens resident in the USA): Wednesday 14th October 2026; Round 2 (all other eligible applicants): 'Dependent on your course - either Tuesday 8th December 2026 or Wednesday 6th January 2027'. Full applications by 11:59pm UK time.", "url": "https://www.gatescambridge.org/apply/timeline/", "call_year": "2027/8", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Round 1 deadline (2026-10-14 23:59 UK time) has passed; Round 2 deadlines are 2026-12-08 or 2027-01-06, 23:59 UK time, depending on course.",
+   "Outcomes: Round 1 by 14 December 2026; Round 2 by 8 March 2027.",
+   "Eligibility page: PhD, MLitt, one-year postgraduate course (full-time); FAQ lists MPhil, MLitt, MRes, LLM, PhD; PGCert, PGDip, MSt, MASt, MBA excluded.",
+   "Home page uses 'Gates Cambridge Scholarships'."
+  ]
+ },
+ {
+  "external_key": "gb-rhodes-2028",
+  "status": "partly",
+  "official_title": "The Rhodes Scholarship",
+  "title_url": "https://www.rhodeshouse.ox.ac.uk/scholarships/the-rhodes-scholarship/",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "most postgraduate courses (Master's/MSc); direct-entry DPhil supported for up to three years (paraphrase of FAQ)", "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/faqs/"},
+  "opens": {"date_type": "not_announced", "starts_on": null, "ends_on": null, "phrase": "reopen in 2027", "source_text": "to be notified when applications reopen in 2027, for entry to University of Oxford in 2028", "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/the-rhodes-scholarship/", "call_year": "2028 entry"},
+  "closes": {"type": "not_announced", "source_text": "Applications for the Rhodes Scholarship are now closed. No dates for the 2028-entry call are given.", "url": "https://www.rhodeshouse.ox.ac.uk/scholarships/the-rhodes-scholarship/", "call_year": "2028 entry", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Main page says only 'postgraduate' and mentions DPhil; master's wording comes from the FAQ page (read via a summarising fetch, so the quote is a paraphrase).",
+   "FAQ also mentions a 'Second BA with Senior Status' route; not added as bachelor because the main page describes a postgraduate award.",
+   "FAQ: applications submitted in 2026 are for entry in October 2027; graduate course deadlines usually December or January; no reopening date given.",
+   "Official title 'The Rhodes Scholarship' differs from the site's 'Rhodes Scholarship' only by the article; keep."
+  ]
+ },
+ {
+  "external_key": "us-knight-hennessy-2027",
+  "status": "confirmed",
+  "official_title": "Knight-Hennessy Scholars",
+  "title_url": "https://knight-hennessy.stanford.edu/",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "including, but not limited to, DMA, JD, MA, MBA, MD, MFA, MPP, MS, or PhD programs", "url": "https://knight-hennessy.stanford.edu/admission/eligibility"},
+  "opens": {"date_type": "range", "starts_on": null, "ends_on": null, "phrase": "summer 2027", "source_text": "The KHS application to join the 2028 cohort will open in summer 2027.", "url": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/application-deadlines", "call_year": "2028 cohort"},
+  "closes": {"type": "exact", "local_datetime": "2026-10-06 13:00", "timezone": "America/Los_Angeles", "source_text": "The Knight-Hennessy Scholars application deadline is October 6, 2026, 1:00pm Pacific Time.", "url": "https://knight-hennessy.stanford.edu/admission/preparing-your-applications/application-deadlines", "call_year": "2027 cohort", "latest_call_is_past": true},
+  "matches_current": {"title": true, "degrees": true, "opens": false, "closes": false},
+  "notes": [
+   "Page header is 'Knight-Hennessy Scholars at Stanford University'; body text 'Knight-Hennessy Scholars'. Current title is that name plus a parenthetical, so keep (the plain name is also acceptable).",
+   "The closing date is for the 2027 cohort (past: 'now closed'). The opening 'summer 2027' is for the next (2028 cohort) call; the 2027-cohort opening date is not published.",
+   "Conflict between official pages: the Admission page says the 2028 cohort application 'will open in June 2027'; the Application Deadlines page says 'summer 2027'.",
+   "JD, MD, DMA and MBA are listed generically; only master and doctorate codes are assigned.",
+   "Degree-program applications are due by the earlier of the program's deadline for KHS applicants or December 1, 2026."
+  ]
+ },
+ {
+  "external_key": "ch-swiss-excellence-2027",
+  "status": "partly",
+  "official_title": "Swiss Government Excellence Scholarships 2027 – 2028",
+  "title_url": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "Research fellowships (PhD students), PhD scholarships, Art scholarships (first Master's). 'As of the academic year 2027-2028, no postdoctoral scholarships will be awarded.'", "url": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships-at-a-glance"},
+  "opens": {"date_type": "date_only", "starts_on": "2026-08-20", "ends_on": null, "phrase": "August 20, 2026", "source_text": "Applications are open starting August 20, 2026.", "url": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships", "call_year": "2027-28"},
+  "closes": {"type": "route_dependent", "source_text": "Deadlines vary by country of origin; the SBFI pages give none. UK embassy page: 'The application deadline for Scholarships commencing in September 2027 is 10 December 2026.' Other embassy pages (seen via search summaries): Turkey 30.11.2026, Ethiopia 13 November 2026, China 30 November 2026.", "url": "https://www.schweiz-vereinigteskoenigreich.eda.admin.ch/en/swiss-government-excellence-scholarships-for-british-researchers-2027-2028", "call_year": "2027-28", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": false, "opens": true, "closes": true},
+  "notes": [
+   "Remove postdoctoral: the Swiss embassy page https://www.schweiz-dominikanischerepublik.eda.admin.ch/en/scholarships states 'As of the academic year 2027-2028, no postdoctoral scholarships will be awarded.' The SBFI pages do not mention postdoctoral.",
+   "Art scholarships are for a first Master's (bachelor's required); research fellowships and PhD scholarships need a Master's completed by 31 July 2027 (ETH Zurich 30 June 2027).",
+   "Official title is 'Swiss Government Excellence Scholarships 2027 – 2028'; the current title adds '(Research and Art)', a descriptor, so keep.",
+   "Only the UK embassy deadline was read directly; China, Turkey, Ethiopia and Hungary (30 October 2026) figures came from search summaries and the Hungary notice has an apparent year typo.",
+   "Country deadline lists are PDFs on the at-a-glance page (dated 4 August 2026 and 1 September 2026); not read."
+  ]
+ }
+]

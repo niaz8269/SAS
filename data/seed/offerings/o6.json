@@ -1,0 +1,453 @@
+[
+ {
+  "external_key": "jp-mext-embassy-research-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master's course or professional graduate course at a Japanese graduate school. Standard period of study is two years after a university degree (some courses more than one year but less than two); professional degree courses are two years (graduate law schools three years). Applicants apply for the field they majored in or a related field; the field must be one that can be studied in a Japanese graduate course, and the Japanese embassy/consulate of the applicant's country may restrict the fields. Kabuki, classical Japanese dance and other traditional entertainment arts, and subjects requiring practical training at factories or companies, are excluded. Applicants must be willing to learn Japanese (a 6-month Japanese-language preparatory period is added where needed).",
+     "source_text": "Master's degree course: The standard period of study is two years subsequent to graduation from a university.",
+     "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Doctoral course at a Japanese graduate school: three years after a master's course; in medicine, dentistry, veterinary science and pharmacy (6-year undergraduate base) most universities offer only 4-year doctoral courses, which require 18 years of school education. Same field rules as the master's level (field of one's university major or a related field; may be restricted by the embassy of the applicant's country). Regular master's students may apply for extension to proceed to a doctoral course.",
+     "source_text": "Doctoral degree course: A three-year degree course subsequent to completion of a master's degree course.",
+     "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "No named degree programmes: the official page does not list programmes. Scope is any field studied at a Japanese graduate school, subject to the field restrictions above; the university and programme are decided later by MEXT from the applicant's placement preferences.",
+   "Guidelines section 1 also covers non-regular (non-degree) research students and preparatory Japanese-language education, 'Excluding Young Leaders' Program Students or Teacher Training Students'. These lead into master's/doctoral courses and are not coded as a separate level.",
+   "Guidelines read from a local copy of the official PDF, re-checked: URL still returns HTTP 200 (application/pdf). Info page: https://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html (links to the guidelines).",
+   "Fields may differ by country: the embassy/consulate may restrict fields; check the embassy of the applicant's country."
+  ]
+ },
+ {
+  "external_key": "jp-mext-embassy-undergraduate-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Bachelor's degree at a Japanese national university. Applicants choose a Field of Study (Social Sciences and Humanities, or Natural Sciences), a Course and up to three Majors from the official table; the course cannot be changed later. Scholarship lasts 5 years including a 1-year preparatory course in Japanese language and other subjects (ABK College for Social Sciences and Humanities; Osaka University for Natural Sciences), or 4 years with direct placement; 7 and 6 years respectively for medicine, dentistry, veterinary medicine and 6-year pharmacy. Classes are in Japanese except where a grantee is directly placed at a university requiring no Japanese. Fields of art, including music, are not eligible.",
+     "source_text": "Those who are enrolled in an undergraduate course at a university, or who are receiving preparatory education in the Japanese language and other subjects prior to placement in an undergraduate course",
+     "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+    },
+    "programmes": [
+     {
+      "name": "Social Sciences and Humanities - A",
+      "institution": null,
+      "detail": "Majors: 1. Law 2. Politics 3. Pedagogy 4. Sociology 5. Literature 6. History 7. Japanese Language 8. Others (excluding Economics, Business Administration and Others in Humanities B). Applicants choosing '8. Others' may have difficulties finding universities that can accept them.",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Social Sciences and Humanities - B",
+      "institution": null,
+      "detail": "Majors: 1. Economics 2. Business Administration 3. Others (Accounting, Financial Economics, etc.)",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - A: Science",
+      "institution": null,
+      "detail": "Majors: 1. Mathematics 2. Physics 3. Chemistry",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - A: Electrical and Electronic Studies",
+      "institution": null,
+      "detail": "Majors: 4. Electronics 5. Electrical Engineering 6. Information Engineering",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - A: Mechanical Studies",
+      "institution": null,
+      "detail": "Majors: 7. Mechanical Engineering 8. Naval Architecture",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - A: Civil Engineering and Architecture",
+      "institution": null,
+      "detail": "Majors: 9. Civil Engineering 10. Architecture 11. Environmental Engineering",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - A: Chemical Studies",
+      "institution": null,
+      "detail": "Majors: 12. Applied Chemistry 13. Chemical Engineering 14. Industrial Chemistry 15. Textile Engineering",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - A: Other Fields",
+      "institution": null,
+      "detail": "Majors: 16. Metallurgical Engineering 17. Mining Engineering 18. Maritime Engineering 19. Biotechnology",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - B: Agricultural Studies",
+      "institution": null,
+      "detail": "Majors: 1. Agriculture 2. Agricultural Chemistry 3. Agricultural Engineering 4. Animal Science 5. Veterinary Medicine 6. Forestry 7. Food Science 8. Fisheries",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - B: Hygienic Studies",
+      "institution": null,
+      "detail": "Majors: 9. Pharmacy 10. Hygienics 11. Nursing",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - B: Science (Biology)",
+      "institution": null,
+      "detail": "Major: 12. Biology",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     },
+     {
+      "name": "Natural Sciences - C: Medicine and Dentistry",
+      "institution": null,
+      "detail": "Majors: 1. Medicine 2. Dentistry",
+      "source_text": null,
+      "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "master",
+   "doctorate",
+   "postdoctoral"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "Programmes listed are the official Courses and Majors of the 2027 guidelines (section 2), grouped by course; they are the choices offered to applicants, not degree names at a specific university (the university is assigned by MEXT).",
+   "The extracted PDF table is run together for Natural Sciences. Placement of '12. Biology' under Natural Sciences - B and of Medicine/Dentistry under Natural Sciences - C follows the numbering and the guidelines' note that Natural Sciences - C offers only two majors.",
+   "Per guidelines section 6(3), a grantee who graduates and is admitted to a master's or doctoral (first phase) course with outstanding achievement may have the scholarship extended on examination by MEXT; this is an extension for outstanding grantees, not a separate level.",
+   "Guidelines read from a local copy of the official PDF, re-checked: URL returns HTTP 200 (application/pdf). Info page: https://www.studyinjapan.go.jp/en/smap-stopj-applications-undergraduate.html."
+  ]
+ },
+ {
+  "external_key": "nz-manaaki-new-zealand-scholarships",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Undergraduate Degree (3-4 years). Only for some countries: Fiji and French Pacific are postgraduate only, and among Asian countries only Timor-Leste has undergraduate study. Undergraduate or postgraduate is stated for Kiribati, Naoero, Niue, North Pacific, Papua New Guinea, Samoa, Solomon Islands, Tonga, Tuvalu, Vanuatu and Timor-Leste. Not supported: Bachelor of Engineering (Honours) at Canterbury University and Bachelor of Law at Victoria University of Wellington. Subjects should align with the country's recommended sectors.",
+     "source_text": "Undergraduate Degree (3-4 years) (Timor-Leste only)",
+     "url": "https://www.nzscholarships.govt.nz/check-eligible-countries/"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master's Degree (1-2 years), at one of the approved New Zealand institutions (8 universities, 2 institutes of technology) or, for eligible Pacific countries, a Pacific university. Postgraduate applicants need relevant work experience. Master's by Thesis applicants write a research proposal. Scholars choose subjects aligned to the recommended sectors for their country (sector and subject lists published per country).",
+     "source_text": "Master’s Degree (1-2 years)",
+     "url": "https://www.nzscholarships.govt.nz/check-eligible-countries/"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "PhD (3.5 years). PhD applicants must be eligible for direct entry (no English-language training for PhD candidates) and must have a supervisor secured or in active discussion by the interview stage. PhD at a Pacific university is only at The University of the South Pacific and Fiji National University (Samoa and Tuvalu pages). Thailand: only one PhD awarded each year.",
+     "source_text": "PhD (3.5 years)",
+     "url": "https://www.nzscholarships.govt.nz/check-eligible-countries/"
+    },
+    "programmes": []
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "Postgraduate Certificate (6 months) and Postgraduate Diploma (1 year) are listed among the levels of study available (non-degree postgraduate qualifications).",
+     "source_text": "Postgraduate Certificate (6 months)",
+     "url": "https://www.nzscholarships.govt.nz/check-eligible-countries/"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "postdoctoral"
+  ],
+  "catalogue_url": "https://www.nzscholarships.govt.nz/research-available-courses/",
+  "notes": [
+   "No programme list is published: scholars pick courses from each approved institution's own catalogue (links on the 'Research available courses' page). The funder publishes recommended sectors and subjects per country: Pacific https://www.nzscholarships.govt.nz/study-subjects-for-pacific-students/ and Asia https://www.nzscholarships.govt.nz/research-study-subjects-for-asian-students/ (sector headings include Climate Resilience, Science, and the Environment; Economic Resilience and Private Sector; Education; Food Safety and Agriculture; Governance; Health; Infrastructure; Peace, Security, and Justice; Resilient Societies; Information Communications Technology; Oceans and Fisheries - each country gets a different subset). The funder says applications that do not strongly align with recommended subjects are highly unlikely to be considered.",
+   "Levels by country: postgraduate only for Fiji, French Pacific, Cambodia, Indonesia, Lao PDR, Malaysia, Nepal, Philippines, Thailand and Viet Nam; undergraduate or postgraduate for the other Pacific countries and Timor-Leste. Samoa Foundation intake is undergraduate level only (New Zealand or a Pacific university).",
+   "Separate short-term strands (Vocational Short Term Training, Thematic Short Term Cohort Training, English Language Training for Officials) are not degrees and are not counted.",
+   "The eligible-countries page states tertiary applications 'have now closed'; the level information is the funder's latest published and is not dated to a specific year.",
+   "Site inconsistency: the 'Research available courses' page names 8 universities and 2 institutes of technology (Southern Institute of Technology, Unitec Institute of Technology); summary cards on other funder pages say 'three institutes of technology'.",
+   "Wording: the eligible-countries page uses 'Master's Degree', 'PhD' and 'Undergraduate Degree'; the per-country subject pages use only 'undergraduate'/'postgraduate'."
+  ]
+ },
+ {
+  "external_key": "fr-eiffel-excellence-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Programme awarding a French-government-accredited master's degree (or equivalent), or a nationally accredited engineering programme, at the French institution that submits the application. Funding: up to 12 months entering M2, up to 24 months entering M1, up to 36 months entering an engineering programme. Eligible in seven thematic areas (listed). Candidates up to 29 years old. Tuition and fees are not paid by the programme. The programme is fixed in the institution's application and may only be changed within the same field at the same institution. Teaching language not stated.",
+     "source_text": "A program awarding a master's degree (or the equivalent) accredited by the French government",
+     "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+    },
+    "programmes": [
+     {
+      "name": "Biology and Health",
+      "institution": null,
+      "detail": "Eligible thematic area (technical and exact sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Ecological Transition",
+      "institution": null,
+      "detail": "Eligible thematic area (technical and exact sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Mathematics and Digital Technology",
+      "institution": null,
+      "detail": "Eligible thematic area (technical and exact sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Engineering Sciences",
+      "institution": null,
+      "detail": "Eligible thematic area (technical and exact sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "French History, Language, and Civilization",
+      "institution": null,
+      "detail": "Eligible thematic area (humanities and social sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Law and Political Science",
+      "institution": null,
+      "detail": "Eligible thematic area (humanities and social sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Economics and Management",
+      "institution": null,
+      "detail": "Eligible thematic area (humanities and social sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Doctoral programme (dual degree or joint supervision of dissertation) with a partner institution abroad. Funding of 12, 18 or 36 months from September 1 of the award year: 36 months only for new candidates entering the first year of a doctoral programme; 12 or 18 months for others, notably candidates already enrolled (max 12 months entering year 2 or 3, max 18 months entering year 1 or 2). Eligible in the same seven thematic areas. Candidates up to 35 years old. Tuition and fees are not paid by the programme.",
+     "source_text": "A doctoral program (dual degree or joint supervision of dissertation), with a partner institution abroad.",
+     "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+    },
+    "programmes": [
+     {
+      "name": "Biology and Health",
+      "institution": null,
+      "detail": "Eligible thematic area (technical and exact sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Ecological Transition",
+      "institution": null,
+      "detail": "Eligible thematic area (technical and exact sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Mathematics and Digital Technology",
+      "institution": null,
+      "detail": "Eligible thematic area (technical and exact sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Engineering Sciences",
+      "institution": null,
+      "detail": "Eligible thematic area (technical and exact sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "French History, Language, and Civilization",
+      "institution": null,
+      "detail": "Eligible thematic area (humanities and social sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Law and Political Science",
+      "institution": null,
+      "detail": "Eligible thematic area (humanities and social sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     },
+     {
+      "name": "Economics and Management",
+      "institution": null,
+      "detail": "Eligible thematic area (humanities and social sciences)",
+      "source_text": null,
+      "url": "https://www.campusfrance.org/system/files/medias/documents/2026-10/reglementation_bourse_eiffel_2027_EN.pdf"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "Programmes are not centrally listed: French institutions nominate candidates for their own master's/engineering/doctoral programmes (students cannot apply directly). The seven entries per level are the eligible thematic areas (fields), not degree programmes.",
+   "Fields and level details come from the official Regulations PDF (Campus France, folder 2026-10, file name '2027_EN'; footer reads 'Regulations 2026'; subtitle: 'regardless of year of selection'), linked from the Campus France Eiffel page https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence, which itself only says 'priority areas of study' and 'masters and PhD programs'. The Eiffel brochures (plaquette_eiffel_1_en.pdf, plaquette_eiffel_2_en.pdf on ressources.campusfrance.org) list the same fields and say 'Graduate level programmes, including engineering diplomas, are eligible'.",
+   "Page and Regulations were read from the live Campus France site on 2026-10-23."
+  ]
+ },
+ {
+  "external_key": "hu-stipendium-hungaricum-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Bachelor programmes (BA or BSc degree), 2-4 years full time, or partial (exchange) studies of 1 or 2 semesters. 2026/2027 call: 30 Hungarian higher education institutions with about 900 foreign-language study programmes across the bachelor's, master's and one-tier levels (taught mainly in English, some in German and French; Hungarian-language programmes also available). Applicants may only choose the study fields their country's bilateral agreement allows; each applicant can apply for up to two programmes. The programme list is in the programme's application system.",
+     "source_text": "Stipendium Hungaricum scholarships are available for bachelor's, master's, one-tier master's, doctoral, non-degree programmes (preparatory courses) and postgraduate specialist training courses.",
+     "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master programmes (MA or MSc), 1-2 years, and one-tier (undivided) master's programmes, 5-6 years, which cover bachelor and master level in fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery and forestry engineering. Partial (exchange) studies of 1 or 2 semesters also available. About 900 foreign-language programmes at 30 institutions in the 2026/2027 call (all levels except doctoral), mainly in English. Allowed fields depend on the applicant's sending country.",
+     "source_text": "These one-tier programmes are offered in specific study fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery, forestry engineering, etc.",
+     "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+    },
+    "programmes": [
+     {
+      "name": "General medicine",
+      "institution": null,
+      "detail": "One-tier master's field named in the call as an example (5-6 years); availability depends on host institution and sending country",
+      "source_text": "These one-tier programmes are offered in specific study fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery, forestry engineering, etc.",
+      "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+     },
+     {
+      "name": "Pharmacy",
+      "institution": null,
+      "detail": "One-tier master's field named in the call as an example (5-6 years); availability depends on host institution and sending country",
+      "source_text": "These one-tier programmes are offered in specific study fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery, forestry engineering, etc.",
+      "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+     },
+     {
+      "name": "Dentistry",
+      "institution": null,
+      "detail": "One-tier master's field named in the call as an example (5-6 years); availability depends on host institution and sending country",
+      "source_text": "These one-tier programmes are offered in specific study fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery, forestry engineering, etc.",
+      "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+     },
+     {
+      "name": "Architecture",
+      "institution": null,
+      "detail": "One-tier master's field named in the call as an example (5-6 years); availability depends on host institution and sending country",
+      "source_text": "These one-tier programmes are offered in specific study fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery, forestry engineering, etc.",
+      "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+     },
+     {
+      "name": "Law",
+      "institution": null,
+      "detail": "One-tier master's field named in the call as an example (5-6 years); availability depends on host institution and sending country",
+      "source_text": "These one-tier programmes are offered in specific study fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery, forestry engineering, etc.",
+      "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+     },
+     {
+      "name": "Veterinary surgery",
+      "institution": null,
+      "detail": "One-tier master's field named in the call as an example (5-6 years); availability depends on host institution and sending country",
+      "source_text": "These one-tier programmes are offered in specific study fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery, forestry engineering, etc.",
+      "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+     },
+     {
+      "name": "Forestry engineering",
+      "institution": null,
+      "detail": "One-tier master's field named in the call as an example (5-6 years); availability depends on host institution and sending country",
+      "source_text": "These one-tier programmes are offered in specific study fields such as general medicine, pharmacy, dentistry, architecture, law, veterinary surgery, forestry engineering, etc.",
+      "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Doctoral programmes, 8 semesters in two phases of 4 semesters (2+2 years); complex exam after the first phase. About 170 study programmes at 23 institutions in the 2026/2027 call, mainly in English, further programmes in Hungarian. A supervisor at the host university is required; applicants must check doktori.hu for doctoral schools, research fields, topics and supervisors, and discuss the research topic with the doctoral school beforehand. Partial (exchange) doctoral study of 1 or 2 semesters also available.",
+     "source_text": "At doctoral level, 23 Hungarian higher education institutions are engaged in the Stipendium Hungaricum Programme for the 2026/2027 academic year, with about 170 study programmes",
+     "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/PhD_Call_for_Applications_2026_27.pdf"
+    },
+    "programmes": []
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "Non-degree programmes: (1) one-year preparatory course in the Hungarian language, before a degree programme taught in Hungarian (only for applicants who then continue in Hungarian); (2) postgraduate specialist training courses (certificate after a bachelor's or master's degree), 1-2 years, or 1 or 2 semesters partial. For English-language degree programmes in engineering, music and dance, and computer science and information technology, the host institution may decide to admit a candidate to a foundation semester/year first.",
+     "source_text": "Postgraduate specialist training courses (PG) provide the opportunity to obtain a specialized qualification after a bachelor's or master's degree.",
+     "url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/wp-content/uploads/2025/10/BA_MA_OTM_Call_for_Applications_2026_27.pdf"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "postdoctoral"
+  ],
+  "catalogue_url": "https://web.archive.org/web/2026/https://stipendiumhungaricum.hu/partners/",
+  "notes": [
+   "stipendiumhungaricum.hu showed only a maintenance page earlier; both official Call for Applications PDFs (BA/MA/OTM/non-degree and PhD, 2026/2027) were read from archived copies on web.archive.org of the official files (local copies re-checked and archive URLs return HTTP 200 application/pdf), and the 'partners' page is also cited from the archive. Archived copies are acceptable per the assignment.",
+   "Latest published call is 2026/2027 (apply-site news list ends 25 Feb 2026); no 2027/2028 call found, so levels and numbers (about 900 programmes at 30 institutions; about 170 doctoral programmes at 23 institutions) are for 2026/2027.",
+   "The full programme-by-programme catalogue exists only in the application system's browse pages (not recorded here as a link, per the brief's rule on application portals); programmes are not enumerated because there are hundreds. catalogue_url points to the archived 'Sending Partners and Available Study Programmes' page, where available study fields per sending country can be selected.",
+   "The one-tier master's fields are those named as examples in the call, not a full list.",
+   "An applicant can apply in only one group per round: either bachelor/master/one-tier/non-degree/postgraduate specialist, or doctoral."
+  ]
+ }
+]

@@ -1,0 +1,186 @@
+[
+  {
+    "external_key": "de-daad-scholarship-database",
+    "status": "partly",
+    "official_title": "Scholarship Database",
+    "title_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["master", "doctorate", "postdoctoral"],
+      "confirmed": false,
+      "quote": "Scholars taking a Master's programme typically receive EUR 992, doctoral candidates and postdocs EUR 1,400.",
+      "url": "https://www.daad.de/en/studying-in-germany/scholarships/information-for-scholarship-applicants/"
+    },
+    "opens": {
+      "date_type": "month",
+      "starts_on": null,
+      "ends_on": null,
+      "phrase": "1 June (no year printed; the same page says funding must begin in 2027)",
+      "source_text": "Applications for this scholarship programme are possible between 1 June and the stated application deadline.",
+      "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50026200",
+      "call_year": "2026-27"
+    },
+    "closes": {
+      "type": "route_dependent",
+      "source_text": "Application deadlines are updated annually in the second quarter. In most cases, they are in the same period as the previous year. You can find the current dates here: [dates not shown when the call is closed; the portal page says 'Currently you cannot apply for this programme.']",
+      "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50026200",
+      "call_year": "2026-27",
+      "latest_call_is_past": true
+    },
+    "matches_current": {"title": true, "degrees": false, "opens": false, "closes": true},
+    "notes": [
+      "Best-documented DAAD study-scholarship call used: 'Study Scholarships - Master Studies for All Academic Disciplines' (DAAD database detail 50026200; funding must begin in 2027, usually 1 October 2027). Master's level only. Opening is '1 June' with no year printed. The default view shows no closing date and states 'Currently you cannot apply for this programme.' A country-filtered view of the same entry (origin=190, with an extra 90 per cent grade requirement) shows '31.08.2026'; the country behind origin=190 could not be identified, so the deadline is country-dependent and recorded as route_dependent. The portal closes at 24.00 hrs (CET or CEST) on the last application day.",
+      "Other DAAD call seen: 'Study scholarships for STEM disciplines' (Master's, developing and emerging countries; country-filtered view shows deadline 03.09.2026; same 1 June opening wording; funding start winter term 27/28; status closed).",
+      "The database landing page (21148-scholarship-database) names no degree levels and no dates; it only says graduates already have a first degree. The master/doctorate/postdoctoral codes come from DAAD's 'Important information for scholarship applicants' page (funding rates for Master's, doctoral and postdocs). No DAAD page read states bachelor-level funding in this database, so bachelor in the current record is unsupported.",
+      "Official page title: 'Scholarship Database - DAAD - Deutscher Akademischer Austauschdienst' with heading 'Finding Scholarships'. Current website title is a descriptive variant; keep.",
+      "The 'Application procedure' tab with the closing date is only shown during an ongoing application period (information-for-scholarship-applicants page)."
+    ]
+  },
+  {
+    "external_key": "eu-erasmus-mundus-jm",
+    "status": "confirmed",
+    "official_title": "Erasmus Mundus Joint Masters",
+    "title_url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["master"],
+      "confirmed": true,
+      "quote": "Erasmus Mundus Joint Masters (students); applicants need a bachelor's degree or be in the final bachelor's year; Students apply directly to the institution running their chosen programme.",
+      "url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters"
+    },
+    "opens": {
+      "date_type": "route_dependent",
+      "starts_on": null,
+      "ends_on": null,
+      "phrase": "between October and January (autumn of 2026 for the newly selected masters)",
+      "source_text": "Student page: \"you should submit your application between October and January\" for courses starting the following academic year. Commission news item 'Erasmus Mundus projects selected', 16 Jul 2026: the new masters \"will be opening for student applications in the autumn of 2026 to start programmes in September 2027\".",
+      "url": "https://erasmus-plus.ec.europa.eu/node/5906",
+      "call_year": "2027-28"
+    },
+    "closes": {
+      "type": "route_dependent",
+      "source_text": "Each master's sets its own entry requirements and application steps; the student page gives no exact deadline and says to check each programme's website. Page last updated 26 June 2025.",
+      "url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters",
+      "call_year": "2027-28",
+      "latest_call_is_past": false
+    },
+    "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+    "notes": [
+      "Official page heading is 'Erasmus Mundus Joint Masters (students)'; programme title Erasmus Mundus Joint Masters.",
+      "The student page prints no year for the October to January window. The 2026 news item (title '87 projects selected under Erasmus Mundus in latest call for proposals', 16 Jul 2026) gives autumn 2026 for opening and September 2027 for start, but only for the newly selected masters; existing masters set their own dates on their own websites.",
+      "Page also says full scholarships are available for the best students."
+    ]
+  },
+  {
+    "external_key": "tr-turkiye-burslari-2026",
+    "status": "confirmed",
+    "official_title": "Türkiye Scholarships",
+    "title_url": "https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["bachelor", "master", "doctorate", "diploma"],
+      "confirmed": true,
+      "quote": "Applications will be open to applicants wishing to pursue associate, bachelor's, master's, and doctoral degrees.",
+      "url": "https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121"
+    },
+    "opens": {
+      "date_type": "range",
+      "starts_on": "2026-01-10",
+      "ends_on": "2026-02-20",
+      "phrase": "10 January – 20 February 2026",
+      "source_text": "Application Dates: 10 January – 20 February 2026",
+      "url": "https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121",
+      "call_year": "2026"
+    },
+    "closes": {
+      "type": "date_only",
+      "date": "2026-02-20",
+      "source_text": "Application Dates: 10 January – 20 February 2026 (no time of day or time zone stated). YTB news 26 Feb 2026: \"As of last night, we have completed our Türkiye Scholarships application process.\"",
+      "url": "https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121",
+      "call_year": "2026",
+      "latest_call_is_past": true
+    },
+    "matches_current": {"title": true, "degrees": true, "opens": true, "closes": false},
+    "notes": [
+      "Official English name is 'Türkiye Scholarships' (Türkiye Bursları is the Turkish name); website's 'Turkiye Burslari (Turkiye Scholarships)' is the same programme, so keep.",
+      "'Associate' degrees mapped to code 'diploma' (no associate code); the page lists associate, bachelor's, master's and doctoral.",
+      "Current record says closing 'not announced'; the official announcement page does give 20 February 2026 as the end of the single 2026 application period. The turkiyeburslari.gov.tr homepage text itself carries no dates (links to the Application Calendar).",
+      "Application calendar page (turkiyeburslari.gov.tr/calendar) shows the general period as 'January 10 – February 20' every year with no year printed; no 2027 call is announced on the site as of 2026-10-23. Separate tracks: Success Scholarship application October–November (no year); Research Scholarship periods January–March, April–June, July–September, October–December (no year).",
+      "YTB-IsDB Joint Scholarship 2026 is a separate announcement (announcement 122)."
+    ]
+  },
+  {
+    "external_key": "kr-gks-2027",
+    "status": "confirmed",
+    "official_title": "GKS (Global Korea Scholarship) Program",
+    "title_url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["bachelor", "master", "doctorate"],
+      "confirmed": true,
+      "quote": "Undergraduate Degrees (including Associate Degree); Graduate Degrees (Master's and Doctoral Degrees)",
+      "url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1"
+    },
+    "opens": {
+      "date_type": "route_dependent",
+      "starts_on": null,
+      "ends_on": null,
+      "phrase": "Undergraduate 2027: Embassy Track 15 September 2026 (11:00 KST); University Track September - November; Graduate: February - March",
+      "source_text": "Study in Korea: \"Embassy Track: September / University Track: September - November\" (undergraduate) and graduate \"February - March\" (no year on that page). Korean embassy notice (MOFA, Pakistan, posted 2026-09-14): \"September 15, 2026 (Tue.), 11:00 AM – September 30, 2026 (Wed.), 6:00 PM (Korea Standard Time)\".",
+      "url": "https://www.mofa.go.kr/pk-en/brd/m_3150/view.do?seq=762182",
+      "call_year": "2027"
+    },
+    "closes": {
+      "type": "route_dependent",
+      "source_text": "2027 GKS-U Embassy Track (Kenya embassy notice posted 2026-09-14; Pakistan notice same): closes \"September 30, 2026\" 6:00 PM Korean time. University Track closing dates are set by each university and are in a separate notice (not read); the graduate 2027 call is not yet announced.",
+      "url": "https://www.mofa.go.kr/ke-en/brd/m_10538/view.do?seq=761541",
+      "call_year": "2027",
+      "latest_call_is_past": true
+    },
+    "matches_current": {"title": true, "degrees": true, "opens": true, "closes": false},
+    "notes": [
+      "Official page names the programme 'GKS (Global Korea Scholarship) Program'; NIIED notices use 'Global Korea Scholarship (GKS)'. Website title 'Global Korea Scholarship (GKS)' is equivalent; keep.",
+      "2027 GKS-U Embassy Track (posted 2026-09-09 by NIIED on Study in Korea; embassy notices 2026-09-14): 15 September 2026 11:00 KST to 30 September 2026 18:00 KST (the Kenya embassy page expresses this as 15 Sep 05:00 to 30 Sep 12:00 Kenyan time; Pakistan page 07:00 to 14:00 Pakistan time). Both embassy notices state the same KST instants. Final results for Embassy Track expected 7 January 2027 per search snippet of the notice (not independently read on an official page).",
+      "University Track: Study in Korea lists '2027 GKS Undergraduate Program - University Track' posted 2026-09-23; its dates were not readable. Study in Korea process page says University Track September - November with no year.",
+      "Graduate (GKS-G): no 2027 call published. The 2026 GKS-G Embassy Track ran 12 February to 25 February 2026, 18:00 KST (embassy notices), so graduate dates differ from undergraduate and are set per embassy/university.",
+      "The Study in Korea apply button read 'It is not the application period' when checked.",
+      "The Study in Korea page also lists Korea-Japan degree programme notices as separate 2027 calls."
+    ]
+  },
+  {
+    "external_key": "us-fulbright-foreign-student-2027",
+    "status": "confirmed",
+    "official_title": "Fulbright Foreign Student Program",
+    "title_url": "https://foreign.fulbrightonline.org/about/foreign-student-program",
+    "title_action": "keep",
+    "degrees": {
+      "codes": ["master", "doctorate"],
+      "confirmed": true,
+      "quote": "awards approximately 4,000 grants annually to foreign students to study for a Master’s or Doctorate degree",
+      "url": "https://foreign.fulbrightonline.org/apply"
+    },
+    "opens": {
+      "date_type": "route_dependent",
+      "starts_on": null,
+      "ends_on": null,
+      "phrase": "per established country/award deadlines",
+      "source_text": "Applicants submit to the Fulbright Commission, Foundation or U.S. Embassy in their home country \"per established country/award deadlines\"; no global opening date is given.",
+      "url": "https://foreign.fulbrightonline.org/about/foreign-student-program",
+      "call_year": "2027-28"
+    },
+    "closes": {
+      "type": "route_dependent",
+      "source_text": "IIE-placed candidates apply \"per established country/award deadlines\"; self-placed candidates must meet each university's deadline (\"per each university deadline\"). Deadlines vary by country.",
+      "url": "https://foreign.fulbrightonline.org/apply",
+      "call_year": "2027-28",
+      "latest_call_is_past": false
+    },
+    "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+    "notes": [
+      "Official pages use 'Fulbright Foreign Student Program' (about page) and 'Fulbright Program for Foreign Students' (apply page).",
+      "The about page says it 'enables graduate students, young professionals and artists from abroad to study and conduct research in the United States' and that IIE secures 'degree and non-degree opportunities'. Master's and doctorate are named only on the apply page.",
+      "IIE Placement Timeline (degree-seeking, months only, no years): IIE reviews applications September through October; applies to programmes October through December; admissions decisions announced February through April.",
+      "Country-level deadlines (e.g. South Africa 8 April 2026, Kosovo 30 June 2026) were seen only on non-primary or local sites and were not used as facts."
+    ]
+  }
+]

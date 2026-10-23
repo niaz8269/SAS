@@ -1,0 +1,224 @@
+[
+ {
+  "external_key": "jp-mext-embassy-research-2027",
+  "status": "confirmed",
+  "official_title": "MEXT Scholarship for 2027 Embassy Recommendation (page heading: Application for Research Students - Embassy Recommendation; guidelines: Japanese Government (MEXT) Scholarship for 2027 (Research Students))",
+  "title_url": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "Those who are enrolled in a master's course, a doctoral course, or a professional graduate course at a graduate school",
+   "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"
+  },
+  "opens": {
+   "date_type": "month",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "Around mid-Apr. 2026",
+   "source_text": "Guidelines section 8 chart: \"Around mid-Apr. 2026\" - \"Call for applications opens at each Japanese diplomatic mission/Submission of application documents\"",
+   "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf",
+   "call_year": "2027"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "\"The deadline for submission of application documents varies according to each Japanese diplomatic mission.\" (Guidelines section 8); web page: \"As the application process and specific schedule differ according to the country of your nationality, please inquire the Japanese Embassy or Consulate General in your country\"",
+   "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf",
+   "call_year": "2027",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Info page (studyinjapan.go.jp, JASSO) text: recruitment for arrival April 2027 or September/October 2027 is made between April and May of the previous year; first screening between May and July by embassies/consulates general. The page itself states no year for those windows; the guidelines chart gives 'Around mid-Apr. 2026' (call opens), 'Around early May.-late Jul. 2026' (first screening), 'Until Sep. 1, 2026' (provisional acceptance request), 'Around mid-Sep-early Oct. 2026' (placement preference form), 'From Nov. 2026' (second screening), 'Jan. to Mar. 2027' (results).",
+   "Closing date is set per embassy/consulate; no single date. As of 2026-10-23 the first-screening stage is past in most countries.",
+   "Guidelines PDF read from a local copy of the official PDF (text extracted)."
+  ]
+ },
+ {
+  "external_key": "jp-mext-embassy-undergraduate-2027",
+  "status": "confirmed",
+  "official_title": "MEXT Scholarship for 2027 Embassy Recommendation (page heading: Application for Undergraduate Students - Embassy Recommendation; guidelines: Japanese Government (MEXT) Scholarship for 2027 (Undergraduate Students) (Embassy Recommendation))",
+  "title_url": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-undergraduate.html",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor"
+   ],
+   "confirmed": true,
+   "quote": "Those who are enrolled in an undergraduate course at a university, or who are receiving preparatory education in the Japanese language and other subjects prior to placement in an undergraduate course",
+   "url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+  },
+  "opens": {
+   "date_type": "range",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "between April and May of the previous year",
+   "source_text": "\"Recruitment for those arriving in Japan next April is made between April and May of the previous year.\" The page states no calendar year for this window and no opening date.",
+   "url": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-undergraduate.html",
+   "call_year": "2027"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "\"As the application process and specific schedule differ according to the country of your nationality, please inquire the Japanese Embassy or Consulate General in your country for details.\" First screening \"between May and August\".",
+   "url": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-undergraduate.html",
+   "call_year": "2027",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": false,
+   "closes": true
+  },
+  "notes": [
+   "Current record says 'April 2028 arrival (recruitment in 2027)' and that the year is inferred. The official guidelines state arrival in Japan in April 2027 (spring term) or September/October 2027 (autumn term, direct placement); applicants must be able to arrive between April 1 and April 7, 2027; final selection results are informed 'after February 2027'; direct placement consultation runs until February 12, 2027. So the cycle is for 2027 arrival, not 2028. The page gives the application window only as 'between April and May of the previous year' with no year, so no calendar dates are reported (not inferred).",
+   "Neither the info page nor the guidelines give embassy-specific opening or closing dates.",
+   "Guidelines PDF read from a local copy of the official PDF (text extracted)."
+  ]
+ },
+ {
+  "external_key": "nz-manaaki-new-zealand-scholarships",
+  "status": "partly",
+  "official_title": "Manaaki New Zealand Scholarships",
+  "title_url": "https://www.nzscholarships.govt.nz/",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor",
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "Scholarships for undergraduate and postgraduate study (funder); eligibility page refers to 'PhD applicants' and to 'postgraduate' and 'undergraduate' qualifications",
+   "url": "https://www.nzscholarships.govt.nz/types-of-manaaki-scholarships/"
+  },
+  "opens": {
+   "date_type": "route_dependent",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": null,
+   "source_text": "Funder 'How to apply' page: \"Applications for Samoa Foundation open midnight 4 August 2026 and close midday 4 September 2026\". Funder: \"Tertiary applications for the Manaaki New Zealand Scholarship Programme have now closed.\" No dates for the general tertiary round on any funder page; the 'dates for your country' page still says \"The 2024 tertiary Manaaki New Zealand Scholarships application round for all eligible countries and regions has closed.\"",
+   "url": "https://www.nzscholarships.govt.nz/how-to-apply-for-a-scholarship/",
+   "call_year": "2026"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "Samoa Foundation intake: \"close midday 4 September 2026\" (no time zone on that line; the dates page says deadlines are in New Zealand Time and 'Applications close at midday, not midnight'). General tertiary round: closed, no date given. Massey University (host) page: \"Applications open 1 March 2027 and close 10 April 2027\", status Closed.",
+   "url": "https://www.nzscholarships.govt.nz/how-to-apply-for-a-scholarship/",
+   "call_year": "2026",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": false,
+   "closes": false
+  },
+  "notes": [
+   "Dates differ by country/route; no single funder-published date for the general tertiary round. The funder publishes only the Samoa Foundation intake (open midnight 4 August 2026, close midday 4 September 2026), which is past as of 2026-10-23.",
+   "Massey University (host university) lists Applications open 1 March 2027, closing date 10 April 2027, status Closed (https://www.massey.ac.nz/study/scholarships-and-awards/manaaki-new-zealand-scholarships/). It does not say which intake; it may be the next round, and its closing date is university-specific.",
+   "Government bodies announced the previous (study-in-2027) round per country: Indonesia ministry (kemdiktisaintek.go.id, dated 10 March 2026) says registration open until 31 March 2026 for Manaaki Intake 2027, postgraduate (Master/PhD); a Solomon Islands government notice was reported in search results as closing 10am Solomon Islands time 31 March 2026 (page itself could not be fetched). These are country routes, not a single date.",
+   "Degrees: funder says 'undergraduate and postgraduate' and mentions PhD; 'master' is supported only via 'postgraduate' (funder) and the Indonesian ministry's '(Master/PhD)'; funder pages never use the word master.",
+   "Separate short-term strands (thematic, vocational, English language for officials) exist and are not counted as degrees."
+  ]
+ },
+ {
+  "external_key": "fr-eiffel-excellence-2027",
+  "status": "confirmed",
+  "official_title": "France Excellence Eiffel scholarship program",
+  "title_url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "enroll in their masters and PhD programs",
+   "url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence"
+  },
+  "opens": {
+   "date_type": "month",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "October 2026",
+   "source_text": "\"2027 Campaign Timeline - Opening of the call for applications: October 2026\"; page also says \"Call for application 2027 is open.\"",
+   "url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence",
+   "call_year": "2027"
+  },
+  "closes": {
+   "type": "date_only",
+   "date": "2027-01-06",
+   "source_text": "\"Deadline for the reception of applications by Campus France: January 6, 2027 included\" (no time or time zone given)",
+   "url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence",
+   "call_year": "2027",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Only applications submitted by French higher education institutions are accepted (students cannot apply directly). Results published 'from the 12th of April, 2027'.",
+   "Age limits: up to 29 at master's level, up to 35 at PhD level."
+  ]
+ },
+ {
+  "external_key": "hu-stipendium-hungaricum-2027",
+  "status": "partly",
+  "official_title": "Stipendium Hungaricum Scholarship Programme",
+  "title_url": "https://apply.stipendiumhungaricum.hu/",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor",
+    "master",
+    "doctorate",
+    "diploma"
+   ],
+   "confirmed": true,
+   "quote": "Call for Applications for bachelor's, master's, one-tier master's, non-degree programmes and postgraduate specialist training courses [2026/2027]; Call for Applications for doctoral programmes",
+   "url": "https://apply.stipendiumhungaricum.hu/news/new/134-call-applications-20262027-academic-year"
+  },
+  "opens": {
+   "date_type": "month",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "around mid-November 2025",
+   "source_text": "28 Oct 2025 notice: \"the Stipendium Hungaricum online application system is expected to open around mid-November 2025\"; 17 Nov 2025 notice: \"Stipendium Hungaricum application system is open!\" (2026/2027 academic year)",
+   "url": "https://apply.stipendiumhungaricum.hu/news/new/135-stipendium-hungaricum-application-system-open",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "exact",
+   "local_datetime": "2026-01-15 14:00",
+   "timezone": "Europe/Budapest",
+   "source_text": "\"The deadline for submitting your application is 15 January 2026, 2 p.m. (Central European Time)\"",
+   "url": "https://apply.stipendiumhungaricum.hu/news/new/135-stipendium-hungaricum-application-system-open",
+   "call_year": "2026-27",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": false,
+   "opens": false,
+   "closes": false
+  },
+  "notes": [
+   "No 2027/2028 call is published as of 2026-10-23: the apply.stipendiumhungaricum.hu news list ends at 25 Feb 2026 (a University of Pecs preparatory-course notice); the latest call notice is for 2026/2027 (28 Oct 2025). The latest published call is therefore past, and its dates are reported.",
+   "stipendiumhungaricum.hu itself showed only a maintenance page (The websites of Tempus Public Foundation are temporarily unavailable). apply.stipendiumhungaricum.hu (official application site, news pages) loaded normally. The 2026/27 Call for Applications PDFs (BA/MA/OTM/non-degree and PhD) were read from an archived copy (web.archive.org) of the official stipendiumhungaricum.hu files.",
+   "Call PDFs (archived) give timeline '15 January 2026, 2pm' and the line 'Central European Time'. The call also covers non-degree programmes (Hungarian-language preparatory course, postgraduate specialist training courses, certificate), coded as diploma; the current record lacks it. Partial (exchange) study is also available.",
+   "Earlier-year notices (15 Nov 2023, 15 Nov 2024) show a recurring mid-November opening and mid-January closing, but that is only a pattern and not a published 2027/28 date; not used."
+  ]
+ }
+]

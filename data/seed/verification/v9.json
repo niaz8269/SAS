@@ -1,0 +1,87 @@
+[
+ {
+  "external_key": "cz-government-scholarship-development-2027",
+  "status": "confirmed",
+  "official_title": "Government Scholarships – Developing Countries",
+  "title_url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "Selected follow-up Master’s study programmes (two-year-long programmes), Selected Doctoral study programmes (three- to four-year-long programmes).", "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries"},
+  "opens": {"date_type": "date_only", "starts_on": "2026-08-21", "ends_on": null, "phrase": "21 August 2026", "source_text": "The applications period for the academic year 2027/2028 is from 21 August until 30 September 2026.", "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries", "call_year": "2027-28"},
+  "closes": {"type": "date_only", "date": "2026-09-30", "source_text": "Each applicant is obliged to fill in an electronic application form by 30 September 2026 at the latest.", "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries", "call_year": "2027-28", "latest_call_is_past": true},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Official page title is 'Government Scholarships – Developing Countries'; the website's longer title adds 'Czech' and a parenthetical, but the page body does mention 'Foreign Development Cooperation', so kept.",
+   "No closing time stated on the page, so date_only. Call has closed as of 2026-10-23.",
+   "The website's note that the studyin.gov.cz portal shows 1. 8. 2026 to 30. 9. 2026 could not be re-checked (studyin.gov.cz homepage gives no dates); the msmt.gov.cz page says 21 August.",
+   "Completed bachelor's is an entry requirement for the master's level; not a scholarship level."
+  ]
+ },
+ {
+  "external_key": "it-maeci-government-scholarships-2027",
+  "status": "partly",
+  "official_title": "Scholarships offered by the Italian Government to foreign students and Italian citizens residing abroad (IRE)",
+  "title_url": "https://ambpanama.esteri.it/en/news/dall_ambasciata/2026/03/bando-per-lassegnazione-di-borse-di-studio-offerte-dal-governo-italiano-a-studenti-stranieri-e-italiani-residenti-allestero-ire-per-lanno-accademico-2026-2027/",
+  "title_action": "keep",
+  "degrees": {"codes": ["master", "doctorate"], "confirmed": true, "quote": "standard scholarships for Master’s Degree programs, Higher Education in Arts, Music and Dance (AFAM) courses, PhD programs, and research projects", "url": "https://ambpanama.esteri.it/en/news/dall_ambasciata/2026/03/bando-per-lassegnazione-di-borse-di-studio-offerte-dal-governo-italiano-a-studenti-stranieri-e-italiani-residenti-allestero-ire-per-lanno-accademico-2026-2027/"},
+  "opens": {"date_type": "not_announced", "starts_on": null, "ends_on": null, "phrase": null, "source_text": "No opening date stated in the official notices for the 2026-2027 call; no 2027-2028 call is published (studyinitaly.esteri.it/ListaBandi shows no current call).", "url": "https://studyinitaly.esteri.it/ListaBandi", "call_year": "2026-27"},
+  "closes": {"type": "exact", "local_datetime": "2026-03-26 14:00", "timezone": "Europe/Rome", "source_text": "Online applications must be submitted no later than 2:00 p.m. (Italian time) on 26 March 2026.", "url": "https://ambpanama.esteri.it/en/news/dall_ambasciata/2026/03/bando-per-lassegnazione-di-borse-di-studio-offerte-dal-governo-italiano-a-studenti-stranieri-e-italiani-residenti-allestero-ire-per-lanno-accademico-2026-2027/", "call_year": "2026-27", "latest_call_is_past": true},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Latest published call is 2026-2027 (closed 26 March 2026); no 2027-2028 call found. Berlin embassy notice gives the same deadline ('2 p.m. (C.E.T.) on 26th March 2026').",
+   "studyinitaly.esteri.it/ListaBandi is stale: it still says the 2025-2026 call is closed and lists no 2026-2027 call. The 2026-27 facts come from Italian embassy (MAECI) notices (Panama, Berlin) dated 12 March 2026; the call PDF itself was not read, hence partly.",
+   "Also offered: 3-month Italophony scholarships (Italian language and culture courses only, 1 Jan - 30 Sep 2027), not a degree level.",
+   "Embassy notice heading: 'Call for applications for scholarships offered by the Italian Government to foreign students and Italian citizens residing abroad (IRE) for the academic year 2026-2027'; website title is equivalent wording, kept.",
+   "Website sources_now URL (ListaBandi) does not show the 2026-27 call; consider also citing the embassy notice."
+  ]
+ },
+ {
+  "external_key": "nl-nl-scholarship-2026",
+  "status": "confirmed",
+  "official_title": "NL Scholarship",
+  "title_url": "https://www.studyinnl.org/finances/nl-scholarship",
+  "title_action": "keep",
+  "degrees": {"codes": ["bachelor", "master"], "confirmed": true, "quote": "You are applying for a full-time bachelor’s or master’s programme at one of the participating Dutch higher education institutions.", "url": "https://www.studyinnl.org/finances/nl-scholarship"},
+  "opens": {"date_type": "date_only", "starts_on": "2025-11-01", "ends_on": null, "phrase": "1 November 2025", "source_text": "The application for the academic year 2026-2027 opened on 1 November 2025.", "url": "https://www.studyinnl.org/finances/nl-scholarship", "call_year": "2026-27"},
+  "closes": {"type": "route_dependent", "source_text": "Please check the website of the institution you want to apply to for the specific deadline(s).", "url": "https://www.studyinnl.org/finances/nl-scholarship", "call_year": "2026-27", "latest_call_is_past": true},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "Page text: 'The NL Scholarship (formerly known as Holland Scholarship)'. Page URL is now /finances/nl-scholarship.",
+   "Deadlines are set by each participating institution; Study in NL gives none. The University of Groningen page shows only 'Deadline: February 1' without a year. No 2027-2028 call or opening date is published on studyinnl.org.",
+   "latest_call_is_past=true is an inference: the page speaks of the 2026-2027 year only and institutional deadlines were not individually verified.",
+   "For non-EEA students; EUR 5,000."
+  ]
+ },
+ {
+  "external_key": "at-ernst-mach-grant-worldwide-2027",
+  "status": "confirmed",
+  "official_title": "Ernst Mach Grant - worldwide",
+  "title_url": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant",
+  "title_action": "keep",
+  "degrees": {"codes": ["doctorate", "postdoctoral"], "confirmed": true, "quote": "Postgraduates pursuing a doctoral/PhD programme outside Austria; Postgraduates and post-docs who want to do research in Austria ...; Post-docs who are working as lecturers or researchers at a university outside Austria.", "url": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant/faq-ernst-mach-grant-worldwide"},
+  "opens": {"date_type": "month", "starts_on": null, "ends_on": null, "phrase": "from September", "source_text": "online application is possible from September to December 1st", "url": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant", "call_year": "2027-28"},
+  "closes": {"type": "exact", "local_datetime": "2026-12-01 23:59", "timezone": "Europe/Vienna", "source_text": "The application deadline for this grant is December 1st, 2026, 23:59 (CET - Central European Time) for all applications for stays during the academic year 2027/28.", "url": "https://oead.at/en/study-research-teaching/overview-grants-and-scholarships/ernst-mach-grant/faq-ernst-mach-grant-worldwide", "call_year": "2027-28", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": false, "closes": true},
+  "notes": [
+   "Opening: the official page gives only the month ('from September', no year); the website currently says not_announced, so it should become month. The FAQ says it applies to the current call (Austrian academic year 2027/28) but does not state a year for the opening.",
+   "Official title 'Ernst Mach Grant - worldwide'; the website's '(OeAD)' suffix is only a funder tag, kept.",
+   "Degree levels are not on the main page ('young researchers'); they come from the FAQ. Age limit 35.",
+   "Other Ernst Mach strands (FH, Follow-Up, ASEA-UNINET) have different deadlines (1 February, 1 March) and are different programmes."
+  ]
+ },
+ {
+  "external_key": "se-si-scholarship-global-professionals-2027",
+  "status": "confirmed",
+  "official_title": "SI Scholarship for Global Professionals",
+  "title_url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/",
+  "title_action": "keep",
+  "degrees": {"codes": ["master"], "confirmed": true, "quote": "Level: Master", "url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/"},
+  "opens": {"date_type": "date_only", "starts_on": "2027-02-08", "ends_on": null, "phrase": "8 February 2027", "source_text": "8-24 February 2027: Application portal for the SI Scholarships is open for two weeks.", "url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/", "call_year": "2027-28"},
+  "closes": {"type": "exact", "local_datetime": "2027-02-24 14:59", "timezone": "Europe/Stockholm", "source_text": "Please note that the application portal closes at 14:59 CET on the final day.", "url": "https://si.se/en/apply/scholarships/swedish-institute-scholarships-for-global-professionals/", "call_year": "2027-28", "latest_call_is_past": false},
+  "matches_current": {"title": true, "degrees": true, "opens": true, "closes": true},
+  "notes": [
+   "The website's source URL (si.se/en/apply/scholarships/si-scholarship-for-global-professionals/) now returns 404; the live page is /swedish-institute-scholarships-for-global-professionals/ (heading 'SI Scholarship for Global Professionals').",
+   "Prerequisite: apply to eligible master's programmes via University Admissions 16 October 2026 - 15 January 2027; eligible programme list published 13 November 2026. Page adds 'The information may be subject to changes.'",
+   "Banner reads 'Opens for applications 8 February'; key dates give the year 2027. Third-party sites quoting 9-25 February are the 2026 cycle and not official."
+  ]
+ }
+]

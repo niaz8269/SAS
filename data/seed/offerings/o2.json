@@ -1,0 +1,104 @@
+[
+ {
+  "external_key": "cn-anso-2026",
+  "status": "partly",
+  "levels": [
+   {"code": "master", "confirmed": true,
+    "summary": {"detail": "Master's study at USTC, UCAS or CAS institutes; no field list, duration or teaching language stated on the page (applicants 'proficient in English or Chinese'); must meet the USTC/UCAS international admission criteria; born after 1 January 1996", "source_text": "100 to 200 Master's students and 300 PhD students every year", "url": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html"},
+    "programmes": []},
+   {"code": "doctorate", "confirmed": true,
+    "summary": {"detail": "PhD study at USTC, UCAS or CAS institutes; includes the ANSO-CAS-TWAS/UNESCO PhD Scholarship sub-category (up to 40 per year, developing countries, 10 prioritised for climate-related research); no field list stated; born after 1 January 1991", "source_text": "ANSO-CAS-TWAS/UNESCO PhD Scholarship", "url": "https://www.anso.org.cn/programmes/talent/scholarship/202510/t20251015_786021.html"},
+    "programmes": []}
+  ],
+  "levels_not_offered": ["bachelor", "postdoctoral"],
+  "catalogue_url": null,
+  "notes": ["The official page names no majors or disciplines; the only academic requirement is meeting the international admission criteria of USTC/UCAS. UCAS is 'authorized to confer all masters' and doctorate degrees in the scientific disciplines'; USTC has 34 schools (page wording).", "The page also describes a non-degree category of the scholarship (a separate programme page); not covered here.", "Applicants may apply to only one of USTC or UCAS per cycle.", "USTC International College page (ic.ustc.edu.cn) fetched contained no CAS-ANSO or programme list; the ANSO 'newhome' degree page returned 404. No programme catalogue found, so programmes left empty."]
+ },
+ {
+  "external_key": "cn-bgs-2026",
+  "status": "partly",
+  "levels": [
+   {"code": "bachelor", "confirmed": true,
+    "summary": {"detail": "Degree programmes at higher education institutions and research institutes in Beijing; funding not beyond the standard length of the enrolled programme; Chinese-taught degree programmes need HSK 4+, English-taught need TOEFL 85 / IELTS 6.5 (Category A) or equivalent; no majors listed", "source_text": "degree programs, including undergraduate, master's, and doctoral students", "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"},
+    "programmes": []},
+   {"code": "master", "confirmed": true,
+    "summary": {"detail": "Degree programmes at Beijing institutions; funding not beyond the standard length of the programme; no majors listed", "source_text": "degree programs, including undergraduate, master's, and doctoral students", "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"},
+    "programmes": []},
+   {"code": "doctorate", "confirmed": true,
+    "summary": {"detail": "Degree programmes at Beijing institutions; funding not beyond the standard length of the programme, extension possible for doctoral students who cannot finish on time; no majors listed", "source_text": "degree programs, including undergraduate, master's, and doctoral students", "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"},
+    "programmes": []},
+   {"code": "diploma", "confirmed": true,
+    "summary": {"detail": "Non-degree: preparatory students (funded for one academic year), visiting students including inter-university exchange students (up to one academic year, funded at master's level) and research scholars (up to one academic year, funded at doctoral level)", "source_text": "preparatory students, visiting students (including inter-university exchange students)", "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"},
+    "programmes": []}
+  ],
+  "levels_not_offered": ["postdoctoral"],
+  "catalogue_url": "https://english.beijing.gov.cn/studyinginbeijing/index.html",
+  "notes": ["The page says scholarship categories A, B, C depend on 'levels of study and academic disciplines' but lists no disciplines, institutions or programmes; applicants are referred to the Studying in Beijing portal and individual institutions.", "No consolidated official list of participating universities/programmes was found; each host institution selects recipients."]
+ },
+ {
+  "external_key": "cn-sgs-2026",
+  "status": "partly",
+  "levels": [
+   {"code": "bachelor", "confirmed": true,
+    "summary": {"detail": "Undergraduate programmes at the participating Shanghai universities; high school degree, no more than 25 years old; HSK 4 and the language requirements of the applied university and programme; no majors listed", "source_text": "Applicant applying for undergraduate programs", "url": "https://edu.sh.gov.cn/study_en_scholarships/20240904/5d8add31c7ce44a4b1e0d5bdfafe1495.html"},
+    "programmes": []},
+   {"code": "master", "confirmed": true,
+    "summary": {"detail": "Master's programmes at the participating Shanghai universities; bachelor degree or above, no more than 35 years old; no majors listed", "source_text": "for master's programs, applicant should have a bachelor degree or above and be no more than 35 years old", "url": "https://edu.sh.gov.cn/study_en_scholarships/20240904/5d8add31c7ce44a4b1e0d5bdfafe1495.html"},
+    "programmes": []},
+   {"code": "doctorate", "confirmed": true,
+    "summary": {"detail": "PhD programmes at the participating Shanghai universities; master's degree or above with academic research ability; no majors listed", "source_text": "for PhD programs, applicant should have a master's degree or above with academic research ability", "url": "https://edu.sh.gov.cn/study_en_scholarships/20240904/5d8add31c7ce44a4b1e0d5bdfafe1495.html"},
+    "programmes": []},
+   {"code": "diploma", "confirmed": true,
+    "summary": {"detail": "Pre-college programme: high school degree, under 23 years old", "source_text": "Applicant applying for the pre-college program should obtain a high school degree under the age of 23 years old", "url": "https://edu.sh.gov.cn/study_en_scholarships/20240904/5d8add31c7ce44a4b1e0d5bdfafe1495.html"},
+    "programmes": []}
+  ],
+  "levels_not_offered": ["postdoctoral"],
+  "catalogue_url": "https://edu.sh.gov.cn/study_en_scholarships/20240904/5d8add31c7ce44a4b1e0d5bdfafe1495.html",
+  "notes": ["The guide's Appendix 2 lists 31 participating universities (e.g. Fudan University, Shanghai Jiao Tong University, Tongji University, East China Normal University, East China University of Science and Technology, Shanghai University of Finance and Economics, Donghua University, Shanghai International Studies University, Shanghai University, ... Shanghai University of Medicine & Health Sciences); no programmes are named. Applicants must 'Meet entry requirements of the applied university and program'.", "Appendix 1 (scholarship details, possibly durations/coverage) is an image that could not be read.", "Programme lengths and teaching language are not stated on the page."]
+ },
+ {
+  "external_key": "cn-clec-teachers-2026",
+  "status": "confirmed",
+  "levels": [
+   {"code": "bachelor", "confirmed": true,
+    "summary": {"detail": "Maximum four academic years, commencing September 2026; senior high school diploma, HSK Level 4 score 210, HSKK Intermediate 60; CSCA score report also required (BLCU guide)", "source_text": "Scholarship for Bachelor's Degree in Chinese Language and Literature", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"},
+    "programmes": [
+     {"name": "Bachelor's Degree in Chinese Language and Literature (International Chinese Language Education)", "institution": "Beijing Language and Culture University", "detail": "Maximum four academic years, commences September 2026", "source_text": "Scholarship for Bachelor's Degree in Chinese Language and Literature", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"}]},
+   {"code": "master", "confirmed": true,
+    "summary": {"detail": "Maximum two academic years, commencing September 2026; bachelor's degree, HSK Level 5 score 210, HSKK Intermediate 60 (BLCU guide)", "source_text": "Scholarship for Master's Degree in International Chinese Language Education", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"},
+    "programmes": [
+     {"name": "Master's Degree in International Chinese Language Education", "institution": "Beijing Language and Culture University", "detail": "Maximum two academic years, commences September 2026", "source_text": "Scholarship for Master's Degree in International Chinese Language Education", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"}]},
+   {"code": "doctorate", "confirmed": true,
+    "summary": {"detail": "Maximum four academic years, commencing September 2026; master's degree in a related field, HSK Level 6 score 200 and HSKK Advanced 60 (or HSK Level 7); personal statement in Chinese (BLCU guide)", "source_text": "Scholarship for Doctor's Degree in International Chinese Language Education", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"},
+    "programmes": [
+     {"name": "Doctor's Degree in International Chinese Language Education", "institution": "Beijing Language and Culture University", "detail": "Maximum four academic years, commences September 2026", "source_text": "Scholarship for Doctor's Degree in International Chinese Language Education", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"}]},
+   {"code": "diploma", "confirmed": true,
+    "summary": {"detail": "Non-degree study programmes: One-Year (max 11 months), One-Semester (max five months, September 2026 or March 2027) and Four-Week (July or December 2026; groups of 15 or more via a recommending institution)", "source_text": "One-Year Study Program; One-Semester Study Program; Four-Week Study Program", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"},
+    "programmes": [
+     {"name": "One-Year Study Program: International Chinese Language Education; Chinese Language and Literature; Chinese Language Study", "institution": "Beijing Language and Culture University", "detail": "Maximum eleven months, starts September 2026", "source_text": "One-Year Study Program", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"},
+     {"name": "One-Semester Study Program: International Chinese Language Education; Chinese Language and Literature", "institution": "Beijing Language and Culture University", "detail": "Maximum five months, starts September 2026 or March 2027", "source_text": "One-Semester Study Program", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"},
+     {"name": "Four-Week Study Program: Chinese Language Study; Traditional Chinese Medicine; Taiji Culture", "institution": "Beijing Language and Culture University", "detail": "Maximum four weeks, July or December 2026", "source_text": "Four-Week Study Program", "url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm"}]}
+  ],
+  "levels_not_offered": ["postdoctoral"],
+  "catalogue_url": "https://admission.blcu.edu.cn/en/2026/0303/c1148a3044/page.htm",
+  "notes": ["Programmes listed are those at BLCU (the only host named on its guide); other host institutions are only searchable on chinese.cn, which was not loaded. Per the earlier pass, other hosts offer subsets (e.g. SYSU master's, SJTU bachelor's only), so the set of levels depends on host.", "The page does not state the teaching language; it sets Chinese proficiency (HSK/HSKK) requirements.", "CLEC's own site (cis.chinese.cn) could not be loaded in the previous pass."]
+ },
+ {
+  "external_key": "cn-unesco-greatwall-2026",
+  "status": "partly",
+  "levels": [
+   {"code": "master", "confirmed": true,
+    "summary": {"detail": "Master's degree programme, duration 2 to 5 years (stated jointly with doctoral), taught in English or Chinese depending on availability at the selected Chinese universities; bachelor's degree required, no older than 35; HSK 4 for Chinese-taught degree programmes", "source_text": "Candidates applying for Master's Degree Programmes must hold a bachelor's degree", "url": "https://www.unesco.org/en/fellowships/greatwall"},
+    "programmes": []},
+   {"code": "doctorate", "confirmed": true,
+    "summary": {"detail": "Doctoral degree programme, duration 2 to 5 years (stated jointly with master's), taught in English or Chinese depending on availability; master's degree required, no older than 40; HSK 4 for Chinese-taught degree programmes", "source_text": "those who apply for Doctoral Degree Programmes must hold a master's degree", "url": "https://www.unesco.org/en/fellowships/greatwall"},
+    "programmes": []},
+   {"code": "diploma", "confirmed": true,
+    "summary": {"detail": "One-year non-degree Visiting Scholar programme: General Scholar (high school diploma) or Senior Scholar (master's degree or associate professor); HSK 3 for Chinese-taught", "source_text": "General Scholar; Senior Scholar", "url": "https://www.unesco.org/en/fellowships/greatwall"},
+    "programmes": []}
+  ],
+  "levels_not_offered": ["bachelor", "postdoctoral"],
+  "catalogue_url": "http://www.campuschina.org/",
+  "notes": ["The page states 'Undergraduate (bachelor's) degree studies are not available under this Programme.'", "Fields: 'advanced studies in various fields'; the page says 'Please visit the official web page of China Scholarship Council (CSC) for the fields of proposed studies'. No universities or programmes are named on the UNESCO page (only 'a selected number of Chinese universities'); catalogue_url is the CSC site the page points to, not verified to carry the list.", "The page mixes 'academic year 2025-2026' (75 fellowships) with the 2026-2027 title; may be partly outdated."]
+ }
+]

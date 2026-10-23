@@ -1,0 +1,134 @@
+{
+    "anhui": {
+        "subject": "Hefei",
+        "artist": "钉钉",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E5%A4%A9%E9%B9%85%E6%B9%96.jpg"
+    },
+    "fujian": {
+        "subject": "Xiamen",
+        "artist": "Jay Huang from Pleasanton, USA",
+        "license": "CC BY 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Xiamen_night_cityscape_2018_-_Flickr_-_Jaykhuang.jpg"
+    },
+    "gansu": {
+        "subject": "Lanzhou",
+        "artist": "Pieceofmetalwork",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E5%85%B0%E5%B7%9E%E7%9A%8B%E5%85%B0%E5%B1%B1201905.jpg"
+    },
+    "guizhou": {
+        "subject": "Guiyang",
+        "artist": "Ryedamien",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Guizhou_Financial_City_District.jpg"
+    },
+    "hainan": {
+        "subject": "Haikou",
+        "artist": "Anna Frodesiak",
+        "license": "Public domain",
+        "url": "https://commons.wikimedia.org/wiki/File:Haikou_skyline_6_-_2009_09_07.jpg"
+    },
+    "hebei": {
+        "subject": "Shijiazhuang",
+        "artist": "E2568",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E7%9F%B3%E5%AE%B6%E5%BA%84%E8%A7%A3%E6%94%BE%E5%B9%BF%E5%9C%BA.jpg"
+    },
+    "heilongjiang": {
+        "subject": "Harbin",
+        "artist": "xiquinhosilva",
+        "license": "CC BY 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:26935-Harbin_(29661238117).jpg"
+    },
+    "henan": {
+        "subject": "Zhengzhou",
+        "artist": "Windmemories",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:20220812_Central_Business_District_of_Zhengdong_New_Area.jpg"
+    },
+    "hubei": {
+        "subject": "Wuhan",
+        "artist": "螺钉",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E6%AD%A6%E6%B1%89%E9%BB%84%E9%B9%A4%E6%A5%BC%E4%BF%AF%E7%9E%B0.jpg"
+    },
+    "hunan": {
+        "subject": "Changsha",
+        "artist": "Calton",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Helong_Stadium.jpg"
+    },
+    "inner-mongolia": {
+        "subject": "Hohhot",
+        "artist": "Jonashtand, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:20240812_Arriving_in_Hohhot_ROTATEEDIT.jpg"
+    },
+    "jiangsu": {
+        "subject": "Nanjing",
+        "artist": "xiquinhosilva",
+        "license": "CC BY 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Nanjing_CBD_from_City_Wall.jpg"
+    },
+    "jiangxi": {
+        "subject": "Nanchang",
+        "artist": "Windmemories",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Nanchang_city_view_(July_2017).jpg"
+    },
+    "jilin": {
+        "subject": "Changchun",
+        "artist": "N509FZ",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Changchun_Geological_Palace_(20230723154904).jpg"
+    },
+    "liaoning": {
+        "subject": "Dalian",
+        "artist": "Michael Saechang",
+        "license": "CC BY-SA 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Dalian_Skyline_Enhanced.jpg"
+    },
+    "ningxia": {
+        "subject": "Yinchuan",
+        "artist": "xiquinhosilva",
+        "license": "CC BY 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Skyline_of_Jinfeng_District,_Yinchuan_(53724463112).jpg"
+    },
+    "qinghai": {
+        "subject": "Xining",
+        "artist": "xiquinhosilva",
+        "license": "CC BY 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Skyscrapers_in_Chengzhong_District,_Xining_(53727167629)_-_2024.jpg"
+    },
+    "shandong": {
+        "subject": "Jinan",
+        "artist": "Song Hongxiao",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Jinanfromqianfoshan.jpg"
+    },
+    "shanxi": {
+        "subject": "Taiyuan",
+        "artist": "xiquinhosilva",
+        "license": "CC BY 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Taiyuan_xiquinhosilva.jpg"
+    },
+    "sichuan": {
+        "subject": "Chengdu",
+        "artist": "FISU",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E9%9B%AA%E5%B1%B1%E4%B8%8B%E7%9A%84%E6%88%90%E9%83%BD%E5%B8%82%E5%A4%A9%E9%99%85%E7%BA%BF_Chengdu_skyline_with_snow_capped_mountains.jpg"
+    },
+    "xinjiang": {
+        "subject": "Urumqi",
+        "artist": "Albertaont",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Urumqi_Skyline_July_2019.jpg"
+    },
+    "yunnan": {
+        "subject": "Kunming",
+        "artist": "瑞丽江的河水",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E4%BA%94%E5%8D%8E%E5%8C%BA%E4%B8%8E%E7%9B%98%E9%BE%99%E5%8C%BA%E5%A4%A9%E9%99%85%E7%BA%BF_-_%E8%88%AA%E6%8B%8D_-_2025-05-16_03.jpg"
+    }
+}

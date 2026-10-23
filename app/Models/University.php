@@ -47,6 +47,7 @@ class University extends Model
         return $credits ??= is_file($p = base_path('data/seed/university-photos.json')) ? (json_decode(file_get_contents($p), true) ?: []) : [];
     }
 
+    /** The university's own photo, else a photo of its province's city, else the photo of its country (never another country's landmark). */
     private function bundledImage(): string
     {
         $own = 'images/universities/'.$this->slug.'.jpg';
@@ -54,8 +55,12 @@ class University extends Model
             return $own;
         }
         $city = 'images/cities/'.Str::slug((string) $this->province).'.jpg';
+        if ($this->province && file_exists(public_path($city))) {
+            return $city;
+        }
+        $country = 'images/destinations/'.strtolower((string) $this->country?->code).'.jpg';
 
-        return file_exists(public_path($city)) ? $city : 'images/destinations/cn.jpg';
+        return file_exists(public_path($country)) ? $country : 'images/destinations/default.jpg';
     }
 
     /** @return array{name:string,url:?string,subject:string}|null */
@@ -66,12 +71,23 @@ class University extends Model
 
             return $credit ? ['name' => $credit, 'url' => null, 'subject' => $this->name] : null;
         }
-
         if ($c = self::photoCredits()[$this->slug] ?? null) {
             return ['name' => $c['artist'].' ('.$c['license'].')', 'url' => $c['url'], 'subject' => $this->name, 'source' => 'Wikimedia Commons'];
         }
+        $image = $this->bundledImage();
+        if (str_starts_with($image, 'images/cities/') && ($c = self::cityCredits()[basename($image, '.jpg')] ?? null)) {
+            return ['name' => $c['artist'].' ('.$c['license'].')', 'url' => $c['url'], 'subject' => $c['subject'].' (city photo)', 'source' => 'Wikimedia Commons'];
+        }
 
         return config('sas.image_credits')[$this->bundledImage()] ?? null;
+    }
+
+    /** Credits for the province skyline photographs from Wikimedia Commons, keyed by province slug. */
+    public static function cityCredits(): array
+    {
+        static $credits;
+
+        return $credits ??= is_file($p = base_path('data/seed/city-photos.json')) ? (json_decode(file_get_contents($p), true) ?: []) : [];
     }
 
     public function programmes(): HasMany

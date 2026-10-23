@@ -1,0 +1,376 @@
+[
+ {
+  "external_key": "de-daad-scholarship-database",
+  "status": "partly",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Complete postgraduate or Master's programme at a state or state-recognised German university, or one year of a second/Master's degree there; funding 10 to 24 months; instruction in German, English, or German and English; all academic disciplines (artistic fields and architecture have separate DAAD programmes). Applicants hold a first degree (e.g. Bachelor's or Diplom) by the start of funding.",
+     "source_text": "Study Scholarships - Master Studies for All Academic Disciplines",
+     "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50026200"
+    },
+    "programmes": [
+     {
+      "name": "Study Scholarships - Master Studies for All Academic Disciplines",
+      "institution": null,
+      "detail": "DAAD scholarship line, not a degree programme: any Master's/postgraduate programme at a German state or state-recognised university; 10 to 24 months; call with funding starting 2027",
+      "source_text": "between 10 and 24 months",
+      "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50026200"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Doctorate in Germany (individual doctorate or structured doctoral programme) for up to four years (first awarded for up to three, with a fourth-year extension); applicants hold a Master's or Diplom, in exceptional cases a Bachelor's, by the start of funding; no subject excluded, but human medicine, veterinary medicine and dentistry follow separate rules. Funding must begin in 2027.",
+     "source_text": "Funding is provided for a maximum of four years.",
+     "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57135739"
+    },
+    "programmes": [
+     {
+      "name": "Doctoral Programmes in Germany",
+      "institution": null,
+      "detail": "DAAD scholarship line, not a degree programme",
+      "source_text": null,
+      "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57135739"
+     },
+     {
+      "name": "Bi-nationally Supervised Doctoral Degrees / Cotutelle",
+      "institution": null,
+      "detail": "DAAD scholarship line; only the title was seen in search results, the page was not read",
+      "source_text": null,
+      "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57507783"
+     }
+    ]
+   },
+   {
+    "code": "postdoctoral",
+    "confirmed": true,
+    "summary": {
+     "detail": "Research stay in Germany for postdocs of 2 to 6 months (doctoral students 2 to 12 months); postdoc applicants must have finished their doctorate within the last four years; funding period cannot be divided or extended; no subject excluded, medical fields follow separate rules.",
+     "source_text": "postdocs: 2 to 6 months",
+     "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57742121"
+    },
+    "programmes": [
+     {
+      "name": "Research Grants in Germany",
+      "institution": null,
+      "detail": "DAAD scholarship line for doctoral candidates and postdocs doing their doctorate/research outside Germany",
+      "source_text": null,
+      "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=57742121"
+     }
+    ]
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "Non-degree: four-week university summer language courses in Germany for students and graduates in any subject; applicants must have completed at least two academic years of university study (Bachelor's students) and be 18 or older; applications 1 September to 30 October each year.",
+     "source_text": "The courses have a duration of four weeks",
+     "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50035295"
+    },
+    "programmes": [
+     {
+      "name": "University Summer Courses offered in Germany for Foreign Students and Graduates",
+      "institution": null,
+      "detail": "4 weeks, at least 25 teaching hours per week; non-degree",
+      "source_text": "University Summer Courses offered in Germany for Foreign Students and Graduates",
+      "url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/?detail=50035295"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor"
+  ],
+  "catalogue_url": "https://www2.daad.de/deutschland/stipendium/datenbank/en/21148-scholarship-database/",
+  "notes": [
+   "BACHELOR: no DAAD scholarship for foreign students to study for a full bachelor's degree in Germany was found. The DAAD overview page says its scholarships are 'aimed primarily at graduates, doctoral students and postdocs' and names master's, doctorate and postdoc only; the 'Important information for scholarship applicants' page funds Master's, doctoral and postdoc levels and mentions Bachelor's only as a prior qualification. The database landing page defines 'Graduates' as holders of a first degree. Recommend removing bachelor from the website entry.",
+   "Undergraduate-related database entries that exist but are NOT bachelor degree funding: (1) University Summer Courses (above, non-degree, bachelor's students need 2 years of study); (2) Gilman-DAAD Germany Scholarships (detail 57649740): for U.S. undergraduates (matriculated at a U.S. college, completed second year, Pell Grant recipients only) to study/intern in Germany for 1 to 12 months, a U.S.-only exchange not a bachelor's degree. Search results also showed database entries of other organisations (e.g. Friedrich Ebert Foundation, Konrad-Adenauer-Stiftung) that include Bachelor's students already studying in Germany; these are third-party scholarships, not DAAD funding, and were not read in full.",
+   "Programme entries are DAAD scholarship lines, not named degree programmes; the database covers all subjects at German universities and is a search tool, so there is no fixed list. The STEM Master's line noted in the previous pass (developing and emerging countries) was not re-read in this pass.",
+   "Call details seen are for funding starting 2027; the lines read were closed or time-limited. The Master's page says applicants resident in Germany for more than 15 months at the deadline are not considered.",
+   "A DAAD flyer and older brochures give differing doctoral stipend figures; not used."
+  ]
+ },
+ {
+  "external_key": "eu-erasmus-mundus-jm",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Integrated international master's programmes delivered by several higher education institutions in different countries; 1 to 2 academic years (60, 90 or 120 ECTS credits); applicants apply directly to the consortium running the chosen programme, which sets its own entry requirements and teaching language; full scholarships are available for the best students.",
+     "source_text": "1 to 2 academic years (60, 90 or 120 ECTS credits)",
+     "url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "doctorate"
+  ],
+  "catalogue_url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+  "notes": [
+   "Not enumerated, per instruction. The official EACEA catalogue showed 218 projects, searchable by field of study (e.g. Agro, Art, Economic Sciences, Engineering, Law, Medicine), university, country, duration/credits (12, 18 or 24 months) and year of project selection. It does not state teaching language per programme; check each master's own website.",
+   "The student page (previous pass) says applicants need a bachelor's degree or to be in the final bachelor's year; no doctorate or bachelor funding is offered under Joint Masters."
+  ]
+ },
+ {
+  "external_key": "tr-turkiye-burslari-2026",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Bachelor's level, offered in numerous departments in engineering, social sciences, health sciences and basic sciences; a one-year Turkish Language Course is listed in the scope; English proficiency requirement TOEFL iBT 80/120 or IELTS 6.5/9.0 is listed; duration is not stated. Health sciences (Medicine, Dentistry, Pharmacy) candidates need at least 90% academic achievement.",
+     "source_text": "numerous departments in the fields of engineering, social sciences, health sciences, basic sciences",
+     "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    "programmes": [
+     {
+      "name": "Instrument Education",
+      "institution": null,
+      "detail": "Art Scholarship Programme, bachelor's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Voice Training",
+      "institution": null,
+      "detail": "Art Scholarship Programme, bachelor's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Technology",
+      "institution": null,
+      "detail": "Art Scholarship Programme, bachelor's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Theory",
+      "institution": null,
+      "detail": "Art Scholarship Programme, bachelor's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Musicology",
+      "institution": null,
+      "detail": "Art Scholarship Programme, bachelor's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Photography and Video",
+      "institution": null,
+      "detail": "Art Scholarship Programme, bachelor's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Painting",
+      "institution": null,
+      "detail": "Art Scholarship Programme, bachelor's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Visual Communication Design",
+      "institution": null,
+      "detail": "Art Scholarship Programme, bachelor's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     }
+    ]
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master's level in the fields of social sciences, humanities, natural sciences and engineering; the page says Türkiye Scholarships does not award scholarships in health sciences at graduate level; one-year Turkish Language Course listed in the scope; English requirement TOEFL iBT 90/120 or IELTS 7.0/9.0; duration not stated; universities and departments selectable depend on the candidate's educational background.",
+     "source_text": "Türkiye Scholarships does not award scholarships in the field of health sciences.",
+     "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    "programmes": [
+     {
+      "name": "Instrument Education",
+      "institution": null,
+      "detail": "Art Scholarship Programme, master's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Technologies",
+      "institution": null,
+      "detail": "Art Scholarship Programme, master's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Theory",
+      "institution": null,
+      "detail": "Art Scholarship Programme, master's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Musicology",
+      "institution": null,
+      "detail": "Art Scholarship Programme, master's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Voice Education",
+      "institution": null,
+      "detail": "Art Scholarship Programme, master's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Instrument-Sound",
+      "institution": null,
+      "detail": "Art Scholarship Programme, master's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Theory and Composition",
+      "institution": null,
+      "detail": "Art Scholarship Programme, master's",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "PhD level in the fields of social sciences, humanities, natural sciences and engineering; health sciences not awarded at graduate level; one-year Turkish Language Course listed in the scope; English requirement TOEFL iBT 90/120 or IELTS 7.0/9.0; duration not stated.",
+     "source_text": "provided at associate, bachelor's, master's and PhD levels",
+     "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    "programmes": [
+     {
+      "name": "Music Sciences",
+      "institution": null,
+      "detail": "Art Scholarship Programme, PhD",
+      "source_text": null,
+      "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+     }
+    ]
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "Two-year associate degree programs (no associate code exists, so mapped to diploma); the 2026 announcement lists associate degrees among the levels.",
+     "source_text": "Two-year associate degree programs",
+     "url": "https://turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "postdoctoral"
+  ],
+  "catalogue_url": "https://www.turkiyeburslari.gov.tr/",
+  "notes": [
+   "The Art Scholarship Programme programmes are offered at Ankara Music and Fine Arts University, Ankara Hacı Bayram Veli University and İstanbul Technical University; the page does not say which programme is at which university, so institution is null.",
+   "All other disciplines: the homepage has a 'Program Search' tool filtered by Education Field, Level (Associate Degree, Bachelor's Degree, Master's Degree, PhD), City and Education Language; no static list of departments or universities was found, so catalogue_url points to the homepage search. Not enumerated.",
+   "Official pages differ slightly on health sciences: the 'Undergraduate and Graduate programmes' page lists health sciences among bachelor's fields but excludes them at graduate level, and the 'Criteria & Scholarship Programs' page mentions a 90% threshold for Medicine, Dentistry and Pharmacy candidates.",
+   "Duration and language of instruction are not stated on the pages read. Other tracks (Research, Success, joint programmes with institutions) exist separately and were not covered here."
+  ]
+ },
+ {
+  "external_key": "kr-gks-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Undergraduate degrees (including associate degree): bachelor's programmes 4-6 years, associate 2-3 years, preceded by 1 year of Korean language training; General Program in humanities, social studies, natural sciences, and arts and physical education; Specialization (UIC) in science and engineering for associate and bachelor's only; applicants choose from the official list of GKS universities and departments (Embassy Track Type A 28 and Type B 42 universities; University Track 13 UIC universities and 9 associate-degree universities).",
+     "source_text": "Undergraduate Degrees (including Associate Degree)",
+     "url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master's 2 years, preceded by 1 year of Korean language training (the Global Network track is master's only, humanities and social sciences, without Korean language training; the R&D track covers science and engineering, master's and doctoral); the 2026 embassy notice summary says all academic fields established by GKS participating universities, but evening, short-term, online and distance programmes do not qualify; applicants choose from the official university and department list (Type A 35 and Type B 41 institutions).",
+     "source_text": "Graduate Degrees (Master's and Doctoral Degrees)",
+     "url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Doctoral degrees 3 years, preceded by 1 year of Korean language training; general graduate programme in the fields offered by the GKS universities, plus the R&D track (science and engineering).",
+     "source_text": "Graduate Degrees (Master's and Doctoral Degrees)",
+     "url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "postdoctoral"
+  ],
+  "catalogue_url": "https://www.studyinkorea.go.kr/ko/plan/scholarship.do?tab=gks-tab1",
+  "notes": [
+   "Not enumerated: more than 80 GKS universities; department lists are in the 'University Information' attachments of each year's GKS notice on Study in Korea and in the application guidelines, which could not be read here.",
+   "The graduate 'all academic fields' statement comes from a 2026 GKS-G embassy notice summary found by search, not a page read in full; the 2026 Ethiopia GKS-G embassy notice confirms master's 1 year Korean + 2 years degree and doctoral 1 + 3. The 2027 GKS-U Kenya embassy notice says undergraduate degree programs and refers to attached guidelines for the university list.",
+   "No 2027 graduate call published as of 2026-10-23 (previous pass). Language of instruction beyond the Korean language training year is not stated on the pages read."
+  ]
+ },
+ {
+  "external_key": "us-fulbright-foreign-student-2027",
+  "status": "confirmed",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Study for a Master's degree and conduct research on campuses across the United States; any field except programs with clinical requirements such as dentistry, medicine, pharmacy, nursing (public health and nursing administration are permitted); grant length not stated.",
+     "source_text": "to study for a Master’s or Doctorate degree and conduct research on campuses across the United States",
+     "url": "https://foreign.fulbrightonline.org/apply"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Study for a Doctorate degree and conduct research in the United States; same field restriction (no programs with clinical requirements); eligibility and selection vary widely by country.",
+     "source_text": "to study for a Master’s or Doctorate degree",
+     "url": "https://foreign.fulbrightonline.org/apply"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [
+   "bachelor",
+   "postdoctoral"
+  ],
+  "catalogue_url": null,
+  "notes": [
+   "No official list of programmes or universities exists: candidates are either placed by IIE (degree and non-degree opportunities) or self-place by applying to US universities directly. Not enumerated.",
+   "The about page describes the programme for 'graduate students, young professionals and artists from abroad'; undergraduate study for foreign applicants and postdoctoral funding are not mentioned on either page read.",
+   "Non-degree placements are mentioned for IIE placement only, without a level; not recorded as a separate level.",
+   "Programme eligibility and selection vary by country; check the home-country Fulbright Commission or US Embassy."
+  ]
+ }
+]

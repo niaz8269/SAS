@@ -1,0 +1,230 @@
+[
+ {
+  "external_key": "cn-csc-2026",
+  "status": "confirmed",
+  "official_title": "Chinese Government Scholarship",
+  "title_url": "https://us.china-embassy.gov.cn/eng/lxfw/studyinchina/chinesegovernmentscholarship/202501/t20250104_11527005.htm",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor",
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "Montreal consulate: Undergraduate (high school graduate, under 25), Master's (bachelor's holder, under 35), Doctoral (master's holder, under 40); US embassy: bachelor's, master's, or doctoral level, plus General scholar and Senior scholar programs",
+   "url": "https://montreal.china-consulate.gov.cn/jy/202510/t20251028_11742748.htm"
+  },
+  "opens": {
+   "date_type": "route_dependent",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "Applications are open (embassy/consulate notices posted from 2025-10-28 for 2026-2027)",
+   "source_text": "Montreal consulate notice posted 2025-10-28 'Competition for the 2026-2027 Chinese Government Scholarship': applications are open. Melbourne consulate notice 2025-11-13: 'Applications for the 2026/2027 Chinese Government Scholarship are now open'. No opening day is stated; it differs by country.",
+   "url": "https://montreal.china-consulate.gov.cn/jy/202510/t20251028_11742748.htm",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "Montreal: 'The deadline for online application is February 22, 2026.' Indonesia embassy: 'Now to February 8, 2026'. Melbourne: 8 February 2026. US embassy lists 'Online application: February 16, 2026'.",
+   "url": "https://montreal.china-consulate.gov.cn/jy/202510/t20251028_11742748.htm",
+   "call_year": "2026-27",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Official title is 'Chinese Government Scholarship'; '(CSC)' in the site title is a funder acronym, harmless.",
+   "Umbrella for Type A (embassy/dispatching authority), Type B (university) and other programs; dates are set per country/route.",
+   "Other 2026-27 embassy pages: Indonesia https://id.china-embassy.gov.cn/eng/whjy/lxxx/202510/t20251027_11741682.htm (online application to 8 February 2026); Melbourne https://melbourne.china-consulate.gov.cn/eng/tz/202511/t20251113_11752245.htm. US embassy page's own wording is 'Online application: February 16, 2026' without saying opens or closes. General scholar and Senior scholar (non-degree) categories also exist; not recorded as degree levels.",
+   "No 2027/2028 embassy or consulate notice found as of 2026-10-23. HUST (host university) lists a 2027 Type A window 'Late November to early April (details may vary by country)': https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm",
+   "Current record's Polish embassy notice (2025-10-24) was not independently re-verified.",
+   "csc.edu.cn / studyinchina.csc.edu.cn / campuschina.org returned HTTP 412 to automated fetch; embassy/consulate and host-university pages used instead."
+  ]
+ },
+ {
+  "external_key": "cn-csc-bilateral-2026",
+  "status": "confirmed",
+  "official_title": "Chinese Government Scholarship - Bilateral Program",
+  "title_url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor",
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "recruits international students (bachelor's, master's, and doctoral levels) worldwide under this program (SYSU); Shanghai gov page: undergraduate, master's and doctoral levels, plus general and senior scholar categories",
+   "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm"
+  },
+  "opens": {
+   "date_type": "route_dependent",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "Late November to early April (details may vary by country)",
+   "source_text": "HUST page listing 2027 CGS categories, Type A: Bilateral Program, application period 'Late November to early April (details may vary by country)'. Central South University '2026 Bilateral Programs' (2025-10-27): 'You need to apply between early January and early April.'",
+   "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm",
+   "call_year": "2027"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "Central South University: 'Please consult the dispatching authorities for the specific deadline of each year.' SYSU: CSC 'will begin accepting recommendations from its dispatching authorities on a rolling basis'; confirm deadline with dispatching authority or embassy/consulate. SYSU invitation-letter pre-registration rounds 'January 12, 2026' and 'February 12, 2026'.",
+   "url": "https://intl.csu.edu.cn/info/1143/3787.htm",
+   "call_year": "2027",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Official title is 'Chinese Government Scholarship Bilateral Program' (SYSU: 'Chinese Government Scholarship-Bilateral Program'); '(Type A)' is a descriptive suffix, keep.",
+   "SYSU page is the 2026 guide and is marked CLOSED; no 2027 SYSU guide found. HUST's 2027 summary is the newest official window found, but no per-country 2027/28 embassy notice was found as of 2026-10-23.",
+   "Dates are set by each country's dispatching authority; 2026-27 embassy deadlines ran roughly 8 to 22 February 2026 (Montreal 22 Feb, Indonesia 8 Feb, Melbourne 8 Feb).",
+   "Also open to General and Senior scholars (non-degree); not recorded as degree levels.",
+   "csc.edu.cn / studyinchina.csc.edu.cn / campuschina.org returned HTTP 412 to automated fetch; embassy/consulate and host-university pages used instead."
+  ]
+ },
+ {
+  "external_key": "cn-cgs-typeb-2026",
+  "status": "confirmed",
+  "official_title": "Chinese Government Scholarship - Chinese University Program",
+  "title_url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm",
+  "title_action": "change",
+  "degrees": {
+   "codes": [
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "Type B: Chinese University Program (CUP) - Master's and Doctoral candidates only (HUST); BFSU: 'Doctoral/master's degree'; SUFE: 'All graduate programs are eligible'",
+   "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"
+  },
+  "opens": {
+   "date_type": "route_dependent",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "Set by each university, e.g. 'October 15, 2026 to February 25, 2027' (HUST)",
+   "source_text": "HUST: application period 'October 15, 2026 to February 25, 2027'. BFSU (posted 2026-10-15): BFSU system 'From today on to Jan. 31, 2027 (BJT)'; Chinese Government Scholarship Information System 'From Jan. 5, 2027 to Feb. 28, 2027 (BJT)'. SUFE 2026 call: Stage 1 'November 16, 2025-February 28, 2026'.",
+   "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm",
+   "call_year": "2027"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "HUST: 'October 15, 2026 to February 25, 2027'. BFSU: BFSU system to 'Jan. 31, 2027 (BJT)', CGS Information System to 'Feb. 28, 2027 (BJT)'. Each university sets its own date.",
+   "url": "https://osao.bfsu.edu.cn/info/2462/6792.htm",
+   "call_year": "2027",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": false,
+   "degrees": true,
+   "opens": true,
+   "closes": false
+  },
+  "notes": [
+   "Title: HUST and NWPU (https://gs.nwpu.edu.cn/info/2312/9734.htm) use 'Chinese Government Scholarship-Chinese University Program'; SUFE's 2026 page uses 'University Program (Type B)'; BFSU uses '(Type B) University Postgraduate Program'. Suggest 'Chinese University Program' as the programme name; low-stakes change.",
+   "Website still shows the 2026 call (SUFE 28 February 2026, past). Newer 2027-intake windows are published by HUST and BFSU (BFSU page posted 2026-10-15, study starts Sep. 1, 2027; its introduction also says '2026-2027 academic year' once).",
+   "NWPU page says 'It only supports graduate students.' Chang'an University's Type B notice (ies.chd.edu.cn) returned HTTP 410 and was not used; degrees kept at master and doctorate.",
+   "Late-March and July dates in the current record come from SUFE 2026 and were not re-checked.",
+   "csc.edu.cn / studyinchina.csc.edu.cn / campuschina.org returned HTTP 412 to automated fetch; embassy/consulate and host-university pages used instead."
+  ]
+ },
+ {
+  "external_key": "cn-silkroad-2026",
+  "status": "confirmed",
+  "official_title": "Chinese Government Scholarship - Silk Road Program",
+  "title_url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor",
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "HUST: 'Bachelor's, Master's, and Doctoral candidates from 10 designated countries'; Nankai 2026: bachelor's and master's; SNNU 2026-2027: Ph.D programs",
+   "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm"
+  },
+  "opens": {
+   "date_type": "route_dependent",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "Set by each university, e.g. HUST master's/doctoral 'October 15, 2026 to February 25, 2027'",
+   "source_text": "HUST 2027 page: Master's and Doctoral 'October 15, 2026 to February 25, 2027'; Bachelor's 'until April 30, 2027' (no opening date given). 2026 call: Nankai 'From now until May 18, 2026'.",
+   "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm",
+   "call_year": "2027"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "HUST 2027: master's/doctoral 'February 25, 2027', bachelor's 'April 30, 2027'. 2026 call: HUST 'May 20, 2026'; Nankai 'May 18, 2026'; SNNU 'Deadline: May 22, 2026'; BFSU 'From now until June 1st 2026'.",
+   "url": "https://iso.hust.edu.cn/Scholarships/Scholarship_Information_and_Tips.htm",
+   "call_year": "2027",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": false,
+   "opens": false,
+   "closes": false
+  },
+  "notes": [
+   "Current record shows bachelor only (from HUST's 2026 undergraduate guide). Host-university pages show master and doctoral Silk Road places too; levels differ by university.",
+   "HUST 2027 page shows no posting date (footer 2013). The 2026 HUST guide (https://iso.hust.edu.cn/info/1194/4986.htm, posted May 6, 2026) lists only undergraduate programs and deadline 'May 20, 2026'.",
+   "BFSU Silk Road (Type B) 2026: bachelor's, 'From now until June 1st 2026' (https://osao.bfsu.edu.cn/info/2462/6802.htm). SNNU: https://study.snnu.edu.cn/en/info/1066/1826.htm. Nankai: https://ensie.nankai.edu.cn/info/1047/1347.htm.",
+   "Eligible countries per HUST: Russia, Malaysia, Mongolia, Laos, Indonesia, Cambodia, Thailand, Bangladesh, Vietnam, Pakistan.",
+   "csc.edu.cn / studyinchina.csc.edu.cn / campuschina.org returned HTTP 412 to automated fetch; embassy/consulate and host-university pages used instead."
+  ]
+ },
+ {
+  "external_key": "cn-marine-2026",
+  "status": "confirmed",
+  "official_title": "Marine Scholarship of China",
+  "title_url": "https://study.tongji.edu.cn/en/info/1049/1005.htm",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "for a master's or doctoral degree in oceanography or other related specialties",
+   "url": "https://study.tongji.edu.cn/en/info/1049/1005.htm"
+  },
+  "opens": {
+   "date_type": "route_dependent",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": "Varies by host university: Tongji 'from October 25, 2025 to December 20, 2025'; Xiamen 'Dec. 1, 2025 to Feb. 15, 2026'",
+   "source_text": "Tongji (page dated 2025-10-30, heading 'Open for Applications: 2026 Marine Scholarship of China'): 'from October 25, 2025 to December 20, 2025'. Xiamen 'Application Guide to Marine Scholarship of China for 2026': 'Dec. 1, 2025 to Feb. 15, 2026'.",
+   "url": "https://study.tongji.edu.cn/en/info/1049/1005.htm",
+   "call_year": "2026"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "Tongji: December 20, 2025. Xiamen: Feb. 15, 2026. No time or time zone given.",
+   "url": "https://admissions.xmu.edu.cn/info/1038/1865.htm",
+   "call_year": "2026",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": false
+  },
+  "notes": [
+   "Latest published call is the 2026 intake and is past. No 2027 Marine Scholarship notice found as of 2026-10-23 (Tongji news page checked; Ocean University of China has a page titled '2026/2027 Chinese Government Marine Scholarship Program' dated 2025-12-15 without dates: https://sie.ouc.edu.cn/english/2025/1215/c18044a513188/page.htm).",
+   "Tongji page is internally inconsistent: heading says 2026, body says 'for the year 2025'. Current record's single closing date of 20 December 2025 is Tongji-only; Xiamen's differs, so route_dependent is more accurate.",
+   "Xiamen page shows 'pubdate: 2024/11/05' although it describes the 2026 call; treat with care.",
+   "csc.edu.cn / studyinchina.csc.edu.cn / campuschina.org returned HTTP 412 to automated fetch; embassy/consulate and host-university pages used instead."
+  ]
+ }
+]

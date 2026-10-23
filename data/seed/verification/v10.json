@@ -1,0 +1,354 @@
+[
+ {
+  "external_key": "ru-government-quota-2026",
+  "status": "partly",
+  "official_title": "Russian Government Scholarship (Quota)",
+  "title_url": "https://bangladesh.rs.gov.ru/en/announcement/russian-government-scholarship-quota/",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor",
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "The Quota provides for studies ... at the following levels: Bachelor's degrees; Master's degrees; Postgraduate studies (PhD equivalents).",
+   "url": "https://en.misis.ru/applicants/scholarships/quota/"
+  },
+  "opens": {
+   "date_type": "not_announced",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": null,
+   "source_text": "No official 2027/28 opening date found. Federal portal education-in-russia.com news list: latest item 19.05.26 (selection test results); the 2026/27 call guide dated 15.09.25 says 'Приём заявок стартует уже 15 сентября 2025 года'. Minobrnauki portal (russia-edu.minobrnauki.gov.ru) item dated 2026-06-11 on the 2027/28 campaign only covers universities' data entry (deadline 23:59 Moscow time, 25 June 2026).",
+   "url": "https://education-in-russia.com/news",
+   "call_year": "2027-28"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "NUST MISIS (host university) page, 2027/2028: 'Application Deadlines: by December 15, 2026 - for CIS countries, by January 15, 2027 - for all other countries.' Not yet confirmed on the federal portal or by Rossotrudnichestvo.",
+   "url": "https://en.misis.ru/applicants/scholarships/quota/",
+   "call_year": "2027-28",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": false,
+   "closes": false
+  },
+  "notes": [
+   "The website's record describes the 2026/27 call (Russian House in Dhaka: '15 September 2025 - 15 January 2026'), which is past. The 2027/28 call is not yet announced on the official federal portal; the only 2027/28 dates found on an official source are the host-university (MISIS) deadlines, which split CIS vs other countries.",
+   "rusedu.uz (Uzbekistan-specific site linked to the Russian House in Tashkent; ownership not verified, treated as a lead only) says 'Прием заявок на квоту 2027/28 начнется в ноябре 2026' - not used as a fact.",
+   "Official title wording varies: Russian House in Dhaka 'Russian Government Scholarship (Quota)'; MISIS 'Russian Government Quota'; Russian wording 'квота Правительства Российской Федерации'. Current title is a longer descriptive variant: keep.",
+   "Dhaka Russian House page describes levels only as 'undergraduate, graduate, and professional programs'; the education-in-russia.com process page lists bachelor, master, specialist, postgraduate, residency etc. as general levels. Degree codes taken from the MISIS statement of what the quota covers; doctorate = postgraduate (PhD equivalents).",
+   "The Dhaka page's quoted window (15.09.2025 - 15.01.2026) is for Bangladeshi applicants on the 2026/27 call; other countries may differ."
+  ]
+ },
+ {
+  "external_key": "es-aecid-africa-med-master-2026",
+  "status": "confirmed",
+  "official_title": "Becas MAEC-AECID para la ciudadanía de países de África y Oriente Medio, 2026-2027: Programa África-Med Máster",
+  "title_url": "https://www.boe.es/buscar/doc.php?id=BOE-B-2026-22411",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "master"
+   ],
+   "confirmed": true,
+   "quote": "másteres universitarios (oficiales) de carácter presencial en España de 60 créditos como máximo",
+   "url": "https://www.boe.es/buscar/doc.php?id=BOE-B-2026-22411"
+  },
+  "opens": {
+   "date_type": "date_only",
+   "starts_on": "2026-07-02",
+   "ends_on": null,
+   "phrase": "del 2 al 15 de julio de 2026",
+   "source_text": "Las solicitudes podrán presentarse del 2 al 15 de julio de 2026 (Spanish Embassy notices, exteriores.gob.es). BOE extract (published 1 July 2026, BOE núm. 159): application period is 10 días hábiles counted from the day after publication.",
+   "url": "https://exteriores.gob.es/Embajadas/rabat/es/Comunicacion/Noticias/Paginas/Articulos/CONVOCATORIA-DE-BECAS-MAEC-AECID-PARA-LA-CIUDADANIA-DE-PAISES-DE-AFRICA-Y-ORIENTE-MEDIO-2026-2027.aspx",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "date_only",
+   "date": "2026-07-15",
+   "source_text": "'del 2 de julio al 15 de julio de 2026, fecha y hora oficial de la sede electrónica de la AECID' (Embassy of Spain, Rabat notice). No closing time of day is given on the pages I could read.",
+   "url": "https://exteriores.gob.es/Embajadas/rabat/es/Comunicacion/Noticias/Paginas/Articulos/CONVOCATORIA-DE-BECAS-MAEC-AECID-PARA-LA-CIUDADANIA-DE-PAISES-DE-AFRICA-Y-ORIENTE-MEDIO-2026-2027.aspx",
+   "call_year": "2026-27",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "The BOE extract itself states no calendar end date and no hour: only '10 días hábiles' from the day after BOE publication, and that the hour regime follows the 'calendario, fecha y hora oficial' of the AECID electronic office. The 2-15 July 2026 dates come from Spanish Ministry of Foreign Affairs embassy notices (exteriores.gob.es), consistent with the BOE count.",
+   "The website's quoted 'A LAS 00:00 HORAS' / 'A LAS 23:59 HORAS' text could not be found on the BOE page or on the embassy pages read; aecid.es was unreachable (connection refused). Recorded as date_only, so no time is relied on.",
+   "Official page titles are Spanish only. The English title on the website is a translation; kept. The 2026-27 call is closed (today 2026-10-23); no 2027-28 call published yet."
+  ]
+ },
+ {
+  "external_key": "kz-state-scholarship-foreign-citizens-2026",
+  "status": "confirmed",
+  "official_title": "The application process has begun for the scholarship program for foreign students, including Kazakhs without Kazakhstani citizenship, to study at higher and/or postgraduate education institutions",
+  "title_url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor",
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "Bachelor's degree - 490; Master's degree - 50; PhD (doctoral) - 10",
+   "url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions"
+  },
+  "opens": {
+   "date_type": "range",
+   "starts_on": "2026-03-30",
+   "ends_on": "2026-05-31",
+   "phrase": "from March 30 to May 31, 2026",
+   "source_text": "Applicants can submit documents online 'from March 30 to May 31' 2026 (Kazakh original: 2026 жылғы 30 наурыз – 31 мамыр аралығында), notice published 30/03/2026.",
+   "url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "date_only",
+   "date": "2026-05-31",
+   "source_text": "Submission window 30 March - 31 May 2026; no closing time or time zone on the notice.",
+   "url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions",
+   "call_year": "2026-27",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "There is no single official English programme name: the Bolashak notice title is a news headline about the scholarship programme for foreign students. The website's short title 'State scholarship for foreign citizens (Study in Kazakhstan)' is a descriptive label; kept.",
+   "Applications are made at studyin.kz/admission; studyin.kz returned 502 Bad Gateway when checked, so the portal itself was not read. No 2027-28 call is published on the Bolashak pages read.",
+   "A news report (not official) says the final day closed at 23:59 Astana time; not used because the official notice gives no time."
+  ]
+ },
+ {
+  "external_key": "kz-nu-abay-kunanbayev-scholarship-2027",
+  "status": "partly",
+  "official_title": "Abay Kunanbayev scholarship",
+  "title_url": "https://nu.edu.kz/admissions/international-admission/international-admission_general/",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [],
+   "confirmed": false,
+   "quote": "There are merit-based Abay Kunanbayev scholarships available for top international candidates, as recommended by the admissions committee of each school. (Page heading: 'Abai Scholarship'.) The same page says NU offers bachelor, master and doctorate degrees, but does not say which levels the scholarship covers.",
+   "url": "https://nu.edu.kz/admissions/international-admission/international-admission_general/"
+  },
+  "opens": {
+   "date_type": "route_dependent",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": null,
+   "source_text": "No scholarship-specific dates. 'Application deadlines for each program for international candidates may differ from deadlines for candidates from Kazakhstan.' Undergraduate 2027-2028: 'For citizens of Kazakhstan and international applicants from countries eligible for visa issuance upon arrival : October 2026 – August 2027'; 'For international applicants from countries requiring a visa prior to entering Kazakhstan: To be announced later'.",
+   "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+   "call_year": "2027-28"
+  },
+  "closes": {
+   "type": "route_dependent",
+   "source_text": "Candidates are recommended by each school's admissions committee, so the closing date follows the programme. Undergraduate/Foundation: 'on a rolling basis'. Master and PhD deadlines on the international page are for 2026 (e.g. Master's grants 13 February 2026, 2 PM Astana; PhD fee-paying 24 July 2026, 2:00 p.m. Astana) and no 2027 master/PhD dates are published.",
+   "url": "https://nu.edu.kz/admissions/international-admission/international-admission_general/",
+   "call_year": "2027-28",
+   "latest_call_is_past": false
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": false,
+   "closes": false
+  },
+  "notes": [
+   "Degrees stay unconfirmed: the Abay Kunanbayev paragraph states no degree level. Not inferred from the university's general degree list.",
+   "The scholarship has no separate application or dates on the official page; the website's 'October 2026 - August 2027' is the general undergraduate admission window (only for applicants from visa-on-arrival countries; visa-required countries 'To be announced later'), not a scholarship-specific window.",
+   "The 2026-27 mid-year intake window 'August 18, 2026 – November 28, 2026 (until 14:00 Astana time)' is also stated for NUFYP/undergraduate regular admission on the same site.",
+   "The page heading says 'Abai Scholarship' with body text 'Abay Kunanbayev scholarships'; spelling variants only."
+  ]
+ },
+ {
+  "external_key": "kz-kimep-central-asian-students-grant-2026",
+  "status": "confirmed",
+  "official_title": "Орталық Азия елдерінің студенттеріне арналған гранттары (Grants for students from Central Asian countries)",
+  "title_url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor"
+   ],
+   "confirmed": true,
+   "quote": "орта және кәсіптік мектептің 2025 және 2026 түлектері (2025 and 2026 graduates of secondary and vocational school); grant duration '4 академиялық жылға' (4 academic years); listed under the undergraduate (degree=ugrad) section",
+   "url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"
+  },
+  "opens": {
+   "date_type": "not_announced",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": null,
+   "source_text": "The grant entry gives only: 'Өтініштерді қабылдау мерзімі: 2026 жылғы 12 шілдені қоса алғанға дейін' - no opening date.",
+   "url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "date_only",
+   "date": "2026-07-12",
+   "source_text": "Өтініштерді қабылдау мерзімі: 2026 жылғы 12 шілдені қоса алғанға дейін (applications accepted up to and including 12 July 2026)",
+   "url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad",
+   "call_year": "2026-27",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Eligible citizenship: Kyrgyzstan, Tajikistan, Turkmenistan and Uzbekistan; 100% tuition, 10 grants.",
+   "The English version of this KIMEP page redirects to the Kazakh page (HTTP 302 to /kz/), so wording was read in Kazakh. English titles are translations of the Kazakh headings; the current English title is kept.",
+   "Page is headed 2026-2027 academic year; the undergraduate list is the '38 credit limit' group (master's is the 33-credit group) and the URL parameter is degree=ugrad. Requirements refer to graduates of secondary and vocational school. No opening date is given, only the closing date. No 2027 call is published.",
+   "Other KIMEP grants on the same page have different deadlines (e.g. 30 April 2026; 31 August 2026 for current students); this entry uses the grant's own line only."
+  ]
+ },
+ {
+  "external_key": "kz-kimep-international-students-grant-2026",
+  "status": "confirmed",
+  "official_title": "Халықаралық студенттерге арналған грант (Grant for international students)",
+  "title_url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor"
+   ],
+   "confirmed": true,
+   "quote": "орта және кәсіптік мектепті 2026 (2026 graduates of secondary and vocational school); grant duration '4 академиялық жылға'; listed under the undergraduate (degree=ugrad) section",
+   "url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"
+  },
+  "opens": {
+   "date_type": "not_announced",
+   "starts_on": null,
+   "ends_on": null,
+   "phrase": null,
+   "source_text": "The grant entry gives only: 'Өтініштерді қабылдау мерзімі: 2026 жылғы 12 шілдені қоса алғанға дейін' - no opening date.",
+   "url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "date_only",
+   "date": "2026-07-12",
+   "source_text": "Өтініштерді қабылдау мерзімі: 2026 жылғы 12 шілдені қоса алғанға дейін (applications accepted up to and including 12 July 2026)",
+   "url": "https://www.kimep.kz/prospective-students/kz/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad",
+   "call_year": "2026-27",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "Eligibility: citizens of countries other than Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, Uzbekistan; 50% tuition, 10 grants. (Citizens of those four Central Asian countries are served by the separate Central Asian students grant.)",
+   "The English version of this KIMEP page redirects to the Kazakh page (HTTP 302 to /kz/), so wording was read in Kazakh. English titles are translations of the Kazakh headings; the current English title is kept.",
+   "Page is headed 2026-2027 academic year; the undergraduate list is the '38 credit limit' group (master's is the 33-credit group) and the URL parameter is degree=ugrad. Requirements refer to graduates of secondary and vocational school. No opening date is given, only the closing date. No 2027 call is published.",
+   "Other KIMEP grants on the same page have different deadlines (e.g. 30 April 2026; 31 August 2026 for current students); this entry uses the grant's own line only."
+  ]
+ },
+ {
+  "external_key": "az-heydar-aliyev-international-education-grant-2026",
+  "status": "confirmed",
+  "official_title": "Heydar Aliyev - International Education Grant Program",
+  "title_url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor",
+    "master",
+    "doctorate"
+   ],
+   "confirmed": true,
+   "quote": "scholarships on full-time basis at the Bachelor's (including general medicine education), Master's (including medical residency), Doctoral levels, as well as the preparatory courses.",
+   "url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf"
+  },
+  "opens": {
+   "date_type": "range",
+   "starts_on": "2026-02-16",
+   "ends_on": "2026-04-15",
+   "phrase": "From Feb 16 to April 15, 2026",
+   "source_text": "Timeline: 'Submission of applications (first stage) to the relevant government authorities of the applicant's country (Ministries, Embassies, etc.): From Feb 16 to April 15, 2026'",
+   "url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf",
+   "call_year": "2026-27"
+  },
+  "closes": {
+   "type": "exact",
+   "local_datetime": "2026-04-15 18:00",
+   "timezone": "Asia/Baku",
+   "source_text": "'The last date of the submission is April 15, 2026 at 6 PM Baku time.' (first stage, to government authorities). Second stage, SIACAS (portal.edu.az): from June 1, 2026 12 AM to June 10, 2026 at 6 PM Baku time.",
+   "url": "https://studyinazerbaijan.edu.az/H.Aliyev_IEG_CALL_18.04.pdf",
+   "call_year": "2026-27",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "The official call PDF (linked from studyinazerbaijan.edu.az/heydar-aliyev-international-education-grant-program, file name suffix 18.04) gives the second-stage SIACAS window as 1-10 June 2026 (deadline 10 June, 6 PM Baku time).",
+   "CONFLICT: the Kazakh Bolashak notice (bolashak.gov.kz/en/allnews/candidates-study-republic-azerbaijan) reports a different version: first stage 'April 16, 2026, at 13:00', SIACAS 'between May 18 and June 1, 2026', upload deadline 'June 1, 18:00 Baku time'. The Azerbaijani MFA embassy page (hanoi.mfa.gov.az) could not be loaded (connection refused). The PDF on the official Study in Azerbaijan site was used.",
+   "Preparatory courses are also funded but are not recorded as a degree code. The 2026-27 call is closed; no 2027-28 call found."
+  ]
+ },
+ {
+  "external_key": "uz-icesco-uzbekistan-scholarship-2026",
+  "status": "confirmed",
+  "official_title": "ICESCO-Uzbekistan Scholarship Programme",
+  "title_url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/",
+  "title_action": "keep",
+  "degrees": {
+   "codes": [
+    "bachelor"
+   ],
+   "confirmed": true,
+   "quote": "Tashkent State Medical University will provide three scholarships for applicants to the bachelor's program in General Medicine. Central Asian University of Environmental and Climate Change Studies will offer two bachelor's scholarships ...",
+   "url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/"
+  },
+  "opens": {
+   "date_type": "range",
+   "starts_on": "2026-03-01",
+   "ends_on": "2026-05-15",
+   "phrase": "from 1 March to 15 May 2026",
+   "source_text": "Applications are open from 1 March to 15 May 2026. Early submission is strongly encouraged.",
+   "url": "https://icesco.org/en/tashkent-state-medical-university/",
+   "call_year": "2026"
+  },
+  "closes": {
+   "type": "date_only",
+   "date": "2026-05-15",
+   "source_text": "The deadline for applications is Wednesday, 15 May 2026. (ICESCO scholarships page: 'DEADLINE: 15 MAY, 2026')",
+   "url": "https://icesco.org/en/international-scholarships/",
+   "call_year": "2026",
+   "latest_call_is_past": true
+  },
+  "matches_current": {
+   "title": true,
+   "degrees": true,
+   "opens": true,
+   "closes": true
+  },
+  "notes": [
+   "The ICESCO news item (27 March 2026) calls 15 May 2026 a 'Wednesday'; 15 May 2026 is a Friday. The date itself is consistent on all ICESCO pages, so the date is kept and the weekday ignored.",
+   "Call is described as the 'first phase' (five scholarships: 3 at Tashkent State Medical University, 2 at Central Asian University of Environmental and Climate Change Studies). Academic year not stated. ICESCO's scholarships page still lists only these two with deadline 15 May 2026; no later phase found.",
+   "ICESCO's scholarships list names the second university 'Central Asian Green University' while the news item says 'Central Asian University of Environmental and Climate Change Studies'; same listing."
+  ]
+ }
+]

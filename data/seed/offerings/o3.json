@@ -1,0 +1,918 @@
+[
+    {
+        "external_key": "cn-pku-grad-2026",
+        "status": "partly",
+        "levels": [
+            {
+                "code": "master",
+                "confirmed": true,
+                "summary": {
+                    "detail": "Master's, 2-3 years for all three funding routes (Chinese Government Scholarship, Peking University Scholarship, Beijing Government Scholarship). The scholarship notice names no field restriction and no programme list; it sends applicants to PKU's English-taught master's majors list (2026 admission), which names 13 schools/colleges offering English-taught master's majors for international students.",
+                    "source_text": "Master’s degree: 2 - 3 years",
+                    "url": "https://isd.pku.edu.cn/en/detail.php?id=819"
+                },
+                "programmes": [
+                    {
+                        "name": "Astrophysics (070401)",
+                        "institution": "School of Physics",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Environmental Engineering (083002)",
+                        "institution": "College of Environmental Sciences and Engineering",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00127.pdf"
+                    },
+                    {
+                        "name": "Materials Science and Engineering (080500)",
+                        "institution": "School of Materials Science and Engineering",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00232.pdf"
+                    },
+                    {
+                        "name": "International Relations (030207)",
+                        "institution": "School of International Studies",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00024.pdf"
+                    },
+                    {
+                        "name": "Civil and Commercial Law (030105)",
+                        "institution": "Law School",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00029.pdf"
+                    },
+                    {
+                        "name": "Public Policy (120421)",
+                        "institution": "School of Government",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00032.pdf"
+                    },
+                    {
+                        "name": "National Economics (020201)",
+                        "institution": "Guanghua School of Management",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00028.pdf"
+                    },
+                    {
+                        "name": "Finance (020204)",
+                        "institution": "Guanghua School of Management",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00028.pdf"
+                    },
+                    {
+                        "name": "Industrial Economics (020205)",
+                        "institution": "Guanghua School of Management",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00028.pdf"
+                    },
+                    {
+                        "name": "Statistics (020208)",
+                        "institution": "Guanghua School of Management",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00028.pdf"
+                    },
+                    {
+                        "name": "Enterprise Management (120202)",
+                        "institution": "Guanghua School of Management",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00028.pdf"
+                    },
+                    {
+                        "name": "Political Economy (020101)",
+                        "institution": "Institute of Population Research",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00068.pdf"
+                    },
+                    {
+                        "name": "Population, Resource and Environmental Economics (020106)",
+                        "institution": "Institute of Population Research",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00068.pdf"
+                    },
+                    {
+                        "name": "Demography (030302)",
+                        "institution": "Institute of Population Research",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00068.pdf"
+                    },
+                    {
+                        "name": "Gerontology (030320)",
+                        "institution": "Institute of Population Research",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00068.pdf"
+                    },
+                    {
+                        "name": "Social Work (035200)",
+                        "institution": "Institute of Population Research",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00068.pdf"
+                    },
+                    {
+                        "name": "Journalism and Communication (055200)",
+                        "institution": "School of New Media",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00206.pdf"
+                    },
+                    {
+                        "name": "China Studies (Philosophy and Religion) (0101J2)",
+                        "institution": "Yenching Academy",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00208.pdf"
+                    },
+                    {
+                        "name": "China Studies (Economics and Management) (0202J2)",
+                        "institution": "Yenching Academy",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00208.pdf"
+                    },
+                    {
+                        "name": "China Studies (Law and Society) (0301J2)",
+                        "institution": "Yenching Academy",
+                        "detail": "Full-time, taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00208.pdf"
+                    }
+                ]
+            },
+            {
+                "code": "doctorate",
+                "confirmed": true,
+                "summary": {
+                    "detail": "Doctorate, 4-5 years (CGS and BGS) or 4 years (PKUS). The notice names no field restriction; the 2026 list of English-taught doctoral majors for international students names 18 schools/colleges/departments, each with its own major catalogue.",
+                    "source_text": "Doctoral degree: 4 - 5 years",
+                    "url": "https://isd.pku.edu.cn/en/detail.php?id=819"
+                },
+                "programmes": [
+                    {
+                        "name": "Pure Mathematics (070101)",
+                        "institution": "School of Mathematical Sciences",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00001.pdf"
+                    },
+                    {
+                        "name": "Computational Mathematics (070102)",
+                        "institution": "School of Mathematical Sciences",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00001.pdf"
+                    },
+                    {
+                        "name": "Probability and Statistics (070103)",
+                        "institution": "School of Mathematical Sciences",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00001.pdf"
+                    },
+                    {
+                        "name": "Applied Mathematics (070104)",
+                        "institution": "School of Mathematical Sciences",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00001.pdf"
+                    },
+                    {
+                        "name": "Statistics (071400)",
+                        "institution": "School of Mathematical Sciences",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00001.pdf"
+                    },
+                    {
+                        "name": "Theoretical Physics (070201)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Particle and Nuclear Physics (070202)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Atomic and Molecular Physics (070203)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Plasma Physics (070204)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Condensed Matter Physics (070205)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Optics (070207)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "High Energy Density Physics (070220)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Physics of Complex System and Living Matter (070223)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Astrophysics (070401)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Meteorology (070601)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Atmospheric Physics and Atmospheric Environment (070602)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Physical Oceanography (070621)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Nuclear Technology and Applications (082703)",
+                        "institution": "School of Physics",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00004.pdf"
+                    },
+                    {
+                        "name": "Chemistry (070300)",
+                        "institution": "College of Chemistry and Molecular Engineering",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00010.pdf"
+                    },
+                    {
+                        "name": "Biology (071000)",
+                        "institution": "School of Life Sciences",
+                        "detail": "Taught in English",
+                        "source_text": null,
+                        "url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/bs/zsml_bs_lxs_en_00011.pdf"
+                    }
+                ]
+            }
+        ],
+        "levels_not_offered": [
+            "bachelor",
+            "postdoctoral",
+            "diploma"
+        ],
+        "catalogue_url": "https://isd.pku.edu.cn/en/graduate_program.php",
+        "notes": [
+            "The scholarship notice (id=819) does not itself list programmes or restrict fields; the programme lists are PKU's general English-taught majors for international students (admission.pku.edu.cn), which is where the notice's applicants apply. It says the CSC system allows only one major. Listed here only as the programmes available to applicants, not as a scholarship-specific list.",
+            "Master's list is the 2026 admissions directory linked from isd.pku.edu.cn/en/detail.php?id=736. The isd.pku.edu.cn id=737 page still links the 2025 doctoral list; the 2026 doctoral list exists on the same site and is used here. Programmes shown are majors named in each school's catalogue PDF (first 20 in catalogue order); the full catalogue has more schools and majors (e.g. School of Government Public Administration 125200).",
+            "Some majors in the catalogues are listed as part-time or professional (e.g. MBA/EMBA, omitted); full-time status is shown only where the PDF states it. The School of Computer Science and School of Foreign Languages master's PDFs returned errors when fetched, so their majors are not listed.",
+            "Notice dated 12 January 2026 for the 2026 intake; levels per the previous verification pass unchanged."
+        ]
+    },
+    {
+        "external_key": "cn-sjtu-grad-2026",
+        "status": "confirmed",
+        "levels": [
+            {
+                "code": "master",
+                "confirmed": true,
+                "summary": {
+                    "detail": "Master's, typically two to three years; programmes taught in English or in Chinese (SJTU offers over 100 graduate programmes taught in English and Chinese respectively). Funded by CGS, SGS, SJTU Scholarship, SJTU Tuition Waiver Scholarship and School/College Scholarships; the SJTU Scholarship may cover full or partial tuition. Master's applicants must be under 35.",
+                    "source_text": "The typical duration of master’s programs is two to three years",
+                    "url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/268"
+                },
+                "programmes": [
+                    {
+                        "name": "Civil Engineering (081400)",
+                        "institution": "School of Ocean and Civil Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Transportation Engineering (082300)",
+                        "institution": "School of Ocean and Civil Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Naval Architecture and Ocean Engineering (082400)",
+                        "institution": "School of Ocean and Civil Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Mechanics (080100)",
+                        "institution": "School of Ocean and Civil Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Mechanical Engineering (080200)",
+                        "institution": "School of Mechanical Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Power Engineering and Engineering Thermophysics (080700)",
+                        "institution": "School of Mechanical Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Nuclear Science and Technology (082700)",
+                        "institution": "School of Mechanical Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Electrical Engineering (080800)",
+                        "institution": "School of Electrical Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Instrument Science and Technology (080400)",
+                        "institution": "School of Automation and Intelligent Sensing",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Control Science and Engineering (081100)",
+                        "institution": "School of Automation and Intelligent Sensing",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Computer Science and Technology (081200)",
+                        "institution": "School of Computer Science",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Electronic Science and Technology (080900)",
+                        "institution": "School of Integrated Circuits (School of Information and Electronic Engineering)",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Information and Communication Engineering (081000)",
+                        "institution": "School of Integrated Circuits (School of Information and Electronic Engineering)",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Materials Science and Engineering (080500)",
+                        "institution": "School of Materials Science and Engineering",
+                        "detail": "2.5 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Physics (070200)",
+                        "institution": "School of Physics and Astronomy",
+                        "detail": "3 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Biology (071000)",
+                        "institution": "School of Life Sciences and Biotechnology",
+                        "detail": "3 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Bioengineering (083600)",
+                        "institution": "School of Life Sciences and Biotechnology",
+                        "detail": "3 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Biomedical Engineering (083100)",
+                        "institution": "School of Biomedical Engineering",
+                        "detail": "2 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Chinese Language and Literature (050100)",
+                        "institution": "School of Humanities",
+                        "detail": "2 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    },
+                    {
+                        "name": "Chinese History (060200)",
+                        "institution": "School of Humanities",
+                        "detail": "2 years, from the 2026 English-taught master's catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/a7ad2ddfd50df3f8c91318fc2b413447.pdf"
+                    }
+                ]
+            },
+            {
+                "code": "doctorate",
+                "confirmed": true,
+                "summary": {
+                    "detail": "Doctorate, generally three to four years (the English catalogue lists 4 years); programmes taught in English or Chinese. Funded by SJTU Fellowship, CGS, SGS and SJTU Scholarship. Applicants normally need a master's degree; certain schools accept bachelor's holders for direct entry. Doctoral applicants must be under 40.",
+                    "source_text": "doctoral programs generally take three to four years to complete",
+                    "url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/268"
+                },
+                "programmes": [
+                    {
+                        "name": "Civil Engineering (081400)",
+                        "institution": "School of Ocean and Civil Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Mechanics (080100)",
+                        "institution": "School of Ocean and Civil Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Naval Architecture and Ocean Engineering (082400)",
+                        "institution": "School of Ocean and Civil Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Mechanical Engineering (080200)",
+                        "institution": "School of Mechanical Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Power Engineering and Engineering Thermophysics (080700)",
+                        "institution": "School of Mechanical Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Nuclear Science and Technology (082700)",
+                        "institution": "School of Mechanical Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Electrical Engineering (080800)",
+                        "institution": "School of Electrical Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Instrument Science and Technology (080400)",
+                        "institution": "School of Automation and Intelligent Sensing",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Control Science and Engineering (081100)",
+                        "institution": "School of Automation and Intelligent Sensing",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Computer Science and Technology (081200)",
+                        "institution": "School of Computer Science",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Electronic Science and Technology (080900)",
+                        "institution": "School of Integrated Circuits (School of Information and Electronic Engineering)",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Information and Communication Engineering (081000)",
+                        "institution": "School of Integrated Circuits (School of Information and Electronic Engineering)",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Materials Science and Engineering (080500)",
+                        "institution": "School of Materials Science and Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Mathematics (070100)",
+                        "institution": "School of Mathematical Sciences",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Statistics (071400)",
+                        "institution": "School of Mathematical Sciences",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Physics (070200)",
+                        "institution": "School of Physics and Astronomy",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Astronomy (070400)",
+                        "institution": "School of Physics and Astronomy",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Biology (071000)",
+                        "institution": "School of Life Sciences and Biotechnology",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Bioengineering (083600)",
+                        "institution": "School of Life Sciences and Biotechnology",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    },
+                    {
+                        "name": "Biomedical Engineering (083100)",
+                        "institution": "School of Biomedical Engineering",
+                        "detail": "4 years, from the 2026 English-taught doctoral catalogue",
+                        "source_text": null,
+                        "url": "https://en.sjtu.edu.cn/storage/global/web/en/article/2026/01/91d8b370c9ccb4ce632618a5316eb349.pdf"
+                    }
+                ]
+            }
+        ],
+        "levels_not_offered": [
+            "bachelor",
+            "postdoctoral",
+            "diploma"
+        ],
+        "catalogue_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/268",
+        "notes": [
+            "Programme lists are the first 20 majors in each 2026 English-taught catalogue PDF (master's: about 57 major rows; doctoral: about 52). Durations are from the catalogue; the master's catalogue also lists professional programmes (e.g. MBA, MIB, Master of Finance, LL.M. Program in Chinese Law, Master of Architecture (International)) with their own tuition and terms, not listed here.",
+            "The page refers to school lists that require a supervisor acceptance letter; not enumerated.",
+            "Catalogue PDFs are labelled 2026; no 2027 guide was found, so 2026 is the latest published call.",
+            "The source page also lists undergraduate programmes in its navigation; this record covers graduate scholarships only."
+        ]
+    },
+    {
+        "external_key": "cn-zju-doctoral-2026",
+        "status": "confirmed",
+        "levels": [
+            {
+                "code": "doctorate",
+                "confirmed": true,
+                "summary": {
+                    "detail": "Doctoral programmes of 3-4 academic years, instructed in Chinese generally, with some English-taught programmes. Applicants must be master's degree holders. The English-taught catalogue (2026) lists about 86 disciplines across the faculties and the ZJU International Campus. Most scholarships have no major restriction; some are limited to named fields (China Studies fellowship: humanities and social science programmes; China-ASEAN Oceanic Scholarship: Ocean College programmes; ZJU International School of Medicine Scholarship: ISM programmes; College of Optical Science and Engineering Scholarship: its programmes; ZJE Hai Scholarship: ZJE applicants).",
+                    "source_text": "With program length of 3-4 academic years, doctoral degree programs are instructed in Chinese generally, while some English-taught programs are also available.",
+                    "url": "https://iczu.zju.edu.cn/admissionsen/woctoralwwegreewwrograms/list.htm"
+                },
+                "programmes": [
+                    {
+                        "name": "Foreign Languages and Literatures",
+                        "institution": "School of International Studies",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Journalism and Communication",
+                        "institution": "College of Media and International Culture",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "International Trade",
+                        "institution": "School of Economics",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Chinese Law",
+                        "institution": "Guanghua Law School",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Agricultural Economy and Management",
+                        "institution": "School of Public Affairs",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Management Science and Engineering",
+                        "institution": "School of Management",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Accounting",
+                        "institution": "School of Management",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Technology and Innovation Management",
+                        "institution": "School of Management",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Enterprise Management",
+                        "institution": "School of Management",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Tourism Management",
+                        "institution": "School of Management",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Entrepreneurship Management",
+                        "institution": "School of Management",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Mathematics (Pure Mathematics, Computational Mathematics, Applied Mathematics, Operations Research and Control Theory, Probability and Mathematical Statistics)",
+                        "institution": "School of Mathematical Sciences",
+                        "detail": "3 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Physics",
+                        "institution": "School of Physics",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Chemistry (Inorganic Chemistry, Organic Chemistry, Analytical Chemistry, Physical Chemistry)",
+                        "institution": "Department of Chemistry",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Psychology",
+                        "institution": "Department of Psychology and Behavioral Sciences",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Mechanical Engineering",
+                        "institution": "School of Mechanical Engineering",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Materials Science and Engineering",
+                        "institution": "School of Materials Science and Engineering",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Power Engineering and Engineering Thermophysics",
+                        "institution": "College of Energy Engineering",
+                        "detail": "3.5 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Energy and Power Engineering (Professional)",
+                        "institution": "College of Energy Engineering",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    },
+                    {
+                        "name": "Electrical Engineering",
+                        "institution": "College of Electrical Engineering",
+                        "detail": "4 years, English-taught",
+                        "source_text": null,
+                        "url": "https://iczu.zju.edu.cn/_upload/article/files/2b/3b/e20929be480ba21faedb2a0198ed/5dc7d290-ef6f-49f5-8a76-c4e4a1f5c6fa.pdf"
+                    }
+                ]
+            }
+        ],
+        "levels_not_offered": [
+            "bachelor",
+            "master",
+            "postdoctoral",
+            "diploma"
+        ],
+        "catalogue_url": "https://iczu.zju.edu.cn/admissionsen/woctoralwwegreewwrograms/list.htm",
+        "notes": [
+            "Programmes are the first 20 rows of the English-taught Doctoral Degree Programs 2026 catalogue PDF (faculty order: Humanities, Social Science, Science, Engineering, ...); a separate Chinese-taught catalogue also exists. Catalogue note: 'Except for scholarships that have been specifically marked, application for other scholarships have no restrictions on majors or the language of instruction.'",
+            "Catalogue is labelled 2026 and 'subject to change'; no 2027 call found.",
+            "Many catalogue rows require or suggest a Form for Provisional Acceptance of International Student by ZJU Supervisor; not recorded per programme."
+        ]
+    },
+    {
+        "external_key": "cn-yenching-2027",
+        "status": "partly",
+        "levels": [
+            {
+                "code": "master",
+                "confirmed": true,
+                "summary": {
+                    "detail": "Yenching Academy of Peking University Master’s Program in China Studies: an interdisciplinary programme, two years, fully funded and residential. The Yenching Fellowship covers tuition, on-campus accommodation, a travel stipend, monthly stipend, medical insurance and research-trip expenses in the first year, with a second-year fellowship for scholars in good standing who stay in Beijing. Six China Studies research areas. The 2027 admissions page requires a minimum of a Bachelor's degree in any field and English-language applications.",
+                    "source_text": "The Yenching Academy Master’s Program in China Studies is two years in duration.",
+                    "url": "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm"
+                },
+                "programmes": [
+                    {
+                        "name": "China Studies (Philosophy and Religion)",
+                        "institution": "Yenching Academy of Peking University",
+                        "detail": "Two years, taught in English",
+                        "source_text": "China Studies (Philosophy and Religion)",
+                        "url": "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm"
+                    },
+                    {
+                        "name": "China Studies (Economics and Management)",
+                        "institution": "Yenching Academy of Peking University",
+                        "detail": "Two years, taught in English",
+                        "source_text": "China Studies (Economics and Management)",
+                        "url": "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm"
+                    },
+                    {
+                        "name": "China Studies (Law and Society)",
+                        "institution": "Yenching Academy of Peking University",
+                        "detail": "Two years, taught in English",
+                        "source_text": "China Studies (Law and Society)",
+                        "url": "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm"
+                    },
+                    {
+                        "name": "China Studies (Politics and International Relations)",
+                        "institution": "Yenching Academy of Peking University",
+                        "detail": "Two years, taught in English",
+                        "source_text": "China Studies (Politics and International Relations)",
+                        "url": "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm"
+                    },
+                    {
+                        "name": "China Studies (Literature and Culture)",
+                        "institution": "Yenching Academy of Peking University",
+                        "detail": "Two years, taught in English",
+                        "source_text": "China Studies (Literature and Culture)",
+                        "url": "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm"
+                    },
+                    {
+                        "name": "China Studies (History and Archaeology)",
+                        "institution": "Yenching Academy of Peking University",
+                        "detail": "Two years, taught in English",
+                        "source_text": "China Studies (History and Archaeology)",
+                        "url": "https://yenchingacademy.pku.edu.cn/info/1040/4523.htm"
+                    }
+                ]
+            }
+        ],
+        "levels_not_offered": [
+            "bachelor",
+            "doctorate",
+            "postdoctoral",
+            "diploma"
+        ],
+        "catalogue_url": "https://admission.pku.edu.cn/zsxx/lxszs/lxszyml/2026/ss/zsml_ss_lxs_en_00208.pdf",
+        "notes": [
+            "Programme areas are from the 2026-entry page (29 October 2025); the 2027 Admissions page (yenchingacademy.pku.edu.cn/ADMISSIONS.htm) does not name the degree or the research areas, and no 2027-entry programme page was found, so the 2026 list is the latest published.",
+            "PKU's 2026 English-taught master's catalogue for Yenching Academy lists the same six China Studies majors with codes 0101J2, 0202J2, 0301J2, 0302J2, 0501J2, 0602J2 (full-time, English).",
+            "The 2027 admissions page does not itself use the word master's; the degree is stated on the 2026-entry page and in PKU's catalogue. The website's degrees_now is currently empty and should be master."
+        ]
+    },
+    {
+        "external_key": "cn-schwarzman-2028",
+        "status": "confirmed",
+        "levels": [
+            {
+                "code": "master",
+                "confirmed": true,
+                "summary": {
+                    "detail": "One-year, fully funded Master of Global Affairs at Tsinghua University, Beijing; all teaching in English. Core curriculum plus electives from many disciplines; students are not required to focus electives in one area, and no fixed concentrations or tracks are published. Any undergraduate field of study is accepted.",
+                    "source_text": "a prestigious one-year, fully funded master’s program in global affairs at Tsinghua University",
+                    "url": "https://www.schwarzmanscholars.org/"
+                },
+                "programmes": [
+                    {
+                        "name": "Master of Global Affairs",
+                        "institution": "Tsinghua University",
+                        "detail": "One year, taught in English",
+                        "source_text": "anchored in a rigorous and immersive Master of Global Affairs degree program at Tsinghua University",
+                        "url": "https://www.schwarzmanscholars.org/"
+                    }
+                ]
+            }
+        ],
+        "levels_not_offered": [
+            "bachelor",
+            "doctorate",
+            "postdoctoral",
+            "diploma"
+        ],
+        "catalogue_url": "https://www.schwarzmanscholars.org/program-experience/curriculum/",
+        "notes": [
+            "Curriculum page: Scholars choose electives from a variety of academic disciplines and may take courses in other English language master's programmes at Tsinghua (law, public health, public policy, international relations, environmental studies, business, education and more); electives listed are for 2025-2026.",
+            "Language: the admissions page says 'all teaching will be conducted in English' (https://www.schwarzmanscholars.org/admissions/).",
+            "The admissions page for the Class of 2028-2029 does not state the degree level; the home, about and curriculum pages do."
+        ]
+    }
+]
