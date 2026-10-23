@@ -28,7 +28,7 @@ class DirectoryTest extends TestCase
     public function test_directory_is_readable_without_registration(): void
     {
         $this->get('/scholarships')->assertOk()->assertSee('Scholarship directory');
-        $this->get('/')->assertOk()->assertSee('Scholorship Application Services');
+        $this->get('/')->assertOk()->assertSee('Scholarships Application Services');
     }
 
     public function test_search_china_masters_fully_funded_returns_only_matching_published_cycles(): void

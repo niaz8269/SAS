@@ -1,4 +1,4 @@
-# SAS – Scholorship Application Services
+# SAS – Scholarships Application Services
 
 Laravel 13 / PHP 8.4 / Livewire 4 / Filament 5 / Tailwind 4 application for scholarship discovery, student application planning and enquiry-led support services. This repository implements **release R1** of `Requirements.md` (the brand spelling is the owner's).
 

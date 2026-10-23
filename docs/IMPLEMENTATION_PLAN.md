@@ -1,6 +1,6 @@
-# SAS – Scholorship Application Services: Implementation Plan
+# SAS – Scholarships Application Services: Implementation Plan
 
-Source of truth: `Requirements.md` v1.1 (21 Oct 2026). The brand spelling "Scholorship" is the owner's and is preserved
+Source of truth: `Requirements.md` v1.1 (21 Oct 2026). The brand name is "Scholarships Application Services" (the owner replaced the original "Scholorship" spelling with the logo spelling on 2026-10-23) and is used
 everywhere user-visible. Compact brand: **SAS**.
 
 Scope of this build: **R1 (public launch)**. R2 (paid services, bookings, partner portal) and R3 (feeds, advanced matching)

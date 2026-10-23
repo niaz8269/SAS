@@ -2,7 +2,7 @@
 
 - Read `docs/PROGRESS.md` first; it says what is done and what is not. Business rules come from `Requirements.md` (requirement IDs are cited in code comments and `docs/TRACEABILITY.md`).
 - Keep rules in `app/Domain/*` actions/services. Controllers, Livewire components, Filament pages and jobs call them; do not duplicate rules in UI code.
-- Brand spelling is intentionally "Scholorship". Do not "fix" it.
+- The brand name is "SAS – Scholarships Application Services" (it matches the logo). The earlier spelling "Scholorship" was retired by the owner on 2026-10-23; do not reintroduce it.
 - Never invent scholarship data, prices, testimonials, statistics or partnerships. Unknown stays "Not confirmed".
 - Never display a closing time for a date-only deadline; only `exact` deadlines have an instant and a countdown.
 - Models guard sensitive columns (`user_id`, `status`, `owner_id`, roles). Set them explicitly in trusted code (`forceFill` or relations), never from request data.

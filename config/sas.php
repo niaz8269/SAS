@@ -3,7 +3,7 @@
 return [
     'brand' => [
         // The owner's spelling is intentional and must be preserved.
-        'name' => 'SAS – Scholorship Application Services',
+        'name' => 'SAS – Scholarships Application Services',
         'short' => 'SAS',
         'tagline' => 'Turning Potential into Admission',
     ],
