@@ -39,7 +39,8 @@
             <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded border border-white/40 lg:hidden" @click="menu = !menu" :aria-expanded="menu.toString()" aria-controls="agent-nav" aria-label="Menu">
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
             </button>
-            <a href="{{ route('partner.home') }}" aria-label="{{ config('sas.brand.short') }} agent portal"><x-brand light class="[&>span]:!rounded-md [&>span]:!p-1 [&_img]:!h-10 [&_img]:!max-w-none" /></a>
+            <a href="{{ route('partner.home') }}" aria-label="{{ config('sas.brand.short') }} agent portal"><x-brand compact class="[&_img]:!h-[54px] [&_img]:!w-[54px] [&_img]:rounded-full [&_img]:ring-2 [&_img]:ring-white" /></a>
+            <a href="{{ route('partner.home') }}" class="hidden text-[26px] font-semibold tracking-[0.25em] sm:inline" tabindex="-1" aria-hidden="true">SAS</a>
             <span class="hidden border-l border-white/50 pl-3 text-xl font-light sm:inline">Recruiting agents</span>
         </div>
         <details class="relative h-full text-sm">

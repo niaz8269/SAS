@@ -25,7 +25,7 @@
 
 <header class="bg-[#0b4a8f] text-white">
     <div class="flex h-[72px] items-center justify-between gap-3 px-3 sm:px-6">
-        <a href="{{ $agent ? route('partner.home') : route('student.dashboard') }}" aria-label="{{ config('sas.brand.short') }} home"><x-brand light class="[&>span]:!rounded-md [&>span]:!p-1 [&_img]:!h-11 [&_img]:!max-w-none" /></a>
+        <a href="{{ $agent ? route('partner.home') : route('student.dashboard') }}" aria-label="{{ config('sas.brand.short') }} home"><span class="flex items-center gap-3"><x-brand compact class="[&_img]:!h-[54px] [&_img]:!w-[54px] [&_img]:rounded-full [&_img]:ring-2 [&_img]:ring-white" /><span class="hidden text-[26px] font-semibold tracking-[0.25em] sm:inline" aria-hidden="true">SAS</span></span></a>
         <nav aria-label="Application" class="hidden items-center gap-5 text-[15px] md:flex">
             @if ($agent)
                 <a class="hover:underline" href="{{ route('partner.home') }}">Agent backend</a>
