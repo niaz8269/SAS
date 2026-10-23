@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\ServiceCases\RelationManagers;
 
+use App\Models\DocumentKind;
 use Filament\Actions\Action;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables\Columns\TextColumn;
@@ -31,7 +32,7 @@ class SharedDocumentsRelationManager extends RelationManager
             ->modifyQueryUsing(fn ($query) => $query->with('document.currentVersion'))
             ->columns([
                 TextColumn::make('document.title')->label('Document'),
-                TextColumn::make('document.type')->label('Type')->formatStateUsing(fn ($state) => config('sas.document_types.'.$state, $state)),
+                TextColumn::make('document.type')->label('Type')->formatStateUsing(fn ($state) => DocumentKind::label($state)),
                 TextColumn::make('shared_at')->label('Shared on')->dateTime('j M Y, H:i'),
             ])
             ->emptyStateHeading('No documents shared')

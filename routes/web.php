@@ -98,6 +98,10 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::get('/profile', [Student\ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile', [Student\ProfileController::class, 'update'])->name('profile.update');
 
+    Route::get('/application-form', [Student\ApplicationFormController::class, 'show'])->name('form.show');
+    Route::post('/application-form/declaration', [Student\ApplicationFormController::class, 'declare'])->name('form.declare');
+    Route::put('/application-form/{section}', [Student\ApplicationFormController::class, 'update'])->where('section', '[a-z_]+')->name('form.update');
+
     Route::get('/saved-scholarships', [Student\SavedScholarshipController::class, 'index'])->name('saved.index');
     Route::post('/saved-scholarships', [Student\SavedScholarshipController::class, 'store'])->name('saved.store');
     Route::delete('/saved-scholarships/{cycle}', [Student\SavedScholarshipController::class, 'destroy'])->name('saved.destroy');
@@ -105,6 +109,8 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::get('/cases', [Student\CaseController::class, 'index'])->name('cases.index');
     Route::get('/cases/{case:public_id}', [Student\CaseController::class, 'show'])->name('cases.show');
     Route::post('/cases/{case:public_id}/messages', [Student\CaseController::class, 'message'])->middleware('throttle:enquiries')->name('cases.messages.store');
+    Route::put('/cases/{case:public_id}/degree-level', [Student\CaseController::class, 'level'])->name('cases.level.update');
+    Route::put('/cases/{case:public_id}/form', [Student\CaseController::class, 'shareForm'])->name('cases.form.update');
     Route::put('/cases/{case:public_id}/documents', [Student\CaseController::class, 'share'])->name('cases.documents.update');
     Route::get('/applications', [Student\ApplicationController::class, 'index'])->name('applications.index');
     Route::post('/applications', [Student\ApplicationController::class, 'store'])->name('applications.store');

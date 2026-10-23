@@ -8,6 +8,7 @@ use App\Enums\ScanStatus;
 use App\Http\Controllers\Controller;
 use App\Models\Document;
 use App\Models\DocumentAssociation;
+use App\Models\DocumentKind;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -28,7 +29,7 @@ class DocumentController extends Controller
     {
         $data = $request->validate([
             'file' => ['required', 'file'],
-            'type' => ['required', Rule::in(array_keys(config('sas.document_types')))],
+            'type' => ['required', Rule::in(array_keys(DocumentKind::options()))],
             'title' => ['nullable', 'string', 'max:190'],
             'acknowledge' => ['accepted'],
         ], ['acknowledge.accepted' => 'Please confirm you understand how your document is stored.']);

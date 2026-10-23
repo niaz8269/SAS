@@ -4,6 +4,7 @@ namespace App\Domain\Identity;
 
 use App\Domain\Documents\DocumentService;
 use App\Domain\Editorial\AuditLog;
+use App\Models\ApplicationForm;
 use App\Models\Audit;
 use App\Models\Consultation;
 use App\Models\Enquiry;
@@ -29,6 +30,7 @@ class AccountPrivacy
             'exported_at' => now()->toIso8601String(),
             'account' => $user->only(['name', 'email', 'phone', 'phone_country_code', 'timezone', 'created_at', 'email_verified_at']),
             'profile' => $user->studentProfile?->toArray(),
+            'application_form' => ApplicationForm::where('user_id', $user->id)->first()?->data,
             'saved_scholarships' => $user->savedScholarships->map(fn ($s) => ['scholarship' => $s->cycle->label(), 'saved_at' => $s->created_at])->all(),
             'application_plans' => $user->applicationPlans->map(fn ($p) => [
                 'scholarship' => $p->cycle->label(), 'status' => $p->status->value, 'status_source' => $p->status_source,

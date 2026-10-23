@@ -35,11 +35,11 @@ class ServiceCase extends Model
     ];
 
     // The student, advisor and status are set by trusted code (CaseService), never from request data.
-    protected $guarded = ['id', 'public_id', 'user_id', 'advisor_id', 'status', 'awaiting_reply'];
+    protected $guarded = ['id', 'public_id', 'user_id', 'advisor_id', 'status', 'awaiting_reply', 'form_shared_at', 'form_consent_text'];
 
     protected function casts(): array
     {
-        return ['opened_at' => 'datetime', 'outcome_at' => 'datetime', 'awaiting_reply' => 'boolean'];
+        return ['opened_at' => 'datetime', 'outcome_at' => 'datetime', 'awaiting_reply' => 'boolean', 'form_shared_at' => 'datetime'];
     }
 
     protected static function booted(): void
@@ -68,6 +68,17 @@ class ServiceCase extends Model
     public function cycle(): BelongsTo
     {
         return $this->belongsTo(ScholarshipCycle::class, 'cycle_id');
+    }
+
+    public function degreeLevel(): BelongsTo
+    {
+        return $this->belongsTo(DegreeLevel::class, 'degree_level_id');
+    }
+
+    /** The student's master form, readable by staff only while the student has shared it on this case. */
+    public function sharedForm(): ?ApplicationForm
+    {
+        return $this->form_shared_at ? ApplicationForm::where('user_id', $this->user_id)->first() : null;
     }
 
     public function invoices(): HasMany

@@ -5,6 +5,7 @@
         ['Saved scholarships', route('student.saved.index'), 'student.saved.*'],
         ['Application plans', route('student.applications.index'), 'student.applications.*'],
         ['Cases and fees', route('student.cases.index'), 'student.cases.*'],
+        ['Application form', route('student.form.show'), 'student.form.*'],
         ['Documents', route('student.documents.index'), 'student.documents.*'],
         ['Profile', route('student.profile.edit'), 'student.profile.*'],
         ['My enquiries', route('student.enquiries.index'), 'student.enquiries.*'],

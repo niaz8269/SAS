@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\ScholarshipCycles\RelationManagers;
 
+use App\Models\DocumentKind;
 use Filament\Actions\CreateAction;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
@@ -24,7 +25,7 @@ class RequirementsRelationManager extends CycleRelationManager
     public function form(Schema $schema): Schema
     {
         return $schema->components([
-            Select::make('document_type')->options(config('sas.document_types'))->default('other'),
+            Select::make('document_type')->options(fn () => DocumentKind::options())->default('other'),
             Textarea::make('text')->required()->rows(2),
             TextInput::make('conditional_rule')->label('Condition (if it only applies sometimes)'),
             Toggle::make('mandatory')->default(true),

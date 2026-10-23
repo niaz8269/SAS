@@ -10,6 +10,7 @@ use App\Filament\Resources\ScholarshipCycles\Pages\ListScholarshipCycles;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\BenefitsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\CriteriaRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\DeadlinesRelationManager;
+use App\Filament\Resources\ScholarshipCycles\RelationManagers\DocumentRulesRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\EvidenceRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\MilestonesRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\OfferingsRelationManager;
@@ -137,7 +138,7 @@ class ScholarshipCycleResource extends Resource
     {
         return [
             RoutesRelationManager::class, DeadlinesRelationManager::class, MilestonesRelationManager::class, OfferingsRelationManager::class, EvidenceRelationManager::class, BenefitsRelationManager::class,
-            RequirementsRelationManager::class, CriteriaRelationManager::class, ReviewsRelationManager::class,
+            RequirementsRelationManager::class, CriteriaRelationManager::class, ReviewsRelationManager::class, DocumentRulesRelationManager::class,
         ];
     }
 

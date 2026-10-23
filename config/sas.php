@@ -45,9 +45,9 @@ return [
         'administrator' => [
             'content.draft', 'content.override', 'import.stage', 'users.manage', 'audit.view', 'reports.view',
             'enquiries.view_all', 'enquiries.assign', 'services.manage', 'articles.manage', 'taxonomy.manage', 'corrections.manage', 'site.manage',
-            'cases.manage', 'finance.view', 'invoices.manage', 'partners.manage',
+            'cases.manage', 'finance.view', 'invoices.manage', 'partners.manage', 'documents.manage',
         ],
-        'service_manager' => ['services.manage', 'enquiries.view_all', 'enquiries.assign', 'reports.view', 'cases.manage', 'partners.manage'],
+        'service_manager' => ['services.manage', 'enquiries.view_all', 'enquiries.assign', 'reports.view', 'cases.manage', 'partners.manage', 'documents.manage'],
         'advisor' => ['enquiries.assigned', 'consultations.assigned', 'cases.assigned'],
         'specialist' => ['enquiries.assigned', 'cases.assigned'],
         'editor' => ['content.draft', 'import.stage', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],

@@ -8,6 +8,7 @@ use App\Filament\Resources\ServiceCases\Pages\ListServiceCases;
 use App\Filament\Resources\ServiceCases\RelationManagers\InvoicesRelationManager;
 use App\Filament\Resources\ServiceCases\RelationManagers\MessagesRelationManager;
 use App\Filament\Resources\ServiceCases\RelationManagers\SharedDocumentsRelationManager;
+use App\Models\DegreeLevel;
 use App\Models\ScholarshipCycle;
 use App\Models\ServiceCase;
 use App\Models\User;
@@ -59,6 +60,8 @@ class ServiceCaseResource extends Resource
                 Select::make('cycle_id')->label('Scholarship call')->searchable()->placeholder('Not linked to a listing')->disabled(fn (?ServiceCase $record) => $record !== null)->dehydrated(fn (?ServiceCase $record) => $record === null)
                     ->options(fn () => ScholarshipCycle::with('programme')->orderByDesc('id')->limit(300)->get()->mapWithKeys(fn (ScholarshipCycle $c) => [$c->id => $c->programme->title.' ('.$c->intake_year.')'])->all()),
                 TextInput::make('title')->maxLength(200)->helperText('Leave empty to use the scholarship name.')->columnSpanFull(),
+                Select::make('degree_level_id')->label('Degree level')->placeholder('Not chosen yet')->visible(fn (?ServiceCase $record) => $record !== null)
+                    ->options(fn () => DegreeLevel::orderBy('sort')->pluck('name', 'id')->all())->helperText('Decides which document rules apply. The student can set it too.'),
                 Select::make('advisor_id')->label('Counsellor')->searchable()->placeholder('Unassigned')
                     ->options(fn () => User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager']))->where('status', 'active')->pluck('name', 'id')->all())
                     ->disabled(fn () => ! auth()->user()->can('cases.manage')),

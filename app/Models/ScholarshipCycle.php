@@ -106,6 +106,12 @@ class ScholarshipCycle extends Model
         return $this->hasMany(CycleMilestone::class, 'cycle_id')->orderBy('sort')->orderBy('starts_on')->orderBy('id');
     }
 
+    /** SAS case document rules for this cycle's scholarship (they apply to every year of it). */
+    public function documentRules(): HasMany
+    {
+        return $this->hasMany(DocumentRule::class, 'programme_id', 'programme_id');
+    }
+
     public function requirements(): HasMany
     {
         return $this->hasMany(CycleRequirement::class, 'cycle_id')->orderBy('sort');

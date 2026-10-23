@@ -143,6 +143,27 @@ class CaseService
         });
     }
 
+    /** The student lets (or stops letting) the people handling this case read their master application form. */
+    public function shareForm(ServiceCase $case, User $student, bool $share, string $consentText): void
+    {
+        if ($case->user_id !== $student->id) {
+            throw new InvalidArgumentException('This is not your case.');
+        }
+        if ($share === ($case->form_shared_at !== null)) {
+            return;
+        }
+        $case->forceFill($share ? ['form_shared_at' => now(), 'form_consent_text' => $consentText] : ['form_shared_at' => null])->save();
+        AuditLog::record($share ? 'case.form_shared' : 'case.form_unshared', $case, null, null, null, $student);
+    }
+
+    /** Which degree level the application is for. It decides which document rules apply. */
+    public function setDegreeLevel(ServiceCase $case, ?int $levelId, ?User $actor = null): void
+    {
+        $before = $case->degree_level_id;
+        $case->forceFill(['degree_level_id' => $levelId])->save();
+        AuditLog::record('case.degree_level_set', $case, ['degree_level_id' => $before], ['degree_level_id' => $levelId], null, $actor);
+    }
+
     /** A message in the case. A student's message is always public; staff may reply publicly or leave an internal note. */
     public function postMessage(ServiceCase $case, User $author, string $body, string $visibility = 'public'): CaseMessage
     {

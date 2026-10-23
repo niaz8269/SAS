@@ -7,7 +7,7 @@
         <h2 class="text-lg font-bold">Upload a document</h2>
         <div class="grid gap-3 sm:grid-cols-2">
             <div><label for="file" class="label">File (PDF, DOCX, JPEG or PNG, up to {{ config('sas.uploads.max_kb') / 1024 }} MB)</label><input id="file" type="file" name="file" required accept=".pdf,.docx,.jpg,.jpeg,.png" class="input @error('file') input-error @enderror">@error('file')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
-            <div><label for="type" class="label">Type</label><select id="type" name="type" class="input">@foreach (config('sas.document_types') as $k => $l)<option value="{{ $k }}" @selected(old('type') === $k)>{{ $l }}</option>@endforeach</select></div>
+            <div><label for="type" class="label">Type</label><select id="type" name="type" class="input">@foreach (\App\Models\DocumentKind::options() as $k => $l)<option value="{{ $k }}" @selected(old('type') === $k)>{{ $l }}</option>@endforeach</select></div>
         </div>
         <div><label for="title" class="label">Title (optional)</label><input id="title" name="title" value="{{ old('title') }}" class="input"></div>
         <div><label class="flex items-start gap-2 text-sm"><input type="checkbox" name="acknowledge" value="1" class="mt-1 rounded border-slate-300 text-navy-700"><span>I understand this document is stored privately, scanned for malware, and not shared unless I link it to a case or plan.</span></label>@error('acknowledge')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
@@ -20,7 +20,7 @@
             @php($v = $d->currentVersion)
             <div class="card mt-3 p-4">
                 <div class="flex flex-wrap items-start justify-between gap-2">
-                    <div><p class="font-semibold">{{ $d->title }}</p><p class="text-xs text-muted">{{ config('sas.document_types')[$d->type] ?? $d->type }} · version {{ $v?->version }} · {{ $v ? number_format($v->size / 1024) : 0 }} KB · {{ $v?->original_name }}</p></div>
+                    <div><p class="font-semibold">{{ $d->title }}</p><p class="text-xs text-muted">{{ \App\Models\DocumentKind::label($d->type) }} · version {{ $v?->version }} · {{ $v ? number_format($v->size / 1024) : 0 }} KB · {{ $v?->original_name }}</p></div>
                     <div class="flex items-center gap-2">
                         @if ($v)<span class="{{ match($v->scan_status->value) { 'available' => 'badge-green', 'rejected' => 'badge-alert', default => 'badge-warn' } }}">{{ $v->scan_status->label() }}</span>@endif
                         @if ($v?->isDownloadable())<a class="btn-outline !py-1.5" href="{{ route('student.documents.download', $d) }}">Download</a>@endif
