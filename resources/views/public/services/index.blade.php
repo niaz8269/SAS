@@ -7,6 +7,7 @@
         <div class="mt-6 max-w-5xl">
             <h2 class="text-xl font-bold">Our fees</h2>
             @include('public.legal.fees')
+            @include('public.legal.payment-options')
             <p class="text-sm text-muted">Details of when each fee is charged and refunded are in the <a class="text-navy-700 underline" href="{{ route('legal.show', 'refunds') }}">cancellation and refund policy</a>. Sending an enquiry is always free.</p>
         </div>
         @if ($services->isEmpty())

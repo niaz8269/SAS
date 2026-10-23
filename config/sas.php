@@ -9,7 +9,8 @@ return [
     ],
 
     // Owner decisions still open (docs/DECISIONS.md). Shown in the footer until confirmed.
-    'legal_entity' => env('SAS_LEGAL_ENTITY', 'Operating legal entity: to be confirmed'),
+    'legal_entity_name' => env('SAS_LEGAL_ENTITY_NAME', 'CAS - Consultancy for Abroad Study'),
+    'legal_entity' => env('SAS_LEGAL_ENTITY', 'Operated by CAS - Consultancy for Abroad Study'),
     // Set SAS_LEGAL_APPROVED=true once the operating entity or counsel has approved the privacy, terms and refund texts; it hides the draft notice on those pages.
     'legal_approved' => (bool) env('SAS_LEGAL_APPROVED', false),
 

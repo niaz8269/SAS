@@ -2,7 +2,8 @@
 
 <h2>1. Our fees at a glance</h2>
 @include('public.legal.fees')
-<p>All amounts are in US dollars. We tell you the amount and how to pay in writing before you are charged, and you are only charged after you have agreed to it.</p>
+<p>All amounts are in US dollars. We tell you the amount in writing before you are charged, and you are only charged after you have agreed to it.</p>
+@include('public.legal.payment-options')
 
 <h2>2. The application fee</h2>
 <ul>

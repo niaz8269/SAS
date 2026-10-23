@@ -1,4 +1,4 @@
-<p class="text-sm text-muted">Last updated: 23 October 2026. This notice explains what personal information {{ config('sas.brand.short') }} ("SAS", "we", "us") collects, why, who sees it, how long we keep it and the choices you have. {{ config('sas.legal_entity') }} is responsible for your information.</p>
+<p class="text-sm text-muted">Last updated: 23 October 2026. This notice explains what personal information {{ config('sas.brand.short') }} ("SAS", "we", "us") collects, why, who sees it, how long we keep it and the choices you have. {{ config('sas.legal_entity_name') }} is responsible for your information.</p>
 
 <h2>1. What we collect</h2>
 <ul>
