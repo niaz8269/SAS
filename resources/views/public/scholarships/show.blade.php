@@ -122,8 +122,26 @@
                 @endif
                 @if ($cycle->institutions_note)<p class="mt-3 text-sm">{{ $cycle->institutions_note }}</p>@endif
                 @if ($unis->isEmpty() && ! $cycle->institutions_note)<p class="mt-3 text-sm text-muted">Participating universities: not confirmed.</p>@endif
-                <h3 class="mt-5 font-semibold">Programmes offered</h3>
-                @if ($cycle->programmes_note)<p class="mt-2 text-sm whitespace-pre-line">{{ $cycle->programmes_note }}</p>@else<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
+                <h3 class="mt-5 font-semibold">Degrees and programmes offered</h3>
+                @php($offerings = $cycle->offerings()->with('degreeLevel')->get()->groupBy('degree_level_id'))
+                @forelse ($offerings as $rows)
+                    @php($summary = $rows->firstWhere('name', null))
+                    @php($named = $rows->whereNotNull('name'))
+                    <div class="mt-3 rounded-lg border border-line p-4">
+                        <h4 class="font-semibold">{{ $rows->first()->degreeLevel->name }}</h4>
+                        @if ($summary?->detail)<p class="mt-1 text-sm">{{ $summary->detail }}@if ($summary->source_url) <a class="text-navy-700 underline" href="{{ $summary->source_url }}" rel="noopener nofollow" target="_blank">Official source</a>@endif</p>@endif
+                        @if ($named->isNotEmpty())
+                            <ul class="mt-2 list-disc space-y-1 pl-5 text-sm">
+                                @foreach ($named as $o)
+                                    <li>@if ($o->source_url)<a class="text-navy-700 underline" href="{{ $o->source_url }}" rel="noopener nofollow" target="_blank">{{ $o->name }}</a>@else{{ $o->name }}@endif @if ($o->institution)<span class="text-muted">({{ $o->institution }})</span>@endif @if ($o->detail)<span class="text-muted">: {{ $o->detail }}</span>@endif</li>
+                                @endforeach
+                            </ul>
+                        @endif
+                    </div>
+                @empty
+                    @if ($cycle->degreeLevels->isNotEmpty())<p class="mt-2 text-sm">Degree levels: {{ $cycle->degreeLevels->pluck('name')->implode(', ') }}. Programme details: not confirmed.</p>@endif
+                @endforelse
+                @if ($cycle->programmes_note)<p class="mt-3 text-sm whitespace-pre-line">{{ $cycle->programmes_note }}</p>@elseif ($offerings->isEmpty())<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
                 @if (str_contains($programme->title, 'Chinese Government Scholarship') || str_contains((string) $programme->funder?->name, 'China Scholarship Council'))
                     <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('programmes.index', ['csc' => 1]) }}">Browse programmes listed as open to Chinese Government Scholarship applicants</a></p>
                 @endif

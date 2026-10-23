@@ -96,6 +96,11 @@ class ScholarshipCycle extends Model
         return $this->hasMany(CycleBenefit::class, 'cycle_id')->orderBy('sort');
     }
 
+    public function offerings(): HasMany
+    {
+        return $this->hasMany(CycleOffering::class, 'cycle_id')->orderBy('degree_level_id')->orderBy('sort')->orderBy('id');
+    }
+
     public function milestones(): HasMany
     {
         return $this->hasMany(CycleMilestone::class, 'cycle_id')->orderBy('sort')->orderBy('starts_on')->orderBy('id');

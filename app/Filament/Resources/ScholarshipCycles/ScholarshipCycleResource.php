@@ -12,6 +12,7 @@ use App\Filament\Resources\ScholarshipCycles\RelationManagers\CriteriaRelationMa
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\DeadlinesRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\EvidenceRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\MilestonesRelationManager;
+use App\Filament\Resources\ScholarshipCycles\RelationManagers\OfferingsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\RequirementsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\ReviewsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\RoutesRelationManager;
@@ -135,7 +136,7 @@ class ScholarshipCycleResource extends Resource
     public static function getRelations(): array
     {
         return [
-            RoutesRelationManager::class, DeadlinesRelationManager::class, MilestonesRelationManager::class, EvidenceRelationManager::class, BenefitsRelationManager::class,
+            RoutesRelationManager::class, DeadlinesRelationManager::class, MilestonesRelationManager::class, OfferingsRelationManager::class, EvidenceRelationManager::class, BenefitsRelationManager::class,
             RequirementsRelationManager::class, CriteriaRelationManager::class, ReviewsRelationManager::class,
         ];
     }

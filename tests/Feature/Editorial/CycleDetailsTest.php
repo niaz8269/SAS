@@ -50,7 +50,7 @@ class CycleDetailsTest extends TestCase
 
         $this->get(route('scholarships.show', [$cycle->programme->slug, $cycle->slug]))->assertOk()
             ->assertSee('Universities included')->assertSee('Peking University')->assertSee('Applicants choose a university from the official list.')
-            ->assertSee('Programmes offered')->assertSee('Master and doctoral programmes in all fields.')->assertSee('programmes listed as open to Chinese Government Scholarship')
+            ->assertSee('Degrees and programmes offered')->assertSee('Master and doctoral programmes in all fields.')->assertSee('programmes listed as open to Chinese Government Scholarship')
             ->assertDontSee('Apply on official website')->assertDontSee('apply.example.org');
     }
 
