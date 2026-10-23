@@ -1,28 +1,23 @@
-<x-layouts.partner title="Backend home">
-    <h1 class="text-2xl font-extrabold">Backend home</h1>
-    <p class="mt-1 text-sm text-muted">{{ $organisation->name }}. Add your students, fill in their applications with them, and follow what SAS says about each one.</p>
+<x-layouts.partner title="Backend home" crumb="Backend home">
+    <x-agent.title>Backend home</x-agent.title>
 
-    <div class="mt-5 grid gap-4 sm:grid-cols-2">
-        <a href="{{ route('partner.applications.index') }}" class="card block p-5 transition hover:border-navy-500"><p class="text-4xl font-extrabold">{{ $applications }}</p><p class="text-sm text-muted">Number of applications</p></a>
-        <a href="{{ route('partner.students.index') }}" class="card block p-5 transition hover:border-navy-500"><p class="text-4xl font-extrabold">{{ $students }}</p><p class="text-sm text-muted">Number of students</p></a>
-    </div>
+    <div class="mt-8 flex flex-wrap items-start gap-10">
+        <div class="w-full max-w-[360px]">
+            <div class="mx-auto flex h-[110px] w-[165px] items-center justify-center border border-[#ddd] bg-white p-2 shadow-sm"><x-brand class="[&_img]:!h-16 [&_img]:!max-w-[8rem]" /></div>
+            <p class="mt-3 truncate text-center text-sm text-[#666]">{{ $organisation->name }}</p>
+            <a href="{{ route('partner.organisation.edit') }}" class="mt-4 flex h-14 items-center justify-center gap-2 bg-[#86b87c] text-[19px] text-white hover:bg-[#78aa6e]"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4ZM14 6l4 4"/></svg>Edit data</a>
+            <a href="{{ route('partner.password.edit') }}" class="mt-2 flex h-14 items-center justify-center gap-2 bg-[#3d88c9] text-[19px] text-white hover:bg-[#3479b6]"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 11h12v10H6V11Zm3 0V8a3 3 0 0 1 6 0v3"/></svg>Change password</a>
+        </div>
 
-    <div class="mt-6 grid gap-6 lg:grid-cols-2">
-        <section class="card p-5" aria-labelledby="stage-h"><h2 id="stage-h" class="font-bold">Applications by status</h2>
-            <ul class="mt-3 divide-y divide-line text-sm">
-                @foreach (\App\Models\ApplicationPlan::STAGES as $key => $label)
-                    <li class="flex items-center justify-between py-2"><a class="hover:underline" href="{{ route('partner.applications.index', ['stage' => $key]) }}">{{ $label }}</a><span class="font-semibold">{{ $byStage[$key] ?? 0 }}</span></li>
-                @endforeach
-            </ul>
-        </section>
-        <section class="card p-5" aria-labelledby="start-h"><h2 id="start-h" class="font-bold">What to do</h2>
-            <ol class="mt-3 list-decimal space-y-2 pl-5 text-sm text-muted">
-                <li><strong class="text-ink">Add students</strong>, one at a time or many from a file. Each student is emailed an invitation to choose their own password.</li>
-                <li>Open a student and press <strong class="text-ink">Add application</strong> to choose a scholarship.</li>
-                <li>Follow the four steps: apply, application form, upload materials, submit.</li>
-                <li>SAS reviews each submitted application and either passes it or returns it with remarks for you to fix.</li>
-            </ol>
-            <div class="mt-4 flex flex-wrap gap-2"><a class="btn-primary" href="{{ route('partner.students.create') }}">Add a student</a><a class="btn-outline" href="{{ route('partner.students.import') }}">Batch import</a></div>
-        </section>
+        <div class="flex min-w-0 flex-1 flex-col gap-4 sm:max-w-[420px]">
+            <a href="{{ route('partner.applications.index') }}" class="flex h-[190px] items-center gap-6 bg-[#9abf32] px-7 text-white shadow transition hover:brightness-95" aria-label="{{ $applications }} applications">
+                <span class="inline-flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-white/25" aria-hidden="true"><svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="10" width="5" height="5" rx="1"/><rect x="9.5" y="10" width="5" height="5" rx="1"/><rect x="16" y="10" width="5" height="5" rx="1"/></svg></span>
+                <span><span class="block text-5xl font-light">{{ $applications }}</span><span class="block text-2xl leading-tight">Number of applications</span></span>
+            </a>
+            <a href="{{ route('partner.students.index') }}" class="flex h-[190px] items-center gap-6 bg-[#6ab0de] px-7 text-white shadow transition hover:brightness-95" aria-label="{{ $students }} students">
+                <span class="inline-flex h-24 w-24 shrink-0 items-center justify-center rounded-full bg-white/25" aria-hidden="true"><svg class="h-11 w-11" viewBox="0 0 24 24" fill="currentColor"><path d="M10 3h4v4h-4V3Zm0 7h4v11h-4V10Z"/></svg></span>
+                <span><span class="block text-5xl font-light">{{ $students }}</span><span class="block text-2xl leading-tight">Number of students</span></span>
+            </a>
+        </div>
     </div>
 </x-layouts.partner>

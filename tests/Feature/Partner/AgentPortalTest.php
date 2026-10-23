@@ -196,7 +196,7 @@ class AgentPortalTest extends TestCase
         $this->assertSame($student->id, $plan->user_id, 'the application belongs to the student, not the agent');
         $this->assertSame(0, $agent->applicationPlans()->count());
 
-        $this->get($base('/applications/'.$plan->public_id))->assertOk()->assertSee('for Amina Khan')->assertSee('Recruiting agent'); // the agent layout
+        $this->get($base('/applications/'.$plan->public_id))->assertOk()->assertSee('for Amina Khan')->assertSee('Agent backend'); // the agent header
         $this->put($base('/applications/'.$plan->public_id.'/form'), ['sections' => ['contact' => ['phone' => '+923001234567', 'address' => 'Lahore']]])->assertRedirect();
         $this->assertSame('+923001234567', app(ApplicationFormService::class)->formFor($student)->value('phone'));
 
@@ -226,11 +226,24 @@ class AgentPortalTest extends TestCase
 
         $this->actingAs($agent)->get(route('partner.applications.index'))->assertOk()
             ->assertSee($plan->application_no)->assertDontSee($stranger->application_no)->assertSee('Returned')->assertSee('The passport scan is blurred.')
-            ->assertSee('Paid')->assertSee('Download application form')->assertSee('Application fee');
+            ->assertSee('Paid')->assertSee('Download Application Form')->assertSee('Application fee payment status');
         $this->get(route('partner.applications.index', ['stage' => 'passed']))->assertDontSee($plan->application_no);
         $this->get(route('partner.applications.index', ['q' => 'Amina']))->assertSee($plan->application_no);
         $this->get(route('partner.applications.index', ['q' => 'nobody-by-this-name']))->assertDontSee($plan->application_no);
-        $this->get(route('partner.home'))->assertSee('Applications by status');
+        $this->get(route('partner.home'))->assertOk()->assertSee('Number of students');
+    }
+
+    public function test_the_lists_sort_and_page_size_come_from_the_query_and_bad_values_fall_back(): void
+    {
+        $agent = $this->agent();
+        $this->studentOf($agent, 'zed@example.test');
+        $this->studentOf($agent, 'abe@example.test');
+
+        $this->actingAs($agent)->get(route('partner.students.index', ['sort' => 'email', 'dir' => 'asc', 'per_page' => 10]))->assertOk()
+            ->assertSeeInOrder(['abe@example.test', 'zed@example.test']);
+        $this->get(route('partner.students.index', ['sort' => 'password; drop', 'dir' => 'sideways', 'per_page' => 7]))->assertOk();
+        $this->get(route('partner.applications.index', ['sort' => 'name', 'dir' => 'asc', 'per_page' => 50]))->assertOk();
+        $this->get(route('partner.applications.index', ['sort' => 'nope', 'per_page' => 'x']))->assertOk();
     }
 
     public function test_the_agent_is_told_when_staff_review_a_students_application(): void

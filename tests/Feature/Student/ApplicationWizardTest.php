@@ -95,10 +95,10 @@ class ApplicationWizardTest extends TestCase
 
         $this->assertMatchesRegularExpression('/^SAS\d{10}$/', $plan->application_no);
         $this->actingAs($student)->get(route('student.applications.show', $plan))->assertOk()
-            ->assertSee('The scholarship you are applying for is Wizard Award')->assertSee($plan->application_no)->assertSee('Step 1: Apply now')->assertSee('Apply submit');
-        $this->get(route('student.applications.form', $plan))->assertOk()->assertSee('Step 2: Application form')->assertSee('Personal information')->assertSee('name="sections[personal][surname]"', false);
-        $this->get(route('student.applications.materials', $plan))->assertOk()->assertSee('Step 3: Upload materials')->assertSee('Notice')->assertSee('Currently cannot provide this document');
-        $this->get(route('student.applications.submit', $plan))->assertOk()->assertSee('Step 4: Apply submit')->assertSee('Not ready to submit yet');
+            ->assertSee('The program you are applying for is Wizard Award')->assertSee($plan->application_no)->assertSee('Apply Now')->assertSee('Apply Submit');
+        $this->get(route('student.applications.form', $plan))->assertOk()->assertSee('Application Form')->assertSee('Personal information')->assertSee('name="sections[personal][surname]"', false);
+        $this->get(route('student.applications.materials', $plan))->assertOk()->assertSee('Upload Materials')->assertSee('Notice')->assertSee('Currently cannot provide the document');
+        $this->get(route('student.applications.submit', $plan))->assertOk()->assertSee('Apply Submit')->assertSee('Not ready to submit yet');
         $this->get(route('student.applications.preview', $plan))->assertOk()->assertSee('Application form')->assertSee($plan->application_no)->assertHeader('Cache-Control', 'no-store, private');
     }
 
@@ -276,3 +276,4 @@ class ApplicationWizardTest extends TestCase
         $this->assertSame(2, ApplicationPlan::count());
     }
 }
+

@@ -1,33 +1,51 @@
-<x-layouts.partner title="Student list">
-    <div class="flex flex-wrap items-center justify-between gap-3">
-        <h1 class="text-2xl font-extrabold">Student list</h1>
-        <div class="flex flex-wrap gap-2"><a class="btn-primary" href="{{ route('partner.students.create') }}">+ Add students</a><a class="btn-outline" href="{{ route('partner.students.import') }}">+ Batch import</a></div>
-    </div>
+<x-layouts.partner title="Student list" crumb="Student list">
+    <x-agent.title>Student list
+        <x-slot name="actions"><button type="button" class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[17px] text-white hover:bg-[#c9453f]" onclick="document.getElementById('advanced').toggleAttribute('hidden')" aria-controls="advanced"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg>Advanced Search</button></x-slot>
+    </x-agent.title>
 
-    <form method="GET" action="{{ route('partner.students.index') }}" class="mt-4 flex flex-wrap items-end gap-2" role="search">
-        <div class="min-w-[14rem] flex-1"><label for="q" class="label">Search by name or email</label><input id="q" name="q" type="search" value="{{ $q }}" class="input" maxlength="80"></div>
-        <button class="btn-outline">Search</button>
+    <form id="advanced" method="GET" action="{{ route('partner.students.index') }}" class="mt-4 flex flex-wrap items-end gap-3 border border-[#ddd] bg-[#f9f9f9] p-4" @if (! $q) hidden @endif>
+        <div><label for="adv-q" class="mb-1 block text-sm font-semibold">Name or email</label><input id="adv-q" name="q" type="search" value="{{ $q }}" maxlength="80" class="w-64 max-w-full border border-[#ccc] bg-white px-3 py-2"></div>
+        <button class="bg-[#307cc7] px-5 py-2 text-white">Search</button>
+        <a class="border border-[#ccc] bg-white px-5 py-2" href="{{ route('partner.students.index') }}">Reset</a>
     </form>
 
-    <p class="mt-4 text-sm text-muted" aria-live="polite">{{ $students->total() }} {{ \Illuminate\Support\Str::plural('student', $students->total()) }}</p>
-    <div class="card mt-2 overflow-x-auto">
-        <table class="w-full text-left text-sm">
-            <caption class="sr-only">Your students</caption>
-            <thead><tr class="border-b border-line text-muted"><th scope="col" class="px-4 py-3">Name</th><th scope="col" class="px-4 py-3">Email</th><th scope="col" class="px-4 py-3">Applications</th><th scope="col" class="px-4 py-3">Account</th><th scope="col" class="px-4 py-3"><span class="sr-only">Actions</span></th></tr></thead>
-            <tbody>
-            @forelse ($students as $s)
-                <tr class="border-b border-line/60 align-top">
-                    <td class="px-4 py-3 font-medium">{{ $s->name }}</td>
-                    <td class="px-4 py-3">{{ $s->email }}</td>
-                    <td class="px-4 py-3">{{ $s->application_plans_count }}</td>
-                    <td class="px-4 py-3">{{ $s->email_verified_at ? 'Active' : 'Invitation pending' }}</td>
-                    <td class="px-4 py-3 whitespace-nowrap"><a class="text-navy-700 underline" href="{{ route('partner.student.show', $s->public_id) }}">Open</a> &middot; <a class="text-navy-700 underline" href="{{ route('partner.student.edit', $s->public_id) }}">Edit</a> &middot; <a class="text-navy-700 underline" href="{{ route('partner.student.choose.index', $s->public_id) }}">Add application</a></td>
-                </tr>
-            @empty
-                <tr><td colspan="5" class="px-4 py-8 text-center text-muted">No students yet. Add one to start.</td></tr>
-            @endforelse
-            </tbody>
-        </table>
-    </div>
-    <div class="mt-4">{{ $students->links('pagination::tailwind') }}</div>
+    <x-agent.list title="List">
+        <x-slot name="actions">
+            <a class="inline-flex items-center gap-2 hover:underline" href="{{ route('partner.students.create') }}"><span class="text-2xl leading-none" aria-hidden="true">+</span> Add students</a>
+            <a class="inline-flex items-center gap-2 hover:underline" href="{{ route('partner.students.import') }}"><span class="text-2xl leading-none" aria-hidden="true">+</span> Batch import</a>
+        </x-slot>
+        <x-agent.pager :paginator="$students" search-label="Name/Email" :q="$q" :per-page="$perPage" />
+        <div class="overflow-x-auto">
+            <table class="w-full text-left text-[17px]">
+                <caption class="sr-only">Your students</caption>
+                <thead><tr>
+                    <x-agent.th name="id" :sort="$sort" :dir="$dir">ID</x-agent.th>
+                    <x-agent.th name="name" :sort="$sort" :dir="$dir">English name</x-agent.th>
+                    <x-agent.th name="email" :sort="$sort" :dir="$dir">Mail</x-agent.th>
+                    <x-agent.th name="passport" :sortable="false">Passport number</x-agent.th>
+                    <x-agent.th name="dob" :sortable="false">Date of birth</x-agent.th>
+                    <x-agent.th name="country" :sortable="false">Country</x-agent.th>
+                    <x-agent.th name="actions" :sortable="false"><span class="sr-only">Actions</span></x-agent.th>
+                </tr></thead>
+                <tbody>
+                @forelse ($students as $s)
+                    @php($d = $s->applicationForm?->data ?? [])
+                    <tr class="border-b border-[#e5e5e5] align-top">
+                        <td class="px-3 py-5">{{ $s->id }}</td>
+                        <td class="px-3 py-5 uppercase"><a class="hover:text-[#428bb6]" href="{{ route('partner.student.show', $s->public_id) }}">{{ $s->name }}</a></td>
+                        <td class="px-3 py-5"><a class="text-[#428bb6] hover:underline" href="mailto:{{ $s->email }}">{{ $s->email }}</a><br><span class="text-sm text-[#777]">{{ $s->email_verified_at ? 'Account active' : 'Invitation pending' }}</span></td>
+                        <td class="px-3 py-5">{{ $d['passport_no'] ?? '' }}</td>
+                        <td class="px-3 py-5">@if (! empty($d['date_of_birth'])){{ $d['date_of_birth'] }} ({{ \Illuminate\Support\Carbon::parse($d['date_of_birth'])->age }} years old)@endif</td>
+                        <td class="px-3 py-5">{{ $d['nationality'] ?? '' }}</td>
+                        <td class="whitespace-nowrap px-3 py-5"><a class="text-[#428bb6] hover:underline" href="{{ route('partner.student.edit', $s->public_id) }}">Edit</a> | <a class="text-[#428bb6] hover:underline" href="{{ route('partner.student.choose.index', $s->public_id) }}">Add Application</a>
+                            <br><a class="text-sm text-[#428bb6] hover:underline" href="{{ route('partner.student.applications.index', $s->public_id) }}">{{ $s->application_plans_count }} {{ \Illuminate\Support\Str::plural('application', $s->application_plans_count) }}</a></td>
+                    </tr>
+                @empty
+                    <tr><td colspan="7" class="px-4 py-10 text-center text-[#777]">No students yet. Press + Add students to start.</td></tr>
+                @endforelse
+                </tbody>
+            </table>
+        </div>
+        <div class="pb-2"></div>
+    </x-agent.list>
 </x-layouts.partner>

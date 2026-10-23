@@ -1,9 +1,17 @@
-@props(['title' => 'Partner area'])
+@props(['title' => 'Backend home', 'crumb' => null])
 @php
     $user = auth()->user();
     $organisation = $user->partnerOrganisation;
-    $nav = [['Backend home', route('partner.home'), 'partner.home'], ['Student list', route('partner.students.index'), ['partner.students.*', 'partner.student.*']], ['Application list', route('partner.applications.index'), 'partner.applications.*']];
-    $nav[] = ['Organisation data', route('partner.organisation.edit'), 'partner.organisation.*'];
+    $icons = [
+        'home' => 'M3 12 12 3l9 9M5 10v10h5v-6h4v6h5V10',
+        'list' => 'M4 6h16M4 12h16M4 18h16',
+        'apps' => 'M7 3h7l5 5v13H7V3Zm7 0v5h5M10 13h6M10 17h6',
+    ];
+    $nav = [
+        ['Backend home', route('partner.home'), 'partner.home', 'home'],
+        ['Student list', route('partner.students.index'), ['partner.students.*', 'partner.student.*'], 'list'],
+        ['Application list', route('partner.applications.index'), 'partner.applications.*', 'apps'],
+    ];
 @endphp
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -13,45 +21,76 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32.png') }}">
     <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('images/favicon-64.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
-    <meta name="theme-color" content="#123a7a">
+    <meta name="theme-color" content="#428bb6">
     <meta name="robots" content="noindex, nofollow">
-    <title>{{ $title }} | {{ config('sas.brand.short') }} partner area</title>
+    <title>{{ $title }} | {{ config('sas.brand.short') }} agent portal</title>
     <link rel="preload" href="{{ asset('fonts/inter-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ asset('fonts/inter.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
-<body class="min-h-screen bg-ivory">
+<body class="min-h-screen bg-white text-[#333]" x-data="{ collapsed: false, menu: false }">
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2">Skip to main content</a>
-<header class="border-b border-navy-800 bg-navy-900 text-white">
-    <div class="h-1 bg-gradient-to-r from-navy-600 via-gold to-gold" aria-hidden="true"></div>
-    <div class="flex h-16 w-full items-center justify-between gap-3 pl-1.5 pr-4 sm:pr-6 lg:pr-8">
-        <div class="flex min-w-0 items-center gap-3"><a href="{{ route('partner.home') }}" aria-label="{{ config('sas.brand.short') }} partner area"><x-brand light class="[&>span]:!p-1 [&_img]:!h-11 [&_img]:!max-w-none" /></a>
-            <span class="hidden truncate border-l border-white/20 pl-3 text-sm font-semibold text-gold-soft sm:inline">Recruiting agent &middot; {{ $organisation?->name }}</span></div>
-        <details class="relative text-sm">
-            <summary class="cursor-pointer list-none rounded-lg px-3 py-2 hover:bg-white/10">{{ $user->name }} <span aria-hidden="true">▾</span></summary>
-            <ul class="absolute right-0 z-40 mt-1 w-52 rounded-lg border border-line bg-white p-1 text-ink shadow-lg">
-                <li><a class="block rounded-md px-3 py-2 hover:bg-navy-50" href="{{ route('partner.organisation.edit') }}">Edit organisation data</a></li>
-                <li><a class="block rounded-md px-3 py-2 hover:bg-navy-50" href="{{ route('partner.password.edit') }}">Change password</a></li>
-                <li><form method="POST" action="{{ route('logout') }}">@csrf<button class="block w-full rounded-md px-3 py-2 text-left hover:bg-navy-50">Log out</button></form></li>
+
+{{-- Header: logo, the portal's name, and the signed-in user --}}
+<header class="bg-[#428bb6] text-white">
+    <div class="flex h-[70px] items-center justify-between gap-3 pl-3">
+        <div class="flex min-w-0 items-center gap-3">
+            <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded border border-white/40 lg:hidden" @click="menu = !menu" :aria-expanded="menu.toString()" aria-controls="agent-nav" aria-label="Menu">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+            <a href="{{ route('partner.home') }}" aria-label="{{ config('sas.brand.short') }} agent portal"><x-brand light class="[&>span]:!rounded-md [&>span]:!p-1 [&_img]:!h-10 [&_img]:!max-w-none" /></a>
+            <span class="hidden border-l border-white/50 pl-3 text-xl font-light sm:inline">Recruiting agents</span>
+        </div>
+        <details class="relative h-full text-sm">
+            <summary class="flex h-full cursor-pointer list-none items-center gap-3 bg-[#5a9bc4] px-4 hover:bg-[#6aa6cc]">
+                <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-sm font-bold text-[#428bb6]" aria-hidden="true">{{ \Illuminate\Support\Str::upper(\Illuminate\Support\Str::substr($user->name, 0, 2)) }}</span>
+                <span class="hidden text-left leading-tight sm:block"><span class="block text-xs">welcome,</span><span class="block max-w-[11rem] truncate text-base font-semibold">{{ $user->name }}</span></span>
+                <span aria-hidden="true">▾</span>
+            </summary>
+            <ul class="absolute right-0 z-40 w-56 border border-[#ddd] bg-white py-1 text-[#333] shadow-lg">
+                <li><a class="block px-4 py-2 hover:bg-[#f0f6fa]" href="{{ route('partner.organisation.edit') }}">Edit data</a></li>
+                <li><a class="block px-4 py-2 hover:bg-[#f0f6fa]" href="{{ route('partner.password.edit') }}">Change password</a></li>
+                <li><form method="POST" action="{{ route('logout') }}">@csrf<button class="block w-full px-4 py-2 text-left hover:bg-[#f0f6fa]">Log out</button></form></li>
             </ul>
         </details>
     </div>
 </header>
-<div class="container-page grid gap-6 py-6 lg:grid-cols-[210px_1fr]">
-    <nav aria-label="Partner area" class="lg:sticky lg:top-6 lg:self-start">
-        <ul class="card flex gap-1 overflow-x-auto p-2 text-sm lg:block lg:space-y-0.5 lg:overflow-visible">
-            @foreach ($nav as [$label, $url, $patterns])
+
+<div class="flex min-h-[calc(100vh-70px-64px)]">
+    {{-- Sidebar --}}
+    <nav id="agent-nav" aria-label="Agent portal" class="shrink-0 border-r border-[#e5e5e5] bg-[#f5f5f5] transition-all" :class="[collapsed ? 'w-16' : 'w-60 lg:w-[285px]', menu ? 'block' : 'hidden lg:block']">
+        <ul>
+            @foreach ($nav as [$label, $url, $patterns, $icon])
                 @php($on = request()->routeIs(...(array) $patterns))
-                <li><a href="{{ $url }}" @if($on) aria-current="page" @endif class="block whitespace-nowrap rounded-md border-l-4 px-3 py-2 font-medium transition hover:bg-navy-50 {{ $on ? 'border-gold bg-navy-50 text-navy-900' : 'border-transparent text-ink' }}">{{ $label }}</a></li>
+                <li><a href="{{ $url }}" @if($on) aria-current="page" @endif title="{{ $label }}"
+                       class="flex h-[60px] items-center gap-4 border-b border-[#e5e5e5] border-l-4 px-5 text-[17px] transition hover:bg-white {{ $on ? 'border-l-[#428bb6] bg-white text-[#428bb6]' : 'border-l-transparent text-[#333]' }}">
+                    <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ $icons[$icon] }}"/></svg>
+                    <span x-show="!collapsed" class="truncate">{{ $label }}</span></a></li>
             @endforeach
         </ul>
+        <div class="relative my-4 hidden text-center lg:block"><span class="absolute inset-x-5 top-1/2 border-t border-[#ddd]" aria-hidden="true"></span>
+            <button type="button" @click="collapsed = !collapsed" class="relative inline-flex h-8 w-8 items-center justify-center rounded-full border border-[#ccc] bg-white text-[#666]" :aria-label="collapsed ? 'Expand the menu' : 'Collapse the menu'"><span x-text="collapsed ? '»' : '«'" aria-hidden="true">«</span></button></div>
     </nav>
-    <main id="main" class="min-w-0">
-        <x-flash />
-        {{ $slot }}
-    </main>
+
+    {{-- Page --}}
+    <div class="min-w-0 flex-1">
+        <div class="flex items-center gap-2 border-b border-[#e5e5e5] bg-[#f5f5f5] px-5 py-3 text-[15px]">
+            <svg class="h-5 w-5 text-[#555]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ $icons['home'] }}"/></svg>
+            <a class="text-[#428bb6] hover:underline" href="{{ route('partner.home') }}">Backend</a>
+            <span class="text-[#999]" aria-hidden="true">›</span>
+            <span>{{ $crumb ?? $title }}</span>
+        </div>
+        <main id="main" class="px-5 py-5 sm:px-8">
+            <x-flash />
+            {{ $slot }}
+        </main>
+    </div>
 </div>
+
+<footer class="border-t border-[#e5e5e5] py-5 text-center text-[15px]">
+    <strong class="text-[#428bb6]">{{ config('sas.brand.short') }}</strong> Scholarships Application Services &copy; {{ date('Y') }} Customer Service: <a class="hover:underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a>
+</footer>
 @livewireScripts
 </body>
 </html>

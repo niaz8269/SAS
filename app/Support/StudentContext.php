@@ -19,10 +19,10 @@ class StudentContext
         return $this->agent !== null;
     }
 
-    /** The layout component for this context. */
+    /** The page shell for the application pages: the same for a student and for an agent working on a student's application. */
     public function layout(): string
     {
-        return $this->isAgent() ? 'layouts.partner' : 'layouts.student';
+        return 'layouts.applicant';
     }
 
     /** A link to a page of the application flow, for the student or for the agent working on that student. */

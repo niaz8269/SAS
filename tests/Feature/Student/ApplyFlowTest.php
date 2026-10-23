@@ -80,7 +80,7 @@ class ApplyFlowTest extends TestCase
         $this->post(route('student.applications.store'), ['cycle_id' => $chevening->id])->assertRedirect();
         $plan = $student->applicationPlans()->firstOrFail();
         $this->get(route('student.applications.materials', $plan))->assertOk()
-            ->assertSee('Upload materials')->assertSee('Two reference letters from your referees.')->assertSee('Pre-admission letter');
+            ->assertSee('Upload Materials')->assertSee('Two reference letters from your referees.')->assertSee('Pre-admission letter');
         $this->get(route('student.choose.index'))->assertSee('Open application');
     }
 
@@ -231,3 +231,4 @@ class ApplyFlowTest extends TestCase
         $this->get(route('student.choose.index', ['show_closed' => 1]))->assertSee('Closed Award');
     }
 }
+

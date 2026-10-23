@@ -79,6 +79,11 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
         return $this->isAgent() && $student->managed_by_organisation_id !== null && $student->managed_by_organisation_id === $this->partner_organisation_id;
     }
 
+    public function applicationForm(): HasOne
+    {
+        return $this->hasOne(ApplicationForm::class);
+    }
+
     public function applicationPlans(): HasMany
     {
         return $this->hasMany(ApplicationPlan::class);

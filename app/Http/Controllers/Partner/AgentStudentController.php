@@ -17,11 +17,13 @@ class AgentStudentController extends Controller
     {
         $org = $request->user()->partnerOrganisation;
         $q = trim((string) $request->query('q', ''));
-        $students = $org->students()->withCount('applicationPlans')
+        $perPage = in_array((int) $request->query('per_page'), [10, 25, 50, 100], true) ? (int) $request->query('per_page') : 25;
+        [$sort, $dir] = [in_array($request->query('sort'), ['id', 'name', 'email'], true) ? $request->query('sort') : 'id', $request->query('dir') === 'asc' ? 'asc' : 'desc'];
+        $students = $org->students()->withCount('applicationPlans')->with('applicationForm')
             ->when($q !== '', fn ($query) => $query->where(fn ($w) => $w->where('name', 'like', '%'.$q.'%')->orWhere('email', 'like', '%'.$q.'%')))
-            ->orderByDesc('id')->paginate(25)->withQueryString();
+            ->orderBy($sort, $dir)->paginate($perPage)->withQueryString();
 
-        return view('partner.agent.students.index', ['organisation' => $org, 'students' => $students, 'q' => $q]);
+        return view('partner.agent.students.index', ['organisation' => $org, 'students' => $students, 'q' => $q, 'perPage' => $perPage, 'sort' => $sort, 'dir' => $dir]);
     }
 
     public function create(AgentStudents $agents)
