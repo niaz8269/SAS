@@ -34,6 +34,7 @@ class CycleDetailsTest extends TestCase
         $this->assertSame('Not announced', explode(',', $m->display())[0]);
         $this->assertSame('Depends on your country or route', (new CycleMilestone(['date_type' => 'route_dependent']))->display());
         $this->assertSame('Not announced yet', (new CycleMilestone(['date_type' => 'not_announced']))->display());
+        $this->assertSame('mid-October 2026 to January 2027', (new CycleMilestone(['date_type' => 'range', 'starts_on' => '2026-10-15', 'ends_on' => '2027-01-31', 'time_text' => 'mid-October 2026 to January 2027']))->display());
         $this->assertSame('31 October 2026, 11:59pm UK time', (new CycleMilestone(['date_type' => 'exact', 'starts_on' => '2026-10-31', 'time_text' => '11:59pm UK time']))->display());
     }
 

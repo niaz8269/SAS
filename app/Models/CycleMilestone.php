@@ -30,6 +30,12 @@ class CycleMilestone extends Model
         $fmt = fn (?CarbonImmutable $d, string $f) => $d?->format($f);
         $time = $this->time_text ? ', '.$this->time_text : '';
 
+        // Month and range entries show the source's own phrase when there is one (for example "mid-October 2026 to January 2027"),
+        // so no day is implied that the source did not give.
+        if (in_array($this->date_type, ['month', 'range'], true) && filled($this->time_text)) {
+            return $this->time_text;
+        }
+
         return match ($this->date_type) {
             'exact', 'date_only' => ($this->starts_on ? $fmt($this->starts_on->toImmutable(), 'j F Y') : 'Not announced').$time,
             'month' => $this->starts_on ? $fmt($this->starts_on->toImmutable(), 'F Y') : 'Not announced',

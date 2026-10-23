@@ -124,7 +124,7 @@
                 @if ($unis->isEmpty() && ! $cycle->institutions_note)<p class="mt-3 text-sm text-muted">Participating universities: not confirmed.</p>@endif
                 <h3 class="mt-5 font-semibold">Programmes offered</h3>
                 @if ($cycle->programmes_note)<p class="mt-2 text-sm whitespace-pre-line">{{ $cycle->programmes_note }}</p>@else<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
-                @if ($cycle->destinations->contains('code', 'CN') && $unis->isNotEmpty())
+                @if (str_contains($programme->title, 'Chinese Government Scholarship') || str_contains((string) $programme->funder?->name, 'China Scholarship Council'))
                     <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('programmes.index', ['csc' => 1]) }}">Browse programmes listed as open to Chinese Government Scholarship applicants</a></p>
                 @endif
             </section>
