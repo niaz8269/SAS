@@ -85,9 +85,9 @@
 
     /* Hero: exactly one screen tall below the header (never taller than the viewport on laptops and monitors); text sizes follow both width and height. */
     .hero { min-height: calc(100svh - 5.5rem); display: flex; align-items: center; }
-    .hero-inner { padding-block: clamp(2rem, 6vh, 6rem); }
-    .hero-title { font-size: clamp(2rem, min(7.2vw, 8.4vh + 0.5rem), 4.75rem); line-height: 1.06; }
-    .hero-lead { font-size: clamp(1rem, min(2.4vw, 2.6vh + 0.35rem), 1.35rem); }
+    .hero-inner { padding-block: clamp(1.5rem, 4vh, 4rem); }
+    .hero-title { font-size: clamp(2rem, min(7vw, 6.6vh + 0.5rem), 4.75rem); line-height: 1.06; }
+    .hero-lead { font-size: clamp(1rem, min(2.4vw, 2.2vh + 0.35rem), 1.35rem); }
 
     .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-navy-600; }
     .section-title { @apply font-extrabold; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1.2; }

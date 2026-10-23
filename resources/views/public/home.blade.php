@@ -18,27 +18,14 @@
             <h1 class="hero-title mt-[clamp(0.75rem,2.5vh,1.5rem)] max-w-5xl font-extrabold text-white [text-shadow:0_2px_24px_rgba(10,34,80,0.55)]">{!! nl2br(e($s->heading)) !!}</h1>
             <div class="mt-[clamp(0.75rem,2.5vh,1.5rem)] h-1 w-24 rounded-full bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></div>
             @if ($s->body)<p class="hero-lead mt-[clamp(0.75rem,2.5vh,1.5rem)] max-w-2xl leading-relaxed text-white/85">{{ $s->body }}</p>@endif
-            <div class="mt-[clamp(1rem,4vh,2.25rem)] flex flex-wrap justify-center gap-3">
+            <div class="mt-[clamp(0.75rem,3vh,2rem)] flex flex-wrap justify-center gap-3">
                 @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="btn-gold btn-lg rounded-lg shadow-lg shadow-black/20">{{ $s->cta_label }} <span aria-hidden="true">&rarr;</span></a>@endif
                 @if ($s->cta2_label)<a href="{{ $href($s->cta2_url) }}" class="btn btn-lg rounded-lg border border-white/70 bg-white/10 text-white backdrop-blur transition hover:bg-white hover:text-navy-900">{{ $s->cta2_label }}</a>@endif
             </div>
-            @if (! empty($s->items))
-            <ul class="mt-[clamp(1.25rem,5vh,3rem)] grid w-full max-w-4xl grid-cols-3 gap-2 border-t border-white/20 pt-[clamp(0.75rem,3vh,2rem)] text-xs sm:gap-6 sm:text-sm [@media(max-height:700px)]:hidden">
-                @foreach ($s->items as $item)
-                    <li class="flex flex-col items-center gap-2">
-                        <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-bold text-navy-900" aria-hidden="true">{{ $loop->iteration }}</span>
-                        <span><strong class="text-white">{{ $item['title'] ?? '' }}</strong><span class="hidden sm:inline"><br><span class="text-white/75">{{ $item['text'] ?? '' }}</span></span></span>
-                    </li>
-                @endforeach
-            </ul>
-            @endif
-        </div>
-    </section>
-    <section class="relative z-10 -mt-12 bg-gradient-to-b from-transparent to-ivory">
-        <div class="container-page relative pb-10">            <form method="GET" action="{{ route('scholarships.index') }}" class="card border-gold/30 p-5 shadow-xl shadow-navy-900/10 sm:p-6" role="search" aria-labelledby="hero-search">
-                <div class="mb-4 flex flex-wrap items-center justify-between gap-2">
-                    <h2 id="hero-search" class="text-lg font-bold">{{ $s->subheading ?: 'Search scholarships' }}</h2>
-                    <p class="text-sm text-muted">Find the right opportunities for your goals.</p>
+            <form method="GET" action="{{ route('scholarships.index') }}" class="mt-[clamp(1rem,4vh,2.5rem)] w-full max-w-5xl rounded-2xl border border-white/30 bg-white/95 p-4 text-left shadow-2xl shadow-navy-900/30 backdrop-blur sm:p-5" role="search" aria-labelledby="hero-search">
+                <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
+                    <h2 id="hero-search" class="text-base font-bold sm:text-lg">{{ $s->subheading ?: 'Search scholarships' }}</h2>
+                    <p class="hidden text-sm text-muted sm:block">Find the right opportunities for your goals.</p>
                 </div>
                 <div class="grid gap-3 md:grid-cols-[1fr_1fr_1fr_auto] md:items-end">
                     <div><label for="h-dest" class="label">Destination</label>
@@ -52,7 +39,18 @@
             </form>
         </div>
     </section>
-    @break
+    @if (! empty($s->items))
+    <section class="container-page py-8" aria-label="How it works">
+        <ul class="grid gap-5 sm:grid-cols-3">
+            @foreach ($s->items as $item)
+                <li class="flex items-start gap-3">
+                    <span class="mt-0.5 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-navy-700 text-sm font-bold text-white" aria-hidden="true">{{ $loop->iteration }}</span>
+                    <span class="text-sm"><strong class="text-navy-900">{{ $item['title'] ?? '' }}</strong><br><span class="text-muted">{{ $item['text'] ?? '' }}</span></span>
+                </li>
+            @endforeach
+        </ul>
+    </section>
+    @endif    @break
 
 @case('degrees')
     @if ($degrees->isNotEmpty())
