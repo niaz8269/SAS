@@ -20,6 +20,10 @@
         </div>
     @endif
 
+    <p class="mt-4 text-sm">Your personal answers are filled in once for every scholarship: your <a class="text-navy-700 underline" href="{{ route('student.form.show') }}">application form</a> is {{ $formPercent }}% complete.</p>
+
+    @include('student._document-checklist', ['rows' => $rows, 'docProgress' => $docProgress, 'levels' => $levels, 'levelId' => $levelId, 'levelAction' => route('student.applications.level.update', $plan)])
+
     <div class="mt-5 grid gap-6 lg:grid-cols-[1fr_340px]">
         <div class="space-y-6">
             <section class="card p-5" aria-labelledby="tasks">

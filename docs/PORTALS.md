@@ -11,6 +11,13 @@ Staff accounts must use an authenticator app. The demo staff accounts all share 
 | Partner area | `/partner` | people at a partner university, funder or agent | `demo-partner_manager@example.test` |
 | Admin panel | `/admin` | all staff (what each sees depends on the role) | see below |
 
+## The student journey
+1. **Register and verify the email.** A newly verified student lands on the **Application form** and fills it in once (personal, contact, emergency contact, education, language, study plan, family, declaration).
+2. **Choose scholarships** (`/student/choose-scholarships`): search by name or degree level (closed calls hidden unless asked) and press **Apply for this**. This creates the student's application (plan) for that scholarship.
+3. **See the documents that scholarship needs.** The application page lists the mandatory documents first, then the other documents the scholarship mentions, each with its note and an "Official source" link, and an upload button. Documents the scholarship does not ask for are in a collapsed "Other documents you can add" section. The list follows the admin's rules for that scholarship and the degree level the student picks (a scholarship with a single level needs no choice).
+4. **Upload each document once.** An uploaded document counts for every scholarship that asks for that type, so a passport is not uploaded twice. Personal answers are never retyped.
+The dashboard shows these three steps ("Getting started") and, per application, how many mandatory documents are provided. When SAS opens a case for the same scholarship, the case uses the same degree level and document list.
+
 ## Student workspace
 Dashboard, saved scholarships, application plans (private checklists), **cases and fees** (the applications SAS supports for the student, their status and what they owe), documents, profile, enquiries, notifications, two-step security and privacy (export or delete data).
 

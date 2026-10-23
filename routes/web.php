@@ -98,6 +98,7 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::get('/profile', [Student\ProfileController::class, 'edit'])->name('profile.edit');
     Route::put('/profile', [Student\ProfileController::class, 'update'])->name('profile.update');
 
+    Route::get('/choose-scholarships', [Student\ScholarshipPickerController::class, 'index'])->name('choose.index');
     Route::get('/application-form', [Student\ApplicationFormController::class, 'show'])->name('form.show');
     Route::post('/application-form/declaration', [Student\ApplicationFormController::class, 'declare'])->name('form.declare');
     Route::put('/application-form/{section}', [Student\ApplicationFormController::class, 'update'])->where('section', '[a-z_]+')->name('form.update');
@@ -116,6 +117,7 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::post('/applications', [Student\ApplicationController::class, 'store'])->name('applications.store');
     Route::get('/applications/{plan:public_id}', [Student\ApplicationController::class, 'show'])->name('applications.show');
     Route::patch('/applications/{plan:public_id}', [Student\ApplicationController::class, 'update'])->name('applications.update');
+    Route::put('/applications/{plan:public_id}/degree-level', [Student\ApplicationController::class, 'level'])->name('applications.level.update');
     Route::delete('/applications/{plan:public_id}', [Student\ApplicationController::class, 'destroy'])->name('applications.destroy');
     Route::post('/applications/{plan:public_id}/acknowledge', [Student\ApplicationController::class, 'acknowledge'])->name('applications.acknowledge');
     Route::post('/applications/{plan:public_id}/tasks', [Student\ApplicationController::class, 'storeTask'])->name('applications.tasks.store');

@@ -32,7 +32,8 @@ class CaseService
         return DB::transaction(function () use ($student, $cycle, $advisor, $attrs, $actor) {
             $title = trim((string) ($attrs['title'] ?? '')) ?: ($cycle ? 'Application: '.$cycle->programme->title : 'Scholarship application');
             $case = new ServiceCase(['title' => $title, 'internal_note' => $attrs['internal_note'] ?? null, 'cycle_id' => $cycle?->id]);
-            $case->forceFill(['user_id' => $student->id, 'advisor_id' => $advisor?->id, 'status' => 'new'])->save();
+            $planLevel = $cycle ? $student->applicationPlans()->where('cycle_id', $cycle->id)->value('degree_level_id') : null; // keep the level the student already chose
+            $case->forceFill(['user_id' => $student->id, 'advisor_id' => $advisor?->id, 'status' => 'new', 'degree_level_id' => $planLevel])->save();
             $this->issue($case, 'application_fee', 'Application fee: '.$title, (int) config('sas.fees.application') * 100);
             AuditLog::record('case.opened', $case, null, ['student' => $student->id, 'advisor' => $advisor?->id], null, $actor);
             $this->notifier->tell($case, 'SAS opened a case for your application: '.$title.'. The application fee of '.config('sas.fees.currency').config('sas.fees.application').' is shown under Cases and fees, with how to pay.');

@@ -19,7 +19,8 @@ class EmailVerificationController extends Controller
     {
         $request->fulfill();
 
-        return redirect()->route('student.dashboard')->with('status', 'Email verified. Welcome to '.config('sas.brand.short').'.');
+        // A new student starts by filling in their application form once; every scholarship they choose uses it.
+        return redirect()->route('student.form.show')->with('status', 'Email verified. Welcome to '.config('sas.brand.short').'. Start by filling in your application form: you only do this once.');
     }
 
     public function send(Request $request)

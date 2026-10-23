@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Student;
 
+use App\Domain\Applications\ApplicationFormService;
+use App\Domain\Documents\Requirements;
 use App\Domain\StudentWorkspace\PlanService;
 use App\Enums\PlanStatus;
 use App\Http\Controllers\Controller;
 use App\Models\ApplicationPlan;
 use App\Models\ApplicationTask;
+use App\Models\DegreeLevel;
 use App\Models\Document;
 use App\Models\DocumentAssociation;
 use App\Models\ScholarshipCycle;
@@ -31,15 +34,28 @@ class ApplicationController extends Controller
         $cycle = ScholarshipCycle::visible()->findOrFail($data['cycle_id']);
         $plan = $plans->create($request->user(), $cycle);
 
-        return redirect()->route('student.applications.show', $plan)->with('status', 'Your private checklist is ready. Nothing has been submitted anywhere.');
+        return redirect()->route('student.applications.show', $plan)->with('status', 'Added to your applications. The documents this scholarship needs are listed below. Nothing has been submitted anywhere.');
     }
 
-    public function show(Request $request, ApplicationPlan $plan, PlanService $plans)
+    public function level(Request $request, ApplicationPlan $plan)
+    {
+        $this->authorize('update', $plan);
+        $data = $request->validate(['degree_level_id' => ['nullable', 'integer', 'exists:degree_levels,id']]);
+        $plan->update(['degree_level_id' => $data['degree_level_id'] ?? null]);
+
+        return redirect()->to(route('student.applications.show', $plan).'#checklist')->with('status', 'Degree level saved. The document list follows it.');
+    }
+
+    public function show(Request $request, ApplicationPlan $plan, PlanService $plans, Requirements $requirements, ApplicationFormService $forms)
     {
         $this->authorize('view', $plan); // 403 for another user's plan id (UAT-07)
-        $plan->load(['cycle.programme', 'cycle.currentDeadlines', 'cycle.routes', 'tasks']);
+        $plan->load(['cycle.programme', 'cycle.currentDeadlines', 'cycle.routes', 'cycle.degreeLevels', 'tasks']);
+        $rows = $requirements->forScholarship($plan->cycle, $plan->degree_level_id, $request->user()->id);
 
         return view('student.applications.show', [
+            'formPercent' => $forms->percent($forms->formFor($request->user())),
+            'rows' => $rows, 'docProgress' => $requirements->progress($rows), 'levelId' => $requirements->effectiveLevel($plan->cycle, $plan->degree_level_id),
+            'levels' => $plan->cycle->degreeLevels->isNotEmpty() ? $plan->cycle->degreeLevels : DegreeLevel::orderBy('sort')->get(),
             'plan' => $plan, 'progress' => $plans->progress($plan), 'changed' => $plans->requirementsChanged($plan),
             'case' => ServiceCase::where('user_id', $request->user()->id)->where('cycle_id', $plan->cycle_id)->latest('id')->first(),
             'documents' => $request->user()->documents()->with('currentVersion')->get(),

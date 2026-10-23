@@ -40,7 +40,7 @@ class CaseController extends Controller
             'consent' => self::CONSENT,
             'formConsent' => self::FORM_CONSENT,
             'formPercent' => $forms->percent($forms->formFor($user)),
-            'rows' => $rows, 'docProgress' => $requirements->progress($rows),
+            'rows' => $rows, 'docProgress' => $requirements->progress($rows), 'levelId' => $requirements->effectiveLevel($case->cycle, $case->degree_level_id),
             'levels' => $case->cycle ? ($case->cycle->degreeLevels->isNotEmpty() ? $case->cycle->degreeLevels : DegreeLevel::orderBy('sort')->get()) : DegreeLevel::orderBy('sort')->get(),
         ]);
     }

@@ -54,42 +54,7 @@
         </form>
     </section>
 
-    <section id="checklist" class="card mt-5 p-5" aria-labelledby="check-h">
-        <h2 id="check-h" class="font-bold">Documents needed</h2>
-        <form method="POST" action="{{ route('student.cases.level.update', $case) }}" class="mt-2 flex flex-wrap items-end gap-2">
-            @csrf @method('PUT')
-            <div><label for="level" class="label">Degree level you are applying for</label>
-                <select id="level" name="degree_level_id" class="input"><option value="">Not chosen yet</option>@foreach ($levels as $l)<option value="{{ $l->id }}" @selected($case->degree_level_id === $l->id)>{{ $l->name }}</option>@endforeach</select></div>
-            <button class="btn-outline">Save level</button>
-        </form>
-        <p class="mt-3 text-sm {{ $docProgress['missing'] ? '' : 'text-muted' }}">
-            @if ($docProgress['required'] === 0) No document is mandatory for this application.
-            @elseif ($docProgress['missing']) <strong>{{ $docProgress['ready'] }} of {{ $docProgress['required'] }}</strong> mandatory documents provided. Missing: {{ implode(', ', $docProgress['missing']) }}.
-            @else All {{ $docProgress['required'] }} mandatory documents are provided. @endif
-        </p>
-        <p class="mt-1 text-xs text-muted">Files are stored privately and scanned for malware first. Uploading here is the same as uploading in your document vault. Use clear scans of the originals.</p>
-        @if ($errors->has('file') || $errors->has('type'))<p class="mt-3 text-sm text-alert" role="alert">{{ $errors->first('file') ?: $errors->first('type') }}</p>@endif
-        <ul class="mt-3 divide-y divide-line">
-            @foreach ($rows as $r)
-                <li class="py-3">
-                    <div class="flex flex-wrap items-start justify-between gap-2">
-                        <div><p class="font-medium">{{ $r['kind']->name }}
-                                <span class="{{ $r['requirement'] === 'required' ? 'badge-warn' : 'badge-neutral' }}">{{ $r['requirement'] === 'required' ? 'Mandatory' : 'Optional' }}</span></p>
-                            @if ($r['kind']->description)<p class="text-xs text-muted">{{ $r['kind']->description }}</p>@endif
-                            @if ($r['note'])<p class="text-xs text-muted">{{ $r['note'] }}@if ($r['source'] && str_starts_with($r['source'], 'https://')) <a class="text-navy-700 underline" rel="noopener" href="{{ $r['source'] }}">Official source</a>@endif</p>@endif</div>
-                        <span class="{{ match ($r['state']) { 'ready' => 'badge-green', 'scanning' => 'badge-warn', default => 'badge-neutral' } }}">{{ match ($r['state']) { 'ready' => 'Uploaded', 'scanning' => 'Being checked', default => 'Not uploaded' } }}</span>
-                    </div>
-                    @foreach ($r['documents'] as $d)<p class="mt-1 text-xs text-muted">{{ $d->title }}@if ($d->currentVersion) &middot; {{ $d->currentVersion->original_name }}@endif</p>@endforeach
-                    <form method="POST" action="{{ route('student.documents.store') }}" enctype="multipart/form-data" class="mt-2 flex flex-wrap items-end gap-2">
-                        @csrf
-                        <input type="hidden" name="type" value="{{ $r['kind']->key }}"><input type="hidden" name="title" value="{{ $r['kind']->name }}"><input type="hidden" name="acknowledge" value="1">
-                        <div><label for="up-{{ $r['kind']->key }}" class="sr-only">Upload {{ $r['kind']->name }}</label><input id="up-{{ $r['kind']->key }}" type="file" name="file" required accept=".pdf,.docx,.jpg,.jpeg,.png" class="input !py-1.5 text-xs"></div>
-                        <button class="btn-outline !py-1.5">{{ $r['documents']->isEmpty() ? 'Upload' : 'Upload another' }}</button>
-                    </form>
-                </li>
-            @endforeach
-        </ul>
-    </section>
+    @include('student._document-checklist', ['rows' => $rows, 'docProgress' => $docProgress, 'levels' => $levels, 'levelId' => $levelId, 'levelAction' => route('student.cases.level.update', $case)])
 
     <section id="messages" class="card mt-5 p-5" aria-labelledby="msg-h">
         <h2 id="msg-h" class="font-bold">Messages with your counsellor</h2>

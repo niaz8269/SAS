@@ -36,6 +36,14 @@ class DocumentRule extends Model
         return $this->belongsTo(DegreeLevel::class, 'degree_level_id');
     }
 
+    /** The wording used when the official pages do not mention a document: such a rule only overrides the default. */
+    public const NOT_LISTED = 'Not listed in the official requirements.';
+
+    public function isNotListed(): bool
+    {
+        return str_starts_with((string) $this->note, self::NOT_LISTED);
+    }
+
     /** How specific the rule is; higher wins. */
     public function specificity(): int
     {

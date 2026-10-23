@@ -2,6 +2,25 @@
     <h1 class="text-2xl font-extrabold">Welcome, {{ \Illuminate\Support\Str::before($user->name, ' ') }}</h1>
     <p class="mt-1 text-sm text-muted">Your private workspace: plan each application, keep your documents and track what is done.</p>
 
+    @php($started = [
+        [1, 'Fill in your application form', $formPercent >= 100, $formPercent.'% complete. You do this once for every scholarship.', route('student.form.show'), $formPercent >= 100 ? 'Review' : 'Fill in'],
+        [2, 'Choose the scholarships you want', $plans->isNotEmpty(), $plans->count().' chosen', route('student.choose.index'), 'Choose'],
+        [3, 'Upload the documents each one needs', $plans->isNotEmpty() && $docsMissing === 0, $plans->isEmpty() ? 'Choose a scholarship first' : ($docsMissing === 0 ? 'All mandatory documents provided' : $docsMissing.' mandatory documents still missing'), route('student.applications.index'), 'Open'],
+    ])
+    @if (collect($started)->contains(fn ($s) => ! $s[2]))
+        <section class="card mt-5 p-5" aria-labelledby="gs"><h2 id="gs" class="text-lg font-bold">Getting started</h2>
+            <ol class="mt-3 space-y-3">
+                @foreach ($started as [$n, $label, $done, $detail, $url, $cta])
+                    <li class="flex flex-wrap items-center justify-between gap-2">
+                        <div class="flex items-start gap-3"><span class="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold {{ $done ? 'bg-navy-700 text-white' : 'border border-slate-400' }}" aria-hidden="true">{{ $done ? "✓" : $n }}</span>
+                            <div><p class="font-medium">{{ $label }}@if ($done) <span class="sr-only">(done)</span>@endif</p><p class="text-xs text-muted">{{ $detail }}</p></div></div>
+                        <a class="{{ $done ? 'btn-outline' : 'btn-primary' }} !py-1.5" href="{{ $url }}">{{ $cta }}</a>
+                    </li>
+                @endforeach
+            </ol>
+        </section>
+    @endif
+
     <div class="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <a href="{{ route('student.saved.index') }}" class="card p-4 hover:border-navy-500"><p class="text-3xl font-extrabold">{{ $savedCount }}</p><p class="text-sm text-muted">Saved scholarships</p></a>
         <a href="{{ route('student.applications.index') }}" class="card p-4 hover:border-navy-500"><p class="text-3xl font-extrabold">{{ $plans->count() }}</p><p class="text-sm text-muted">Application plans</p></a>
@@ -48,7 +67,7 @@
 
         <section class="card p-5" aria-labelledby="pl"><h2 id="pl" class="text-lg font-bold">Application plans</h2>
             @forelse ($plans->take(5) as $p)
-                <a class="mt-3 flex items-center justify-between gap-2 border-t border-line pt-3 first:border-0 first:pt-0 hover:underline" href="{{ route('student.applications.show', $p) }}"><span>{{ $p->cycle->label() }}</span><span class="badge-neutral">{{ $p->status->label() }}</span></a>
+                <a class="mt-3 flex items-center justify-between gap-2 border-t border-line pt-3 first:border-0 first:pt-0 hover:underline" href="{{ route('student.applications.show', $p) }}"><span>{{ $p->cycle->label() }}@if ($docs[$p->id]['required']) <span class="block text-xs text-muted">{{ $docs[$p->id]['ready'] }} of {{ $docs[$p->id]['required'] }} mandatory documents</span>@endif</span><span class="badge-neutral">{{ $p->status->label() }}</span></a>
             @empty
                 <p class="mt-2 text-sm text-muted">No plans yet. Open a scholarship and choose “Track this application”.</p>
             @endforelse

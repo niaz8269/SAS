@@ -5,6 +5,7 @@ namespace App\Domain\Documents;
 use App\Enums\ScanStatus;
 use App\Models\Document;
 use App\Models\DocumentKind;
+use App\Models\ScholarshipCycle;
 use App\Models\ServiceCase;
 use Illuminate\Support\Collection;
 
@@ -20,9 +21,15 @@ class Requirements
      */
     public function forCase(ServiceCase $case, ?array $onlyDocumentIds = null): Collection
     {
-        $programmeId = $case->cycle?->programme_id;
-        $levelId = $case->degree_level_id;
-        $documents = Document::where('user_id', $case->user_id)->when($onlyDocumentIds !== null, fn ($q) => $q->whereIn('id', $onlyDocumentIds ?: [0]))
+        return $this->forScholarship($case->cycle, $case->degree_level_id, $case->user_id, $onlyDocumentIds);
+    }
+
+    /** The list for a student's application to a scholarship call (a plan or a case), whichever the student started. */
+    public function forScholarship(?ScholarshipCycle $cycle, ?int $levelId, int $userId, ?array $onlyDocumentIds = null): Collection
+    {
+        $programmeId = $cycle?->programme_id;
+        $levelId = $this->effectiveLevel($cycle, $levelId);
+        $documents = Document::where('user_id', $userId)->when($onlyDocumentIds !== null, fn ($q) => $q->whereIn('id', $onlyDocumentIds ?: [0]))
             ->with('currentVersion')->get()->groupBy('type'); // staff pass the shared ids: they see only what the student shared
 
         return DocumentKind::where('active', true)->with('rules')->orderBy('sort')->orderBy('name')->get()
@@ -37,11 +44,23 @@ class Requirements
                     'requirement' => $rule?->requirement ?? $kind->default_requirement,
                     'note' => $rule?->note,
                     'source' => $rule?->source_url,
+                    'ruled' => $rule !== null && ! $rule->isNotListed(), // the scholarship itself says something about this document
                     'documents' => $mine,
                     'state' => $this->state($mine),
                 ];
             })
             ->reject(fn ($row) => $row['requirement'] === 'not_needed')->values();
+    }
+
+    /** The chosen degree level, or the scholarship's only level when it offers just one. */
+    public function effectiveLevel(?ScholarshipCycle $cycle, ?int $levelId): ?int
+    {
+        if ($levelId || ! $cycle) {
+            return $levelId;
+        }
+        $levels = $cycle->degreeLevels;
+
+        return $levels->count() === 1 ? $levels->first()->id : null;
     }
 
     /** @return array{required:int,ready:int,missing:array<int,string>} Mandatory documents only; scanning counts as provided. */
