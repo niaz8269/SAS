@@ -217,26 +217,30 @@
             <div class="card p-5"><x-deadline :cycle="$cycle" /></div>
 
             <div class="card space-y-4 p-5">
-                <h2 class="text-lg font-bold">What would you like to do?</h2>
+                <h2 class="text-lg font-bold">Want to apply?</h2>
                 <div>
-                    <a href="{{ route('contact', ['category' => 'advisory', 'cycle' => $cycle->id]) }}" class="btn-primary w-full">Get application support</a>
-                    <p class="mt-1 text-xs text-muted">Ask our team about this call. We give advice and help with your documents; no guarantee of selection, admission or a visa.</p>
+                    @auth
+                        @if ($plan)
+                            <a href="{{ route('student.applications.show', $plan) }}" class="btn-primary w-full">See my documents for this scholarship</a>
+                            <p class="mt-1 text-xs text-muted">You already chose this scholarship.</p>
+                        @else
+                            <form method="POST" action="{{ route('student.applications.store') }}">@csrf<input type="hidden" name="cycle_id" value="{{ $cycle->id }}"><button class="btn-primary w-full">Apply for this scholarship</button></form>
+                            <p class="mt-1 text-xs text-muted">You will see the documents this scholarship needs. Nothing is sent to the funder yet.</p>
+                        @endif
+                    @else
+                        <a href="{{ route('register') }}" class="btn-primary w-full">Create a free account to apply</a>
+                        <p class="mt-1 text-xs text-muted">Already have one? <a class="text-navy-700 underline" href="{{ route('login') }}">Log in</a>. Creating an account does not send anything to the funder.</p>
+                    @endauth
                 </div>
                 <div>
-                    @if ($plan)
-                        <a href="{{ route('student.applications.show', $plan) }}" class="btn-outline w-full">Open my application plan</a>
-                    @else
-                        <form method="POST" action="{{ route('student.applications.store') }}">@csrf<input type="hidden" name="cycle_id" value="{{ $cycle->id }}"><button class="btn-outline w-full">Track this application</button></form>
-                    @endif
-                    <p class="mt-1 text-xs text-muted">Creates a private checklist in your workspace. It does not mean an application was submitted.</p>
+                    <a href="{{ route('contact', ['category' => 'advisory', 'cycle' => $cycle->id]) }}" class="btn-outline w-full">Ask our team a question</a>
+                    <p class="mt-1 text-xs text-muted">We give advice and help with your documents; no guarantee of selection, admission or a visa.</p>
                 </div>
                 @auth
                     <form method="POST" action="{{ $saved ? route('student.saved.destroy', $cycle) : route('student.saved.store') }}">
                         @csrf @if ($saved) @method('DELETE') @else <input type="hidden" name="cycle_id" value="{{ $cycle->id }}"> @endif
-                        <button class="btn-ghost w-full">{{ $saved ? 'Saved — click to remove' : 'Save scholarship' }}</button>
+                        <button class="btn-ghost w-full">{{ $saved ? 'Saved. Click to remove' : 'Save for later' }}</button>
                     </form>
-                @else
-                    <a href="{{ route('login') }}" class="btn-ghost w-full">Log in to save or track</a>
                 @endauth
             </div>
 

@@ -174,6 +174,12 @@ class ScholarshipCycle extends Model
         };
     }
 
+    /** The plain name students see: the scholarship's title, without the internal cycle key. */
+    public function displayName(): string
+    {
+        return $this->programme->title;
+    }
+
     public function label(): string
     {
         return trim($this->programme->title.' '.$this->cycle_key);

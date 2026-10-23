@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Student;
 
 use App\Domain\Applications\ApplicationFormService;
+use App\Domain\Cases\CaseService;
 use App\Domain\Documents\Requirements;
+use App\Domain\StudentWorkspace\ApplicationReview;
 use App\Domain\StudentWorkspace\PlanService;
 use App\Enums\PlanStatus;
 use App\Http\Controllers\Controller;
@@ -19,13 +21,13 @@ use Illuminate\Validation\Rule;
 
 class ApplicationController extends Controller
 {
-    public function index(Request $request, PlanService $plans)
+    public function index(Request $request, Requirements $requirements)
     {
-        $list = $request->user()->applicationPlans()->with(['cycle.programme', 'cycle.currentDeadlines', 'tasks'])->latest()->get();
-
+        $list = $request->user()->applicationPlans()->with(['cycle.programme', 'cycle.degreeLevels'])->latest()->get();
+        $docs = $list->mapWithKeys(fn ($p) => [$p->id => $requirements->progress($requirements->forScholarship($p->cycle, $p->degree_level_id, $request->user()->id))]);
         $supported = ServiceCase::where('user_id', $request->user()->id)->whereIn('cycle_id', $list->pluck('cycle_id'))->get()->keyBy('cycle_id');
 
-        return view('student.applications.index', ['plans' => $list, 'service' => $plans, 'supported' => $supported]);
+        return view('student.applications.index', ['plans' => $list, 'docs' => $docs, 'supported' => $supported]);
     }
 
     public function store(Request $request, PlanService $plans)
@@ -37,13 +39,30 @@ class ApplicationController extends Controller
         return redirect()->route('student.applications.show', $plan)->with('status', 'Added to your applications. The documents this scholarship needs are listed below. Nothing has been submitted anywhere.');
     }
 
-    public function level(Request $request, ApplicationPlan $plan)
+    public function level(Request $request, ApplicationPlan $plan, CaseService $cases)
     {
         $this->authorize('update', $plan);
         $data = $request->validate(['degree_level_id' => ['nullable', 'integer', 'exists:degree_levels,id']]);
-        $plan->update(['degree_level_id' => $data['degree_level_id'] ?? null]);
+        $levelId = $data['degree_level_id'] ?? null;
+        $plan->update(['degree_level_id' => $levelId]);
+        foreach (ServiceCase::where('user_id', $plan->user_id)->where('cycle_id', $plan->cycle_id)->get() as $case) {
+            $cases->setDegreeLevel($case, $levelId, $request->user()); // a case SAS opened for this scholarship follows the student's choice
+        }
 
         return redirect()->to(route('student.applications.show', $plan).'#checklist')->with('status', 'Degree level saved. The document list follows it.');
+    }
+
+    /** "I am ready: please review my application." Goes to SAS staff as an enquiry; needs every mandatory document. */
+    public function requestReview(Request $request, ApplicationPlan $plan, ApplicationReview $review)
+    {
+        $this->authorize('update', $plan);
+        try {
+            $enquiry = $review->request($plan, $request->user());
+        } catch (\InvalidArgumentException $e) {
+            return back()->with('error', $e->getMessage());
+        }
+
+        return redirect()->route('student.applications.show', $plan)->with('status', 'Sent. SAS will review your application and contact you by email. Your reference is '.$enquiry->reference.'.');
     }
 
     public function show(Request $request, ApplicationPlan $plan, PlanService $plans, Requirements $requirements, ApplicationFormService $forms)

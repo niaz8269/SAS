@@ -3,6 +3,8 @@
 namespace App\Domain\Cases;
 
 use App\Domain\Editorial\AuditLog;
+use App\Domain\StudentWorkspace\PlanService;
+use App\Models\ApplicationPlan;
 use App\Models\CaseDocumentShare;
 use App\Models\CaseMessage;
 use App\Models\Document;
@@ -24,7 +26,7 @@ use InvalidArgumentException;
  */
 class CaseService
 {
-    public function __construct(private CaseNotifier $notifier) {}
+    public function __construct(private CaseNotifier $notifier, private PlanService $plans) {}
 
     /** @param array<string,mixed> $attrs title, internal_note */
     public function open(User $student, ?ScholarshipCycle $cycle, ?User $advisor, array $attrs, ?User $actor = null): ServiceCase
@@ -34,6 +36,7 @@ class CaseService
             $case = new ServiceCase(['title' => $title, 'internal_note' => $attrs['internal_note'] ?? null, 'cycle_id' => $cycle?->id]);
             $planLevel = $cycle ? $student->applicationPlans()->where('cycle_id', $cycle->id)->value('degree_level_id') : null; // keep the level the student already chose
             $case->forceFill(['user_id' => $student->id, 'advisor_id' => $advisor?->id, 'status' => 'new', 'degree_level_id' => $planLevel])->save();
+            $cycle && $this->plans->create($student, $cycle); // the student's own application page, where the documents are
             $this->issue($case, 'application_fee', 'Application fee: '.$title, (int) config('sas.fees.application') * 100);
             AuditLog::record('case.opened', $case, null, ['student' => $student->id, 'advisor' => $advisor?->id], null, $actor);
             $this->notifier->tell($case, 'SAS opened a case for your application: '.$title.'. The application fee of '.config('sas.fees.currency').config('sas.fees.application').' is shown under Cases and fees, with how to pay.');
@@ -162,6 +165,7 @@ class CaseService
     {
         $before = $case->degree_level_id;
         $case->forceFill(['degree_level_id' => $levelId])->save();
+        $case->cycle_id && ApplicationPlan::where('user_id', $case->user_id)->where('cycle_id', $case->cycle_id)->update(['degree_level_id' => $levelId]); // one level for the case and the student's application
         AuditLog::record('case.degree_level_set', $case, ['degree_level_id' => $before], ['degree_level_id' => $levelId], null, $actor);
     }
 

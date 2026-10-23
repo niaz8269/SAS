@@ -1,19 +1,23 @@
 @props(['title' => 'Student workspace'])
 @php
-    $items = [
-        ['Dashboard', route('student.dashboard'), 'student.dashboard'],
-        ['Application form', route('student.form.show'), 'student.form.*'],
-        ['Choose scholarships', route('student.choose.index'), 'student.choose.*'],
-        ['My applications', route('student.applications.index'), 'student.applications.*'],
+    $steps = [
+        ['1', 'Your details', route('student.form.show'), 'student.form.*'],
+        ['2', 'Choose scholarships', route('student.choose.index'), 'student.choose.*'],
+        ['3', 'Upload documents', route('student.applications.index'), 'student.applications.*'],
+    ];
+    $unread = auth()->user()->unreadNotifications()->count();
+    $hasCases = \App\Models\ServiceCase::where('user_id', auth()->id())->exists();
+    $more = [
+        ['My documents', route('student.documents.index'), 'student.documents.*'],
         ['Saved scholarships', route('student.saved.index'), 'student.saved.*'],
-        ['Cases and fees', route('student.cases.index'), 'student.cases.*'],
-        ['Documents',route('student.documents.index'), 'student.documents.*'],
+        ['Notifications'.($unread ? " ($unread)" : ''), route('student.notifications.index'), 'student.notifications.*'],
         ['Profile', route('student.profile.edit'), 'student.profile.*'],
         ['My enquiries', route('student.enquiries.index'), 'student.enquiries.*'],
-        ['Notifications', route('student.notifications.index'), 'student.notifications.*'],
         ['Security', route('student.security'), 'student.security'],
         ['Privacy and data', route('student.privacy'), 'student.privacy*'],
     ];
+    $moreOpen = collect($more)->contains(fn ($m) => request()->routeIs($m[2]));
+    $link = fn ($on) => 'block rounded-md border-l-4 px-3 py-2 font-medium transition hover:bg-navy-50 '.($on ? 'border-gold bg-navy-50 text-navy-900' : 'border-transparent text-ink');
 @endphp
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -52,12 +56,27 @@
 </header>
 <div class="container-page grid gap-6 py-6 lg:grid-cols-[220px_1fr]">
     <nav id="student-nav" aria-label="Student workspace" class="lg:sticky lg:top-24 lg:block lg:self-start" :class="nav ? 'block' : 'hidden'">
-        <ul class="card space-y-0.5 p-2 text-sm">
-            @foreach ($items as [$label, $url, $pattern])
-                <li><a href="{{ $url }}" @if(request()->routeIs($pattern)) aria-current="page" @endif
-                       class="block rounded-md border-l-4 px-3 py-2 font-medium transition hover:bg-navy-50 {{ request()->routeIs($pattern) ? 'border-gold bg-navy-50 text-navy-900' : 'border-transparent text-ink' }}">{{ $label }}</a></li>
-            @endforeach
-        </ul>
+        <div class="card p-2 text-sm">
+            <a href="{{ route('student.dashboard') }}" @if(request()->routeIs('student.dashboard')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.dashboard')) }}">Home</a>
+            <p class="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">How to apply</p>
+            <ol class="space-y-0.5">
+                @foreach ($steps as [$n, $label, $url, $pattern])
+                    <li><a href="{{ $url }}" @if(request()->routeIs($pattern)) aria-current="page" @endif class="{{ $link(request()->routeIs($pattern)) }}"><span class="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-navy-100 text-xs font-bold text-navy-800" aria-hidden="true">{{ $n }}</span>{{ $label }}</a></li>
+                @endforeach
+            </ol>
+            @if ($hasCases)
+                <p class="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">SAS help</p>
+                <a href="{{ route('student.cases.index') }}" @if(request()->routeIs('student.cases.*')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.cases.*')) }}">Messages and fees</a>
+            @endif
+            <details class="mt-3 border-t border-line pt-2" @if ($moreOpen) open @endif>
+                <summary class="cursor-pointer rounded-md px-3 py-2 text-xs font-semibold uppercase tracking-wide text-muted hover:bg-navy-50">My account @if ($unread)<span class="ml-1 rounded-full bg-gold px-1.5 text-navy-900">{{ $unread }}</span>@endif</summary>
+                <ul class="mt-1 space-y-0.5">
+                    @foreach ($more as [$label, $url, $pattern])
+                        <li><a href="{{ $url }}" @if(request()->routeIs($pattern)) aria-current="page" @endif class="{{ $link(request()->routeIs($pattern)) }}">{{ $label }}</a></li>
+                    @endforeach
+                </ul>
+            </details>
+        </div>
     </nav>
     <main id="main" class="min-w-0">
         <x-flash />

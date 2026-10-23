@@ -120,6 +120,19 @@ class ApplicationFormService
         return $missing;
     }
 
+    /** @return array<string,array{required:int,answered:int}> required answers per section, to show which sections still need work */
+    public function sectionProgress(ApplicationForm $form): array
+    {
+        $data = $form->data ?? [];
+        $out = [];
+        foreach ($this->sections() as $key => $section) {
+            $required = collect($section['fields'])->filter(fn ($d) => $d['required'] ?? false)->keys();
+            $out[$key] = ['required' => $required->count(), 'answered' => $required->filter(fn ($n) => filled($data[$n] ?? null))->count()];
+        }
+
+        return $out;
+    }
+
     public function percent(ApplicationForm $form): int
     {
         $total = collect($this->sections())->sum(fn ($s) => collect($s['fields'])->filter(fn ($d) => $d['required'] ?? false)->count()) + 1;

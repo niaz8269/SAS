@@ -1,25 +1,31 @@
-<x-layouts.student title="Application form">
-    <h1 class="text-2xl font-extrabold">Application form</h1>
-    <p class="mt-1 text-sm text-muted">Fill this in once. Scholarship applications use these answers, so you do not retype them for each one. The form follows the China Scholarship Council application form. Every answer is stored encrypted and is private to you. Your counsellor can read it only after you share it on a case.</p>
+<x-layouts.student title="Your details">
+    <p class="text-sm font-semibold uppercase tracking-wide text-navy-700">Step 1 of 3</p>
+    <h1 class="text-2xl font-extrabold">Your details</h1>
+    <p class="mt-1 text-sm text-muted">Fill this in <strong>once</strong>. Every scholarship you apply for uses these answers. Open a section, answer, and press Save. You can stop and come back at any time. Your answers are private and stored encrypted. Your counsellor sees them only if you share them.</p>
 
     <section class="card mt-5 p-5" aria-labelledby="done-h">
-        <h2 id="done-h" class="font-bold">{{ $percent }}% of the required answers are filled in</h2>
+        <h2 id="done-h" class="font-bold">{{ $percent }}% done</h2>
         <div class="mt-3 h-2 overflow-hidden rounded-full bg-ivory-deep" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ $percent }}" aria-label="Form progress"><div class="h-full bg-navy-600" style="width: {{ $percent }}%"></div></div>
         @if ($missing)
-            <p class="mt-3 text-sm text-muted">Still needed: {{ implode(', ', $missing) }}.</p>
+            <p class="mt-3 text-sm text-muted">Still to do: {{ collect($progress)->filter(fn ($p) => $p['answered'] < $p['required'])->keys()->map(fn ($k) => $sections[$k]['title'])->when(in_array('Declaration', $missing), fn ($c) => $c->push('Declaration'))->implode(', ') }}.</p>
         @else
-            <p class="mt-3 text-sm">Everything required is filled in.</p>
+            <p class="mt-3 text-sm">✓ Everything required is filled in.</p>
         @endif
-        <ul class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-sm">
-            @foreach ($sections as $key => $section)<li><a class="text-navy-700 underline" href="#{{ $key }}">{{ $section['title'] }}</a></li>@endforeach
-            <li><a class="text-navy-700 underline" href="#declaration">Declaration</a></li>
-        </ul>
+        @if ($percent >= 100)<a href="{{ route('student.choose.index') }}" class="btn-primary mt-3">Next: choose scholarships</a>@endif
     </section>
 
+    @php($firstTodo = collect($progress)->filter(fn ($p) => $p['answered'] < $p['required'])->keys()->first())
     @foreach ($sections as $key => $section)
-        <section id="{{ $key }}" class="card mt-5 p-5" aria-labelledby="{{ $key }}-h">
-            <h2 id="{{ $key }}-h" class="text-lg font-bold">{{ $section['title'] }}</h2>
-            <form method="POST" action="{{ route('student.form.update', $key) }}" class="mt-3">
+        @php($p = $progress[$key])
+        @php($isOpen = session('open') === $key || (! session('open') && $firstTodo === $key))
+        <details id="{{ $key }}" class="card mt-3 p-5" @if ($isOpen) open @endif>
+            <summary class="flex cursor-pointer flex-wrap items-center justify-between gap-2 text-lg font-bold">
+                <span>{{ $section['title'] }}</span>
+                @if ($p['required'] === 0)<span class="badge-neutral">Optional</span>
+                @elseif ($p['answered'] >= $p['required'])<span class="badge-green">✓ Done</span>
+                @else<span class="badge-warn">{{ $p['required'] - $p['answered'] }} to answer</span>@endif
+            </summary>
+            <form method="POST" action="{{ route('student.form.update', $key) }}" class="mt-4">
                 @csrf @method('PUT')
                 @if (isset($section['repeat']))
                     @php($rows = $form->value($key, []))
@@ -40,18 +46,18 @@
                         @endforeach
                     </div>
                 @endif
-                <button class="btn-primary mt-4">Save {{ \Illuminate\Support\Str::lower($section['title']) }}</button>
+                <button class="btn-primary mt-4">Save</button>
             </form>
-        </section>
+        </details>
     @endforeach
 
-    <section id="declaration" class="card mt-5 p-5" aria-labelledby="decl-h">
-        <h2 id="decl-h" class="text-lg font-bold">Declaration</h2>
-        <form method="POST" action="{{ route('student.form.declare') }}" class="mt-3">
+    <details id="declaration" class="card mt-3 p-5" @if (session('open') === 'declaration' || (! $firstTodo && ! $form->value('_declared_at'))) open @endif>
+        <summary class="flex cursor-pointer flex-wrap items-center justify-between gap-2 text-lg font-bold"><span>Declaration</span>@if ($form->value('_declared_at'))<span class="badge-green">✓ Done</span>@else<span class="badge-warn">To do</span>@endif</summary>
+        <form method="POST" action="{{ route('student.form.declare') }}" class="mt-4">
             @csrf
             <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="agreed" value="1" class="mt-0.5 rounded border-slate-300 text-navy-700" @checked($form->value('_declared_at'))> <span>{{ config('application_form.declaration') }}</span></label>
             @if ($form->value('_declared_at'))<p class="mt-2 text-xs text-muted">Recorded on {{ \Illuminate\Support\Carbon::parse($form->value('_declared_at'))->format('j M Y') }}. Untick and save to withdraw it.</p>@endif
             <button class="btn-primary mt-3">Save declaration</button>
         </form>
-    </section>
+    </details>
 </x-layouts.student>

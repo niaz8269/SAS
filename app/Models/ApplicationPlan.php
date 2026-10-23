@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 
 class ApplicationPlan extends Model
 {
-    protected $guarded = ['id', 'user_id'];
+    protected $guarded = ['id', 'user_id', 'review_requested_at', 'review_enquiry_id'];
 
     protected static function booted(): void
     {
@@ -25,6 +25,7 @@ class ApplicationPlan extends Model
             'status' => PlanStatus::class,
             'submitted_at' => 'datetime',
             'requirements_changed_at' => 'datetime',
+            'review_requested_at' => 'datetime',
         ];
     }
 
@@ -42,6 +43,16 @@ class ApplicationPlan extends Model
     public function cycle(): BelongsTo
     {
         return $this->belongsTo(ScholarshipCycle::class, 'cycle_id');
+    }
+
+    public function degreeLevel(): BelongsTo
+    {
+        return $this->belongsTo(DegreeLevel::class, 'degree_level_id');
+    }
+
+    public function reviewEnquiry(): BelongsTo
+    {
+        return $this->belongsTo(Enquiry::class, 'review_enquiry_id');
     }
 
     public function tasks(): HasMany

@@ -110,13 +110,13 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::get('/cases', [Student\CaseController::class, 'index'])->name('cases.index');
     Route::get('/cases/{case:public_id}', [Student\CaseController::class, 'show'])->name('cases.show');
     Route::post('/cases/{case:public_id}/messages', [Student\CaseController::class, 'message'])->middleware('throttle:enquiries')->name('cases.messages.store');
-    Route::put('/cases/{case:public_id}/degree-level', [Student\CaseController::class, 'level'])->name('cases.level.update');
     Route::put('/cases/{case:public_id}/form', [Student\CaseController::class, 'shareForm'])->name('cases.form.update');
     Route::put('/cases/{case:public_id}/documents', [Student\CaseController::class, 'share'])->name('cases.documents.update');
     Route::get('/applications', [Student\ApplicationController::class, 'index'])->name('applications.index');
     Route::post('/applications', [Student\ApplicationController::class, 'store'])->name('applications.store');
     Route::get('/applications/{plan:public_id}', [Student\ApplicationController::class, 'show'])->name('applications.show');
     Route::patch('/applications/{plan:public_id}', [Student\ApplicationController::class, 'update'])->name('applications.update');
+    Route::post('/applications/{plan:public_id}/request-review', [Student\ApplicationController::class, 'requestReview'])->middleware('throttle:enquiries')->name('applications.review');
     Route::put('/applications/{plan:public_id}/degree-level', [Student\ApplicationController::class, 'level'])->name('applications.level.update');
     Route::delete('/applications/{plan:public_id}', [Student\ApplicationController::class, 'destroy'])->name('applications.destroy');
     Route::post('/applications/{plan:public_id}/acknowledge', [Student\ApplicationController::class, 'acknowledge'])->name('applications.acknowledge');

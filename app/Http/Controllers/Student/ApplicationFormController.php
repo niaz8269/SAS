@@ -15,7 +15,7 @@ class ApplicationFormController extends Controller
         $form = $forms->formFor($request->user());
 
         return view('student.application-form', [
-            'form' => $form, 'sections' => $forms->sections(), 'missing' => $forms->missing($form), 'percent' => $forms->percent($form),
+            'form' => $form, 'sections' => $forms->sections(), 'progress' => $forms->sectionProgress($form), 'missing' => $forms->missing($form), 'percent' => $forms->percent($form),
             'countries' => Country::orderBy('name')->pluck('name'),
         ]);
     }
@@ -25,13 +25,15 @@ class ApplicationFormController extends Controller
         $forms->section($section); // 404 for an unknown section
         $forms->save($request->user(), $section, $request->validate($forms->rules($section)));
 
-        return redirect()->to(route('student.form.show').'#'.$section)->with('status', $forms->section($section)['title'].' saved.');
+        $next = collect($forms->sectionProgress($forms->formFor($request->user())))->filter(fn ($p) => $p['answered'] < $p['required'])->keys()->first();
+
+        return redirect()->to(route('student.form.show').'#'.($next ?? $section))->with('status', $forms->section($section)['title'].' saved.'.($next ? ' Next: '.$forms->section($next)['title'].'.' : ''))->with('open', $next ?? $section);
     }
 
     public function declare(Request $request, ApplicationFormService $forms)
     {
         $forms->declare($request->user(), $request->boolean('agreed'));
 
-        return redirect()->to(route('student.form.show').'#declaration')->with('status', $request->boolean('agreed') ? 'Declaration recorded.' : 'Declaration withdrawn.');
+        return redirect()->to(route('student.form.show').'#declaration')->with('status', $request->boolean('agreed') ? 'Declaration recorded.' : 'Declaration withdrawn.')->with('open', 'declaration');
     }
 }

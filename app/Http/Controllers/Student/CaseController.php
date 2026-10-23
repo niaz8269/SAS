@@ -6,7 +6,6 @@ use App\Domain\Applications\ApplicationFormService;
 use App\Domain\Cases\CaseService;
 use App\Domain\Documents\Requirements;
 use App\Http\Controllers\Controller;
-use App\Models\DegreeLevel;
 use App\Models\ServiceCase;
 use Illuminate\Http\Request;
 
@@ -29,29 +28,19 @@ class CaseController extends Controller
         $this->own($request, $case);
         $user = $request->user();
         $case->load(['cycle.degreeLevels', 'degreeLevel']);
-        $rows = $requirements->forCase($case);
+        $plan = $case->cycle_id ? $user->applicationPlans()->where('cycle_id', $case->cycle_id)->first() : null;
+        $docProgress = $plan ? $requirements->progress($requirements->forScholarship($case->cycle, $plan->degree_level_id ?? $case->degree_level_id, $user->id)) : null;
 
         return view('student.cases.show', [
             'case' => $case->load(['advisor', 'invoices', 'cycle.programme']),
             'messages' => $case->messages()->where('visibility', 'public')->with('author')->get(), // internal notes never reach the student
             'documents' => $user->documents()->with('currentVersion')->latest()->get(),
             'sharedIds' => $case->shares()->pluck('document_id')->all(),
-            'plan' => $case->cycle_id ? $user->applicationPlans()->where('cycle_id', $case->cycle_id)->first() : null,
+            'plan' => $plan, 'docProgress' => $docProgress,
             'consent' => self::CONSENT,
             'formConsent' => self::FORM_CONSENT,
             'formPercent' => $forms->percent($forms->formFor($user)),
-            'rows' => $rows, 'docProgress' => $requirements->progress($rows), 'levelId' => $requirements->effectiveLevel($case->cycle, $case->degree_level_id),
-            'levels' => $case->cycle ? ($case->cycle->degreeLevels->isNotEmpty() ? $case->cycle->degreeLevels : DegreeLevel::orderBy('sort')->get()) : DegreeLevel::orderBy('sort')->get(),
         ]);
-    }
-
-    public function level(Request $request, ServiceCase $case, CaseService $cases)
-    {
-        $this->own($request, $case);
-        $data = $request->validate(['degree_level_id' => ['nullable', 'integer', 'exists:degree_levels,id']]);
-        $cases->setDegreeLevel($case, $data['degree_level_id'] ?? null, $request->user());
-
-        return redirect()->route('student.cases.show', $case)->withFragment('checklist')->with('status', 'Degree level saved. The document list below follows it.');
     }
 
     public function shareForm(Request $request, ServiceCase $case, CaseService $cases)

@@ -1,10 +1,9 @@
 @php($cycle = $plan->cycle)
-<x-layouts.student :title="$cycle->label()">
-    <p class="text-sm"><a class="text-navy-700 underline" href="{{ route('student.applications.index') }}">&larr; All plans</a></p>
-    <h1 class="mt-1 text-2xl font-extrabold">{{ $cycle->label() }}</h1>
-    <p class="mt-1 text-sm text-muted">Private plan. Tracking here does not mean anything was submitted to the scholarship provider.
-        <a class="text-navy-700 underline" href="{{ route('scholarships.show', [$cycle->programme->slug, $cycle->slug]) }}">View public listing</a></p>
-
+<x-layouts.student :title="$cycle->displayName()">
+    <p class="text-sm"><a class="text-navy-700 underline" href="{{ route('student.applications.index') }}">&larr; My applications</a></p>
+    <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-navy-700">Step 3 of 3: upload documents</p>
+    <h1 class="text-2xl font-extrabold">{{ $cycle->displayName() }}</h1>
+    <p class="mt-1 text-sm text-muted"><a class="text-navy-700 underline" href="{{ route('scholarships.show', [$cycle->programme->slug, $cycle->slug]) }}">Read the scholarship details</a>. Nothing is sent to the scholarship provider from this page.</p>
     @if ($case)
         <div class="mt-4 rounded-md border border-navy-300 bg-navy-50 p-4 text-sm">
             <strong>SAS is supporting this application.</strong> Status: {{ $case->statusLabel() }}.
@@ -20,10 +19,32 @@
         </div>
     @endif
 
-    <p class="mt-4 text-sm">Your personal answers are filled in once for every scholarship: your <a class="text-navy-700 underline" href="{{ route('student.form.show') }}">application form</a> is {{ $formPercent }}% complete.</p>
+    @if ($formPercent < 100)
+        <div class="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gold/60 bg-gold-soft p-4 text-sm">
+            <p><strong>First, finish your details.</strong> They are {{ $formPercent }}% filled in. They are used for every scholarship you choose.</p>
+            <a class="btn-primary !py-1.5" href="{{ route('student.form.show') }}">Fill in my details</a>
+        </div>
+    @endif
 
     @include('student._document-checklist', ['rows' => $rows, 'docProgress' => $docProgress, 'levels' => $levels, 'levelId' => $levelId, 'levelAction' => route('student.applications.level.update', $plan)])
 
+    <section class="card mt-5 p-5" aria-labelledby="ready-h">
+        <h2 id="ready-h" class="font-bold">When your documents are ready</h2>
+        @if ($plan->review_requested_at)
+            <p class="mt-2 text-sm">You asked SAS to review this application on {{ $plan->review_requested_at->format('j M Y') }}. SAS will contact you by email. @if ($plan->reviewEnquiry)Your reference is {{ $plan->reviewEnquiry->reference }}.@endif</p>
+        @else
+            <p class="mt-1 text-sm text-muted">Upload the mandatory documents above, then ask SAS to review your application. This does not cost anything. SAS will tell you the next step.</p>
+            @if ($docProgress['missing'])
+                <button class="btn-primary mt-3 cursor-not-allowed opacity-50" disabled aria-describedby="why-wait">Ask SAS to review my application</button>
+                <p id="why-wait" class="mt-2 text-xs text-muted">Available after you upload: {{ implode(', ', $docProgress['missing']) }}.</p>
+            @else
+                <form method="POST" action="{{ route('student.applications.review', $plan) }}" class="mt-3">@csrf<button class="btn-primary">Ask SAS to review my application</button></form>
+            @endif
+        @endif
+    </section>
+
+    <details class="mt-6">
+        <summary class="cursor-pointer text-sm font-medium text-navy-700">More tools for this application (checklist, deadline, status, notes) <span class="text-muted">&middot; optional</span></summary>
     <div class="mt-5 grid gap-6 lg:grid-cols-[1fr_340px]">
         <div class="space-y-6">
             <section class="card p-5" aria-labelledby="tasks">
@@ -95,4 +116,5 @@
             <form method="POST" action="{{ route('student.applications.destroy', $plan) }}" onsubmit="return confirm('Delete this plan and its checklist? This cannot be undone.')">@csrf @method('DELETE')<button class="btn-danger w-full">Delete plan</button></form>
         </aside>
     </div>
+    </details>
 </x-layouts.student>

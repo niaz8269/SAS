@@ -195,20 +195,21 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
         $this->assertSame(100, $service->percent($form));
     }
 
-    public function test_the_case_page_shows_the_checklist_and_the_student_chooses_level_and_form_sharing(): void
+    public function test_the_case_page_links_to_the_documents_and_the_level_follows_the_students_application(): void
     {
         $level = DegreeLevel::factory()->create(['name' => 'Master']);
         $cycle = ScholarshipCycle::factory()->published()->create();
         $student = User::factory()->create();
         $case = app(CaseService::class)->open($student, $cycle, null, []);
+        $plan = $student->applicationPlans()->where('cycle_id', $cycle->id)->firstOrFail(); // opening a case gives the student their own application page
         $this->rule('csca', 'required', $cycle->programme_id, $level->id);
 
         $this->actingAs($student)->get(route('student.cases.show', $case))->assertOk()
-            ->assertSee('Documents needed')->assertSee('Passport (home page)')->assertSee('Mandatory')->assertSee('Application form');
+            ->assertSee('Your documents')->assertSee(route('student.applications.show', $plan))->assertSee('Let your counsellor see your details');
 
-        $this->put(route('student.cases.level.update', $case), ['degree_level_id' => $level->id])->assertRedirect();
-        $this->assertSame($level->id, $case->refresh()->degree_level_id);
-        $this->get(route('student.cases.show', $case))->assertSee('CSCA score report');
+        $this->put(route('student.applications.level.update', $plan), ['degree_level_id' => $level->id])->assertRedirect();
+        $this->assertSame($level->id, $case->refresh()->degree_level_id, 'the case follows the level the student chose');
+        $this->get(route('student.applications.show', $plan))->assertSee('CSCA score report');
         $this->assertSame('required', $this->rows($case)['csca']);
 
         $this->put(route('student.cases.form.update', $case), ['share' => '1'])->assertRedirect();
@@ -218,7 +219,7 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
         $this->assertNull($case->refresh()->form_shared_at);
 
         $other = User::factory()->create();
-        $this->actingAs($other)->put(route('student.cases.level.update', $case), ['degree_level_id' => $level->id])->assertForbidden();
+        $this->actingAs($other)->put(route('student.applications.level.update', $plan), ['degree_level_id' => $level->id])->assertForbidden();
         $this->put(route('student.cases.form.update', $case), ['share' => '1'])->assertForbidden();
     }
 

@@ -30,9 +30,9 @@ class PublicPagesTest extends TestCase
     {
         $cycle = $this->publishedCycle([], $this->exactDeadline());
         $this->get($this->url($cycle))->assertOk()
-            ->assertSee('Get application support')->assertSee('Track this application')->assertSee('Application timeline')->assertSee('Universities and programmes')
+            ->assertSee('Ask our team a question')->assertSee('Create a free account to apply')->assertSee('Application timeline')->assertSee('Universities and programmes')
             ->assertDontSee('Apply on official website')->assertDontSee('apply.example.org')->assertDontSee('/go/', false)
-            ->assertSee('does not mean an application was submitted'); // tracking never implies submission
+            ->assertSee('does not send anything to the funder'); // applying here never implies submission
     }
 
     public function test_drafts_and_in_review_cycles_are_404_on_the_public_site(): void

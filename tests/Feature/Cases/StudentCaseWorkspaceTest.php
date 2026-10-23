@@ -52,7 +52,7 @@ class StudentCaseWorkspaceTest extends TestCase
         app(CaseService::class)->open($student, null, null, ['title' => 'Chevening application']);
 
         $this->actingAs($student)->get(route('student.dashboard'))->assertOk()
-            ->assertSee('Cases and fees')->assertSee('Chevening application')->assertSeeText('1 fee awaiting payment')->assertSeeText('US$100.00');
+            ->assertSee('SAS is helping you with')->assertSee('Chevening application')->assertSeeText('US$100 to pay');
     }
 
     public function test_case_changes_notify_the_student_by_site_and_email_without_leaking_to_others(): void
@@ -179,7 +179,7 @@ class StudentCaseWorkspaceTest extends TestCase
         $case = app(CaseService::class)->open($student, $cycle, null, []);
 
         $this->actingAs($student)->get(route('student.applications.show', $plan))->assertOk()->assertSee('SAS is supporting this application')->assertSee(route('student.cases.show', $case));
-        $this->get(route('student.applications.index'))->assertOk()->assertSee('SAS is supporting this: New');
+        $this->get(route('student.applications.index'))->assertOk()->assertSee('SAS is helping you with this: New');
         $this->get(route('student.cases.show', $case))->assertOk()->assertSee(route('student.applications.show', $plan));
     }
 

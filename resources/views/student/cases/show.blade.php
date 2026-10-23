@@ -5,10 +5,9 @@
     $ended = in_array($case->status, ['rejected', 'withdrawn'], true);
 @endphp
 <x-layouts.student :title="$case->title">
-    <p class="text-sm"><a class="text-navy-700 underline" href="{{ route('student.cases.index') }}">&larr; Cases and fees</a></p>
+    <p class="text-sm"><a class="text-navy-700 underline" href="{{ route('student.cases.index') }}">&larr; Messages and fees</a></p>
     <h1 class="mt-2 text-2xl font-extrabold">{{ $case->title }}</h1>
-    <p class="mt-1 text-sm text-muted">Counsellor: {{ $case->advisor?->name ?? 'Being assigned' }} &middot; opened {{ $case->opened_at?->format('j M Y') }}
-        @if ($plan) &middot; <a class="text-navy-700 underline" href="{{ route('student.applications.show', $plan) }}">Your checklist for this application</a>@endif</p>
+    <p class="mt-1 text-sm text-muted">Counsellor: {{ $case->advisor?->name ?? 'Being assigned' }} &middot; opened {{ $case->opened_at?->format('j M Y') }}</p>
 
     <section class="card mt-5 p-5" aria-labelledby="status-h">
         <h2 id="status-h" class="font-bold">Where it stands: {{ $case->statusLabel() }}</h2>
@@ -43,19 +42,14 @@
         @endif
     </section>
 
-    <section id="form" class="card mt-5 p-5" aria-labelledby="form-h">
-        <h2 id="form-h" class="font-bold">Application form</h2>
-        <p class="mt-1 text-sm text-muted">Your answers live in one <a class="text-navy-700 underline" href="{{ route('student.form.show') }}">application form</a> that every application uses. It is {{ $formPercent }}% complete.</p>
-        <form method="POST" action="{{ route('student.cases.form.update', $case) }}" class="mt-3">
-            @csrf @method('PUT')
-            <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="share" value="1" class="mt-0.5 rounded border-slate-300 text-navy-700" @checked($case->form_shared_at)> <span>{{ $formConsent }}</span></label>
-            @if ($case->form_shared_at)<p class="mt-1 text-xs text-muted">Shared since {{ $case->form_shared_at->format('j M Y') }}.</p>@endif
-            <button class="btn-primary mt-3">Save</button>
-        </form>
-    </section>
 
-    @include('student._document-checklist', ['rows' => $rows, 'docProgress' => $docProgress, 'levels' => $levels, 'levelId' => $levelId, 'levelAction' => route('student.cases.level.update', $case)])
-
+    @if ($plan)
+        <section class="card mt-5 p-5" aria-labelledby="docs-h">
+            <h2 id="docs-h" class="font-bold">Your documents</h2>
+            <p class="mt-1 text-sm text-muted">@if ($docProgress['required'] === 0) No document is mandatory for this scholarship. @elseif ($docProgress['missing']) <strong>{{ $docProgress['ready'] }} of {{ $docProgress['required'] }}</strong> mandatory documents provided. @else All {{ $docProgress['required'] }} mandatory documents are provided. @endif</p>
+            <a class="btn-primary mt-3" href="{{ route('student.applications.show', $plan) }}">{{ $docProgress['missing'] ? 'Upload my documents' : 'See my documents' }}</a>
+        </section>
+    @endif
     <section id="messages" class="card mt-5 p-5" aria-labelledby="msg-h">
         <h2 id="msg-h" class="font-bold">Messages with your counsellor</h2>
         <div class="mt-3 space-y-3">
@@ -79,6 +73,16 @@
         </form>
     </section>
 
+    <section id="form" class="card mt-5 p-5" aria-labelledby="form-h">
+        <h2 id="form-h" class="font-bold">Let your counsellor see your details</h2>
+        <p class="mt-1 text-sm text-muted">Your counsellor can only read what you share. Your <a class="text-navy-700 underline" href="{{ route('student.form.show') }}">application form</a> is {{ $formPercent }}% filled in.</p>
+        <form method="POST" action="{{ route('student.cases.form.update', $case) }}" class="mt-3">
+            @csrf @method('PUT')
+            <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="share" value="1" class="mt-0.5 rounded border-slate-300 text-navy-700" @checked($case->form_shared_at)> <span>{{ $formConsent }}</span></label>
+            @if ($case->form_shared_at)<p class="mt-1 text-xs text-muted">Shared since {{ $case->form_shared_at->format('j M Y') }}.</p>@endif
+            <button class="btn-primary mt-3">Save</button>
+        </form>
+    </section>
     <section id="share" class="card mt-5 p-5" aria-labelledby="share-h">
         <h2 id="share-h" class="font-bold">Documents shared with your counsellor</h2>
         <p class="mt-1 text-sm text-muted">Your documents are private. Tick only what your counsellor needs for this application. You can untick a document at any time and they will no longer be able to open it.</p>

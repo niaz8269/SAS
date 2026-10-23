@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Student;
 
+use App\Domain\Applications\ApplicationFormService;
 use App\Domain\Cases\CaseService;
 use App\Domain\Documents\Requirements;
 use App\Domain\Scholarship\ChangeDeadline;
@@ -9,6 +10,7 @@ use App\Domain\StudentWorkspace\PlanService;
 use App\Models\DegreeLevel;
 use App\Models\DocumentKind;
 use App\Models\DocumentRule;
+use App\Models\Enquiry;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
 use App\Models\User;
@@ -59,7 +61,7 @@ class ApplyFlowTest extends TestCase
         $url = URL::temporarySignedRoute('verification.verify', now()->addHour(), ['id' => $student->id, 'hash' => sha1($student->email)]);
 
         $this->actingAs($student)->get($url)->assertRedirect(route('student.form.show'));
-        $this->get(route('student.form.show'))->assertOk()->assertSee('Application form')->assertSee('only do this once');
+        $this->get(route('student.form.show'))->assertOk()->assertSee('Your details')->assertSee('Fill this in');
     }
 
     public function test_the_student_chooses_scholarships_and_sees_the_documents_each_one_needs(): void
@@ -72,15 +74,15 @@ class ApplyFlowTest extends TestCase
         $this->rule($csc, 'csca', 'not_needed', 'master');
         $student = User::factory()->create();
 
-        $this->actingAs($student)->get(route('student.choose.index'))->assertOk()->assertSee('Chevening Test Award')->assertSee('CSC Test Award')->assertSee('Apply for this');
+        $this->actingAs($student)->get(route('student.choose.index'))->assertOk()->assertSee('Chevening Test Award')->assertSee('CSC Test Award')->assertSee('Apply');
         $this->get(route('student.choose.index', ['q' => 'chevening']))->assertSee('Chevening Test Award')->assertDontSee('CSC Test Award');
         $this->get(route('student.choose.index', ['level' => 'bachelor']))->assertSee('CSC Test Award')->assertDontSee('Chevening Test Award');
 
         $this->post(route('student.applications.store'), ['cycle_id' => $chevening->id])->assertRedirect();
         $plan = $student->applicationPlans()->firstOrFail();
         $this->get(route('student.applications.show', $plan))->assertOk()
-            ->assertSee('Documents needed for this scholarship')->assertSee('Two reference letters from your referees.')->assertSee('Pre-admission letter');
-        $this->get(route('student.choose.index'))->assertSee('Chosen: see documents');
+            ->assertSee('Documents for this scholarship')->assertSee('Two reference letters from your referees.')->assertSee('Pre-admission letter');
+        $this->get(route('student.choose.index'))->assertSee('Chosen. See documents');
     }
 
     public function test_documents_the_scholarship_does_not_ask_for_are_tucked_into_an_other_section(): void
@@ -151,11 +153,11 @@ class ApplyFlowTest extends TestCase
         $plan = app(PlanService::class)->create($student, $a);
 
         $this->actingAs($student)->get(route('student.dashboard'))->assertOk()
-            ->assertSee('Getting started')->assertSee('Fill in your application form')->assertSee('1 chosen')->assertSee('1 mandatory documents still missing')->assertSee('0 of 1 mandatory documents');
+            ->assertSee('Your next step')->assertSee('Tell us about yourself')->assertSee('1 chosen')->assertSee('1 still needed')->assertSee('0 of 1 mandatory documents');
 
         $this->upload($student, 'passport');
         $this->get(route('student.dashboard'))->assertSee('All mandatory documents provided')->assertSee('1 of 1 mandatory documents');
-        $this->get(route('student.applications.show', $plan))->assertSee('All 1 mandatory documents are provided.')->assertSee('% complete');
+        $this->get(route('student.applications.show', $plan))->assertSee('All 1 mandatory documents are provided.')->assertSee('% filled in');
     }
 
     public function test_a_student_cannot_change_the_level_of_someone_elses_application(): void
@@ -177,6 +179,76 @@ class ApplyFlowTest extends TestCase
 
         $case = app(CaseService::class)->open($student, $csc, null, []);
         $this->assertSame($plan->degree_level_id, $case->degree_level_id);
+    }
+
+    public function test_the_student_asks_sas_to_review_once_every_mandatory_document_is_in(): void
+    {
+        $a = $this->scholarship('Award A');
+        $this->rule($a, 'passport', 'required');
+        foreach (['photo', 'degree_certificate', 'transcript'] as $k) {
+            $this->rule($a, $k, 'optional');
+        }
+        $student = User::factory()->create();
+        $plan = app(PlanService::class)->create($student, $a);
+
+        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertSee('Available after you upload: Passport (home page)');
+        $this->post(route('student.applications.review', $plan))->assertSessionHas('error');
+        $this->assertNull($plan->refresh()->review_requested_at);
+        $this->assertSame(0, Enquiry::count());
+
+        $this->upload($student, 'passport');
+        $this->post(route('student.applications.review', $plan))->assertSessionHas('status');
+        $this->assertNotNull($plan->refresh()->review_requested_at);
+        $enquiry = Enquiry::firstOrFail();
+        $this->assertSame($student->id, $enquiry->user_id);
+        $this->assertSame($a->id, $enquiry->cycle_id);
+        $this->assertStringContainsString('Award A', $enquiry->message);
+        $this->get(route('student.applications.show', $plan))->assertSee('You asked SAS to review this application')->assertSee($enquiry->reference);
+        $this->get(route('student.applications.index'))->assertSee('Sent to SAS for review');
+
+        $this->post(route('student.applications.review', $plan))->assertSessionHas('error');
+        $this->assertSame(1, Enquiry::count(), 'a second request is refused');
+
+        $this->actingAs(User::factory()->create())->post(route('student.applications.review', $plan))->assertForbidden();
+    }
+
+    public function test_the_home_page_points_to_the_next_step(): void
+    {
+        $student = User::factory()->create();
+        $this->actingAs($student)->get(route('student.dashboard'))->assertSee('Your next step')->assertSee('Fill in my details')->assertSee('Step 1: Your details');
+
+        $form = app(ApplicationFormService::class)->formFor($student);
+        $answers = [];
+        foreach (app(ApplicationFormService::class)->sections() as $section) {
+            foreach ($section['fields'] as $name => $def) {
+                if ($def['required'] ?? false) {
+                    $answers[$name] = match ($def[1]) {
+                        'date' => '2000-01-01', 'email' => 'a@example.test', 'select' => $def['options'][0], default => 'x'
+                    };
+                }
+            }
+        }
+        $form->forceFill(['data' => $answers + ['_declared_at' => now()->toDateTimeString()]])->save();
+        $this->get(route('student.dashboard'))->assertSee('Choose the scholarships you want to apply for')->assertDontSee('Fill in my details');
+    }
+
+    public function test_the_application_form_shows_which_sections_still_need_answers(): void
+    {
+        $student = User::factory()->create();
+        $this->actingAs($student)->get(route('student.form.show'))->assertOk()->assertSee('to answer')->assertSee('Optional')->assertSee('Step 1 of 3');
+    }
+
+    public function test_opening_a_case_for_a_scholarship_gives_the_student_their_application_page(): void
+    {
+        $cycle = $this->scholarship('Award A');
+        $student = User::factory()->create();
+        $this->assertSame(0, $student->applicationPlans()->count());
+
+        $case = app(CaseService::class)->open($student, $cycle, null, []);
+        $this->assertSame(1, $student->applicationPlans()->where('cycle_id', $cycle->id)->count());
+        $this->actingAs($student)->get(route('student.cases.show', $case))->assertSee('Your documents')->assertSee('Upload my documents');
+        app(CaseService::class)->open($student, $cycle, null, ['title' => 'Second']);
+        $this->assertSame(1, $student->applicationPlans()->where('cycle_id', $cycle->id)->count(), 'never a second application for the same call');
     }
 
     public function test_closed_calls_are_hidden_until_asked_for(): void
