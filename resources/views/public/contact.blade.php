@@ -63,15 +63,30 @@
             </form>
         </div>
         @if (! $aside || $aside->enabled)
-        <aside class="card h-fit p-5 text-sm">
-            <h2 class="font-bold">{{ $aside?->heading ?: 'Other ways to reach us' }}</h2>
-            <p class="mt-2">Email: <a class="text-navy-700 underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a></p>
-            <p class="mt-2 text-muted">{{ $aside?->body ?: 'If the form does not work for you, email us and we will reply.' }}</p>
-            @if ($aside ? $aside->cta_label : true)
-                <p class="mt-4"><a class="text-navy-700 underline" href="{{ $aside ? \App\Domain\Site\Site::href($aside->cta_url) : route('consultations.create') }}">{{ $aside?->cta_label ?: 'Request a consultation' }}</a></p>
-            @endif
+        <aside class="h-fit space-y-4 text-sm">
+            <div class="card p-5">
+                <h2 class="font-bold">{{ $aside?->heading ?: 'Other ways to reach us' }}</h2>
+                <p class="mt-2 text-muted">{{ $aside?->body ?: 'Prefer to talk? Call, message us on WhatsApp or WeChat, or email the right team.' }}</p>
+                <dl class="mt-4 space-y-3">
+                    @if (config('sas.contact_phone'))<div><dt class="font-semibold">Phone</dt><dd><a class="text-navy-700 underline" href="tel:{{ preg_replace('/[^0-9+]/', '', config('sas.contact_phone')) }}">{{ config('sas.contact_phone') }}</a></dd></div>@endif
+                    @if (config('sas.contact_whatsapp'))<div><dt class="font-semibold">WhatsApp</dt><dd><a class="text-navy-700 underline" rel="noopener" target="_blank" href="https://wa.me/{{ preg_replace('/[^0-9]/', '', config('sas.contact_whatsapp')) }}">{{ config('sas.contact_whatsapp') }}</a></dd></div>@endif
+                    @if (config('sas.contact_wechat'))<div><dt class="font-semibold">WeChat ID</dt><dd>{{ config('sas.contact_wechat') }}</dd></div>@endif
+                    <div><dt class="font-semibold">Enquiries</dt><dd><a class="text-navy-700 underline" href="mailto:{{ config('sas.enquiry_email') }}">{{ config('sas.enquiry_email') }}</a></dd></div>
+                    <div><dt class="font-semibold">Admissions</dt><dd><a class="text-navy-700 underline" href="mailto:{{ config('sas.admissions_email') }}">{{ config('sas.admissions_email') }}</a></dd></div>
+                    <div><dt class="font-semibold">General</dt><dd><a class="text-navy-700 underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a></dd></div>
+                </dl>
+                @if ($aside ? $aside->cta_label : true)
+                    <p class="mt-4"><a class="text-navy-700 underline" href="{{ $aside ? \App\Domain\Site\Site::href($aside->cta_url) : route('consultations.create') }}">{{ $aside?->cta_label ?: 'Request a consultation' }}</a></p>
+                @endif
+            </div>
+            <div class="card p-5">
+                <h2 class="font-bold">Scan to chat</h2>
+                <div class="mt-3 grid grid-cols-2 gap-4 text-center">
+                    <figure><img src="{{ asset('images/contact/wechat-qr.jpg') }}" alt="WeChat QR code for {{ config('sas.contact_wechat') }}" class="mx-auto aspect-square w-full max-w-[9rem] rounded-lg border border-line" width="180" height="180" loading="lazy"><figcaption class="mt-2 text-xs text-muted">WeChat: {{ config('sas.contact_wechat') }}</figcaption></figure>
+                    <figure><img src="{{ asset('images/contact/whatsapp-qr.jpg') }}" alt="WhatsApp QR code for {{ config('sas.contact_whatsapp') }}" class="mx-auto aspect-square w-full max-w-[9rem] rounded-lg border border-line" width="180" height="180" loading="lazy"><figcaption class="mt-2 text-xs text-muted">WhatsApp: {{ config('sas.contact_whatsapp') }}</figcaption></figure>
+                </div>
+            </div>
         </aside>
         @endif
-    </div>
-    <x-page-blocks page="contact" position="bottom" />
+    </div>    <x-page-blocks page="contact" position="bottom" />
 </x-layouts.public>

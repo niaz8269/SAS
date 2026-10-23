@@ -10,9 +10,16 @@ return [
 
     // Owner decisions still open (docs/DECISIONS.md). Shown in the footer until confirmed.
     'legal_entity' => env('SAS_LEGAL_ENTITY', 'Operating legal entity: to be confirmed'),
-    'contact_email' => env('SAS_CONTACT_EMAIL', 'hello@example.com'),
-    'accessibility_email' => env('SAS_ACCESSIBILITY_EMAIL', 'accessibility@example.com'),
-    'staff_notification_email' => env('SAS_STAFF_NOTIFICATION_EMAIL'),
+    // Contact details (editable in the admin under Website, Site settings; these are the defaults).
+    'contact_email' => env('SAS_CONTACT_EMAIL', 'info@sas.cas.moe'),
+    'enquiry_email' => env('SAS_ENQUIRY_EMAIL', 'enquiry@sas.cas.moe'),
+    'admissions_email' => env('SAS_ADMISSIONS_EMAIL', 'admissions@sas.cas.moe'),
+    'accessibility_email' => env('SAS_ACCESSIBILITY_EMAIL', 'info@sas.cas.moe'),
+    'contact_phone' => env('SAS_CONTACT_PHONE', '+86 176 4041 2827'),
+    'contact_whatsapp' => env('SAS_CONTACT_WHATSAPP', '+86 176 4041 2827'),
+    'contact_wechat' => env('SAS_CONTACT_WECHAT', 'cas-scholarships'),
+    // New-enquiry alerts go to the enquiry mailbox.
+    'staff_notification_email' => env('SAS_STAFF_NOTIFICATION_EMAIL', 'enquiry@sas.cas.moe'),
     // Shared secret for the signed email-delivery webhook. Empty = endpoint disabled.
     'mail_webhook_secret' => env('SAS_MAIL_WEBHOOK_SECRET'),
 

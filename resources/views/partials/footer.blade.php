@@ -3,7 +3,9 @@
     $policies = \App\Domain\Site\Site::menu('footer_policies');
     $social = array_filter(['Facebook' => \App\Domain\Site\Site::get('social_facebook'), 'X' => \App\Domain\Site\Site::get('social_x'), 'Instagram' => \App\Domain\Site\Site::get('social_instagram'),
         'LinkedIn' => \App\Domain\Site\Site::get('social_linkedin'), 'YouTube' => \App\Domain\Site\Site::get('social_youtube')]);
-    $phone = \App\Domain\Site\Site::get('contact_phone');
+    $phone = config('sas.contact_phone');
+    $whatsapp = config('sas.contact_whatsapp');
+    $wechat = config('sas.contact_wechat');
     $address = \App\Domain\Site\Site::get('contact_address');
 @endphp
 <footer class="mt-16 bg-navy-900 text-navy-100">
@@ -39,11 +41,14 @@
         <div class="text-sm">
             <h2 class="mb-3 text-sm font-semibold text-white">Contact</h2>
             <ul class="space-y-2">
-                <li><a class="hover:underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a></li>
-                @if ($phone)<li><a class="hover:underline" href="tel:{{ preg_replace('/[^0-9+]/', '', $phone) }}">{{ $phone }}</a></li>@endif
+                @if ($phone)<li>Phone: <a class="hover:underline" href="tel:{{ preg_replace('/[^0-9+]/', '', $phone) }}">{{ $phone }}</a></li>@endif
+                @if ($whatsapp)<li>WhatsApp: <a class="hover:underline" href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $whatsapp) }}" rel="noopener" target="_blank">{{ $whatsapp }}</a></li>@endif
+                @if ($wechat)<li>WeChat: {{ $wechat }}</li>@endif
+                <li>Enquiries: <a class="hover:underline" href="mailto:{{ config('sas.enquiry_email') }}">{{ config('sas.enquiry_email') }}</a></li>
+                <li>Admissions: <a class="hover:underline" href="mailto:{{ config('sas.admissions_email') }}">{{ config('sas.admissions_email') }}</a></li>
+                <li>General: <a class="hover:underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a></li>
                 @if ($address)<li class="whitespace-pre-line">{{ $address }}</li>@endif
                 <li><a class="hover:underline" href="{{ route('contact') }}">Send an enquiry</a></li>
-                <li>Accessibility: <a class="hover:underline" href="mailto:{{ config('sas.accessibility_email') }}">{{ config('sas.accessibility_email') }}</a></li>
             </ul>
         </div>
     </div>
