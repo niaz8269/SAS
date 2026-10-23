@@ -2,11 +2,11 @@
 @php($personal = $editing ? $form->data : [])
 <x-layouts.partner :title="$editing ? 'Edit student' : 'Add students'" :crumb="$editing ? 'Student list › Edit' : 'Student list › Add to'">
     <div class="flex items-start justify-between gap-3">
-        <div><p class="text-[15px]">Backend home</p><h1 class="text-[30px] font-light leading-tight text-[#3a87ad]">{{ $editing ? 'Edit student' : 'Add students' }}</h1></div>
-        <a class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[17px] text-white hover:bg-[#c9453f]" href="{{ $editing ? route('partner.student.show', $student->public_id) : route('partner.students.index') }}"><span aria-hidden="true">↩</span> return</a>
+        <div><p class="text-[13px]">Backend home</p><h1 class="text-[24px] font-light leading-tight text-[#3a87ad]">{{ $editing ? 'Edit student' : 'Add students' }}</h1></div>
+        <a class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[14px] text-white hover:bg-[#c9453f]" href="{{ $editing ? route('partner.student.show', $student->public_id) : route('partner.students.index') }}"><span aria-hidden="true">↩</span> return</a>
     </div>
     <div class="mt-2 border-b border-[#e5e5e5]"></div>
-    @unless ($editing)<p class="mt-4 text-[15px] text-[#555]">We email the student an invitation to choose their own password. You can start their applications straight away.</p>@endunless
+    @unless ($editing)<p class="mt-4 text-[13px] text-[#555]">We email the student an invitation to choose their own password. You can start their applications straight away.</p>@endunless
 
     <form method="POST" action="{{ $editing ? route('partner.student.update', $student->public_id) : route('partner.students.store') }}" class="mt-6 max-w-3xl space-y-4" novalidate>
         @csrf @if ($editing) @method('PUT') @endif
@@ -26,6 +26,6 @@
             <div class="grid items-start gap-2 sm:grid-cols-[210px_1fr] sm:gap-4"><span></span>
                 <div><label class="flex max-w-lg items-start gap-2 text-sm"><input type="checkbox" name="consent" value="1" class="mt-0.5" @checked(old('consent'))> <span>{{ $consent }}</span></label>@error('consent')<p class="mt-1 text-sm text-[#d9534f]" role="alert">{{ $message }}</p>@enderror</div></div>
         @endunless
-        <div class="flex gap-2 pt-2 sm:pl-[226px]"><button class="inline-flex items-center gap-2 bg-[#6aaad8] px-7 py-3 text-[17px] text-white hover:bg-[#5b9bc9]"><span aria-hidden="true">✔</span> submit</button><button type="reset" class="inline-flex items-center gap-2 bg-[#a5adb3] px-7 py-3 text-[17px] text-white hover:bg-[#939ba1]"><span aria-hidden="true">↺</span> Reset</button></div>
+        <div class="flex gap-2 pt-2 sm:pl-[226px]"><button class="inline-flex items-center gap-2 bg-[#6aaad8] px-7 py-3 text-[14px] text-white hover:bg-[#5b9bc9]"><span aria-hidden="true">✔</span> submit</button><button type="reset" class="inline-flex items-center gap-2 bg-[#a5adb3] px-7 py-3 text-[14px] text-white hover:bg-[#939ba1]"><span aria-hidden="true">↺</span> Reset</button></div>
     </form>
 </x-layouts.partner>

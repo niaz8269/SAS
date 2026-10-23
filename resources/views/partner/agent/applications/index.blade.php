@@ -1,6 +1,6 @@
 <x-layouts.partner title="Application list" crumb="Application list">
     <x-agent.title>Application list
-        <x-slot name="actions"><button type="button" class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[17px] text-white hover:bg-[#c9453f]" onclick="document.getElementById('advanced').toggleAttribute('hidden')" aria-controls="advanced"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg>Advanced Search</button></x-slot>
+        <x-slot name="actions"><button type="button" class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[14px] text-white hover:bg-[#c9453f]" onclick="document.getElementById('advanced').toggleAttribute('hidden')" aria-controls="advanced"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg>Advanced Search</button></x-slot>
     </x-agent.title>
 
     <form id="advanced" method="GET" action="{{ route('partner.applications.index') }}" class="mt-4 flex flex-wrap items-end gap-3 border border-[#ddd] bg-[#f9f9f9] p-4" @if (! ($filters['stage'] || $filters['from'] || $filters['to'])) hidden @endif>
@@ -16,7 +16,7 @@
     <x-agent.list title="List">
         <x-agent.pager :paginator="$plans" search-label="Name/Email/Application number" :q="$filters['q']" :per-page="$perPage" />
         <div class="overflow-x-auto">
-            <table class="w-full text-left text-[16px]">
+            <table class="w-full text-left text-[13px]">
                 <caption class="sr-only">Applications of your students</caption>
                 <thead><tr>
                     <x-agent.th name="id" :sort="$sort" :dir="$dir">ID</x-agent.th>
@@ -41,15 +41,15 @@
                         <td class="px-3 py-5">{{ $p->id }}</td>
                         <td class="whitespace-nowrap px-3 py-5">{{ $p->application_no }}</td>
                         <td class="px-3 py-5">{{ $p->cycle->displayName() }}</td>
-                        <td class="px-3 py-5 uppercase">{{ $p->user->name }}</td>
+                        <td class="px-3 py-3 uppercase">{{ $p->user->name }}</td>
                         <td class="px-3 py-5">{{ $data['gender'] ?? '-' }}</td>
                         <td class="px-3 py-5">{{ $data['nationality'] ?? '-' }}</td>
                         <td class="whitespace-nowrap px-3 py-5">{{ $p->updated_at->format('Y-m-d H:i') }}</td>
-                        <td class="px-3 py-5 {{ match ($p->stage) { 'passed' => 'text-[#1a1aff]', 'returned' => 'text-[#e00]', 'submitted' => 'text-[#d97706]', default => 'text-[#555]' } }}">{{ $p->statusFor($case) }}</td>
+                        <td class="px-3 py-3 {{ match ($p->stage) { 'passed' => 'text-[#1a1aff]', 'returned' => 'text-[#e00]', 'submitted' => 'text-[#d97706]', default => 'text-[#555]' } }}">{{ $p->statusFor($case) }}</td>
                         <td class="max-w-[16rem] whitespace-pre-line px-3 py-5">{{ $p->review_remarks }}</td>
                         <td class="px-3 py-5">{{ $fee('application_fee') }}</td>
                         <td class="px-3 py-5">{{ $fee('agency_charge') }}</td>
-                        <td class="px-3 py-5 text-[#428bb6]"><a class="block hover:underline" href="{{ route('partner.student.applications.show', [$p->user->public_id, $p->public_id]) }}">{{ $p->isEditable() ? 'Continue' : 'View Details' }}</a>
+                        <td class="px-3 py-3 text-[#428bb6]"><a class="block hover:underline" href="{{ route('partner.student.applications.show', [$p->user->public_id, $p->public_id]) }}">{{ $p->isEditable() ? 'Continue' : 'View Details' }}</a>
                             <a class="block hover:underline" href="{{ route('partner.student.applications.preview', [$p->user->public_id, $p->public_id]) }}" target="_blank" rel="noopener">Download Application Form</a></td>
                     </tr>
                 @empty

@@ -7,6 +7,6 @@
                 <div><input id="{{ $name }}" name="{{ $name }}" type="password" autocomplete="{{ $auto }}" required class="w-full max-w-lg border border-[#ccc] px-3 py-2 @error($name) border-[#d9534f] @enderror">@error($name)<p class="mt-1 text-sm text-[#d9534f]" role="alert">{{ $message }}</p>@enderror</div></div>
         @endforeach
         <p class="text-sm text-[#666] sm:pl-[226px]">At least 10 characters, with letters and numbers. Other devices are signed out when you change it.</p>
-        <div class="pt-2 sm:pl-[226px]"><button class="inline-flex items-center gap-2 bg-[#6aaad8] px-7 py-3 text-[17px] text-white hover:bg-[#5b9bc9]"><span aria-hidden="true">✔</span> submit</button></div>
+        <div class="pt-2 sm:pl-[226px]"><button class="inline-flex items-center gap-2 bg-[#6aaad8] px-7 py-3 text-[14px] text-white hover:bg-[#5b9bc9]"><span aria-hidden="true">✔</span> submit</button></div>
     </form>
 </x-layouts.partner>
