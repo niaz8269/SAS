@@ -4,6 +4,11 @@
     <section class="container-page py-10">
         <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Support beyond the scholarship' }}</h1>
         <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Professional help at each step. Every service starts with a free enquiry; we confirm scope, deliverables and any fee with you before work begins. No service guarantees scholarship selection, admission, attestation acceptance or a visa decision.' }}</p>
+        <div class="mt-6 max-w-5xl">
+            <h2 class="text-xl font-bold">Our fees</h2>
+            @include('public.legal.fees')
+            <p class="text-sm text-muted">Details of when each fee is charged and refunded are in the <a class="text-navy-700 underline" href="{{ route('legal.show', 'refunds') }}">cancellation and refund policy</a>. Sending an enquiry is always free.</p>
+        </div>
         @if ($services->isEmpty())
             <p class="card mt-6 p-6 text-sm text-muted">{{ $emptyMsg?->body ?: 'Service pages will appear here once published.' }} You can still <a class="text-navy-700 underline" href="{{ route('contact') }}">send us an enquiry</a>.</p>
         @else

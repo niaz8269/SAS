@@ -13,6 +13,15 @@ return [
     // Set SAS_LEGAL_APPROVED=true once the operating entity or counsel has approved the privacy, terms and refund texts; it hides the draft notice on those pages.
     'legal_approved' => (bool) env('SAS_LEGAL_APPROVED', false),
 
+    // Service fees in US dollars, shown on the Services, Terms and Refund pages. The application fee is charged per scholarship application;
+    // part of it is refunded if the application is rejected; the agency service charge is due only after acceptance.
+    'fees' => [
+        'currency' => 'US$',
+        'application' => (int) env('SAS_FEE_APPLICATION', 100),
+        'application_refundable' => (int) env('SAS_FEE_APPLICATION_REFUNDABLE', 50),
+        'agency_service' => (int) env('SAS_FEE_AGENCY_SERVICE', 500),
+    ],
+
     // Contact details (editable in the admin under Website, Site settings; these are the defaults).
     'contact_email' => env('SAS_CONTACT_EMAIL', 'info@sas.cas.moe'),
     'enquiry_email' => env('SAS_ENQUIRY_EMAIL', 'enquiry@sas.cas.moe'),

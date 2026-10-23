@@ -17,13 +17,13 @@
 <p>Tracking an application in your workspace does not submit it and does not create an application with any funder. You apply directly with the funder or university on their official channels. We never ask for the password to any university, embassy, funder or portal account, and you should never share one with anyone, including us.</p>
 
 <h2>5. Services and fees</h2>
+@include('public.legal.fees')
 <ul>
-    <li>Every service starts with a free enquiry. Before any paid work begins we confirm in writing the scope, deliverables, timeline, fee, revision limits and what you need to provide. A service starts only when you accept that written scope and any payment due.</li>
+    <li>Every service starts with a free enquiry. Before you are charged we confirm in writing what we will do, the deliverables, the fee and how to pay. Application support starts once you have agreed to that and paid the application fee.</li>
+    <li>The application fee is charged per scholarship application. If the application is rejected, part of it is refunded; the agency service charge is due only if you are accepted. Exact terms, including what "rejected" and "accepted" mean, are in the <a href="{{ route('legal.show', 'refunds') }}">cancellation and refund policy</a>.</li>
     <li>We do not promise outcomes. We do not guarantee selection, admission, attestation acceptance or a visa decision, and a rejection by a third party is not a failure of the service.</li>
-    <li>Fees charged by third parties (application fees, translation, courier, attestation, tests, visa fees) are separate and are paid by you unless the written scope says otherwise.</li>
-    <li>Cancellation and refunds are covered in the <a href="{{ route('legal.show', 'refunds') }}">cancellation and refund policy</a>.</li>
+    <li>Fees charged by third parties (funder or university application fees, translation, courier, attestation, tests, visa fees) are separate and are paid by you unless we agree otherwise in writing.</li>
 </ul>
-
 <h2>6. What you give us</h2>
 <ul>
     <li>You must have the right to give us the documents and information you upload or send, and they must be true and not misleading. Do not alter documents or submit someone else's work as your own. We may refuse or stop a service if we believe a document is false.</li>
