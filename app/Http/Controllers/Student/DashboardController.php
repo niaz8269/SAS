@@ -18,14 +18,14 @@ class DashboardController extends Controller
         $user = $request->user();
 
         $plans = $user->applicationPlans()->with(['cycle.programme', 'cycle.degreeLevels', 'cycle.currentDeadlines'])->latest()->get();
-        $docs = $plans->mapWithKeys(fn ($p) => [$p->id => $requirements->progress($requirements->forScholarship($p->cycle, $p->degree_level_id, $user->id))]);
+        $docs = $plans->mapWithKeys(fn ($p) => [$p->id => $requirements->progress($requirements->forPlan($p))]);
         $formPercent = $forms->percent($forms->formFor($user));
         $missingPlan = $plans->first(fn ($p) => count($docs[$p->id]['missing']) > 0);
 
         $steps = [
             ['n' => 1, 'title' => 'Your details', 'done' => $formPercent >= 100, 'detail' => $formPercent.'% filled in', 'url' => route('student.form.show')],
             ['n' => 2, 'title' => 'Choose scholarships', 'done' => $plans->isNotEmpty(), 'detail' => $plans->isEmpty() ? 'None chosen yet' : $plans->count().' chosen', 'url' => route('student.choose.index')],
-            ['n' => 3, 'title' => 'Upload documents', 'done' => $plans->isNotEmpty() && ! $missingPlan, 'detail' => $plans->isEmpty() ? 'After step 2' : ($missingPlan ? $docs->sum(fn ($d) => count($d['missing'])).' still needed' : 'All mandatory documents provided'), 'url' => $missingPlan ? route('student.applications.show', $missingPlan) : route('student.applications.index')],
+            ['n' => 3, 'title' => 'Upload documents', 'done' => $plans->isNotEmpty() && ! $missingPlan, 'detail' => $plans->isEmpty() ? 'After step 2' : ($missingPlan ? $docs->sum(fn ($d) => count($d['missing'])).' still needed' : 'All mandatory documents provided'), 'url' => $missingPlan ? route('student.applications.materials', $missingPlan) : route('student.applications.index')],
         ];
         $current = collect($steps)->first(fn ($s) => ! $s['done']);
 

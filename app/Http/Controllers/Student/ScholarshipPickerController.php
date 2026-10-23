@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Student;
 
 use App\Enums\ApplicationStatus;
+use App\Http\Controllers\Concerns\ActsForStudent;
 use App\Http\Controllers\Controller;
 use App\Models\DegreeLevel;
 use App\Models\ScholarshipCycle;
@@ -11,6 +12,8 @@ use Illuminate\Http\Request;
 /** Where a student chooses the scholarships to apply for. Choosing one opens its application with the documents it needs. */
 class ScholarshipPickerController extends Controller
 {
+    use ActsForStudent;
+
     public function index(Request $request)
     {
         $filters = $request->validate(['q' => ['nullable', 'string', 'max:80'], 'level' => ['nullable', 'string', 'max:24'], 'show_closed' => ['nullable', 'boolean']]);
@@ -25,8 +28,8 @@ class ScholarshipPickerController extends Controller
 
         return view('student.choose-scholarships', [
             'cycles' => $cycles, 'filters' => ['q' => $q, 'level' => $filters['level'] ?? '', 'show_closed' => $request->boolean('show_closed')],
-            'levels' => DegreeLevel::orderBy('sort')->get(),
-            'planned' => $request->user()->applicationPlans()->pluck('public_id', 'cycle_id')->all(),
+            'levels' => DegreeLevel::orderBy('sort')->get(), 'student' => $this->student($request),
+            'planned' => $this->student($request)->applicationPlans()->pluck('public_id', 'cycle_id')->all(),
         ]);
     }
 }

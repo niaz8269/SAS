@@ -36,6 +36,18 @@ Notifications: a case opened, counsellor assigned, status changed, payment recor
 ## Partner area
 A partner account belongs to one organisation. Partners see an overview, submit scholarships (name, official page, level, dates and so on), follow each submission's status, read editors' messages, edit and resend while it is "Submitted" or "Needs changes", and keep their organisation's contact email and website. They never see student data. Staff create the organisation and its people under **Partners** in the admin; there is no public partner sign-up.
 
+### Recruiting agents (partner organisations of kind "Recruiting agent")
+An agent manages many students' applications. Staff mark the organisation as a **Recruiting agent** in the admin and create its people (`demo-agent@example.test` locally).
+* **Backend home:** number of applications and students, applications by status, and what to do.
+* **Student list:** search, **Add students** (surname, given name, email, country, passport number, date of birth, and a tick that the student agreed), **Batch import** (CSV, up to 200, with a template and a report of lines that were skipped), Edit, Open, **Add application**. Each student is emailed an invitation to choose **their own** password (valid 7 days); until then only the agent works on their applications. Every addition is audited with the agent's confirmation. An agent reaches only their own organisation's students; the student keeps their own account.
+* **Application list:** application number, scholarship, student, gender, country, last operation time, status, review notes, application fee and agency charge status (from SAS's case, if any), **View details / Continue** and **Download application form** (a printable page). Search by student, email, scholarship or number; filter by status and dates.
+* **Working on a student's application:** the same four steps as the student's (below), under `partner/students/{student}/...`: the details form, the documents and the submission belong to the student.
+* **Account:** Edit organisation data and Change password (every partner user).
+University and funder partners keep the scholarship-submission screens.
+
+### The four-step application (student and agent)
+1. **Apply now:** the scholarship, the degree and the language of study. 2. **Application form:** the master form on one page with a section menu and one Save. 3. **Upload materials:** a notice panel and a numbered slot per document the scholarship asks for (several files each); for a mandatory document the applicant may tick "Currently cannot provide this document" and give the reason, which counts as an excuse for now. 4. **Apply submit:** a summary (form, documents, reasons), a printable preview, and **Submit**, which is allowed only when nothing is missing.
+Statuses: **Unfinished** (draft, or **Returned**) > **Submitted for review** > **Review passed**; after that SAS's own case status is shown. While an application is with SAS it is locked. Staff review under **Service desk > Applications to review**: they open the form and the documents the scholarship asks for (only while it is waiting for review), then **Return** with remarks (the applicant and agent are emailed and fix it) or **Pass**. A dashboard tile counts applications to review. The student's own list has All / Unfinished / Finished tabs and a status key.
 ## Admin panel roles
 | Role | Demo login | Sees |
 |---|---|---|

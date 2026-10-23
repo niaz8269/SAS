@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 // AUTH-05: only these attributes are mass assignable. Status, roles and MFA columns never are.
 #[Fillable(['name', 'email', 'password', 'phone', 'phone_country_code', 'timezone'])]
@@ -48,9 +49,34 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
         return $this->hasMany(UserRole::class);
     }
 
+    protected static function booted(): void
+    {
+        static::creating(fn (self $u) => $u->public_id ??= (string) Str::ulid());
+    }
+
     public function partnerOrganisation(): BelongsTo
     {
         return $this->belongsTo(PartnerOrganisation::class, 'partner_organisation_id');
+    }
+
+    /** The recruiting agent who looks after this student, if any. */
+    public function managedBy(): BelongsTo
+    {
+        return $this->belongsTo(PartnerOrganisation::class, 'managed_by_organisation_id');
+    }
+
+    /** A signed-in partner user of an active recruiting-agent organisation. */
+    public function isAgent(): bool
+    {
+        $org = $this->partner_organisation_id ? $this->partnerOrganisation : null;
+
+        return $this->isActive() && $this->hasRole('partner_manager') && $org && $org->isActive() && $org->kind === 'agent';
+    }
+
+    /** Whether this user is an agent who looks after the given student. */
+    public function manages(User $student): bool
+    {
+        return $this->isAgent() && $student->managed_by_organisation_id !== null && $student->managed_by_organisation_id === $this->partner_organisation_id;
     }
 
     public function applicationPlans(): HasMany

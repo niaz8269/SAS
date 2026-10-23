@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Middleware\EnsureAgent;
 use App\Http\Middleware\EnsureUserIsActive;
+use App\Http\Middleware\ResolveStudentContext;
 use App\Http\Middleware\SecurityHeaders;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
@@ -14,7 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        $middleware->alias(['active' => EnsureUserIsActive::class]);
+        $middleware->alias(['active' => EnsureUserIsActive::class, 'student.context' => ResolveStudentContext::class, 'agent' => EnsureAgent::class]);
         $middleware->preventRequestForgery(except: ['webhooks/*']); // authenticated by HMAC signature instead
         $middleware->web(append: [SecurityHeaders::class, EnsureUserIsActive::class]);
         $middleware->trustProxies(at: env('TRUSTED_PROXIES') ? explode(',', env('TRUSTED_PROXIES')) : null);

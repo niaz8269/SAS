@@ -29,7 +29,7 @@ class CaseController extends Controller
         $user = $request->user();
         $case->load(['cycle.degreeLevels', 'degreeLevel']);
         $plan = $case->cycle_id ? $user->applicationPlans()->where('cycle_id', $case->cycle_id)->first() : null;
-        $docProgress = $plan ? $requirements->progress($requirements->forScholarship($case->cycle, $plan->degree_level_id ?? $case->degree_level_id, $user->id)) : null;
+        $docProgress = $plan ? $requirements->progress($requirements->forPlan($plan)) : null;
 
         return view('student.cases.show', [
             'case' => $case->load(['advisor', 'invoices', 'cycle.programme']),

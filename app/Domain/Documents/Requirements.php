@@ -3,6 +3,7 @@
 namespace App\Domain\Documents;
 
 use App\Enums\ScanStatus;
+use App\Models\ApplicationPlan;
 use App\Models\Document;
 use App\Models\DocumentKind;
 use App\Models\ScholarshipCycle;
@@ -24,8 +25,20 @@ class Requirements
         return $this->forScholarship($case->cycle, $case->degree_level_id, $case->user_id, $onlyDocumentIds);
     }
 
-    /** The list for a student's application to a scholarship call (a plan or a case), whichever the student started. */
-    public function forScholarship(?ScholarshipCycle $cycle, ?int $levelId, int $userId, ?array $onlyDocumentIds = null): Collection
+    /** The list for one application: its scholarship, degree level and the student's uploads, with any reasons given for documents that cannot be provided yet. */
+    public function forPlan(ApplicationPlan $plan): Collection
+    {
+        $plan->loadMissing('cycle.degreeLevels');
+
+        return $this->forScholarship($plan->cycle, $plan->degree_level_id, $plan->user_id, null, $plan->documentReasons()->pluck('reason', 'kind_id')->all());
+    }
+
+    /**
+     * The list for a student's application to a scholarship call (a plan or a case), whichever the student started.
+     *
+     * @param  array<int,string>  $reasons  kind id => why the student cannot provide that document yet
+     */
+    public function forScholarship(?ScholarshipCycle $cycle, ?int $levelId, int $userId, ?array $onlyDocumentIds = null, array $reasons = []): Collection
     {
         $programmeId = $cycle?->programme_id;
         $levelId = $this->effectiveLevel($cycle, $levelId);
@@ -33,7 +46,7 @@ class Requirements
             ->with('currentVersion')->get()->groupBy('type'); // staff pass the shared ids: they see only what the student shared
 
         return DocumentKind::where('active', true)->with('rules')->orderBy('sort')->orderBy('name')->get()
-            ->map(function (DocumentKind $kind) use ($programmeId, $levelId, $documents) {
+            ->map(function (DocumentKind $kind) use ($programmeId, $levelId, $documents, $reasons) {
                 $candidates = $kind->rules
                     ->filter(fn ($r) => ($r->programme_id === null || $r->programme_id === $programmeId) && ($r->degree_level_id === null || $r->degree_level_id === $levelId))
                     ->sortByDesc(fn ($r) => [$r->specificity(), $r->id]);
@@ -49,6 +62,7 @@ class Requirements
                     'ruled' => $rule !== null && ! $rule->isNotListed(), // the scholarship itself says something about this document
                     'documents' => $mine,
                     'state' => $this->state($mine),
+                    'reason' => $reasons[$kind->id] ?? null,
                 ];
             })
             ->reject(fn ($row) => $row['requirement'] === 'not_needed')->values();
@@ -65,13 +79,14 @@ class Requirements
         return $levels->count() === 1 ? $levels->first()->id : null;
     }
 
-    /** @return array{required:int,ready:int,missing:array<int,string>} Mandatory documents only; scanning counts as provided. */
+    /** @return array{required:int,ready:int,excused:int,missing:array<int,string>} Mandatory documents only; scanning counts as provided, and a documented reason excuses a document for now. */
     public function progress(Collection $rows): array
     {
         $required = $rows->where('requirement', 'required');
-        $missing = $required->where('state', 'missing');
+        $absent = $required->where('state', 'missing');
+        $missing = $absent->filter(fn ($r) => blank($r['reason'] ?? null));
 
-        return ['required' => $required->count(), 'ready' => $required->count() - $missing->count(), 'missing' => $missing->map(fn ($r) => $r['kind']->name)->values()->all()];
+        return ['required' => $required->count(), 'ready' => $required->count() - $missing->count(), 'excused' => $absent->count() - $missing->count(), 'missing' => $missing->map(fn ($r) => $r['kind']->name)->values()->all()];
     }
 
     private function state(Collection $documents): string

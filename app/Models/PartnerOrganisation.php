@@ -25,6 +25,17 @@ class PartnerOrganisation extends Model
         return $this->hasMany(User::class, 'partner_organisation_id');
     }
 
+    public function isAgent(): bool
+    {
+        return $this->kind === 'agent';
+    }
+
+    /** Students this recruiting agent looks after. */
+    public function students(): HasMany
+    {
+        return $this->hasMany(User::class, 'managed_by_organisation_id');
+    }
+
     public function submissions(): HasMany
     {
         return $this->hasMany(PartnerSubmission::class, 'organisation_id');

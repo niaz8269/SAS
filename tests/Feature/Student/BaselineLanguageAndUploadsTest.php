@@ -77,7 +77,7 @@ class BaselineLanguageAndUploadsTest extends TestCase
         $plan = app(PlanService::class)->create($student, $cycle);
         $this->actingAs($student)->post('/student/documents', ['files' => [$this->pdf('bachelor.pdf'), $this->pdf('master.pdf')], 'type' => 'degree_certificate', 'acknowledge' => '1']);
 
-        $this->get(route('student.applications.show', $plan))->assertOk()->assertSee('bachelor.pdf')->assertSee('master.pdf')->assertSee('name="files[]"', false)->assertSee('multiple', false);
+        $this->get(route('student.applications.materials', $plan))->assertOk()->assertSee('bachelor.pdf')->assertSee('master.pdf')->assertSee('name="files[]"', false)->assertSee('multiple', false);
     }
 
     public function test_the_masters_and_phd_baseline_fills_the_gaps_the_scholarship_leaves(): void
@@ -135,8 +135,8 @@ class BaselineLanguageAndUploadsTest extends TestCase
         $planDe = app(PlanService::class)->create($student, $de);
         $planUk = app(PlanService::class)->create($student, $uk);
 
-        $this->actingAs($student)->get(route('student.applications.show', $planDe))->assertSee('Language you want to study in')->assertSee('German')->assertSee('English');
-        $this->get(route('student.applications.show', $planUk))->assertSee("No other official language is listed for this scholarship's country.", false);
+        $this->actingAs($student)->get(route('student.applications.show', $planDe))->assertSee('Language of study')->assertSee('German')->assertSee('English');
+        $this->get(route('student.applications.show', $planUk))->assertSee('No other official language is listed', false);
 
         $this->put(route('student.applications.language.update', $planDe), ['study_language' => 'German'])->assertRedirect();
         $this->assertSame('German', $planDe->refresh()->study_language);
@@ -156,7 +156,7 @@ class BaselineLanguageAndUploadsTest extends TestCase
         }
 
         $student = User::factory()->create();
-        $this->actingAs($student)->put(route('student.form.update', 'other_languages'), ['rows' => [['language' => 'Turkish', 'level' => 'Intermediate', 'certificate' => 'TOMER'], ['language' => 'Chinese', 'level' => 'Beginner', 'certificate' => 'HSK 2']]])->assertSessionHasNoErrors();
+        $this->actingAs($student)->put(route('student.form.update'), ['sections' => ['other_languages' => ['rows' => [['language' => 'Turkish', 'level' => 'Intermediate', 'certificate' => 'TOMER'], ['language' => 'Chinese', 'level' => 'Beginner', 'certificate' => 'HSK 2']]]]])->assertSessionHasNoErrors();
         $this->assertSame(['Turkish', 'Chinese'], array_column($forms->formFor($student)->value('other_languages'), 'language'));
         $this->get(route('student.form.show'))->assertSee('Other languages you know')->assertSee('Chinese, Turkish, German');
     }

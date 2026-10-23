@@ -178,9 +178,9 @@ class StudentCaseWorkspaceTest extends TestCase
         $plan = app(PlanService::class)->create($student, $cycle);
         $case = app(CaseService::class)->open($student, $cycle, null, []);
 
-        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertOk()->assertSee('SAS is supporting this application')->assertSee(route('student.cases.show', $case));
-        $this->get(route('student.applications.index'))->assertOk()->assertSee('SAS is helping you with this: New');
-        $this->get(route('student.cases.show', $case))->assertOk()->assertSee(route('student.applications.show', $plan));
+        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertOk()->assertSee('SAS is helping with this application')->assertSee(route('student.cases.show', $case));
+        $this->get(route('student.applications.index'))->assertOk()->assertSee($plan->application_no);
+        $this->get(route('student.cases.show', $case))->assertOk()->assertSee(route('student.applications.materials', $plan));
     }
 
     public function test_the_share_and_message_sections_render(): void

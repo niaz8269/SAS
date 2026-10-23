@@ -16,6 +16,7 @@ use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipRoute;
 use App\Models\SourceEvidence;
 use App\Models\User;
+use App\Support\StudentContext;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Events\MessageSending;
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validation\Rules\Password;
 
@@ -63,6 +65,11 @@ class AppServiceProvider extends ServiceProvider
         });
 
         Event::listen(MessageSending::class, BlockSuppressedRecipients::class);
+
+        // The application pages link through $ctx so the same views serve a student and an agent working for a student.
+        View::composer(['student.*', 'partner.*'], function ($view) {
+            $view->with('ctx', app()->bound(StudentContext::class) ? app(StudentContext::class) : (auth()->user() ? new StudentContext(auth()->user()) : null));
+        });
 
         // Child records of a LIVE cycle can be changed directly by reviewers; every such change is audited.
         foreach ([CycleMilestone::class, CycleRequirement::class, CycleBenefit::class, ScholarshipRoute::class, CycleCriterion::class, SourceEvidence::class] as $model) {

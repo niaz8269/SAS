@@ -39,11 +39,17 @@ class PasswordResetController extends Controller
             'token' => ['required'], 'email' => ['required', 'email'], 'password' => ['required', 'confirmed', PasswordRule::defaults()],
         ]);
 
-        $status = Password::reset($request->only('email', 'password', 'password_confirmation', 'token'), function (User $user, string $password) {
+        $reset = function (User $user, string $password) {
             $user->forceFill(['password' => Hash::make($password), 'remember_token' => Str::random(60)])->save();
+            $user->hasVerifiedEmail() || $user->markEmailAsVerified(); // the link was sent to this address, so using it proves the address is theirs
             DB::table('sessions')->where('user_id', $user->id)->delete(); // revoke other sessions
             event(new PasswordReset($user));
-        });
+        };
+        $credentials = $request->only('email', 'password', 'password_confirmation', 'token');
+        $status = Password::reset($credentials, $reset);
+        if ($status === Password::InvalidToken) {
+            $status = Password::broker('invites')->reset($credentials, $reset); // a student invited by an agent has a week, not an hour
+        }
 
         return $status === Password::PasswordReset
             ? redirect()->route('login')->with('status', 'Your password has been reset. You can now log in.')

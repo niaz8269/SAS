@@ -47,7 +47,7 @@
         <section class="card mt-5 p-5" aria-labelledby="docs-h">
             <h2 id="docs-h" class="font-bold">Your documents</h2>
             <p class="mt-1 text-sm text-muted">@if ($docProgress['required'] === 0) No document is mandatory for this scholarship. @elseif ($docProgress['missing']) <strong>{{ $docProgress['ready'] }} of {{ $docProgress['required'] }}</strong> mandatory documents provided. @else All {{ $docProgress['required'] }} mandatory documents are provided. @endif</p>
-            <a class="btn-primary mt-3" href="{{ route('student.applications.show', $plan) }}">{{ $docProgress['missing'] ? 'Upload my documents' : 'See my documents' }}</a>
+            <a class="btn-primary mt-3" href="{{ route('student.applications.materials', $plan) }}">{{ $docProgress['missing'] ? 'Upload my documents' : 'See my documents' }}</a>
         </section>
     @endif
     <section id="messages" class="card mt-5 p-5" aria-labelledby="msg-h">

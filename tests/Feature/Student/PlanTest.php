@@ -72,7 +72,7 @@ class PlanTest extends TestCase
         $req->update(['text' => 'Certified transcript']);
         CycleRequirement::create(['cycle_id' => $cycle->id, 'text' => 'New reference letter', 'sort' => 2]);
 
-        $this->get(route('student.applications.show', $plan))->assertOk()->assertSee('Requirements updated');
+        $this->get(route('student.applications.tools', $plan))->assertOk()->assertSee('Requirements updated');
         $this->post(route('student.applications.acknowledge', $plan))->assertRedirect();
 
         $tasks = $plan->fresh()->tasks;
@@ -83,7 +83,7 @@ class PlanTest extends TestCase
         $this->assertSame('Certified transcript', $first->snapshot_text);
         $this->assertTrue($tasks->contains('title', 'New reference letter'));
         $this->assertTrue($tasks->contains('title', 'My own task'));
-        $this->get(route('student.applications.show', $plan))->assertDontSee('The official requirements for this call have changed');
+        $this->get(route('student.applications.tools', $plan))->assertDontSee('The official requirements for this call have changed');
     }
 
     public function test_submitted_needs_student_confirmation_and_is_labelled_student_reported(): void
@@ -99,7 +99,7 @@ class PlanTest extends TestCase
         $this->assertSame('submitted', $plan->status->value);
         $this->assertSame('student_reported', $plan->status_source);   // never "platform submitted"
         $this->assertNotNull($plan->submitted_at);
-        $this->get(route('student.applications.show', $plan))->assertSee('Reported by you');
+        $this->get(route('student.applications.tools', $plan))->assertSee('Reported by you');
     }
 
     public function test_invalid_status_transitions_return_409(): void

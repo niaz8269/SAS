@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Student;
 use App\Domain\Documents\DocumentService;
 use App\Domain\Editorial\AuditLog;
 use App\Enums\ScanStatus;
+use App\Http\Controllers\Concerns\ActsForStudent;
 use App\Http\Controllers\Controller;
 use App\Models\Document;
 use App\Models\DocumentAssociation;
@@ -16,9 +17,11 @@ use Illuminate\Validation\Rule;
 /** FILE-01..03 / SEC-03. Upload, list, preview, download and delete are authorised independently. */
 class DocumentController extends Controller
 {
+    use ActsForStudent;
+
     public function index(Request $request, DocumentService $service)
     {
-        $documents = $request->user()->documents()->with(['versions', 'currentVersion', 'associations'])->latest()->get();
+        $documents = $this->student($request)->documents()->with(['versions', 'currentVersion', 'associations'])->latest()->get();
         $used = $documents->flatMap->versions->where('scan_status', '!=', ScanStatus::Rejected)->sum('size');
 
         return view('student.documents.index', [
@@ -41,7 +44,7 @@ class DocumentController extends Controller
         $files = array_values(array_filter(array_merge(Arr::wrap($request->file('files')), Arr::wrap($request->file('file')))));
         foreach ($files as $file) {
             $title = count($files) === 1 && filled($data['title'] ?? null) ? $data['title'] : pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
-            $service->store($request->user(), $file, $data['type'], $title);
+            $service->store($this->student($request), $file, $data['type'], $title); // an agent uploads for the student they look after
         }
 
         return back()->with('status', (count($files) === 1 ? 'Uploaded.' : count($files).' files uploaded.').' Each file is checked for malware before it becomes available.');
@@ -51,7 +54,7 @@ class DocumentController extends Controller
     {
         $this->authorize('update', $document);
         $request->validate(['file' => ['required', 'file']]);
-        $service->store($request->user(), $request->file('file'), $document->type, $document->title, $document);
+        $service->store($document->user, $request->file('file'), $document->type, $document->title, $document);
 
         return back()->with('status', 'New version uploaded and queued for scanning.');
     }

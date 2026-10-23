@@ -52,6 +52,19 @@ class Invoice extends Model
         return $this->belongsTo(PaymentOption::class);
     }
 
+    /** A short fee status for the agent's list: Unpaid, Paid, Refund due, Refunded or Cancelled. */
+    public function feeLabel(): string
+    {
+        return match (true) {
+            $this->refund_status === 'due' => 'Refund due',
+            $this->refund_status === 'paid' => 'Refunded',
+            $this->status === 'paid' => 'Paid',
+            $this->status === 'issued' => 'Unpaid',
+            $this->status === 'void' => 'Cancelled',
+            default => (string) $this->status,
+        };
+    }
+
     public function amount(): string
     {
         return self::money($this->amount_cents, $this->currency);

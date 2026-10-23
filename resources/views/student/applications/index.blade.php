@@ -1,26 +1,51 @@
-<x-layouts.student title="My applications">
-    <p class="text-sm font-semibold uppercase tracking-wide text-navy-700">Step 3 of 3</p>
-    <h1 class="text-2xl font-extrabold">My applications</h1>
-    <p class="mt-1 text-sm text-muted">These are the scholarships you chose. Open one to see the documents it needs and upload them.</p>
-    @forelse ($plans as $p)
-        @php($d = $docs[$p->id])
-        <a href="{{ route('student.applications.show', $p) }}" class="card mt-4 block p-5 hover:border-navy-500">
-            <div class="flex flex-wrap items-center justify-between gap-2">
-                <h2 class="font-bold">{{ $p->cycle->displayName() }}</h2>
-                @if ($p->review_requested_at)<span class="badge-green">Sent to SAS for review</span>
-                @elseif ($d['required'] > 0 && $d['ready'] === $d['required'])<span class="badge-green">Documents ready</span>
-                @else<span class="badge-warn">Documents needed</span>@endif
-            </div>
-            @if ($d['required'] > 0)
-                <div class="mt-3 h-2 overflow-hidden rounded-full bg-ivory-deep" role="progressbar" aria-valuemin="0" aria-valuemax="{{ $d['required'] }}" aria-valuenow="{{ $d['ready'] }}" aria-label="Mandatory documents provided"><div class="h-full bg-navy-600" style="width: {{ round($d['ready'] / $d['required'] * 100) }}%"></div></div>
-                <p class="mt-1 text-sm text-muted">{{ $d['ready'] }} of {{ $d['required'] }} mandatory documents provided</p>
-            @else
-                <p class="mt-2 text-sm text-muted">No mandatory documents.</p>
-            @endif
-            @if ($supported->has($p->cycle_id))<p class="mt-1 text-xs"><strong>SAS is helping you with this: {{ $supported[$p->cycle_id]->statusLabel() }}</strong></p>@endif
-        </a>
-    @empty
-        <div class="card mt-4 p-8 text-center"><p class="font-semibold">You have not chosen a scholarship yet</p><p class="mt-1 text-sm text-muted">Go to step 2 and press Apply next to the scholarships you want.</p><a href="{{ route('student.choose.index') }}" class="btn-primary mt-4">Choose scholarships</a></div>
-    @endforelse
-    @if ($plans->isNotEmpty())<p class="mt-5"><a class="btn-outline" href="{{ route('student.choose.index') }}">Choose another scholarship</a></p>@endif
-</x-layouts.student>
+<x-dynamic-component :component="$ctx->layout()" title="My applications">
+    <h1 class="text-2xl font-extrabold">{{ $ctx->isAgent() ? 'Applications of '.$student->name : 'My applications' }}</h1>
+    <p class="mt-1 text-sm text-muted">Each application has four steps: apply, application form, upload materials, submit. Open one to continue.</p>
+
+    <nav class="mt-4 flex flex-wrap gap-2 text-sm" aria-label="Filter applications">
+        @foreach (['all' => 'All', 'unfinished' => 'Unfinished', 'finished' => 'Finished'] as $k => $l)
+            <a href="{{ $ctx->route('applications.index', $k === 'all' ? [] : ['show' => $k]) }}" @if ($filter === $k) aria-current="page" @endif class="rounded-t-lg border px-4 py-2 font-medium {{ $filter === $k ? 'border-navy-700 bg-white text-navy-900' : 'border-line bg-ivory-deep text-muted hover:text-ink' }}">{{ $l }}</a>
+        @endforeach
+        <a class="btn-primary ml-auto !py-1.5" href="{{ $ctx->route('choose.index') }}">+ Add application</a>
+    </nav>
+
+    <div class="card overflow-x-auto">
+        <table class="w-full text-left text-sm">
+            <caption class="sr-only">Applications</caption>
+            <thead><tr class="border-b border-line text-muted"><th scope="col" class="px-4 py-3">Application number</th><th scope="col" class="px-4 py-3">Apply for</th><th scope="col" class="px-4 py-3">Status</th><th scope="col" class="px-4 py-3">Last operation time</th><th scope="col" class="px-4 py-3">Review remarks</th><th scope="col" class="px-4 py-3">Progress</th></tr></thead>
+            <tbody>
+            @forelse ($plans as $p)
+                @php($d = $docs[$p->id])
+                @php($case = $cases[$p->cycle_id] ?? null)
+                <tr class="border-b border-line/60 align-top">
+                    <td class="px-4 py-4 whitespace-nowrap">{{ $p->application_no }}</td>
+                    <td class="px-4 py-4"><a class="font-medium text-navy-700 hover:underline" href="{{ $ctx->route('applications.show', $p) }}">{{ $p->cycle->displayName() }}</a><br><span class="text-muted">{{ $p->degreeLevel?->name ?? ($p->cycle->degreeLevels->count() === 1 ? $p->cycle->degreeLevels->first()->name : 'Degree not chosen') }}</span></td>
+                    <td class="px-4 py-4"><span class="{{ match ($p->stage) { 'passed' => 'badge-green', 'returned' => 'badge-alert', 'submitted' => 'badge-warn', default => 'badge-neutral' } }}">{{ $p->statusFor($case) }}</span></td>
+                    <td class="px-4 py-4 whitespace-nowrap">{{ $p->updated_at->format('Y-m-d H:i') }}</td>
+                    <td class="px-4 py-4 max-w-xs whitespace-pre-line text-alert">{{ $p->review_remarks }}</td>
+                    <td class="px-4 py-4">
+                        <ul class="space-y-0.5">
+                            <li>Form {{ $formPercent >= 100 ? 'completed' : 'not completed' }} <a class="text-navy-700 underline" href="{{ $ctx->route('applications.form', $p) }}">View</a></li>
+                            <li>Attachments {{ $d['missing'] ? 'not completed' : 'completed' }} <a class="text-navy-700 underline" href="{{ $ctx->route('applications.materials', $p) }}">View</a></li>
+                            <li><a class="text-navy-700 underline" href="{{ $ctx->route('applications.preview', $p) }}" target="_blank" rel="noopener">Preview application form</a></li>
+                            <li><a class="font-medium text-navy-700 underline" href="{{ $ctx->route($p->isEditable() ? 'applications.submit' : 'applications.show', $p) }}">{{ $p->isEditable() ? 'Apply submit' : 'View details' }}</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            @empty
+                <tr><td colspan="6" class="px-4 py-8 text-center text-muted">No applications here yet. Press <strong>+ Add application</strong> to choose a scholarship.</td></tr>
+            @endforelse
+            </tbody>
+        </table>
+    </div>
+
+    <section class="card mt-5 p-4 text-sm" aria-labelledby="legend-h">
+        <h2 id="legend-h" class="font-bold">What the statuses mean</h2>
+        <dl class="mt-2 space-y-1 text-muted">
+            <div><dt class="inline font-semibold text-ink">Unfinished:</dt> <dd class="inline">you are still filling it in. Nothing has been sent to SAS.</dd></div>
+            <div><dt class="inline font-semibold text-ink">Submitted for review:</dt> <dd class="inline">SAS is checking the form and documents.</dd></div>
+            <div><dt class="inline font-semibold text-ink">Returned:</dt> <dd class="inline">something needs to be fixed. Follow the remarks, then submit again.</dd></div>
+            <div><dt class="inline font-semibold text-ink">Review passed:</dt> <dd class="inline">SAS found it complete. SAS tells you the next step and shows its own status after this.</dd></div>
+        </dl>
+    </section>
+</x-dynamic-component>

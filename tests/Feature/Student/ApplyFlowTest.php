@@ -10,7 +10,6 @@ use App\Domain\StudentWorkspace\PlanService;
 use App\Models\DegreeLevel;
 use App\Models\DocumentKind;
 use App\Models\DocumentRule;
-use App\Models\Enquiry;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
 use App\Models\User;
@@ -80,9 +79,9 @@ class ApplyFlowTest extends TestCase
 
         $this->post(route('student.applications.store'), ['cycle_id' => $chevening->id])->assertRedirect();
         $plan = $student->applicationPlans()->firstOrFail();
-        $this->get(route('student.applications.show', $plan))->assertOk()
-            ->assertSee('Documents for this scholarship')->assertSee('Two reference letters from your referees.')->assertSee('Pre-admission letter');
-        $this->get(route('student.choose.index'))->assertSee('Chosen. See documents');
+        $this->get(route('student.applications.materials', $plan))->assertOk()
+            ->assertSee('Upload materials')->assertSee('Two reference letters from your referees.')->assertSee('Pre-admission letter');
+        $this->get(route('student.choose.index'))->assertSee('Open application');
     }
 
     public function test_documents_the_scholarship_does_not_ask_for_are_tucked_into_an_other_section(): void
@@ -93,7 +92,7 @@ class ApplyFlowTest extends TestCase
         $student = User::factory()->create();
         $plan = app(PlanService::class)->create($student, $cycle);
 
-        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertOk()
+        $this->actingAs($student)->get(route('student.applications.materials', $plan))->assertOk()
             ->assertSeeInOrder(['Pre-admission letter', 'Other documents you can add', 'Passport', 'CSCA score report']);
     }
 
@@ -105,11 +104,11 @@ class ApplyFlowTest extends TestCase
         $student = User::factory()->create();
         $plan = app(PlanService::class)->create($student, $csc);
 
-        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertDontSee('CSCA score report');
+        $this->actingAs($student)->get(route('student.applications.materials', $plan))->assertDontSee('CSCA score report');
         $this->put(route('student.applications.level.update', $plan), ['degree_level_id' => DegreeLevel::where('code', 'bachelor')->value('id')])->assertRedirect();
-        $this->get(route('student.applications.show', $plan))->assertSee('CSCA score report')->assertSee('Mandatory');
+        $this->get(route('student.applications.materials', $plan))->assertSee('CSCA score report')->assertSee('Mandatory');
         $this->put(route('student.applications.level.update', $plan), ['degree_level_id' => DegreeLevel::where('code', 'master')->value('id')]);
-        $this->get(route('student.applications.show', $plan))->assertDontSee('CSCA score report');
+        $this->get(route('student.applications.materials', $plan))->assertDontSee('CSCA score report');
     }
 
     public function test_a_scholarship_with_one_degree_level_needs_no_choice(): void
@@ -157,7 +156,7 @@ class ApplyFlowTest extends TestCase
 
         $this->upload($student, 'passport');
         $this->get(route('student.dashboard'))->assertSee('All mandatory documents provided')->assertSee('1 of 1 mandatory documents');
-        $this->get(route('student.applications.show', $plan))->assertSee('All 1 mandatory documents are provided.')->assertSee('% filled in');
+        $this->get(route('student.applications.materials', $plan))->assertSee('1 of 1')->assertSee('mandatory documents done');
     }
 
     public function test_a_student_cannot_change_the_level_of_someone_elses_application(): void
@@ -179,37 +178,6 @@ class ApplyFlowTest extends TestCase
 
         $case = app(CaseService::class)->open($student, $csc, null, []);
         $this->assertSame($plan->degree_level_id, $case->degree_level_id);
-    }
-
-    public function test_the_student_asks_sas_to_review_once_every_mandatory_document_is_in(): void
-    {
-        $a = $this->scholarship('Award A');
-        $this->rule($a, 'passport', 'required');
-        foreach (['photo', 'degree_certificate', 'transcript'] as $k) {
-            $this->rule($a, $k, 'optional');
-        }
-        $student = User::factory()->create();
-        $plan = app(PlanService::class)->create($student, $a);
-
-        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertSee('Available after you upload: Passport');
-        $this->post(route('student.applications.review', $plan))->assertSessionHas('error');
-        $this->assertNull($plan->refresh()->review_requested_at);
-        $this->assertSame(0, Enquiry::count());
-
-        $this->upload($student, 'passport');
-        $this->post(route('student.applications.review', $plan))->assertSessionHas('status');
-        $this->assertNotNull($plan->refresh()->review_requested_at);
-        $enquiry = Enquiry::firstOrFail();
-        $this->assertSame($student->id, $enquiry->user_id);
-        $this->assertSame($a->id, $enquiry->cycle_id);
-        $this->assertStringContainsString('Award A', $enquiry->message);
-        $this->get(route('student.applications.show', $plan))->assertSee('You asked SAS to review this application')->assertSee($enquiry->reference);
-        $this->get(route('student.applications.index'))->assertSee('Sent to SAS for review');
-
-        $this->post(route('student.applications.review', $plan))->assertSessionHas('error');
-        $this->assertSame(1, Enquiry::count(), 'a second request is refused');
-
-        $this->actingAs(User::factory()->create())->post(route('student.applications.review', $plan))->assertForbidden();
     }
 
     public function test_the_home_page_points_to_the_next_step(): void
@@ -235,7 +203,7 @@ class ApplyFlowTest extends TestCase
     public function test_the_application_form_shows_which_sections_still_need_answers(): void
     {
         $student = User::factory()->create();
-        $this->actingAs($student)->get(route('student.form.show'))->assertOk()->assertSee('to answer')->assertSee('Optional')->assertSee('Step 1 of 3');
+        $this->actingAs($student)->get(route('student.form.show'))->assertOk()->assertSee('Application form')->assertSee('required answers are filled in')->assertSee('Declaration');
     }
 
     public function test_opening_a_case_for_a_scholarship_gives_the_student_their_application_page(): void

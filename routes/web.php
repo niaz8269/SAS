@@ -12,6 +12,9 @@ use App\Http\Controllers\EmailWebhookController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\Partner\AgentAccountController;
+use App\Http\Controllers\Partner\AgentApplicationController;
+use App\Http\Controllers\Partner\AgentStudentController;
 use App\Http\Controllers\Partner\OrganisationController;
 use App\Http\Controllers\Partner\SubmissionController;
 use App\Http\Controllers\PartnerController;
@@ -88,35 +91,30 @@ Route::middleware(['auth', 'active'])->group(function () {
 });
 
 /*
+/*
 |--------------------------------------------------------------------------
-| Student workspace (separate experience from the public site)
+| The application pages: choose scholarships, the four-step application, documents.
+| Registered twice: for a student (student.*) and for a recruiting agent working on a student they look after
+| (partner.student.*, under partner/students/{student}). ResolveStudentContext decides whose pages they are.
 |--------------------------------------------------------------------------
 */
-Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verified'])->group(function () {
-    Route::get('/', Student\DashboardController::class)->name('dashboard');
-
-    Route::get('/profile', [Student\ProfileController::class, 'edit'])->name('profile.edit');
-    Route::put('/profile', [Student\ProfileController::class, 'update'])->name('profile.update');
-
+$applicationRoutes = function () {
     Route::get('/choose-scholarships', [Student\ScholarshipPickerController::class, 'index'])->name('choose.index');
     Route::get('/application-form', [Student\ApplicationFormController::class, 'show'])->name('form.show');
-    Route::post('/application-form/declaration', [Student\ApplicationFormController::class, 'declare'])->name('form.declare');
-    Route::put('/application-form/{section}', [Student\ApplicationFormController::class, 'update'])->where('section', '[a-z_]+')->name('form.update');
+    Route::put('/application-form', [Student\ApplicationFormController::class, 'update'])->name('form.update');
 
-    Route::get('/saved-scholarships', [Student\SavedScholarshipController::class, 'index'])->name('saved.index');
-    Route::post('/saved-scholarships', [Student\SavedScholarshipController::class, 'store'])->name('saved.store');
-    Route::delete('/saved-scholarships/{cycle}', [Student\SavedScholarshipController::class, 'destroy'])->name('saved.destroy');
-
-    Route::get('/cases', [Student\CaseController::class, 'index'])->name('cases.index');
-    Route::get('/cases/{case:public_id}', [Student\CaseController::class, 'show'])->name('cases.show');
-    Route::post('/cases/{case:public_id}/messages', [Student\CaseController::class, 'message'])->middleware('throttle:enquiries')->name('cases.messages.store');
-    Route::put('/cases/{case:public_id}/form', [Student\CaseController::class, 'shareForm'])->name('cases.form.update');
-    Route::put('/cases/{case:public_id}/documents', [Student\CaseController::class, 'share'])->name('cases.documents.update');
     Route::get('/applications', [Student\ApplicationController::class, 'index'])->name('applications.index');
     Route::post('/applications', [Student\ApplicationController::class, 'store'])->name('applications.store');
     Route::get('/applications/{plan:public_id}', [Student\ApplicationController::class, 'show'])->name('applications.show');
+    Route::get('/applications/{plan:public_id}/form', [Student\ApplicationFormController::class, 'show'])->name('applications.form');
+    Route::put('/applications/{plan:public_id}/form', [Student\ApplicationFormController::class, 'update'])->name('applications.form.update');
+    Route::get('/applications/{plan:public_id}/materials', [Student\ApplicationController::class, 'materials'])->name('applications.materials');
+    Route::put('/applications/{plan:public_id}/materials', [Student\ApplicationController::class, 'reasons'])->name('applications.reasons');
+    Route::get('/applications/{plan:public_id}/submit', [Student\ApplicationController::class, 'submitPage'])->name('applications.submit');
+    Route::post('/applications/{plan:public_id}/submit', [Student\ApplicationController::class, 'submit'])->middleware('throttle:enquiries')->name('applications.submit.store');
+    Route::get('/applications/{plan:public_id}/preview', [Student\ApplicationController::class, 'preview'])->name('applications.preview');
+    Route::get('/applications/{plan:public_id}/tools', [Student\ApplicationController::class, 'tools'])->name('applications.tools');
     Route::patch('/applications/{plan:public_id}', [Student\ApplicationController::class, 'update'])->name('applications.update');
-    Route::post('/applications/{plan:public_id}/request-review', [Student\ApplicationController::class, 'requestReview'])->middleware('throttle:enquiries')->name('applications.review');
     Route::put('/applications/{plan:public_id}/study-language', [Student\ApplicationController::class, 'language'])->name('applications.language.update');
     Route::put('/applications/{plan:public_id}/degree-level', [Student\ApplicationController::class, 'level'])->name('applications.level.update');
     Route::delete('/applications/{plan:public_id}', [Student\ApplicationController::class, 'destroy'])->name('applications.destroy');
@@ -127,11 +125,36 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::post('/applications/{plan:public_id}/documents', [Student\ApplicationController::class, 'attachDocument'])->name('applications.documents.attach');
     Route::delete('/applications/{plan:public_id}/documents/{document:public_id}', [Student\ApplicationController::class, 'detachDocument'])->name('applications.documents.detach');
 
-    Route::get('/documents', [Student\DocumentController::class, 'index'])->name('documents.index');
     Route::post('/documents', [Student\DocumentController::class, 'store'])->middleware('throttle:uploads')->name('documents.store');
-    Route::post('/documents/{document:public_id}/versions', [Student\DocumentController::class, 'storeVersion'])->middleware('throttle:uploads')->name('documents.versions.store');
     Route::get('/documents/{document:public_id}/download', [Student\DocumentController::class, 'download'])->name('documents.download');
     Route::delete('/documents/{document:public_id}', [Student\DocumentController::class, 'destroy'])->name('documents.destroy');
+};
+
+/*
+|--------------------------------------------------------------------------
+| Student workspace (separate experience from the public site)
+|--------------------------------------------------------------------------
+*/
+Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verified', 'student.context'])->group(function () use ($applicationRoutes) {
+    Route::get('/', Student\DashboardController::class)->name('dashboard');
+
+    Route::get('/profile', [Student\ProfileController::class, 'edit'])->name('profile.edit');
+    Route::put('/profile', [Student\ProfileController::class, 'update'])->name('profile.update');
+
+    $applicationRoutes();
+
+    Route::get('/saved-scholarships', [Student\SavedScholarshipController::class, 'index'])->name('saved.index');
+    Route::post('/saved-scholarships', [Student\SavedScholarshipController::class, 'store'])->name('saved.store');
+    Route::delete('/saved-scholarships/{cycle}', [Student\SavedScholarshipController::class, 'destroy'])->name('saved.destroy');
+
+    Route::get('/cases', [Student\CaseController::class, 'index'])->name('cases.index');
+    Route::get('/cases/{case:public_id}', [Student\CaseController::class, 'show'])->name('cases.show');
+    Route::post('/cases/{case:public_id}/messages', [Student\CaseController::class, 'message'])->middleware('throttle:enquiries')->name('cases.messages.store');
+    Route::put('/cases/{case:public_id}/form', [Student\CaseController::class, 'shareForm'])->name('cases.form.update');
+    Route::put('/cases/{case:public_id}/documents', [Student\CaseController::class, 'share'])->name('cases.documents.update');
+
+    Route::get('/documents', [Student\DocumentController::class, 'index'])->name('documents.index');
+    Route::post('/documents/{document:public_id}/versions', [Student\DocumentController::class, 'storeVersion'])->middleware('throttle:uploads')->name('documents.versions.store');
 
     Route::get('/enquiries', Student\EnquiryListController::class)->name('enquiries.index');
 
@@ -151,15 +174,18 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::post('/notifications/{id}/read', [Student\NotificationController::class, 'read'])->name('notifications.read');
 });
 
+// Staff read an application that was sent for review (the policy allows it only once it is no longer a draft).
+Route::get('/review/applications/{plan:public_id}/preview', [Student\ApplicationController::class, 'preview'])->middleware(['auth', 'active', 'verified'])->name('review.preview');
+
 // Staff open a document a student shared on a case. The policy allows only active shares on cases the staff member may view.
 Route::get('/files/{document:public_id}/download', [Student\DocumentController::class, 'download'])->middleware(['auth', 'active', 'verified'])->name('files.download');
 
 /*
 |--------------------------------------------------------------------------
-| Partner area. R1: informational only; moderated self-service submissions arrive in R2.
+| Partner area. Universities and funders send scholarship listings; recruiting agents manage their students' applications.
 |--------------------------------------------------------------------------
 */
-Route::prefix('partner')->name('partner.')->middleware(['auth', 'active', 'verified'])->group(function () {
+Route::prefix('partner')->name('partner.')->middleware(['auth', 'active', 'verified'])->group(function () use ($applicationRoutes) {
     Route::get('/', PartnerController::class)->name('home');
     Route::get('/submissions', [SubmissionController::class, 'index'])->name('submissions.index');
     Route::get('/submissions/new', [SubmissionController::class, 'create'])->name('submissions.create');
@@ -169,4 +195,26 @@ Route::prefix('partner')->name('partner.')->middleware(['auth', 'active', 'verif
     Route::put('/submissions/{submission:public_id}', [SubmissionController::class, 'update'])->name('submissions.update');
     Route::get('/organisation', [OrganisationController::class, 'edit'])->name('organisation.edit');
     Route::put('/organisation', [OrganisationController::class, 'update'])->name('organisation.update');
+
+    Route::get('/password', [AgentAccountController::class, 'passwordForm'])->name('password.edit');
+    Route::put('/password', [AgentAccountController::class, 'updatePassword'])->middleware('throttle:login')->name('password.update');
+
+    // Recruiting agents: their students, and the applications of those students.
+    Route::middleware('agent')->group(function () use ($applicationRoutes) {
+        Route::get('/students', [AgentStudentController::class, 'index'])->name('students.index');
+        Route::get('/students/new', [AgentStudentController::class, 'create'])->name('students.create');
+        Route::post('/students', [AgentStudentController::class, 'store'])->middleware('throttle:enquiries')->name('students.store');
+        Route::get('/students/import', [AgentStudentController::class, 'importForm'])->name('students.import');
+        Route::get('/students/import/template', [AgentStudentController::class, 'template'])->name('students.template');
+        Route::post('/students/import', [AgentStudentController::class, 'import'])->middleware('throttle:enquiries')->name('students.import.store');
+        Route::get('/applications', [AgentApplicationController::class, 'index'])->name('applications.index');
+
+        Route::prefix('students/{student:public_id}')->name('student.')->middleware('student.context')->group(function () use ($applicationRoutes) {
+            Route::get('/', [AgentStudentController::class, 'show'])->name('show');
+            Route::get('/edit', [AgentStudentController::class, 'edit'])->name('edit');
+            Route::put('/', [AgentStudentController::class, 'update'])->name('update');
+            Route::post('/invite', [AgentStudentController::class, 'invite'])->middleware('throttle:enquiries')->name('invite');
+            $applicationRoutes();
+        });
+    });
 });

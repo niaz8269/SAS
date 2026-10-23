@@ -1,64 +1,14 @@
-@php($cycle = $plan->cycle)
-<x-layouts.student :title="$cycle->displayName()">
-    <p class="text-sm"><a class="text-navy-700 underline" href="{{ route('student.applications.index') }}">&larr; My applications</a></p>
-    <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-navy-700">Step 3 of 3: upload documents</p>
-    <h1 class="text-2xl font-extrabold">{{ $cycle->displayName() }}</h1>
-    <p class="mt-1 text-sm text-muted"><a class="text-navy-700 underline" href="{{ route('scholarships.show', [$cycle->programme->slug, $cycle->slug]) }}">Read the scholarship details</a>. Nothing is sent to the scholarship provider from this page.</p>
-    @if ($case)
-        <div class="mt-4 rounded-md border border-navy-300 bg-navy-50 p-4 text-sm">
-            <strong>SAS is supporting this application.</strong> Status: {{ $case->statusLabel() }}.
-            <a class="text-navy-700 underline" href="{{ route('student.cases.show', $case) }}">Open the case for fees, messages and sharing documents</a>
-        </div>
-    @endif
+<x-dynamic-component :component="$ctx->layout()" title="Notes and tracker">
+    @include('student.wizard._header')
+    <h2 class="mt-5 text-lg font-bold">Notes, deadlines and tracker</h2>
+    <p class="mt-1 text-sm text-muted">Optional tools: a personal checklist, the deadline, your own notes and linked documents. The four steps above are all you need to apply.</p>
 
     @if ($changed)
         <div class="mt-4 rounded-md border border-warn/40 bg-warn-soft p-4 text-sm" role="alert">
             <strong>Requirements updated.</strong> The official requirements for this call have changed since you created your checklist.
-            <form method="POST" action="{{ route('student.applications.acknowledge', $plan) }}" class="mt-2">@csrf<button class="btn-outline !py-1.5">Review and add the changes</button></form>
-            <p class="mt-1 text-xs">Your completed items and notes will be kept.</p>
+            <form method="POST" action="{{ $ctx->route('applications.acknowledge', $plan) }}" class="mt-2">@csrf<button class="btn-outline !py-1.5">Review and add the changes</button></form>
         </div>
     @endif
-
-    @if ($formPercent < 100)
-        <div class="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gold/60 bg-gold-soft p-4 text-sm">
-            <p><strong>First, finish your details.</strong> They are {{ $formPercent }}% filled in. They are used for every scholarship you choose.</p>
-            <a class="btn-primary !py-1.5" href="{{ route('student.form.show') }}">Fill in my details</a>
-        </div>
-    @endif
-
-    <section id="language" class="card mt-5 p-5" aria-labelledby="lang-h">
-        <h2 id="lang-h" class="font-bold">Language you want to study in</h2>
-        @if (count($languageOptions) > 1)
-            <form method="POST" action="{{ route('student.applications.language.update', $plan) }}" class="mt-2 flex flex-wrap items-end gap-2">
-                @csrf @method('PUT')
-                <div><label for="study-language" class="label">Choose English, or the official language of {{ $cycle->destinations->pluck('name')->implode(', ') ?: ($cycle->programme->hostCountry?->name ?? 'the country') }}</label>
-                    <select id="study-language" name="study_language" class="input"><option value="">Not chosen yet</option>@foreach ($languageOptions as $l)<option value="{{ $l }}" @selected($plan->study_language === $l)>{{ $l }}</option>@endforeach</select></div>
-                <button class="btn-outline">Save</button>
-            </form>
-        @else
-            <p class="mt-1 text-sm">English. No other official language is listed for this scholarship's country.</p>
-        @endif
-    </section>
-
-    @include('student._document-checklist', ['rows' => $rows, 'docProgress' => $docProgress, 'levels' => $levels, 'levelId' => $levelId, 'levelAction' => route('student.applications.level.update', $plan)])
-
-    <section class="card mt-5 p-5" aria-labelledby="ready-h">
-        <h2 id="ready-h" class="font-bold">When your documents are ready</h2>
-        @if ($plan->review_requested_at)
-            <p class="mt-2 text-sm">You asked SAS to review this application on {{ $plan->review_requested_at->format('j M Y') }}. SAS will contact you by email. @if ($plan->reviewEnquiry)Your reference is {{ $plan->reviewEnquiry->reference }}.@endif</p>
-        @else
-            <p class="mt-1 text-sm text-muted">Upload the mandatory documents above, then ask SAS to review your application. This does not cost anything. SAS will tell you the next step.</p>
-            @if ($docProgress['missing'])
-                <button class="btn-primary mt-3 cursor-not-allowed opacity-50" disabled aria-describedby="why-wait">Ask SAS to review my application</button>
-                <p id="why-wait" class="mt-2 text-xs text-muted">Available after you upload: {{ implode(', ', $docProgress['missing']) }}.</p>
-            @else
-                <form method="POST" action="{{ route('student.applications.review', $plan) }}" class="mt-3">@csrf<button class="btn-primary">Ask SAS to review my application</button></form>
-            @endif
-        @endif
-    </section>
-
-    <details class="mt-6">
-        <summary class="cursor-pointer text-sm font-medium text-navy-700">More tools for this application (checklist, deadline, status, notes) <span class="text-muted">&middot; optional</span></summary>
     <div class="mt-5 grid gap-6 lg:grid-cols-[1fr_340px]">
         <div class="space-y-6">
             <section class="card p-5" aria-labelledby="tasks">
@@ -66,20 +16,20 @@
                 <ul class="mt-3 divide-y divide-line">
                     @forelse ($plan->tasks as $t)
                         <li class="flex items-start gap-3 py-3">
-                            <form method="POST" action="{{ route('student.applications.tasks.update', [$plan, $t]) }}">@csrf @method('PATCH')
+                            <form method="POST" action="{{ $ctx->route('applications.tasks.update', [$plan, $t]) }}">@csrf @method('PATCH')
                                 <input type="hidden" name="completed" value="{{ $t->completed_at ? 0 : 1 }}">
                                 <button class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded border {{ $t->completed_at ? 'border-navy-700 bg-navy-700 text-white' : 'border-slate-400 bg-white' }}" aria-label="{{ $t->completed_at ? 'Mark not done' : 'Mark done' }}: {{ $t->title }}" aria-pressed="{{ $t->completed_at ? 'true' : 'false' }}">@if($t->completed_at)&#10003;@endif</button></form>
                             <div class="min-w-0 flex-1"><p class="{{ $t->completed_at ? 'text-muted line-through' : '' }}">{{ $t->title }}
                                 @if ($t->requirement_updated)<span class="badge-warn">Updated requirement</span>@endif
                                 @if ($t->is_custom)<span class="badge-neutral">My task</span>@endif</p>
                                 @if ($t->due_at)<p class="text-xs text-muted">Due {{ $t->due_at->format('j M Y') }}</p>@endif</div>
-                            @if ($t->is_custom)<form method="POST" action="{{ route('student.applications.tasks.destroy', [$plan, $t]) }}">@csrf @method('DELETE')<button class="text-xs text-alert underline" aria-label="Remove task {{ $t->title }}">Remove</button></form>@endif
+                            @if ($t->is_custom)<form method="POST" action="{{ $ctx->route('applications.tasks.destroy', [$plan, $t]) }}">@csrf @method('DELETE')<button class="text-xs text-alert underline" aria-label="Remove task {{ $t->title }}">Remove</button></form>@endif
                         </li>
                     @empty
                         <li class="py-3 text-sm text-muted">The requirements for this call are not confirmed yet. Add your own tasks below.</li>
                     @endforelse
                 </ul>
-                <form method="POST" action="{{ route('student.applications.tasks.store', $plan) }}" class="mt-4 grid gap-2 sm:grid-cols-[1fr_160px_auto]">
+                <form method="POST" action="{{ $ctx->route('applications.tasks.store', $plan) }}" class="mt-4 grid gap-2 sm:grid-cols-[1fr_160px_auto]">
                     @csrf
                     <div><label for="task-title" class="sr-only">New task</label><input id="task-title" name="title" required maxlength="180" placeholder="Add your own task" class="input"></div>
                     <div><label for="task-due" class="sr-only">Due date</label><input id="task-due" type="date" name="due_at" class="input"></div>
@@ -91,13 +41,13 @@
                 <p class="mt-1 text-xs text-muted">Linking is your choice and stays private to you in this release.</p>
                 <ul class="mt-3 space-y-2 text-sm">@forelse ($attached as $a)
                     <li class="flex items-center justify-between gap-2"><span>{{ $a->document->title }} <span class="badge-neutral">{{ $a->document->currentVersion?->scan_status->label() }}</span></span>
-                        <form method="POST" action="{{ route('student.applications.documents.detach', [$plan, $a->document]) }}">@csrf @method('DELETE')<button class="text-xs text-alert underline">Unlink</button></form></li>
+                        <form method="POST" action="{{ $ctx->route('applications.documents.detach', [$plan, $a->document]) }}">@csrf @method('DELETE')<button class="text-xs text-alert underline">Unlink</button></form></li>
                 @empty<li class="text-muted">No documents linked.</li>@endforelse</ul>
                 @if ($documents->isNotEmpty())
-                    <form method="POST" action="{{ route('student.applications.documents.attach', $plan) }}" class="mt-3 flex gap-2">@csrf
+                    <form method="POST" action="{{ $ctx->route('applications.documents.attach', $plan) }}" class="mt-3 flex gap-2">@csrf
                         <label for="doc" class="sr-only">Document</label><select id="doc" name="document" class="input">@foreach ($documents as $d)<option value="{{ $d->public_id }}">{{ $d->title }}</option>@endforeach</select><button class="btn-outline">Link</button></form>
                 @else
-                    <p class="mt-3 text-sm text-muted">Upload documents in <a class="text-navy-700 underline" href="{{ route('student.documents.index') }}">your document vault</a> first.</p>
+                    <p class="mt-3 text-sm text-muted">Upload documents in <a class="text-navy-700 underline" href="{{ $ctx->route('documents.index') }}">your document vault</a> first.</p>
                 @endif
             </section>
         </div>
@@ -110,7 +60,7 @@
                     @if ($plan->status === \App\Enums\PlanStatus::Submitted || $plan->submitted_at) <span class="text-xs text-muted">{{ $plan->status_source === 'staff_confirmed' ? 'Confirmed by staff' : 'Reported by you' }}</span>@endif</p>
                 @if ($plan->submitted_at)<p class="mt-1 text-xs text-muted">Reported submitted on {{ $plan->submitted_at->format('j M Y') }}@if($plan->submission_reference), ref. {{ $plan->submission_reference }}@endif</p>@endif
 
-                <form method="POST" action="{{ route('student.applications.update', $plan) }}" class="mt-4 space-y-3" x-data="{ s: '{{ $plan->status->value }}' }">
+                <form method="POST" action="{{ $ctx->route('applications.update', $plan) }}" class="mt-4 space-y-3" x-data="{ s: '{{ $plan->status->value }}' }">
                     @csrf @method('PATCH')
                     <div><label for="status-select" class="label">Change status</label>
                         <select id="status-select" name="status" x-model="s" class="input">@foreach (\App\Enums\PlanStatus::options() as $v => $l)<option value="{{ $v }}">{{ $l }}</option>@endforeach</select>
@@ -127,8 +77,7 @@
                 </form>
             </section>
 
-            <form method="POST" action="{{ route('student.applications.destroy', $plan) }}" onsubmit="return confirm('Delete this plan and its checklist? This cannot be undone.')">@csrf @method('DELETE')<button class="btn-danger w-full">Delete plan</button></form>
+            <form method="POST" action="{{ $ctx->route('applications.destroy', $plan) }}" onsubmit="return confirm('Delete this plan and its checklist? This cannot be undone.')">@csrf @method('DELETE')<button class="btn-danger w-full">Delete plan</button></form>
         </aside>
     </div>
-    </details>
-</x-layouts.student>
+</x-dynamic-component>

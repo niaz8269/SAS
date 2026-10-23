@@ -139,34 +139,35 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
         $this->assertSame('ready', $shared->firstWhere(fn ($r) => $r['kind']->key === 'passport')['state']);
     }
 
-    public function test_form_answers_are_validated_saved_by_section_and_encrypted(): void
+    public function test_form_answers_are_validated_saved_together_and_encrypted(): void
     {
         $student = User::factory()->create(['name' => 'Amina Khan']);
         $china = Country::factory()->create(['name' => 'Pakistan']);
         $this->actingAs($student)->get(route('student.form.show'))->assertOk()->assertSee('Personal information')->assertSee('Amina');
 
-        $this->put(route('student.form.update', 'personal'), ['surname' => 'Khan', 'given_name' => 'Amina', 'nationality' => 'Atlantis', 'passport_no' => 'AB1234567'])->assertSessionHasErrors('nationality');
-        $this->put(route('student.form.update', 'personal'), ['surname' => 'Khan', 'given_name' => 'Amina', 'nationality' => 'Pakistan', 'passport_no' => 'AB1234567', 'gender' => 'Female'])->assertSessionHasNoErrors();
-        $this->put(route('student.form.update', 'contact'), ['email' => 'not-an-email'])->assertSessionHasErrors('email');
-        $this->put(route('student.form.update', 'nonsense'), [])->assertNotFound();
+        $this->put(route('student.form.update'), ['sections' => ['personal' => ['surname' => 'Khan', 'given_name' => 'Amina', 'nationality' => 'Atlantis', 'passport_no' => 'AB1234567']]])->assertSessionHasErrors('sections.personal.nationality');
+        $this->put(route('student.form.update'), ['sections' => ['personal' => ['surname' => 'Khan', 'given_name' => 'Amina', 'nationality' => 'Pakistan', 'passport_no' => 'AB1234567', 'gender' => 'Female'], 'contact' => ['phone' => '+923001234567']]])->assertSessionHasNoErrors();
+        $this->put(route('student.form.update'), ['sections' => ['contact' => ['email' => 'not-an-email']]])->assertSessionHasErrors('sections.contact.email');
 
         $form = ApplicationForm::where('user_id', $student->id)->firstOrFail();
         $this->assertSame('AB1234567', $form->value('passport_no'));
         $this->assertSame('Pakistan', $form->value('nationality'));
+        $this->assertSame('+923001234567', $form->value('phone'));
         $this->assertStringNotContainsString('AB1234567', (string) DB::table('application_forms')->where('user_id', $student->id)->value('data'), 'stored encrypted');
 
-        $this->put(route('student.form.update', 'personal'), ['surname' => 'Khan', 'given_name' => 'Amina', 'nationality' => 'Pakistan'])->assertSessionHasNoErrors();
+        $this->put(route('student.form.update'), ['sections' => ['personal' => ['surname' => 'Khan', 'given_name' => 'Amina', 'nationality' => 'Pakistan']]])->assertSessionHasNoErrors();
         $this->assertNull($form->refresh()->value('passport_no'), 'a blank answer clears it');
         $this->assertSame($china->name, $form->value('nationality'));
+        $this->assertSame('+923001234567', $form->value('phone'), 'a section that was not sent is left alone');
     }
 
     public function test_repeating_sections_keep_filled_rows_and_cap_the_count(): void
     {
         $student = User::factory()->create();
-        $this->actingAs($student)->put(route('student.form.update', 'employment'), ['rows' => [['employer' => 'Acme', 'duration' => '2021 to 2023'], ['employer' => ''], ['employer' => 'Beta']]])->assertSessionHasNoErrors();
+        $this->actingAs($student)->put(route('student.form.update'), ['sections' => ['employment' => ['rows' => [['employer' => 'Acme', 'duration' => '2021 to 2023'], ['employer' => ''], ['employer' => 'Beta']]]]])->assertSessionHasNoErrors();
         $this->assertSame(['Acme', 'Beta'], array_column(ApplicationForm::firstOrFail()->value('employment'), 'employer'));
 
-        $this->put(route('student.form.update', 'employment'), ['rows' => [['employer' => 'a'], ['employer' => 'b'], ['employer' => 'c'], ['employer' => 'd']]])->assertSessionHasErrors('rows');
+        $this->put(route('student.form.update'), ['sections' => ['employment' => ['rows' => [['employer' => 'a'], ['employer' => 'b'], ['employer' => 'c'], ['employer' => 'd']]]]])->assertSessionHasErrors('sections.employment.rows');
     }
 
     public function test_completeness_needs_the_required_answers_and_the_declaration(): void
@@ -190,7 +191,7 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
         }
         $form->forceFill(['data' => $answers])->save();
         $this->assertSame(['Declaration'], $service->missing($form));
-        $this->actingAs($student)->post(route('student.form.declare'), ['agreed' => '1'])->assertRedirect();
+        $this->actingAs($student)->put(route('student.form.update'), ['declared' => '1'])->assertRedirect();
         $this->assertSame([], $service->missing($form->refresh()));
         $this->assertSame(100, $service->percent($form));
     }
@@ -205,11 +206,11 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
         $this->rule('csca', 'required', $cycle->programme_id, $level->id);
 
         $this->actingAs($student)->get(route('student.cases.show', $case))->assertOk()
-            ->assertSee('Your documents')->assertSee(route('student.applications.show', $plan))->assertSee('Let your counsellor see your details');
+            ->assertSee('Your documents')->assertSee(route('student.applications.materials', $plan))->assertSee('Let your counsellor see your details');
 
         $this->put(route('student.applications.level.update', $plan), ['degree_level_id' => $level->id])->assertRedirect();
         $this->assertSame($level->id, $case->refresh()->degree_level_id, 'the case follows the level the student chose');
-        $this->get(route('student.applications.show', $plan))->assertSee('CSCA score report');
+        $this->get(route('student.applications.materials', $plan))->assertSee('CSCA score report');
         $this->assertSame('required', $this->rows($case)['csca']);
 
         $this->put(route('student.cases.form.update', $case), ['share' => '1'])->assertRedirect();

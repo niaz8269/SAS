@@ -55,6 +55,9 @@ class OperationsOverview extends StatsOverviewWidget
             $cases = ServiceCase::query()->when(! $user->can('cases.manage'), fn ($q) => $q->where('advisor_id', $user->id));
             $stats[] = Stat::make($user->can('cases.manage') ? 'Open student cases' : 'My open cases', (clone $cases)->whereNotIn('status', ['closed', 'withdrawn', 'rejected', 'accepted'])->count())->description('New, in progress or submitted');
             $stats[] = Stat::make('Waiting for an outcome', (clone $cases)->where('status', 'submitted')->count())->description('Submitted to the funder');
+            if ($user->can('cases.manage')) {
+                $stats[] = Stat::make('Applications to review', ApplicationPlan::where('stage', 'submitted')->count())->description('Sent by students or agents')->color('warning');
+            }
             $stats[] = Stat::make('Students waiting for a reply', (clone $cases)->where('awaiting_reply', true)->count())->description('Open the case and answer under Messages')->color('warning');
             if ($user->can('cases.manage')) {
                 $stats[] = Stat::make('Cases without a counsellor', ServiceCase::whereNull('advisor_id')->whereNotIn('status', ['closed', 'withdrawn', 'rejected'])->count())->color('warning');

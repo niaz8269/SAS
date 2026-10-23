@@ -71,21 +71,34 @@ class ApplicationFormService
     /** Saves one section. Other sections are untouched; blank values are removed. */
     public function save(User $user, string $key, array $input): ApplicationForm
     {
-        $section = $this->section($key);
+        return $this->saveAll($user, [$key => $input]);
+    }
+
+    /**
+     * Saves every section present in $sections (key => submitted values) in one go, with one audit entry. Sections not present are untouched;
+     * within a present section, blank values are removed.
+     *
+     * @param  array<string,array>  $sections
+     */
+    public function saveAll(User $user, array $sections, ?User $actor = null): ApplicationForm
+    {
         $form = $this->formFor($user);
         $data = $form->data ?? [];
-        $names = array_keys($section['fields']);
+        foreach ($sections as $key => $input) {
+            $section = $this->section($key);
+            $names = array_keys($section['fields']);
+            if (isset($section['repeat'])) {
+                $data[$key] = collect($input['rows'] ?? $input)->map(fn ($row) => array_filter(collect($row)->only($names)->all(), 'filled'))->filter()->values()->all();
 
-        if (isset($section['repeat'])) {
-            $data[$key] = collect($input['rows'] ?? [])->map(fn ($row) => array_filter(collect($row)->only($names)->all(), 'filled'))->filter()->values()->all();
-        } else {
+                continue;
+            }
             foreach ($names as $name) {
                 $value = $input[$name] ?? null;
                 filled($value) ? $data[$name] = $value : $this->forget($data, $name);
             }
         }
         $form->forceFill(['data' => $data])->save();
-        AuditLog::record('application_form.saved', $form, null, ['section' => $key], null, $user); // field values are never logged
+        AuditLog::record('application_form.saved', $form, null, ['sections' => array_keys($sections)], null, $actor ?? $user); // field values are never logged
 
         return $form;
     }
@@ -94,6 +107,9 @@ class ApplicationFormService
     {
         $form = $this->formFor($user);
         $data = $form->data ?? [];
+        if (filled($data['_declared_at'] ?? null) === $agreed) {
+            return $form; // nothing changed
+        }
         $agreed ? $data['_declared_at'] = now()->toDateTimeString() : $this->forget($data, '_declared_at');
         $form->forceFill(['data' => $data])->save();
         AuditLog::record($agreed ? 'application_form.declared' : 'application_form.declaration_withdrawn', $form, null, null, null, $user);
