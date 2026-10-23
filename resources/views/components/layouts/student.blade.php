@@ -23,6 +23,8 @@
     <meta name="theme-color" content="#123a7a">
     <meta name="robots" content="noindex, nofollow">
     <title>{{ $title }} | {{ config('sas.brand.short') }} student workspace</title>
+    <link rel="preload" href="{{ asset('fonts/inter-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ asset('fonts/inter.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen bg-ivory-deep/60" x-data="{ nav: false }" @keydown.escape.window="nav = false">

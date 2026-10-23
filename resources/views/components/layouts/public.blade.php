@@ -25,6 +25,8 @@
     @if ($og_image)<meta property="og:image" content="{{ $og_image }}">@endif
     <meta name="twitter:card" content="summary">
     {{ $head ?? '' }}
+    <link rel="preload" href="{{ asset('fonts/inter-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ asset('fonts/inter.css') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="min-h-screen flex flex-col">
@@ -32,25 +34,25 @@
 
 <header class="sticky top-0 z-40 border-b border-line bg-white/90 shadow-[0_1px_0_rgba(18,58,122,0.04),0_8px_24px_-16px_rgba(18,58,122,0.25)] backdrop-blur-md" x-data="{ open: false }" @keydown.escape.window="open = false">
     <div class="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-gold" aria-hidden="true"></div>
-    <div class="container-page flex h-[4.5rem] items-center justify-between gap-4 2xl:gap-6">
+    <div class="container-page flex h-[4.5rem] items-center justify-between gap-4">
         <a href="{{ route('home') }}" class="shrink-0" aria-label="{{ config('sas.brand.name') }} – home"><x-brand /></a>
 
         <nav aria-label="Primary" class="hidden min-w-0 flex-1 justify-center xl:flex">
-            <ul class="flex items-center gap-0.5 whitespace-nowrap text-sm font-medium 2xl:text-[15px]">
+            <ul class="flex items-center gap-0.5 whitespace-nowrap text-sm font-medium">
                 @foreach ($nav as $item)
                     <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif
-                           class="group relative block rounded-lg px-2.5 py-2 transition 2xl:px-3 hover:bg-navy-50 hover:text-navy-800 {{ $item['active'] ? 'font-semibold text-navy-800' : 'text-ink' }}">{{ $item['label'] }}
+                           class="group relative block rounded-lg px-2.5 py-2 transition hover:bg-navy-50 hover:text-navy-800 {{ $item['active'] ? 'font-semibold text-navy-800' : 'text-ink' }}">{{ $item['label'] }}
                            <span class="absolute inset-x-2.5 -bottom-0.5 h-0.5 rounded-full bg-gold transition {{ $item['active'] ? 'opacity-100' : 'opacity-0 group-hover:opacity-60' }}" aria-hidden="true"></span></a></li>
                 @endforeach
             </ul>
         </nav>
 
-        <div class="hidden shrink-0 items-center gap-2 whitespace-nowrap xl:flex">
+        <div class="hidden shrink-0 items-center gap-2 whitespace-nowrap xl:ml-3 xl:flex">
             @auth
-                <a href="{{ auth()->user()->isStaff() ? url('/admin') : route('student.dashboard') }}" class="rounded-lg px-2.5 py-2 text-sm font-medium text-ink transition hover:bg-navy-50 2xl:text-[15px]">{{ auth()->user()->isStaff() ? 'Staff admin' : 'Student dashboard' }}</a>
+                <a href="{{ auth()->user()->isStaff() ? url('/admin') : route('student.dashboard') }}" class="rounded-lg px-2.5 py-2 text-sm font-medium text-ink transition hover:bg-navy-50">{{ auth()->user()->isStaff() ? 'Staff admin' : 'Student dashboard' }}</a>
             @else
-                <a href="{{ route('login') }}" class="rounded-lg px-2.5 py-2 text-sm font-medium text-ink transition hover:bg-navy-50 2xl:text-[15px]">Login</a>
-                <a href="{{ route('register') }}" class="rounded-lg border border-navy-200 px-3 py-2 text-sm font-semibold 2xl:text-[15px] text-navy-800 transition hover:border-navy-500 hover:bg-navy-50">Register</a>
+                <a href="{{ route('login') }}" class="rounded-lg px-2.5 py-2 text-sm font-medium text-ink transition hover:bg-navy-50">Login</a>
+                <a href="{{ route('register') }}" class="rounded-lg border border-navy-200 px-3 py-2 text-sm font-semibold text-navy-800 transition hover:border-navy-500 hover:bg-navy-50">Register</a>
             @endauth
             <a href="{{ route('consultations.create') }}" class="btn-primary rounded-lg px-3.5 py-2.5 shadow-sm shadow-navy-900/20">Book a Consultation <span aria-hidden="true">&rarr;</span></a>
         </div>

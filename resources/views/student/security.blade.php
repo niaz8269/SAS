@@ -6,7 +6,7 @@
         <div class="card mt-5 border-warn/40 bg-warn-soft p-5" role="alert">
             <h2 class="font-bold">Save your recovery codes</h2>
             <p class="mt-1 text-sm">Each code works once if you lose your phone. They are shown only now.</p>
-            <ul class="mt-3 grid grid-cols-2 gap-1 font-mono text-sm">@foreach ($recoveryCodes as $c)<li>{{ $c }}</li>@endforeach</ul>
+            <ul class="mt-3 grid grid-cols-2 gap-1 tabular-nums tracking-wider text-sm">@foreach ($recoveryCodes as $c)<li>{{ $c }}</li>@endforeach</ul>
         </div>
     @endif
 
@@ -27,7 +27,7 @@
             <h2 class="text-lg font-bold">Turn on two-step verification</h2>
             <ol class="mt-2 list-decimal space-y-1 pl-5 text-sm"><li>Scan this code with an authenticator app, or type the key.</li><li>Enter the 6-digit code it shows.</li></ol>
             <img src="{{ $qr }}" alt="QR code to scan with your authenticator app" width="176" height="176" class="mt-3 h-44 w-44 max-w-full">
-            <p class="mt-2 text-sm">Key: <code class="font-mono">{{ $secret }}</code></p>
+            <p class="mt-2 text-sm">Key: <code class="tabular-nums tracking-wider">{{ $secret }}</code></p>
             <form method="POST" action="{{ route('student.security.enable') }}" class="mt-4 flex items-end gap-2">@csrf
                 <div><label for="code" class="label">Code</label><input id="code" name="code" inputmode="numeric" autocomplete="one-time-code" required class="input @error('code') input-error @enderror">@error('code')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
                 <button class="btn-primary">Turn on</button></form>

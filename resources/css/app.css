@@ -4,11 +4,12 @@
 @source '../../storage/framework/views/*.php';
 
 /*
- * SAS design tokens from the logo: navy #123a7a, gold #caa249, cream #f7f3eb. System fonts only (no third-party font requests).
+ * SAS design tokens from the logo: navy #123a7a, gold #caa249, cream #f7f3eb. One typeface (Inter, self-hosted from /fonts, so no third-party font requests); CJK text falls back to the system font.
  */
 @theme {
-    --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    --font-display: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-display: var(--font-sans);
+    --font-mono: var(--font-sans); /* one typeface everywhere */
 
     --color-navy-50: #eef3fb;
     --color-navy-100: #dce6f6;
@@ -90,7 +91,7 @@
 
     .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-navy-600; }
     .section-title { @apply font-extrabold; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1.2; }
-    .prose-sas { @apply max-w-none text-[15px] leading-7 text-ink; }
+    .prose-sas { @apply max-w-none leading-7 text-ink; font-size: 0.9375rem; }
     .prose-sas h2 { @apply mt-8 mb-2 text-xl font-bold; }
     .prose-sas h3 { @apply mt-6 mb-2 text-lg font-semibold; }
     .prose-sas p { @apply my-3; }
