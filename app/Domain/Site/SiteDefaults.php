@@ -49,7 +49,7 @@ class SiteDefaults
                 ['Resources', '/resources'], ['About', '/about'], ['Contact', '/contact']],
             'footer_explore' => [['Scholarships', '/scholarships'], ['Study destinations', '/destinations'], ['Our services', '/services'],
                 ['Resources', '/resources'], ['For partner organisations', '/partners']],
-            'footer_policies' => [['Privacy', '/legal/privacy'], ['Terms', '/legal/terms'], ['Cancellation and refunds', '/legal/refunds'],
+            'footer_policies' => [['Privacy policy', '/legal/privacy'], ['Terms and conditions', '/legal/terms'], ['Cancellation and refunds', '/legal/refunds'],
                 ['Accessibility', '/legal/accessibility'], ['Accuracy and corrections', '/corrections/new']],
         ];
         foreach ($menus as $location => $items) {

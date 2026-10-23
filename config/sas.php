@@ -10,6 +10,9 @@ return [
 
     // Owner decisions still open (docs/DECISIONS.md). Shown in the footer until confirmed.
     'legal_entity' => env('SAS_LEGAL_ENTITY', 'Operating legal entity: to be confirmed'),
+    // Set SAS_LEGAL_APPROVED=true once the operating entity or counsel has approved the privacy, terms and refund texts; it hides the draft notice on those pages.
+    'legal_approved' => (bool) env('SAS_LEGAL_APPROVED', false),
+
     // Contact details (editable in the admin under Website, Site settings; these are the defaults).
     'contact_email' => env('SAS_CONTACT_EMAIL', 'info@sas.cas.moe'),
     'enquiry_email' => env('SAS_ENQUIRY_EMAIL', 'enquiry@sas.cas.moe'),
