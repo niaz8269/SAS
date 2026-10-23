@@ -7,7 +7,7 @@
             <p class="mt-2 text-muted">{{ $intro?->body ?: 'Ask a question or tell us what help you need. Enquiries are free and never create a charge. Please do not include passport numbers or other sensitive details here.' }}</p>
 
             @if ($cycle)
-                <p class="mt-4 rounded-md bg-forest-50 px-4 py-3 text-sm">About: <strong>{{ $cycle->programme->title }} {{ $cycle->cycle_key }}</strong></p>
+                <p class="mt-4 rounded-md bg-navy-50 px-4 py-3 text-sm">About: <strong>{{ $cycle->programme->title }} {{ $cycle->cycle_key }}</strong></p>
             @endif
 
             <form method="POST" action="{{ route('enquiries.store') }}" class="card mt-6 space-y-4 p-6" novalidate>
@@ -40,8 +40,8 @@
                 <div x-data="{ pref: '{{ old('contact_preference', 'email') }}' }" class="grid gap-4 sm:grid-cols-2">
                     <fieldset>
                         <legend class="label">How should we contact you?</legend>
-                        <label class="mr-4 inline-flex items-center gap-2 text-sm"><input type="radio" name="contact_preference" value="email" x-model="pref" class="text-forest-700"> Email</label>
-                        <label class="inline-flex items-center gap-2 text-sm"><input type="radio" name="contact_preference" value="phone" x-model="pref" class="text-forest-700"> Phone</label>
+                        <label class="mr-4 inline-flex items-center gap-2 text-sm"><input type="radio" name="contact_preference" value="email" x-model="pref" class="text-navy-700"> Email</label>
+                        <label class="inline-flex items-center gap-2 text-sm"><input type="radio" name="contact_preference" value="phone" x-model="pref" class="text-navy-700"> Phone</label>
                     </fieldset>
                     <div>
                         <label for="phone" class="label">Phone <span class="font-normal text-muted" x-text="pref === 'phone' ? '(required)' : '(optional)'"></span></label>
@@ -55,8 +55,8 @@
                     @error('message')<p class="field-error" role="alert">{{ $message }}</p>@enderror
                 </div>
                 <div>
-                    <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="consent" value="1" class="mt-1 rounded border-slate-300 text-forest-700" @checked(old('consent'))>
-                        <span>I agree that {{ config('sas.brand.short') }} may contact me about this enquiry. See the <a class="text-forest-700 underline" href="{{ route('legal.show', 'privacy') }}">privacy notice</a>.</span></label>
+                    <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="consent" value="1" class="mt-1 rounded border-slate-300 text-navy-700" @checked(old('consent'))>
+                        <span>I agree that {{ config('sas.brand.short') }} may contact me about this enquiry. See the <a class="text-navy-700 underline" href="{{ route('legal.show', 'privacy') }}">privacy notice</a>.</span></label>
                     @error('consent')<p class="field-error" role="alert">{{ $message }}</p>@enderror
                 </div>
                 <button class="btn-primary btn-lg">Send enquiry</button>
@@ -65,10 +65,10 @@
         @if (! $aside || $aside->enabled)
         <aside class="card h-fit p-5 text-sm">
             <h2 class="font-bold">{{ $aside?->heading ?: 'Other ways to reach us' }}</h2>
-            <p class="mt-2">Email: <a class="text-forest-700 underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a></p>
+            <p class="mt-2">Email: <a class="text-navy-700 underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a></p>
             <p class="mt-2 text-muted">{{ $aside?->body ?: 'If the form does not work for you, email us and we will reply.' }}</p>
             @if ($aside ? $aside->cta_label : true)
-                <p class="mt-4"><a class="text-forest-700 underline" href="{{ $aside ? \App\Domain\Site\Site::href($aside->cta_url) : route('consultations.create') }}">{{ $aside?->cta_label ?: 'Request a consultation' }}</a></p>
+                <p class="mt-4"><a class="text-navy-700 underline" href="{{ $aside ? \App\Domain\Site\Site::href($aside->cta_url) : route('consultations.create') }}">{{ $aside?->cta_label ?: 'Request a consultation' }}</a></p>
             @endif
         </aside>
         @endif

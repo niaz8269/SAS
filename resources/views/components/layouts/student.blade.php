@@ -17,6 +17,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32.png') }}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('images/favicon-64.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
+    <meta name="theme-color" content="#123a7a">
     <meta name="robots" content="noindex, nofollow">
     <title>{{ $title }} | {{ config('sas.brand.short') }} student workspace</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -29,7 +33,7 @@
             <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded-md border border-line lg:hidden" @click="nav = !nav" :aria-expanded="nav.toString()" aria-controls="student-nav" aria-label="Workspace menu">
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
             </button>
-            <a href="{{ route('student.dashboard') }}"><x-brand compact /></a>
+            <a href="{{ route('student.dashboard') }}"><x-brand /></a>
             <span class="hidden text-sm text-muted sm:inline">Student workspace</span>
         </div>
         <div class="flex items-center gap-3 text-sm">
@@ -44,7 +48,7 @@
         <ul class="card space-y-0.5 p-2 text-sm">
             @foreach ($items as [$label, $url, $pattern])
                 <li><a href="{{ $url }}" @if(request()->routeIs($pattern)) aria-current="page" @endif
-                       class="block rounded-md px-3 py-2 font-medium hover:bg-forest-50 {{ request()->routeIs($pattern) ? 'bg-forest-100 text-forest-900' : 'text-ink' }}">{{ $label }}</a></li>
+                       class="block rounded-md px-3 py-2 font-medium hover:bg-navy-50 {{ request()->routeIs($pattern) ? 'bg-navy-100 text-navy-900' : 'text-ink' }}">{{ $label }}</a></li>
             @endforeach
         </ul>
     </nav>

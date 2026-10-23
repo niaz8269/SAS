@@ -17,7 +17,7 @@
                 <select id="p-lang" name="language" class="input"><option value="">Any language</option>@foreach ($languages as $l)<option value="{{ $l }}" @selected($filters['language'] === $l)>{{ $l }}</option>@endforeach</select></div>
             <div><label for="p-prov" class="label">Province</label>
                 <select id="p-prov" name="province" class="input"><option value="">Any province</option>@foreach ($provinces as $p)<option value="{{ $p }}" @selected($filters['province'] === $p)>{{ $p }}</option>@endforeach</select></div>
-            <label class="flex items-center gap-2 text-sm md:col-span-2"><input type="checkbox" name="csc" value="1" class="rounded border-slate-300 text-forest-700" @checked($filters['csc'])> Only programmes listed as open to Chinese Government Scholarship applicants (&#9733;)</label>
+            <label class="flex items-center gap-2 text-sm md:col-span-2"><input type="checkbox" name="csc" value="1" class="rounded border-slate-300 text-navy-700" @checked($filters['csc'])> Only programmes listed as open to Chinese Government Scholarship applicants (&#9733;)</label>
             <button class="btn-primary">Search programmes</button>
         </form>
 

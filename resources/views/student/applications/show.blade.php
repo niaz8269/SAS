@@ -1,9 +1,9 @@
 @php($cycle = $plan->cycle)
 <x-layouts.student :title="$cycle->label()">
-    <p class="text-sm"><a class="text-forest-700 underline" href="{{ route('student.applications.index') }}">&larr; All plans</a></p>
+    <p class="text-sm"><a class="text-navy-700 underline" href="{{ route('student.applications.index') }}">&larr; All plans</a></p>
     <h1 class="mt-1 text-2xl font-extrabold">{{ $cycle->label() }}</h1>
     <p class="mt-1 text-sm text-muted">Private plan. Tracking here does not mean anything was submitted to the scholarship provider.
-        <a class="text-forest-700 underline" href="{{ route('scholarships.show', [$cycle->programme->slug, $cycle->slug]) }}">View public listing</a></p>
+        <a class="text-navy-700 underline" href="{{ route('scholarships.show', [$cycle->programme->slug, $cycle->slug]) }}">View public listing</a></p>
 
     @if ($changed)
         <div class="mt-4 rounded-md border border-warn/40 bg-warn-soft p-4 text-sm" role="alert">
@@ -22,7 +22,7 @@
                         <li class="flex items-start gap-3 py-3">
                             <form method="POST" action="{{ route('student.applications.tasks.update', [$plan, $t]) }}">@csrf @method('PATCH')
                                 <input type="hidden" name="completed" value="{{ $t->completed_at ? 0 : 1 }}">
-                                <button class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded border {{ $t->completed_at ? 'border-forest-700 bg-forest-700 text-white' : 'border-slate-400 bg-white' }}" aria-label="{{ $t->completed_at ? 'Mark not done' : 'Mark done' }}: {{ $t->title }}" aria-pressed="{{ $t->completed_at ? 'true' : 'false' }}">@if($t->completed_at)&#10003;@endif</button></form>
+                                <button class="mt-0.5 inline-flex h-6 w-6 items-center justify-center rounded border {{ $t->completed_at ? 'border-navy-700 bg-navy-700 text-white' : 'border-slate-400 bg-white' }}" aria-label="{{ $t->completed_at ? 'Mark not done' : 'Mark done' }}: {{ $t->title }}" aria-pressed="{{ $t->completed_at ? 'true' : 'false' }}">@if($t->completed_at)&#10003;@endif</button></form>
                             <div class="min-w-0 flex-1"><p class="{{ $t->completed_at ? 'text-muted line-through' : '' }}">{{ $t->title }}
                                 @if ($t->requirement_updated)<span class="badge-warn">Updated requirement</span>@endif
                                 @if ($t->is_custom)<span class="badge-neutral">My task</span>@endif</p>
@@ -51,7 +51,7 @@
                     <form method="POST" action="{{ route('student.applications.documents.attach', $plan) }}" class="mt-3 flex gap-2">@csrf
                         <label for="doc" class="sr-only">Document</label><select id="doc" name="document" class="input">@foreach ($documents as $d)<option value="{{ $d->public_id }}">{{ $d->title }}</option>@endforeach</select><button class="btn-outline">Link</button></form>
                 @else
-                    <p class="mt-3 text-sm text-muted">Upload documents in <a class="text-forest-700 underline" href="{{ route('student.documents.index') }}">your document vault</a> first.</p>
+                    <p class="mt-3 text-sm text-muted">Upload documents in <a class="text-navy-700 underline" href="{{ route('student.documents.index') }}">your document vault</a> first.</p>
                 @endif
             </section>
         </div>
@@ -70,7 +70,7 @@
                         <select id="status-select" name="status" x-model="s" class="input">@foreach (\App\Enums\PlanStatus::options() as $v => $l)<option value="{{ $v }}">{{ $l }}</option>@endforeach</select>
                         @error('status')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
                     <div x-show="s === 'submitted'" x-cloak class="space-y-3 rounded-md bg-ivory-deep p-3">
-                        <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="confirm_submitted" value="1" class="mt-1 rounded border-slate-300 text-forest-700"><span>I confirm I submitted this application on the official website.</span></label>
+                        <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="confirm_submitted" value="1" class="mt-1 rounded border-slate-300 text-navy-700"><span>I confirm I submitted this application on the official website.</span></label>
                         @error('confirm_submitted')<p class="field-error" role="alert">{{ $message }}</p>@enderror
                         <div><label for="sub-at" class="label">Date submitted</label><input id="sub-at" type="date" name="submitted_at" max="{{ now()->toDateString() }}" class="input"></div>
                         <div><label for="sub-ref" class="label">Reference (optional)</label><input id="sub-ref" name="submission_reference" class="input"></div>

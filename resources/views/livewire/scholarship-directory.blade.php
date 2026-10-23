@@ -23,7 +23,7 @@
                         @if (count($options))
                             <div class="max-h-48 space-y-1 overflow-y-auto pr-1">
                                 @foreach ($options as $value => $label)
-                                    <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $value }}" wire:model.live="{{ $key }}" class="rounded border-slate-300 text-forest-700"> {{ $label }}</label>
+                                    <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $value }}" wire:model.live="{{ $key }}" class="rounded border-slate-300 text-navy-700"> {{ $label }}</label>
                                 @endforeach
                             </div>
                         @else
@@ -45,7 +45,7 @@
                     <fieldset>
                         <legend class="label">Teaching language</legend>
                         @foreach ($languages as $lang)
-                            <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $lang }}" wire:model.live="language" class="rounded border-slate-300 text-forest-700"> {{ $lang }}</label>
+                            <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $lang }}" wire:model.live="language" class="rounded border-slate-300 text-navy-700"> {{ $lang }}</label>
                         @endforeach
                     </fieldset>
                 @endif
@@ -55,7 +55,7 @@
                         <legend class="label">Intake year</legend>
                         <div class="flex flex-wrap gap-3">
                             @foreach ($intakes as $y)
-                                <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $y }}" wire:model.live="intake" class="rounded border-slate-300 text-forest-700"> {{ $y }}</label>
+                                <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $y }}" wire:model.live="intake" class="rounded border-slate-300 text-navy-700"> {{ $y }}</label>
                             @endforeach
                         </div>
                     </fieldset>
@@ -65,7 +65,7 @@
                     <legend class="label">Application status</legend>
                     <div class="space-y-2">
                     @foreach (['open' => 'Open', 'upcoming' => 'Upcoming', 'rolling' => 'Rolling', 'deadline_unconfirmed' => 'Deadline unconfirmed'] as $v => $l)
-                        <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $v }}" wire:model.live="status" class="rounded border-slate-300 text-forest-700"> {{ $l }}</label>
+                        <label class="flex items-center gap-2 text-sm"><input type="checkbox" value="{{ $v }}" wire:model.live="status" class="rounded border-slate-300 text-navy-700"> {{ $l }}</label>
                     @endforeach
                     </div>
                 </fieldset>
@@ -78,7 +78,7 @@
                     </div>
                 </fieldset>
 
-                <label class="flex items-center gap-2 text-sm"><input type="checkbox" wire:model.live="show_closed" class="rounded border-slate-300 text-forest-700"> Include closed calls</label>
+                <label class="flex items-center gap-2 text-sm"><input type="checkbox" wire:model.live="show_closed" class="rounded border-slate-300 text-navy-700"> Include closed calls</label>
 
                 <button type="button" wire:click="clearAll" class="btn-ghost w-full">Clear all filters</button>
             </form>
@@ -106,7 +106,7 @@
                     @foreach ($active as $f)
                         <li><button type="button" wire:click="removeFilter('{{ $f['key'] }}', @js($f['value']))" class="badge-green !py-1" aria-label="Remove filter {{ $f['label'] }}">{{ $f['label'] }} <span aria-hidden="true">&times;</span></button></li>
                     @endforeach
-                    <li><button type="button" wire:click="clearAll" class="text-sm text-forest-700 underline">Clear all</button></li>
+                    <li><button type="button" wire:click="clearAll" class="text-sm text-navy-700 underline">Clear all</button></li>
                 </ul>
             @endif
 

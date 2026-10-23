@@ -9,6 +9,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32.png') }}">
+    <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('images/favicon-64.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
+    <meta name="theme-color" content="#123a7a">
     <title>{{ $fullTitle }}</title>
     <meta name="description" content="{{ $desc }}">
     <link rel="canonical" href="{{ $canonical ?? url()->current() }}">
@@ -27,14 +31,14 @@
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:shadow">Skip to main content</a>
 
 <header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur" x-data="{ open: false }" @keydown.escape.window="open = false">
-    <div class="container-page flex h-16 items-center justify-between gap-4">
+    <div class="container-page flex h-20 items-center justify-between gap-4">
         <a href="{{ route('home') }}" aria-label="{{ config('sas.brand.name') }} – home"><x-brand /></a>
 
         <nav aria-label="Primary" class="hidden lg:block">
             <ul class="flex items-center gap-1 text-sm font-medium">
                 @foreach ($nav as $item)
                     <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif
-                           class="rounded-md px-3 py-2 hover:bg-forest-50 {{ $item['active'] ? 'text-forest-800 font-semibold border-b-2 border-forest-700 rounded-b-none' : 'text-ink' }}">{{ $item['label'] }}</a></li>
+                           class="rounded-md px-3 py-2 hover:bg-navy-50 {{ $item['active'] ? 'text-navy-800 font-semibold border-b-2 border-navy-700 rounded-b-none' : 'text-ink' }}">{{ $item['label'] }}</a></li>
                 @endforeach
             </ul>
         </nav>
@@ -61,7 +65,7 @@
         <nav aria-label="Mobile" class="container-page py-4">
             <ul class="space-y-1 text-base font-medium">
                 @foreach ($nav as $item)
-                    <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif class="block rounded-md px-3 py-3 hover:bg-forest-50 {{ $item['active'] ? 'bg-forest-50 text-forest-800' : '' }}">{{ $item['label'] }}</a></li>
+                    <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif class="block rounded-md px-3 py-3 hover:bg-navy-50 {{ $item['active'] ? 'bg-navy-50 text-navy-800' : '' }}">{{ $item['label'] }}</a></li>
                 @endforeach
             </ul>
             <div class="mt-4 grid gap-2">
@@ -78,7 +82,7 @@
 </header>
 
 @if (\App\Domain\Site\Site::get('announcement_enabled') === '1' && \App\Domain\Site\Site::get('announcement_text'))
-    <div class="bg-forest-800 px-4 py-2 text-center text-sm text-white" role="region" aria-label="Announcement">
+    <div class="bg-navy-800 px-4 py-2 text-center text-sm text-white" role="region" aria-label="Announcement">
         {{ \App\Domain\Site\Site::get('announcement_text') }}
         @if ($aUrl = \App\Domain\Site\Site::get('announcement_url'))
             <a href="{{ \App\Domain\Site\Site::href($aUrl) }}" class="ml-2 font-semibold underline">Learn more</a>

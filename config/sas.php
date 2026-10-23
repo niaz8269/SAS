@@ -5,7 +5,7 @@ return [
         // The owner's spelling is intentional and must be preserved.
         'name' => 'SAS – Scholorship Application Services',
         'short' => 'SAS',
-        'tagline' => 'Global scholarships. Brighter futures.',
+        'tagline' => 'Turning Potential into Admission',
     ],
 
     // Owner decisions still open (docs/DECISIONS.md). Shown in the footer until confirmed.

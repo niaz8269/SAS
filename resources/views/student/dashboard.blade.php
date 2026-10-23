@@ -3,10 +3,10 @@
     <p class="mt-1 text-sm text-muted">Your private workspace. Applications are made on each scholarship's official website; here you plan and track them.</p>
 
     <div class="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <a href="{{ route('student.saved.index') }}" class="card p-4 hover:border-forest-500"><p class="text-3xl font-extrabold">{{ $savedCount }}</p><p class="text-sm text-muted">Saved scholarships</p></a>
-        <a href="{{ route('student.applications.index') }}" class="card p-4 hover:border-forest-500"><p class="text-3xl font-extrabold">{{ $plans->count() }}</p><p class="text-sm text-muted">Application plans</p></a>
-        <a href="{{ route('student.documents.index') }}" class="card p-4 hover:border-forest-500"><p class="text-3xl font-extrabold">{{ $pendingScans }}</p><p class="text-sm text-muted">Documents pending scan</p></a>
-        <a href="{{ route('student.notifications.index') }}" class="card p-4 hover:border-forest-500"><p class="text-3xl font-extrabold">{{ $unread }}</p><p class="text-sm text-muted">Unread notifications</p></a>
+        <a href="{{ route('student.saved.index') }}" class="card p-4 hover:border-navy-500"><p class="text-3xl font-extrabold">{{ $savedCount }}</p><p class="text-sm text-muted">Saved scholarships</p></a>
+        <a href="{{ route('student.applications.index') }}" class="card p-4 hover:border-navy-500"><p class="text-3xl font-extrabold">{{ $plans->count() }}</p><p class="text-sm text-muted">Application plans</p></a>
+        <a href="{{ route('student.documents.index') }}" class="card p-4 hover:border-navy-500"><p class="text-3xl font-extrabold">{{ $pendingScans }}</p><p class="text-sm text-muted">Documents pending scan</p></a>
+        <a href="{{ route('student.notifications.index') }}" class="card p-4 hover:border-navy-500"><p class="text-3xl font-extrabold">{{ $unread }}</p><p class="text-sm text-muted">Unread notifications</p></a>
     </div>
 
     <div class="mt-6 grid gap-6 lg:grid-cols-2">

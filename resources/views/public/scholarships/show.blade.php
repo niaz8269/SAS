@@ -119,7 +119,7 @@
                     <p class="mt-2 text-sm text-muted">Not confirmed. See the official source.</p>
                 @else
                     <ul class="mt-3 space-y-2 text-sm">@foreach ($cycle->requirements as $r)
-                        <li class="flex gap-2"><span aria-hidden="true" class="text-forest-700">&#10003;</span><span>{{ $r->text }} @if(! $r->mandatory)<span class="badge-neutral">optional</span>@endif @if($r->conditional_rule)<span class="text-muted">({{ $r->conditional_rule }})</span>@endif</span></li>
+                        <li class="flex gap-2"><span aria-hidden="true" class="text-navy-700">&#10003;</span><span>{{ $r->text }} @if(! $r->mandatory)<span class="badge-neutral">optional</span>@endif @if($r->conditional_rule)<span class="text-muted">({{ $r->conditional_rule }})</span>@endif</span></li>
                     @endforeach</ul>
                 @endif
             </section>
@@ -133,9 +133,9 @@
                 </p>
                 <ul class="mt-2 space-y-1 text-sm">@foreach ($cycle->evidence as $e)
                     <li>{{ $e->publisher }} <span class="text-muted">({{ str_replace('_', ' ', $e->publisher_type) }}, checked {{ $e->checked_at->format('j M Y') }})</span> —
-                        <a class="text-forest-700 underline" href="{{ $e->url }}" rel="noopener nofollow" target="_blank">{{ parse_url($e->url, PHP_URL_HOST) }}</a></li>
+                        <a class="text-navy-700 underline" href="{{ $e->url }}" rel="noopener nofollow" target="_blank">{{ parse_url($e->url, PHP_URL_HOST) }}</a></li>
                 @endforeach</ul>
-                <p class="mt-3 text-sm"><a class="text-forest-700 underline" href="{{ route('corrections.create', ['cycle' => $cycle->id]) }}">Report an error or an update</a></p>
+                <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('corrections.create', ['cycle' => $cycle->id]) }}">Report an error or an update</a></p>
             </section>
         </div>
 
@@ -161,7 +161,7 @@
                     <p class="mt-1 text-xs text-muted">Creates a private checklist in your workspace. It does not mean an application was submitted.</p>
                 </div>
                 <div>
-                    <a href="{{ route('contact', ['category' => 'writing', 'cycle' => $cycle->id]) }}" class="btn-lime w-full">Get application assistance</a>
+                    <a href="{{ route('contact', ['category' => 'writing', 'cycle' => $cycle->id]) }}" class="btn-gold w-full">Get application assistance</a>
                     <p class="mt-1 text-xs text-muted">Send an enquiry about advice or writing help for this call. No guarantee of selection.</p>
                 </div>
                 @auth
@@ -179,11 +179,11 @@
                 @if ($match)
                     <p class="mt-2"><span class="{{ match($match['result']->value) { 'potential_match' => 'badge-green', 'criterion_not_met' => 'badge-alert', default => 'badge-warn' } }}">{{ $match['result']->label() }}</span></p>
                     <ul class="mt-3 space-y-2 text-sm">@foreach ($match['criteria'] as $c)
-                        <li><span class="font-medium">{{ $c['name'] }}:</span> <span class="{{ $c['status'] === 'met' ? 'text-forest-700' : ($c['status'] === 'not_met' ? 'text-alert' : 'text-muted') }}">{{ ['met' => 'Met', 'not_met' => 'Not met', 'unknown' => 'Unknown'][$c['status']] }}</span><br><span class="text-xs text-muted">{{ $c['explanation'] }}</span></li>
+                        <li><span class="font-medium">{{ $c['name'] }}:</span> <span class="{{ $c['status'] === 'met' ? 'text-navy-700' : ($c['status'] === 'not_met' ? 'text-alert' : 'text-muted') }}">{{ ['met' => 'Met', 'not_met' => 'Not met', 'unknown' => 'Unknown'][$c['status']] }}</span><br><span class="text-xs text-muted">{{ $c['explanation'] }}</span></li>
                     @endforeach</ul>
                     <p class="mt-3 text-xs text-muted">A rule-based indication against published criteria. It is not a prediction of whether you will be selected.</p>
                 @else
-                    <p class="mt-2 text-sm text-muted"><a class="text-forest-700 underline" href="{{ route('register') }}">Create a free account</a> and complete your profile to see how your details compare with the published criteria.</p>
+                    <p class="mt-2 text-sm text-muted"><a class="text-navy-700 underline" href="{{ route('register') }}">Create a free account</a> and complete your profile to see how your details compare with the published criteria.</p>
                 @endif
             </div>
         </aside>

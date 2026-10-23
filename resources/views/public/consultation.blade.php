@@ -28,13 +28,13 @@
             </div>
             <div class="grid gap-4 sm:grid-cols-2">
                 <fieldset><legend class="label">Contact method</legend>
-                    <label class="mr-4 inline-flex items-center gap-2 text-sm"><input type="radio" name="contact_method" value="email" x-model="method" class="text-forest-700"> Email</label>
-                    <label class="inline-flex items-center gap-2 text-sm"><input type="radio" name="contact_method" value="phone" x-model="method" class="text-forest-700"> Phone call</label></fieldset>
+                    <label class="mr-4 inline-flex items-center gap-2 text-sm"><input type="radio" name="contact_method" value="email" x-model="method" class="text-navy-700"> Email</label>
+                    <label class="inline-flex items-center gap-2 text-sm"><input type="radio" name="contact_method" value="phone" x-model="method" class="text-navy-700"> Phone call</label></fieldset>
                 <div><label for="phone" class="label">Phone <span class="font-normal text-muted" x-text="method === 'phone' ? '(required)' : '(optional)'"></span></label>
                     <input id="phone" type="tel" name="phone" value="{{ old('phone', auth()->user()?->phone) }}" placeholder="+44 20 7946 0000" class="input @error('phone') input-error @enderror">@error('phone')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
             </div>
             <div><label for="notes" class="label">Anything we should know? (optional)</label><textarea id="notes" name="notes" rows="4" class="input">{{ old('notes') }}</textarea></div>
-            <div><label class="flex items-start gap-2 text-sm"><input type="checkbox" name="consent" value="1" class="mt-1 rounded border-slate-300 text-forest-700" @checked(old('consent'))><span>I agree that {{ config('sas.brand.short') }} may contact me to arrange this consultation.</span></label>@error('consent')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
+            <div><label class="flex items-start gap-2 text-sm"><input type="checkbox" name="consent" value="1" class="mt-1 rounded border-slate-300 text-navy-700" @checked(old('consent'))><span>I agree that {{ config('sas.brand.short') }} may contact me to arrange this consultation.</span></label>@error('consent')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
             <button class="btn-primary btn-lg">Request consultation</button>
         </form>
     </div>

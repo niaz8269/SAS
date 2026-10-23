@@ -67,10 +67,10 @@ class SiteSettings extends Page
         return $schema->components([
             Section::make('Brand')->description('Shown in the header, footer, page titles and emails. Leave blank to use the built-in wording.')->columns(2)->schema([
                 TextInput::make('brand_name')->label('Site name')->placeholder(config('sas.brand.name'))->maxLength(120),
-                TextInput::make('brand_short')->label('Short name (logo text)')->placeholder(config('sas.brand.short'))->maxLength(30),
+                TextInput::make('brand_short')->label('Short name (small places and emails)')->placeholder(config('sas.brand.short'))->maxLength(30),
                 TextInput::make('tagline')->placeholder(config('sas.brand.tagline'))->maxLength(160)->columnSpanFull(),
                 MediaPicker::make('logo_path')->label('Logo image (optional)')->columnSpanFull()
-                    ->helperText('Replaces the built-in leaf mark in the header. Pick from the media library or use the + to upload.'),
+                    ->helperText('Replaces the bundled SAS logo in the header, footer and portals. Pick from the media library or use the + to upload.'),
                 Textarea::make('default_meta_description')->label('Default search-engine description')->rows(2)->maxLength(300)->columnSpanFull(),
             ]),
             Section::make('Contact and legal')->columns(2)->schema([

@@ -12,8 +12,8 @@
                 <dl class="mt-4 grid gap-x-8 gap-y-2 text-sm sm:grid-cols-2">
                     <div><dt class="font-semibold">Location</dt><dd>{{ $place ?: 'Not listed' }}</dd></div>
                     <div><dt class="font-semibold">Programmes listed</dt><dd>{{ $total ? number_format($total) : 'None listed on the official system' }}</dd></div>
-                    @if ($university->website)<div><dt class="font-semibold">Website</dt><dd><a class="text-forest-700 underline" rel="noopener" href="{{ \App\Domain\Site\Site::href($university->website) }}">{{ $university->website }}</a></dd></div>@endif
-                    @if ($university->source_url)<div><dt class="font-semibold">Official listing</dt><dd><a class="text-forest-700 underline" rel="noopener" href="{{ \App\Domain\Site\Site::href($university->source_url) }}">campuschina.org</a>@if ($university->catalogue_checked_at) <span class="text-muted">(read {{ $university->catalogue_checked_at->format('j M Y') }})</span>@endif</dd></div>@endif
+                    @if ($university->website)<div><dt class="font-semibold">Website</dt><dd><a class="text-navy-700 underline" rel="noopener" href="{{ \App\Domain\Site\Site::href($university->website) }}">{{ $university->website }}</a></dd></div>@endif
+                    @if ($university->source_url)<div><dt class="font-semibold">Official listing</dt><dd><a class="text-navy-700 underline" rel="noopener" href="{{ \App\Domain\Site\Site::href($university->source_url) }}">campuschina.org</a>@if ($university->catalogue_checked_at) <span class="text-muted">(read {{ $university->catalogue_checked_at->format('j M Y') }})</span>@endif</dd></div>@endif
                 </dl>
                 @if ($university->summary)<div class="mt-4 whitespace-pre-line">{{ $university->summary }}</div>@endif
             </div>
@@ -38,7 +38,7 @@
                     <select id="s-level" name="level" class="input"><option value="">Any level</option>@foreach (\App\Models\UniversityProgramme::LEVELS as $k => $v)<option value="{{ $k }}" @selected($filters['level'] === $k)>{{ $v }}</option>@endforeach</select></div>
                 <div><label for="s-lang" class="label">Teaching language</label>
                     <select id="s-lang" name="language" class="input"><option value="">Any language</option>@foreach ($languages as $l)<option value="{{ $l }}" @selected($filters['language'] === $l)>{{ $l }}</option>@endforeach</select></div>
-                <label class="flex items-center gap-2 text-sm md:col-span-3"><input type="checkbox" name="csc" value="1" class="rounded border-slate-300 text-forest-700" @checked($filters['csc'])> Only programmes listed as open to Chinese Government Scholarship applicants (&#9733;)</label>
+                <label class="flex items-center gap-2 text-sm md:col-span-3"><input type="checkbox" name="csc" value="1" class="rounded border-slate-300 text-navy-700" @checked($filters['csc'])> Only programmes listed as open to Chinese Government Scholarship applicants (&#9733;)</label>
                 <button class="btn-primary">Filter</button>
             </form>
 

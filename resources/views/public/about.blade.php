@@ -20,7 +20,7 @@
         </ul>
 
         <h2 class="mt-8 text-xl font-bold">Found a mistake?</h2>
-        <p class="mt-2">Please <a class="text-forest-700 underline" href="{{ route('corrections.create') }}">tell us</a>. We check the official source and fix the listing.</p>
+        <p class="mt-2">Please <a class="text-navy-700 underline" href="{{ route('corrections.create') }}">tell us</a>. We check the official source and fix the listing.</p>
         <p class="mt-8 text-sm text-muted">{{ config('sas.legal_entity') }}</p>
     </div>
 </x-layouts.public>

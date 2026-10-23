@@ -1,17 +1,14 @@
 @props(['compact' => false, 'light' => false])
-@php $logo = \App\Domain\Site\Site::get('logo_path'); @endphp
-<span {{ $attributes->class(['inline-flex items-center gap-2']) }}>
-    @if ($logo)
-        <img src="{{ \Illuminate\Support\Facades\Storage::disk('public_media')->url($logo) }}" alt="" class="h-8 w-auto max-w-[9rem] shrink-0 object-contain">
+@php
+    // The logo staff chose under Site settings wins; otherwise the bundled SAS logo (full lockup, or just the seal when compact).
+    $custom = \App\Domain\Site\Site::get('logo_path');
+    $src = $custom ? \Illuminate\Support\Facades\Storage::disk('public_media')->url($custom) : ($compact ? asset('images/sas-seal.png') : asset('images/sas-logo.webp'));
+@endphp
+<span {{ $attributes->class(['inline-flex items-center']) }}>
+    @if ($light)
+        {{-- On the dark footer the navy artwork sits on a light plate so it stays legible. --}}
+        <span class="inline-flex rounded-xl bg-ivory p-2"><img src="{{ $src }}" alt="{{ config('sas.brand.name') }}" class="h-14 w-auto max-w-[14rem] object-contain" width="{{ $compact ? 56 : 158 }}" height="56"></span>
     @else
-        <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0 {{ $light ? 'text-lime' : 'text-forest-700' }}" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M16 27V13"/><path d="M16 13c0-4 3-7 8-7 0 5-3 8-8 8Z"/><path d="M16 17c0-3-2-5-6-5 0 4 2 6 6 6Z"/><path d="M6 27h20"/>
-        </svg>
+        <img src="{{ $src }}" alt="" class="{{ $compact ? 'h-10' : 'h-12 sm:h-14' }} w-auto max-w-[13rem] shrink-0 object-contain" width="{{ $compact ? 40 : 158 }}" height="{{ $compact ? 40 : 56 }}">
     @endif
-    <span class="leading-tight">
-        <span class="block text-xl font-extrabold tracking-tight {{ $light ? 'text-white' : 'text-forest-900' }}">{{ config('sas.brand.short') }}</span>
-        @unless($compact)
-            <span class="block text-[11px] font-medium {{ $light ? 'text-forest-100' : 'text-muted' }}">{{ \Illuminate\Support\Str::after(config('sas.brand.name'), '– ') }}</span>
-        @endunless
-    </span>
 </span>

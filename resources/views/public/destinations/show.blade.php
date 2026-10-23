@@ -23,13 +23,13 @@
 
             @if (! empty($country->guidance_sources))
                 <section class="mt-6" aria-labelledby="sources"><h2 id="sources" class="text-lg font-bold">Sources</h2>
-                    <ul class="mt-2 list-disc space-y-1 pl-5 text-sm">@foreach ($country->guidance_sources as $s)<li><a class="text-forest-700 underline" rel="noopener nofollow" target="_blank" href="{{ $s['url'] }}">{{ $s['label'] ?? $s['url'] }}</a></li>@endforeach</ul></section>
+                    <ul class="mt-2 list-disc space-y-1 pl-5 text-sm">@foreach ($country->guidance_sources as $s)<li><a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ $s['url'] }}">{{ $s['label'] ?? $s['url'] }}</a></li>@endforeach</ul></section>
             @endif
 
             <section class="mt-8" aria-labelledby="dest-scholarships"><div class="flex flex-wrap items-end justify-between gap-2"><h2 id="dest-scholarships" class="section-title">Scholarships in {{ $country->name }}</h2>
-                <a class="text-sm font-semibold text-forest-700 underline" href="{{ route('scholarships.index', ['destination' => [$country->slug]]) }}">See all &rarr;</a></div>
+                <a class="text-sm font-semibold text-navy-700 underline" href="{{ route('scholarships.index', ['destination' => [$country->slug]]) }}">See all &rarr;</a></div>
                 @if ($cycles->isEmpty())
-                    <p class="card mt-4 p-6 text-sm text-muted">No published scholarships for {{ $country->name }} yet. <a class="text-forest-700 underline" href="{{ route('contact', ['category' => 'advisory']) }}">Ask us</a> and we will look into it.</p>
+                    <p class="card mt-4 p-6 text-sm text-muted">No published scholarships for {{ $country->name }} yet. <a class="text-navy-700 underline" href="{{ route('contact', ['category' => 'advisory']) }}">Ask us</a> and we will look into it.</p>
                 @else
                     <div class="mt-4 grid gap-5 md:grid-cols-2">@foreach ($cycles as $c)<x-cycle-card :cycle="$c" />@endforeach</div>
                 @endif
@@ -37,7 +37,7 @@
         </div>
         <aside class="space-y-4" aria-label="Related services">
             <div class="card p-5"><h2 class="font-bold">Need help applying?</h2>
-                <ul class="mt-3 space-y-2 text-sm">@foreach ($services as $s)<li><a class="text-forest-700 underline" href="{{ route('services.show', $s) }}">{{ $s->name }}</a></li>@endforeach</ul>
+                <ul class="mt-3 space-y-2 text-sm">@foreach ($services as $s)<li><a class="text-navy-700 underline" href="{{ route('services.show', $s) }}">{{ $s->name }}</a></li>@endforeach</ul>
                 <a href="{{ route('consultations.create') }}" class="btn-primary mt-4 w-full">Book a Consultation</a></div>
         </aside>
     </div>

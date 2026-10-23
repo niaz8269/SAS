@@ -10,7 +10,7 @@
                 <tbody>@foreach (\App\Domain\Communication\Preferences::CATEGORIES as $cat => $catLabel)
                     <tr class="border-b border-line/60"><th scope="row" class="py-3 pr-3 font-medium">{{ $catLabel }}</th>
                     @foreach (\App\Domain\Communication\Preferences::CHANNELS as $ch => $chLabel)
-                        <td class="py-3 pr-3"><label class="inline-flex items-center gap-2"><input type="checkbox" name="pref[{{ $cat }}][{{ $ch }}]" value="1" class="rounded border-slate-300 text-forest-700" @checked($preferences[$cat.'.'.$ch]->enabled ?? false)><span class="sr-only">{{ $catLabel }} by {{ $chLabel }}</span></label></td>
+                        <td class="py-3 pr-3"><label class="inline-flex items-center gap-2"><input type="checkbox" name="pref[{{ $cat }}][{{ $ch }}]" value="1" class="rounded border-slate-300 text-navy-700" @checked($preferences[$cat.'.'.$ch]->enabled ?? false)><span class="sr-only">{{ $catLabel }} by {{ $chLabel }}</span></label></td>
                     @endforeach</tr>
                 @endforeach</tbody></table>
             <button class="btn-primary mt-4">Save preferences</button>
@@ -18,11 +18,11 @@
     </section>
 
     <section class="mt-6" aria-labelledby="inbox"><div class="flex items-center justify-between"><h2 id="inbox" class="text-lg font-bold">Inbox</h2>
-        @if ($notifications->whereNull('read_at')->isNotEmpty())<form method="POST" action="{{ route('student.notifications.read-all') }}">@csrf<button class="text-sm text-forest-700 underline">Mark all read</button></form>@endif</div>
+        @if ($notifications->whereNull('read_at')->isNotEmpty())<form method="POST" action="{{ route('student.notifications.read-all') }}">@csrf<button class="text-sm text-navy-700 underline">Mark all read</button></form>@endif</div>
         @forelse ($notifications as $n)
-            <div class="card mt-3 flex flex-wrap items-start justify-between gap-2 p-4 {{ $n->read_at ? '' : 'border-forest-300 bg-forest-50' }}">
+            <div class="card mt-3 flex flex-wrap items-start justify-between gap-2 p-4 {{ $n->read_at ? '' : 'border-navy-300 bg-navy-50' }}">
                 <div><p class="text-sm">{{ $n->data['message'] ?? 'Notification' }}</p><p class="text-xs text-muted">{{ $n->created_at->diffForHumans() }}</p>
-                    @if (! empty($n->data['url']))<a class="text-sm text-forest-700 underline" href="{{ $n->data['url'] }}">View scholarship</a>@endif</div>
+                    @if (! empty($n->data['url']))<a class="text-sm text-navy-700 underline" href="{{ $n->data['url'] }}">View scholarship</a>@endif</div>
                 @unless ($n->read_at)<form method="POST" action="{{ route('student.notifications.read', $n->id) }}">@csrf<button class="text-xs underline">Mark read</button></form>@endunless
             </div>
         @empty

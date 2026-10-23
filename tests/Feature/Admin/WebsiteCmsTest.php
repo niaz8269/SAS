@@ -44,7 +44,7 @@ class WebsiteCmsTest extends TestCase
     {
         $this->staff();
         Livewire::test(SiteSettings::class)
-            ->fillForm(['brand_short' => 'ACME', 'contact_email' => 'help@acme.test', 'contact_phone' => '+86 10 0000 0000', 'footer_note' => 'Extra footer line.',
+            ->fillForm(['brand_name' => 'ACME Scholarships', 'contact_email' => 'help@acme.test', 'contact_phone' => '+86 10 0000 0000', 'footer_note' => 'Extra footer line.',
                 'announcement_enabled' => true, 'announcement_text' => 'Applications open soon', 'announcement_url' => '/scholarships'])
             ->call('save')->assertHasNoFormErrors();
 

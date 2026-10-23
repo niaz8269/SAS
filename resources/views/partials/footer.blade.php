@@ -6,12 +6,12 @@
     $phone = \App\Domain\Site\Site::get('contact_phone');
     $address = \App\Domain\Site\Site::get('contact_address');
 @endphp
-<footer class="mt-16 bg-forest-900 text-forest-100">
+<footer class="mt-16 bg-navy-900 text-navy-100">
     <div class="container-page grid gap-10 py-12 md:grid-cols-4">
         <div class="md:col-span-1">
             <x-brand light />
-            <p class="mt-4 text-sm text-forest-200">{{ config('sas.brand.tagline') }}</p>
-            <p class="mt-4 text-xs text-forest-300">{{ config('sas.legal_entity') }}</p>
+            <p class="mt-4 text-sm text-navy-200">{{ config('sas.brand.tagline') }}</p>
+            <p class="mt-4 text-xs text-navy-300">{{ config('sas.legal_entity') }}</p>
             @if ($social)
                 <ul class="mt-4 flex flex-wrap gap-3 text-sm">
                     @foreach ($social as $name => $url)
@@ -47,8 +47,8 @@
             </ul>
         </div>
     </div>
-    <div class="border-t border-forest-800">
-        <p class="container-page py-4 text-xs text-forest-300">
+    <div class="border-t border-navy-800">
+        <p class="container-page py-4 text-xs text-navy-300">
             &copy; {{ now()->year }} {{ config('sas.brand.name') }}. Scholarship details are summarised from official sources and can change: always confirm on the official website.
             SAS is an information and support service. It does not guarantee scholarship selection, admission or visa approval.
             @if ($note = \App\Domain\Site\Site::get('footer_note')) {{ $note }} @endif

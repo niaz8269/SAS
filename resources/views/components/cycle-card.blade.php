@@ -7,7 +7,7 @@
 <article class="card flex h-full flex-col p-5 transition hover:shadow-md">
     <div class="flex flex-wrap items-center gap-2">
         @if ($cycle->sponsored)<span class="badge-warn">{{ $cycle->sponsored_label ?: 'Sponsored' }}</span>@endif
-        @if ($cycle->featured && ! $cycle->sponsored)<span class="badge-lime">Featured</span>@endif
+        @if ($cycle->featured && ! $cycle->sponsored)<span class="badge-gold">Featured</span>@endif
         @if ($cycle->needsRecheck())<span class="badge-warn">Needs recheck</span>@endif
     </div>
     <h3 class="mt-2 text-lg font-bold leading-snug"><a href="{{ $url }}" class="hover:underline">{{ $programme->title }}</a></h3>
@@ -17,7 +17,7 @@
     <dl class="mt-3 grid grid-cols-2 gap-x-3 gap-y-1 text-sm">
         <div><dt class="sr-only">Destination</dt><dd>{{ $cycle->destinations->pluck('name')->implode(', ') ?: 'Destination not confirmed' }}</dd></div>
         <div><dt class="sr-only">Degree</dt><dd>{{ $cycle->degreeLevels->pluck('name')->implode(', ') ?: 'Degree not confirmed' }}</dd></div>
-        <div><dt class="sr-only">Funding</dt><dd class="font-medium text-forest-800">{{ $cycle->fundingLabel() }}</dd></div>
+        <div><dt class="sr-only">Funding</dt><dd class="font-medium text-navy-800">{{ $cycle->fundingLabel() }}</dd></div>
         <div><dt class="sr-only">Cycle</dt><dd>{{ $cycle->intake_year }} intake{{ $cycle->intake_term ? ' · '.$cycle->intake_term : '' }}</dd></div>
     </dl>
     <x-deadline :cycle="$cycle" class="mt-3" />

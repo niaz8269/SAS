@@ -4,29 +4,29 @@
 @source '../../storage/framework/views/*.php';
 
 /*
- * SAS design tokens: forest green, ivory, restrained lime. System fonts only (no third-party font requests).
+ * SAS design tokens from the logo: navy #123a7a, gold #caa249, cream #f7f3eb. System fonts only (no third-party font requests).
  */
 @theme {
     --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-display: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
-    --color-forest-50: #f0f7f1;
-    --color-forest-100: #dcebdf;
-    --color-forest-200: #bcd8c2;
-    --color-forest-300: #8fbc99;
-    --color-forest-500: #3f7d4f;
-    --color-forest-600: #2f6a3f;
-    --color-forest-700: #25573a;
-    --color-forest-800: #1d4630;
-    --color-forest-900: #14301f;
+    --color-navy-50: #eef3fb;
+    --color-navy-100: #dce6f6;
+    --color-navy-200: #b9cdec;
+    --color-navy-300: #8aaadb;
+    --color-navy-500: #3566b0;
+    --color-navy-600: #1c4b95;
+    --color-navy-700: #143f82;
+    --color-navy-800: #0e2f64;
+    --color-navy-900: #0a2250;
 
-    --color-ivory: #fbf9f2;
-    --color-ivory-deep: #f3efe2;
-    --color-line: #e3dfd0;
-    --color-ink: #16261b;
-    --color-muted: #55645a;
-    --color-lime: #cfe86a;
-    --color-lime-soft: #eef6c9;
+    --color-ivory: #f7f3eb;
+    --color-ivory-deep: #efe9da;
+    --color-line: #e2dccc;
+    --color-ink: #14203a;
+    --color-muted: #4a5873;
+    --color-gold: #caa249;
+    --color-gold-soft: #f4ead0;
     --color-alert: #b3410f;
     --color-alert-soft: #fdeee6;
     --color-warn-soft: #fff6dc;
@@ -39,7 +39,7 @@
     h1, h2, h3, h4 { font-family: var(--font-display); @apply tracking-tight text-ink; }
     a { @apply underline-offset-2; }
     input[type='checkbox'], input[type='radio'] { width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
-    :focus-visible { outline: 3px solid var(--color-forest-600); outline-offset: 2px; border-radius: 4px; }
+    :focus-visible { outline: 3px solid var(--color-navy-600); outline-offset: 2px; border-radius: 4px; }
     [x-cloak] { display: none !important; }
 }
 
@@ -55,28 +55,28 @@
     .container-page { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8; }
 
     .btn { @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2.5 text-sm font-semibold transition focus-visible:outline-offset-2 disabled:cursor-not-allowed disabled:opacity-60; }
-    .btn-primary { @apply btn bg-forest-700 text-white hover:bg-forest-800; }
-    .btn-lime { @apply btn bg-lime text-forest-900 hover:brightness-95; }
-    .btn-outline { @apply btn border border-forest-700 bg-white text-forest-800 hover:bg-forest-50; }
-    .btn-ghost { @apply btn text-forest-800 hover:bg-forest-50; }
+    .btn-primary { @apply btn bg-navy-700 text-white hover:bg-navy-800; }
+    .btn-gold { @apply btn bg-gold text-navy-900 hover:brightness-95; }
+    .btn-outline { @apply btn border border-navy-700 bg-white text-navy-800 hover:bg-navy-50; }
+    .btn-ghost { @apply btn text-navy-800 hover:bg-navy-50; }
     .btn-danger { @apply btn border border-alert bg-white text-alert hover:bg-alert-soft; }
     .btn-lg { @apply px-6 py-3 text-base; }
 
     .card { @apply rounded-xl border border-line bg-white shadow-sm; }
     .label { @apply mb-1 block text-sm font-medium text-ink; }
-    .input { @apply block w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm text-ink shadow-sm placeholder:text-slate-400 focus:border-forest-600 focus:ring-0; }
+    .input { @apply block w-full rounded-md border border-slate-300 bg-white px-3 py-2.5 text-sm text-ink shadow-sm placeholder:text-slate-400 focus:border-navy-600 focus:ring-0; }
     .input-error { @apply border-alert; }
     .field-error { @apply mt-1 text-sm text-alert; }
     .field-hint { @apply mt-1 text-xs text-muted; }
 
     .badge { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold; }
-    .badge-green { @apply badge bg-forest-100 text-forest-800; }
-    .badge-lime { @apply badge bg-lime-soft text-forest-900; }
+    .badge-green { @apply badge bg-navy-100 text-navy-800; }
+    .badge-gold { @apply badge bg-gold-soft text-navy-900; }
     .badge-neutral { @apply badge bg-slate-100 text-slate-700; }
     .badge-warn { @apply badge bg-warn-soft text-warn; }
     .badge-alert { @apply badge bg-alert-soft text-alert; }
 
-    .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-forest-600; }
+    .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-navy-600; }
     .section-title { @apply text-2xl font-extrabold sm:text-3xl; }
     .prose-sas { @apply max-w-none text-[15px] leading-7 text-ink; }
     .prose-sas h2 { @apply mt-8 mb-2 text-xl font-bold; }
@@ -84,7 +84,7 @@
     .prose-sas p { @apply my-3; }
     .prose-sas ul { @apply my-3 list-disc pl-6; }
     .prose-sas ol { @apply my-3 list-decimal pl-6; }
-    .prose-sas a { @apply text-forest-700 underline; }
+    .prose-sas a { @apply text-navy-700 underline; }
 }
 
 /* Skeleton loading state used by Livewire wire:loading targets */

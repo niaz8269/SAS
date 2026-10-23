@@ -8,6 +8,6 @@
             <p class="mt-2 text-sm text-muted">A self-service partner portal is planned for a later release. It is not available yet.</p>
             <a class="btn-primary mt-4" href="{{ route('contact', ['category' => 'general']) }}">Contact the editorial team</a>
         </div>
-        <p class="mt-6 text-sm">Already registered as a partner manager? <a class="text-forest-700 underline" href="{{ route('partner.home') }}">Go to the partner area</a>.</p>
+        <p class="mt-6 text-sm">Already registered as a partner manager? <a class="text-navy-700 underline" href="{{ route('partner.home') }}">Go to the partner area</a>.</p>
     </div>
 </x-layouts.public>

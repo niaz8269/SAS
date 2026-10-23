@@ -5,7 +5,7 @@
     $d = $svc->headline($cycle);
     $info = $d ? $svc->describe($d, auth()->user()?->timezone) : null;
     $badge = match ($status->value) {
-        'open' => 'badge-green', 'rolling' => 'badge-lime', 'upcoming' => 'badge-neutral',
+        'open' => 'badge-green', 'rolling' => 'badge-gold', 'upcoming' => 'badge-neutral',
         'closed' => 'badge-neutral', 'suspended' => 'badge-alert', default => 'badge-warn',
     };
 @endphp

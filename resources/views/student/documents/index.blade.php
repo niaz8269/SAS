@@ -10,7 +10,7 @@
             <div><label for="type" class="label">Type</label><select id="type" name="type" class="input">@foreach (config('sas.document_types') as $k => $l)<option value="{{ $k }}" @selected(old('type') === $k)>{{ $l }}</option>@endforeach</select></div>
         </div>
         <div><label for="title" class="label">Title (optional)</label><input id="title" name="title" value="{{ old('title') }}" class="input"></div>
-        <div><label class="flex items-start gap-2 text-sm"><input type="checkbox" name="acknowledge" value="1" class="mt-1 rounded border-slate-300 text-forest-700"><span>I understand this document is stored privately, scanned for malware, and not shared unless I link it to a case or plan.</span></label>@error('acknowledge')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
+        <div><label class="flex items-start gap-2 text-sm"><input type="checkbox" name="acknowledge" value="1" class="mt-1 rounded border-slate-300 text-navy-700"><span>I understand this document is stored privately, scanned for malware, and not shared unless I link it to a case or plan.</span></label>@error('acknowledge')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
         <button class="btn-primary">Upload</button>
         <p class="text-xs text-muted">Storage used: {{ number_format($used / 1048576, 1) }} MB of {{ number_format($quota / 1048576) }} MB. Please do not upload anything you are not comfortable storing here.</p>
     </form>

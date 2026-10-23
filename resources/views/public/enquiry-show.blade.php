@@ -7,7 +7,7 @@
 
         <section class="mt-6 space-y-3" aria-labelledby="thread"><h2 id="thread" class="text-lg font-bold">Conversation</h2>
             @forelse ($enquiry->publicMessages as $m)
-                <div class="card p-4 {{ $m->author_id && $m->author?->isStaff() ? 'border-forest-300 bg-forest-50' : '' }}">
+                <div class="card p-4 {{ $m->author_id && $m->author?->isStaff() ? 'border-navy-300 bg-navy-50' : '' }}">
                     <p class="text-xs text-muted">{{ $m->author?->isStaff() ? 'SAS team' : 'You' }} &middot; {{ $m->created_at->format('j M Y, H:i') }} UTC</p>
                     <p class="mt-1 whitespace-pre-line">{{ $m->body }}</p>
                 </div>

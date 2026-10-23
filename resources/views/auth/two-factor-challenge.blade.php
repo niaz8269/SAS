@@ -8,6 +8,6 @@
             @error('code')<p class="field-error" role="alert">{{ $message }}</p>@enderror
         </div>
         <button class="btn-primary w-full">Verify</button>
-        <p class="text-center text-sm"><a class="text-forest-700 underline" href="{{ route('login') }}">Start again</a></p>
+        <p class="text-center text-sm"><a class="text-navy-700 underline" href="{{ route('login') }}">Start again</a></p>
     </form>
 </x-layouts.auth>

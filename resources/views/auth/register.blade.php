@@ -23,12 +23,12 @@
             <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" class="input">
         </div>
         <div>
-            <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="accept_privacy" value="1" class="mt-1 rounded border-slate-300 text-forest-700" @checked(old('accept_privacy'))>
-                <span>I have read the <a class="text-forest-700 underline" href="{{ route('legal.show', 'privacy') }}" target="_blank" rel="noopener">privacy notice</a>.</span></label>
+            <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="accept_privacy" value="1" class="mt-1 rounded border-slate-300 text-navy-700" @checked(old('accept_privacy'))>
+                <span>I have read the <a class="text-navy-700 underline" href="{{ route('legal.show', 'privacy') }}" target="_blank" rel="noopener">privacy notice</a>.</span></label>
             @error('accept_privacy')<p class="field-error" role="alert">{{ $message }}</p>@enderror
         </div>
         <p class="field-hint">Browsing scholarships never needs an account. An account lets you save scholarships, plan applications and keep documents privately.</p>
         <button class="btn-primary w-full">Create account</button>
-        <p class="text-center text-sm text-muted">Already registered? <a class="text-forest-700 underline" href="{{ route('login') }}">Log in</a></p>
+        <p class="text-center text-sm text-muted">Already registered? <a class="text-navy-700 underline" href="{{ route('login') }}">Log in</a></p>
     </form>
 </x-layouts.auth>

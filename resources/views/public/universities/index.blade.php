@@ -8,7 +8,7 @@
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <span aria-current="page">Universities</span></nav>
         <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Universities in China' }}</h1>
         <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Universities listed on the official study-in-China system for international students. Programme lists, tuition and scholarship eligibility are copied from that system and change every year: always confirm with the university and the official scholarship pages.' }}</p>
-        <p class="mt-2"><a class="font-semibold text-forest-700 underline" href="{{ route('programmes.index') }}">Search programmes across all universities &rarr;</a></p>
+        <p class="mt-2"><a class="font-semibold text-navy-700 underline" href="{{ route('programmes.index') }}">Search programmes across all universities &rarr;</a></p>
 
         <form method="GET" action="{{ route('universities.index') }}" class="card mt-6 grid gap-3 p-4 md:grid-cols-[2fr_1fr_1fr_auto] md:items-end" role="search">
             <div><label for="u-q" class="label">University name</label><input id="u-q" name="q" type="search" value="{{ $filters['q'] }}" class="input" placeholder="English or Chinese name" maxlength="80"></div>

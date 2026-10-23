@@ -5,7 +5,7 @@
         <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Support beyond the scholarship' }}</h1>
         <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Professional help at each step. Every service starts with a free enquiry; we confirm scope, deliverables and any fee with you before work begins. No service guarantees scholarship selection, admission, attestation acceptance or a visa decision.' }}</p>
         @if ($services->isEmpty())
-            <p class="card mt-6 p-6 text-sm text-muted">{{ $emptyMsg?->body ?: 'Service pages will appear here once published.' }} You can still <a class="text-forest-700 underline" href="{{ route('contact') }}">send us an enquiry</a>.</p>
+            <p class="card mt-6 p-6 text-sm text-muted">{{ $emptyMsg?->body ?: 'Service pages will appear here once published.' }} You can still <a class="text-navy-700 underline" href="{{ route('contact') }}">send us an enquiry</a>.</p>
         @else
             <ul class="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 @foreach ($services as $s)

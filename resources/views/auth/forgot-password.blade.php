@@ -7,6 +7,6 @@
             @error('email')<p class="field-error" role="alert">{{ $message }}</p>@enderror
         </div>
         <button class="btn-primary w-full">Email me a reset link</button>
-        <p class="text-center text-sm"><a class="text-forest-700 underline" href="{{ route('login') }}">Back to log in</a></p>
+        <p class="text-center text-sm"><a class="text-navy-700 underline" href="{{ route('login') }}">Back to log in</a></p>
     </form>
 </x-layouts.auth>

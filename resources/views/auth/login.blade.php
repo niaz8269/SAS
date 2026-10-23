@@ -12,10 +12,10 @@
             @error('password')<p class="field-error" role="alert">{{ $message }}</p>@enderror
         </div>
         <div class="flex items-center justify-between text-sm">
-            <label class="inline-flex items-center gap-2"><input type="checkbox" name="remember" class="rounded border-slate-300 text-forest-700"> Remember me</label>
-            <a class="text-forest-700 underline" href="{{ route('password.request') }}">Forgot password?</a>
+            <label class="inline-flex items-center gap-2"><input type="checkbox" name="remember" class="rounded border-slate-300 text-navy-700"> Remember me</label>
+            <a class="text-navy-700 underline" href="{{ route('password.request') }}">Forgot password?</a>
         </div>
         <button class="btn-primary w-full">Log in</button>
-        <p class="text-center text-sm text-muted">New here? <a class="text-forest-700 underline" href="{{ route('register') }}">Create a student account</a></p>
+        <p class="text-center text-sm text-muted">New here? <a class="text-navy-700 underline" href="{{ route('register') }}">Create a student account</a></p>
     </form>
 </x-layouts.auth>
