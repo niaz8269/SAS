@@ -46,6 +46,7 @@ class CycleDetailsTest extends TestCase
         $cycle->universities()->attach($uni->id);
         $cycle->forceFill(['institutions_note' => 'Applicants choose a university from the official list.', 'programmes_note' => 'Master and doctoral programmes in all fields.'])->save();
         $cycle->destinations()->attach($china->id);
+        $cycle->programme->update(['title' => 'Chinese Government Scholarship (test)']);
 
         $this->get(route('scholarships.show', [$cycle->programme->slug, $cycle->slug]))->assertOk()
             ->assertSee('Universities included')->assertSee('Peking University')->assertSee('Applicants choose a university from the official list.')
