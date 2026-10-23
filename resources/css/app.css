@@ -35,6 +35,10 @@
 
 @layer base {
     html { scroll-behavior: smooth; }
+    /* Fluid type: every size in the site is in rem, so the root size alone makes all text, spacing and controls follow the screen (15px on a small phone up to 16px at 1440px, then proportional above). */
+    html { font-size: clamp(15px, calc(14.71px + 0.0893vw), 16px); -webkit-text-size-adjust: 100%; }
+    /* Form fields stay at 16px or more on phones so iOS does not zoom the page when one is focused. */
+    @media (max-width: 767px) { input, select, textarea { font-size: max(1rem, 16px); } }
     /* Large monitors (24 to 32 inch and beyond): from 1440px up, the whole interface scales in proportion to the screen width, so it looks exactly as it does on a 1440px laptop, just bigger, with the same margins and full-screen proportions. */
     @media (min-width: 1440px) { html { font-size: calc(100vw / 90); } }
     body { @apply bg-ivory text-ink antialiased; font-family: var(--font-sans); }
@@ -85,7 +89,7 @@
     .hero-lead { font-size: clamp(1rem, min(2.4vw, 2.6vh + 0.35rem), 1.35rem); }
 
     .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-navy-600; }
-    .section-title { @apply text-2xl font-extrabold sm:text-3xl; }
+    .section-title { @apply font-extrabold; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1.2; }
     .prose-sas { @apply max-w-none text-[15px] leading-7 text-ink; }
     .prose-sas h2 { @apply mt-8 mb-2 text-xl font-bold; }
     .prose-sas h3 { @apply mt-6 mb-2 text-lg font-semibold; }
