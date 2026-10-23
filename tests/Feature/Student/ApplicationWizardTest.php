@@ -276,4 +276,3 @@ class ApplicationWizardTest extends TestCase
         $this->assertSame(2, ApplicationPlan::count());
     }
 }
-

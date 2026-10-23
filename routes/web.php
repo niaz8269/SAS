@@ -127,6 +127,7 @@ $applicationRoutes = function () {
     Route::post('/documents', [Student\DocumentController::class, 'store'])->middleware('throttle:uploads')->name('documents.store');
     Route::get('/documents/{document:public_id}/download', [Student\DocumentController::class, 'download'])->name('documents.download');
     Route::delete('/documents/{document:public_id}', [Student\DocumentController::class, 'destroy'])->name('documents.destroy');
+    Route::get('/document-templates/{kind:key}', [Student\DocumentController::class, 'template'])->name('documents.template');
 };
 
 /*

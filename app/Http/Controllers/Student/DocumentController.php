@@ -12,6 +12,8 @@ use App\Models\DocumentAssociation;
 use App\Models\DocumentKind;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
 /** FILE-01..03 / SEC-03. Upload, list, preview, download and delete are authorised independently. */
@@ -57,6 +59,15 @@ class DocumentController extends Controller
         $service->store($document->user, $request->file('file'), $document->type, $document->title, $document);
 
         return back()->with('status', 'New version uploaded and queued for scanning.');
+    }
+
+    /** The blank form of a document type (for example the CSC application form) that the student downloads, fills in and uploads. */
+    public function template(DocumentKind $kind)
+    {
+        $disk = Storage::disk('local');
+        abort_unless($kind->active && $kind->template_path && $disk->exists($kind->template_path), 404);
+
+        return $disk->download($kind->template_path, Str::slug($kind->name).'.'.pathinfo($kind->template_path, PATHINFO_EXTENSION), ['Cache-Control' => 'private, max-age=3600', 'X-Content-Type-Options' => 'nosniff']);
     }
 
     public function download(Request $request, Document $document, DocumentService $service)

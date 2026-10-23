@@ -64,7 +64,7 @@ class CscDocumentRulesTest extends TestCase
         $this->seed(CscDocumentRulesSeeder::class);
 
         $this->assertSame($count, DocumentRule::count());
-        $this->assertSame(17, $count, 'only the CSC scholarship exists in this test database');
+        $this->assertSame(18, $count, 'only the CSC scholarship exists in this test database');
         DocumentRule::all()->each(fn ($r) => $this->assertLessThanOrEqual(300, mb_strlen($r->note), $r->kind->key));
     }
 
@@ -87,7 +87,7 @@ class CscDocumentRulesTest extends TestCase
         $this->seed(CscDocumentRulesSeeder::class);
 
         $this->assertCount(5, $cycles);
-        $this->assertSame(17 * 5, DocumentRule::count());
+        $this->assertSame(18 * 5, DocumentRule::count());
         foreach ($cycles as $cycle) {
             $master = $this->rows($cycle, 'master');
             $this->assertSame('required', $master['recommendation']['requirement'], $cycle->programme->slug);

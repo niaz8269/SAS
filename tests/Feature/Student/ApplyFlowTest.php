@@ -84,6 +84,28 @@ class ApplyFlowTest extends TestCase
         $this->get(route('student.choose.index'))->assertSee('Open application');
     }
 
+    public function test_the_csc_application_form_can_be_downloaded_blank_and_uploaded_filled(): void
+    {
+        $csc = $this->scholarship('CSC Form Award');
+        $other = $this->scholarship('Plain Award');
+        $this->rule($csc, 'csc_application_form', 'required', null, 'Download, fill in, sign.');
+        $student = User::factory()->create();
+        $plan = app(PlanService::class)->create($student, $csc);
+
+        $this->actingAs($student)->get(route('student.applications.materials', $plan))->assertOk()
+            ->assertSee('SAS Application Form')->assertSee('Download blank form')->assertSee(route('student.documents.template', 'csc_application_form'), false);
+        $this->get(route('student.documents.template', 'csc_application_form'))->assertOk()->assertHeader('content-type', 'application/pdf');
+
+        $this->upload($student, 'csc_application_form');
+        $this->assertSame(1, $student->documents()->where('type', 'csc_application_form')->count());
+
+        // Only scholarships with a rule for it list the form, and a document type without a blank form has no download.
+        $this->get(route('student.applications.materials', app(PlanService::class)->create($student, $other)))->assertDontSee('SAS Application Form');
+        $this->get(route('student.documents.template', 'passport'))->assertNotFound();
+        auth()->logout();
+        $this->get(route('student.documents.template', 'csc_application_form'))->assertRedirect();
+    }
+
     public function test_documents_the_scholarship_does_not_ask_for_are_tucked_into_an_other_section(): void
     {
         $cycle = $this->scholarship('Focused Award');
@@ -231,4 +253,3 @@ class ApplyFlowTest extends TestCase
         $this->get(route('student.choose.index', ['show_closed' => 1]))->assertSee('Closed Award');
     }
 }
-

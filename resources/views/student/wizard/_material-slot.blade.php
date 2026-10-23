@@ -5,6 +5,7 @@
             <p class="text-[14px] font-bold text-[#333]">@if ($r['requirement'] === 'required')<span class="text-[#d9534f]" title="Mandatory" aria-hidden="true">*</span> @endif{{ $n }}.{{ $r['kind']->name }}
                 <span class="ml-1 text-xs font-normal {{ $r['requirement'] === 'required' ? 'text-[#b4530b]' : 'text-[#777]' }}">({{ $r['requirement'] === 'required' ? 'mandatory' : 'optional' }})</span></p>
             @if ($r['note'])<p class="mt-1 text-[13px] text-[#666]">{{ $r['note'] }}</p>@elseif ($r['kind']->description)<p class="mt-1 text-[13px] text-[#666]">{{ $r['kind']->description }}</p>@endif
+            @if ($r['kind']->template_path)<a href="{{ $ctx->route('documents.template', $r['kind']) }}" class="mt-2 inline-flex items-center gap-1.5 border border-[#428bb6] bg-white px-3 py-1 text-[12px] font-semibold text-[#428bb6] hover:bg-[#eef6fb]"><svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>Download blank form<span class="sr-only"> for {{ $r['kind']->name }}</span></a>@endif
             <p class="mt-2 text-[13px]"><span class="font-semibold {{ $r['state'] === 'ready' ? 'text-[#2f8f4e]' : 'text-[#777]' }}">{{ match (true) { $r['state'] === 'ready' => '✓ Uploaded', $r['state'] === 'scanning' => 'Being checked', (bool) $r['reason'] => 'Cannot provide now', default => 'Not uploaded yet' } }}</span></p>
         </div>
 

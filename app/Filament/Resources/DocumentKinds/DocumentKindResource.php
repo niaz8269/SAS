@@ -10,6 +10,7 @@ use App\Models\DocumentKind;
 use BackedEnum;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
+use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
@@ -49,6 +50,9 @@ class DocumentKindResource extends Resource
                 ->disabled(fn (?DocumentKind $record) => $record !== null)->dehydrated(fn (?DocumentKind $record) => $record === null)
                 ->helperText('Used internally. It cannot be changed after the document type is created.'),
             Textarea::make('description')->rows(2)->maxLength(300)->helperText('Shown to the student under the document name.')->columnSpanFull(),
+            FileUpload::make('template_path')->label('Blank form for students to download')->disk('local')->directory('document-templates')->visibility('private')
+                ->acceptedFileTypes(['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/msword'])->maxSize(5120)->downloadable()
+                ->helperText('Optional. A blank form (PDF or Word) the student downloads, fills in and uploads here. A "Download blank form" button appears on this document.')->columnSpanFull(),
             Select::make('default_requirement')->label('By default this document is')->options(DocumentKind::REQUIREMENTS)->required()->default('optional')
                 ->helperText('Used when no rule below matches the student\'s scholarship and degree level.'),
             TextInput::make('sort')->numeric()->default(100)->helperText('Lower numbers are listed first.'),
