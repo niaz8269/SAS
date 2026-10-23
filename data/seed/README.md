@@ -83,3 +83,14 @@ Tried but not seeded: Gates Cambridge (the pages returned only a short descripti
 | Swiss Government Excellence Scholarships, 2027-28 | sbfi.admin.ch (government) | CHF 2,450 monthly, age limit 35, 183 eligible countries, route via Swiss embassies, application opened 20 Aug 2026 | Country-by-country deadlines not on the page. |
 
 Tried and failed: Stipendium Hungaricum (the Tempus site was down), MEXT (the page returned 404).
+## global-2026-10-batch4.csv (checked 2026-10-23)
+
+| Programme | Source read | What it supports | Gaps |
+|---|---|---|---|
+| Fulbright Foreign Student Program | foreign.fulbrightonline.org (programme page) | Who it is for, home-country application route, IIE-Placement vs Self-Placement | No coverage, levels, age or language rules, and no dates: each home-country Fulbright office sets them. |
+| DAAD scholarship database | www2.daad.de database page | What the database is, how to filter, the warning about other organisations' offers | One record for a database, not a single scholarship; each programme has its own rules, amounts and dates. |
+| MEXT Scholarship, research students, embassy recommendation 2027 | studyinjapan.go.jp application page | Documents and where to submit, recruitment and first-screening window | Eligibility, amounts and duration are in a Guidelines PDF that was not read; schedule is country-specific. |
+| MEXT Scholarship, undergraduate students, embassy recommendation 2027 | studyinjapan.go.jp application page | Same, first screening May to August | Same; arrival/recruitment years inferred from the 2027 label. |
+| Manaaki New Zealand Scholarships | nzscholarships.govt.nz home page (Education New Zealand) | Scholarship types, eight-step process, online portal | No eligibility, benefit itemisation or dates (linked pages not read). |
+
+Tried and not seeded: Stipendium Hungaricum (the Tempus site showed a maintenance notice; only third-party pages gave dates, which are not used), Australia Awards (the DFAT pages timed out; the 2027 round dates seen came from third-party sites).
