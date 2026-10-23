@@ -9,36 +9,47 @@
 @switch(str_starts_with($s->key, 'custom-') ? 'custom' : $s->key)
 
 @case('hero')
-    <section class="relative overflow-hidden bg-gradient-to-b from-white to-ivory">
-        <div class="container-page grid items-center gap-8 py-12 lg:grid-cols-[1.1fr_0.9fr] lg:py-16">
+    <section class="relative overflow-hidden bg-gradient-to-b from-white via-ivory to-ivory">
+        <div class="pointer-events-none absolute -right-24 -top-24 h-96 w-96 rounded-full bg-gold/20 blur-3xl" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -left-32 top-40 h-80 w-80 rounded-full bg-navy-200/40 blur-3xl" aria-hidden="true"></div>
+        <div class="container-page relative grid items-center gap-10 py-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14 lg:py-20">
             <div>
-                @if ($s->eyebrow)<p class="eyebrow">{{ $s->eyebrow }}</p>@endif
-                <h1 class="mt-3 text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">{!! nl2br(e($s->heading)) !!}</h1>
-                @if ($s->body)<p class="mt-5 max-w-xl text-lg text-muted">{{ $s->body }}</p>@endif
-                <div class="mt-7 flex flex-wrap gap-3">
-                    @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="btn-primary btn-lg">{{ $s->cta_label }} <span aria-hidden="true">&rarr;</span></a>@endif
-                    @if ($s->cta2_label)<a href="{{ $href($s->cta2_url) }}" class="btn-outline btn-lg">{{ $s->cta2_label }}</a>@endif
+                @if ($s->eyebrow)<p class="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold-soft px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-navy-800"><span class="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true"></span>{{ $s->eyebrow }}</p>@endif
+                <h1 class="mt-5 text-4xl font-extrabold leading-[1.04] text-navy-900 sm:text-5xl lg:text-[3.6rem]">{!! nl2br(e($s->heading)) !!}</h1>
+                <div class="mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-gold to-gold/30" aria-hidden="true"></div>
+                @if ($s->body)<p class="mt-5 max-w-xl text-lg leading-relaxed text-muted">{{ $s->body }}</p>@endif
+                <div class="mt-8 flex flex-wrap gap-3">
+                    @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="btn-primary btn-lg rounded-lg shadow-md shadow-navy-900/20">{{ $s->cta_label }} <span aria-hidden="true">&rarr;</span></a>@endif
+                    @if ($s->cta2_label)<a href="{{ $href($s->cta2_url) }}" class="btn-outline btn-lg rounded-lg">{{ $s->cta2_label }}</a>@endif
                 </div>
                 @if (! empty($s->items))
-                <ul class="mt-8 grid gap-4 text-sm sm:grid-cols-3">
+                <ul class="mt-10 grid gap-5 border-t border-line pt-6 text-sm sm:grid-cols-3">
                     @foreach ($s->items as $item)
-                        <li class="flex items-start gap-3"><span class="mt-0.5 text-navy-700" aria-hidden="true">&#9679;</span><span><strong>{{ $item['title'] ?? '' }}</strong><br><span class="text-muted">{{ $item['text'] ?? '' }}</span></span></li>
+                        <li class="flex items-start gap-3">
+                            <span class="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-navy-700 text-xs font-bold text-white" aria-hidden="true">{{ $loop->iteration }}</span>
+                            <span><strong class="text-navy-900">{{ $item['title'] ?? '' }}</strong><br><span class="text-muted">{{ $item['text'] ?? '' }}</span></span>
+                        </li>
                     @endforeach
                 </ul>
                 @endif
             </div>
-            @if ($s->image_path)
-                <figure class="relative mx-auto w-full max-w-lg"><img src="{{ $media($s->image_path) }}" alt="" class="w-full rounded-2xl object-cover" loading="eager"></figure>
-            @else
-                <figure class="relative mx-auto w-full max-w-lg">
-                    <img src="{{ asset('images/hero-graduates.jpg') }}" alt="Graduates in caps and gowns throwing their caps into the air at sunset" class="aspect-video w-full rounded-2xl object-cover shadow-md" width="960" height="540" fetchpriority="high">
-                    <figcaption class="mt-1 text-center text-xs text-muted">Photo: {{ config('sas.image_credits')['images/hero-graduates.jpg']['name'] }} on Unsplash. <a class="underline" href="{{ route('credits') }}">Image credits</a></figcaption>
-                </figure>
-            @endif
+            <figure class="relative mx-auto w-full max-w-xl lg:max-w-none">
+                <div class="absolute -bottom-4 -right-4 h-full w-full rounded-[1.75rem] border-2 border-gold/60" aria-hidden="true"></div>
+                <div class="absolute -left-3 -top-3 h-24 w-24 rounded-2xl bg-navy-700/10" aria-hidden="true"></div>
+                @if ($s->image_path)
+                    <img src="{{ $media($s->image_path) }}" alt="" class="relative aspect-[4/3] w-full rounded-[1.75rem] object-cover shadow-xl shadow-navy-900/20" loading="eager">
+                @else
+                    <img src="{{ asset('images/hero-graduates.jpg') }}" alt="Graduates in caps and gowns throwing their caps into the air at sunset" class="relative aspect-[4/3] w-full rounded-[1.75rem] object-cover shadow-xl shadow-navy-900/20" width="960" height="720" fetchpriority="high">
+                @endif
+                <div class="absolute -bottom-5 left-5 flex items-center gap-3 rounded-2xl border border-line bg-white/95 px-4 py-3 shadow-lg backdrop-blur sm:left-8">
+                    <span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gold-soft text-navy-800" aria-hidden="true"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></span>
+                    <span class="text-sm leading-tight"><strong class="block text-navy-900">Officially sourced</strong><span class="text-muted">Every scholarship checked</span></span>
+                </div>
+            </figure>
         </div>
 
-        <div class="container-page relative -mb-px pb-10">
-            <form method="GET" action="{{ route('scholarships.index') }}" class="card p-5 shadow-lg sm:p-6" role="search" aria-labelledby="hero-search">
+        <div class="container-page relative -mb-px pb-10 pt-8">
+            <form method="GET" action="{{ route('scholarships.index') }}" class="card border-gold/30 p-5 shadow-xl shadow-navy-900/10 sm:p-6" role="search" aria-labelledby="hero-search">
                 <div class="mb-4 flex flex-wrap items-center justify-between gap-2">
                     <h2 id="hero-search" class="text-lg font-bold">{{ $s->subheading ?: 'Search scholarships' }}</h2>
                     <p class="text-sm text-muted">Find the right opportunities for your goals.</p>

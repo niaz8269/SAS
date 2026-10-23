@@ -6,7 +6,7 @@
         <p class="mt-2 text-sm text-muted">Published {{ $article->published_at->format('j F Y') }}@if($article->author) · {{ $article->author->name }}@endif</p>
         @if ($article->image_path)
             <figure class="mt-6"><img src="{{ \Illuminate\Support\Facades\Storage::disk('public_media')->url($article->image_path) }}" alt="{{ $article->image_alt }}" class="w-full rounded-xl" loading="lazy">
-                @if ($article->image_credit)<figcaption class="mt-1 text-xs text-muted">{{ $article->image_credit }}</figcaption>@endif</figure>
+                </figure>
         @endif
         <div class="prose-sas mt-6">{!! \App\Support\Html::clean($article->body) !!}</div>
     </article>

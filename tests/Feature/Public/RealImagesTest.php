@@ -55,7 +55,7 @@ class RealImagesTest extends TestCase
         $this->assertSame('Temple of Heaven, Beijing', $bj->imageCredit()['subject']);
 
         $this->get('/universities')->assertOk()->assertSee('images/cities/beijing.jpg', false)->assertSee('images/destinations/cn.jpg', false);
-        $this->get('/universities/pku')->assertOk()->assertSee('images/cities/beijing.jpg', false)->assertSee('Temple of Heaven, Beijing');
+        $this->get('/universities/pku')->assertOk()->assertSee('images/cities/beijing.jpg', false)->assertDontSee('Temple of Heaven, Beijing');
     }
 
     public function test_a_scholarship_uses_its_destination_country_photo_unless_it_has_its_own(): void
