@@ -42,7 +42,7 @@ class AdminPanelProvider extends PanelProvider
             ->colors(['primary' => Color::hex('#3b6fc4'), 'warning' => Color::hex('#caa249')])
             ->favicon(asset('images/favicon-64.png'))
             ->font('Inter Variable', url: asset('fonts/inter.css'), provider: LocalFontProvider::class)
-            ->navigationGroups(['Website', 'Editorial', 'Service desk', 'Finance', 'Partners', 'Content', 'Reference data', 'Administration'])
+            ->navigationGroups(['Website', 'Editorial', 'Service desk', 'Finance', 'Recruiting agents', 'Content', 'Reference data', 'Administration'])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([Dashboard::class])

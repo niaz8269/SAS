@@ -173,7 +173,7 @@ class AuthAndIsolationTest extends TestCase
         $this->actingAs(User::factory()->create())->get('/partner')->assertForbidden();
         $noOrganisation = User::factory()->role(Role::PartnerManager)->create();
         $this->actingAs($noOrganisation)->get('/partner')->assertForbidden(); // a partner account must belong to an active organisation
-        $org = PartnerOrganisation::create(['name' => 'Isolation Test University', 'kind' => 'university']);
+        $org = PartnerOrganisation::create(['name' => 'Isolation Test Agency']);
         $partner = User::factory()->role(Role::PartnerManager)->create();
         $partner->forceFill(['partner_organisation_id' => $org->id])->save();
         $this->actingAs($partner)->get('/partner')->assertOk();

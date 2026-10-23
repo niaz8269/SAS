@@ -5,7 +5,6 @@ namespace Tests\Feature\Admin;
 use App\Enums\Role;
 use App\Filament\Resources\Invoices\InvoiceResource;
 use App\Filament\Resources\PartnerOrganisations\PartnerOrganisationResource;
-use App\Filament\Resources\PartnerSubmissions\PartnerSubmissionResource;
 use App\Filament\Resources\PaymentOptions\PaymentOptionResource;
 use App\Filament\Resources\ServiceCases\ServiceCaseResource;
 use App\Filament\Resources\Users\UserResource;
@@ -31,7 +30,7 @@ class PortalAccessMatrixTest extends TestCase
     /** @return array<string, array{0: Role, 1: array<string,bool>}> */
     public static function matrix(): array
     {
-        $all = ['cases' => true, 'invoices' => true, 'partners' => true, 'partnerSubmissions' => true, 'payments' => true, 'users' => true];
+        $all = ['cases' => true, 'invoices' => true, 'partners' => true, 'payments' => true, 'users' => true];
         $none = array_map(fn () => false, $all);
 
         return [
@@ -54,7 +53,6 @@ class PortalAccessMatrixTest extends TestCase
             'cases' => ServiceCaseResource::canViewAny(),
             'invoices' => InvoiceResource::canViewAny(),
             'partners' => PartnerOrganisationResource::canViewAny(),
-            'partnerSubmissions' => PartnerSubmissionResource::canViewAny(),
             'payments' => PaymentOptionResource::canViewAny(),
             'users' => UserResource::canViewAny(),
         ];

@@ -16,7 +16,6 @@ use App\Http\Controllers\Partner\AgentAccountController;
 use App\Http\Controllers\Partner\AgentApplicationController;
 use App\Http\Controllers\Partner\AgentStudentController;
 use App\Http\Controllers\Partner\OrganisationController;
-use App\Http\Controllers\Partner\SubmissionController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ScholarshipController;
 use App\Http\Controllers\Student;
@@ -182,24 +181,18 @@ Route::get('/files/{document:public_id}/download', [Student\DocumentController::
 
 /*
 |--------------------------------------------------------------------------
-| Partner area. Universities and funders send scholarship listings; recruiting agents manage their students' applications.
+| Partner area. Recruiting agents manage their students and those students' applications.
 |--------------------------------------------------------------------------
 */
 Route::prefix('partner')->name('partner.')->middleware(['auth', 'active', 'verified'])->group(function () use ($applicationRoutes) {
     Route::get('/', PartnerController::class)->name('home');
-    Route::get('/submissions', [SubmissionController::class, 'index'])->name('submissions.index');
-    Route::get('/submissions/new', [SubmissionController::class, 'create'])->name('submissions.create');
-    Route::post('/submissions', [SubmissionController::class, 'store'])->middleware('throttle:enquiries')->name('submissions.store');
-    Route::get('/submissions/{submission:public_id}', [SubmissionController::class, 'show'])->name('submissions.show');
-    Route::get('/submissions/{submission:public_id}/edit', [SubmissionController::class, 'edit'])->name('submissions.edit');
-    Route::put('/submissions/{submission:public_id}', [SubmissionController::class, 'update'])->name('submissions.update');
     Route::get('/organisation', [OrganisationController::class, 'edit'])->name('organisation.edit');
     Route::put('/organisation', [OrganisationController::class, 'update'])->name('organisation.update');
 
     Route::get('/password', [AgentAccountController::class, 'passwordForm'])->name('password.edit');
     Route::put('/password', [AgentAccountController::class, 'updatePassword'])->middleware('throttle:login')->name('password.update');
 
-    // Recruiting agents: their students, and the applications of those students.
+    // Students and applications of the agent's own organisation.
     Route::middleware('agent')->group(function () use ($applicationRoutes) {
         Route::get('/students', [AgentStudentController::class, 'index'])->name('students.index');
         Route::get('/students/new', [AgentStudentController::class, 'create'])->name('students.create');

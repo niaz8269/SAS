@@ -53,7 +53,7 @@ return [
         'editor' => ['content.draft', 'import.stage', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],
         'reviewer' => ['content.draft', 'content.review', 'content.publish', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],
         'finance' => ['finance.view', 'invoices.manage', 'reports.view'],
-        'partner_manager' => ['partner.submit'],
+        'partner_manager' => [], // a recruiting agent's access is decided by their organisation and by policies, not by a role permission
     ],
     'staff_roles' => ['super_admin', 'administrator', 'service_manager', 'advisor', 'specialist', 'editor', 'reviewer', 'finance'],
 

@@ -36,11 +36,6 @@ class DemoAccountsSeeder extends Seeder
             $user->userRoles()->firstOrCreate(['role' => $role->value]);
         }
 
-        $org = PartnerOrganisation::firstOrCreate(['name' => 'Demo Partner University (test account)'], ['kind' => 'university', 'contact_email' => 'demo-partner@example.test']);
-        $partner = User::firstOrCreate(['email' => 'demo-'.Role::PartnerManager->value.'@example.test'], ['name' => 'Demo '.Role::PartnerManager->label(), 'password' => $password]);
-        $partner->forceFill(['email_verified_at' => now(), 'partner_organisation_id' => $org->id])->save();
-        $partner->userRoles()->firstOrCreate(['role' => Role::PartnerManager->value]);
-
         // A recruiting agent: manages students and their applications (sign in as demo-agent@example.test).
         $agentOrg = PartnerOrganisation::firstOrCreate(['name' => 'Demo Recruiting Agency (test account)'], ['kind' => 'agent', 'contact_email' => 'demo-agent@example.test']);
         $agent = User::firstOrCreate(['email' => 'demo-agent@example.test'], ['name' => 'Demo Agent', 'password' => $password]);

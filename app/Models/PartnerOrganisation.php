@@ -11,7 +11,9 @@ class PartnerOrganisation extends Model
 {
     use AuditsChanges;
 
-    public const KINDS = ['university' => 'University', 'funder' => 'Funder or foundation', 'agent' => 'Recruiting agent', 'other' => 'Other'];
+    public const KINDS = ['agent' => 'Recruiting agent'];
+
+    protected $attributes = ['kind' => 'agent'];
 
     protected $guarded = ['id', 'status'];
 
@@ -34,11 +36,6 @@ class PartnerOrganisation extends Model
     public function students(): HasMany
     {
         return $this->hasMany(User::class, 'managed_by_organisation_id');
-    }
-
-    public function submissions(): HasMany
-    {
-        return $this->hasMany(PartnerSubmission::class, 'organisation_id');
     }
 
     public function isActive(): bool

@@ -27,23 +27,22 @@ class PartnerOrganisationResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingOffice2;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Partners';
+    protected static string|\UnitEnum|null $navigationGroup = 'Recruiting agents';
 
     protected static ?int $navigationSort = 1;
 
-    protected static ?string $modelLabel = 'partner organisation';
+    protected static ?string $modelLabel = 'recruiting agent';
 
-    protected static ?string $navigationLabel = 'Partner organisations';
+    protected static ?string $navigationLabel = 'Recruiting agents';
 
     public static function form(Schema $schema): Schema
     {
         return $schema->components([
             TextInput::make('name')->required()->maxLength(200),
-            Select::make('kind')->options(PartnerOrganisation::KINDS)->required()->default('university'),
             Select::make('country_id')->label('Country')->options(fn () => Country::orderBy('name')->pluck('name', 'id')->all())->searchable()->placeholder('Not set'),
             TextInput::make('website')->maxLength(300)->rules(SafeUrl::rules()),
             TextInput::make('contact_email')->email()->maxLength(190),
-            Select::make('status')->options(['active' => 'Active', 'suspended' => 'Suspended (partners cannot sign in to the area)'])->required()->default('active'),
+            Select::make('status')->options(['active' => 'Active', 'suspended' => 'Suspended (its people cannot sign in to the agent portal)'])->required()->default('active'),
             Textarea::make('internal_note')->label('Internal note (staff only)')->rows(3)->maxLength(2000)->columnSpanFull(),
         ])->columns(2);
     }
@@ -52,10 +51,9 @@ class PartnerOrganisationResource extends Resource
     {
         return $table->columns([
             TextColumn::make('name')->searchable()->sortable(),
-            TextColumn::make('kind')->badge()->formatStateUsing(fn ($state) => PartnerOrganisation::KINDS[$state] ?? $state),
             TextColumn::make('country.name')->placeholder('-'),
             TextColumn::make('users_count')->counts('users')->label('People'),
-            TextColumn::make('submissions_count')->counts('submissions')->label('Submissions'),
+            TextColumn::make('students_count')->counts('students')->label('Students'),
             TextColumn::make('status')->badge()->color(fn ($state) => $state === 'active' ? 'success' : 'danger'),
         ])->recordActions([EditAction::make()])->defaultSort('name');
     }

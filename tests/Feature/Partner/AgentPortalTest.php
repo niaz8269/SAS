@@ -76,13 +76,13 @@ class AgentPortalTest extends TestCase
     public function test_student_management_is_only_for_recruiting_agents(): void
     {
         $agent = $this->agent();
-        $university = $this->agent('Some University', 'university');
+        $legacy = $this->agent('Old organisation', 'university'); // a leftover organisation that is not marked as an agent
 
         $this->actingAs($agent)->get(route('partner.home'))->assertOk()->assertSee('Backend home')->assertSee('Number of students');
         $this->get(route('partner.students.index'))->assertOk();
         $this->get(route('partner.applications.index'))->assertOk();
 
-        $this->actingAs($university)->get(route('partner.home'))->assertOk()->assertSee('Submit a scholarship');
+        $this->actingAs($legacy)->get(route('partner.home'))->assertForbidden();
         $this->get(route('partner.students.index'))->assertForbidden();
         $this->get(route('partner.applications.index'))->assertForbidden();
         $this->post(route('partner.students.store'), [])->assertForbidden();

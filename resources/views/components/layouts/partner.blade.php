@@ -1,11 +1,8 @@
 @props(['title' => 'Partner area'])
 @php
     $user = auth()->user();
-    $isAgent = $user->isAgent();
     $organisation = $user->partnerOrganisation;
-    $nav = $isAgent
-        ? [['Backend home', route('partner.home'), 'partner.home'], ['Student list', route('partner.students.index'), ['partner.students.*', 'partner.student.*']], ['Application list', route('partner.applications.index'), 'partner.applications.*']]
-        : [['Overview', route('partner.home'), 'partner.home'], ['Submissions', route('partner.submissions.index'), 'partner.submissions.*']];
+    $nav = [['Backend home', route('partner.home'), 'partner.home'], ['Student list', route('partner.students.index'), ['partner.students.*', 'partner.student.*']], ['Application list', route('partner.applications.index'), 'partner.applications.*']];
     $nav[] = ['Organisation data', route('partner.organisation.edit'), 'partner.organisation.*'];
 @endphp
 <!DOCTYPE html>
@@ -30,7 +27,7 @@
     <div class="h-1 bg-gradient-to-r from-navy-600 via-gold to-gold" aria-hidden="true"></div>
     <div class="flex h-16 w-full items-center justify-between gap-3 pl-1.5 pr-4 sm:pr-6 lg:pr-8">
         <div class="flex min-w-0 items-center gap-3"><a href="{{ route('partner.home') }}" aria-label="{{ config('sas.brand.short') }} partner area"><x-brand light class="[&>span]:!p-1 [&_img]:!h-11 [&_img]:!max-w-none" /></a>
-            <span class="hidden truncate border-l border-white/20 pl-3 text-sm font-semibold text-gold-soft sm:inline">{{ $isAgent ? 'Recruiting agent' : 'Partner' }} &middot; {{ $organisation?->name }}</span></div>
+            <span class="hidden truncate border-l border-white/20 pl-3 text-sm font-semibold text-gold-soft sm:inline">Recruiting agent &middot; {{ $organisation?->name }}</span></div>
         <details class="relative text-sm">
             <summary class="cursor-pointer list-none rounded-lg px-3 py-2 hover:bg-white/10">{{ $user->name }} <span aria-hidden="true">▾</span></summary>
             <ul class="absolute right-0 z-40 mt-1 w-52 rounded-lg border border-line bg-white p-1 text-ink shadow-lg">

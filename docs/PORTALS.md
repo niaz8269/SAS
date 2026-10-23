@@ -8,7 +8,7 @@ Staff accounts must use an authenticator app. The demo staff accounts all share 
 |---|---|---|---|
 | Public website | `/` | everyone | none needed |
 | Student workspace | `/student` | students | `demo-student@example.test` |
-| Partner area | `/partner` | people at a partner university, funder or agent | `demo-partner_manager@example.test` |
+| Agent portal | `/partner` | people at a recruiting agency | `demo-agent@example.test` |
 | Admin panel | `/admin` | all staff (what each sees depends on the role) | see below |
 
 ## The student journey
@@ -33,17 +33,16 @@ Each case also shows a **Documents needed** checklist with an upload button per 
 
 Notifications: a case opened, counsellor assigned, status changed, payment recorded, invoice cancelled, refund paid and counsellor replies create an in-app notice and, if the student's "transactional" preferences allow, an email.
 
-## Partner area
-A partner account belongs to one organisation. Partners see an overview, submit scholarships (name, official page, level, dates and so on), follow each submission's status, read editors' messages, edit and resend while it is "Submitted" or "Needs changes", and keep their organisation's contact email and website. They never see student data. Staff create the organisation and its people under **Partners** in the admin; there is no public partner sign-up.
+## Agent portal (`/partner`)
+A partner account belongs to one **recruiting agent** organisation; every partner organisation is an agent (the earlier university and funder scholarship-submission area was removed). Staff create the agency and its people under **Recruiting agents** in the admin; there is no public sign-up, and the public page /partners explains how to get an account.
 
-### Recruiting agents (partner organisations of kind "Recruiting agent")
+### What an agent does
 An agent manages many students' applications. Staff mark the organisation as a **Recruiting agent** in the admin and create its people (`demo-agent@example.test` locally).
 * **Backend home:** number of applications and students, applications by status, and what to do.
 * **Student list:** search, **Add students** (surname, given name, email, country, passport number, date of birth, and a tick that the student agreed), **Batch import** (CSV, up to 200, with a template and a report of lines that were skipped), Edit, Open, **Add application**. Each student is emailed an invitation to choose **their own** password (valid 7 days); until then only the agent works on their applications. Every addition is audited with the agent's confirmation. An agent reaches only their own organisation's students; the student keeps their own account.
 * **Application list:** application number, scholarship, student, gender, country, last operation time, status, review notes, application fee and agency charge status (from SAS's case, if any), **View details / Continue** and **Download application form** (a printable page). Search by student, email, scholarship or number; filter by status and dates.
 * **Working on a student's application:** the same four steps as the student's (below), under `partner/students/{student}/...`: the details form, the documents and the submission belong to the student.
 * **Account:** Edit organisation data and Change password (every partner user).
-University and funder partners keep the scholarship-submission screens.
 
 ### The four-step application (student and agent)
 1. **Apply now:** the scholarship, the degree and the language of study. 2. **Application form:** the master form on one page with a section menu and one Save. 3. **Upload materials:** a notice panel and a numbered slot per document the scholarship asks for (several files each); for a mandatory document the applicant may tick "Currently cannot provide this document" and give the reason, which counts as an excuse for now. 4. **Apply submit:** a summary (form, documents, reasons), a printable preview, and **Submit**, which is allowed only when nothing is missing.
@@ -52,8 +51,8 @@ Statuses: **Unfinished** (draft, or **Returned**) > **Submitted for review** > *
 | Role | Demo login | Sees |
 |---|---|---|
 | Super administrator | `demo-super_admin@example.test` | everything, including users and roles |
-| Administrator | `demo-administrator@example.test` | website, editorial, service desk, cases, finance, partners, payment options, users |
-| Service manager | `demo-service_manager@example.test` | enquiries, consultations, **student cases** (opens cases, assigns counsellors), invoices (read), partners and their submissions, services |
+| Administrator | `demo-administrator@example.test` | website, editorial, service desk, cases, finance, recruiting agents, payment options, users |
+| Service manager | `demo-service_manager@example.test` | enquiries, consultations, **student cases** (opens cases, assigns counsellors), invoices (read), recruiting agents, services |
 | Advisor (counsellor) | `demo-advisor@example.test` | only enquiries, consultations and **cases assigned to them** (changes the case status; reads their fees) |
 | Writer or document specialist | `demo-specialist@example.test` | assigned enquiries and cases |
 | Finance | `demo-finance@example.test` | **invoices and payments** only: records payments, cancels unpaid invoices, records refunds |
@@ -63,5 +62,3 @@ Statuses: **Unfinished** (draft, or **Returned**) > **Submitted for review** > *
 ## How fees work (see `/legal/refunds`)
 Opening a case issues the **US$100 application fee**. If the funder **rejects** the application, **US$50** of a paid fee becomes a refund due (finance records when it is paid). If the student is **accepted**, the **US$500 agency service charge** is issued. Withdrawing before work starts refunds the whole fee; after work starts, nothing. Counsellors set the status; only finance and managers record payments. Students see the result under "Cases and fees". All amounts come from `config/sas.php` (`fees`).
 
-## How a partner submission becomes a listing
-Partner submits -> editors mark it "Being checked", ask for changes (the partner sees the message and resends) or reject it -> "Accept and create the draft listing" makes a **draft** in Scholarship calls through the normal importer. A draft is never public: its official source is checked and a second person reviews it before publication.

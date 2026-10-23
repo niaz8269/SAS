@@ -9,7 +9,6 @@ use App\Models\CycleRevision;
 use App\Models\Enquiry;
 use App\Models\Invoice;
 use App\Models\NotificationEvent;
-use App\Models\PartnerSubmission;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
 use App\Models\ServiceCase;
@@ -72,9 +71,7 @@ class OperationsOverview extends StatsOverviewWidget
             $stats[] = Stat::make('Scholarships without document rules', ScholarshipProgramme::whereHas('cycles', fn ($q) => $q->visible())->whereDoesntHave('documentRules')->count())
                 ->description('Students get the default document list')->color('warning');
         }
-        if ($user->can('partners.manage')) {
-            $stats[] = Stat::make('Partner submissions to check', PartnerSubmission::whereIn('status', ['submitted', 'in_review'])->count())->description('Waiting for editors')->color('warning');
-        }        if ($user->can('reports.view')) {
+        if ($user->can('reports.view')) {
             $stats[] = Stat::make('Failed jobs', DB::table('failed_jobs')->count())->color(DB::table('failed_jobs')->count() ? 'danger' : 'success');
             $stats[] = Stat::make('Failed reminders', NotificationEvent::where('status', 'failed')->count());
             $stats[] = Stat::make('Active application plans', ApplicationPlan::whereNotIn('status', ['withdrawn', 'unsuccessful'])->count());
