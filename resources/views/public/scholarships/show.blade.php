@@ -129,7 +129,7 @@
                     @php($named = $rows->whereNotNull('name'))
                     <div class="mt-3 rounded-lg border border-line p-4">
                         <h4 class="font-semibold">{{ $rows->first()->degreeLevel->name }}</h4>
-                        @if ($summary?->detail)<p class="mt-1 text-sm">{{ $summary->detail }}@if ($summary->source_url) <a class="text-navy-700 underline" href="{{ $summary->source_url }}" rel="noopener nofollow" target="_blank">Official source</a>@endif</p>@endif
+                        @if ($summary?->detail)<p class="mt-1 text-sm">{{ $summary->detail }}</p>@endif
                         @if ($named->isNotEmpty())
                             <ul class="mt-2 list-disc space-y-1 pl-5 text-sm">
                                 @foreach ($named as $o)

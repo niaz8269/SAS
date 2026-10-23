@@ -4,7 +4,7 @@
         <div class="min-w-0 flex-1">
             <p class="font-medium">{{ $r['kind']->name }}
                 <span class="{{ $r['requirement'] === 'required' ? 'badge-warn' : 'badge-neutral' }}">{{ $r['requirement'] === 'required' ? 'Mandatory' : 'Optional' }}</span></p>
-            @if ($r['note'])<p class="mt-0.5 text-sm text-muted">{{ $r['note'] }}@if ($r['source'] && str_starts_with($r['source'], 'https://')) <a class="text-navy-700 underline" rel="noopener" href="{{ $r['source'] }}">Official source</a>@endif</p>
+            @if ($r['note'])<p class="mt-0.5 text-sm text-muted">{{ $r['note'] }}</p>
             @elseif ($r['kind']->description)<p class="mt-0.5 text-sm text-muted">{{ $r['kind']->description }}</p>@endif
         </div>
         <span class="{{ match ($r['state']) { 'ready' => 'badge-green', 'scanning' => 'badge-warn', default => 'badge-neutral' } }}">{{ match ($r['state']) { 'ready' => '✓ Uploaded', 'scanning' => 'Being checked', default => 'Not uploaded yet' } }}</span>
