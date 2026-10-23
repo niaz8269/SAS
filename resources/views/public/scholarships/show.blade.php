@@ -31,6 +31,7 @@
                 @if ($cycle->needsRecheck())<span class="badge-warn">Needs recheck</span>@endif
             </div>
             <h1 class="mt-3 text-3xl font-extrabold sm:text-4xl">{{ $programme->title }}</h1>
+            <img src="{{ $programme->imageUrl($cycle) }}" alt="" class="mt-4 aspect-[16/5] w-full max-w-3xl rounded-xl border border-line object-cover" width="800" height="250">
             <p class="mt-1 text-lg text-muted">{{ $programme->funder?->name }} @if($cycle->destinations->isNotEmpty()) · {{ $cycle->destinations->pluck('name')->implode(', ') }} @endif</p>
             @if ($cycle->summary)<p class="mt-4 max-w-3xl">{{ $cycle->summary }}</p>@endif
         </div>

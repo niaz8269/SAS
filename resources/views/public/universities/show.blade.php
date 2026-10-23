@@ -5,7 +5,7 @@
 <x-layouts.public :title="$university->name" :description="\Illuminate\Support\Str::limit(strip_tags((string) $university->summary) ?: $university->name.($place ? ' in '.$place : '').': programmes, tuition and teaching languages for international students.', 155)">
     <section class="container-page py-10">
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('universities.index') }}">Universities</a> / <span aria-current="page">{{ $university->name }}</span></nav>
-        <div class="mt-3 grid gap-6 {{ $university->image_path ? 'lg:grid-cols-[1.2fr_0.8fr]' : '' }}">
+        <div class="mt-3 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
                 <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $university->name }}</h1>
                 @if ($university->name_zh)<p class="mt-1 text-lg text-muted" lang="zh-Hans">{{ $university->name_zh }}</p>@endif
@@ -17,7 +17,10 @@
                 </dl>
                 @if ($university->summary)<div class="mt-4 whitespace-pre-line">{{ $university->summary }}</div>@endif
             </div>
-            @if ($university->image_path)<img src="{{ \Illuminate\Support\Facades\Storage::disk('public_media')->url($university->image_path) }}" alt="" class="w-full rounded-xl object-cover" loading="lazy">@endif
+            <figure>
+                <img src="{{ $university->imageUrl() }}" alt="" class="aspect-[16/10] w-full rounded-xl object-cover" loading="lazy" width="640" height="400">
+                @if ($credit = $university->imageCredit())<figcaption class="mt-1 text-xs text-muted">{{ $credit['subject'] }}: photo {{ $credit['name'] }}{{ ! empty($credit['url']) ? ' on Unsplash' : '' }}. <a class="underline" href="{{ route('credits') }}">Image credits</a></figcaption>@endif
+            </figure>
         </div>
 
         @include('public.programmes._notice')

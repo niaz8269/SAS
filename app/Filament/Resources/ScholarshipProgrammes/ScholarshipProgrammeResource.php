@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ScholarshipProgrammes;
 
 use App\Filament\Concerns\ChecksPermission;
 use App\Filament\Resources\ScholarshipProgrammes\Pages\ManageScholarshipProgrammes;
+use App\Filament\Support\MediaPicker;
 use App\Models\ScholarshipProgramme;
 use BackedEnum;
 use Filament\Actions\EditAction;
@@ -48,6 +49,7 @@ class ScholarshipProgrammeResource extends Resource
             TextInput::make('title')->required()->maxLength(190)->live(onBlur: true)
                 ->afterStateUpdated(fn ($state, $set, $get) => $get('slug') ?: $set('slug', Str::slug($state))),
             TextInput::make('slug')->required()->alphaDash()->unique(ignoreRecord: true),
+            MediaPicker::make('image_path')->label('Photo (optional)')->columnSpanFull()->helperText('Blank = the photo of the destination country. Use a photo that shows the place or study, never a logo you do not have rights to.'),
             Select::make('funder_id')->relationship('funder', 'name')->searchable()->preload()
                 ->createOptionForm([TextInput::make('name')->required(), TextInput::make('slug')->required()->alphaDash()]),
             Select::make('host_country_id')->label('Primary host country')->relationship('hostCountry', 'name')->searchable()->preload(),

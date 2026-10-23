@@ -25,6 +25,8 @@ class RemoveDemoDataTest extends TestCase
         $china = Country::create(['code' => 'CN', 'name' => 'China', 'slug' => 'china', 'summary' => '[DEMO] Placeholder', 'study_guidance' => '<p>[DEMO] text</p>', 'is_destination' => true]);
 
         $this->artisan('sas:remove-demo-data')->assertSuccessful();
+        $this->assertDatabaseHas('users', ['email' => 'demo-editor@example.test']); // logins stay unless asked
+        $this->artisan('sas:remove-demo-data', ['--with-accounts' => true])->assertSuccessful();
 
         $this->assertDatabaseMissing('scholarship_programmes', ['id' => $demo->id]);
         $this->assertSame(0, ScholarshipCycle::where('programme_id', $demo->id)->count());

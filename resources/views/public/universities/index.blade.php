@@ -26,12 +26,15 @@
         @else
             <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($universities as $u)
-                    <li class="card flex flex-col p-5">
-                        <h2 class="text-lg font-bold"><a class="hover:underline" href="{{ route('universities.show', $u) }}">{{ $u->name }}</a></h2>
-                        @if ($u->name_zh)<p class="text-sm text-muted" lang="zh-Hans">{{ $u->name_zh }}</p>@endif
-                        <p class="mt-2 text-sm">{{ collect([$u->city, $u->province])->filter()->unique()->implode(', ') ?: 'Location not listed' }}</p>
-                        <p class="mt-1 text-sm text-muted">{{ $u->programmes_count ? number_format($u->programmes_count).' programmes' : 'No programmes listed yet' }}</p>
-                        <a class="btn-outline mt-4 self-start" href="{{ route('universities.show', $u) }}">View programmes</a>
+                    <li class="card flex flex-col overflow-hidden">
+                        <a href="{{ route('universities.show', $u) }}" tabindex="-1" aria-hidden="true"><img src="{{ $u->imageUrl() }}" alt="" class="aspect-[16/7] w-full object-cover" loading="lazy" width="600" height="262"></a>
+                        <div class="flex flex-1 flex-col p-5">
+                            <h2 class="text-lg font-bold"><a class="hover:underline" href="{{ route('universities.show', $u) }}">{{ $u->name }}</a></h2>
+                            @if ($u->name_zh)<p class="text-sm text-muted" lang="zh-Hans">{{ $u->name_zh }}</p>@endif
+                            <p class="mt-2 text-sm">{{ collect([$u->city, $u->province])->filter()->unique()->implode(', ') ?: 'Location not listed' }}</p>
+                            <p class="mt-1 text-sm text-muted">{{ $u->programmes_count ? number_format($u->programmes_count).' programmes' : 'No programmes listed yet' }}</p>
+                            <a class="btn-outline mt-4 self-start" href="{{ route('universities.show', $u) }}">View programmes</a>
+                        </div>
                     </li>
                 @endforeach
             </ul>
