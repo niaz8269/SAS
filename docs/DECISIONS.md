@@ -27,8 +27,8 @@ Format: ID · date · decision · reason · requirement refs · estimate impact.
   installer. Not part of the handoff and optional, so it is not installed. `AGENTS.md` is replaced with project notes.
 - **D-09 · Imagery.** No licensed photography supplied. Hero/destination imagery is CSS/SVG artwork and gradients clearly
   marked as temporary placeholders. No testimonials, statistics or partnerships are invented.
-- **D-10 · Demo data.** `DemoSeeder` creates clearly-labelled fictional records ("[DEMO]") and refuses to run when
-  `APP_ENV=production`. Real scholarship data is never seeded.
+- **D-10 · Demo data.** Retired on 2026-10-23: the `DemoSeeder` and all "[DEMO]" records were removed at the owner's request;
+  `php artisan sas:remove-demo-data` clears any leftovers. Scholarship data enters only as researched drafts (`data/seed`) that staff review.
 
 ## Open owner decisions (kept configurable / disabled — §24)
 

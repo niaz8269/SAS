@@ -25,13 +25,7 @@ npm install && npm run build
 php artisan serve
 ```
 
-Demonstration records (fictional, every title prefixed `[DEMO]`; refuses to run in production):
-
-```bash
-php artisan migrate:fresh --seed --seeder=DemoSeeder
-```
-
-Demo logins use `demo-<role>@example.test` / `demo-password-123`. Staff must set up an authenticator app on first sign-in at `/admin`.
+The project ships no demo records. Create your own staff account with `php artisan sas:make-staff you@example.com "Your Name" super_admin`; staff must set up an authenticator app on first sign-in at `/admin`. `php artisan sas:remove-demo-data` removes any leftover fictional `[DEMO]` records or `@example.test` accounts from an older database.
 
 Create a real staff account (random password + reset link; MFA enforced at first login):
 

@@ -40,7 +40,7 @@ Required production environment values:
 | `TRUSTED_PROXIES` | load balancer addresses |
 | `SAS_LEGAL_ENTITY`, `SAS_CONTACT_EMAIL`, `SAS_ACCESSIBILITY_EMAIL` | owner-confirmed |
 
-Production must not contain the `DemoSeeder` accounts. `DemoSeeder` refuses to run when `APP_ENV=production`; verify with `select email from users where email like '%@example.test'` after deploy.
+Production must not contain demo accounts: there is no demo seeder any more; verify with `select email from users where email like '%@example.test'` after deploy, and run `php artisan sas:remove-demo-data` if any appear.
 
 ## Processes
 

@@ -3,7 +3,7 @@
   Starts the web server, the queue worker and the scheduler in separate windows.
 
     .\scripts\dev.ps1            # start everything
-    .\scripts\dev.ps1 -Fresh     # first reset the database and load the fictional demo records
+    .\scripts\dev.ps1 -Fresh     # first reset the database (empty reference data, no demo records)
     .\scripts\dev.ps1 -Build     # rebuild the CSS/JS first
 
   Stop by closing the three windows. Nothing here is for production.
@@ -26,7 +26,7 @@ if (-not (Test-Path database\database.sqlite)) { New-Item database\database.sqli
 if (-not (Test-Path vendor)) { composer install }
 if ($Build -or -not (Test-Path public\build\manifest.json)) { npm install; npm run build }
 
-if ($Fresh) { php artisan migrate:fresh --force --seed --seeder=DemoSeeder } else { php artisan migrate --force }
+if ($Fresh) { php artisan migrate:fresh --force --seed } else { php artisan migrate --force }
 
 $shell = (Get-Command powershell.exe).Source
 foreach ($cmd in @(
