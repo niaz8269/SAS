@@ -20,6 +20,15 @@ class CscDocumentRulesSeeder extends Seeder
 {
     public const SLUG = 'chinese-government-scholarship-csc';
 
+    /** The CSC scholarship and the other CSC-based scholarships, which use the same application form and documents. */
+    public const SLUGS = [
+        self::SLUG,
+        'chinese-government-scholarship-bilateral-program-type-a',
+        'chinese-government-scholarship-silk-road-program',
+        'chinese-government-scholarship-university-program-type-b',
+        'peking-university-scholarships-for-international-graduate-students-csc-pkus-bgs',
+    ];
+
     /** kind key => [requirement, note] for every degree level of the scholarship. */
     private const SCHOLARSHIP = [
         'photo' => ['required', 'A passport-style photo, as listed with the CSC application form.'],
@@ -53,21 +62,23 @@ class CscDocumentRulesSeeder extends Seeder
 
     public function run(): void
     {
-        $programme = ScholarshipProgramme::where('slug', self::SLUG)->first();
-        if (! $programme) {
-            $this->command?->warn('The CSC scholarship ('.self::SLUG.') is not in this database, so no rules were set.');
-
-            return;
-        }
         $kinds = DocumentKind::pluck('id', 'key');
+        $levels = DegreeLevel::pluck('id', 'code');
 
-        foreach (self::SCHOLARSHIP as $key => [$requirement, $note]) {
-            $this->put($kinds[$key], $programme->id, null, $requirement, $note);
-        }
-        foreach (self::LEVELS as $code => $rules) {
-            $level = DegreeLevel::where('code', $code)->first();
-            foreach ($level ? $rules : [] as $key => [$requirement, $note]) {
-                $this->put($kinds[$key], $programme->id, $level->id, $requirement, $note);
+        foreach (self::SLUGS as $slug) {
+            $programme = ScholarshipProgramme::where('slug', $slug)->first();
+            if (! $programme) {
+                $this->command?->warn("Scholarship $slug is not in this database, so no rules were set for it.");
+
+                continue;
+            }
+            foreach (self::SCHOLARSHIP as $key => [$requirement, $note]) {
+                $this->put($kinds[$key], $programme->id, null, $requirement, $note);
+            }
+            foreach (self::LEVELS as $code => $rules) {
+                foreach (isset($levels[$code]) ? $rules : [] as $key => [$requirement, $note]) {
+                    $this->put($kinds[$key], $programme->id, $levels[$code], $requirement, $note);
+                }
             }
         }
     }

@@ -64,7 +64,7 @@ class CscDocumentRulesTest extends TestCase
         $this->seed(CscDocumentRulesSeeder::class);
 
         $this->assertSame($count, DocumentRule::count());
-        $this->assertSame(17, $count);
+        $this->assertSame(17, $count, 'only the CSC scholarship exists in this test database');
         DocumentRule::all()->each(fn ($r) => $this->assertLessThanOrEqual(300, mb_strlen($r->note), $r->kind->key));
     }
 
@@ -78,6 +78,23 @@ class CscDocumentRulesTest extends TestCase
         $this->assertSame('optional', $rows['csca']['requirement']);
         $this->assertSame('optional', $rows['police_clearance']['requirement']);
         $this->assertNotSame($csc->programme_id, $other->programme_id);
+    }
+
+    public function test_the_other_csc_scholarships_get_the_same_rules(): void
+    {
+        $this->seed(TaxonomySeeder::class);
+        $cycles = collect(CscDocumentRulesSeeder::SLUGS)->map(fn ($slug) => ScholarshipCycle::factory()->published()->create(['programme_id' => ScholarshipProgramme::factory()->create(['slug' => $slug])->id]));
+        $this->seed(CscDocumentRulesSeeder::class);
+
+        $this->assertCount(5, $cycles);
+        $this->assertSame(17 * 5, DocumentRule::count());
+        foreach ($cycles as $cycle) {
+            $master = $this->rows($cycle, 'master');
+            $this->assertSame('required', $master['recommendation']['requirement'], $cycle->programme->slug);
+            $this->assertSame('required', $master['pre_admission_letter']['requirement']);
+            $this->assertArrayNotHasKey('csca', $master);
+            $this->assertSame('required', $this->rows($cycle, 'bachelor')['csca']['requirement']);
+        }
     }
 
     public function test_the_seeder_does_nothing_when_the_scholarship_is_missing(): void
