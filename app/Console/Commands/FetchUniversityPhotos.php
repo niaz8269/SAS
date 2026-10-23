@@ -16,7 +16,7 @@ use Illuminate\Support\Str;
  */
 class FetchUniversityPhotos extends Command
 {
-    protected $signature = 'sas:fetch-university-photos {--limit=0 : stop after this many universities} {--only= : slug or part of a name} {--force : redo universities that already have a photo} {--cities : fetch a skyline photo for each province instead (used when a university has no photo of its own)} {--dry-run} {--shard= : k/n, process only universities whose id % n == k (lets several runs share the work)}';
+    protected $signature = 'sas:fetch-university-photos {--limit=0 : stop after this many universities} {--only= : slug or part of a name} {--force : redo universities that already have a photo} {--zh : look universities up by their Chinese name on Chinese Wikipedia (for the ones the English search missed)} {--cities : fetch a skyline photo for each province instead (used when a university has no photo of its own)} {--dry-run} {--shard= : k/n, process only universities whose id % n == k (lets several runs share the work)}';
 
     protected $description = 'Fetch openly licensed campus photographs for universities from Wikimedia Commons.';
 
@@ -60,9 +60,12 @@ class FetchUniversityPhotos extends Command
                 break;
             }
             $done++;
+            if ($this->option('zh') && blank($u->name_zh)) {
+                continue;
+            }
             $name = $u->name_en_official ?: $u->name;
             try {
-                $hit = $this->find($http, $name, $u);
+                $hit = $this->option('zh') ? $this->findZh($http, $u) : $this->find($http, $name, $u);
                 $photo = $hit ? $this->pickPhoto($http, $hit) : null;
             } catch (\Throwable $e) {
                 $this->warn("{$name}: {$e->getMessage()}");
@@ -93,7 +96,20 @@ class FetchUniversityPhotos extends Command
         return self::SUCCESS;
     }
 
-    /** One skyline photo per province for universities that have no photo of their own: the first city that has an openly licensed one. */
+    /** Chinese Wikipedia article whose title is exactly the university's Chinese name (variants and redirects followed). */
+    private function findZh(PendingRequest $http, University $u): ?array
+    {
+        $r = $http->get('https://zh.wikipedia.org/w/api.php', ['action' => 'query', 'format' => 'json', 'titles' => $u->name_zh, 'redirects' => 1, 'variant' => 'zh-cn',
+            'prop' => 'pageprops|pageimages', 'ppprop' => 'wikibase_item', 'piprop' => 'name'])->json('query.pages') ?? [];
+        $p = array_values($r)[0] ?? null;
+        if (! $p || isset($p['missing'])) {
+            return null;
+        }
+
+        return ['title' => $p['title'], 'qid' => $p['pageprops']['wikibase_item'] ?? null, 'pageimage' => $p['pageimage'] ?? null];
+    }
+
+    /** One skyline photo per province  for universities that have no photo of their own: the first city that has an openly licensed one. */
     private function cities(): int
     {
         $http = Http::withUserAgent('SAS-scholarships-site/1.0 (webai.auto@gmail.com)')->timeout(40)->retry(2, 800, throw: false);

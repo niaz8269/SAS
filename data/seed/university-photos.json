@@ -69,6 +69,13 @@
         "url": "https://commons.wikimedia.org/wiki/File:Main_gate_of_Beijing_Institute_of_Technology_main_campus_(20210523072112).jpg",
         "article": "Beijing Institute of Technology"
     },
+    "beijing-international-studies-university": {
+        "subject": "Beijing International Studies University",
+        "artist": "N509FZ",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:North_gate_of_BISU_(20200801105801).jpg",
+        "article": "北京第二外国语学院"
+    },
     "beijing-jiaotong-university": {
         "subject": "Beijing Jiaotong University",
         "artist": "Walter Grassroot",
@@ -195,6 +202,13 @@
         "url": "https://commons.wikimedia.org/wiki/File:Changchun_University_of_Science_and_Technology.jpg",
         "article": "Changchun University of Science and Technology"
     },
+    "changsha-university-of-science-and-technology": {
+        "subject": "Changsha University of Science and Technology",
+        "artist": "Huangdan2060",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Changsha_University_of_Science_and_Technology38.jpg",
+        "article": "长沙理工大学"
+    },
     "china-agricultural-university": {
         "subject": "China Agricultural University",
         "artist": "Loong",
@@ -237,6 +251,20 @@
         "url": "https://commons.wikimedia.org/wiki/File:Jiao_5_in_CUG_Beijing.jpg",
         "article": "China University of Geosciences (Beijing)"
     },
+    "china-university-of-geosciences-wuhan": {
+        "subject": "China University of Geosciences",
+        "artist": "Zhangmoon618",
+        "license": "Public domain",
+        "url": "https://commons.wikimedia.org/wiki/File:Cug_3.JPG",
+        "article": "中国地质大学（武汉）"
+    },
+    "china-university-of-mining-and-technology": {
+        "subject": "China University of Mining andTechnology",
+        "artist": "H2v5o68z",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:China_University_of_Mining_and_Technology.jpg",
+        "article": "中国矿业大学"
+    },
     "china-university-of-petroleum-beijing": {
         "subject": "China University of Petroleum(Beijing)",
         "artist": "Baomi",
@@ -264,6 +292,13 @@
         "license": "CC BY-SA 4.0",
         "url": "https://commons.wikimedia.org/wiki/File:China_Youth_University_of_Political_Studies_(20220808154321).jpg",
         "article": "China Youth University of Political Studies"
+    },
+    "chongqing-medical-university": {
+        "subject": "Chongqing Medical University",
+        "artist": "Urga",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E9%87%8D%E6%85%B6%E9%86%AB%E7%A7%91%E5%A4%A7%E5%AD%B8.JPG",
+        "article": "重庆医科大学"
     },
     "chongqing-normal-university": {
         "subject": "Chongqing Normal University",
@@ -391,6 +426,20 @@
         "url": "https://commons.wikimedia.org/wiki/File:Guangxi_Normal_University_House.jpg",
         "article": "Guangxi Normal University"
     },
+    "guangxi-university": {
+        "subject": "Guangxi University",
+        "artist": "Geographer",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Guangxi_University.JPG",
+        "article": "广西大学"
+    },
+    "guangzhou-medical-university": {
+        "subject": "Guangzhou Medical University",
+        "artist": "Tim Wu",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:South_Entrance,_Panyu_Campus,_Guangzhou_Medical_University_20220918-B.jpg",
+        "article": "广州医科大学"
+    },
     "guangzhou-university-of-chinese-medicine": {
         "subject": "Guangzhou University of Chinese Medicine",
         "artist": "Zhangzhugang",
@@ -411,6 +460,13 @@
         "license": "CC0",
         "url": "https://commons.wikimedia.org/wiki/File:Hainan_Normal_University,_Haikou_Campus_-_01.jpg",
         "article": "Hainan Normal University"
+    },
+    "hainan-university": {
+        "subject": "Hainan University",
+        "artist": "Kassidy",
+        "license": "Public domain",
+        "url": "https://commons.wikimedia.org/wiki/File:Hainan_University,_Haidian_Campus,_Haidian_Island,_Haikou,_Hainan,_China_04.jpg",
+        "article": "海南大学"
     },
     "harbin-engineering-university": {
         "subject": "Harbin Engineering University",
@@ -552,6 +608,20 @@
         "url": "https://commons.wikimedia.org/wiki/File:Hunan_University05.jpg",
         "article": "Hunan University"
     },
+    "inner-mongolia-university": {
+        "subject": "Inner Mongolia University",
+        "artist": "Derik van Zuetphen",
+        "license": "CC BY-SA 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Inner_Mongolia_Univerisity_inscription.jpg",
+        "article": "内蒙古大学"
+    },
+    "jiamusi-university": {
+        "subject": "Jiamusi University",
+        "artist": "颜邯",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E4%BD%B3%E6%9C%A8%E6%96%AF%E5%A4%A7%E5%AD%A6%E4%BD%93%E8%82%B2%E4%B8%AD%E5%BF%83_Sports_Center,_Jiamusi_University,_Feb_2018.jpg",
+        "article": "佳木斯大学"
+    },
     "jiangsu-normal-university": {
         "subject": "Jiangsu Normal University",
         "artist": "Zhou Guanhuai",
@@ -566,12 +636,26 @@
         "url": "https://commons.wikimedia.org/wiki/File:Jiangsu_University_Mengxi_Campus_2013-04.JPG",
         "article": "Jiangsu University"
     },
+    "jiangxi-university-of-chinese-medicine": {
+        "subject": "Jiangxi University of Chinese Medicine",
+        "artist": "丰泽一号",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:The_gate_of_Jiangxi_University_of_Traditional_Chinese_Medicine.jpg",
+        "article": "江西中医药大学"
+    },
     "jilin-agricultural-university": {
         "subject": "Jilin Agricultural University",
         "artist": "天王星",
         "license": "CC BY-SA 3.0",
         "url": "https://commons.wikimedia.org/wiki/File:%E5%90%89%E6%9E%97%E7%9C%81%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6_-_panoramio.jpg",
         "article": "Jilin Agricultural University"
+    },
+    "jilin-university": {
+        "subject": "Jilin University",
+        "artist": "董辰兴",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E5%90%89%E6%9E%97%E5%A4%A7%E5%AD%A6%E4%B8%AD%E5%BF%83%E6%A0%A1%E5%8C%BA%E4%B8%9C%E9%97%A82012.jpg",
+        "article": "吉林大学"
     },
     "jinan-university": {
         "subject": "Jinan University",
@@ -594,6 +678,13 @@
         "url": "https://commons.wikimedia.org/wiki/File:%E6%98%86%E6%98%8E%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E8%8E%B2%E5%8D%8E%E6%A0%A1%E5%8C%BA_-_2025-05-17_02.jpg",
         "article": "Kunming University of Science and Technology"
     },
+    "lanzhou-jiaotong-university": {
+        "subject": "Lanzhou Jiaotong University",
+        "artist": "Seksan Phonsuwan",
+        "license": "CC BY 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Lanzhou_Jiaotong_University_(No.88_West_Anning_Road)_-_panoramio.jpg",
+        "article": "兰州交通大学"
+    },
     "lanzhou-university-of-technology": {
         "subject": "Lanzhou University of Technology",
         "artist": "Msood",
@@ -614,6 +705,13 @@
         "license": "CC BY-SA 3.0",
         "url": "https://commons.wikimedia.org/wiki/File:Huaiyuan_Building_of_Liaoning_University.jpg",
         "article": "Liaoning University"
+    },
+    "liaoning-university-of-traditional-chinese-medicine": {
+        "subject": "Liaoning University of Traditional Chinese Medicin",
+        "artist": "Wang65",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Liaoning_University_of_Traditional_Chinese_Medicine.JPG",
+        "article": "辽宁中医药大学"
     },
     "massey-university": {
         "subject": "Massey University",
@@ -649,6 +747,13 @@
         "license": "CC BY-SA 3.0",
         "url": "https://commons.wikimedia.org/wiki/File:Main_Gate_of_Nanjing_University_Gulou_Campus_2012-11.JPG",
         "article": "Nanjing University"
+    },
+    "nanjing-university-of-science-and-technology": {
+        "subject": "Nanjing University of Science and Technology",
+        "artist": "猫猫的日记本",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Time_Square_in_Nanjing_University_of_Science_and_Technology_2012-05.JPG",
+        "article": "南京理工大学"
     },
     "nanjing-university-of-the-arts": {
         "subject": "Nanjing University of the Arts",
@@ -698,6 +803,13 @@
         "license": "CC BY-SA 3.0",
         "url": "https://commons.wikimedia.org/wiki/File:Neau.jpg",
         "article": "Northeast Agricultural University"
+    },
+    "northeast-electric-power-university": {
+        "subject": "Northeast Electric Power University",
+        "artist": "huorensishi",
+        "license": "CC BY-SA 3.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E4%B8%9C%E5%8C%97%E7%94%B5%E5%8A%9B%E5%A4%A7%E5%AD%A6%E6%95%99%E5%AD%A6%E6%A5%BC_-_panoramio.jpg",
+        "article": "东北电力大学"
     },
     "northeast-normal-university": {
         "subject": "Northeast Normal University",
@@ -754,6 +866,20 @@
         "license": "CC BY-SA 3.0",
         "url": "https://commons.wikimedia.org/wiki/File:QUST_Chinese_German_Technical_Faculty.JPG",
         "article": "Qingdao University of Science and Technology"
+    },
+    "qinghai-minzu-university": {
+        "subject": "Qinghai Nationalities University",
+        "artist": "Michał Beim",
+        "license": "CC BY 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Buildings_of_the_Qinghai_University_for_Nationalities_-_May_2025.jpg",
+        "article": "青海民族大学"
+    },
+    "qiqihar-university": {
+        "subject": "Qiqihar University",
+        "artist": "Amarespeco",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:%E9%BD%90%E9%BD%90%E5%93%88%E5%B0%94%E5%A4%A7%E5%AD%A6%E8%A5%BF%E5%8C%BA%E5%A4%A7%E9%97%A82017.jpg",
+        "article": "齐齐哈尔大学"
     },
     "radboud-university": {
         "subject": "Radboud University",
@@ -992,6 +1118,13 @@
         "license": "CC BY-SA 4.0",
         "url": "https://commons.wikimedia.org/wiki/File:Southwest_University_of_Political_Science_%26_Law.jpg",
         "article": "Southwest University of Political Science and Law"
+    },
+    "southwestern-university-of-finance-and-economics": {
+        "subject": "Southwestern University of Finance and Economics",
+        "artist": "Jorge swufe",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:SWUFE_-_%E5%85%89%E5%8D%8E%E9%97%A8.JPG",
+        "article": "西南财经大学"
     },
     "sultan-qaboos-university": {
         "subject": "Sultan Qaboos University",
