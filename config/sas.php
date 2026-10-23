@@ -92,7 +92,8 @@ return [
         'images/destinations/sa.jpg' => ['name' => 'Ibrahim Abdullah', 'url' => 'https://unsplash.com/photos/kingdom-centre-skyscraper-in-riyadh-_UxsPARhtOg', 'subject' => 'Kingdom Centre, Riyadh'],
         'images/destinations/se.jpg' => ['name' => 'Ana Bórquez', 'url' => 'https://unsplash.com/photos/white-boat-on-water-near-city-buildings-during-daytime-uF4PfwZPOR8', 'subject' => 'Riddarholmen, Stockholm'],
         'images/destinations/uz.jpg' => ['name' => 'Aleksander Stypczynski', 'url' => 'https://unsplash.com/photos/a-large-building-with-many-pillars-and-arches-l3AwHYiUGG0', 'subject' => 'The Registan, Samarkand'],
-        'images/hero-globe-city.jpg' => ['name' => 'Arpit Rastogi (globe) and Emiliano Bar (skyline)', 'url' => 'https://unsplash.com/photos/white-and-brown-desk-globe-xv7DTjnx2YQ', 'subject' => 'Homepage banner (globe and city skyline, two photographs combined)'],
+        'images/hero-shanghai.jpg' => ['name' => 'Edward He', 'url' => 'https://unsplash.com/photos/orient-pearl-shanghai-china-taken-during-daytime-uKyzXEc2k_s', 'subject' => 'Shanghai skyline (homepage banner)'],
+        'images/hero-globe.webp' => ['name' => 'Arpit Rastogi', 'url' => 'https://unsplash.com/photos/white-and-brown-desk-globe-xv7DTjnx2YQ', 'subject' => 'Desk globe (homepage banner, cut out)'],
     ],
 
     'deadlines' => [

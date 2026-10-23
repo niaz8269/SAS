@@ -10,7 +10,10 @@
 
 @case('hero')
     <section class="hero relative isolate overflow-hidden bg-navy-900">
-        <img src="{{ $s->image_path ? $media($s->image_path) : asset('images/hero-globe-city.jpg') }}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" width="2400" height="1594" fetchpriority="high">
+        <img src="{{ $s->image_path ? $media($s->image_path) : asset('images/hero-shanghai.jpg') }}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" width="2400" height="1600" fetchpriority="high">
+        @unless ($s->image_path)
+            <img src="{{ asset('images/hero-globe.webp') }}" alt="" class="pointer-events-none absolute left-1/2 top-[8%] -z-20 h-[60%] max-w-[62%] w-auto -translate-x-1/2 object-contain object-top [filter:drop-shadow(0_28px_36px_rgba(10,34,80,0.45))]" width="788" height="1100">
+        @endunless
         <div class="absolute inset-0 -z-10 bg-gradient-to-b from-navy-900/70 via-navy-800/35 to-navy-900/75" aria-hidden="true"></div>
         <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(202,162,73,0.18),transparent_60%)]" aria-hidden="true"></div>
         <div class="container-page hero-inner relative flex flex-col items-center text-center">
