@@ -10,8 +10,8 @@
 
 @case('hero')
     <section class="hero relative isolate overflow-hidden bg-navy-900">
-        <img src="{{ $s->image_path ? $media($s->image_path) : asset('images/hero-globe.jpg') }}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" width="2400" height="1600" fetchpriority="high">
-        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-navy-900/80 via-navy-800/55 to-navy-900/85" aria-hidden="true"></div>
+        <img src="{{ $s->image_path ? $media($s->image_path) : asset('images/hero-globe-city.jpg') }}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" width="2400" height="1594" fetchpriority="high">
+        <div class="absolute inset-0 -z-10 bg-gradient-to-b from-navy-900/70 via-navy-800/35 to-navy-900/75" aria-hidden="true"></div>
         <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(202,162,73,0.18),transparent_60%)]" aria-hidden="true"></div>
         <div class="container-page hero-inner relative flex flex-col items-center text-center">
             @if ($s->eyebrow)<p class="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true"></span>{{ $s->eyebrow }}</p>@endif
