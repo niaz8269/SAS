@@ -11,7 +11,7 @@ class PageBlock extends Model
 {
     use AuditsChanges;
 
-    public const PAGES = ['directory' => 'Scholarship directory', 'destinations' => 'Study destinations', 'services' => 'Our services', 'resources' => 'Resources', 'contact' => 'Contact'];
+    public const PAGES = ['directory' => 'Scholarship directory', 'destinations' => 'Study destinations', 'services' => 'Our services', 'resources' => 'Resources', 'contact' => 'Contact', 'universities' => 'Universities', 'programmes' => 'Programme search'];
 
     /** Built-in block keys per page; they can be edited or hidden but not deleted. */
     public const BUILT_IN = ['intro', 'empty', 'aside'];
@@ -38,16 +38,17 @@ class PageBlock extends Model
     public static function forPage(string $page): Collection
     {
         try {
-            $all = Cache::get('page.blocks');
-            if ($all === null) {
-                $all = static::query()->orderBy('sort')->orderBy('id')->get()->groupBy('page');
-                Cache::put('page.blocks', $all, 300);
+            // Plain arrays in the cache (it never unserialises Eloquent objects); models are rebuilt here.
+            $rows = Cache::get('page.blocks');
+            if ($rows === null) {
+                $rows = static::query()->orderBy('sort')->orderBy('id')->get()->map->getAttributes()->groupBy('page')->map->all()->all();
+                Cache::put('page.blocks', $rows, 300);
             }
         } catch (\Throwable) {
             return collect(); // not migrated yet
         }
 
-        return $all->get($page, collect());
+        return static::hydrate($rows[$page] ?? []);
     }
 
     /** A built-in block, or null when it was hidden or removed (callers fall back to the original wording). */

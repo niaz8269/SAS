@@ -27,6 +27,9 @@ class HomeSection extends Model
     /** Sections keyed by their key, in display order. Disabled sections are kept so the page can skip them. */
     public static function ordered(): Collection
     {
-        return Cache::remember('home.sections', 300, fn () => static::query()->orderBy('sort')->orderBy('id')->get())->keyBy('key');
+        // Cached as plain arrays: the cache never unserialises Eloquent objects (cache.serializable_classes is false).
+        $rows = Cache::remember('home.sections', 300, fn () => static::query()->orderBy('sort')->orderBy('id')->get()->map->getAttributes()->all());
+
+        return static::hydrate($rows)->keyBy('key');
     }
 }

@@ -49,6 +49,7 @@ class UniversityProgrammeResource extends Resource
             TextInput::make('teaching_language')->label('Teaching language')->maxLength(48)->helperText('English or Chinese wording both work; the list shows it in English.'),
             TextInput::make('duration_years')->label('Duration (years)')->numeric()->minValue(0)->maxValue(12),
             TextInput::make('tuition_cny')->label('Tuition (CNY per year)')->numeric()->minValue(0),
+            Toggle::make('published')->label('Show on the public programme pages')->default(true),
             Toggle::make('csc_eligible')->label('Marked open to Chinese Government Scholarship applicants'),
         ])->columns(2);
     }
@@ -69,6 +70,7 @@ class UniversityProgrammeResource extends Resource
                 TextColumn::make('name_en_official')->label('Official site wording')->placeholder('—')->wrap()->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('level')->badge()->formatStateUsing(fn ($state) => UniversityProgramme::LEVELS[$state] ?? $state),
                 IconColumn::make('csc_eligible')->label('CSC star')->boolean(),
+                IconColumn::make('published')->label('Public')->boolean()->toggleable(),
                 TextColumn::make('duration_years')->label('Years')->numeric(1),
                 TextColumn::make('teaching_language')->label('Language')->getStateUsing(fn (UniversityProgramme $r) => $r->languageLabel()),
                 TextColumn::make('tuition_cny')->label('Tuition CNY/yr')->numeric()->sortable()->placeholder('Not listed'),

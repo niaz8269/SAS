@@ -140,4 +140,16 @@ class PageBlocksAndMediaTest extends TestCase
         $this->get('/admin/page-blocks')->assertOk();
         $this->get('/admin/media-files')->assertOk();
     }
+
+    public function test_cached_page_text_survives_a_real_serialising_cache_store(): void
+    {
+        // Regression: Eloquent objects cannot be unserialised from the cache (serializable_classes is false), so only plain arrays may be cached.
+        config(['cache.default' => 'file', 'cache.stores.file.path' => storage_path('framework/cache/test-'.uniqid())]);
+        \Cache::flush();
+        foreach (range(1, 2) as $_) {
+            $this->get('/services')->assertOk()->assertSee('Support beyond the scholarship');
+            $this->get('/')->assertOk()->assertSee('A world of possibilities.');
+        }
+        \Cache::flush();
+    }
 }

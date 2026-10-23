@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Facades\Cache;
 
 class UniversityProgramme extends Model
 {
@@ -31,6 +33,29 @@ class UniversityProgramme extends Model
     public function displayName(): string
     {
         return $this->name_en ?: $this->name_zh;
+    }
+
+    public function scopePublic(Builder $query): Builder
+    {
+        return $query->where('published', true)->whereHas('university', fn ($q) => $q->inCatalogue());
+    }
+
+    /** Raw stored values that read as one English label ('Chinese', 'English', ...). Cached because it scans the distinct values only. */
+    public static function rawLanguagesFor(string $label): array
+    {
+        $all = Cache::remember('catalogue.languages', 3600, fn () => static::query()->whereNotNull('teaching_language')->distinct()->pluck('teaching_language')->all());
+
+        return array_values(array_filter($all, fn ($l) => static::languageLabelFor($l) === $label));
+    }
+
+    /** @return list<string> the English language labels present in the catalogue */
+    public static function languageLabels(): array
+    {
+        $all = Cache::remember('catalogue.languages', 3600, fn () => static::query()->whereNotNull('teaching_language')->distinct()->pluck('teaching_language')->all());
+        $labels = array_values(array_unique(array_map(fn ($l) => static::languageLabelFor($l), $all)));
+        sort($labels);
+
+        return $labels;
     }
 
     public function university(): BelongsTo

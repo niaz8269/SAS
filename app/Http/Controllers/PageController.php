@@ -7,6 +7,7 @@ use App\Models\CmsPage;
 use App\Models\Country;
 use App\Models\ScholarshipCycle;
 use App\Models\Service;
+use App\Models\University;
 use Illuminate\Support\Facades\Cache;
 
 /** Public editorial pages: destinations, services, resources and static pages. */
@@ -96,6 +97,8 @@ class PageController extends Controller
             Country::destinations()->where('guidance_published', true)->get()->each(fn ($c) => $urls->push(route('destinations.show', $c)));
             Service::published()->get()->each(fn ($s) => $urls->push(route('services.show', $s)));
             Article::published()->get()->each(fn ($a) => $urls->push(route('resources.show', $a)));
+            University::inCatalogue()->get(['slug'])->each(fn ($u) => $urls->push(route('universities.show', $u->slug)));
+            $urls->push(route('universities.index'), route('programmes.index'));
             CmsPage::published()->whereNotIn('slug', ['about', 'partners', 'privacy', 'terms', 'refunds', 'accessibility'])->get()->each(fn ($p) => $urls->push(route('pages.show', $p->slug)));
             ScholarshipCycle::visible()->with('programme')->get()->each(fn ($c) => $urls->push(route('scholarships.show', [$c->programme->slug, $c->slug])));
 

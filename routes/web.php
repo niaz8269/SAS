@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\TwoFactorChallengeController;
+use App\Http\Controllers\CatalogueController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\CorrectionController;
 use App\Http\Controllers\EmailWebhookController;
@@ -27,6 +28,9 @@ Route::get('/scholarships', [ScholarshipController::class, 'index'])->name('scho
 Route::get('/scholarships/{programme:slug}/{cycle}', [ScholarshipController::class, 'show'])->name('scholarships.show');
 Route::get('/go/{route}', [ScholarshipController::class, 'out'])->name('scholarships.out');
 
+Route::get('/universities', [CatalogueController::class, 'universities'])->name('universities.index');
+Route::get('/universities/{university:slug}', [CatalogueController::class, 'university'])->name('universities.show');
+Route::get('/programmes', [CatalogueController::class, 'programmes'])->name('programmes.index');
 Route::get('/destinations', [PageController::class, 'destinations'])->name('destinations.index');
 Route::get('/destinations/{country:slug}', [PageController::class, 'destination'])->name('destinations.show');
 Route::get('/services', [PageController::class, 'services'])->name('services.index');

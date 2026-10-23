@@ -14,7 +14,7 @@
                         <p class="mt-2 text-sm text-muted">{{ $a->excerpt }}</p><p class="mt-3 text-xs text-muted">{{ $a->published_at->format('j M Y') }}</p></article>
                 @endforeach
             </div>
-            <div class="mt-6">{{ $articles->links() }}</div>
+            <div class="mt-6">{{ $articles->links('pagination::tailwind') }}</div>
         @endif
     </section>
     <x-page-blocks page="resources" position="bottom" />

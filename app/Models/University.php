@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -12,7 +13,18 @@ class University extends Model
 
     protected function casts(): array
     {
-        return ['verified_at' => 'datetime', 'catalogue_checked_at' => 'datetime'];
+        return ['verified_at' => 'datetime', 'catalogue_checked_at' => 'datetime', 'published' => 'boolean'];
+    }
+
+    /** Universities shown on the public catalogue pages. */
+    public function scopeInCatalogue(Builder $query): Builder
+    {
+        return $query->where('published', true)->whereNotNull('csc_key');
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
     }
 
     public function programmes(): HasMany
