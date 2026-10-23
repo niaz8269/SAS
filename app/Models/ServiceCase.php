@@ -35,11 +35,11 @@ class ServiceCase extends Model
     ];
 
     // The student, advisor and status are set by trusted code (CaseService), never from request data.
-    protected $guarded = ['id', 'public_id', 'user_id', 'advisor_id', 'status'];
+    protected $guarded = ['id', 'public_id', 'user_id', 'advisor_id', 'status', 'awaiting_reply'];
 
     protected function casts(): array
     {
-        return ['opened_at' => 'datetime', 'outcome_at' => 'datetime'];
+        return ['opened_at' => 'datetime', 'outcome_at' => 'datetime', 'awaiting_reply' => 'boolean'];
     }
 
     protected static function booted(): void
@@ -73,6 +73,16 @@ class ServiceCase extends Model
     public function invoices(): HasMany
     {
         return $this->hasMany(Invoice::class, 'case_id')->orderBy('id');
+    }
+
+    public function messages(): HasMany
+    {
+        return $this->hasMany(CaseMessage::class, 'case_id')->orderBy('id');
+    }
+
+    public function shares(): HasMany
+    {
+        return $this->hasMany(CaseDocumentShare::class, 'case_id')->whereNull('revoked_at')->orderBy('id');
     }
 
     public function statusLabel(): string

@@ -6,6 +6,8 @@ use App\Filament\Resources\ServiceCases\Pages\CreateServiceCase;
 use App\Filament\Resources\ServiceCases\Pages\EditServiceCase;
 use App\Filament\Resources\ServiceCases\Pages\ListServiceCases;
 use App\Filament\Resources\ServiceCases\RelationManagers\InvoicesRelationManager;
+use App\Filament\Resources\ServiceCases\RelationManagers\MessagesRelationManager;
+use App\Filament\Resources\ServiceCases\RelationManagers\SharedDocumentsRelationManager;
 use App\Models\ScholarshipCycle;
 use App\Models\ServiceCase;
 use App\Models\User;
@@ -18,6 +20,7 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
@@ -74,6 +77,7 @@ class ServiceCaseResource extends Resource
                     'accepted' => 'success', 'rejected', 'withdrawn' => 'danger', 'new' => 'gray', default => 'primary'
                 }),
             TextColumn::make('advisor.name')->label('Counsellor')->placeholder('Unassigned'),
+            IconColumn::make('awaiting_reply')->label('Reply needed')->boolean()->trueIcon('heroicon-o-chat-bubble-left-ellipsis')->falseIcon('')->trueColor('warning'),
             TextColumn::make('due')->label('Awaiting payment')->state(fn (ServiceCase $r) => $r->invoices->where('status', 'issued')->sum('amount_cents') / 100)->money('USD'),
             TextColumn::make('opened_at')->date('j M Y')->sortable(),
         ])->filters([
@@ -84,7 +88,7 @@ class ServiceCaseResource extends Resource
 
     public static function getRelations(): array
     {
-        return [InvoicesRelationManager::class];
+        return [MessagesRelationManager::class, SharedDocumentsRelationManager::class, InvoicesRelationManager::class];
     }
 
     public static function getPages(): array

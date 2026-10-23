@@ -10,6 +10,7 @@ use App\Models\ApplicationTask;
 use App\Models\Document;
 use App\Models\DocumentAssociation;
 use App\Models\ScholarshipCycle;
+use App\Models\ServiceCase;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
@@ -19,7 +20,9 @@ class ApplicationController extends Controller
     {
         $list = $request->user()->applicationPlans()->with(['cycle.programme', 'cycle.currentDeadlines', 'tasks'])->latest()->get();
 
-        return view('student.applications.index', ['plans' => $list, 'service' => $plans]);
+        $supported = ServiceCase::where('user_id', $request->user()->id)->whereIn('cycle_id', $list->pluck('cycle_id'))->get()->keyBy('cycle_id');
+
+        return view('student.applications.index', ['plans' => $list, 'service' => $plans, 'supported' => $supported]);
     }
 
     public function store(Request $request, PlanService $plans)
@@ -38,6 +41,7 @@ class ApplicationController extends Controller
 
         return view('student.applications.show', [
             'plan' => $plan, 'progress' => $plans->progress($plan), 'changed' => $plans->requirementsChanged($plan),
+            'case' => ServiceCase::where('user_id', $request->user()->id)->where('cycle_id', $plan->cycle_id)->latest('id')->first(),
             'documents' => $request->user()->documents()->with('currentVersion')->get(),
             'attached' => DocumentAssociation::where('associable_type', $plan->getMorphClass())->where('associable_id', $plan->id)->with('document.currentVersion')->get(),
         ]);

@@ -7,7 +7,8 @@
 <x-layouts.student :title="$case->title">
     <p class="text-sm"><a class="text-navy-700 underline" href="{{ route('student.cases.index') }}">&larr; Cases and fees</a></p>
     <h1 class="mt-2 text-2xl font-extrabold">{{ $case->title }}</h1>
-    <p class="mt-1 text-sm text-muted">Counsellor: {{ $case->advisor?->name ?? 'Being assigned' }} &middot; opened {{ $case->opened_at?->format('j M Y') }}</p>
+    <p class="mt-1 text-sm text-muted">Counsellor: {{ $case->advisor?->name ?? 'Being assigned' }} &middot; opened {{ $case->opened_at?->format('j M Y') }}
+        @if ($plan) &middot; <a class="text-navy-700 underline" href="{{ route('student.applications.show', $plan) }}">Your checklist for this application</a>@endif</p>
 
     <section class="card mt-5 p-5" aria-labelledby="status-h">
         <h2 id="status-h" class="font-bold">Where it stands: {{ $case->statusLabel() }}</h2>
@@ -39,6 +40,56 @@
         @if ($case->invoices->where('status', 'issued')->isNotEmpty())
             @include('public.legal.payment-options')
             <p class="text-sm text-muted">After you pay, tell your counsellor the reference, and they will record it here. Fees and refunds are explained in the <a class="text-navy-700 underline" href="{{ route('legal.show', 'refunds') }}">cancellation and refund policy</a>.</p>
+        @endif
+    </section>
+
+    <section id="messages" class="card mt-5 p-5" aria-labelledby="msg-h">
+        <h2 id="msg-h" class="font-bold">Messages with your counsellor</h2>
+        <div class="mt-3 space-y-3">
+            @forelse ($messages as $m)
+                @php($mine = $m->author_id === $case->user_id)
+                <div class="rounded-md border p-3 text-sm {{ $mine ? 'border-line bg-white' : 'border-navy-300 bg-navy-50' }}">
+                    <p class="text-xs text-muted"><strong>{{ $mine ? 'You' : ($m->author?->name ?? 'SAS team') }}</strong> &middot; {{ $m->created_at->format('j M Y, H:i') }}</p>
+                    <p class="mt-1 whitespace-pre-line">{{ $m->body }}</p>
+                </div>
+            @empty
+                <p class="text-sm text-muted">No messages yet. Ask your counsellor a question about this application below.</p>
+            @endforelse
+        </div>
+        <form method="POST" action="{{ route('student.cases.messages.store', $case) }}" class="mt-4">
+            @csrf
+            <label for="msg-body" class="label">Your message</label>
+            <textarea id="msg-body" name="body" rows="3" required minlength="2" maxlength="2000" class="input">{{ old('body') }}</textarea>
+            @error('body')<p class="mt-1 text-sm text-alert" role="alert">{{ $message }}</p>@enderror
+            <p class="mt-1 text-xs text-muted">Do not put passwords or payment card numbers in a message. Share documents below instead.</p>
+            <button class="btn-primary mt-3">Send message</button>
+        </form>
+    </section>
+
+    <section id="share" class="card mt-5 p-5" aria-labelledby="share-h">
+        <h2 id="share-h" class="font-bold">Documents shared with your counsellor</h2>
+        <p class="mt-1 text-sm text-muted">Your documents are private. Tick only what your counsellor needs for this application. You can untick a document at any time and they will no longer be able to open it.</p>
+        @if ($documents->isEmpty())
+            <p class="mt-3 text-sm">You have no documents yet. <a class="text-navy-700 underline" href="{{ route('student.documents.index') }}">Upload documents</a> first.</p>
+        @else
+            <form method="POST" action="{{ route('student.cases.documents.update', $case) }}" class="mt-3">
+                @csrf @method('PUT')
+                <fieldset>
+                    <legend class="sr-only">Documents to share</legend>
+                    <ul class="divide-y divide-line">
+                        @foreach ($documents as $d)
+                            <li class="py-2"><label class="flex items-start gap-3 text-sm">
+                                <input type="checkbox" name="documents[]" value="{{ $d->id }}" class="mt-0.5 rounded border-slate-300 text-navy-700" @checked(in_array($d->id, old('documents', $sharedIds)))>
+                                <span><span class="font-medium">{{ $d->title }}</span> <span class="text-muted">({{ config('sas.document_types.'.$d->type, $d->type) }})</span>
+                                    @if (! $d->currentVersion?->isDownloadable())<span class="block text-xs text-muted">Not available yet: still being checked.</span>@endif</span>
+                            </label></li>
+                        @endforeach
+                    </ul>
+                </fieldset>
+                <label class="mt-3 flex items-start gap-2 text-sm"><input type="checkbox" name="consent" value="1" class="mt-0.5 rounded border-slate-300 text-navy-700" @checked(old('consent'))> <span>{{ $consent }}</span></label>
+                @error('consent')<p class="mt-1 text-sm text-alert" role="alert">{{ $message }}</p>@enderror
+                <button class="btn-primary mt-3">Save sharing</button>
+            </form>
         @endif
     </section>
 </x-layouts.student>

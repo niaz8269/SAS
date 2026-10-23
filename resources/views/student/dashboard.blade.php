@@ -10,6 +10,20 @@
     </div>
 
     <div class="mt-6 grid gap-6 lg:grid-cols-2">
+        <section class="card p-5 lg:col-span-2" aria-labelledby="cs"><h2 id="cs" class="text-lg font-bold">Cases and fees</h2>
+            @php($owing = $cases->flatMap->invoices->where('status', 'issued'))
+            @forelse ($cases as $c)
+                <a class="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-line pt-3 first:border-0 first:pt-0 hover:underline" href="{{ route('student.cases.show', $c) }}">
+                    <span>{{ $c->title }}@if ($c->awaiting_reply) <span class="badge-neutral">Waiting for your counsellor's reply</span>@endif</span>
+                    <span class="badge-neutral">{{ $c->statusLabel() }}</span></a>
+            @empty
+                <p class="mt-2 text-sm text-muted">SAS has not opened a case for you yet. When it does, its status and fees appear here.</p>
+            @endforelse
+            @if ($owing->isNotEmpty())
+                <p class="mt-3 text-sm"><strong>{{ $owing->count() }}</strong> {{ \Illuminate\Support\Str::plural('fee', $owing->count()) }} awaiting payment, <strong>US${{ number_format($owing->sum('amount_cents') / 100, 2) }}</strong> in total. <a class="text-navy-700 underline" href="{{ route('student.cases.index') }}">See how to pay</a></p>
+            @endif
+        </section>
+
         <section class="card p-5" aria-labelledby="up"><h2 id="up" class="text-lg font-bold">Upcoming confirmed deadlines</h2>
             @forelse ($upcoming as $c)
                 <div class="mt-3 border-t border-line pt-3 first:border-0 first:pt-0"><a class="font-semibold hover:underline" href="{{ route('scholarships.show', [$c->programme->slug, $c->slug]) }}">{{ $c->label() }}</a><x-deadline :cycle="$c" class="mt-1" /></div>

@@ -6,7 +6,7 @@
         <a href="{{ route('student.applications.show', $p) }}" class="card mt-4 block p-5 hover:border-navy-500">
             <div class="flex flex-wrap items-center justify-between gap-2"><h2 class="font-bold">{{ $p->cycle->label() }}</h2><span class="badge-neutral">{{ $p->status->label() }}{{ $p->status === \App\Enums\PlanStatus::Submitted ? ' · reported by you' : '' }}</span></div>
             <div class="mt-3 h-2 overflow-hidden rounded-full bg-ivory-deep" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ $pr['percent'] }}" aria-label="Checklist progress"><div class="h-full bg-navy-600" style="width: {{ $pr['percent'] }}%"></div></div>
-            <p class="mt-1 text-xs text-muted">{{ $pr['done'] }} of {{ $pr['total'] }} tasks done</p>
+            <p class="mt-1 text-xs text-muted">{{ $pr['done'] }} of {{ $pr['total'] }} tasks done @if ($supported->has($p->cycle_id)) &middot; <strong>SAS is supporting this: {{ $supported[$p->cycle_id]->statusLabel() }}</strong>@endif</p>
         </a>
     @empty
         <div class="card mt-4 p-8 text-center"><p class="font-semibold">No application plans yet</p><p class="mt-1 text-sm text-muted">Open a scholarship and choose “Track this application”.</p><a href="{{ route('scholarships.index') }}" class="btn-primary mt-4">Browse scholarships</a></div>

@@ -12,7 +12,11 @@ Staff accounts must use an authenticator app. The demo staff accounts all share 
 | Admin panel | `/admin` | all staff (what each sees depends on the role) | see below |
 
 ## Student workspace
-Dashboard, saved scholarships, application plans (private checklists), **cases and fees** (the applications SAS supports for the student, their status and what they owe; read only), documents, profile, enquiries, notifications, two-step security and privacy (export or delete data).
+Dashboard, saved scholarships, application plans (private checklists), **cases and fees** (the applications SAS supports for the student, their status and what they owe), documents, profile, enquiries, notifications, two-step security and privacy (export or delete data).
+
+Inside a case the student can read fees and how to pay, follow the plan checklist for the same scholarship (plans and cases link to each other), **message the counsellor** (the case shows "Reply needed" to staff until answered) and **share chosen documents** with the counsellor. Sharing needs a ticked consent, stores the consent text and time, can be withdrawn at any time, and only the assigned counsellor and case managers can open a shared document (route `/files/{document}/download`, authorised by `DocumentPolicy`, every download audited). Internal staff notes are never shown to the student. The dashboard summarises cases and fees owed.
+
+Notifications: a case opened, counsellor assigned, status changed, payment recorded, invoice cancelled, refund paid and counsellor replies create an in-app notice and, if the student's "transactional" preferences allow, an email.
 
 ## Partner area
 A partner account belongs to one organisation. Partners see an overview, submit scholarships (name, official page, level, dates and so on), follow each submission's status, read editors' messages, edit and resend while it is "Submitted" or "Needs changes", and keep their organisation's contact email and website. They never see student data. Staff create the organisation and its people under **Partners** in the admin; there is no public partner sign-up.

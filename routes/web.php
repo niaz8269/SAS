@@ -104,6 +104,8 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
 
     Route::get('/cases', [Student\CaseController::class, 'index'])->name('cases.index');
     Route::get('/cases/{case:public_id}', [Student\CaseController::class, 'show'])->name('cases.show');
+    Route::post('/cases/{case:public_id}/messages', [Student\CaseController::class, 'message'])->middleware('throttle:enquiries')->name('cases.messages.store');
+    Route::put('/cases/{case:public_id}/documents', [Student\CaseController::class, 'share'])->name('cases.documents.update');
     Route::get('/applications', [Student\ApplicationController::class, 'index'])->name('applications.index');
     Route::post('/applications', [Student\ApplicationController::class, 'store'])->name('applications.store');
     Route::get('/applications/{plan:public_id}', [Student\ApplicationController::class, 'show'])->name('applications.show');
@@ -139,6 +141,9 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::post('/notifications/read-all', [Student\NotificationController::class, 'readAll'])->name('notifications.read-all');
     Route::post('/notifications/{id}/read', [Student\NotificationController::class, 'read'])->name('notifications.read');
 });
+
+// Staff open a document a student shared on a case. The policy allows only active shares on cases the staff member may view.
+Route::get('/files/{document:public_id}/download', [Student\DocumentController::class, 'download'])->middleware(['auth', 'active', 'verified'])->name('files.download');
 
 /*
 |--------------------------------------------------------------------------

@@ -7,6 +7,7 @@ use App\Enums\PlanStatus;
 use App\Enums\ScanStatus;
 use App\Http\Controllers\Controller;
 use App\Models\DocumentVersion;
+use App\Models\ServiceCase;
 use App\Models\StudentProfile;
 use Illuminate\Http\Request;
 
@@ -28,6 +29,7 @@ class DashboardController extends Controller
         return view('student.dashboard', [
             'user' => $user, 'profile' => $profile,
             'missing' => $profile ? $profile->missingFields() : (new StudentProfile)->missingFields(),
+            'cases' => ServiceCase::where('user_id', $user->id)->with('invoices')->latest('id')->get(),
             'plans' => $plans, 'savedCount' => $saved->count(), 'upcoming' => $upcoming, 'unconfirmed' => $unconfirmed,
             'pendingScans' => DocumentVersion::whereHas('document', fn ($q) => $q->where('user_id', $user->id))->where('scan_status', ScanStatus::Pending->value)->count(),
             'unread' => $user->unreadNotifications()->count(),

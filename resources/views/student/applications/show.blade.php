@@ -5,6 +5,13 @@
     <p class="mt-1 text-sm text-muted">Private plan. Tracking here does not mean anything was submitted to the scholarship provider.
         <a class="text-navy-700 underline" href="{{ route('scholarships.show', [$cycle->programme->slug, $cycle->slug]) }}">View public listing</a></p>
 
+    @if ($case)
+        <div class="mt-4 rounded-md border border-navy-300 bg-navy-50 p-4 text-sm">
+            <strong>SAS is supporting this application.</strong> Status: {{ $case->statusLabel() }}.
+            <a class="text-navy-700 underline" href="{{ route('student.cases.show', $case) }}">Open the case for fees, messages and sharing documents</a>
+        </div>
+    @endif
+
     @if ($changed)
         <div class="mt-4 rounded-md border border-warn/40 bg-warn-soft p-4 text-sm" role="alert">
             <strong>Requirements updated.</strong> The official requirements for this call have changed since you created your checklist.

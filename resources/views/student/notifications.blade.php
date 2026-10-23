@@ -22,7 +22,7 @@
         @forelse ($notifications as $n)
             <div class="card mt-3 flex flex-wrap items-start justify-between gap-2 p-4 {{ $n->read_at ? '' : 'border-navy-300 bg-navy-50' }}">
                 <div><p class="text-sm">{{ $n->data['message'] ?? 'Notification' }}</p><p class="text-xs text-muted">{{ $n->created_at->diffForHumans() }}</p>
-                    @if (! empty($n->data['url']))<a class="text-sm text-navy-700 underline" href="{{ $n->data['url'] }}">View scholarship</a>@endif</div>
+                    @if (! empty($n->data['url']))<a class="text-sm text-navy-700 underline" href="{{ $n->data['url'] }}">{{ $n->data['label'] ?? 'View scholarship' }}</a>@endif</div>
                 @unless ($n->read_at)<form method="POST" action="{{ route('student.notifications.read', $n->id) }}">@csrf<button class="text-xs underline">Mark read</button></form>@endunless
             </div>
         @empty
