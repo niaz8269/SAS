@@ -38,6 +38,7 @@ Route::get('/services/{service:slug}', [PageController::class, 'service'])->name
 Route::get('/resources', [PageController::class, 'resources'])->name('resources.index');
 Route::get('/resources/{article:slug}', [PageController::class, 'resource'])->name('resources.show');
 Route::get('/about', [PageController::class, 'about'])->name('about');
+Route::get('/image-credits', [PageController::class, 'credits'])->name('credits');
 Route::get('/partners', [PageController::class, 'partners'])->name('partners');
 Route::get('/legal/{page}', [PageController::class, 'legal'])->name('legal.show');
 Route::get('/pages/{slug}', [PageController::class, 'cms'])->where('slug', '[A-Za-z0-9_-]+')->name('pages.show');

@@ -43,6 +43,7 @@ class MediaFileResource extends Resource
     {
         return $schema->components([
             TextInput::make('name')->required()->maxLength(190),
+            TextInput::make('credit')->label('Photo credit (shown on the Image credits page)')->maxLength(255)->helperText('Photographer and source, for example Jane Doe, Unsplash. Required by many licences.'),
             TextInput::make('alt')->label('Description (for screen readers)')->maxLength(255)
                 ->helperText('Describe what the image shows. Leave blank for purely decorative images.'),
         ]);

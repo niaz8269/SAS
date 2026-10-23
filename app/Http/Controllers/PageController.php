@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\CmsPage;
 use App\Models\Country;
+use App\Models\MediaFile;
 use App\Models\ScholarshipCycle;
 use App\Models\Service;
 use App\Models\University;
@@ -82,6 +83,12 @@ class PageController extends Controller
         abort_unless(in_array($page, ['privacy', 'terms', 'refunds', 'accessibility'], true), 404);
 
         return $this->cmsOverride($page) ?? view('public.legal', ['page' => $page]);
+    }
+
+    /** Credits for the bundled photographs and for library photos staff have credited. */
+    public function credits()
+    {
+        return view('public.credits', ['bundled' => config('sas.image_credits'), 'library' => MediaFile::whereNotNull('credit')->where('credit', '!=', '')->orderBy('name')->get()]);
     }
 
     public function cms(string $slug)

@@ -36,9 +36,23 @@ class Country extends Model
         if ($this->image_path) {
             return Storage::disk('public_media')->url($this->image_path);
         }
-        $file = 'images/destinations/'.strtolower((string) $this->code).'.svg';
+        $file = 'images/destinations/'.strtolower((string) $this->code).'.jpg';
 
-        return asset(file_exists(public_path($file)) ? $file : 'images/destinations/default.svg');
+        return asset(file_exists(public_path($file)) ? $file : 'images/destinations/default.jpg');
+    }
+
+    /** Credit line for the picture shown: the bundled photo's photographer, or the credit saved with the library file. @return array{name:string,url:?string}|null */
+    public function imageCredit(): ?array
+    {
+        if ($this->image_path) {
+            $credit = MediaFile::where('path', $this->image_path)->value('credit');
+
+            return $credit ? ['name' => $credit, 'url' => null] : null;
+        }
+        $file = 'images/destinations/'.strtolower((string) $this->code).'.jpg';
+        $credits = config('sas.image_credits');
+
+        return $credits[file_exists(public_path($file)) ? $file : 'images/destinations/default.jpg'] ?? null;
     }
 
     public function getRouteKeyName(): string

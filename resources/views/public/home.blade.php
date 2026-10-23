@@ -30,20 +30,10 @@
             @if ($s->image_path)
                 <figure class="relative mx-auto w-full max-w-lg"><img src="{{ $media($s->image_path) }}" alt="" class="w-full rounded-2xl object-cover" loading="eager"></figure>
             @else
-            <figure class="relative mx-auto w-full max-w-lg" aria-label="Decorative illustration">
-                <svg viewBox="0 0 480 400" class="w-full" role="img" aria-label="Stylised globe, arch and campus tower illustration">
-                    <defs>
-                        <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dce6f6"/><stop offset="1" stop-color="#b9cdec"/></linearGradient>
-                    </defs>
-                    <circle cx="260" cy="190" r="170" fill="url(#g1)"/>
-                    <g fill="none" stroke="#1c4b95" stroke-opacity=".45" stroke-width="1.5"><ellipse cx="260" cy="190" rx="170" ry="60"/><ellipse cx="260" cy="190" rx="90" ry="170"/><path d="M90 190h340M260 20v340"/></g>
-                    <g fill="#143f82"><rect x="110" y="250" width="70" height="110" rx="4"/><path d="M110 250l35-50 35 50z"/><rect x="200" y="210" width="60" height="150" rx="4" fill="#0e2f64"/><path d="M200 210l30-60 30 60z" fill="#0e2f64"/><rect x="280" y="260" width="110" height="100" rx="4"/></g>
-                    <g fill="#f7f3eb"><rect x="124" y="275" width="10" height="16" rx="5"/><rect x="156" y="275" width="10" height="16" rx="5"/><rect x="216" y="235" width="10" height="18" rx="5"/><rect x="236" y="235" width="10" height="18" rx="5"/><rect x="300" y="285" width="12" height="20" rx="6"/><rect x="330" y="285" width="12" height="20" rx="6"/><rect x="360" y="285" width="12" height="20" rx="6"/></g>
-                    <path d="M40 330h400" stroke="#0a2250" stroke-width="3" stroke-linecap="round"/>
-                    <path d="M330 70l50 20-18 4-8 16z" fill="#caa249" stroke="#0a2250" stroke-width="2" stroke-linejoin="round"/>
-                </svg>
-                <figcaption class="mt-1 text-center text-xs text-muted">Temporary illustration. Upload your own image under Website, Homepage.</figcaption>
-            </figure>
+                <figure class="relative mx-auto w-full max-w-lg">
+                    <img src="{{ asset('images/hero-graduates.jpg') }}" alt="Graduates in caps and gowns throwing their caps into the air at sunset" class="aspect-[4/3] w-full rounded-2xl object-cover shadow-md" width="800" height="600" fetchpriority="high">
+                    <figcaption class="mt-1 text-center text-xs text-muted">Photo: {{ config('sas.image_credits')['images/hero-graduates.jpg']['name'] }} on Unsplash. <a class="underline" href="{{ route('credits') }}">Image credits</a></figcaption>
+                </figure>
             @endif
         </div>
 

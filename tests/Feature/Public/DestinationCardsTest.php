@@ -23,8 +23,8 @@ class DestinationCardsTest extends TestCase
         $this->country('FR', 'France');
 
         foreach (['/', '/destinations'] as $url) {
-            $html = $this->get($url)->assertOk()->assertSee('images/destinations/cn.svg', false)->assertSee('images/destinations/de.svg', false)
-                ->assertSee('images/destinations/default.svg', false)->getContent();
+            $html = $this->get($url)->assertOk()->assertSee('images/destinations/cn.jpg', false)->assertSee('images/destinations/de.jpg', false)
+                ->assertSee('images/destinations/default.jpg', false)->getContent();
             $this->assertStringNotContainsString('from-navy-700 to-navy-900', $html);
         }
     }
@@ -34,15 +34,15 @@ class DestinationCardsTest extends TestCase
         Storage::fake('public_media');
         $c = $this->country('CN', 'China', ['image_path' => 'media/china.jpg']);
 
-        $this->get('/destinations')->assertSee('media/china.jpg', false)->assertDontSee('images/destinations/cn.svg', false);
+        $this->get('/destinations')->assertSee('media/china.jpg', false)->assertDontSee('images/destinations/cn.jpg', false);
         $this->get('/destinations/china')->assertOk()->assertSee('media/china.jpg', false);
         $this->assertStringContainsString('media/china.jpg', $c->imageUrl());
     }
 
-    public function test_every_bundled_illustration_exists(): void
+    public function test_every_bundled_photograph_exists(): void
     {
         foreach (['cn', 'de', 'tr', 'gb', 'default'] as $f) {
-            $this->assertFileExists(public_path("images/destinations/$f.svg"));
+            $this->assertFileExists(public_path("images/destinations/$f.jpg"));
         }
     }
 

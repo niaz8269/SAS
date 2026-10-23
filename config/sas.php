@@ -36,6 +36,16 @@ return [
     ],
     'staff_roles' => ['super_admin', 'administrator', 'service_manager', 'advisor', 'specialist', 'editor', 'reviewer', 'finance'],
 
+    // Bundled photographs (Unsplash licence: free to use; credit is given as a courtesy). Shown on /image-credits.
+    'image_credits' => [
+        'images/destinations/cn.jpg' => ['name' => 'William Olivieri', 'url' => 'https://unsplash.com/photos/great-wall-of-china-on-mountains-HwY9R6_YzgM', 'subject' => 'The Great Wall of China'],
+        'images/destinations/de.jpg' => ['name' => 'Arlind Photography', 'url' => 'https://unsplash.com/photos/brandenburg-gate-in-berlin-on-a-sunny-day-ot2mgzwyqLg', 'subject' => 'Brandenburg Gate, Berlin'],
+        'images/destinations/tr.jpg' => ['name' => 'Lewis J Goetz', 'url' => 'https://unsplash.com/photos/hagia-sophia-in-istanbul-JbWg7W953LY', 'subject' => 'Hagia Sophia, Istanbul'],
+        'images/destinations/gb.jpg' => ['name' => 'Marcin Nowak', 'url' => 'https://unsplash.com/photos/big-ben-london-iXqTqC-f6jI', 'subject' => 'Big Ben and the Houses of Parliament, London'],
+        'images/destinations/default.jpg' => ['name' => 'Andrew Stutesman', 'url' => 'https://unsplash.com/photos/blue-green-and-yellow-world-map-l68Z6eF2peA', 'subject' => 'World map with pins'],
+        'images/hero-graduates.jpg' => ['name' => 'Pang Yuhao', 'url' => 'https://unsplash.com/photos/people-throwing-hats-on-air-_kd5cxwZOK4', 'subject' => 'Graduates throwing their caps'],
+    ],
+
     'deadlines' => [
         'reminder_days' => [30, 14, 7, 1], // NOT-01
         'closing_soon_days' => 30,
