@@ -19,6 +19,12 @@ class University extends Model
     }
 
     /** Universities shown on the public pages: those on the official study-in-China list, and medical universities that have a checked fee structure and at least one scholarship. */
+    /** Staff-placed universities first, in the order they were placed; the rest follow in the order the caller adds. */
+    public function scopeManualOrder(Builder $query): Builder
+    {
+        return $query->orderByRaw('universities.sort_order IS NULL')->orderBy('universities.sort_order');
+    }
+
     public function scopeInCatalogue(Builder $query): Builder
     {
         return $query->where('published', true)->where(fn (Builder $w) => $w->whereNotNull('csc_key')->orWhere(fn (Builder $m) => $m->medicalListed()));

@@ -9,15 +9,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicon-32.png') }}">
-    <link rel="icon" type="image/png" sizes="64x64" href="{{ asset('images/favicon-64.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
+    @include('partials.favicon')
     <meta name="theme-color" content="#123a7a">
     <title>{{ $fullTitle }}</title>
     <meta name="description" content="{{ $desc }}">
     @php
         // the address on the main domain, whichever host name the visit used (www, http, a staging name)
         $canonicalUrl = $canonical ?? rtrim((string) config('app.url'), '/').request()->getPathInfo();
+        $shareImage = $og_image ?? \App\Domain\Site\Site::mediaUrl('og_image_path') ?? asset('images/og-default.jpg');
+        $shareIsBundled = ! $og_image && ! \App\Domain\Site\Site::get('og_image_path');
     @endphp
     <link rel="canonical" href="{{ $canonicalUrl }}">
     @if ($noindex)<meta name="robots" content="noindex, nofollow">@endif
@@ -27,13 +27,13 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:url" content="{{ $canonicalUrl }}">
-    <meta property="og:image" content="{{ $og_image ?? asset('images/og-default.jpg') }}">
-    @unless ($og_image)<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">@endunless
+    <meta property="og:image" content="{{ $shareImage }}">
+    @if ($shareIsBundled)<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">@endif
     <meta property="og:image:alt" content="{{ config('sas.brand.name') }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $fullTitle }}">
     <meta name="twitter:description" content="{{ $desc }}">
-    <meta name="twitter:image" content="{{ $og_image ?? asset('images/og-default.jpg') }}">
+    <meta name="twitter:image" content="{{ $shareImage }}">
     {{ $head ?? '' }}
     <link rel="preload" href="{{ asset('fonts/inter-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ asset('fonts/inter.css') }}">

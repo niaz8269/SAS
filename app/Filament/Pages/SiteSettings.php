@@ -71,6 +71,10 @@ class SiteSettings extends Page
                 TextInput::make('tagline')->placeholder(config('sas.brand.tagline'))->maxLength(160)->columnSpanFull(),
                 MediaPicker::make('logo_path')->label('Logo image (optional)')->columnSpanFull()
                     ->helperText('Replaces the bundled SAS logo in the header, footer and portals. Pick from the media library or use the + to upload.'),
+                MediaPicker::make('favicon_path')->label('Favicon (browser tab icon)')->columnSpanFull()
+                    ->helperText('A square PNG, at least 64 by 64 pixels, ideally 256. Shown in the browser tab, bookmarks and phone home screens. Empty uses the bundled SAS icon.'),
+                MediaPicker::make('og_image_path')->label('Share picture (links on WhatsApp, Facebook, LinkedIn, X)')->columnSpanFull()
+                    ->helperText('A wide picture, 1200 by 630 pixels. Shown when a page without its own picture is shared. Empty uses the bundled picture.'),
                 Textarea::make('default_meta_description')->label('Default search-engine description')->rows(2)->maxLength(300)->columnSpanFull(),
             ]),
             Section::make('Contact and legal')->columns(2)->schema([
@@ -81,6 +85,7 @@ class SiteSettings extends Page
                 TextInput::make('contact_phone')->label('Phone')->tel()->maxLength(40)->placeholder(config('sas.contact_phone')),
                 TextInput::make('contact_whatsapp')->label('WhatsApp number')->tel()->maxLength(40)->placeholder(config('sas.contact_whatsapp')),
                 TextInput::make('contact_wechat')->label('WeChat ID')->maxLength(60)->placeholder(config('sas.contact_wechat')),
+                TextInput::make('whatsapp_message')->label('First WhatsApp message (when someone taps the green button)')->maxLength(200)->placeholder('Hello SAS, I would like help with scholarships.'),
                 TextInput::make('legal_entity')->label('Legal entity line')->placeholder(config('sas.legal_entity'))->maxLength(200),
                 Textarea::make('contact_address')->label('Postal address')->rows(2)->maxLength(300)->columnSpanFull(),
                 Textarea::make('footer_note')->label('Footer note (extra line)')->rows(2)->maxLength(400)->columnSpanFull(),

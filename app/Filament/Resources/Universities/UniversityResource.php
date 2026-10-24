@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Universities;
 use App\Filament\Concerns\ChecksPermission;
 use App\Filament\Resources\Universities\Pages\ManageUniversities;
 use App\Filament\Support\MediaPicker;
+use App\Filament\Support\Rich;
 use App\Models\University;
 use BackedEnum;
 use Filament\Actions\BulkAction;
@@ -14,7 +15,6 @@ use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
@@ -61,12 +61,12 @@ class UniversityResource extends Resource
             TextInput::make('domain'),
             DatePicker::make('verified_at'),
             Toggle::make('published')->label('Show on the public Universities pages')->default(true)->columnSpanFull(),
-            Textarea::make('summary')->label('Introduction (shown on the university page)')->rows(4)->maxLength(2000)->columnSpanFull()->helperText('Your own words. Plain text; leave blank to show nothing.'),
+            Rich::make('summary')->label('Introduction (shown on the university page)')->columnSpanFull()->helperText('Your own words. Use the toolbar for bold, lists and links. Leave blank to show nothing.'),
             MediaPicker::make('image_path')->label('Photo (optional)')->columnSpanFull(),
             Section::make('Medical profile (shown with the fees)')->columns(2)->columnSpanFull()->collapsed()->schema([
                 TextInput::make('profile.established_year')->label('Founded')->numeric()->minValue(1000)->maxValue((int) date('Y')),
                 TextInput::make('profile.institution_type')->label('Type of university')->maxLength(120),
-                Textarea::make('profile.summary')->label('Summary')->rows(2)->maxLength(800)->columnSpanFull(),
+                Rich::make('profile.summary')->label('Summary')->columnSpanFull(),
                 TextInput::make('profile.students_note')->label('Students and staff')->maxLength(400)->columnSpanFull(),
                 TextInput::make('profile.accommodation_note')->label('Accommodation')->maxLength(600)->columnSpanFull(),
                 TextInput::make('profile.affiliated_hospitals_note')->label('Teaching hospitals (summary)')->maxLength(400)->columnSpanFull(),

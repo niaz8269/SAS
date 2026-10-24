@@ -15,7 +15,7 @@
             <div><label for="u-prov" class="label">Province</label>
                 <select id="u-prov" name="province" class="input"><option value="">Any province</option>@foreach ($provinces as $p)<option value="{{ $p }}" @selected($filters['province'] === $p)>{{ $p }}</option>@endforeach</select></div>
             <div><label for="u-sort" class="label">Sort by</label>
-                <select id="u-sort" name="sort" class="input"><option value="name" @selected($filters['sort'] === 'name')>Name</option><option value="programmes" @selected($filters['sort'] === 'programmes')>Most programmes</option></select></div>
+                <select id="u-sort" name="sort" class="input"><option value="featured" @selected($filters['sort'] === 'featured')>Recommended</option><option value="name" @selected($filters['sort'] === 'name')>Name</option><option value="programmes" @selected($filters['sort'] === 'programmes')>Most programmes</option></select></div>
             <button class="btn-primary">Search</button>
         </form>
 

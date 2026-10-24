@@ -6,6 +6,8 @@ use DOMDocument;
 use DOMElement;
 use DOMNode;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\HtmlString;
+use Illuminate\Support\Str;
 
 /**
  * ADM-03: allowlist HTML sanitiser for editorial rich text. Scripts, styles, event handlers and unknown tags are removed;
@@ -44,6 +46,41 @@ class Html
         }
 
         return $out;
+    }
+
+    /**
+     * Text written in the admin's rich editor, safe to print as it is. Older entries were plain text with line breaks: those are shown as paragraphs.
+     */
+    public static function rich(?string $value): HtmlString
+    {
+        $value = trim((string) $value);
+        if ($value === '') {
+            return new HtmlString('');
+        }
+        if (! preg_match('/<\/?[a-z][^>]*>/i', $value)) {
+            $paragraphs = array_filter(array_map('trim', preg_split('/\n{2,}/', e($value))), 'strlen');
+
+            return new HtmlString(implode('', array_map(fn ($p) => '<p>'.nl2br($p, false).'</p>', $paragraphs)));
+        }
+
+        return new HtmlString(self::clean($value));
+    }
+
+    /** True for nothing, spaces, or the editor's empty paragraph; false when there is any text or a picture. */
+    public static function isBlank(?string $value): bool
+    {
+        $value = (string) $value;
+
+        return trim(html_entity_decode(strip_tags($value), ENT_QUOTES | ENT_HTML5, 'UTF-8')) === '' && ! str_contains($value, '<img');
+    }
+
+    /** The same text without any formatting, on one line: for cards, page descriptions and the search index. */
+    public static function text(?string $value, ?int $limit = null): string
+    {
+        $value = str_replace(['</p>', '</li>', '</h2>', '</h3>', '<br>', '<br/>', '<br />'], ' ', self::clean((string) $value)); // cleaned first, so the words of a pasted script do not leak into a description
+        $plain = trim((string) preg_replace('/\s+/u', ' ', html_entity_decode(strip_tags($value), ENT_QUOTES | ENT_HTML5, 'UTF-8')));
+
+        return $limit ? Str::limit($plain, $limit) : $plain;
     }
 
     private static function walk(DOMNode $node): void

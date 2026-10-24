@@ -7,6 +7,7 @@ use App\Models\CycleReview;
 use App\Models\CycleRevision;
 use App\Models\ScholarshipCycle;
 use App\Models\User;
+use App\Support\Html;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
@@ -19,6 +20,9 @@ use Illuminate\Validation\ValidationException;
 class CycleRevisions
 {
     /** Scalar columns covered by revisions. Placement flags are not: they are not factual claims about the award. */
+    /** Fields typed in the rich editor. */
+    public const RICH = ['summary', 'funding_summary', 'institutions_note', 'programmes_note', 'eligibility_notes', 'age_experience_notes'];
+
     public const FIELDS = ['programme_id', 'cycle_key', 'slug', 'intake_year', 'intake_term', 'funding_type', 'fully_funded_verified', 'funding_summary',
         'teaching_language', 'delivery_mode', 'any_nationality', 'any_subject', 'summary', 'eligibility_notes', 'age_experience_notes', 'institutions_note', 'programmes_note'];
 
@@ -72,10 +76,14 @@ class CycleRevisions
             }
             $new = $state[$f];
             $new = in_array($f, ['fully_funded_verified', 'any_nationality', 'any_subject'], true) ? (bool) $new : ($new === '' ? null : $new);
+            if (in_array($f, self::RICH, true) && Html::isBlank($new)) {
+                $new = null; // the editor's empty paragraph is no text at all
+            }
             if ($f === 'fully_funded_verified' && ! $by->hasPermission('content.review')) {
                 continue; // only reviewers may assert verification
             }
-            if ($this->normalise($new) !== $this->normalise($live['fields'][$f])) {
+            $same = in_array($f, self::RICH, true) ? $this->richKey($new) === $this->richKey($live['fields'][$f]) : $this->normalise($new) === $this->normalise($live['fields'][$f]);
+            if (! $same) {
                 $changes['fields'][$f] = $new;
             }
         }
@@ -177,6 +185,12 @@ class CycleRevisions
         if ($revision->status !== 'pending') {
             throw ValidationException::withMessages(['revision' => 'This proposal is no longer pending.']);
         }
+    }
+
+    /** Long texts written in the rich editor: older plain text and the editor's tidy version of it count as the same. */
+    private function richKey(mixed $v): string
+    {
+        return Html::isBlank(is_string($v) ? $v : null) ? '' : (string) preg_replace('/\s+/', ' ', trim((string) Html::rich(is_string($v) ? $v : null)));
     }
 
     private function normalise(mixed $v): mixed

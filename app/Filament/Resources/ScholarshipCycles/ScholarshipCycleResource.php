@@ -17,11 +17,11 @@ use App\Filament\Resources\ScholarshipCycles\RelationManagers\OfferingsRelationM
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\RequirementsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\ReviewsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\RoutesRelationManager;
+use App\Filament\Support\Rich;
 use App\Models\ScholarshipCycle;
 use BackedEnum;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
@@ -85,7 +85,7 @@ class ScholarshipCycleResource extends Resource
                 Select::make('funding_type')->options(['full' => 'Full', 'partial' => 'Partial', 'tuition_only' => 'Tuition only', 'stipend_only' => 'Stipend only', 'other' => 'Other', 'unknown' => 'Not confirmed'])->required()->default('unknown'),
                 Toggle::make('fully_funded_verified')->label('Covered benefits verified against the source')
                     ->helperText('Only verified calls may be labelled "Fully funded" publicly.')->disabled(fn () => ! $reviewer()),
-                Textarea::make('funding_summary')->rows(2)->columnSpanFull(),
+                Rich::make('funding_summary')->columnSpanFull(),
                 TextInput::make('teaching_language'),
                 Select::make('delivery_mode')->options(['unknown' => 'Not confirmed', 'on_campus' => 'On campus', 'online' => 'Online', 'hybrid' => 'Hybrid'])->default('unknown'),
             ]),
@@ -98,11 +98,11 @@ class ScholarshipCycleResource extends Resource
                 Toggle::make('any_subject')->label('Open to any subject')->helperText('Leave off and pick subjects below, or leave both empty if unconfirmed.'),
                 Select::make('subjects')->relationship('subjects', 'name')->multiple()->preload()->searchable(),
                 Select::make('universities')->label('Host institutions')->relationship('universities', 'name')->multiple()->preload()->searchable(),
-                Textarea::make('summary')->rows(3)->columnSpanFull(),
-                Textarea::make('institutions_note')->label('Universities taking part (text)')->rows(2)->columnSpanFull()->helperText('For example: any UK university offering an eligible course. Specific universities go in Host institutions above.'),
-                Textarea::make('programmes_note')->label('Programmes and fields offered')->rows(3)->columnSpanFull(),
-                Textarea::make('eligibility_notes')->rows(3)->columnSpanFull(),
-                Textarea::make('age_experience_notes')->rows(2)->columnSpanFull(),
+                Rich::make('summary')->columnSpanFull(),
+                Rich::make('institutions_note')->label('Universities taking part (text)')->columnSpanFull()->helperText('For example: any UK university offering an eligible course. Specific universities go in Host institutions above.'),
+                Rich::make('programmes_note')->label('Programmes and fields offered')->columnSpanFull(),
+                Rich::make('eligibility_notes')->columnSpanFull(),
+                Rich::make('age_experience_notes')->columnSpanFull(),
             ]),
             Section::make('Placement')->description('Sponsored placements are labelled. Payment never buys verification or changes eligibility.')->columns(3)->schema([
                 Toggle::make('featured')->disabled(fn () => ! $publisher()),

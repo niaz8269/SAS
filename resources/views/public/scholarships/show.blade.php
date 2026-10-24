@@ -6,7 +6,7 @@
     $title = $programme->title.' '.$cycle->keyLabel();
     $metaTitle = \Illuminate\Support\Str::limit($programme->title, 48, '…', true).' '.$cycle->intake_year; // search results show about 60 characters: the full name stays in the heading
 @endphp
-<x-layouts.public :title="$metaTitle" :description="\Illuminate\Support\Str::limit(strip_tags($cycle->summary ?: $programme->summary), 155)">
+<x-layouts.public :title="$metaTitle" :description="\App\Support\Html::text($cycle->summary ?: $programme->summary, 155)">
     <x-slot:head>
         <script type="application/ld+json">{!! json_encode(['@@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
@@ -33,7 +33,7 @@
             <h1 class="mt-3 text-3xl font-extrabold sm:text-4xl">{{ $programme->title }}</h1>
             <img src="{{ $programme->imageUrl($cycle) }}" alt="" class="mt-4 aspect-video w-full max-w-xl rounded-xl border border-line object-cover" width="960" height="540">
             <p class="mt-1 text-lg text-muted">{{ $programme->funder?->name }} @if($cycle->destinations->isNotEmpty()) · {{ $cycle->destinations->pluck('name')->implode(', ') }} @endif</p>
-            @if ($cycle->summary)<p class="mt-4 max-w-3xl">{{ $cycle->summary }}</p>@endif
+            @if ($cycle->summary)<div class="rich mt-4">{!! \App\Support\Html::rich($cycle->summary) !!}</div>@endif
         </div>
     </section>
 
@@ -121,7 +121,7 @@
                     </ul>
                     @if ($unis->count() > 12)<p class="mt-2 text-sm text-muted">and {{ $unis->count() - 12 }} more. <a class="text-navy-700 underline" href="{{ route('universities.index') }}">Browse all universities</a>.</p>@endif
                 @endif
-                @if ($cycle->institutions_note)<p class="mt-3 text-sm">{{ $cycle->institutions_note }}</p>@endif
+                @if ($cycle->institutions_note)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->institutions_note) !!}</div>@endif
                 @if ($unis->isEmpty() && ! $cycle->institutions_note)<p class="mt-3 text-sm text-muted">Participating universities: not confirmed.</p>@endif
                 <h3 class="mt-5 font-semibold">Degrees and programmes offered</h3>
                 @php($offerings = $cycle->offerings()->with('degreeLevel')->get()->groupBy('degree_level_id'))
@@ -142,14 +142,14 @@
                 @empty
                     @if ($cycle->degreeLevels->isNotEmpty())<p class="mt-2 text-sm">Degree levels: {{ $cycle->degreeLevels->pluck('name')->implode(', ') }}. Programme details: not confirmed.</p>@endif
                 @endforelse
-                @if ($cycle->programmes_note)<p class="mt-3 text-sm whitespace-pre-line">{{ $cycle->programmes_note }}</p>@elseif ($offerings->isEmpty())<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
+                @if ($cycle->programmes_note)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->programmes_note) !!}</div>@elseif ($offerings->isEmpty())<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
                 @if (str_contains($programme->title, 'Chinese Government Scholarship') || str_contains((string) $programme->funder?->name, 'China Scholarship Council'))
                     <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('programmes.index', ['csc' => 1]) }}">Browse programmes listed as open to Chinese Government Scholarship applicants</a></p>
                 @endif
             </section>
             <section aria-labelledby="funding" class="card p-6">
                 <h2 id="funding" class="text-xl font-bold">Funding</h2>
-                @if ($cycle->funding_summary)<p class="mt-2">{{ $cycle->funding_summary }}</p>@endif
+                @if ($cycle->funding_summary)<div class="rich mt-2">{!! \App\Support\Html::rich($cycle->funding_summary) !!}</div>@endif
                 @if ($cycle->benefits->isEmpty())
                     <p class="mt-2 text-sm text-muted">Funding components: Not confirmed.</p>
                 @else
@@ -184,8 +184,8 @@
                         <li>{{ match($c->type) { 'min_gpa' => 'Academic grade', 'language' => 'Language: '.$c->unit, 'age' => 'Age', default => ucfirst($c->type) } }} {{ $c->operator }} {{ $c->value }}@if($c->type === 'min_gpa') ({{ $c->unit }})@endif</li>
                     @endforeach</ul>
                 @endif
-                @if ($cycle->eligibility_notes)<p class="mt-3 text-sm">{{ $cycle->eligibility_notes }}</p>@endif
-                @if ($cycle->age_experience_notes)<p class="mt-2 text-sm">{{ $cycle->age_experience_notes }}</p>@endif
+                @if ($cycle->eligibility_notes)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->eligibility_notes) !!}</div>@endif
+                @if ($cycle->age_experience_notes)<div class="rich mt-2 text-sm">{!! \App\Support\Html::rich($cycle->age_experience_notes) !!}</div>@endif
             </section>
 
             <section aria-labelledby="requirements" class="card p-6">

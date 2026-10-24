@@ -27,7 +27,7 @@ class HomeController extends Controller
             ->where(fn ($q) => $q->whereNull('review_due_at')->orWhere('review_due_at', '>', $now))
             ->where('application_status', '!=', 'closed')
             ->where(fn ($q) => $q->whereNull('next_closing_sort')->orWhere('next_closing_sort', '>', $now))
-            ->orderByRaw('next_closing_sort IS NULL')->orderBy('next_closing_sort')->limit(3)->get();
+            ->manualOrder()->orderByRaw('next_closing_sort IS NULL')->orderBy('next_closing_sort')->limit(3)->get();
 
         // Verified closing dates only: confirmed, still-future, status open, not overdue for recheck.
         $closingSoon = ScholarshipCycle::visible()->with($with)
@@ -67,8 +67,8 @@ class HomeController extends Controller
         ];
         // Universities with their own campus photo first, then the ones with the most programmes.
         $universities = University::inCatalogue()->withCount(['programmes' => fn ($q) => $q->where('published', true)])
-            ->orderByDesc('programmes_count')->limit(40)->get()
-            ->sortByDesc(fn ($u) => (int) file_exists(public_path('images/universities/'.$u->slug.'.jpg')))->take(8)->values();
+            ->manualOrder()->orderByDesc('programmes_count')->limit(40)->get()
+            ->sortBy(fn ($u) => [$u->sort_order === null ? 1 : 0, $u->sort_order ?? 0, file_exists(public_path('images/universities/'.$u->slug.'.jpg')) ? 0 : 1])->take(8)->values(); // placed by staff first, then those with a photo
 
         return view('public.home', [
             'featuredIsFallback' => $featuredIsFallback, 'nextDeadlines' => $nextDeadlines, 'stats' => $stats, 'universities' => $universities,

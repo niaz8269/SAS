@@ -48,6 +48,12 @@ class ScholarshipCycle extends Model
     }
 
     /** Public visibility: published and not archived (DIR-03). Never leaks drafts. */
+    /** Staff-placed calls first, in the order they were placed; the rest follow in the order the caller adds. */
+    public function scopeManualOrder(Builder $q): Builder
+    {
+        return $q->orderByRaw('scholarship_cycles.sort_order IS NULL')->orderBy('scholarship_cycles.sort_order');
+    }
+
     public function scopeVisible(Builder $q): Builder
     {
         return $q->where('publication_state', PublicationState::Published->value);

@@ -108,6 +108,18 @@
 
     .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-navy-600; }
     .section-title { @apply font-extrabold; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1.2; }
+    /* Text typed in the admin's rich editor (bold, lists, links, headings). */
+    .rich > :first-child { margin-top: 0; }
+    .rich > :last-child { margin-bottom: 0; }
+    .rich p { margin-block: 0.5em; }
+    .rich ul { list-style: disc; padding-left: 1.25rem; margin-block: 0.5em; }
+    .rich ol { list-style: decimal; padding-left: 1.25rem; margin-block: 0.5em; }
+    .rich li { margin-block: 0.15em; }
+    .rich a { text-decoration: underline; color: var(--color-navy-700); }
+    .rich h2, .rich h3, .rich h4 { font-weight: 700; margin-top: 0.9em; margin-bottom: 0.3em; line-height: 1.25; }
+    .rich blockquote { border-left: 0.25rem solid var(--color-line); padding-left: 0.75rem; color: var(--color-muted); margin-block: 0.5em; }
+    .rich table { border-collapse: collapse; margin-block: 0.5em; }
+    .rich th, .rich td { border: 1px solid var(--color-line); padding: 0.25rem 0.5rem; text-align: left; }
     .prose-sas { @apply max-w-none leading-7 text-ink; font-size: 0.9375rem; }
     .prose-sas h2 { @apply mt-8 mb-2 text-xl font-bold; }
     .prose-sas h3 { @apply mt-6 mb-2 text-lg font-semibold; }

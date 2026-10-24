@@ -3,6 +3,7 @@
 namespace App\Domain\Scholarship;
 
 use App\Models\ScholarshipCycle;
+use App\Support\Html;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -18,8 +19,8 @@ class SearchIndexer
         $cycle->load(['universities', 'subjects.aliases']);
 
         $parts = [
-            $cycle->programme->title, $cycle->programme->summary, $cycle->programme->funder?->name,
-            $cycle->summary, $cycle->funding_summary,
+            $cycle->programme->title, Html::text($cycle->programme->summary), $cycle->programme->funder?->name,
+            Html::text($cycle->summary), Html::text($cycle->funding_summary), Html::text($cycle->eligibility_notes), Html::text($cycle->programmes_note),
             ...$cycle->programme->universities->pluck('name')->all(),
             ...$cycle->universities->pluck('name')->all(),
             ...$cycle->subjects->pluck('name')->all(),

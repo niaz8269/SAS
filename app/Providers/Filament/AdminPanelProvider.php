@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Domain\Site\Site;
 use App\Filament\Widgets\OperationsOverview;
 use App\Http\Middleware\SecurityHeaders;
 use Filament\Auth\MultiFactor\App\AppAuthentication;
@@ -48,7 +49,7 @@ class AdminPanelProvider extends PanelProvider
             ->defaultThemeMode(ThemeMode::Light) // the light SAS look, like the agent and student portals; staff can still switch to dark
             ->colors(['primary' => Color::hex('#428bb6'), 'warning' => Color::hex('#caa249')])
             ->renderHook(PanelsRenderHook::HEAD_END, fn () => view('filament.sas-style'))
-            ->favicon(asset('images/favicon-64.png'))
+            ->favicon(fn () => Site::mediaUrl('favicon_path') ?? asset('images/favicon-64.png'))
             ->font('Inter Variable', url: asset('fonts/inter.css'), provider: LocalFontProvider::class)
             ->navigationGroups(['Website', 'Editorial', 'Service desk', 'Finance', 'Recruiting agents', 'Content', 'Reference data', 'Administration'])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')

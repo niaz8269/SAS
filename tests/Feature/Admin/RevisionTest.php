@@ -62,14 +62,14 @@ class RevisionTest extends TestCase
         $editor = $this->staff('editor');
 
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])
-            ->fillForm($this->form($cycle, ['funding_summary' => 'Changed wording', 'funding_type' => 'full']))->call('save');
+            ->fillForm($this->form($cycle, ['funding_summary' => '<p>Changed wording</p>', 'funding_type' => 'full']))->call('save');
 
         $this->assertSame('Original summary', $cycle->fresh()->funding_summary); // public listing untouched
         $this->assertSame('partial', $cycle->fresh()->funding_type);
         $rev = CycleRevision::firstOrFail();
         $this->assertSame('pending', $rev->status);
         $this->assertSame($editor->id, $rev->proposed_by);
-        $this->assertEquals(['funding_summary' => 'Changed wording', 'funding_type' => 'full'], $rev->changes['fields']);
+        $this->assertEquals(['funding_summary' => '<p>Changed wording</p>', 'funding_type' => 'full'], $rev->changes['fields']);
         $this->get(route('scholarships.show', [$cycle->programme->slug, $cycle->slug]))->assertSee('Original summary')->assertDontSee('Changed wording');
         $this->assertDatabaseHas('audits', ['action' => 'cycle.revision_proposed', 'actor_id' => $editor->id]);
     }
@@ -95,7 +95,7 @@ class RevisionTest extends TestCase
             ->assertActionVisible('applyRevision')->callAction('applyRevision', ['notes' => 'Checked against the source']);
 
         $fresh = $cycle->fresh();
-        $this->assertSame('Corrected text', $fresh->summary);
+        $this->assertSame('<p>Corrected text</p>', $fresh->summary);
         $this->assertSame([$newCountry->id], $fresh->destinations()->pluck('countries.id')->all());
         $rev = CycleRevision::firstOrFail();
         $this->assertSame('applied', $rev->status);
@@ -185,7 +185,7 @@ class RevisionTest extends TestCase
         }
         $this->assertSame(1, CycleRevision::where('status', 'pending')->count());
         $this->assertSame(1, CycleRevision::where('status', 'withdrawn')->count());
-        $this->assertSame('Second', CycleRevision::where('status', 'pending')->first()->changes['fields']['summary']);
+        $this->assertSame('<p>Second</p>', CycleRevision::where('status', 'pending')->first()->changes['fields']['summary']);
     }
 
     public function test_non_reviewers_cannot_claim_verification_through_a_proposal(): void
@@ -203,7 +203,7 @@ class RevisionTest extends TestCase
         $draft = ScholarshipCycle::factory()->create(['summary' => 'Draft text', 'created_by' => auth()->id()]);
         Livewire::test(EditScholarshipCycle::class, ['record' => $draft->getKey()])
             ->fillForm($this->form($draft, ['summary' => 'Draft edited']))->call('save');
-        $this->assertSame('Draft edited', $draft->fresh()->summary);
+        $this->assertSame('<p>Draft edited</p>', $draft->fresh()->summary);
         $this->assertSame(0, CycleRevision::count());
     }
 

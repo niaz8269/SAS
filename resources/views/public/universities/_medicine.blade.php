@@ -21,7 +21,7 @@
                     @if (array_key_exists('moe_english_mbbs', $profile) && $profile['moe_english_mbbs'])<div><dt class="font-semibold">Ministry of Education</dt><dd>Approved to enrol international students for English-taught medicine @if (! empty($profile['moe_source_url'])) (<a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ $profile['moe_source_url'] }}">source</a>) @endif</dd></div>@endif
                     @if (! empty($profile['accommodation_note']))<div><dt class="font-semibold">Accommodation</dt><dd>{{ $profile['accommodation_note'] }}</dd></div>@endif
                 </dl>
-                @if (! empty($profile['summary']))<p class="mt-3 text-sm text-muted">{{ $profile['summary'] }}</p>@endif
+                @if (! empty($profile['summary']))<div class="rich mt-3 text-sm text-muted">{!! \App\Support\Html::rich($profile['summary']) !!}</div>@endif
             </div>
 
             <div class="card p-5 lg:col-span-2">
@@ -32,7 +32,7 @@
                             <p class="font-semibold">{{ $s->name }} <span class="badge-neutral ml-1">{{ $s->providerLabel() }}</span></p>
                             @if ($s->coverage)<p class="mt-1"><span class="text-muted">Covers:</span> {{ $s->coverage }}</p>@endif
                             @if ($s->amount_text)<p><span class="text-muted">Amount:</span> {{ $s->amount_text }}</p>@endif
-                            @if ($s->eligibility)<p><span class="text-muted">Who can get it:</span> {{ $s->eligibility }}</p>@endif
+                            @if ($s->eligibility)<div><span class="text-muted">Who can get it:</span><div class="rich">{!! \App\Support\Html::rich($s->eligibility) !!}</div></div>@endif
                             <p class="mt-1 text-xs text-muted">
                                 @if ($s->source_type === 'supplied') From the university's fee sheet given to SAS.
                                 @elseif ($s->source_url) Source: <a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ $s->source_url }}">{{ $s->source_label ?: 'official page' }}</a>@if ($s->checked_on), read {{ $s->checked_on->format('j F Y') }}@endif.

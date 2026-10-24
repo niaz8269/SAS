@@ -116,7 +116,8 @@ class ScholarshipSearch
             $q->orderByRaw('CASE WHEN EXISTS (SELECT 1 FROM scholarship_programmes sp WHERE sp.id = scholarship_cycles.programme_id AND sp.title LIKE ?) THEN 0 ELSE 1 END', [$like]);
         }
 
-        return $q->orderByRaw('featured DESC')->orderByRaw('next_closing_sort IS NULL')->orderBy('next_closing_sort')->orderByDesc('id');
+        // staff-placed order first (drag and drop in the admin), then featured, then the soonest deadline
+        return $q->manualOrder()->orderByRaw('featured DESC')->orderByRaw('next_closing_sort IS NULL')->orderBy('next_closing_sort')->orderByDesc('id');
     }
 
     /** @return array<string,mixed> */

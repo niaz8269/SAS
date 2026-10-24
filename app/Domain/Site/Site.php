@@ -5,6 +5,7 @@ namespace App\Domain\Site;
 use App\Models\MenuItem;
 use App\Models\SiteSetting;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Storage;
 
 /**
  * Staff-editable site values. Every value falls back to config/sas.php, so an empty setting never breaks a page.
@@ -29,6 +30,9 @@ class Site
         'footer_note' => null,
         'default_meta_description' => null,
         'logo_path' => null,
+        'favicon_path' => null,
+        'og_image_path' => null,
+        'whatsapp_message' => null,
         'social_facebook' => null,
         'social_x' => null,
         'social_instagram' => null,
@@ -87,6 +91,14 @@ class Site
                 config([$path => $value]);
             }
         }
+    }
+
+    /** The address of an image staff picked in the media library for a setting (logo_path, favicon_path, og_image_path), or null when none is set. */
+    public static function mediaUrl(string $key): ?string
+    {
+        $path = self::get($key);
+
+        return $path ? Storage::disk('public_media')->url($path) : null;
     }
 
     /** Only same-site paths, http(s), mailto and tel links are ever rendered; anything else becomes "#". */

@@ -4,6 +4,7 @@ namespace App\Filament\Resources\UniversityScholarships;
 
 use App\Filament\Concerns\ChecksPermission;
 use App\Filament\Resources\UniversityScholarships\Pages\ManageUniversityScholarships;
+use App\Filament\Support\Rich;
 use App\Models\UniversityScholarship;
 use BackedEnum;
 use Filament\Actions\BulkAction;
@@ -12,7 +13,6 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Select;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
@@ -53,7 +53,7 @@ class UniversityScholarshipResource extends Resource
             Select::make('provider')->options(UniversityScholarship::PROVIDERS)->default('university')->required(),
             TextInput::make('coverage')->label('What it covers')->maxLength(500),
             TextInput::make('amount_text')->label('Amount (as published)')->maxLength(300),
-            Textarea::make('eligibility')->label('Who can get it')->rows(3)->columnSpanFull(),
+            Rich::make('eligibility')->label('Who can get it')->columnSpanFull(),
             Select::make('source_type')->options(['university' => 'University page', 'government' => 'Government page', 'supplied' => 'Fee sheet given to SAS'])->default('university')->required(),
             TextInput::make('source_label')->maxLength(190),
             TextInput::make('source_url')->url()->maxLength(500)->helperText('An official page. Without one (and unless it comes from a fee sheet) the scholarship is never shown.'),

@@ -2,9 +2,9 @@
     $place = collect([$university->city, $university->province])->filter()->unique()->implode(', ');
     $total = $levelCounts->sum();
 @endphp
-<x-layouts.public :title="$university->name" :description="\Illuminate\Support\Str::limit(strip_tags((string) $university->summary) ?: $university->name.($place ? ' in '.$place : '').': programmes, tuition and teaching languages for international students.', 155)">
+<x-layouts.public :title="$university->name" :description="\App\Support\Html::text($university->summary, 155) ?: \Illuminate\Support\Str::limit($university->name.($place ? ' in '.$place : '').': programmes, tuition and teaching languages for international students.', 155)">
     <x-slot:head>
-        <x-jsonld :data="array_filter(['@type' => 'CollegeOrUniversity', 'name' => $university->name, 'alternateName' => $university->name_zh ?: null, 'url' => route('universities.show', $university->slug), 'image' => url($university->imageUrl()), 'description' => strip_tags((string) $university->summary) ?: null, 'address' => array_filter(['@type' => 'PostalAddress', 'addressLocality' => $university->city, 'addressRegion' => $university->province, 'addressCountry' => $university->country?->code ?: 'CN'])])" />
+        <x-jsonld :data="array_filter(['@type' => 'CollegeOrUniversity', 'name' => $university->name, 'alternateName' => $university->name_zh ?: null, 'url' => route('universities.show', $university->slug), 'image' => url($university->imageUrl()), 'description' => \App\Support\Html::text($university->summary) ?: null, 'address' => array_filter(['@type' => 'PostalAddress', 'addressLocality' => $university->city, 'addressRegion' => $university->province, 'addressCountry' => $university->country?->code ?: 'CN'])])" />
         <x-jsonld :data="['@type' => 'BreadcrumbList', 'itemListElement' => [['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')], ['@type' => 'ListItem', 'position' => 2, 'name' => 'Universities', 'item' => route('universities.index')], ['@type' => 'ListItem', 'position' => 3, 'name' => $university->name]]]" />
     </x-slot:head>
     <section class="relative isolate overflow-hidden bg-navy-900">
@@ -21,7 +21,7 @@
                         @if ($university->csc_key)<div><dt class="font-semibold text-gold-soft">Programmes listed</dt><dd>{{ $total ? number_format($total) : 'None listed on the official system' }}</dd></div>@endif
                         @if ($university->website)<div class="sm:col-span-2"><dt class="font-semibold text-gold-soft">Website</dt><dd><a class="underline" rel="noopener" href="{{ \App\Domain\Site\Site::href($university->website) }}">{{ $university->website }}</a></dd></div>@endif
                     </dl>
-                    @if ($university->summary)<div class="mt-4 max-w-xl whitespace-pre-line text-white/90">{{ $university->summary }}</div>@endif
+                    @if ($university->summary)<div class="rich mt-4 max-w-xl text-white/90 [&_a]:text-white">{!! \App\Support\Html::rich($university->summary) !!}</div>@endif
                 </div>
 
                 @if ($levelCounts->isNotEmpty())

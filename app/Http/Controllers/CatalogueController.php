@@ -12,19 +12,23 @@ class CatalogueController extends Controller
 {
     public function universities(Request $request)
     {
-        $data = $request->validate(['q' => 'nullable|string|max:80', 'province' => 'nullable|string|max:64', 'sort' => 'nullable|in:name,programmes']);
+        $data = $request->validate(['q' => 'nullable|string|max:80', 'province' => 'nullable|string|max:64', 'sort' => 'nullable|in:featured,name,programmes']);
         $q = trim((string) ($data['q'] ?? ''));
 
         $universities = University::query()->inCatalogue()->withCount(['programmes as programmes_count' => fn ($p) => $p->where('published', true)])
             ->when($q !== '', fn ($query) => $query->where(fn ($w) => $w->where('name', 'like', '%'.$this->like($q).'%')->orWhere('name_zh', 'like', '%'.$this->like($q).'%')))
             ->when(! empty($data['province']), fn ($query) => $query->where('province', $data['province']))
-            ->when(($data['sort'] ?? 'name') === 'programmes', fn ($query) => $query->orderByDesc('programmes_count')->orderBy('name'), fn ($query) => $query->orderBy('name'))
+            ->tap(fn ($query) => match ($data['sort'] ?? 'featured') {
+                'programmes' => $query->orderByDesc('programmes_count')->orderBy('name'),
+                'name' => $query->orderBy('name'),
+                default => $query->manualOrder()->orderBy('name'), // the order staff set by drag and drop, then A to Z
+            })
             ->paginate(24)->withQueryString();
 
         return view('public.universities.index', [
             'universities' => $universities,
             'provinces' => Cache::remember('catalogue.provinces', 3600, fn () => University::inCatalogue()->whereNotNull('province')->distinct()->orderBy('province')->pluck('province')->all()),
-            'filters' => ['q' => $q, 'province' => $data['province'] ?? '', 'sort' => $data['sort'] ?? 'name'],
+            'filters' => ['q' => $q, 'province' => $data['province'] ?? '', 'sort' => $data['sort'] ?? 'featured'],
         ]);
     }
 
