@@ -42,7 +42,7 @@ return new class extends Migration
         // A "Blog" link in the header and the footer, and a "from the blog" strip on the home page (all editable under Website).
         $after = fn (string $location, string $url) => DB::table('menu_items')->where('location', $location)->where('url', $url)->value('sort');
         if (! DB::table('menu_items')->where('url', '/blog')->exists()) {
-            foreach ([['header', '/resources', 'Blog', 58], ['footer_explore', '/resources', 'Blog', 45]] as [$location, $url, $label, $sort]) {
+            foreach ([['header', '/resources', 'Blogs', 58], ['footer_explore', '/resources', 'Blogs', 45]] as [$location, $url, $label, $sort]) {
                 if ($after($location, $url) !== null) {
                     DB::table('menu_items')->insert(['location' => $location, 'label' => $label, 'url' => '/blog', 'sort' => $sort, 'visible' => true, 'new_tab' => false, 'created_at' => now(), 'updated_at' => now()]);
                 }
