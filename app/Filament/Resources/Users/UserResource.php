@@ -21,6 +21,8 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
+use Illuminate\Validation\Rules\Password as PasswordRule;
 
 /** AUTH-05: managing users (users.manage) is separate from granting roles (roles.manage, super administrators only). */
 class UserResource extends Resource
@@ -67,10 +69,20 @@ class UserResource extends Resource
         return $schema->components([
             Section::make('Account')->columns(2)->schema([
                 TextInput::make('name')->required(),
-                TextInput::make('email')->disabled()->dehydrated(false),
+                TextInput::make('email')->label('Email (sign-in name)')->email()->required()->maxLength(255)
+                    ->disabled(fn () => ! auth()->user()->can('roles.manage'))->dehydrated(fn () => auth()->user()->can('roles.manage'))
+                    ->dehydrateStateUsing(fn ($state) => Str::lower(trim((string) $state)))
+                    ->rule(fn (?Model $record) => fn (string $attribute, $value, \Closure $fail) => User::whereRaw('lower(email) = ?', [Str::lower(trim((string) $value))])->where('id', '!=', $record?->getKey())->exists() ? $fail('This email already has an account.') : null)
+                    ->helperText('Only the super admin can change it. People sign in with this address.'),
                 TextInput::make('phone'),
                 Select::make('status')->options(['active' => 'Active', 'suspended' => 'Suspended (all sessions end immediately)'])->required(),
             ]),
+            Section::make('Password')->description('Leave empty to keep the current password. Or use "Send password reset link" at the top so the person chooses their own. A new password signs the person out of every other device.')
+                ->columns(2)->visible(fn () => (bool) auth()->user()->can('roles.manage'))->schema([
+                    TextInput::make('new_password')->label('New password')->password()->revealable()->autocomplete('new-password')
+                        ->rule(PasswordRule::min(12)->letters()->mixedCase()->numbers())->confirmed()->dehydrated(),
+                    TextInput::make('new_password_confirmation')->label('Repeat the new password')->password()->revealable()->autocomplete('new-password')->dehydrated(false),
+                ]),
             Section::make('Staff roles')->description('Only super administrators can grant or remove roles. Staff must complete multi-factor set-up before using the admin.')->schema([
                 CheckboxList::make('roles')->options(Role::staffOptions())->columns(3)
                     ->disabled(fn () => ! auth()->user()->can('roles.manage'))->dehydrated(fn () => auth()->user()->can('roles.manage')),

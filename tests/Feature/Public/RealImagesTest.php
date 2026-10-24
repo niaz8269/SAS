@@ -26,7 +26,7 @@ class RealImagesTest extends TestCase
 
     public function test_all_bundled_cover_photos_have_exactly_the_same_width_and_height(): void
     {
-        foreach (array_merge(glob(public_path('images/destinations/*.jpg')), glob(public_path('images/cities/*.jpg'))) as $file) {
+        foreach (array_merge(glob(public_path('images/destinations/*.jpg')), glob(public_path('images/cities/*.jpg')), glob(public_path('images/programmes/*.jpg'))) as $file) {
             [$w, $h] = getimagesize($file);
             $this->assertSame([960, 540], [$w, $h], basename($file));
         }
@@ -69,6 +69,34 @@ class RealImagesTest extends TestCase
 
         $orphan = ScholarshipProgramme::factory()->create(['host_country_id' => null]);
         $this->assertStringEndsWith('images/destinations/default.jpg', $orphan->imageUrl());
+    }
+
+    public function test_scholarships_of_one_country_take_turns_through_its_photos_and_no_country_with_a_photo_shows_the_world_map(): void
+    {
+        $uk = Country::firstOrCreate(['code' => 'GB'], ['name' => 'United Kingdom', 'slug' => 'united-kingdom']);
+        $urls = collect(range(1, 4))->map(fn () => ScholarshipProgramme::factory()->create(['host_country_id' => $uk->id])->imageUrl());
+        $this->assertCount(4, $urls->unique(), 'four UK scholarships, four different photos');
+        $this->assertStringEndsWith('images/destinations/gb.jpg', $urls->first());
+        $this->assertStringNotContainsString('default.jpg', $urls->implode(' '));
+
+        $chile = Country::firstOrCreate(['code' => 'CL'], ['name' => 'Chile', 'slug' => 'chile']);
+        $two = collect(range(1, 2))->map(fn () => ScholarshipProgramme::factory()->create(['host_country_id' => $chile->id])->imageUrl());
+        $this->assertCount(2, $two->unique());
+        $this->assertStringNotContainsString('default.jpg', $two->implode(' '));
+    }
+
+    public function test_a_scholarship_with_a_photo_made_for_it_uses_that_one(): void
+    {
+        $oas = ScholarshipProgramme::factory()->create(['slug' => 'oas-academic-scholarship-program-graduate-studies-and-research-2026-call', 'host_country_id' => null]);
+        $this->assertStringEndsWith('images/programmes/oas-academic-scholarship-program-graduate-studies-and-research-2026-call.jpg', $oas->imageUrl());
+    }
+
+    public function test_every_destination_with_scholarships_has_its_own_photo_in_the_bundle(): void
+    {
+        $this->assertNotNull(config('sas.image_credits')['images/destinations/cl.jpg'] ?? null);
+        foreach (['au', 'ca', 'pk', 'za', 'tw', 'th', 'in', 'hk', 'fi', 'dk', 'cl', 'br', 'be', 'sk', 'sg', 'rs', 'ro', 'ph', 'my', 'mx', 'il', 'id', 'cy', 'bn', 'ie'] as $code) {
+            $this->assertFileExists(public_path("images/destinations/$code.jpg"), $code);
+        }
     }
 
     public function test_published_scholarship_cards_carry_a_photo(): void

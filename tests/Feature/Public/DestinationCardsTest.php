@@ -20,7 +20,7 @@ class DestinationCardsTest extends TestCase
     {
         $this->country('CN', 'China');
         $this->country('DE', 'Germany');
-        $this->country('BR', 'Brazil');
+        $this->country('ZZ', 'Zedland'); // a country with no bundled photo shows the default picture
 
         foreach (['/', '/destinations'] as $url) {
             $html = $this->get($url)->assertOk()->assertSee('images/destinations/cn.jpg', false)->assertSee('images/destinations/de.jpg', false)
