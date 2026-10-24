@@ -366,7 +366,7 @@
 "y": 563.9,
 "w": 198.0,
 "h": 15.2,
-"src": "employment.0.duration"
+"src": "@period.employment.0"
 },
 {
 "p": 2,

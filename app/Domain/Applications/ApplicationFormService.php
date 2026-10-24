@@ -216,8 +216,10 @@ class ApplicationFormService
         if (isset($sections['education'])) {
             $check('sections.education', $sections['education']['edu_from'] ?? null, $sections['education']['edu_to'] ?? null, ['edu_from', 'edu_to']);
         }
-        foreach ((array) ($sections['other_education']['rows'] ?? $sections['other_education'] ?? []) as $i => $row) {
-            $check('sections.other_education.rows.'.$i, $row['from'] ?? null, $row['to'] ?? null, ['from', 'to']);
+        foreach (['other_education', 'employment'] as $key) {
+            foreach ((array) ($sections[$key]['rows'] ?? $sections[$key] ?? []) as $i => $row) {
+                $check('sections.'.$key.'.rows.'.$i, $row['from'] ?? null, $row['to'] ?? null, ['from', 'to']);
+            }
         }
 
         return $errors;

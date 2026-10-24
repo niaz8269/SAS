@@ -166,7 +166,7 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
     public function test_repeating_sections_keep_filled_rows_and_cap_the_count(): void
     {
         $student = User::factory()->create();
-        $this->actingAs($student)->put(route('student.form.update'), ['sections' => ['employment' => ['rows' => [['employer' => 'Acme', 'duration' => '2021 to 2023'], ['employer' => ''], ['employer' => 'Beta']]]]])->assertSessionHasNoErrors();
+        $this->actingAs($student)->put(route('student.form.update'), ['sections' => ['employment' => ['rows' => [['employer' => 'Acme', 'from' => '2021-01-10', 'to' => '2023-03-31'], ['employer' => ''], ['employer' => 'Beta']]]]])->assertSessionHasNoErrors();
         $this->assertSame(['Acme', 'Beta'], array_column(ApplicationForm::firstOrFail()->value('employment'), 'employer'));
 
         $this->put(route('student.form.update'), ['sections' => ['employment' => ['rows' => [['employer' => 'a'], ['employer' => 'b'], ['employer' => 'c'], ['employer' => 'd']]]]])->assertSessionHasErrors('sections.employment.rows');
@@ -235,6 +235,29 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
 
         // The page shows the note and the date boxes.
         $this->get(route('student.form.show'))->assertOk()->assertSee('SAS needs two')->assertSee('Studied from (day, month, year)')->assertSee('type="date"', false);
+    }
+
+    public function test_employment_uses_full_dates_and_a_job_without_an_end_date_is_a_current_job(): void
+    {
+        $student = User::factory()->create();
+        $this->actingAs($student);
+        $save = fn (array $rows) => $this->put(route('student.form.update'), ['sections' => ['employment' => ['rows' => $rows]]]);
+
+        $save([['employer' => 'Acme', 'position' => 'Analyst', 'from' => '2021-01-10', 'to' => '2023-03-31'], ['employer' => 'Beta', 'from' => '2023-04-01']])->assertRedirect()->assertSessionHasNoErrors();
+        $this->assertSame(['2021-01-10', '2023-04-01'], array_column(ApplicationForm::firstOrFail()->value('employment'), 'from'));
+
+        $save([['employer' => 'Acme', 'from' => '2023-03-31', 'to' => '2021-01-10']])->assertSessionHasErrors('sections.employment.rows.0.to');
+        $save([['employer' => 'Acme', 'from' => 'January 2021']])->assertSessionHasErrors('sections.employment.rows.0.from');
+        $save([['employer' => 'Acme', 'from' => now()->addMonth()->toDateString()]])->assertSessionHasErrors('sections.employment.rows.0.from');
+
+        $period = new \ReflectionMethod(ApplicationFormPdf::class, 'period');
+        $period->setAccessible(true);
+        $pdf = app(ApplicationFormPdf::class);
+        $data = ['employment' => [['from' => '2021-01-10', 'to' => '2023-03-31'], ['from' => '2023-04-01'], ['duration' => '2015 to 2017']]];
+        $this->assertSame('10 Jan 2021 to 31 Mar 2023', $period->invoke($pdf, $data, 'employment.0'));
+        $this->assertSame('1 Apr 2023 to present', $period->invoke($pdf, $data, 'employment.1'), 'no end date: still working there');
+        $this->assertSame('2015 to 2017', $period->invoke($pdf, $data, 'employment.2'), 'an older record with free text still shows');
+        $this->get(route('student.form.show'))->assertSee('Started (day, month, year)')->assertSee('leave empty if you still work there');
     }
 
     public function test_the_sas_form_pdf_writes_the_study_dates_in_full(): void

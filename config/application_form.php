@@ -61,7 +61,8 @@ return [
         ]],
         'employment' => ['title' => 'Employment history', 'repeat' => 3, 'fields' => [
             'employer' => ['Employer', 'text'],
-            'duration' => ['Duration (for example 2021 to 2023)', 'text'],
+            'from' => ['Started (day, month, year)', 'date'],
+            'to' => ['Ended (day, month, year; leave empty if you still work there)', 'date'],
             'position' => ['Title and position', 'text'],
         ]],
         'language' => ['title' => 'English', 'fields' => [

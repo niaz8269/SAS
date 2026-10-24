@@ -103,7 +103,7 @@ class ApplicationFormPdf
     {
         [$from, $to, $legacy] = $where === 'edu'
             ? [$data['edu_from'] ?? null, $data['edu_to'] ?? null, $data['edu_years'] ?? null]
-            : [data_get($data, $where.'.from'), data_get($data, $where.'.to'), data_get($data, $where.'.years')];
+            : [data_get($data, $where.'.from'), data_get($data, $where.'.to'), data_get($data, $where.'.years') ?? data_get($data, $where.'.duration')];
         $show = function ($d) {
             try {
                 return Carbon::parse($d)->format('j M Y');
@@ -115,7 +115,10 @@ class ApplicationFormPdf
             return $legacy;
         }
 
-        return trim((filled($from) ? $show($from) : '').' to '.(filled($to) ? $show($to) : ''), ' ');
+        // A job with a start and no end is one the student still has.
+        $end = filled($to) ? $show($to) : (str_starts_with($where, 'employment') && filled($from) ? 'present' : '');
+
+        return trim((filled($from) ? $show($from) : '').' to '.$end, ' ');
     }
 
     /** The Chinese row of "Other languages you know", for the form's Chinese proficiency and HSK boxes. */
@@ -171,7 +174,7 @@ class ApplicationFormPdf
         $pdf->SetXY(29, 636);
         $pdf->Cell(300, 12, 'Further employment', 0, 0, 'L');
         foreach ($rows as $i => $r) {
-            $this->write($pdf, collect([$r['employer'] ?? null, $r['duration'] ?? null, $r['position'] ?? null])->filter()->implode('  |  '), 29, 652 + $i * 16, 532, 14);
+            $this->write($pdf, collect([$r['employer'] ?? null, $this->period(['employment' => [$r]], 'employment.0'), $r['position'] ?? null])->filter()->implode('  |  '), 29, 652 + $i * 16, 532, 14);
         }
     }
 
