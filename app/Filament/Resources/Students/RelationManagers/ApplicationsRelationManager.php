@@ -3,11 +3,15 @@
 namespace App\Filament\Resources\Students\RelationManagers;
 
 use App\Domain\Documents\Requirements;
+use App\Domain\Journey\Journey;
 use App\Domain\Scholarship\DeadlineService;
 use App\Domain\StudentWorkspace\ApplicationReview;
 use App\Models\ApplicationPlan;
 use Filament\Actions\Action;
+use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Notifications\Notification;
 use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables\Columns\TextColumn;
@@ -56,6 +60,7 @@ class ApplicationsRelationManager extends RelationManager
                     ->color(fn ($state) => match ($state) {
                         'passed' => 'success', 'returned' => 'danger', 'submitted' => 'warning', default => 'gray'
                     }),
+                TextColumn::make('journey')->label('Journey')->state(fn (ApplicationPlan $r) => app(Journey::class)->label(app(Journey::class)->currentStage($r)))->wrap(),
                 TextColumn::make('deadline')->label('Closes')->state(fn (ApplicationPlan $r) => app(DeadlineService::class)->nextClosing($r->cycle)?->format('j M Y'))->placeholder('Not confirmed'),
                 TextColumn::make('documents_ready')->label('Documents')->state(function (ApplicationPlan $r) {
                     $p = app(Requirements::class)->progress(app(Requirements::class)->forPlan($r));
@@ -93,6 +98,23 @@ class ApplicationsRelationManager extends RelationManager
                     ->requiresConfirmation()->modalDescription('The student (and agent) are told the application passed review.')
                     ->schema([Textarea::make('remarks')->label('Note for the student (optional)')->rows(3)->maxLength(2000)])
                     ->action(fn (ApplicationPlan $record, array $data) => static::decide($record, 'pass', $data['remarks'] ?? null)),
+                Action::make('moveStage')->label('Move along')->icon('heroicon-o-forward')->color('primary')
+                    ->visible(fn (ApplicationPlan $record) => auth()->user()->can('manageJourney', $record))
+                    ->modalHeading('Where is this application now?')->modalDescription('The student sees the stage and its tasks on their Journey page.')
+                    ->fillForm(fn (ApplicationPlan $record) => ['stage' => $record->journey_stage ?: 'ready'])
+                    ->schema([Select::make('stage')->label('Stage')->options(fn () => collect(config('journey.staff_stages'))->mapWithKeys(fn ($s) => [$s => config('journey.stages.'.$s.'.label')])->all())->required()])
+                    ->action(function (ApplicationPlan $record, array $data) {
+                        app(Journey::class)->setStage($record, $data['stage'], auth()->user());
+                        Notification::make()->title('Moved to '.app(Journey::class)->label($data['stage']))->success()->send();
+                    }),
+                Action::make('addTask')->label('Add a task')->icon('heroicon-o-plus')->color('gray')
+                    ->visible(fn (ApplicationPlan $record) => auth()->user()->can('manageJourney', $record))
+                    ->modalHeading('A task for the student')->modalDescription('It shows on their Journey page, with the date.')
+                    ->schema([TextInput::make('title')->label('What they should do')->required()->maxLength(200), DatePicker::make('due_on')->label('By when (optional)')->native(false)])
+                    ->action(function (ApplicationPlan $record, array $data) {
+                        app(Journey::class)->addTask($record, $data['title'], $data['due_on'] ?? null, auth()->user());
+                        Notification::make()->title('Task added')->success()->send();
+                    }),
                 Action::make('pdf')->label('SAS form (PDF)')->icon('heroicon-o-arrow-down-tray')
                     ->visible(fn (ApplicationPlan $record) => auth()->user()->can('view', $record))
                     ->url(fn (ApplicationPlan $record) => route('review.download', $record->public_id), shouldOpenInNewTab: true),

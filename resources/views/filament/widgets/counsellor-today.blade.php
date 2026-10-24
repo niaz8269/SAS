@@ -27,6 +27,12 @@
                 @empty <p style="margin-top:.4rem;opacity:.7">No unfinished application closes soon.</p> @endforelse
             </div>
             <div style="{{ $box }}">
+                <p style="font-weight:600">Student tasks past their date ({{ $work['tasks']->count() }})</p>
+                @forelse ($work['tasks'] as $r)
+                    <p style="margin-top:.4rem"><a href="{{ $url($r['student']) }}" style="text-decoration:underline">{{ $r['student']->name }}</a> <span style="opacity:.7">{{ \Illuminate\Support\Str::limit($r['task']->title, 50) }} (due {{ $r['task']->due_on->format('j M') }})</span></p>
+                @empty <p style="margin-top:.4rem;opacity:.7">No task is overdue.</p> @endforelse
+            </div>
+            <div style="{{ $box }}">
                 <p style="font-weight:600">Sent back by SAS ({{ $work['returned']->count() }})</p>
                 @forelse ($work['returned'] as $r)
                     <p style="margin-top:.4rem"><a href="{{ $url($r['student']) }}" style="text-decoration:underline">{{ $r['student']->name }}</a> <span style="opacity:.7">{{ $r['plan']->application_no }}: {{ \Illuminate\Support\Str::limit((string) $r['plan']->review_remarks, 60) }}</span></p>

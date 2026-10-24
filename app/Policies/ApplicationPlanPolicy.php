@@ -26,6 +26,12 @@ class ApplicationPlanPolicy
         return $user->isActive() && ($plan->user_id === $user->id || $user->manages($plan->user));
     }
 
+    /** Staff who look after the student (or run cases) move a passed application along its journey and add tasks. */
+    public function manageJourney(User $user, ApplicationPlan $plan): bool
+    {
+        return $plan->stage === 'passed' && $user->isStaff() && ($user->hasPermission('cases.manage') || $user->counsels($plan->user));
+    }
+
     public function delete(User $user, ApplicationPlan $plan): bool
     {
         return $this->update($user, $plan);

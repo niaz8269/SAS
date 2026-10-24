@@ -194,12 +194,12 @@ class StudentResource extends Resource
                 TextEntry::make('goals.intake')->label('Intake')->placeholder('-'),
             ]),
             Section::make('Still missing')->icon('heroicon-o-exclamation-triangle')->collapsible()
-                ->visible(fn (Student $record) => app(StudentGaps::class)->for($record)['count'] > 0)
+                ->visible(fn (Student $record) => app(StudentGaps::class)->for($record)['count'] > 0 || app(StudentGaps::class)->for($record)['warnings'] !== [])
                 ->schema([
                     TextEntry::make('missing')->hiddenLabel()->bulleted()->state(function (Student $record) {
                         $gaps = app(StudentGaps::class)->for($record);
 
-                        return collect($gaps['form'] ? ['Application form: '.implode(', ', $gaps['form'])] : [])
+                        return collect($gaps['warnings'])->map(fn ($w) => 'Warning: '.$w)->merge($gaps['form'] ? ['Application form: '.implode(', ', $gaps['form'])] : [])
                             ->merge(collect($gaps['applications'])->map(fn ($a) => $a['plan']->cycle->programme->title.': '.implode(', ', $a['missing'])))->all();
                     }),
                 ]),

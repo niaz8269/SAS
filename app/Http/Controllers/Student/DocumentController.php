@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Student;
 
 use App\Domain\Documents\DocumentService;
+use App\Domain\Documents\PhotosToPdf;
 use App\Domain\Editorial\AuditLog;
 use App\Enums\ScanStatus;
 use App\Http\Controllers\Concerns\ActsForStudent;
@@ -15,6 +16,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 
 /** FILE-01..03 / SEC-03. Upload, list, preview, download and delete are authorised independently. */
 class DocumentController extends Controller
@@ -44,6 +46,14 @@ class DocumentController extends Controller
         ], ['acknowledge.accepted' => 'Please confirm you understand how your document is stored.', 'files.max' => 'Please upload at most 10 files at a time.']);
 
         $files = array_values(array_filter(array_merge(Arr::wrap($request->file('files')), Arr::wrap($request->file('file')))));
+        if ($request->boolean('combine') && count($files) > 1) { // several photos of one document become one PDF
+            try {
+                $files = [app(PhotosToPdf::class)->make($files, Str::slug(DocumentKind::label($data['type'])).'-photos.pdf')];
+            } catch (\InvalidArgumentException $e) {
+                throw ValidationException::withMessages(['files' => $e->getMessage()]);
+            }
+            $data['title'] = $data['title'] ?? null;
+        }
         foreach ($files as $file) {
             $title = count($files) === 1 && filled($data['title'] ?? null) ? $data['title'] : pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
             $service->store($this->student($request), $file, $data['type'], $title); // an agent uploads for the student they look after

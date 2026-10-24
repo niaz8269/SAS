@@ -7,6 +7,10 @@
         $other = collect($rows)->reject(fn ($r) => $r['requirement'] === 'required' || $r['ruled'] || $r['kind']->template_path)->values();
     @endphp
 
+    @foreach (app(\App\Domain\Documents\DocumentHealth::class)->warnings($student) as $w)
+        <div class="mx-auto mt-5 max-w-4xl border p-4 text-[14px] {{ $w['level'] === 'urgent' ? 'border-[#d9534f] bg-[#fdecea] text-[#a94442]' : 'border-[#f0b46a] bg-[#fdebd0] text-[#b4530b]' }}" role="alert">{{ $w['text'] }}</div>
+    @endforeach
+
     @if ($multipleLevels && ! $levelId)
         <div class="mx-auto mt-5 max-w-4xl border border-[#f0b46a] bg-[#fdebd0] p-4 text-[14px] text-[#b4530b]">The list depends on the degree. <a class="underline" href="{{ $ctx->route('applications.show', $plan) }}#level">Choose the degree in Apply Now</a> first.</div>
     @endif

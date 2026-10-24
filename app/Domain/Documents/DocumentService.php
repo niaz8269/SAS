@@ -95,13 +95,14 @@ class DocumentService
         $key = (string) Str::ulid(); // opaque storage key (FILE-02)
         $this->disk()->put($this->quarantinePath($key), fopen($file->getRealPath(), 'r'));
 
-        $document = DB::transaction(function () use ($user, $file, $type, $title, $document, $key, $mime) {
+        $quality = $this->qualityNote($file, $mime);
+        $document = DB::transaction(function () use ($user, $file, $type, $title, $document, $key, $mime, $quality) {
             $document ??= $user->documents()->create(['type' => $type, 'title' => $title]); // user_id is set by the relation, never mass-assigned
             $version = $document->versions()->create([
                 'version' => ($document->versions()->max('version') ?? 0) + 1,
                 'original_name' => Str::limit(basename($file->getClientOriginalName()), 180, ''),
                 'storage_disk' => config('sas.uploads.disk'), 'storage_key' => $key, 'size' => $file->getSize(),
-                'mime' => $mime, 'checksum' => hash_file('sha256', $file->getRealPath()), 'scan_status' => ScanStatus::Pending->value,
+                'mime' => $mime, 'quality_note' => $quality, 'checksum' => hash_file('sha256', $file->getRealPath()), 'scan_status' => ScanStatus::Pending->value,
             ]);
             $document->update(['current_version_id' => $version->id]);
 
@@ -111,6 +112,27 @@ class DocumentService
         ScanDocumentJob::dispatch($document->current_version_id)->afterCommit();
 
         return $document;
+    }
+
+    /** A gentle warning when a photo is probably too small or too thin to read. Never blocks the upload. */
+    public function qualityNote(UploadedFile $file, string $mime): ?string
+    {
+        if (! in_array($mime, ['image/jpeg', 'image/png'], true)) {
+            return null;
+        }
+        $size = @getimagesize($file->getRealPath());
+        if (! $size) {
+            return null;
+        }
+        [$w, $h] = $size;
+        if (min($w, $h) < 700 || max($w, $h) < 1000) {
+            return "This photo is small ({$w} x {$h} pixels). Funders often cannot read text from it. A photo of at least 1200 pixels on the long side is better.";
+        }
+        if ($file->getSize() < 40 * 1024) {
+            return 'This file is very small ('.round($file->getSize() / 1024).' KB), so it may be blurry. Check that every word can be read.';
+        }
+
+        return null;
     }
 
     public function quarantinePath(string $key): string

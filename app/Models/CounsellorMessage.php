@@ -20,6 +20,11 @@ class CounsellorMessage extends Model
         return $this->belongsTo(User::class, 'author_id');
     }
 
+    public function document(): BelongsTo
+    {
+        return $this->belongsTo(Document::class);
+    }
+
     public function fromStudent(): bool
     {
         return $this->author_id === $this->student_id;

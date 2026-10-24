@@ -2,6 +2,18 @@
     <h1 class="text-[26px] font-normal uppercase tracking-wide text-[#555]">{{ $ctx->isAgent() ? 'Applications of '.$student->name : 'My application' }}</h1>
     <div class="mt-2 border-b-2 border-dotted border-[#ccc]" aria-hidden="true"></div>
 
+    @foreach (app(\App\Domain\Documents\DocumentHealth::class)->warnings($student) as $w)
+        <div class="mt-5 border p-4 text-[14px] {{ $w['level'] === 'urgent' ? 'border-[#d9534f] bg-[#fdecea] text-[#a94442]' : 'border-[#f0b46a] bg-[#fdebd0] text-[#b4530b]' }}" role="alert">{{ $w['text'] }}</div>
+    @endforeach
+    @php($journeyService = app(\App\Domain\Journey\Journey::class))
+    @php($overdue = $journeyService->overdue($plans->pluck('id')))
+    @if ($overdue->isNotEmpty())
+        <div class="mt-5 border border-[#f0b46a] bg-[#fdebd0] p-4 text-[14px] text-[#b4530b]" role="alert">
+            <p class="font-semibold">{{ $overdue->count() }} {{ \Illuminate\Support\Str::plural('task', $overdue->count()) }} past the date:</p>
+            <ul class="mt-1 list-disc pl-5">@foreach ($overdue->take(5) as $t)<li>{{ $t->title }} ({{ $t->plan->cycle->programme->title }}, was due {{ $t->due_on->format('j M') }}) <a class="underline" href="{{ $ctx->route('applications.journey', $t->plan) }}">Open</a></li>@endforeach</ul>
+        </div>
+    @endif
+
     <nav class="mt-6 flex flex-wrap items-end gap-1 text-[14px]" aria-label="Filter applications">
         @foreach (['all' => 'All', 'unfinished' => 'Unfinished', 'finished' => 'Finished'] as $k => $l)
             <a href="{{ $ctx->route('applications.index', $k === 'all' ? [] : ['show' => $k]) }}" @if ($filter === $k) aria-current="page" @endif class="border border-b-0 px-7 py-2.5 {{ $filter === $k ? 'border-[#ccc] bg-white text-[#333]' : 'border-[#ddd] bg-[#f5f5f5] text-[#666] hover:text-[#333]' }}">{{ $l }}</a>
@@ -27,6 +39,7 @@
                         <p>Form {{ $formPercent >= 100 ? 'completed' : 'not completed' }} <a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.form', $p) }}">View</a></p>
                         <p>Attachment {{ $d['missing'] ? 'not completed' : 'completed' }} <a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.materials', $p) }}">View</a></p>
                         <p><a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.download', $p) }}">Download Application Form</a> <span class="text-[#999]">|</span> <a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.preview', $p) }}" target="_blank" rel="noopener">Preview</a></p>
+                        <p>Journey: <a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.journey', $p) }}">{{ $journeyService->label($journeyService->currentStage($p)) }}</a></p>
                         <p><a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route($p->isEditable() ? 'applications.submit' : 'applications.show', $p) }}">{{ $p->isEditable() ? 'Apply Submit' : 'View Details' }}</a></p>
                     </td>
                 </tr>

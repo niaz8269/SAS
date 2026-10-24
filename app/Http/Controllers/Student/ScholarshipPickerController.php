@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Student;
 
+use App\Domain\Counselling\ScholarshipMatcher;
 use App\Enums\ApplicationStatus;
 use App\Http\Controllers\Concerns\ActsForStudent;
 use App\Http\Controllers\Controller;
@@ -29,6 +30,7 @@ class ScholarshipPickerController extends Controller
         return view('student.choose-scholarships', [
             'cycles' => $cycles, 'filters' => ['q' => $q, 'level' => $filters['level'] ?? '', 'show_closed' => $request->boolean('show_closed')],
             'levels' => DegreeLevel::orderBy('sort')->get(), 'student' => $this->student($request),
+            'recommended' => $q === '' && empty($filters['level']) ? app(ScholarshipMatcher::class)->for($this->student($request), 5) : collect(),
             'planned' => $this->student($request)->applicationPlans()->pluck('public_id', 'cycle_id')->all(),
         ]);
     }

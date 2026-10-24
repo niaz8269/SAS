@@ -40,6 +40,7 @@ class DocumentsRelationManager extends RelationManager
                 TextColumn::make('type')->label('Type')->formatStateUsing(fn ($state) => DocumentKind::label($state))->sortable(),
                 TextColumn::make('currentVersion.original_name')->label('File')->limit(40)->placeholder('-'),
                 TextColumn::make('currentVersion.scan_status')->label('Virus check')->badge()->formatStateUsing(fn ($state) => $state?->label() ?? '-'),
+                TextColumn::make('currentVersion.quality_note')->label('Check')->wrap()->limit(60)->placeholder('-')->color('warning'),
                 TextColumn::make('latest_comment')->label('Comment')->wrap()->limit(60)->state(fn (Document $r) => $r->comments()->latest('id')->value('body'))->placeholder('-'),
                 TextColumn::make('created_at')->label('Uploaded')->date('j M Y')->sortable(),
             ])

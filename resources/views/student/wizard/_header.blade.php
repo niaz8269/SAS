@@ -7,6 +7,7 @@
     <h1 class="text-[20px] font-normal text-[#0b6ec7] sm:text-[22px]">The program you are applying for is {{ $cycle->displayName() }}</h1>
     <p class="mt-1 text-[13px] text-[#777]">Application number {{ $plan->application_no }}@if ($ctx->isAgent()) &middot; for {{ $student->name }}@endif</p>
 </div>
+<p class="mt-1 text-center text-[13px]"><a class="text-[#428bb6] underline" href="{{ $ctx->route('applications.journey', $plan) }}">Journey: {{ app(\App\Domain\Journey\Journey::class)->label(app(\App\Domain\Journey\Journey::class)->currentStage($plan)) }}</a></p>
 <div class="mx-auto mt-3 border-b border-[#cfd8e3]" aria-hidden="true"></div>
 
 @if ($plan->stage === 'returned')

@@ -113,6 +113,8 @@ $applicationRoutes = function () {
     Route::post('/applications/{plan:public_id}/submit', [Student\ApplicationController::class, 'submit'])->middleware('throttle:enquiries')->name('applications.submit.store');
     Route::get('/applications/{plan:public_id}/preview', [Student\ApplicationController::class, 'preview'])->name('applications.preview');
     Route::get('/applications/{plan:public_id}/download', [Student\ApplicationController::class, 'download'])->name('applications.download');
+    Route::get('/applications/{plan:public_id}/journey', [Student\ApplicationJourneyController::class, 'show'])->name('applications.journey');
+    Route::patch('/applications/{plan:public_id}/journey/{task}', [Student\ApplicationJourneyController::class, 'toggle'])->name('applications.journey.tasks.update');
     Route::get('/applications/{plan:public_id}/tools', [Student\ApplicationController::class, 'tools'])->name('applications.tools');
     Route::patch('/applications/{plan:public_id}', [Student\ApplicationController::class, 'update'])->name('applications.update');
     Route::put('/applications/{plan:public_id}/study-language', [Student\ApplicationController::class, 'language'])->name('applications.language.update');

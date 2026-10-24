@@ -3,6 +3,7 @@
 namespace App\Domain\Counselling;
 
 use App\Domain\Communication\Preferences;
+use App\Domain\Documents\DocumentService;
 use App\Domain\Editorial\AuditLog;
 use App\Models\CounsellorMessage;
 use App\Models\Document;
@@ -13,6 +14,7 @@ use App\Models\StudentGoal;
 use App\Models\User;
 use App\Notifications\CaseUpdateNotification;
 use App\Notifications\StudentWrote;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
@@ -69,10 +71,12 @@ class Counselling
     }
 
     /** A message in the student's conversation with their counsellor. A reply from staff notifies the student. */
-    public function message(User $student, User $author, string $body): CounsellorMessage
+    public function message(User $student, User $author, string $body, ?UploadedFile $attachment = null): CounsellorMessage
     {
+        // A file sent with a message is kept among the student's own documents (type Other), so the usual size, type and virus checks apply.
+        $document = $attachment ? app(DocumentService::class)->store($student, $attachment, 'other', 'Sent with a message: '.Str::limit(pathinfo($attachment->getClientOriginalName(), PATHINFO_FILENAME), 80, '')) : null;
         $message = new CounsellorMessage(['body' => trim($body)]);
-        $message->forceFill(['student_id' => $student->id, 'author_id' => $author->id])->save();
+        $message->forceFill(['student_id' => $student->id, 'author_id' => $author->id, 'document_id' => $document?->id])->save();
         if ($author->id !== $student->id) {
             $this->tell($student, ($author->name ?: 'Your counsellor').' sent you a message.');
         } else {

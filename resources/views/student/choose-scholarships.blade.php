@@ -10,6 +10,25 @@
         </div>
     @endif
 
+    @if ($recommended->isNotEmpty())
+        <div class="mt-5 border border-[#2f7cc4]">
+            <div class="bg-[#307cc7] px-4 py-2.5 text-[14px] text-white">Recommended for {{ $ctx->isAgent() ? $student->name : 'you' }}, from {{ $ctx->isAgent() ? 'their' : 'your' }} application form and goals</div>
+            <ul class="divide-y divide-[#e5e5e5] bg-white">
+                @foreach ($recommended as $m)
+                    @php($c = $m['cycle'])
+                    <li class="flex flex-wrap items-center justify-between gap-3 px-4 py-3 text-[13px]">
+                        <div class="min-w-0 flex-1"><p class="text-[15px] font-semibold">{{ $c->programme->title }}</p><p class="text-[#666]">Fits: {{ implode(', ', $m['why']) }} &middot; <a class="text-[#428bb6] underline" href="{{ route('scholarships.show', [$c->programme->slug, $c->slug]) }}">Read details</a></p></div>
+                        @if (isset($planned[$c->id]))
+                            <a class="border border-[#bbb] bg-white px-5 py-2 hover:bg-[#f5f5f5]" href="{{ $ctx->route('applications.show', $planned[$c->id]) }}">✓ Open application</a>
+                        @else
+                            <form method="POST" action="{{ $ctx->route('applications.store') }}">@csrf<input type="hidden" name="cycle_id" value="{{ $c->id }}"><button class="bg-[#0b4a8f] px-7 py-2 font-semibold text-white hover:bg-[#093d75]" aria-label="Apply for {{ $c->programme->title }}">Apply</button></form>
+                        @endif
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <form method="GET" action="{{ $ctx->route('choose.index') }}" class="mt-5 flex flex-wrap items-end gap-3 border border-[#ddd] bg-[#f9f9f9] p-4 text-[13px]" role="search">
         <div class="min-w-[12rem] flex-1"><label for="q" class="mb-1 block text-[#666]">Search by name</label><input id="q" name="q" type="search" value="{{ $filters['q'] }}" maxlength="80" class="w-full border border-[#ccc] bg-white px-3 py-2" placeholder="For example Chevening"></div>
         <div><label for="level" class="mb-1 block text-[#666]">Degree</label>

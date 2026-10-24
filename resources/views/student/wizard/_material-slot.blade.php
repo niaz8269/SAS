@@ -17,6 +17,7 @@
                         <li class="w-[88px] text-center text-[11px] leading-tight text-[#555]">
                             @include('student.wizard._file-icon', ['name' => $file])
                             <span class="mx-auto block break-all" title="{{ $file }}">{{ \Illuminate\Support\Str::limit($file, 22) }}</span>
+                            @if ($d->currentVersion?->quality_note)<span class="block text-[#b4530b]" title="{{ $d->currentVersion->quality_note }}">Check: small file</span>@endif
                             @if ($d->currentVersion?->scan_status === \App\Enums\ScanStatus::Rejected)<span class="block text-[#d9534f]">Rejected by the virus check</span>@elseif ($d->currentVersion?->scan_status === \App\Enums\ScanStatus::Pending)<span class="block text-[#d97706]">Being checked</span>@endif
                             <span class="mt-0.5 flex justify-center gap-2">
                                 @if ($d->currentVersion?->isDownloadable())<a class="text-[#428bb6] hover:underline" href="{{ $ctx->route('documents.download', $d) }}">Download</a>@endif
@@ -39,6 +40,7 @@
             <input type="hidden" name="type" value="{{ $r['kind']->key }}"><input type="hidden" name="acknowledge" value="1">
             <label for="up-{{ $r['kind']->key }}" class="sr-only">Upload files for {{ $r['kind']->name }}</label>
             <input id="up-{{ $r['kind']->key }}" type="file" name="files[]" multiple required accept=".pdf,.docx,.jpg,.jpeg,.png" class="max-w-full border border-[#ccc] bg-white px-2 py-1 text-[12px]">
+            <label class="flex items-center gap-1.5 text-[12px] text-[#555]"><input type="checkbox" name="combine" value="1"> Combine several photos into one PDF</label>
             <button class="bg-[#0b4a8f] px-4 py-1.5 text-[13px] font-semibold text-white hover:bg-[#093d75]">Upload</button>
         </form>
 

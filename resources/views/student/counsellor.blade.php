@@ -12,17 +12,21 @@
                 <li class="max-w-[85%] rounded-lg border p-3 text-sm {{ $m->fromStudent() ? 'ml-auto border-navy-300 bg-navy-50' : 'border-line bg-white' }}">
                     <p class="text-xs text-muted">{{ $m->fromStudent() ? 'You' : ($m->author?->name ?: 'SAS team') }} &middot; {{ $m->created_at->format('j M Y, H:i') }}</p>
                     <p class="mt-1 whitespace-pre-line">{{ $m->body }}</p>
+                    @if ($m->document)<p class="mt-1 text-xs">Attachment: @if ($m->document->currentVersion?->isDownloadable())<a class="text-navy-700 underline" href="{{ route('student.documents.download', $m->document) }}">{{ $m->document->currentVersion->original_name }}</a>@else {{ $m->document->currentVersion?->original_name ?? 'file' }} (being checked) @endif</p>@endif
                 </li>
             @empty
                 <li class="text-sm text-muted">No messages yet. Tell your counsellor what you want to study and where.</li>
             @endforelse
         </ul>
-        <form method="POST" action="{{ route('student.counsellor.store') }}" class="mt-4 space-y-2" id="end">
+        <form method="POST" action="{{ route('student.counsellor.store') }}" enctype="multipart/form-data" class="mt-4 space-y-2" id="end">
             @csrf
             <label for="body" class="label">Write a message</label>
             <textarea id="body" name="body" rows="4" maxlength="2000" required class="input @error('body') border-alert @enderror">{{ old('body') }}</textarea>
             @error('body')<p class="field-error" role="alert">{{ $message }}</p>@enderror
-            <button class="btn-primary">Send</button>
+            <div><label for="attachment" class="label">Attach a file (optional: PDF, Word, JPEG or PNG)</label><input id="attachment" type="file" name="attachment" accept=".pdf,.docx,.jpg,.jpeg,.png" class="input">@error('attachment')<p class="field-error" role="alert">{{ $message }}</p>@enderror @error('file')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
+            <div class="flex flex-wrap items-center gap-3"><button class="btn-primary">Send</button>
+                @php($wa = preg_replace('/\D/', '', (string) config('sas.contact_whatsapp')))
+                @if (strlen($wa) >= 8)<a class="btn-outline" href="https://wa.me/{{ $wa }}" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>@endif</div>
         </form>
     </section>
 </x-layouts.student>

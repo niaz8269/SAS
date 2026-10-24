@@ -20,8 +20,8 @@ class CounsellorController extends Controller
 
     public function store(Request $request, Counselling $counselling)
     {
-        $data = $request->validate(['body' => ['required', 'string', 'min:2', 'max:2000']]);
-        $counselling->message($request->user(), $request->user(), $data['body']);
+        $data = $request->validate(['body' => ['required', 'string', 'min:2', 'max:2000'], 'attachment' => ['nullable', 'file']]);
+        $counselling->message($request->user(), $request->user(), $data['body'], $request->file('attachment'));
 
         return redirect()->route('student.counsellor')->withFragment('end')->with('status', 'Message sent. Your counsellor will reply here.');
     }

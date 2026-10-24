@@ -2,6 +2,7 @@
 
 namespace App\Domain\Counselling;
 
+use App\Domain\Journey\Journey;
 use App\Domain\Scholarship\DeadlineService;
 use App\Models\ApplicationPlan;
 use App\Models\CounsellorMessage;
@@ -55,11 +56,12 @@ class Workload
         $plans = ApplicationPlan::whereIn('user_id', $ids)->whereIn('stage', ['draft', 'returned'])->with(['cycle.programme', 'user'])->get();
         $deadlines = $plans->map(fn (ApplicationPlan $p) => ['student' => $students->firstWhere('id', $p->user_id), 'plan' => $p, 'closes' => $this->deadlines->nextClosing($p->cycle)])
             ->filter(fn ($row) => $row['student'] && $row['closes'] && $row['closes']->between(now(), now()->addDays(self::DEADLINE_DAYS)))->sortBy('closes')->values();
+        $tasks = app(Journey::class)->overdue(ApplicationPlan::whereIn('user_id', $ids)->pluck('id'))->map(fn ($t) => ['student' => $students->firstWhere('id', $t->plan->user_id), 'task' => $t])->filter(fn ($row) => $row['student'])->values();
         $returned = $plans->where('stage', 'returned')->map(fn (ApplicationPlan $p) => ['student' => $students->firstWhere('id', $p->user_id), 'plan' => $p])->filter(fn ($row) => $row['student'])->values();
 
         return [
-            'replies' => $replies, 'due' => $due, 'stale' => $stale, 'deadlines' => $deadlines, 'returned' => $returned,
-            'total' => $replies->count() + $due->count() + $stale->count() + $deadlines->count() + $returned->count(),
+            'replies' => $replies, 'due' => $due, 'stale' => $stale, 'deadlines' => $deadlines, 'returned' => $returned, 'tasks' => $tasks,
+            'total' => $replies->count() + $due->count() + $stale->count() + $deadlines->count() + $returned->count() + $tasks->count(),
         ];
     }
 

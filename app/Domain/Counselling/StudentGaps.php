@@ -3,6 +3,7 @@
 namespace App\Domain\Counselling;
 
 use App\Domain\Applications\ApplicationFormService;
+use App\Domain\Documents\DocumentHealth;
 use App\Domain\Documents\Requirements;
 use App\Models\ApplicationForm;
 use App\Models\ApplicationPlan;
@@ -22,7 +23,7 @@ class StudentGaps
             ->map(fn (ApplicationPlan $p) => ['plan' => $p, 'missing' => $this->requirements->progress($this->requirements->forPlan($p))['missing']])
             ->filter(fn ($row) => $row['missing'] !== [])->values()->all();
 
-        return ['form' => $formMissing, 'applications' => $applications, 'count' => count($formMissing) + array_sum(array_map(fn ($a) => count($a['missing']), $applications))];
+        return ['warnings' => array_map(fn ($w) => $w['text'], app(DocumentHealth::class)->warnings($student)), 'form' => $formMissing, 'applications' => $applications, 'count' => count($formMissing) + array_sum(array_map(fn ($a) => count($a['missing']), $applications))];
     }
 
     /** The reminder text sent to the student. */

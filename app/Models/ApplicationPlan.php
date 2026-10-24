@@ -32,6 +32,7 @@ class ApplicationPlan extends Model
             'submitted_at' => 'datetime',
             'requirements_changed_at' => 'datetime',
             'review_requested_at' => 'datetime',
+            'journey_stage_at' => 'datetime',
             'reviewed_at' => 'datetime',
         ];
     }
@@ -62,6 +63,11 @@ class ApplicationPlan extends Model
     public function getRouteKeyName(): string
     {
         return 'public_id';
+    }
+
+    public function journeyTasks(): HasMany
+    {
+        return $this->hasMany(JourneyTask::class, 'plan_id');
     }
 
     public function user(): BelongsTo
