@@ -72,7 +72,18 @@ if (-not $Out) { $Out = Join-Path $root "dist\sas-release-$stamp-$commit.zip" }
 New-Item -ItemType Directory (Split-Path $Out) -Force | Out-Null
 if (Test-Path $Out) { Remove-Item $Out }
 Write-Host '==> Zip'
-Compress-Archive -Path (Join-Path $site '*') -DestinationPath $Out -CompressionLevel Optimal
+# Written by hand because Windows PowerShell's Compress-Archive stores backslash paths, which Linux unzip tools handle badly.
+Add-Type -AssemblyName System.IO.Compression, System.IO.Compression.FileSystem
+$siteRoot = (Resolve-Path $site).Path.TrimEnd('\') + '\'
+$zip = [System.IO.Compression.ZipFile]::Open($Out, 'Create')
+try {
+    foreach ($item in Get-ChildItem $siteRoot -Recurse -Force) {
+        $name = $item.FullName.Substring($siteRoot.Length).Replace('\', '/')
+        if ($item.PSIsContainer) { [void]$zip.CreateEntry($name + '/'); continue }
+        [void][System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($zip, $item.FullName, $name, 'Optimal')
+    }
+}
+finally { $zip.Dispose() }
 Remove-Item $work -Recurse -Force
 
 $mb = [math]::Round((Get-Item $Out).Length / 1MB, 1)
