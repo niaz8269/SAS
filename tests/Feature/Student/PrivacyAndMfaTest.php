@@ -29,7 +29,20 @@ class PrivacyAndMfaTest extends TestCase
     {
         parent::setUp();
         Storage::fake('private_documents');
-        config(['sas.uploads.disk' => 'private_documents']);
+        config(['sas.uploads.disk' => 'private_documents', 'sas.two_step.enabled' => true]); // these tests are about two-step sign-in when it is switched on
+    }
+
+    public function test_while_two_step_is_off_login_never_asks_for_a_code_and_the_security_page_is_gone(): void
+    {
+        config(['sas.two_step.enabled' => false]);
+        $student = User::factory()->create(['password' => bcrypt('a-long-password-1')]);
+        $student->forceFill(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP', 'app_authentication_recovery_codes' => ['aaaa-bbbb']])->save(); // an old authenticator is simply ignored
+
+        $this->get(route('two-factor.challenge'))->assertRedirect(route('login'));
+        $this->post('/login', ['email' => $student->email, 'password' => 'a-long-password-1'])->assertRedirect()->assertRedirectContains('student');
+        $this->assertAuthenticatedAs($student);
+        $this->get('/student/security')->assertNotFound();
+        $this->get('/student')->assertOk()->assertDontSee('Security');
     }
 
     private function populated(): User

@@ -25,6 +25,11 @@ class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
+        // AUTH-02: with SAS_TWO_STEP on, staff must use multi-factor authentication; accounts without it are sent to set it up first.
+        if (config('sas.two_step.enabled')) {
+            $panel->multiFactorAuthentication([AppAuthentication::make()->recoverable()], isRequired: true);
+        }
+
         return $panel
             ->default()
             ->id('admin')
@@ -37,8 +42,6 @@ class AdminPanelProvider extends PanelProvider
             ->unsavedChangesAlerts()
             ->login()
             ->profile() // where staff set up and manage their authenticator app
-            // AUTH-02: staff must use multi-factor authentication. Accounts without it are sent to set it up before anything else.
-            ->multiFactorAuthentication([AppAuthentication::make()->recoverable()], isRequired: true)
             ->colors(['primary' => Color::hex('#3b6fc4'), 'warning' => Color::hex('#caa249')])
             ->favicon(asset('images/favicon-64.png'))
             ->font('Inter Variable', url: asset('fonts/inter.css'), provider: LocalFontProvider::class)

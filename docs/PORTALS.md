@@ -2,7 +2,7 @@
 
 Everything below was built and exercised in the browser on 2026-10-23. Test logins exist only on a development database (`php artisan db:seed --class=DemoAccountsSeeder`; refused in production). Password for all of them: `demo-password-123`.
 
-Staff accounts must use an authenticator app. The demo staff accounts all share the secret `JBSWY3DPEHPK3PXP` (add it to any authenticator app) and the one-time recovery codes `demo-code-0001` to `demo-code-0008`.
+Sign-in is by email and password only: **two-step sign-in (an authenticator-app code) is switched off** (owner's request, 2026-10-24). Setting `SAS_TWO_STEP=true` in `.env` brings it back: staff must then set up an authenticator app and students may opt in on a Security page. The demo staff accounts all share the secret `JBSWY3DPEHPK3PXP` (add it to any authenticator app) and the one-time recovery codes `demo-code-0001` to `demo-code-0008`.
 
 | Portal | Address | Who | Demo login |
 |---|---|---|---|

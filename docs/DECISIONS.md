@@ -10,7 +10,7 @@ Format: ID · date · decision · reason · requirement refs · estimate impact.
 - **D-02 · Roles.** Own `user_roles` table + `App\Domain\Identity\Role` enum and a role→permission map in `config/sas.php`
   instead of a third-party package. Keeps publish / refund / role-management separately grantable (AUTH-05) with no extra
   dependency. A user can hold several roles. Students are users with no staff role.
-- **D-03 · Staff MFA.** Filament 5 built-in app (TOTP) authentication is required for the admin panel; staff cannot reach
+- **D-03 · Staff MFA (switched off 2026-10-24 at the owner's request; `SAS_TWO_STEP=true` turns it back on).** Filament 5 built-in app (TOTP) authentication is required for the admin panel; staff cannot reach
   admin resources without it enabled (AUTH-02). Student MFA is optional and deferred (listed in PROGRESS.md).
 - **D-04 · Database.** SQLite for local/test, MySQL 8.4 for staging/production. Migrations avoid vendor-specific SQL.
   Keyword search uses indexed `LIKE` over title/institution/funder/aliases in R1 (spec: "database search"); a Scout adapter

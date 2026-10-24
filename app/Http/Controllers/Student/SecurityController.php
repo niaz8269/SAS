@@ -12,8 +12,15 @@ use Illuminate\Validation\ValidationException;
 /** Optional multi-factor authentication for students (AUTH-02). */
 class SecurityController extends Controller
 {
+    /** The Security page only exists while two-step sign-in is switched on (SAS_TWO_STEP). */
+    private function available(): void
+    {
+        abort_unless(TwoFactor::available(), 404);
+    }
+
     public function show(Request $request, TwoFactor $twoFactor)
     {
+        $this->available();
         $user = $request->user();
         $secret = null;
         if (! $twoFactor->enabled($user)) {
@@ -29,6 +36,7 @@ class SecurityController extends Controller
 
     public function enable(Request $request, TwoFactor $twoFactor)
     {
+        $this->available();
         $data = $request->validate(['code' => ['required', 'string', 'max:12']]);
         $secret = $request->session()->get('mfa_setup_secret');
         if (! $secret || ! $twoFactor->verifyCode($secret, $data['code'])) {
@@ -44,6 +52,7 @@ class SecurityController extends Controller
 
     public function disable(Request $request, TwoFactor $twoFactor)
     {
+        $this->available();
         $request->validate(['password' => ['required', 'string']]);
         if (! Hash::check($request->input('password'), $request->user()->password)) {
             throw ValidationException::withMessages(['password' => 'Password is incorrect.']);
@@ -59,6 +68,7 @@ class SecurityController extends Controller
 
     public function regenerate(Request $request, TwoFactor $twoFactor)
     {
+        $this->available();
         $request->validate(['password' => ['required', 'string']]);
         if (! Hash::check($request->input('password'), $request->user()->password)) {
             throw ValidationException::withMessages(['password' => 'Password is incorrect.']);

@@ -13,6 +13,9 @@ class TwoFactorChallengeController extends Controller
 {
     private function pending(Request $request): ?User
     {
+        if (! TwoFactor::available()) {
+            return null; // two-step sign-in is switched off
+        }
         $mfa = $request->session()->get('mfa');
         if (! $mfa || now()->timestamp - $mfa['at'] > 600) { // the password step is valid for 10 minutes
             $request->session()->forget('mfa');

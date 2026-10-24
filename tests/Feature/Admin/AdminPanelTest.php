@@ -63,11 +63,11 @@ class AdminPanelTest extends TestCase
         $this->actingAs(User::factory()->role(Role::PartnerManager)->create())->get('/admin')->assertForbidden();
     }
 
-    public function test_staff_without_mfa_are_forced_to_set_it_up_first(): void
+    public function test_staff_are_not_asked_for_an_authenticator_while_two_step_is_switched_off(): void
     {
         $editor = User::factory()->role(Role::Editor)->create();
-        $this->actingAs($editor)->get('/admin')->assertRedirect(route('filament.admin.auth.multi-factor-authentication.set-up-required'));
-        $this->actingAs($editor)->get('/admin/scholarship-cycles')->assertRedirect(route('filament.admin.auth.multi-factor-authentication.set-up-required'));
+        $this->actingAs($editor)->get('/admin')->assertOk();
+        $this->get('/admin/scholarship-cycles')->assertOk();
     }
 
     public function test_suspended_staff_lose_panel_access(): void

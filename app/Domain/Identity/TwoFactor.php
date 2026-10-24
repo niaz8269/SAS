@@ -11,6 +11,12 @@ class TwoFactor
 {
     public function __construct(private Google2FA $google2fa) {}
 
+    /** Whether sign-in asks for a code at all (the SAS_TWO_STEP switch). */
+    public static function available(): bool
+    {
+        return (bool) config('sas.two_step.enabled');
+    }
+
     public function enabled(User $user): bool
     {
         return filled($user->app_authentication_secret);

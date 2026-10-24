@@ -109,6 +109,12 @@ return [
         'cadence_days_closing_soon' => 7,
     ],
 
+    /*
+     * Two-step sign-in (a 6-digit code from an authenticator app). Off by default: no login page asks for a code, staff included.
+     * Turn it on with SAS_TWO_STEP=true: staff must then set it up, and students may opt in on their Security page.
+     */
+    'two_step' => ['enabled' => (bool) env('SAS_TWO_STEP', false)],
+
     'uploads' => [
         'max_kb' => (int) env('SAS_UPLOAD_MAX_KB', 20480), // FILE-01: 20 MB
         'quota_mb' => (int) env('SAS_UPLOAD_QUOTA_MB', 200), // proposed, pending owner approval

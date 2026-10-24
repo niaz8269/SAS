@@ -3,7 +3,7 @@
 <h2>1. What we collect</h2>
 <ul>
     <li><strong>Just browsing.</strong> Scholarship, university and destination pages need no account. Our servers keep standard technical logs (IP address, browser, pages requested, time) for security, abuse prevention and fixing errors.</li>
-    <li><strong>Your account.</strong> Name, email address and a password (stored only as a one-way hash). If you turn on two-step sign-in we store the secret needed to check your authenticator codes and your recovery codes (hashed).</li>
+    <li><strong>Your account.</strong> Name, email address and a password (stored only as a one-way hash).@if (config('sas.two_step.enabled')) If you turn on two-step sign-in we store the secret needed to check your authenticator codes and your recovery codes (hashed).@endif</li>
     <li><strong>Your profile (optional).</strong> Nationality, country of residence, preferred destinations, degree level and subjects of interest, prior qualification and institution, completion year, grades and scale, language test results, a budget note, intended intake year and, only if you choose, date of birth. You decide what to fill in; none of it is mandatory.</li>
     <li><strong>Documents.</strong> Files you upload to your workspace (for example transcripts, certificates, CV, statements, language certificates, recommendation letters or a passport copy). They are stored privately, checked for malware, are not placed on public storage and are visible only to you and, where your service needs it, the staff member handling your case.</li>
     <li><strong>Your plans and saved items.</strong> Scholarships you save, application plans, tasks, notes and the status you set.</li>
@@ -53,7 +53,7 @@
 </ul>
 
 <h2>7. Security</h2>
-<p>We use encrypted connections, hashed passwords, optional two-step sign-in (required for staff), private file storage with malware scanning, role-based access for staff and logs of who accessed what. No system is perfectly secure; if a breach affects you we will tell you and the authorities as the law requires.</p>
+<p>We use encrypted connections, hashed passwords, @if (config('sas.two_step.enabled'))optional two-step sign-in (required for staff), @endif private file storage with malware scanning, role-based access for staff and logs of who accessed what. No system is perfectly secure; if a breach affects you we will tell you and the authorities as the law requires.</p>
 
 <h2>8. Children</h2>
 <p>The service is for students of university-application age. If you are under 18, please use it with a parent or guardian. If you believe a child gave us information without permission, contact us and we will delete it.</p>

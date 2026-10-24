@@ -13,7 +13,7 @@
         ['Notifications'.($unread ? " ($unread)" : ''), route('student.notifications.index'), 'student.notifications.*'],
         ['Profile', route('student.profile.edit'), 'student.profile.*'],
         ['My enquiries', route('student.enquiries.index'), 'student.enquiries.*'],
-        ['Security', route('student.security'), 'student.security'],
+        ...(\App\Domain\Identity\TwoFactor::available() ? [['Security', route('student.security'), 'student.security']] : []),
         ['Privacy and data', route('student.privacy'), 'student.privacy*'],
     ];
     $moreOpen = collect($more)->contains(fn ($m) => request()->routeIs($m[2]));
