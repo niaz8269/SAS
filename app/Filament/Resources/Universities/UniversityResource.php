@@ -12,11 +12,13 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
@@ -61,6 +63,19 @@ class UniversityResource extends Resource
             Toggle::make('published')->label('Show on the public Universities pages')->default(true)->columnSpanFull(),
             Textarea::make('summary')->label('Introduction (shown on the university page)')->rows(4)->maxLength(2000)->columnSpanFull()->helperText('Your own words. Plain text; leave blank to show nothing.'),
             MediaPicker::make('image_path')->label('Photo (optional)')->columnSpanFull(),
+            Section::make('Medical profile (shown with the fees)')->columns(2)->columnSpanFull()->collapsed()->schema([
+                TextInput::make('profile.established_year')->label('Founded')->numeric()->minValue(1000)->maxValue((int) date('Y')),
+                TextInput::make('profile.institution_type')->label('Type of university')->maxLength(120),
+                Textarea::make('profile.summary')->label('Summary')->rows(2)->maxLength(800)->columnSpanFull(),
+                TextInput::make('profile.students_note')->label('Students and staff')->maxLength(400)->columnSpanFull(),
+                TextInput::make('profile.accommodation_note')->label('Accommodation')->maxLength(600)->columnSpanFull(),
+                TextInput::make('profile.affiliated_hospitals_note')->label('Teaching hospitals (summary)')->maxLength(400)->columnSpanFull(),
+                Repeater::make('profile.affiliated_hospitals')->label('Affiliated hospitals')->schema([TextInput::make('name')->required(), TextInput::make('note')])->columns(2)->columnSpanFull()->addActionLabel('Add a hospital'),
+                Repeater::make('profile.recognitions')->label('Recognition')->schema([
+                    TextInput::make('body')->label('Recognised by')->required(), Select::make('status')->options(['verified' => 'Checked by SAS in the registry', 'claimed' => 'Stated by the university'])->default('claimed')->required(),
+                    TextInput::make('source_label'), TextInput::make('source_url')->url(), TextInput::make('note'),
+                ])->columns(2)->columnSpanFull()->addActionLabel('Add a recognition')->helperText('Mark a recognition as checked only after you have seen the university in the registry and have its link.'),
+            ]),
         ]);
     }
 

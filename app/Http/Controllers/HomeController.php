@@ -62,7 +62,7 @@ class HomeController extends Controller
         $stats = [
             ['value' => ScholarshipCycle::visible()->count(), 'label' => 'verified scholarship calls', 'url' => route('scholarships.index')],
             ['value' => Country::destinations()->count(), 'label' => 'study destinations', 'url' => route('destinations.index')],
-            ['value' => University::inCatalogue()->count(), 'label' => 'universities in China', 'url' => route('universities.index')],
+            ['value' => University::inCatalogue()->count(), 'label' => 'universities', 'url' => route('universities.index')],
             ['value' => UniversityProgramme::public()->count(), 'label' => 'degree programmes to search', 'url' => route('programmes.index')],
         ];
         // Universities with their own campus photo first, then the ones with the most programmes.

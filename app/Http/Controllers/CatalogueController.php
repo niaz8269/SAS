@@ -30,7 +30,7 @@ class CatalogueController extends Controller
 
     public function university(Request $request, University $university)
     {
-        abort_unless($university->published && $university->csc_key, 404);
+        abort_unless($university->published && ($university->csc_key || $university->isMedicalListed()), 404);
         $data = $request->validate(['q' => 'nullable|string|max:80', 'level' => 'nullable|in:'.implode(',', array_keys(UniversityProgramme::LEVELS)), 'language' => 'nullable|string|max:40', 'csc' => 'nullable|boolean']);
 
         $query = $this->programmeFilters($university->programmes()->where('published', true), $data);
@@ -42,6 +42,9 @@ class CatalogueController extends Controller
             'levelCounts' => $counts,
             'filters' => ['q' => trim((string) ($data['q'] ?? '')), 'level' => $data['level'] ?? '', 'language' => $data['language'] ?? '', 'csc' => (bool) ($data['csc'] ?? false)],
             'languages' => UniversityProgramme::languageLabels(),
+            // The medical section: shown only when the university has checked fees and a scholarship (otherwise both lists are empty).
+            'feeStructures' => $university->isMedicalListed() ? $university->feeStructures()->where('published', true)->get() : collect(),
+            'scholarships' => $university->isMedicalListed() ? $university->scholarships()->where('published', true)->get() : collect(),
         ]);
     }
 

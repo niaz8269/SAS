@@ -30,6 +30,10 @@ The public China university pages only list a university that has a `csc_key` (t
 
 `php artisan sas:import-eligibility file.json [--dry-run] [--report=report.md]` loads researched eligible nationalities (any, a list, or "except these"), subjects, eligibility and age notes, numeric criteria, funding components and required documents, each with its official source. It never guesses (an unconfirmed field is left alone), only turns an "unknown" funding type into a known one, never sets "fully funded", and never changes publication state. Lists in the file replace those stored, so a re-run changes nothing. New scholarships in the same file are first created as drafts with `php artisan sas:import-cycle-details file.json`. The format is described in `docs/INTERNATIONAL-DATA-2026-10-24.md`.
 
+## Medical universities: profile, fees and scholarships
+
+`php artisan sas:import-university-details file.json [--dry-run] [--report=report.md]` loads, per university: a profile (founding year, hospitals, recognitions), the fees the university or government charges for its medicine programme, and the scholarships open to international students. Each fee row and scholarship needs an official page (or is marked as a fee sheet given to SAS), recognition is "checked" only with a link, and an agency's own charges are never entered. A university appears publicly only when it has a published fee structure and a published scholarship. Rows arrive hidden unless the entry says `published: true`; official figures replace a fee sheet's for the same university. Details and the current list: `docs/MEDICAL-UNIVERSITIES-2026-10-24.md`.
+
 ## Limits
 
 Up to 5,000 rows and 5 MB per file. Excel files are read from the first sheet; formulas are read as the value Excel stored. Dates must be written as `YYYY-MM-DD`.

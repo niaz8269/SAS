@@ -14,7 +14,7 @@
                     @if ($university->name_zh)<p class="mt-1 text-lg text-white/80" lang="zh-Hans">{{ $university->name_zh }}</p>@endif
                     <dl class="mt-5 grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2">
                         <div><dt class="font-semibold text-gold-soft">Location</dt><dd>{{ $place ?: 'Not listed' }}</dd></div>
-                        <div><dt class="font-semibold text-gold-soft">Programmes listed</dt><dd>{{ $total ? number_format($total) : 'None listed on the official system' }}</dd></div>
+                        @if ($university->csc_key)<div><dt class="font-semibold text-gold-soft">Programmes listed</dt><dd>{{ $total ? number_format($total) : 'None listed on the official system' }}</dd></div>@endif
                         @if ($university->website)<div class="sm:col-span-2"><dt class="font-semibold text-gold-soft">Website</dt><dd><a class="underline" rel="noopener" href="{{ \App\Domain\Site\Site::href($university->website) }}">{{ $university->website }}</a></dd></div>@endif
                     </dl>
                     @if ($university->summary)<div class="mt-4 max-w-xl whitespace-pre-line text-white/90">{{ $university->summary }}</div>@endif
@@ -45,6 +45,10 @@
         </div>
     </section>
 
+    @if ($feeStructures->isNotEmpty())
+        @include('public.universities._medicine', ['place' => $place])
+    @endif
+
     <section class="container-page py-8">
         <h2 class="section-title">Programmes</h2>
         @if ($levelCounts->isNotEmpty())
@@ -56,7 +60,7 @@
                 <div class="mt-6">{{ $programmes->links('pagination::tailwind') }}</div>
             @endif
         @else
-            <p class="card mt-4 p-6 text-sm text-muted">The official system lists no degree programmes for this university yet.</p>
+            <p class="card mt-4 p-6 text-sm text-muted">{{ $university->csc_key ? 'The official system lists no degree programmes for this university yet.' : 'This university is not on the official study-in-China programme list, so only its medicine programme is shown above.' }}</p>
         @endif
     </section>
 </x-layouts.public>

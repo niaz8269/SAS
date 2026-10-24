@@ -15,13 +15,34 @@ class University extends Model
 
     protected function casts(): array
     {
-        return ['verified_at' => 'datetime', 'catalogue_checked_at' => 'datetime', 'published' => 'boolean'];
+        return ['verified_at' => 'datetime', 'catalogue_checked_at' => 'datetime', 'published' => 'boolean', 'profile' => 'array', 'profile_checked_at' => 'date'];
     }
 
-    /** Universities shown on the public catalogue pages. */
+    /** Universities shown on the public pages: those on the official study-in-China list, and medical universities that have a checked fee structure and at least one scholarship. */
     public function scopeInCatalogue(Builder $query): Builder
     {
-        return $query->where('published', true)->whereNotNull('csc_key');
+        return $query->where('published', true)->where(fn (Builder $w) => $w->whereNotNull('csc_key')->orWhere(fn (Builder $m) => $m->medicalListed()));
+    }
+
+    /** A university with a published fee structure AND a published scholarship for international students. Without a scholarship it is not listed. */
+    public function scopeMedicalListed(Builder $query): Builder
+    {
+        return $query->whereHas('feeStructures', fn ($q) => $q->where('published', true))->whereHas('scholarships', fn ($q) => $q->where('published', true));
+    }
+
+    public function isMedicalListed(): bool
+    {
+        return $this->feeStructures()->where('published', true)->exists() && $this->scholarships()->where('published', true)->exists();
+    }
+
+    public function feeStructures(): HasMany
+    {
+        return $this->hasMany(UniversityFeeStructure::class)->orderBy('sort')->orderBy('id');
+    }
+
+    public function scholarships(): HasMany
+    {
+        return $this->hasMany(UniversityScholarship::class)->orderBy('sort')->orderBy('id');
     }
 
     public function getRouteKeyName(): string
