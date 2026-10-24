@@ -208,6 +208,7 @@ class AgentPortalTest extends TestCase
         $this->get($base('/applications/'.$plan->public_id.'/materials'))->assertOk()->assertSee('passport.pdf')->assertSee('Download blank form');
         $this->get($base('/applications/'.$plan->public_id.'/download'))->assertOk()->assertHeader('content-type', 'application/pdf'); // the SAS application form with the student's answers
 
+        $this->get($base('/applications/'.$plan->public_id.'/tools'))->assertOk()->assertSee('Notes, deadlines and tracker'); // no link to a student-only document vault
         $this->get($base('/applications/'.$plan->public_id.'/submit'))->assertOk()->assertSee('Not ready to submit yet'); // the form is still incomplete
         $this->post($base('/applications/'.$plan->public_id.'/submit'))->assertSessionHas('error');
         $this->assertSame('draft', $plan->refresh()->stage);
