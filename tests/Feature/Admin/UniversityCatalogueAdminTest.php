@@ -57,6 +57,21 @@ class UniversityCatalogueAdminTest extends TestCase
         $this->assertTrue(UniversityProgrammeResource::canCreate());
     }
 
+    public function test_searching_the_programme_list_by_a_word_or_a_university_name_does_not_error(): void
+    {
+        $this->staff(Role::SuperAdmin);
+        $china = Country::firstOrCreate(['code' => 'CN'], ['name' => 'China', 'slug' => 'china']);
+        $anhui = University::create(['name' => 'Anhui University', 'slug' => 'anhui', 'name_zh' => '安徽大学', 'province' => '安徽', 'country_id' => $china->id]);
+        $other = University::create(['name' => 'Other University', 'slug' => 'other', 'name_zh' => '其他大学', 'province' => '北京', 'country_id' => $china->id]);
+        $software = UniversityProgramme::create(['university_id' => $anhui->id, 'level' => 'bachelor', 'name_zh' => '软件工程', 'name_en' => 'Software Engineering', 'teaching_language' => '汉语']);
+        $law = UniversityProgramme::create(['university_id' => $other->id, 'level' => 'master', 'name_zh' => '法学', 'name_en' => 'Law', 'teaching_language' => '英语']);
+
+        Livewire::test(ManageUniversityProgrammes::class)
+            ->searchTable('software')->assertCanSeeTableRecords([$software])->assertCanNotSeeTableRecords([$law])
+            ->searchTable('Anhui')->assertCanSeeTableRecords([$software])->assertCanNotSeeTableRecords([$law])
+            ->searchTable('其他')->assertCanSeeTableRecords([$law])->assertCanNotSeeTableRecords([$software]);
+    }
+
     public function test_university_list_shows_programme_counts_and_filters_by_having_programmes(): void
     {
         $this->staff(Role::SuperAdmin);

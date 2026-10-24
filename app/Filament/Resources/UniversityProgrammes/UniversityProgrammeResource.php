@@ -19,6 +19,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 /** The programmes a university lists on the official study-in-China system. Staff can correct names and details; imports never overwrite staff-entered English names. */
 class UniversityProgrammeResource extends Resource
@@ -59,7 +60,7 @@ class UniversityProgrammeResource extends Resource
         return $table
             ->modifyQueryUsing(fn ($query) => $query->with('university'))
             ->columns([
-                TextColumn::make('university.name')->label('University')->description(fn (UniversityProgramme $r) => $r->university?->name_zh)->searchable(['universities.name', 'universities.name_zh'])->sortable(),
+                TextColumn::make('university.name')->label('University')->description(fn (UniversityProgramme $r) => $r->university?->name_zh)->searchable(query: fn (Builder $query, string $search) => $query->whereHas('university', fn (Builder $u) => $u->where('name', 'like', '%'.$search.'%')->orWhere('name_zh', 'like', '%'.$search.'%')))->sortable(),
                 TextColumn::make('name_en')->label('Programme')->getStateUsing(fn (UniversityProgramme $r) => $r->displayName())->description(fn (UniversityProgramme $r) => $r->name_en ? $r->name_zh : null)
                     ->searchable(['name_en', 'name_zh'])->wrap(),
                 TextColumn::make('name_en_source')->label('English name')->badge()->placeholder('missing')->toggleable()
