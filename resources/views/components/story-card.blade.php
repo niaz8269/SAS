@@ -5,6 +5,7 @@
         <div class="min-w-0">
             <p class="font-bold">{{ $story->name }}</p>
             @if ($story->placeLine())<p class="text-sm text-muted">{{ $story->placeLine() }}</p>@endif
+            @if ($story->nationality)<p class="text-xs text-muted">Nationality: {{ $story->nationality }}</p>@endif
             @if ($story->scholarship)<p class="mt-0.5 text-xs font-semibold text-navy-700">{{ $story->scholarship }}</p>@endif
         </div>
     </div>

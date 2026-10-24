@@ -35,22 +35,34 @@
                     </fieldset>
                     <div class="grid gap-5 sm:grid-cols-2">
                         <div>
-                            <label for="country" class="label">Country</label>
-                            <select id="country" name="country" required class="input @error('country') input-error @enderror">
-                                <option value="">Choose your country</option>
-                                @foreach ($countries as $c)<option value="{{ $c }}" @selected(old('country') === $c)>{{ $c }}</option>@endforeach
+                            <label for="nationality" class="label">Nationality</label>
+                            <select id="nationality" name="nationality" required class="input @error('nationality') input-error @enderror">
+                                <option value="">Choose your nationality</option>
+                                @foreach ($countries as $c)<option value="{{ $c }}" @selected(old('nationality') === $c)>{{ $c }}</option>@endforeach
                             </select>
-                            @error('country')<p class="field-error" role="alert">{{ $message }}</p>@enderror
+                            <p class="field-hint">The country of your passport.</p>
+                            @error('nationality')<p class="field-error" role="alert">{{ $message }}</p>@enderror
                         </div>
+                        <div>
+                            <label for="study_country" class="label">Country where you got the scholarship</label>
+                            <select id="study_country" name="study_country" required class="input @error('study_country') input-error @enderror">
+                                <option value="">Choose the country</option>
+                                @foreach ($countries as $c)<option value="{{ $c }}" @selected(old('study_country') === $c)>{{ $c }}</option>@endforeach
+                            </select>
+                            <p class="field-hint">If you study without a scholarship, choose the country where you study.</p>
+                            @error('study_country')<p class="field-error" role="alert">{{ $message }}</p>@enderror
+                        </div>
+                    </div>
+                    <div class="grid gap-5 sm:grid-cols-2">
                         <div>
                             <label for="university" class="label">University</label>
                             <input id="university" name="university" value="{{ old('university') }}" maxlength="190" required class="input @error('university') input-error @enderror" placeholder="Where you study or studied">
                             @error('university')<p class="field-error" role="alert">{{ $message }}</p>@enderror
                         </div>
-                    </div>
-                    <div>
-                        <label for="scholarship" class="label">Scholarship or programme <span class="font-normal text-muted">(optional)</span></label>
-                        <input id="scholarship" name="scholarship" value="{{ old('scholarship') }}" maxlength="190" class="input" placeholder="For example Chinese Government Scholarship">
+                        <div>
+                            <label for="scholarship" class="label">Scholarship or programme <span class="font-normal text-muted">(optional)</span></label>
+                            <input id="scholarship" name="scholarship" value="{{ old('scholarship') }}" maxlength="190" class="input" placeholder="For example Chinese Government Scholarship">
+                        </div>
                     </div>
                     <div x-data="{ n: {{ mb_strlen((string) old('story')) }} }">
                         <label for="story" class="label">Your story</label>
@@ -66,7 +78,7 @@
                     </div>
                     <div>
                         <label class="flex items-start gap-3"><input type="checkbox" name="consent" value="1" class="mt-1" @checked(old('consent')) required>
-                            <span class="text-sm">I agree that {{ config('sas.brand.short') }} may publish my story, my name as written above, my picture (or a sketch picture if I did not add one), my country and my university on its website and social media after it has been reviewed. I understand that small mistakes may be corrected, that my email address will never be shown, and that I can ask for my story to be removed at any time by writing to <a class="underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a>. See the <a class="underline" href="{{ route('legal.show', 'privacy') }}">privacy notice</a>.</span></label>
+                            <span class="text-sm">I agree that {{ config('sas.brand.short') }} may publish my story, my name as written above, my picture (or a sketch picture if I did not add one), my nationality, the country where I got my scholarship and my university on its website and social media after it has been reviewed. I understand that small mistakes may be corrected, that my email address will never be shown, and that I can ask for my story to be removed at any time by writing to <a class="underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a>. See the <a class="underline" href="{{ route('legal.show', 'privacy') }}">privacy notice</a>.</span></label>
                         @error('consent')<p class="field-error" role="alert">{{ $message }}</p>@enderror
                     </div>
                     <button class="btn-primary btn-lg">Send my story</button>

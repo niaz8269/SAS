@@ -13,7 +13,8 @@
             <div>
                 <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $story->name }}</h1>
                 <dl class="mt-2 grid gap-x-8 gap-y-1 text-sm sm:grid-cols-2">
-                    @if ($story->country)<div><dt class="inline text-muted">Country: </dt><dd class="inline font-semibold">{{ $story->country }}</dd></div>@endif
+                    @if ($story->nationality)<div><dt class="inline text-muted">Nationality: </dt><dd class="inline font-semibold">{{ $story->nationality }}</dd></div>@endif
+                    @if ($story->study_country)<div><dt class="inline text-muted">Country of the scholarship: </dt><dd class="inline font-semibold">{{ $story->study_country }}</dd></div>@endif
                     @if ($story->university)<div><dt class="inline text-muted">University: </dt><dd class="inline font-semibold">{{ $story->university }}</dd></div>@endif
                     @if ($story->scholarship)<div class="sm:col-span-2"><dt class="inline text-muted">Scholarship or programme: </dt><dd class="inline font-semibold">{{ $story->scholarship }}</dd></div>@endif
                 </dl>

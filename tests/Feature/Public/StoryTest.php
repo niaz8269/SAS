@@ -31,13 +31,14 @@ class StoryTest extends TestCase
         $this->seed(TaxonomySeeder::class);
         Storage::fake('public_media');
         Country::firstOrCreate(['name' => 'Pakistan'], ['code' => 'PK', 'slug' => 'pakistan']);
+        Country::firstOrCreate(['name' => 'China'], ['code' => 'CN', 'slug' => 'china']);
         config(['sas.staff_notification_email' => 'staff@example.test']);
     }
 
     private function payload(array $over = []): array
     {
         return $over + [
-            'name' => 'Amina', 'email' => 'Amina@Example.test', 'gender' => 'female', 'country' => 'Pakistan', 'university' => 'Tsinghua University',
+            'name' => 'Amina', 'email' => 'Amina@Example.test', 'gender' => 'female', 'nationality' => 'Pakistan', 'study_country' => 'China', 'university' => 'Tsinghua University',
             'scholarship' => 'Chinese Government Scholarship', 'story' => str_repeat('I found the scholarship on the official page and applied early. ', 5), 'consent' => '1',
         ];
     }
@@ -75,7 +76,8 @@ class StoryTest extends TestCase
         $this->assertStringContainsString('may publish my story', $t->consent_text);
         $this->assertSame('amina@example.test', $t->submitter_email);
         $this->assertSame('female', $t->gender);
-        $this->assertSame('Pakistan', $t->country);
+        $this->assertSame('Pakistan', $t->nationality);
+        $this->assertSame('China', $t->study_country);
         $this->assertNotEmpty($t->slug);
 
         // the photo was re-saved as a plain square JPEG under a random name
@@ -98,7 +100,9 @@ class StoryTest extends TestCase
     {
         $this->post('/share-your-story', $this->payload(['story' => 'Too short.']))->assertSessionHasErrors('story');
         $this->post('/share-your-story', $this->payload(['consent' => null]))->assertSessionHasErrors('consent');
-        $this->post('/share-your-story', $this->payload(['country' => 'Atlantis']))->assertSessionHasErrors('country');
+        $this->post('/share-your-story', $this->payload(['nationality' => 'Atlantis']))->assertSessionHasErrors('nationality');
+        $this->post('/share-your-story', $this->payload(['study_country' => null]))->assertSessionHasErrors('study_country');
+        $this->post('/share-your-story', $this->payload(['study_country' => 'Atlantis']))->assertSessionHasErrors('study_country');
         $this->post('/share-your-story', $this->payload(['gender' => 'robot']))->assertSessionHasErrors('gender');
         $this->post('/share-your-story', $this->payload(['email' => 'nope']))->assertSessionHasErrors('email');
         $this->post('/share-your-story', $this->payload(['photo' => UploadedFile::fake()->create('virus.exe', 20, 'application/x-msdownload')]))->assertSessionHasErrors('photo');
@@ -124,10 +128,10 @@ class StoryTest extends TestCase
 
     public function test_the_sketch_picture_depends_on_gender_when_there_is_no_photo(): void
     {
-        $this->assertStringEndsWith('/images/avatars/male.svg', (new Testimonial(['gender' => 'male']))->avatarUrl());
-        $this->assertStringEndsWith('/images/avatars/female.svg', (new Testimonial(['gender' => 'female']))->avatarUrl());
-        $this->assertStringEndsWith('/images/avatars/neutral.svg', (new Testimonial(['gender' => 'other']))->avatarUrl());
-        $this->assertStringEndsWith('/images/avatars/neutral.svg', (new Testimonial)->avatarUrl());
+        $this->assertStringContainsString('/images/avatars/male.svg', (new Testimonial(['gender' => 'male']))->avatarUrl());
+        $this->assertStringContainsString('/images/avatars/female.svg', (new Testimonial(['gender' => 'female']))->avatarUrl());
+        $this->assertStringContainsString('/images/avatars/neutral.svg', (new Testimonial(['gender' => 'other']))->avatarUrl());
+        $this->assertStringContainsString('/images/avatars/neutral.svg', (new Testimonial)->avatarUrl());
         $withPhoto = new Testimonial(['gender' => 'male', 'photo_path' => 'stories/a.jpg']);
         $this->assertStringContainsString('stories/a.jpg', $withPhoto->avatarUrl());
         foreach (['male', 'female', 'neutral'] as $name) {
@@ -146,7 +150,7 @@ class StoryTest extends TestCase
         $this->get('/sitemap.xml'); // cached before approval
 
         Livewire::test(ManageTestimonials::class)->assertSuccessful()
-            ->callTableAction('edit', $t, ['name' => 'Bilal', 'story' => str_repeat('I fixed a spelling mistake and kept my words. ', 6), 'quote' => 'I applied early and it worked.', 'review_status' => 'pending', 'consent_given' => true, 'consent_date' => now()->toDateString(), 'country' => 'Pakistan', 'university' => 'Tsinghua University', 'gender' => 'male'])
+            ->callTableAction('edit', $t, ['name' => 'Bilal', 'story' => str_repeat('I fixed a spelling mistake and kept my words. ', 6), 'quote' => 'I applied early and it worked.', 'review_status' => 'pending', 'consent_given' => true, 'consent_date' => now()->toDateString(), 'nationality' => 'Pakistan', 'study_country' => 'China', 'university' => 'Tsinghua University', 'gender' => 'male'])
             ->assertHasNoTableActionErrors();
         $this->assertFalse($t->fresh()->published, 'edited but still waiting');
 
@@ -159,7 +163,7 @@ class StoryTest extends TestCase
 
         auth()->logout();
         $this->get('/stories')->assertOk()->assertSee('Bilal')->assertSee('Tsinghua University')->assertSee('images/avatars/male.svg', false)->assertSee('I applied early and it worked.');
-        $this->get('/stories/'.$t->slug)->assertOk()->assertSee('Country:')->assertSee('Pakistan')->assertSee('University:')->assertSee('I fixed a spelling mistake')->assertSee('Share this post', false);
+        $this->get('/stories/'.$t->slug)->assertOk()->assertSee('Nationality:')->assertSee('Pakistan')->assertSee('Country of the scholarship:')->assertSee('China')->assertSee('University:')->assertSee('I fixed a spelling mistake')->assertSee('Share this post', false);
         $this->get('/')->assertSee('What students say')->assertSee('Bilal')->assertSee('Read the full story');
         $this->assertStringContainsString('/stories/'.$t->slug.'</loc>', $this->get('/sitemap.xml')->getContent());
         $this->get('/stories/'.$t->slug)->assertDontSee('amina@example.test')->assertDontSee('Amina@Example.test');

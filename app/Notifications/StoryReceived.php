@@ -22,7 +22,7 @@ class StoryReceived extends Notification
         return (new MailMessage)->subject('We received your story')
             ->greeting('Hello '.MailText::plain($this->story->name).',')
             ->line('Thank you for sharing your story with '.config('sas.brand.short').'. Our team reads every story before it is published, so it is not on the website yet.')
-            ->line('If we publish it, it will appear with the name, country and university you gave, and your picture (or a sketch if you did not send one). We may fix small spelling mistakes. We will write to you if we need to change anything more.')
+            ->line('If we publish it, it will appear with the name, nationality, scholarship country and university you gave, and your picture (or a sketch if you did not send one). We may fix small spelling mistakes. We will write to you if we need to change anything more.')
             ->line('You can ask us to remove your story at any time by replying to this email or writing to '.config('sas.contact_email').'.');
     }
 }

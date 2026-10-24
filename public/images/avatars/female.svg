@@ -1,14 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sketch of a woman">
-  <rect width="200" height="200" fill="#eef3fb"/>
-  <circle cx="100" cy="100" r="98" fill="none" stroke="#c9d6ee" stroke-width="2"/>
-  <g fill="none" stroke="#123a7a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M36 200c4-34 26-52 64-52s60 18 64 52" fill="#dbe6f7"/>
-    <path d="M86 128v22M114 128v22"/>
-    <path d="M62 96c-8-46 18-62 38-62s46 16 38 62c-2 30 8 44 14 56-18 4-30-6-34-20H82c-4 14-16 24-34 20 6-12 16-26 14-56z" fill="#123a7a"/>
-    <ellipse cx="100" cy="94" rx="28" ry="34" fill="#fff"/>
-    <path d="M72 82c10-4 22-16 28-26 6 10 18 22 28 26" fill="#123a7a"/>
-    <path d="M90 108q10 7 20 0"/>
-    <circle cx="89" cy="96" r="2.2" fill="#123a7a"/><circle cx="111" cy="96" r="2.2" fill="#123a7a"/>
-    <path d="M100 98v9"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sketch of a smiling young woman">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3eefb"/><stop offset="1" stop-color="#dfe7f8"/></linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a2140"/><stop offset="1" stop-color="#1a2a55"/></linearGradient>
+    <clipPath id="c"><circle cx="100" cy="100" r="100"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="200" height="200" fill="url(#bg)"/>
+    <!-- long hair behind -->
+    <path d="M54 92c-4-44 20-64 46-64s50 20 46 64c-1 22 6 44 16 64-18 8-34 2-40-16H78c-6 18-22 24-40 16 10-20 17-42 16-64z" fill="url(#hair)" stroke="#12234a" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- blouse -->
+    <path d="M22 204c4-34 28-52 62-58l16 16 16-16c34 6 58 24 62 58z" fill="#e4ecfa" stroke="#0d2c5c" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M84 146l16 24 16-24" fill="none" stroke="#0d2c5c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="100" cy="176" r="3.6" fill="#c9a24a" stroke="#8a6a1c" stroke-width="1.2"/>
+    <path d="M100 163v10" stroke="#c9a24a" stroke-width="1.4"/>
+    <!-- neck -->
+    <path d="M88 114v30c4 8 20 8 24 0v-30z" fill="#fbf3ea" stroke="#0d2c5c" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- earrings -->
+    <circle cx="69" cy="104" r="3" fill="#c9a24a" stroke="#8a6a1c" stroke-width="1"/><circle cx="131" cy="104" r="3" fill="#c9a24a" stroke="#8a6a1c" stroke-width="1"/>
+    <!-- face, softer jaw -->
+    <path d="M71 86c0-26 12-38 29-38s29 12 29 38c0 24-12 42-29 42S71 110 71 86z" fill="#fbf3ea" stroke="#0d2c5c" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- side-swept fringe -->
+    <path d="M68 90c-4-30 10-50 36-50 22 0 34 16 30 50-3-18-10-30-24-34-8 10-26 18-42 34z" fill="url(#hair)" stroke="#12234a" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M84 52c8-6 20-8 30-4" fill="none" stroke="#6c7fb0" stroke-width="2.4" stroke-linecap="round"/>
+    <!-- brows, lashes, eyes -->
+    <path d="M80 82q9-6 18-2M102 80q9-4 18 2" fill="none" stroke="#2a2140" stroke-width="2" stroke-linecap="round"/>
+    <path d="M82.5 91.5q6.5-6.5 13 0" fill="#fff" stroke="#0d2c5c" stroke-width="1.6" stroke-linejoin="round"/><path d="M82.5 91.5q6.5 5.5 13 0" fill="#fff" stroke="#0d2c5c" stroke-width="1.6"/>
+    <circle cx="89" cy="91.6" r="3.1" fill="#2a2140"/><circle cx="90" cy="90.6" r="1" fill="#fff"/>
+    <path d="M104.5 91.5q6.5-6.5 13 0" fill="#fff" stroke="#0d2c5c" stroke-width="1.6" stroke-linejoin="round"/><path d="M104.5 91.5q6.5 5.5 13 0" fill="#fff" stroke="#0d2c5c" stroke-width="1.6"/>
+    <circle cx="111" cy="91.6" r="3.1" fill="#2a2140"/><circle cx="112" cy="90.6" r="1" fill="#fff"/>
+    <path d="M82 91.5l-3-2.4M84 88.4l-2-3M117.8 91.5l3-2.4M116 88.4l2-3" stroke="#2a2140" stroke-width="1.6" stroke-linecap="round"/>
+    <!-- nose, blush, lips -->
+    <path d="M100 95c-.6 4-1.8 8-3.4 10.4 2.6 1.6 5.8 1.6 7.4 0" fill="none" stroke="#0d2c5c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+    <circle cx="82" cy="104" r="6" fill="#f2a6b8" opacity=".35"/><circle cx="118" cy="104" r="6" fill="#f2a6b8" opacity=".35"/>
+    <path d="M91 113.5q4.5-3 9-.8 4.5-2.2 9 .8-3 8.4-9 8.4t-9-8.4z" fill="#e0778e" stroke="#a8405a" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M92.5 114.6q7.5 4 15 0" fill="none" stroke="#fff" stroke-width="1.3" stroke-linecap="round" opacity=".85"/>  </g>
+  <circle cx="100" cy="100" r="99" fill="none" stroke="#c9d6ee" stroke-width="2"/>
 </svg>

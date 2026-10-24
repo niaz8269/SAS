@@ -68,11 +68,12 @@ class TestimonialResource extends Resource
             Section::make('Who and where')->columns(2)->schema([
                 TextInput::make('name')->required()->maxLength(120)->helperText('Exactly as the person agreed to be shown: full name, first name or initials.'),
                 Select::make('gender')->options(Testimonial::GENDERS)->placeholder('Not stated')->helperText('Only chooses the sketch picture when there is no photo.'),
-                TextInput::make('country')->maxLength(100),
+                TextInput::make('nationality')->maxLength(100),
+                TextInput::make('study_country')->label('Country where they got the scholarship')->maxLength(100),
                 TextInput::make('university')->maxLength(190),
                 TextInput::make('scholarship')->label('Scholarship or programme')->maxLength(190)->columnSpanFull(),
                 TextInput::make('context')->label('Older free-text line (staff-typed quotes only)')->maxLength(190)->columnSpanFull()
-                    ->helperText('For example "Master\'s student, Tsinghua University, 2026". Shown only when country and university are empty.'),
+                    ->helperText('For example "Master\'s student, Tsinghua University, 2026". Shown only when the country of the scholarship and the university are empty.'),
             ]),
             Section::make('Their words')->schema([
                 Textarea::make('story')->label('The full story')->rows(10)->maxLength(3000)->columnSpanFull()
@@ -119,7 +120,7 @@ class TestimonialResource extends Resource
             ->recordActions([
                 Action::make('approve')->label('Approve and publish')->icon(Heroicon::OutlinedCheckCircle)->color('success')
                     ->visible(fn (Testimonial $r) => $r->review_status !== 'approved' && static::allowed())
-                    ->requiresConfirmation()->modalDescription('It goes on the website now, with the name, country, university, story and photo (or sketch) shown here. Read it first.')
+                    ->requiresConfirmation()->modalDescription('It goes on the website now, with the name, nationality, country of the scholarship, university, story and photo (or sketch) shown here. Read it first.')
                     ->action(function (Testimonial $r) {
                         abort_unless(static::allowed(), 403);
                         $r->approve(auth()->user());

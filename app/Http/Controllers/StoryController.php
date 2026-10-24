@@ -56,7 +56,8 @@ class StoryController extends Controller
             'name' => ['required', 'string', 'max:80'],
             'email' => ['required', 'email:rfc', 'max:190'],
             'gender' => ['required', Rule::in(array_keys(Testimonial::GENDERS))],
-            'country' => ['required', 'string', 'max:100', Rule::exists('countries', 'name')],
+            'nationality' => ['required', 'string', 'max:100', Rule::exists('countries', 'name')],
+            'study_country' => ['required', 'string', 'max:100', Rule::exists('countries', 'name')],
             'university' => ['required', 'string', 'max:190'],
             'scholarship' => ['nullable', 'string', 'max:190'],
             'story' => ['required', 'string', 'min:200', 'max:3000'],
@@ -67,7 +68,9 @@ class StoryController extends Controller
             'photo.max' => 'The picture is too big: please use one under 3 MB.',
             'photo.dimensions' => 'The picture must be at least 200 by 200 pixels.',
             'consent.accepted' => 'Please tick the box to confirm you agree that we may publish your story.',
-            'country.exists' => 'Please choose your country from the list.',
+            'nationality.exists' => 'Please choose your nationality from the list.',
+            'study_country.exists' => 'Please choose the country from the list.',
+            'study_country.required' => 'Please tell us the country where you got the scholarship.',
         ]);
 
         // The same person sending the same story twice (a double click) is saved once.
@@ -85,11 +88,11 @@ class StoryController extends Controller
             }
         }
 
-        $consent = 'I agree that '.config('sas.brand.short').' may publish my story, my name as written above, my picture (or a sketch picture if I did not add one), my country and my university on its website and social media after it has been reviewed. I understand that small mistakes may be corrected, that my email address will never be shown, and that I can ask for my story to be removed at any time by writing to '.config('sas.contact_email').'.';
+        $consent = 'I agree that '.config('sas.brand.short').' may publish my story, my name as written above, my picture (or a sketch picture if I did not add one), my nationality, the country where I got my scholarship and my university on its website and social media after it has been reviewed. I understand that small mistakes may be corrected, that my email address will never be shown, and that I can ask for my story to be removed at any time by writing to '.config('sas.contact_email').'.';
 
         $testimonial = new Testimonial([
             'name' => trim($data['name']), 'quote' => Str::limit(preg_replace('/\s+/', ' ', $story), 280), 'story' => $story,
-            'country' => $data['country'], 'university' => trim($data['university']), 'scholarship' => filled($data['scholarship'] ?? null) ? trim($data['scholarship']) : null,
+            'nationality' => $data['nationality'], 'study_country' => $data['study_country'], 'university' => trim($data['university']), 'scholarship' => filled($data['scholarship'] ?? null) ? trim($data['scholarship']) : null,
             'gender' => $data['gender'], 'photo_path' => $photo, 'submitter_email' => mb_strtolower($data['email']), 'source' => 'submitted',
             'review_status' => 'pending', 'published' => false, 'consent_given' => true, 'consent_date' => now()->toDateString(), 'consent_text' => $consent,
             'submitted_at' => now(), 'slug' => Testimonial::newSlug($data['name']),

@@ -62,9 +62,10 @@ class Testimonial extends Model
             return Storage::disk('public_media')->url($this->photo_path);
         }
 
+        // the number changes whenever the pictures are redrawn, so browsers do not keep showing the old ones
         return asset('images/avatars/'.match ($this->gender) {
             'male' => 'male', 'female' => 'female', default => 'neutral',
-        }.'.svg');
+        }.'.svg').'?v=2';
     }
 
     public function hasPhoto(): bool
@@ -77,10 +78,10 @@ class Testimonial extends Model
         return filled($this->story) && filled($this->slug);
     }
 
-    /** "Country, University" (and the older free-text context for entries typed in by staff). */
+    /** "University, country of the scholarship" (and the older free-text context for entries typed in by staff). */
     public function placeLine(): string
     {
-        $line = collect([$this->university, $this->country])->filter()->implode(', ');
+        $line = collect([$this->university, $this->study_country])->filter()->implode(', ');
 
         return $line !== '' ? $line : (string) $this->context;
     }
