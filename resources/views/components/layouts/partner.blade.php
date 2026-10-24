@@ -95,5 +95,6 @@
     <strong class="text-[#428bb6]">{{ config('sas.brand.short') }}</strong> Scholarships Application Services &copy; {{ date('Y') }} Customer Service: <a class="hover:underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a>
 </footer>
 @livewireScripts
+@include('partials.whatsapp')
 </body>
 </html>

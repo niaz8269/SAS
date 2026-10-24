@@ -86,5 +86,6 @@
     </main>
 </div>
 @livewireScripts
+@include('partials.whatsapp')
 </body>
 </html>
