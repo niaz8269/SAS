@@ -20,10 +20,10 @@ class CycleRevisions
 {
     /** Scalar columns covered by revisions. Placement flags are not: they are not factual claims about the award. */
     public const FIELDS = ['programme_id', 'cycle_key', 'slug', 'intake_year', 'intake_term', 'funding_type', 'fully_funded_verified', 'funding_summary',
-        'teaching_language', 'delivery_mode', 'any_nationality', 'summary', 'eligibility_notes', 'age_experience_notes', 'institutions_note', 'programmes_note'];
+        'teaching_language', 'delivery_mode', 'any_nationality', 'any_subject', 'summary', 'eligibility_notes', 'age_experience_notes', 'institutions_note', 'programmes_note'];
 
     /** Relation name => pivot id list. */
-    public const RELATIONS = ['destinations', 'nationalities', 'degreeLevels', 'subjects', 'universities'];
+    public const RELATIONS = ['destinations', 'nationalities', 'excludedNationalities', 'degreeLevels', 'subjects', 'universities'];
 
     public function pending(ScholarshipCycle $cycle): ?CycleRevision
     {
@@ -36,7 +36,7 @@ class CycleRevisions
         $fields = [];
         foreach (self::FIELDS as $f) {
             $fields[$f] = $cycle->getRawOriginal($f) ?? $cycle->{$f};
-            if (is_bool($fields[$f]) || in_array($f, ['fully_funded_verified', 'any_nationality'], true)) {
+            if (is_bool($fields[$f]) || in_array($f, ['fully_funded_verified', 'any_nationality', 'any_subject'], true)) {
                 $fields[$f] = (bool) $fields[$f];
             }
         }
@@ -71,7 +71,7 @@ class CycleRevisions
                 continue;
             }
             $new = $state[$f];
-            $new = in_array($f, ['fully_funded_verified', 'any_nationality'], true) ? (bool) $new : ($new === '' ? null : $new);
+            $new = in_array($f, ['fully_funded_verified', 'any_nationality', 'any_subject'], true) ? (bool) $new : ($new === '' ? null : $new);
             if ($f === 'fully_funded_verified' && ! $by->hasPermission('content.review')) {
                 continue; // only reviewers may assert verification
             }

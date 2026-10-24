@@ -168,11 +168,11 @@
                 <h2 id="eligibility" class="text-xl font-bold">Eligibility</h2>
                 <dl class="mt-3 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2">
                     <div><dt class="font-semibold">Eligible nationalities</dt><dd>
-                        @if ($cycle->any_nationality) Any nationality
+                        @if ($cycle->any_nationality) Any nationality{{ $cycle->excludedNationalities->isNotEmpty() ? ' except '.$cycle->excludedNationalities->pluck('name')->implode(', ') : '' }}
                         @elseif ($cycle->nationalities->isNotEmpty()) {{ $cycle->nationalities->pluck('name')->implode(', ') }}
                         @else <span class="text-muted">Not confirmed</span> @endif</dd></div>
                     <div><dt class="font-semibold">Degree levels</dt><dd>{{ $cycle->degreeLevels->pluck('name')->implode(', ') ?: 'Not confirmed' }}</dd></div>
-                    <div><dt class="font-semibold">Subjects</dt><dd>{{ $cycle->subjects->pluck('name')->implode(', ') ?: 'Not confirmed' }}</dd></div>
+                    <div><dt class="font-semibold">Subjects</dt><dd>{{ $cycle->any_subject ? 'Any subject' : ($cycle->subjects->pluck('name')->implode(', ') ?: 'Not confirmed') }}</dd></div>
                     <div><dt class="font-semibold">Teaching language</dt><dd>{{ $cycle->teaching_language ?: 'Not confirmed' }}</dd></div>
                     <div><dt class="font-semibold">Delivery mode</dt><dd>{{ $cycle->delivery_mode === 'unknown' ? 'Not confirmed' : ucfirst(str_replace('_', ' ', $cycle->delivery_mode)) }}</dd></div>
                     <div><dt class="font-semibold">Host institutions</dt><dd>{{ $institutions->pluck('name')->implode(', ') ?: 'Varies by route' }}</dd></div>

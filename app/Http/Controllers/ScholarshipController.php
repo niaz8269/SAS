@@ -23,7 +23,7 @@ class ScholarshipController extends Controller
         $cycle = ScholarshipCycle::where('programme_id', $programme->id)->where('slug', $cycle)
             ->whereIn('publication_state', [PublicationState::Published->value, PublicationState::Archived->value])
             ->whereNotNull('published_at')
-            ->with(['programme.funder', 'programme.universities', 'routes.university', 'destinations', 'nationalities', 'degreeLevels', 'subjects',
+            ->with(['programme.funder', 'programme.universities', 'routes.university', 'destinations', 'nationalities', 'excludedNationalities', 'degreeLevels', 'subjects',
                 'universities', 'benefits', 'requirements', 'criteria', 'currentDeadlines', 'evidence', 'verifier'])
             ->firstOrFail();
 

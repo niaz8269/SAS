@@ -38,13 +38,15 @@ class ScholarshipSearch
         if ($f['nationality']) {
             // "Any nationality" is explicit data. Calls whose eligible nationalities are unconfirmed are not matched.
             $q->where(fn ($w) => $w->where('any_nationality', true)
-                ->orWhereHas('nationalities', fn ($x) => $x->whereIn('countries.slug', $f['nationality'])));
+                ->orWhereHas('nationalities', fn ($x) => $x->whereIn('countries.slug', $f['nationality'])))
+                ->whereDoesntHave('excludedNationalities', fn ($x) => $x->whereIn('countries.slug', $f['nationality'])); // open to all, but not to this one
         }
         if ($f['degree']) {
             $q->whereHas('degreeLevels', fn ($x) => $x->whereIn('degree_levels.slug', $f['degree']));
         }
         if ($f['subject']) {
-            $q->whereHas('subjects', fn ($x) => $x->whereIn('subjects.slug', $f['subject']));
+            // A call open to any subject belongs in every subject search; one with no subject data is not matched.
+            $q->where(fn ($w) => $w->where('any_subject', true)->orWhereHas('subjects', fn ($x) => $x->whereIn('subjects.slug', $f['subject'])));
         }
         if ($f['funding']) {
             $q->where(function (Builder $w) use ($f) {

@@ -77,6 +77,7 @@ class HomeController extends Controller
             'testimonials' => Testimonial::visible()->orderBy('sort')->orderBy('id')->limit(6)->get(),
             'degrees' => DegreeLevel::orderBy('sort')->get(),
             'destinationsAll' => Country::destinations()->get(),
+            'nationalities' => Country::orderBy('name')->get(['name', 'slug']),
             'subjects' => Subject::orderBy('name')->get(),
             'featured' => $featured,
             'closingSoon' => $closingSoon,

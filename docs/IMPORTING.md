@@ -26,6 +26,10 @@ Import **universities first**, then their **degree programmes**: each programme 
 To make hidden universities or programmes public: Reference data, **Universities** (or **University programmes**), tick the rows, **Show on the public pages**.
 The public China university pages only list a university that has a `csc_key` (the official study-in-China system's own identifier); a university without one stays in the admin only.
 
+## Eligibility, funding and documents from research files
+
+`php artisan sas:import-eligibility file.json [--dry-run] [--report=report.md]` loads researched eligible nationalities (any, a list, or "except these"), subjects, eligibility and age notes, numeric criteria, funding components and required documents, each with its official source. It never guesses (an unconfirmed field is left alone), only turns an "unknown" funding type into a known one, never sets "fully funded", and never changes publication state. Lists in the file replace those stored, so a re-run changes nothing. New scholarships in the same file are first created as drafts with `php artisan sas:import-cycle-details file.json`. The format is described in `docs/INTERNATIONAL-DATA-2026-10-24.md`.
+
 ## Limits
 
 Up to 5,000 rows and 5 MB per file. Excel files are read from the first sheet; formulas are read as the value Excel stored. Dates must be written as `YYYY-MM-DD`.

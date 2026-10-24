@@ -46,6 +46,10 @@ class MatchingService
 
     private function nationality(?StudentProfile $p, ScholarshipCycle $c): array
     {
+        $c->loadMissing('excludedNationalities');
+        if ($p?->nationality_country_id && $c->excludedNationalities->contains('id', $p->nationality_country_id)) {
+            return $this->row('Nationality', 'not_met', 'Your nationality is excluded from this call.');
+        }
         if ($c->any_nationality) {
             return $this->row('Nationality', 'met', 'Open to applicants of any nationality (as published).');
         }
@@ -77,6 +81,9 @@ class MatchingService
 
     private function subject(?StudentProfile $p, ScholarshipCycle $c): array
     {
+        if ($c->any_subject) {
+            return $this->row('Subject', 'met', 'Open to any subject (as published).');
+        }
         if ($c->subjects->isEmpty()) {
             return $this->row('Subject', 'unknown', 'Subject restrictions are not confirmed for this call.');
         }

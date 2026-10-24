@@ -39,6 +39,7 @@
                         @foreach ($labels['nationality'] as $slug => $name)<option value="{{ $slug }}">{{ $name }}</option>@endforeach
                     </select>
                     <p class="field-hint">Shows calls open to any nationality or that list yours. Calls with unconfirmed eligibility are not matched.</p>
+                    @if (empty($nationality[0]) && ($mine = $this->myNationality()))<button type="button" wire:click="useMyNationality" class="mt-1 text-sm font-semibold text-navy-700 underline">Use my nationality ({{ $mine->name }})</button>@endif
                 </div>
 
                 @if ($languages->isNotEmpty())

@@ -72,6 +72,22 @@ class ScholarshipDirectory extends Component
         return $this->only(['q', 'sort', 'show_closed', 'deadline_from', 'deadline_to', ...self::LISTS]);
     }
 
+    /** The nationality in the signed-in student's profile, offered as a one-click filter (never applied on its own). */
+    public function myNationality(): ?Country
+    {
+        $id = auth()->user()?->studentProfile?->nationality_country_id;
+
+        return $id ? Country::find($id) : null;
+    }
+
+    public function useMyNationality(): void
+    {
+        if ($mine = $this->myNationality()) {
+            $this->nationality = [$mine->slug];
+            $this->resetPage();
+        }
+    }
+
     public function clearAll(): void
     {
         $this->reset(['q', 'deadline_from', 'deadline_to', 'show_closed', ...self::LISTS]);

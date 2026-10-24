@@ -34,6 +34,7 @@ class ScholarshipCycle extends Model
             'next_closing_sort' => 'datetime',
             'fully_funded_verified' => 'boolean',
             'any_nationality' => 'boolean',
+            'any_subject' => 'boolean',
             'featured' => 'boolean',
             'sponsored' => 'boolean',
             'last_verified_at' => 'datetime',
@@ -74,6 +75,12 @@ class ScholarshipCycle extends Model
     public function nationalities(): BelongsToMany
     {
         return $this->belongsToMany(Country::class, 'cycle_nationalities', 'cycle_id', 'country_id');
+    }
+
+    /** Nationalities that are excluded although the call is otherwise open to them (usually the host country's own citizens). */
+    public function excludedNationalities(): BelongsToMany
+    {
+        return $this->belongsToMany(Country::class, 'cycle_excluded_nationalities', 'cycle_id', 'country_id');
     }
 
     public function degreeLevels(): BelongsToMany

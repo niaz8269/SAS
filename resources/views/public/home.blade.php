@@ -32,14 +32,16 @@
                     <h2 id="hero-search" class="text-base font-bold sm:text-lg">{{ $s->subheading ?: 'Search scholarships' }}</h2>
                     <p class="hidden text-sm text-muted sm:block">Find the right opportunities for your goals.</p>
                 </div>
-                <div class="grid gap-3 md:grid-cols-[1fr_1fr_1fr_auto] md:items-end">
+                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] lg:items-end">
                     <div><label for="h-dest" class="label">Destination</label>
                         <select id="h-dest" name="destination[]" class="input"><option value="">Any destination</option>@foreach($destinationsAll as $c)<option value="{{ $c->slug }}">{{ $c->name }}</option>@endforeach</select></div>
+                    <div><label for="h-nat" class="label">Your nationality</label>
+                        <select id="h-nat" name="nationality[]" class="input"><option value="">Any nationality</option>@foreach($nationalities as $n)<option value="{{ $n->slug }}">{{ $n->name }}</option>@endforeach</select></div>
                     <div><label for="h-deg" class="label">Degree level</label>
                         <select id="h-deg" name="degree[]" class="input"><option value="">Any degree level</option>@foreach($degrees as $d)<option value="{{ $d->slug }}">{{ $d->name }}</option>@endforeach</select></div>
                     <div><label for="h-sub" class="label">Field of study</label>
                         <select id="h-sub" name="subject[]" class="input"><option value="">Any field of study</option>@foreach($subjects as $sub)<option value="{{ $sub->slug }}">{{ $sub->name }}</option>@endforeach</select></div>
-                    <button class="btn-primary btn-lg w-full md:w-auto">Find scholarships <span aria-hidden="true">&rarr;</span></button>
+                    <button class="btn-primary btn-lg w-full lg:w-auto">Find scholarships <span aria-hidden="true">&rarr;</span></button>
                 </div>
             </form>
         </div>
