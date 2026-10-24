@@ -39,14 +39,18 @@ class HomeController extends Controller
             ->orderBy('next_closing_sort')->limit(3)->get()
             ->filter(fn ($c) => $deadlines->isClosingSoon($c));
 
-        // Nothing flagged as featured yet: show the most recently verified calls instead of an empty box. The same rules apply (not overdue, not closed, not past its deadline).
+        // Calls staff flagged as featured come first, in the order set under Order scholarships. If fewer than three are flagged, the box is topped up with the most
+        // recently verified calls, under the same rules (not overdue, not closed, not past its deadline), so it is never empty or half empty.
         $featuredIsFallback = $featured->isEmpty();
-        if ($featuredIsFallback) {
-            $featured = ScholarshipCycle::visible()->whereNotNull('last_verified_at')->with($with)
+        if ($featured->count() < 3) {
+            $topUp = ScholarshipCycle::visible()->whereNotNull('last_verified_at')->with($with)
+                ->whereNotIn('id', $featured->pluck('id'))
                 ->where(fn ($q) => $q->whereNull('review_due_at')->orWhere('review_due_at', '>', $now))
                 ->where('application_status', '!=', 'closed')
                 ->where(fn ($q) => $q->whereNull('next_closing_sort')->orWhere('next_closing_sort', '>', $now))
-                ->orderByDesc('last_verified_at')->limit(3)->get();
+                ->orderByDesc('last_verified_at')->limit(3 - $featured->count())->get();
+            $featuredNote = $featured->isEmpty() ? 'The calls our editors checked most recently.' : 'Our pick first, then the calls our editors checked most recently.';
+            $featured = $featured->concat($topUp)->values();
         }
 
         // Nothing closes inside the window: show the next confirmed deadlines after it, so the section says something true and useful.
@@ -72,6 +76,7 @@ class HomeController extends Controller
             ->sortBy(fn ($u) => [$u->sort_order === null ? 1 : 0, $u->sort_order ?? 0, file_exists(public_path('images/universities/'.$u->slug.'.jpg')) ? 0 : 1])->take(8)->values(); // placed by staff first, then those with a photo
 
         return view('public.home', [
+            'featuredNote' => $featuredNote ?? null,
             'blogPosts' => BlogPost::published()->with('category')->limit(3)->get(),
             'featuredIsFallback' => $featuredIsFallback, 'nextDeadlines' => $nextDeadlines, 'stats' => $stats, 'universities' => $universities,
             'sections' => HomeSection::ordered(),

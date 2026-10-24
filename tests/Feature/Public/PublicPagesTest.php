@@ -63,6 +63,20 @@ class PublicPagesTest extends TestCase
         $this->get('/legal/privacy')->assertDontSee('tawk.to', false);
     }
 
+    public function test_a_featured_call_comes_first_in_the_homepage_box_and_the_rest_is_topped_up_with_recently_checked_calls(): void
+    {
+        $recent = $this->publishedCycle(['last_verified_at' => now()->subDay()], $this->exactDeadline());
+        $recent->programme->update(['title' => 'Recently Checked Award']);
+        $older = $this->publishedCycle(['last_verified_at' => now()->subDays(3)], $this->exactDeadline());
+        $older->programme->update(['title' => 'Older Checked Award']);
+        $picked = $this->publishedCycle(['featured' => true, 'last_verified_at' => now()->subDays(9)], $this->exactDeadline());
+        $picked->programme->update(['title' => 'Our Picked Award']);
+
+        $html = $this->get('/')->assertOk()->assertSee('Our pick first, then the calls our editors checked most recently.')->getContent();
+        $this->assertLessThan(strpos($html, 'Recently Checked Award'), strpos($html, 'Our Picked Award'), 'the featured call is the first card');
+        $this->assertLessThan(strpos($html, 'Older Checked Award'), strpos($html, 'Recently Checked Award'));
+    }
+
     public function test_drafts_and_in_review_cycles_are_404_on_the_public_site(): void
     {
         foreach ([PublicationState::Draft, PublicationState::InReview, PublicationState::Approved, PublicationState::ChangesRequested] as $state) {

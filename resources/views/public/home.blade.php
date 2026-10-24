@@ -120,7 +120,7 @@
             <div>@if ($s->eyebrow)<p class="eyebrow">{{ $s->eyebrow }}</p>@endif<h2 id="featured" class="section-title mt-1">{{ $s->heading }}</h2></div>
             @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="text-sm font-semibold text-navy-700 underline">{{ $s->cta_label }} &rarr;</a>@endif
         </div>
-        @if ($featuredIsFallback)<p class="mt-1 text-sm text-muted">The calls our editors checked most recently.</p>@endif
+        @if ($featuredNote)<p class="mt-1 text-sm text-muted">{{ $featuredNote }}</p>@endif
         <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">@foreach ($featured as $c)<x-cycle-card :cycle="$c" />@endforeach</div>
     </section>
     @endif
