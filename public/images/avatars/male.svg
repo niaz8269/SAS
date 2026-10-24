@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Sketch of a man">
+  <rect width="200" height="200" fill="#eef3fb"/>
+  <circle cx="100" cy="100" r="98" fill="none" stroke="#c9d6ee" stroke-width="2"/>
+  <g fill="none" stroke="#123a7a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M38 200c4-34 26-52 62-52s58 18 62 52" fill="#dbe6f7"/>
+    <path d="M84 146l16 18 16-18" />
+    <path d="M86 128v22M114 128v22"/>
+    <ellipse cx="100" cy="92" rx="30" ry="36" fill="#fff"/>
+    <path d="M70 84c-2-26 12-42 30-42s34 14 30 42c-6-14-14-20-30-20s-24 6-30 20z" fill="#123a7a"/>
+    <path d="M90 108q10 7 20 0"/>
+    <circle cx="89" cy="94" r="2.2" fill="#123a7a"/><circle cx="111" cy="94" r="2.2" fill="#123a7a"/>
+    <path d="M100 96v10"/>
+  </g>
+</svg>

@@ -273,15 +273,10 @@
         @if ($s->subheading)<p class="mt-1 text-muted">{{ $s->subheading }}</p>@endif
         <ul class="mt-6 grid gap-5 md:grid-cols-3">
             @foreach ($testimonials as $t)
-                <li class="card flex h-full flex-col p-6">
-                    <blockquote class="flex-1 text-sm">&ldquo;{{ $t->quote }}&rdquo;</blockquote>
-                    <footer class="mt-4 flex items-center gap-3">
-                        @if ($t->photo_path)<img src="{{ $media($t->photo_path) }}" alt="" class="h-10 w-10 rounded-full object-cover" loading="lazy">@endif
-                        <span><span class="block font-semibold">{{ $t->name }}</span>@if ($t->context)<span class="block text-xs text-muted">{{ $t->context }}</span>@endif</span>
-                    </footer>
-                </li>
+                <li><x-story-card :story="$t" /></li>
             @endforeach
         </ul>
+        <p class="mt-5 flex flex-wrap items-center gap-4 text-sm"><a href="{{ route('stories.index') }}" class="font-semibold text-navy-700 underline">Read all student stories &rarr;</a><a href="{{ route('stories.create') }}" class="btn-gold">Share your story</a></p>
     </section>
     @endif
     @break

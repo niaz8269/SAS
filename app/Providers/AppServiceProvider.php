@@ -22,6 +22,7 @@ use App\Models\ScholarshipProgramme;
 use App\Models\ScholarshipRoute;
 use App\Models\Service;
 use App\Models\SourceEvidence;
+use App\Models\Testimonial;
 use App\Models\University;
 use App\Models\User;
 use App\Support\StudentContext;
@@ -63,9 +64,14 @@ class AppServiceProvider extends ServiceProvider
 
         // The sitemap is built from the database and cached for ten minutes; any change to a page that is listed in it clears the cache,
         // so a newly published scholarship, university, guide, service, article or page appears in /sitemap.xml at once.
-        foreach ([ScholarshipCycle::class, ScholarshipProgramme::class, University::class, Country::class, Service::class, Article::class, CmsPage::class, BlogPost::class, BlogCategory::class] as $model) {
-            $model::saved(fn () => Cache::deleteMultiple(['sitemap', 'blog.feed']));
-            $model::deleted(fn () => Cache::deleteMultiple(['sitemap', 'blog.feed']));
+        foreach ([ScholarshipCycle::class, ScholarshipProgramme::class, University::class, Country::class, Service::class, Article::class, CmsPage::class, BlogPost::class, BlogCategory::class, Testimonial::class] as $model) {
+            // These must return nothing: a listener that returns false stops every listener registered after it (the audit trail, search index and so on).
+            $model::saved(function () {
+                Cache::deleteMultiple(['sitemap', 'blog.feed']);
+            });
+            $model::deleted(function () {
+                Cache::deleteMultiple(['sitemap', 'blog.feed']);
+            });
         }
 
         Password::defaults(fn () => Password::min(10)->letters()->numbers());

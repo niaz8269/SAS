@@ -111,6 +111,7 @@
 @include('partials.footer')
 @livewireScripts
 @include('partials.whatsapp')
+@include('partials.story-tab')
 @include('partials.tawk')
 </body>
 </html>

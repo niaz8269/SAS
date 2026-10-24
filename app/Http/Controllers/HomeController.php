@@ -81,7 +81,7 @@ class HomeController extends Controller
             'featuredIsFallback' => $featuredIsFallback, 'nextDeadlines' => $nextDeadlines, 'stats' => $stats, 'universities' => $universities,
             'sections' => HomeSection::ordered(),
             'trustItems' => TrustItem::where('enabled', true)->orderBy('sort')->orderBy('id')->get(),
-            'testimonials' => Testimonial::visible()->orderBy('sort')->orderBy('id')->limit(6)->get(),
+            'testimonials' => Testimonial::visible()->orderBy('sort')->orderByDesc('id')->limit(6)->get(),
             'degrees' => DegreeLevel::orderBy('sort')->get(),
             'destinationsAll' => Country::destinations()->get(),
             'nationalities' => Country::orderBy('name')->get(['name', 'slug']),

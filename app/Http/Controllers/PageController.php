@@ -10,6 +10,7 @@ use App\Models\Country;
 use App\Models\MediaFile;
 use App\Models\ScholarshipCycle;
 use App\Models\Service;
+use App\Models\Testimonial;
 use App\Models\University;
 use Illuminate\Support\Facades\Cache;
 
@@ -103,7 +104,7 @@ class PageController extends Controller
         $xml = Cache::remember('sitemap', 600, function () {
             // Each entry is [address, date it last changed]; the date comes from the record, and stays out where the page is a list or fixed text.
             $urls = collect([route('home'), route('scholarships.index'), route('destinations.index'), route('services.index'),
-                route('resources.index'), route('about'), route('contact'), route('universities.index'), route('programmes.index'), route('blog.index')])->map(fn ($u) => [$u, null]);
+                route('resources.index'), route('about'), route('contact'), route('universities.index'), route('programmes.index'), route('blog.index'), route('stories.index'), route('stories.create')])->map(fn ($u) => [$u, null]);
             Country::destinations()->where('guidance_published', true)->get()->each(fn ($c) => $urls->push([route('destinations.show', $c), $c->guidance_reviewed_at ?? $c->updated_at]));
             Service::published()->get()->each(fn ($s) => $urls->push([route('services.show', $s), $s->updated_at]));
             Article::published()->get()->each(fn ($a) => $urls->push([route('resources.show', $a), $a->updated_at]));
@@ -111,6 +112,7 @@ class PageController extends Controller
             CmsPage::published()->whereNotIn('slug', ['about', 'partners', 'privacy', 'terms', 'refunds', 'accessibility'])->get()->each(fn ($p) => $urls->push([route('pages.show', $p->slug), $p->updated_at]));
             BlogCategory::query()->whereHas('posts', fn ($p) => $p->published())->get()->each(fn ($c) => $urls->push([route('blog.category', $c->slug), $c->updated_at]));
             BlogPost::published()->get(['slug', 'updated_at'])->each(fn ($b) => $urls->push([route('blog.show', $b->slug), $b->updated_at]));
+            Testimonial::visible()->whereNotNull('story')->whereNotNull('slug')->get(['slug', 'updated_at'])->each(fn ($s) => $urls->push([route('stories.show', $s->slug), $s->updated_at]));
             ScholarshipCycle::visible()->with('programme')->get()->each(fn ($c) => $urls->push([route('scholarships.show', [$c->programme->slug, $c->slug]), $c->updated_at]));
 
             return view('public.sitemap', ['urls' => $urls])->render();
@@ -123,7 +125,7 @@ class PageController extends Controller
     {
         // Private areas, redirects and endless filter combinations stay out of search results; every real page is listed in the sitemap.
         $lines = ['User-agent: *', 'Disallow: /admin', 'Disallow: /student', 'Disallow: /partner', 'Disallow: /review', 'Disallow: /files', 'Disallow: /invoices',
-            'Disallow: /go/', 'Disallow: /enquiries/', 'Disallow: /consultation/', 'Disallow: /corrections', 'Disallow: /login', 'Disallow: /register', 'Disallow: /forgot-password',
+            'Disallow: /go/', 'Disallow: /enquiries/', 'Disallow: /consultation/', 'Disallow: /share-your-story/', 'Disallow: /corrections', 'Disallow: /login', 'Disallow: /register', 'Disallow: /forgot-password',
             'Disallow: /scholarships?*', 'Disallow: /universities?*', 'Disallow: /programmes?*', '', 'Sitemap: '.rtrim((string) config('app.url'), '/').'/sitemap.xml'];
 
         return response(implode("\n", $lines), 200, ['Content-Type' => 'text/plain']);
