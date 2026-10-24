@@ -151,6 +151,9 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::post('/saved-scholarships', [Student\SavedScholarshipController::class, 'store'])->name('saved.store');
     Route::delete('/saved-scholarships/{cycle}', [Student\SavedScholarshipController::class, 'destroy'])->name('saved.destroy');
 
+    Route::get('/book', [Student\BookingController::class, 'show'])->name('book');
+    Route::post('/book', [Student\BookingController::class, 'store'])->middleware('throttle:enquiries')->name('book.store');
+    Route::delete('/book/{slot}', [Student\BookingController::class, 'destroy'])->name('book.destroy');
     Route::get('/counsellor', [Student\CounsellorController::class, 'show'])->name('counsellor');
     Route::post('/counsellor/messages', [Student\CounsellorController::class, 'store'])->middleware('throttle:enquiries')->name('counsellor.store');
     Route::get('/cases', [Student\CaseController::class, 'index'])->name('cases.index');

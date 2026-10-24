@@ -66,6 +66,7 @@
             </ol>
             <p class="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">SAS help</p>
             <a href="{{ route('student.counsellor') }}" @if(request()->routeIs('student.counsellor*')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.counsellor*')) }}">My counsellor</a>
+            <a href="{{ route('student.book') }}" @if(request()->routeIs('student.book*')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.book*')) }}">Book a call</a>
             @if ($hasCases)
                 <a href="{{ route('student.cases.index') }}" @if(request()->routeIs('student.cases.*')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.cases.*')) }}">Messages and fees</a>
             @endif

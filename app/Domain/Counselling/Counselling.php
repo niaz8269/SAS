@@ -37,12 +37,12 @@ class Counselling
     }
 
     /** Records a status, what the student wants and the counsellor's comment. Staff only; the student never sees it. */
-    public function followUp(User $student, User $author, string $status, ?string $wants, ?string $comment, ?string $followUpOn = null): StudentFollowUp
+    public function followUp(User $student, User $author, string $status, ?string $wants, ?string $comment, ?string $followUpOn = null, ?string $contactType = null, ?string $nextStep = null): StudentFollowUp
     {
         if (! array_key_exists($status, StudentFollowUp::STATUSES)) {
             throw new InvalidArgumentException('Unknown status.');
         }
-        $entry = new StudentFollowUp(['status' => $status, 'wants' => filled($wants) ? trim($wants) : null, 'comment' => filled($comment) ? trim($comment) : null, 'follow_up_on' => filled($followUpOn) ? $followUpOn : null]);
+        $entry = new StudentFollowUp(['status' => $status, 'wants' => filled($wants) ? trim($wants) : null, 'comment' => filled($comment) ? trim($comment) : null, 'follow_up_on' => filled($followUpOn) ? $followUpOn : null, 'contact_type' => array_key_exists((string) $contactType, StudentFollowUp::CONTACT_TYPES) ? $contactType : null, 'next_step' => filled($nextStep) ? trim($nextStep) : null]);
         $entry->forceFill(['student_id' => $student->id, 'author_id' => $author->id])->save();
         AuditLog::record('student.follow_up', $student, null, ['status' => $status], null, $author); // the text itself is not logged
 

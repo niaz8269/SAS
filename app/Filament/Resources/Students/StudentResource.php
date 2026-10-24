@@ -185,6 +185,7 @@ class StudentResource extends Resource
                 TextEntry::make('latestFollowUp.created_at')->label('Updated')->since()->placeholder('Never'),
                 TextEntry::make('counsellor.name')->label('Counsellor')->placeholder('Unassigned'),
                 TextEntry::make('latestFollowUp.wants')->label('What the student wants')->placeholder('Not written down yet')->columnSpan(3)->prose(),
+                TextEntry::make('latestFollowUp.next_step')->label('Next step')->placeholder('None')->columnSpan(3),
                 TextEntry::make('latestFollowUp.comment')->label('Last comment')->placeholder('No comment yet')->columnSpan(3)->prose(),
             ]),
             Section::make('Aiming for')->columns(3)->collapsible()->schema([

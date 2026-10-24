@@ -28,7 +28,7 @@ class Timeline
         ]));
         StudentFollowUp::where('student_id', $student->id)->with('author')->get()->each(fn ($f) => $events->push([
             'at' => $f->created_at, 'kind' => 'Status',
-            'text' => ($f->author?->name ?: 'Staff').' set the status to "'.$f->statusLabel().'"'.($f->comment ? ': '.Str::limit($f->comment, 120) : ''),
+            'text' => ($f->author?->name ?: 'Staff').($f->contact_type ? ' ('.strtolower(StudentFollowUp::CONTACT_TYPES[$f->contact_type]).')' : '').' set the status to "'.$f->statusLabel().'"'.($f->comment ? ': '.Str::limit($f->comment, 120) : '').($f->next_step ? ' Next: '.Str::limit($f->next_step, 100) : ''),
         ]));
         Document::where('user_id', $student->id)->get()->each(fn ($d) => $events->push(['at' => $d->created_at, 'kind' => 'Document', 'text' => 'Uploaded '.DocumentKind::label($d->type).' ('.$d->title.')']));
         ApplicationPlan::where('user_id', $student->id)->with('cycle.programme')->get()->each(function (ApplicationPlan $p) use ($events) {

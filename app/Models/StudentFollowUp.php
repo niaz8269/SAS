@@ -22,6 +22,9 @@ class StudentFollowUp extends Model
         'closed' => 'Completed',
     ];
 
+    /** How the counsellor was in touch, for the call and meeting log. */
+    public const CONTACT_TYPES = ['call' => 'Phone call', 'meeting' => 'Meeting', 'whatsapp' => 'WhatsApp', 'email' => 'Email', 'note' => 'Note only'];
+
     // Student and author are set by Counselling, never from request data.
     protected $guarded = ['id', 'student_id', 'author_id'];
 

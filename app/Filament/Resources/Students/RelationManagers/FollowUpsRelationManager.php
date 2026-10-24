@@ -31,9 +31,11 @@ class FollowUpsRelationManager extends RelationManager
             ->columns([
                 TextColumn::make('created_at')->label('When')->dateTime('j M Y, H:i'),
                 TextColumn::make('author.name')->label('By')->placeholder('-'),
+                TextColumn::make('contact_type')->label('Contact')->formatStateUsing(fn ($state) => StudentFollowUp::CONTACT_TYPES[$state] ?? '-'),
                 TextColumn::make('status')->badge()->formatStateUsing(fn ($state) => StudentFollowUp::STATUSES[$state] ?? $state),
                 TextColumn::make('wants')->label('What the student wants')->wrap()->limit(300)->placeholder('-'),
                 TextColumn::make('comment')->wrap()->limit(300)->placeholder('-'),
+                TextColumn::make('next_step')->label('Next step')->wrap()->limit(200)->placeholder('-'),
             ])
             ->defaultSort('id', 'desc')
             ->emptyStateHeading('No notes yet')

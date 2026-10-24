@@ -54,11 +54,13 @@ class ViewStudent extends ViewRecord
                     Select::make('status')->label('Status')->options(StudentFollowUp::STATUSES)->required(),
                     Textarea::make('wants')->label('What the student wants')->rows(3)->maxLength(2000)->helperText('For example the country, degree, subject and scholarship they are aiming for.'),
                     Textarea::make('comment')->label('Comment')->rows(3)->maxLength(2000)->helperText('What happened or what comes next.'),
+                    Select::make('contact_type')->label('How were you in touch?')->options(StudentFollowUp::CONTACT_TYPES)->placeholder('Not a contact, just a note'),
+                    TextInput::make('next_step')->label('Next step')->maxLength(300)->helperText('For example: send the shortlist on Friday.'),
                     DatePicker::make('follow_up_on')->label('Look at this student again on')->native(false)->minDate(today())->helperText('Optional. The student shows under Today on that day and you get a reminder email.'),
                 ])
                 ->action(function (Student $record, array $data) {
                     try {
-                        app(Counselling::class)->followUp($record, auth()->user(), $data['status'], $data['wants'] ?? null, $data['comment'] ?? null, $data['follow_up_on'] ?? null);
+                        app(Counselling::class)->followUp($record, auth()->user(), $data['status'], $data['wants'] ?? null, $data['comment'] ?? null, $data['follow_up_on'] ?? null, $data['contact_type'] ?? null, $data['next_step'] ?? null);
                         Notification::make()->title('Saved')->success()->send();
                         $this->getRecord()->unsetRelation('latestFollowUp');
                         $this->refreshFormData(['latestFollowUp']);
