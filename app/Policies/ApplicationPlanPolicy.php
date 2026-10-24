@@ -17,7 +17,8 @@ class ApplicationPlanPolicy
     public function view(User $user, ApplicationPlan $plan): bool
     {
         return $this->update($user, $plan)
-            || ($user->isStaff() && $user->hasPermission('cases.manage') && $plan->stage !== 'draft');
+            || ($user->isStaff() && $user->hasPermission('cases.manage') && $plan->stage !== 'draft')
+            || $user->counsels($plan->user); // a student's counsellor reads every application of theirs, drafts included
     }
 
     public function update(User $user, ApplicationPlan $plan): bool

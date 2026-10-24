@@ -145,7 +145,7 @@ class StudentCaseWorkspaceTest extends TestCase
         $this->assertNotNull(CaseDocumentShare::first()->revoked_at, 'unticking stops the sharing');
     }
 
-    public function test_the_assigned_counsellor_opens_shared_documents_only_while_shared(): void
+    public function test_the_students_counsellor_opens_their_documents_and_managers_only_what_is_shared(): void
     {
         $student = User::factory()->create();
         $doc = $this->upload($student);
@@ -160,13 +160,15 @@ class StudentCaseWorkspaceTest extends TestCase
 
         $this->actingAs($assigned)->get(route('files.download', $doc))->assertOk();
         $this->actingAs($manager)->get(route('files.download', $doc))->assertOk();
-        $this->actingAs($assigned)->get(route('files.download', $private))->assertForbidden();
+        $this->actingAs($assigned)->get(route('files.download', $private))->assertOk(); // the student's own counsellor reads every document, shared or not
+        $this->actingAs($manager)->get(route('files.download', $private))->assertForbidden(); // a manager only gets what is shared
         $this->actingAs($otherAdvisor)->get(route('files.download', $doc))->assertForbidden();
         $this->actingAs($editor)->get(route('files.download', $doc))->assertForbidden();
         $this->actingAs(User::factory()->create())->get(route('files.download', $doc))->assertForbidden();
 
         $service->syncShares($case, $student, [], 'consent');
-        $this->actingAs($assigned)->get(route('files.download', $doc))->assertForbidden();
+        $this->actingAs($manager)->get(route('files.download', $doc))->assertForbidden();
+        $this->actingAs($assigned)->get(route('files.download', $doc))->assertOk();
         $this->actingAs($student)->get(route('student.documents.download', $doc))->assertOk();
     }
 

@@ -79,6 +79,38 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
         return $this->isAgent() && $student->managed_by_organisation_id !== null && $student->managed_by_organisation_id === $this->partner_organisation_id;
     }
 
+    /** The SAS counsellor looking after this student. */
+    public function counsellor(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'counsellor_id');
+    }
+
+    public function followUps(): HasMany
+    {
+        return $this->hasMany(StudentFollowUp::class, 'student_id');
+    }
+
+    /** The current follow-up (status, what the student wants, last comment). */
+    public function latestFollowUp(): HasOne
+    {
+        return $this->hasOne(StudentFollowUp::class, 'student_id')->latestOfMany();
+    }
+
+    public function counsellorMessages(): HasMany
+    {
+        return $this->hasMany(CounsellorMessage::class, 'student_id');
+    }
+
+    /** Whether this staff member is the counsellor of the given student: assigned to them, or the adviser on one of their cases. */
+    public function counsels(User $student): bool
+    {
+        if (! $this->isStaff() || ! $this->hasPermission('students.assigned') || $student->id === $this->id) {
+            return false;
+        }
+
+        return $student->counsellor_id === $this->id || ServiceCase::where('user_id', $student->id)->where('advisor_id', $this->id)->exists();
+    }
+
     public function applicationForm(): HasOne
     {
         return $this->hasOne(ApplicationForm::class);

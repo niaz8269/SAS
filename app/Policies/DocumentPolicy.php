@@ -11,6 +11,7 @@ use App\Models\User;
 /**
  * AUTH-03: a document belongs to its owner. The only other way in is a share the student made on a case
  * (with consent recorded): staff who may view that case can then download the file, and only while the share is active.
+ * A student's assigned counsellor can also open their documents (the student is told so on the Counsellor page and in the privacy notice).
  */
 class DocumentPolicy
 {
@@ -21,7 +22,7 @@ class DocumentPolicy
 
     public function download(User $user, Document $document): bool
     {
-        return $this->view($user, $document) || $this->sharedWithStaff($user, $document) || $this->underReview($user, $document);
+        return $this->view($user, $document) || $this->sharedWithStaff($user, $document) || $this->underReview($user, $document) || $user->counsels($document->user);
     }
 
     public function delete(User $user, Document $document): bool

@@ -64,8 +64,9 @@
                     <li><a href="{{ $url }}" @if(request()->routeIs($pattern)) aria-current="page" @endif class="{{ $link(request()->routeIs($pattern)) }}"><span class="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-navy-100 text-xs font-bold text-navy-800" aria-hidden="true">{{ $n }}</span>{{ $label }}</a></li>
                 @endforeach
             </ol>
+            <p class="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">SAS help</p>
+            <a href="{{ route('student.counsellor') }}" @if(request()->routeIs('student.counsellor*')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.counsellor*')) }}">My counsellor</a>
             @if ($hasCases)
-                <p class="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">SAS help</p>
                 <a href="{{ route('student.cases.index') }}" @if(request()->routeIs('student.cases.*')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.cases.*')) }}">Messages and fees</a>
             @endif
             <details class="mt-3 border-t border-line pt-2" @if ($moreOpen) open @endif>
