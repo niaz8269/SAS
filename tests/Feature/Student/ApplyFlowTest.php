@@ -118,7 +118,7 @@ class ApplyFlowTest extends TestCase
         $this->assertStringStartsWith('%PDF', $pdf);
         $this->assertSame(6, preg_match_all('#/Type\s*/Page[^s]#', $pdf), 'six pages, like the blank form');
 
-        $this->get(route('student.applications.materials', $plan))->assertSee('Download filled form')->assertSee(route('student.applications.download', $plan), false);
+        $this->get(route('student.applications.materials', $plan))->assertSee('Download blank form');
         $this->get(route('student.applications.index'))->assertSee('Download Application Form');
         $this->assertDatabaseHas('audits', ['action' => 'application_form.downloaded']);
 

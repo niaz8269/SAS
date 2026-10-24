@@ -205,7 +205,7 @@ class AgentPortalTest extends TestCase
         $document = Document::where('type', 'passport')->firstOrFail();
         $this->assertSame($student->id, $document->user_id, 'the document belongs to the student');
         $this->get($base('/documents/'.$document->public_id.'/download'))->assertOk();
-        $this->get($base('/applications/'.$plan->public_id.'/materials'))->assertOk()->assertSee('passport.pdf')->assertSee('Download filled form');
+        $this->get($base('/applications/'.$plan->public_id.'/materials'))->assertOk()->assertSee('passport.pdf')->assertSee('Download blank form');
         $this->get($base('/applications/'.$plan->public_id.'/download'))->assertOk()->assertHeader('content-type', 'application/pdf'); // the SAS application form with the student's answers
 
         $this->get($base('/applications/'.$plan->public_id.'/submit'))->assertOk()->assertSee('Not ready to submit yet'); // the form is still incomplete
