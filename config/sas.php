@@ -13,6 +13,10 @@ return [
     'legal_entity' => env('SAS_LEGAL_ENTITY', 'Operated by CAS - Consultancy for Abroad Study'),
     // Set SAS_LEGAL_APPROVED=true once the operating entity or counsel has approved the privacy, terms and refund texts; it hides the draft notice on those pages.
     'legal_approved' => (bool) env('SAS_LEGAL_APPROVED', false),
+    'legal_approved_env' => (bool) env('SAS_LEGAL_APPROVED', false), // the .env value alone; the super admin's approval button on System health can also approve (see Site::FIELDS)
+
+    // true: the scheduler (the one cron line) also works the queue every minute, so no always-running queue worker is needed on simple hosting.
+    'queue_via_cron' => (bool) env('SAS_QUEUE_VIA_CRON', true),
 
     // Service fees in US dollars, shown on the Services, Terms and Refund pages. The application fee is charged per scholarship application;
     // part of it is refunded if the application is rejected; the agency service charge is due only after acceptance.

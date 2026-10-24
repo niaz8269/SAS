@@ -26,7 +26,8 @@ pm audit report no known vulnerabilities.
 
 ## 2. Email that reaches inboxes
 - On the domain's DNS add the mail provider's **SPF** and **DKIM** records (the provider shows them), and a **DMARC** record. Without them, invitations, receipts and reminders land in spam.
-- Send a test to a Gmail and an Outlook address and check the spam folder.
+- On **Administration > System health** press **Send a test email to me** (it tells you when mail only goes to the log), then send a real test to a Gmail and an Outlook address and check the spam folder. On a live site System health also looks up the SPF and DMARC records of the sending domain and shows a yellow line while one is missing. DKIM cannot be checked from outside: your mail provider shows "verified" on its own dashboard.
+- Records to add in the domain's DNS settings (the provider gives the exact values): an **SPF** TXT record on the sending domain, for example `v=spf1 include:<provider's include> ~all`; the **DKIM** record(s) the provider shows; and a **DMARC** TXT record named `_dmarc`, for example `v=DMARC1; p=none; rua=mailto:info@your-domain` (start with `p=none`, move to `quarantine` after a few weeks of clean reports). Use one sending domain consistently in `MAIL_FROM_ADDRESS`.
 - **Sign-up depends on this email.** A new student registering, and an agent person added by staff (at their first sign-in), must type a 6-digit code emailed to them before they can use the site. The code works for 15 minutes, once, with 5 wrong tries, and a new one can be requested after a minute. With `MAIL_MAILER=log` (development) the code is only written to `storage/logs/laravel.log`. Test a real registration end to end before announcing the site.
 
 ## 3. The scheduler must run every minute
@@ -34,7 +35,7 @@ Reminders, the morning emails to counsellors and admins, the daily backup and th
 
 `* * * * * php /path/to/site/artisan schedule:run >> /dev/null 2>&1`
 
-Also keep a queue worker running if you switch the queue from `sync` to a real queue. After a minute, open **Administration > System health**: the Scheduler line must say "running".
+The same cron line also sends the queued emails once a minute (`SAS_QUEUE_VIA_CRON=true`, already in `.env.production.example`), so you do **not** need a separate always-running queue worker. Only on a server where you run your own worker (`deploy/supervisor-sas-worker.conf`) set `SAS_QUEUE_VIA_CRON=false`. Ready-to-edit files are in the `deploy/` folder: `crontab.txt` (the cron line), `supervisor-sas-worker.conf` (optional worker) and `nginx-sas.conf` (optional, for a VPS). After a minute, open **Administration > System health**: the Scheduler line must say "running", and "Background jobs (emails)" must say "being worked" (it turns red when emails wait more than 10 minutes).
 
 ## 4. Backups
 - `php artisan sas:backup` (also daily at 02:30 by the scheduler) writes a zip of the database and the uploaded documents to `storage/app/backups` and keeps the newest 14.
@@ -48,6 +49,8 @@ Also keep a queue worker running if you switch the queue from `sync` to a real q
 
 ## 6. Content you own
 - **Live chat (tawk.to):** the chat widget loads on the public pages only (never on sign-in, student, agent or admin pages, where a third-party script could read personal data). Set SAS_TAWK_EMBED to empty to turn it off. Sign in to tawk.to and add your live domain to the widget's allowed sites, set who answers and the offline message, and read the cookies and chat paragraph in the privacy notice (section 3 and 4) before approving the legal text: loading the widget sets tawk.to's own cookies, so check whether your visitors' countries need a cookie banner.
+- **Legal texts:** read `docs/LEGAL-REVIEW.md` (a checklist of every fact the texts state), then press **Legal texts approved** on System health. Nothing else is needed in `.env`.
+- **Blogs:** the five launch posts are marked "Not reviewed" in **Blog > Blog posts**. An Admin or the Super admin reads each one against its sources, then presses **Mark as reviewed** (the name and date are shown in the list); editing the words clears the mark so it always refers to what is on the page. Admins can add, edit, schedule, publish and delete posts there; Counsellors cannot. The same screen filters by Reviewed / Not reviewed.
 - Check the scholarship records and the document rules once more against the official pages (`data/document-rules`), the payment options under Website, the fees in `config/sas.php`, the privacy notice and the terms.
 - Confirm the contact email, phone, WhatsApp number and address under Site settings.
 

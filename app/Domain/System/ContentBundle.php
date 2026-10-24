@@ -33,7 +33,7 @@ class ContentBundle
     private const USER_COLUMNS = [
         'scholarship_cycles' => ['verified_by', 'created_by', 'approved_by'], 'scholarship_programmes' => ['created_by'],
         'cycle_deadlines' => ['changed_by'], 'source_evidence' => ['created_by'], 'services' => ['created_by', 'updated_by'],
-        'page_blocks' => ['updated_by'], 'blog_posts' => ['author_id'], 'home_sections' => ['updated_by'], 'menu_items' => ['updated_by'],
+        'page_blocks' => ['updated_by'], 'blog_posts' => ['author_id', 'reviewed_by'], 'home_sections' => ['updated_by'], 'menu_items' => ['updated_by'],
     ];
 
     /** Tables whose rows belong to a cycle, filtered to the exported cycles. */

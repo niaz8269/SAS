@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\BlogPosts;
 
+use App\Domain\Editorial\AuditLog;
 use App\Filament\Concerns\ChecksPermission;
 use App\Filament\Resources\BlogPosts\Pages\CreateBlogPost;
 use App\Filament\Resources\BlogPosts\Pages\EditBlogPost;
@@ -110,13 +111,36 @@ class BlogPostResource extends Resource
                     'Published' => 'success', 'Scheduled' => 'warning', default => 'gray'
                 }),
             TextColumn::make('published_at')->label('Date')->dateTime('j M Y, H:i')->sortable(),
-            TextColumn::make('author.name')->label('Author')->toggleable(),
+            TextColumn::make('reviewed')->label('Reviewed')->badge()
+                ->getStateUsing(fn (BlogPost $r) => $r->isReviewed() ? 'Reviewed '.$r->reviewed_at->format('j M Y') : 'Not reviewed')
+                ->color(fn ($state) => str_starts_with($state, 'Reviewed') ? 'success' : 'warning')
+                ->description(fn (BlogPost $r) => $r->isReviewed() ? ($r->reviewer?->name ?? '') : null),
+            TextColumn::make('author.name')->label('Author')->toggleable(isToggledHiddenByDefault: true),
             TextColumn::make('featured')->label('Featured')->badge()->getStateUsing(fn (BlogPost $r) => $r->featured ? 'Featured' : '')->color('info')->toggleable(),
         ])->filters([
             SelectFilter::make('status')->options(['draft' => 'Draft', 'published' => 'Published or scheduled']),
             SelectFilter::make('category_id')->label('Category')->relationship('category', 'name'),
+            SelectFilter::make('review')->label('Review')->options(['no' => 'Not reviewed', 'yes' => 'Reviewed'])
+                ->query(fn ($query, array $data) => match ($data['value'] ?? null) {
+                    'no' => $query->whereNull('reviewed_at'), 'yes' => $query->whereNotNull('reviewed_at'), default => $query,
+                }),
         ])->recordActions([
             Action::make('view')->label('View')->icon(Heroicon::OutlinedEye)->url(fn (BlogPost $r) => route('blog.show', $r->slug))->openUrlInNewTab(),
+            Action::make('markReviewed')->label('Mark as reviewed')->icon(Heroicon::OutlinedCheckBadge)->color('success')
+                ->visible(fn (BlogPost $r) => ! $r->isReviewed() && auth()->user()?->can('content.review'))
+                ->requiresConfirmation()->modalDescription('Confirm you have read the post and checked its facts and figures against the official sources it links to. Editing the text later clears this mark.')
+                ->action(function (BlogPost $r): void {
+                    abort_unless(auth()->user()?->can('content.review'), 403);
+                    $r->forceFill(['reviewed_at' => now(), 'reviewed_by' => auth()->id()])->save();
+                    AuditLog::record('blog.reviewed', $r);
+                }),
+            Action::make('markUnreviewed')->label('Needs review again')->icon(Heroicon::OutlinedArrowUturnLeft)->color('gray')
+                ->visible(fn (BlogPost $r) => $r->isReviewed() && auth()->user()?->can('content.review'))
+                ->action(function (BlogPost $r): void {
+                    abort_unless(auth()->user()?->can('content.review'), 403);
+                    $r->forceFill(['reviewed_at' => null, 'reviewed_by' => null])->save();
+                    AuditLog::record('blog.review_withdrawn', $r);
+                }),
             EditAction::make(),
             DeleteAction::make(),
         ])->defaultSort('id', 'desc')->emptyStateHeading('No blog posts yet')->emptyStateDescription('Choose New blog post to write the first one.');

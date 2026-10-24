@@ -1,0 +1,4 @@
+# The one cron line SAS needs (deadline checks, reminders, morning emails, backups, search refresh, and with SAS_QUEUE_VIA_CRON=true the sending of queued emails).
+# Replace /home/USER/sas with the folder that holds the `artisan` file and /usr/bin/php with the PHP 8.4 command your host gives you
+# (on cPanel it is often /usr/local/bin/ea-php84 or /opt/cpanel/ea-php84/root/usr/bin/php).
+* * * * * cd /home/USER/sas && /usr/bin/php artisan schedule:run >> /dev/null 2>&1

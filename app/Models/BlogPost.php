@@ -14,7 +14,28 @@ class BlogPost extends Model
 
     protected function casts(): array
     {
-        return ['published_at' => 'datetime', 'featured' => 'boolean'];
+        return ['published_at' => 'datetime', 'reviewed_at' => 'datetime', 'featured' => 'boolean'];
+    }
+
+    protected static function booted(): void
+    {
+        // Changing the words puts the post back to "not reviewed": a review only vouches for the text that was read.
+        static::saving(function (self $post): void {
+            if ($post->exists && $post->isDirty(['title', 'excerpt', 'body']) && ! $post->isDirty('reviewed_at')) {
+                $post->reviewed_at = null;
+                $post->reviewed_by = null;
+            }
+        });
+    }
+
+    public function isReviewed(): bool
+    {
+        return $this->reviewed_at !== null;
+    }
+
+    public function reviewer(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'reviewed_by');
     }
 
     /** Published and not scheduled for later, newest first. */

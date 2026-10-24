@@ -19,6 +19,8 @@ class Site
         'brand_short' => 'sas.brand.short',
         'tagline' => 'sas.brand.tagline',
         'legal_entity' => 'sas.legal_entity',
+        'legal_approved_at' => 'sas.legal_approved', // set by the super admin's "Texts approved" button on System health; any value counts as approved
+        'legal_approved_by' => null,
         'contact_email' => 'sas.contact_email',
         'accessibility_email' => 'sas.accessibility_email',
         'enquiry_email' => 'sas.enquiry_email',
