@@ -37,7 +37,7 @@
 </head>
 <body class="min-h-screen bg-ivory" x-data="{ nav: false }" @keydown.escape.window="nav = false">
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2">Skip to main content</a>
-<header class="sticky top-0 z-30 border-b border-line bg-white/90 shadow-[0_1px_0_rgba(18,58,122,0.04),0_8px_24px_-16px_rgba(18,58,122,0.25)] backdrop-blur-md">
+<header class="sticky top-0 z-30 border-b border-line bg-white/90 shadow-[0_0.0625rem_0_rgba(18,58,122,0.04),0_0.5rem_1.5rem_-1rem_rgba(18,58,122,0.25)] backdrop-blur-md">
     <div class="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-gold" aria-hidden="true"></div>
     <div class="flex h-16 w-full items-center justify-between gap-3 pl-1.5 pr-4 sm:pr-6 lg:pr-8">
         <div class="flex min-w-0 items-center gap-3">
@@ -54,7 +54,7 @@
         </div>
     </div>
 </header>
-<div class="container-page grid gap-6 py-6 lg:grid-cols-[220px_1fr]">
+<div class="container-page grid gap-6 py-6 lg:grid-cols-[13.75rem_1fr]">
     <nav id="student-nav" aria-label="Student workspace" class="lg:sticky lg:top-24 lg:block lg:self-start" :class="nav ? 'block' : 'hidden'">
         <div class="card p-2 text-sm">
             <a href="{{ route('student.dashboard') }}" @if(request()->routeIs('student.dashboard')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.dashboard')) }}">Home</a>

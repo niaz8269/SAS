@@ -31,18 +31,18 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
 </head>
-<body class="min-h-screen bg-white text-[13px] text-[#333]" x-data="{ collapsed: false, menu: false }">
+<body class="min-h-screen bg-white text-[0.8125rem] text-[#333]" x-data="{ collapsed: false, menu: false }">
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2">Skip to main content</a>
 
 {{-- Header: logo, the portal's name, and the signed-in user --}}
 <header class="bg-[#428bb6] text-white">
-    <div class="flex h-[70px] items-center justify-between gap-3 pl-3">
+    <div class="flex h-[4.375rem] items-center justify-between gap-3 pl-3">
         <div class="flex min-w-0 items-center gap-3">
             <button type="button" class="inline-flex h-10 w-10 items-center justify-center rounded border border-white/40 lg:hidden" @click="menu = !menu" :aria-expanded="menu.toString()" aria-controls="agent-nav" aria-label="Menu">
                 <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
             </button>
-            <a href="{{ route('partner.home') }}" aria-label="{{ config('sas.brand.short') }} agent portal"><x-brand compact class="[&_img]:!h-[54px] [&_img]:!w-[54px] [&_img]:rounded-full [&_img]:ring-2 [&_img]:ring-white" /></a>
-            <a href="{{ route('partner.home') }}" class="hidden text-[20px] font-semibold tracking-[0.25em] sm:inline" tabindex="-1" aria-hidden="true">SAS</a>
+            <a href="{{ route('partner.home') }}" aria-label="{{ config('sas.brand.short') }} agent portal"><x-brand compact class="[&_img]:!h-[3.375rem] [&_img]:!w-[3.375rem] [&_img]:rounded-full [&_img]:ring-2 [&_img]:ring-white" /></a>
+            <a href="{{ route('partner.home') }}" class="hidden text-[1.25rem] font-semibold tracking-[0.25em] sm:inline" tabindex="-1" aria-hidden="true">SAS</a>
             <span class="hidden border-l border-white/50 pl-3 text-xl font-light sm:inline">Recruiting agents</span>
         </div>
         <details class="relative h-full text-sm">
@@ -60,14 +60,14 @@
     </div>
 </header>
 
-<div class="flex min-h-[calc(100vh-70px-64px)]">
+<div class="flex min-h-[calc(100vh-4.375rem-4rem)]">
     {{-- Sidebar --}}
-    <nav id="agent-nav" aria-label="Agent portal" class="shrink-0 border-r border-[#e5e5e5] bg-[#f5f5f5] transition-all" :class="[collapsed ? 'w-16' : 'w-52 lg:w-[230px]', menu ? 'block' : 'hidden lg:block']">
+    <nav id="agent-nav" aria-label="Agent portal" class="shrink-0 border-r border-[#e5e5e5] bg-[#f5f5f5] transition-all" :class="[collapsed ? 'w-16' : 'w-52 lg:w-[14.375rem]', menu ? 'block' : 'hidden lg:block']">
         <ul>
             @foreach ($nav as [$label, $url, $patterns, $icon])
                 @php($on = request()->routeIs(...(array) $patterns))
                 <li><a href="{{ $url }}" @if($on) aria-current="page" @endif title="{{ $label }}"
-                       class="flex h-[46px] items-center gap-4 border-b border-[#e5e5e5] border-l-4 px-5 text-[14px] transition hover:bg-white {{ $on ? 'border-l-[#428bb6] bg-white text-[#428bb6]' : 'border-l-transparent text-[#333]' }}">
+                       class="flex h-[2.875rem] items-center gap-4 border-b border-[#e5e5e5] border-l-4 px-5 text-[0.875rem] transition hover:bg-white {{ $on ? 'border-l-[#428bb6] bg-white text-[#428bb6]' : 'border-l-transparent text-[#333]' }}">
                     <svg class="h-6 w-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ $icons[$icon] }}"/></svg>
                     <span x-show="!collapsed" class="truncate">{{ $label }}</span></a></li>
             @endforeach
@@ -78,7 +78,7 @@
 
     {{-- Page --}}
     <div class="min-w-0 flex-1">
-        <div class="flex items-center gap-2 border-b border-[#e5e5e5] bg-[#f5f5f5] px-5 py-3 text-[13px]">
+        <div class="flex items-center gap-2 border-b border-[#e5e5e5] bg-[#f5f5f5] px-5 py-3 text-[0.8125rem]">
             <svg class="h-5 w-5 text-[#555]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{ $icons['home'] }}"/></svg>
             <a class="text-[#428bb6] hover:underline" href="{{ route('partner.home') }}">Backend</a>
             <span class="text-[#999]" aria-hidden="true">›</span>
@@ -91,7 +91,7 @@
     </div>
 </div>
 
-<footer class="border-t border-[#e5e5e5] py-3 text-center text-[13px]">
+<footer class="border-t border-[#e5e5e5] py-3 text-center text-[0.8125rem]">
     <strong class="text-[#428bb6]">{{ config('sas.brand.short') }}</strong> Scholarships Application Services &copy; {{ date('Y') }} Customer Service: <a class="hover:underline" href="mailto:{{ config('sas.contact_email') }}">{{ config('sas.contact_email') }}</a>
 </footer>
 @livewireScripts

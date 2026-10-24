@@ -8,13 +8,13 @@
 <div class="px-4 py-4">
     <form method="GET" class="flex flex-wrap items-center justify-between gap-3" role="search">
         @foreach ($keep as $k => $v)@if (is_scalar($v))<input type="hidden" name="{{ $k }}" value="{{ $v }}">@endif @endforeach
-        <label class="flex items-center gap-2 text-[13px]"><select name="per_page" class="border border-[#ccc] bg-white px-2 py-1.5" onchange="this.form.submit()" aria-label="Rows per page">@foreach ([10, 25, 50, 100] as $n)<option value="{{ $n }}" @selected($perPage === $n)>{{ $n }}</option>@endforeach</select> Each page</label>
-        <label class="flex items-center gap-2 text-[13px]">search:
+        <label class="flex items-center gap-2 text-[0.8125rem]"><select name="per_page" class="border border-[#ccc] bg-white px-2 py-1.5" onchange="this.form.submit()" aria-label="Rows per page">@foreach ([10, 25, 50, 100] as $n)<option value="{{ $n }}" @selected($perPage === $n)>{{ $n }}</option>@endforeach</select> Each page</label>
+        <label class="flex items-center gap-2 text-[0.8125rem]">search:
             <input name="q" type="search" value="{{ $q }}" maxlength="80" placeholder="{{ $searchLabel }}" class="w-52 max-w-full border border-[#ccc] px-3 py-1.5"></label>
     </form>
-    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 text-[13px]">
+    <div class="mt-4 flex flex-wrap items-center justify-between gap-3 text-[0.8125rem]">
         <p aria-live="polite">{{ $first }}-{{ $paginator->total() ? $paginator->lastItem() : 0 }} out of {{ $paginator->total() }}</p>
-        <nav aria-label="Pages" class="flex flex-wrap items-stretch text-[13px]">
+        <nav aria-label="Pages" class="flex flex-wrap items-stretch text-[0.8125rem]">
             @if ($paginator->onFirstPage())<span class="{{ $btn }} text-[#999]">Homepage</span><span class="{{ $btn }} text-[#999]">| Previous Page</span>
             @else<a class="{{ $btn }}" href="{{ $paginator->url(1) }}">Homepage</a><a class="{{ $btn }}" href="{{ $paginator->previousPageUrl() }}">| Previous Page</a>@endif
             <form method="GET" class="flex items-center border border-[#ddd] bg-white px-3 text-[#428bb6]">

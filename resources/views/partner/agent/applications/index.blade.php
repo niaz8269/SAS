@@ -1,6 +1,6 @@
 <x-layouts.partner title="Application list" crumb="Application list">
     <x-agent.title>Application list
-        <x-slot name="actions"><button type="button" class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[14px] text-white hover:bg-[#c9453f]" onclick="document.getElementById('advanced').toggleAttribute('hidden')" aria-controls="advanced"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg>Advanced Search</button></x-slot>
+        <x-slot name="actions"><button type="button" class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[0.875rem] text-white hover:bg-[#c9453f]" onclick="document.getElementById('advanced').toggleAttribute('hidden')" aria-controls="advanced"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg>Advanced Search</button></x-slot>
     </x-agent.title>
 
     <form id="advanced" method="GET" action="{{ route('partner.applications.index') }}" class="mt-4 flex flex-wrap items-end gap-3 border border-[#ddd] bg-[#f9f9f9] p-4" @if (! ($filters['stage'] || $filters['from'] || $filters['to'])) hidden @endif>
@@ -17,7 +17,7 @@
         <x-slot name="actions"><a class="inline-flex items-center gap-2 hover:underline" href="{{ route('partner.export.applications') }}">Export CSV</a></x-slot>
         <x-agent.pager :paginator="$plans" search-label="Name/Email/Application number" :q="$filters['q']" :per-page="$perPage" />
         <div class="overflow-x-auto">
-            <table class="w-full text-left text-[13px]">
+            <table class="w-full text-left text-[0.8125rem]">
                 <caption class="sr-only">Applications of your students</caption>
                 <thead><tr>
                     <x-agent.th name="id" :sort="$sort" :dir="$dir">ID</x-agent.th>

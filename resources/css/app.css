@@ -7,6 +7,8 @@
  * SAS design tokens from the logo: navy #123a7a, gold #caa249, cream #f7f3eb. One typeface (Inter, self-hosted from /fonts, so no third-party font requests); CJK text falls back to the system font.
  */
 @theme {
+    /* The scaled desktop design starts at 1200px, so every desktop variant applies from there and the layout does not change between a small laptop and a big monitor. */
+    --breakpoint-xl: 75rem;
     --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-display: var(--font-sans);
     --font-mono: var(--font-sans); /* one typeface everywhere */
@@ -40,8 +42,8 @@
     html { font-size: clamp(15px, calc(14.71px + 0.0893vw), 16px); -webkit-text-size-adjust: 100%; }
     /* Form fields stay at 16px or more on phones so iOS does not zoom the page when one is focused. */
     @media (max-width: 767px) { input, select, textarea { font-size: max(1rem, 16px); } }
-    /* Large monitors (24 to 32 inch and beyond): from 1440px up, the whole interface scales in proportion to the screen width, so it looks exactly as it does on a 1440px laptop, just bigger, with the same margins and full-screen proportions. */
-    @media (min-width: 1440px) { html { font-size: calc(100vw / 90); } }
+    /* Laptops, desktops, monitors and TVs (1200px and wider): one fixed design on a 1440px-wide canvas that is scaled to the screen, so every size, gap and margin keeps the same proportions on a small laptop, a 24 inch monitor and a 32 inch screen. Phones and tablets (under 1200px) have their own layout. Everything is in rem, so the root size alone does the scaling; heights that depend on the screen height (vh) are avoided in this range so the look does not change with the shape of the window. */
+    @media (min-width: 1200px) { html { font-size: calc(100vw / 90); } }
     body { @apply bg-ivory text-ink antialiased; font-family: var(--font-sans); }
     h1, h2, h3, h4 { font-family: var(--font-display); @apply tracking-tight text-ink; }
     a { @apply underline-offset-2; }
@@ -88,6 +90,19 @@
     .hero-inner { padding-block: clamp(1.5rem, 4vh, 4rem); }
     .hero-title { font-size: clamp(2rem, min(7vw, 6.6vh + 0.5rem), 4.75rem); line-height: 1.06; }
     .hero-lead { font-size: clamp(1rem, min(2.4vw, 2.2vh + 0.35rem), 1.35rem); }
+    /* The gaps inside the hero: relative to the screen height on phones and tablets, fixed on the scaled canvas. */
+    .hero-gap { margin-top: clamp(0.75rem, 2.5vh, 1.5rem); }
+    .hero-gap-md { margin-top: clamp(0.75rem, 3vh, 2rem); }
+    .hero-gap-lg { margin-top: clamp(1rem, 4vh, 2.5rem); }
+    @media (min-width: 1200px) {
+        .hero { min-height: 45rem; }
+        .hero-inner { padding-block: 3rem; }
+        .hero-title { font-size: 3.85rem; }
+        .hero-lead { font-size: 1.35rem; }
+        .hero-gap { margin-top: 1.25rem; }
+        .hero-gap-md { margin-top: 1.5rem; }
+        .hero-gap-lg { margin-top: 2rem; }
+    }
 
     .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-navy-600; }
     .section-title { @apply font-extrabold; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); line-height: 1.2; }

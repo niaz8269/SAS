@@ -10,7 +10,7 @@
             <nav aria-label="Breadcrumb" class="text-sm text-white/80"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('universities.index') }}">Universities</a> / <span aria-current="page">{{ $university->name }}</span></nav>
             <div class="mt-5 grid items-center gap-8 lg:grid-cols-[1.1fr_0.9fr]">
                 <div class="text-white">
-                    <h1 class="text-3xl font-extrabold text-white [text-shadow:0_2px_20px_rgba(10,34,80,0.5)] sm:text-4xl lg:text-5xl">{{ $university->name }}</h1>
+                    <h1 class="text-3xl font-extrabold text-white [text-shadow:0_0.125rem_1.25rem_rgba(10,34,80,0.5)] sm:text-4xl lg:text-5xl">{{ $university->name }}</h1>
                     @if ($university->name_zh)<p class="mt-1 text-lg text-white/80" lang="zh-Hans">{{ $university->name_zh }}</p>@endif
                     <dl class="mt-5 grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2">
                         <div><dt class="font-semibold text-gold-soft">Location</dt><dd>{{ $place ?: 'Not listed' }}</dd></div>

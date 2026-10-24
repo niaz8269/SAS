@@ -1,7 +1,7 @@
 @php $intro = \App\Models\PageBlock::builtIn('contact', 'intro'); $aside = \App\Models\PageBlock::builtIn('contact', 'aside'); @endphp
 <x-layouts.public title="Contact" :description="$intro?->subheading ?: 'Send an enquiry to the team. We reply by email or phone as you prefer.'">
     <x-page-blocks page="contact" position="top" />
-    <div class="container-page grid gap-8 py-10 lg:grid-cols-[1fr_320px]">
+    <div class="container-page grid gap-8 py-10 lg:grid-cols-[1fr_20rem]">
         <div>
             <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Contact us' }}</h1>
             <p class="mt-2 text-muted">{{ $intro?->body ?: 'Ask a question or tell us what help you need. Enquiries are free and never create a charge. Please do not include passport numbers or other sensitive details here.' }}</p>

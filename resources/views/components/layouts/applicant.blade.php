@@ -24,9 +24,9 @@
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2">Skip to main content</a>
 
 <header class="bg-[#0b4a8f] text-white">
-    <div class="flex h-[72px] items-center justify-between gap-3 px-3 sm:px-6">
-        <a href="{{ $agent ? route('partner.home') : route('student.dashboard') }}" aria-label="{{ config('sas.brand.short') }} home"><span class="flex items-center gap-3"><x-brand compact class="[&_img]:!h-[54px] [&_img]:!w-[54px] [&_img]:rounded-full [&_img]:ring-2 [&_img]:ring-white" /><span class="hidden text-[26px] font-semibold tracking-[0.25em] sm:inline" aria-hidden="true">SAS</span></span></a>
-        <nav aria-label="Application" class="hidden items-center gap-5 text-[15px] md:flex">
+    <div class="flex h-[4.5rem] items-center justify-between gap-3 px-3 sm:px-6">
+        <a href="{{ $agent ? route('partner.home') : route('student.dashboard') }}" aria-label="{{ config('sas.brand.short') }} home"><span class="flex items-center gap-3"><x-brand compact class="[&_img]:!h-[3.375rem] [&_img]:!w-[3.375rem] [&_img]:rounded-full [&_img]:ring-2 [&_img]:ring-white" /><span class="hidden text-[1.625rem] font-semibold tracking-[0.25em] sm:inline" aria-hidden="true">SAS</span></span></a>
+        <nav aria-label="Application" class="hidden items-center gap-5 text-[0.9375rem] md:flex">
             @if ($agent)
                 <a class="hover:underline" href="{{ route('partner.home') }}">Agent backend</a>
                 <a class="hover:underline" href="{{ route('partner.student.show', $context->student->public_id) }}">{{ $context->student->name }}</a>
@@ -57,7 +57,7 @@
     </div>
 </header>
 
-<main id="main" class="mx-auto w-full max-w-[1100px] px-4 py-8 sm:px-6">
+<main id="main" class="mx-auto w-full max-w-[68.75rem] px-4 py-8 sm:px-6">
     <x-flash />
     {{ $slot }}
 </main>

@@ -1,6 +1,6 @@
 <x-layouts.partner title="Student list" crumb="Student list">
     <x-agent.title>Student list
-        <x-slot name="actions"><button type="button" class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[14px] text-white hover:bg-[#c9453f]" onclick="document.getElementById('advanced').toggleAttribute('hidden')" aria-controls="advanced"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg>Advanced Search</button></x-slot>
+        <x-slot name="actions"><button type="button" class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[0.875rem] text-white hover:bg-[#c9453f]" onclick="document.getElementById('advanced').toggleAttribute('hidden')" aria-controls="advanced"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg>Advanced Search</button></x-slot>
     </x-agent.title>
 
     <form id="advanced" method="GET" action="{{ route('partner.students.index') }}" class="mt-4 flex flex-wrap items-end gap-3 border border-[#ddd] bg-[#f9f9f9] p-4" @if (! $q) hidden @endif>
@@ -17,7 +17,7 @@
         </x-slot>
         <x-agent.pager :paginator="$students" search-label="Name/Email" :q="$q" :per-page="$perPage" />
         <div class="overflow-x-auto">
-            <table class="w-full text-left text-[14px]">
+            <table class="w-full text-left text-[0.875rem]">
                 <caption class="sr-only">Your students</caption>
                 <thead><tr>
                     <x-agent.th name="id" :sort="$sort" :dir="$dir">ID</x-agent.th>

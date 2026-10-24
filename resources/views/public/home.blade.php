@@ -12,7 +12,7 @@
     <section class="hero relative isolate overflow-hidden bg-navy-900">
         <img src="{{ $s->image_path ? $media($s->image_path) : asset('images/hero-shanghai.jpg') }}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" width="2400" height="1600" fetchpriority="high">
         @unless ($s->image_path)
-            <img src="{{ asset('images/hero-globe.webp') }}" alt="" class="pointer-events-none absolute left-1/2 top-[22%] -z-20 aspect-square h-[44%] max-w-[64%] -translate-x-1/2 object-contain object-top [filter:drop-shadow(0_24px_32px_rgba(10,34,80,0.4))]" width="1000" height="1000">
+            <img src="{{ asset('images/hero-globe.webp') }}" alt="" class="pointer-events-none absolute left-1/2 top-[22%] -z-20 aspect-square h-[44%] max-w-[64%] -translate-x-1/2 object-contain object-top [filter:drop-shadow(0_1.5rem_2rem_rgba(10,34,80,0.4))]" width="1000" height="1000">
             {{-- The same photograph again with only the buildings and water kept, drawn over the globe so the globe sits behind the towers. --}}
             <img src="{{ asset('images/hero-skyline.webp') }}" alt="" class="pointer-events-none absolute inset-0 -z-20 h-full w-full object-cover object-center" width="2400" height="1600">
         @endunless
@@ -20,14 +20,14 @@
         <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(202,162,73,0.18),transparent_60%)]" aria-hidden="true"></div>
         <div class="container-page hero-inner relative flex flex-col items-center text-center">
             @if ($s->eyebrow)<p class="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true"></span>{{ $s->eyebrow }}</p>@endif
-            <h1 class="hero-title mt-[clamp(0.75rem,2.5vh,1.5rem)] max-w-5xl font-extrabold text-white [text-shadow:0_2px_24px_rgba(10,34,80,0.55)]">{!! nl2br(e($s->heading)) !!}</h1>
-            <div class="mt-[clamp(0.75rem,2.5vh,1.5rem)] h-1 w-24 rounded-full bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></div>
-            @if ($s->body)<p class="hero-lead mt-[clamp(0.75rem,2.5vh,1.5rem)] max-w-2xl leading-relaxed text-white/85">{{ $s->body }}</p>@endif
-            <div class="mt-[clamp(0.75rem,3vh,2rem)] flex flex-wrap justify-center gap-3">
+            <h1 class="hero-title hero-gap max-w-5xl font-extrabold text-white [text-shadow:0_0.125rem_1.5rem_rgba(10,34,80,0.55)]">{!! nl2br(e($s->heading)) !!}</h1>
+            <div class="hero-gap h-1 w-24 rounded-full bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></div>
+            @if ($s->body)<p class="hero-lead hero-gap max-w-2xl leading-relaxed text-white/85">{{ $s->body }}</p>@endif
+            <div class="hero-gap-md flex flex-wrap justify-center gap-3">
                 @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="btn-gold btn-lg rounded-lg shadow-lg shadow-black/20">{{ $s->cta_label }} <span aria-hidden="true">&rarr;</span></a>@endif
                 @if ($s->cta2_label)<a href="{{ $href($s->cta2_url) }}" class="btn btn-lg rounded-lg border border-white/70 bg-white/10 text-white backdrop-blur transition hover:bg-white hover:text-navy-900">{{ $s->cta2_label }}</a>@endif
             </div>
-            <form method="GET" action="{{ route('scholarships.index') }}" class="mt-[clamp(1rem,4vh,2.5rem)] w-full max-w-5xl rounded-2xl border border-white/30 bg-white/95 p-4 text-left shadow-2xl shadow-navy-900/30 backdrop-blur sm:p-5" role="search" aria-labelledby="hero-search">
+            <form method="GET" action="{{ route('scholarships.index') }}" class="hero-gap-lg w-full max-w-5xl rounded-2xl border border-white/30 bg-white/95 p-4 text-left shadow-2xl shadow-navy-900/30 backdrop-blur sm:p-5" role="search" aria-labelledby="hero-search">
                 <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
                     <h2 id="hero-search" class="text-base font-bold sm:text-lg">{{ $s->subheading ?: 'Search scholarships' }}</h2>
                     <p class="hidden text-sm text-muted sm:block">Find the right opportunities for your goals.</p>

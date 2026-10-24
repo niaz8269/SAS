@@ -33,7 +33,7 @@
 <body class="min-h-screen flex flex-col">
 <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:shadow">Skip to main content</a>
 
-<header class="sticky top-0 z-40 border-b border-line bg-white/90 shadow-[0_1px_0_rgba(18,58,122,0.04),0_8px_24px_-16px_rgba(18,58,122,0.25)] backdrop-blur-md" x-data="{ open: false }" @keydown.escape.window="open = false">
+<header class="sticky top-0 z-40 border-b border-line bg-white/90 shadow-[0_0.0625rem_0_rgba(18,58,122,0.04),0_0.5rem_1.5rem_-1rem_rgba(18,58,122,0.25)] backdrop-blur-md" x-data="{ open: false }" @keydown.escape.window="open = false">
     <div class="h-1 bg-gradient-to-r from-navy-800 via-navy-600 to-gold" aria-hidden="true"></div>
     <div class="flex h-[5.25rem] w-full items-center justify-between gap-4 pl-1.5 pr-4 sm:pr-6 lg:pr-8">
         <a href="{{ route('home') }}" class="shrink-0" aria-label="{{ config('sas.brand.name') }} – home"><x-brand class="[&_img]:!h-14 min-[1280px]:[&_img]:!h-[4.25rem] [&_img]:!max-w-none" /></a>

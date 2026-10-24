@@ -6,7 +6,7 @@
         <p class="mt-3 max-w-3xl text-lg text-muted">{{ $service->summary }}</p>
     </div></section>
 
-    <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_320px]">
+    <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_20rem]">
         <div class="space-y-6">
             @if ($service->audience)<section class="card p-6"><h2 class="text-lg font-bold">Who it is for</h2><p class="mt-2">{{ $service->audience }}</p></section>@endif
             @if ($service->description)<section class="card p-6 prose-sas">{!! \App\Support\Html::clean($service->description) !!}</section>@endif

@@ -10,7 +10,7 @@
         </p>
     </div></section>
 
-    <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_320px]">
+    <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_20rem]">
         <div>
             @if ($country->study_guidance)<div class="prose-sas">{!! \App\Support\Html::clean($country->study_guidance) !!}</div>@endif
 

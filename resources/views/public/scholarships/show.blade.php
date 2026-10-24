@@ -36,7 +36,7 @@
         </div>
     </section>
 
-    <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_340px]">
+    <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_21.25rem]">
         <div class="space-y-8">
             {{-- Full timeline (DIR-07): every stage is shown; a stage the source does not date says so. Routes are never merged into one misleading date. --}}
             @php

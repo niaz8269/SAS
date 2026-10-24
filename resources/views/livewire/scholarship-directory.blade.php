@@ -1,5 +1,5 @@
 <div x-data="{ filtersOpen: false }">
-    <div class="grid gap-6 lg:grid-cols-[280px_1fr]">
+    <div class="grid gap-6 lg:grid-cols-[17.5rem_1fr]">
         {{-- Filters --}}
         <aside aria-label="Filters">
             <button type="button" class="btn-outline w-full lg:hidden" @click="filtersOpen = !filtersOpen" :aria-expanded="filtersOpen.toString()" aria-controls="filter-panel">
