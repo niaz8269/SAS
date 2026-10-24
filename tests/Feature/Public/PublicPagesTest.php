@@ -40,7 +40,7 @@ class PublicPagesTest extends TestCase
     public function test_the_homepage_has_a_fixed_whatsapp_button_that_follows_the_configured_number(): void
     {
         config(['sas.contact_whatsapp' => '+44 7700 900123']);
-        $this->get('/')->assertOk()->assertSee('https://wa.me/447700900123?text=', false)->assertSee('fixed left-0', false);
+        $this->get('/')->assertOk()->assertSee('https://wa.me/447700900123?text=', false)->assertSee('fixed bottom-5 left-5', false);
 
         config(['sas.contact_whatsapp' => '']);
         $this->get('/')->assertOk()->assertDontSee('wa.me/', false);
