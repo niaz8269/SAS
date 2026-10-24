@@ -27,7 +27,7 @@ class HomeSectionResource extends Resource
 {
     use ChecksPermission;
 
-    public const BUILT_IN = ['hero', 'degrees', 'featured', 'closing_soon', 'destinations', 'services', 'how', 'resources', 'consultation', 'trust', 'testimonials'];
+    public const BUILT_IN = ['hero', 'degrees', 'featured', 'closing_soon', 'destinations', 'services', 'how', 'resources', 'consultation', 'trust', 'testimonials', 'stats', 'universities'];
 
     protected static ?string $model = HomeSection::class;
 

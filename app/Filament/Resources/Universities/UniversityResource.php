@@ -7,6 +7,8 @@ use App\Filament\Resources\Universities\Pages\ManageUniversities;
 use App\Filament\Support\MediaPicker;
 use App\Models\University;
 use BackedEnum;
+use Filament\Actions\BulkAction;
+use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
@@ -22,6 +24,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
+use Illuminate\Support\Collection;
 
 class UniversityResource extends Resource
 {
@@ -87,6 +90,10 @@ class UniversityResource extends Resource
                     ->queries(true: fn ($query) => $query->has('programmes'), false: fn ($query) => $query->doesntHave('programmes'), blank: fn ($query) => $query),
             ])
             ->recordActions([EditAction::make(), DeleteAction::make()])
+            ->toolbarActions([BulkActionGroup::make([
+                BulkAction::make('show')->label('Show on the public pages')->icon('heroicon-o-eye')->action(fn (Collection $records) => $records->each->update(['published' => true]))->deselectRecordsAfterCompletion()->requiresConfirmation(),
+                BulkAction::make('hide')->label('Hide from the public pages')->icon('heroicon-o-eye-slash')->action(fn (Collection $records) => $records->each->update(['published' => false]))->deselectRecordsAfterCompletion()->requiresConfirmation(),
+            ])])
             ->defaultSort('name');
     }
 

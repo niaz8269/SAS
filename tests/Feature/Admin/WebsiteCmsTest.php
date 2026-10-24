@@ -35,7 +35,7 @@ class WebsiteCmsTest extends TestCase
 
     public function test_defaults_are_seeded_so_the_site_works_before_anything_is_edited(): void
     {
-        $this->assertSame(11, HomeSection::count());
+        $this->assertSame(13, HomeSection::count());
         $this->assertGreaterThanOrEqual(7, MenuItem::where('location', 'header')->count());
         $this->get('/')->assertOk()->assertSee('A world of possibilities.')->assertSee('How the platform works')->assertSee('Scholarships');
     }

@@ -57,7 +57,7 @@ class ScholarshipImporter
     /** Parses and validates every row; nothing is written to scholarship tables. */
     public function stage(string $path, string $filename, ?User $by = null): Import
     {
-        $import = Import::create(['user_id' => $by?->id, 'filename' => basename($filename), 'schema_version' => self::SCHEMA_VERSION, 'status' => 'staged']);
+        $import = Import::create(['user_id' => $by?->id, 'kind' => 'scholarships', 'filename' => basename($filename), 'schema_version' => self::SCHEMA_VERSION, 'status' => 'staged']);
 
         $handle = fopen($path, 'r');
         if (! $handle) {

@@ -26,8 +26,12 @@ class RowsRelationManager extends RelationManager
             TextColumn::make('row_number')->label('Row')->sortable(),
             TextColumn::make('status')->badge()->color(fn ($s) => $s === 'valid' ? 'success' : 'danger'),
             TextColumn::make('action')->badge()->placeholder('-'),
-            TextColumn::make('payload.programme_title')->label('Programme')->limit(40),
-            TextColumn::make('payload.cycle_year')->label('Year'),
+            TextColumn::make('item')->label('Item')->limit(60)->getStateUsing(function ($record) {
+                $p = $record->payload ?? [];
+
+                return $p['programme_title'] ?? $p['name'] ?? trim(($p['university'] ?? '').' · '.($p['name_en'] ?? '' ?: ($p['name_zh'] ?? '')), ' ·') ?: null;
+            }),
+            TextColumn::make('payload.cycle_year')->label('Year')->placeholder('-'),
             TextColumn::make('errors')->formatStateUsing(fn ($state) => is_array($state) ? implode(' | ', $state) : $state)->wrap()->color('danger'),
             IconColumn::make('applied')->boolean(),
         ])->filters([SelectFilter::make('status')->options(['valid' => 'Valid', 'invalid' => 'Invalid'])])->defaultSort('row_number')->paginated([25, 50, 100]);

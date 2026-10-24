@@ -6,6 +6,8 @@ use App\Filament\Concerns\ChecksPermission;
 use App\Filament\Resources\UniversityProgrammes\Pages\ManageUniversityProgrammes;
 use App\Models\UniversityProgramme;
 use BackedEnum;
+use Filament\Actions\BulkAction;
+use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\Select;
@@ -20,6 +22,7 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 
 /** The programmes a university lists on the official study-in-China system. Staff can correct names and details; imports never overwrite staff-entered English names. */
 class UniversityProgrammeResource extends Resource
@@ -88,6 +91,10 @@ class UniversityProgrammeResource extends Resource
                 SelectFilter::make('name_en_source')->label('English name')->options(['official' => 'Official', 'translated' => 'Translated, to verify', 'staff' => 'Checked by staff']),
             ])
             ->recordActions([EditAction::make(), DeleteAction::make()])
+            ->toolbarActions([BulkActionGroup::make([
+                BulkAction::make('show')->label('Show on the public pages')->icon('heroicon-o-eye')->action(fn (Collection $records) => $records->each->update(['published' => true]))->deselectRecordsAfterCompletion()->requiresConfirmation(),
+                BulkAction::make('hide')->label('Hide from the public pages')->icon('heroicon-o-eye-slash')->action(fn (Collection $records) => $records->each->update(['published' => false]))->deselectRecordsAfterCompletion()->requiresConfirmation(),
+            ])])
             ->defaultSort('university_id');
     }
 

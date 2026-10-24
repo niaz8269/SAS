@@ -17,7 +17,7 @@ class UniversityProgramme extends Model
 
     protected function casts(): array
     {
-        return ['csc_eligible' => 'boolean', 'duration_years' => 'float', 'tuition_cny' => 'integer'];
+        return ['csc_eligible' => 'boolean', 'published' => 'boolean', 'duration_years' => 'float', 'tuition_cny' => 'integer'];
     }
 
     protected static function booted(): void

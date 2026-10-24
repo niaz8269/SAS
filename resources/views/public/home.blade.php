@@ -57,6 +57,43 @@
     </section>
     @endif    @break
 
+@case('stats')
+    <section class="container-page py-8" aria-label="SAS in numbers">
+        <ul class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+            @foreach ($stats as $stat)
+                @continue($stat['value'] < 1)
+                <li><a href="{{ $stat['url'] }}" class="card block h-full px-5 py-5 text-center transition hover:border-navy-500 hover:shadow-md">
+                    <span class="block text-3xl font-extrabold text-navy-800 sm:text-4xl">{{ number_format($stat['value']) }}</span>
+                    <span class="mt-1 block text-sm text-muted">{{ $stat['label'] }}</span>
+                </a></li>
+            @endforeach
+        </ul>
+    </section>
+    @break
+
+@case('universities')
+    @if ($universities->isNotEmpty())
+    <section class="container-page py-10" aria-labelledby="home-universities">
+        <div class="flex flex-wrap items-end justify-between gap-3">
+            <div>@if ($s->eyebrow)<p class="eyebrow">{{ $s->eyebrow }}</p>@endif<h2 id="home-universities" class="section-title mt-1">{{ $s->heading }}</h2>
+                @if ($s->subheading)<p class="mt-1 text-muted">{{ $s->subheading }}</p>@endif</div>
+            @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="text-sm font-semibold text-navy-700 underline">{{ $s->cta_label }} &rarr;</a>@endif
+        </div>
+        <ul class="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
+            @foreach ($universities as $u)
+                <li class="card overflow-hidden transition hover:shadow-md">
+                    <a href="{{ route('universities.show', $u) }}" class="block">
+                        <img src="{{ $u->imageUrl() }}" alt="" class="aspect-[4/3] w-full object-cover" loading="lazy" width="640" height="480">
+                        <span class="block p-4"><span class="block font-bold leading-snug">{{ $u->name }}</span>
+                            <span class="mt-1 block text-xs text-muted">{{ collect([$u->city, $u->province])->filter()->unique()->implode(', ') }}</span>
+                            <span class="mt-1 block text-xs font-medium text-navy-700">{{ number_format($u->programmes_count) }} programmes</span></span>
+                    </a>
+                </li>
+            @endforeach
+        </ul>
+    </section>
+    @endif
+    @break
 @case('degrees')
     @if ($degrees->isNotEmpty())
     <section class="container-page py-10" aria-labelledby="by-degree">
@@ -71,20 +108,20 @@
     @break
 
 @case('featured')
+    @if ($featured->isNotEmpty())
     <section class="container-page py-10" aria-labelledby="featured">
         <div class="flex flex-wrap items-end justify-between gap-3">
             <div>@if ($s->eyebrow)<p class="eyebrow">{{ $s->eyebrow }}</p>@endif<h2 id="featured" class="section-title mt-1">{{ $s->heading }}</h2></div>
             @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="text-sm font-semibold text-navy-700 underline">{{ $s->cta_label }} &rarr;</a>@endif
         </div>
-        @if ($featured->isEmpty())
-            <p class="card mt-5 p-6 text-sm text-muted">Featured scholarships appear here once our editors have verified and published them. <a class="text-navy-700 underline" href="{{ route('scholarships.index') }}">Browse the directory</a>.</p>
-        @else
-            <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">@foreach ($featured as $c)<x-cycle-card :cycle="$c" />@endforeach</div>
-        @endif
+        @if ($featuredIsFallback)<p class="mt-1 text-sm text-muted">The calls our editors checked most recently.</p>@endif
+        <div class="mt-5 grid gap-5 md:grid-cols-2 lg:grid-cols-3">@foreach ($featured as $c)<x-cycle-card :cycle="$c" />@endforeach</div>
     </section>
+    @endif
     @break
 
 @case('closing_soon')
+    @if ($closingSoon->isNotEmpty() || $nextDeadlines->isNotEmpty())
     <section class="container-page py-6" aria-labelledby="closing-soon">
         <div class="rounded-xl border border-alert/30 bg-alert-soft p-5">
             <div class="flex flex-wrap items-center justify-between gap-2">
@@ -93,51 +130,49 @@
             </div>
             @if ($s->body)<p class="mt-1 text-sm text-ink/80">{{ $s->body }}</p>@endif
             @if ($closingSoon->isEmpty())
-                <p class="mt-4 text-sm text-muted">No verified deadlines are closing in the next {{ config('sas.deadlines.closing_soon_days') }} days.</p>
+                <p class="mt-4 text-sm text-ink/80">Nothing closes in the next {{ config('sas.deadlines.closing_soon_days') }} days. These are the next confirmed deadlines.</p>
+                <div class="mt-4 grid gap-4 md:grid-cols-3">@foreach ($nextDeadlines as $c)<x-cycle-card :cycle="$c" />@endforeach</div>
             @else
                 <div class="mt-4 grid gap-4 md:grid-cols-3">@foreach ($closingSoon as $c)<x-cycle-card :cycle="$c" />@endforeach</div>
             @endif
         </div>
     </section>
+    @endif
     @break
 
 @case('destinations')
+    @if ($destinations->isNotEmpty())
     <section class="container-page py-10" aria-labelledby="destinations">
         <div class="flex flex-wrap items-end justify-between gap-3">
             <div><h2 id="destinations" class="section-title">{{ $s->heading }}</h2>
                 @if ($s->subheading)<p class="mt-1 text-muted">{{ $s->subheading }}</p>@endif</div>
             @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="text-sm font-semibold text-navy-700 underline">{{ $s->cta_label }} &rarr;</a>@endif
         </div>
-        @if ($destinations->isEmpty())
-            <p class="card mt-5 p-6 text-sm text-muted">Destination guides will appear here once reviewed and published.</p>
-        @else
-            <ul class="mt-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
-                @foreach ($destinations as $c)
-                    <li><x-destination-card :country="$c" size="sm" /></li>
-                @endforeach
-            </ul>
-        @endif
+        <ul class="mt-5 grid grid-cols-2 gap-4 lg:grid-cols-4">
+            @foreach ($destinations as $c)
+                <li><x-destination-card :country="$c" size="sm" /></li>
+            @endforeach
+        </ul>
     </section>
+    @endif
     @break
 
 @case('services')
+    @if ($services->isNotEmpty())
     <section class="bg-navy-50/60 py-12" aria-labelledby="services">
         <div class="container-page">
             <div class="flex flex-wrap items-end justify-between gap-3">
                 <div><h2 id="services" class="section-title">{{ $s->heading }}</h2>@if ($s->subheading)<p class="mt-1 text-muted">{{ $s->subheading }}</p>@endif</div>
                 @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="text-sm font-semibold text-navy-700 underline">{{ $s->cta_label }} &rarr;</a>@endif
             </div>
-            @if ($services->isEmpty())
-                <p class="card mt-5 p-6 text-sm text-muted">Service pages will appear here once published. You can still <a class="text-navy-700 underline" href="{{ route('contact') }}">send us an enquiry</a>.</p>
-            @else
-                <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    @foreach ($services as $svc)
-                        <li><a href="{{ route('services.show', $svc) }}" class="card block h-full p-5 hover:border-navy-500"><h3 class="font-bold">{{ $svc->name }}</h3><p class="mt-1 text-sm text-muted">{{ $svc->summary }}</p></a></li>
-                    @endforeach
-                </ul>
-            @endif
+            <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                @foreach ($services as $svc)
+                    <li><a href="{{ route('services.show', $svc) }}" class="card block h-full p-5 hover:border-navy-500"><h3 class="font-bold">{{ $svc->name }}</h3><p class="mt-1 text-sm text-muted">{{ $svc->summary }}</p></a></li>
+                @endforeach
+            </ul>
         </div>
     </section>
+    @endif
     @break
 
 @case('how')
@@ -152,21 +187,19 @@
     @break
 
 @case('resources')
+    @if ($articles->isNotEmpty())
     <section class="container-page pb-10" aria-labelledby="resources">
         <div class="flex flex-wrap items-end justify-between gap-3">
             <h2 id="resources" class="section-title">{{ $s->heading }}</h2>
             @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="text-sm font-semibold text-navy-700 underline">{{ $s->cta_label }} &rarr;</a>@endif
         </div>
-        @if ($articles->isEmpty())
-            <p class="card mt-5 p-6 text-sm text-muted">Guides and articles will appear here once published.</p>
-        @else
-            <div class="mt-5 grid gap-5 md:grid-cols-3">
-                @foreach ($articles as $a)
-                    <article class="card p-5"><p class="eyebrow">{{ ucfirst($a->category) }}</p><h3 class="mt-1 text-lg font-bold"><a class="hover:underline" href="{{ route('resources.show', $a) }}">{{ $a->title }}</a></h3><p class="mt-1 text-sm text-muted">{{ $a->excerpt }}</p></article>
-                @endforeach
-            </div>
-        @endif
+        <div class="mt-5 grid gap-5 md:grid-cols-3">
+            @foreach ($articles as $a)
+                <article class="card p-5"><p class="eyebrow">{{ ucfirst($a->category) }}</p><h3 class="mt-1 text-lg font-bold"><a class="hover:underline" href="{{ route('resources.show', $a) }}">{{ $a->title }}</a></h3><p class="mt-1 text-sm text-muted">{{ $a->excerpt }}</p></article>
+            @endforeach
+        </div>
     </section>
+    @endif
     @break
 
 @case('consultation')

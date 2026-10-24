@@ -11,6 +11,8 @@ use App\Models\CycleBenefit;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipRoute;
 use App\Models\Service;
+use App\Models\University;
+use App\Models\UniversityProgramme;
 use App\Models\User;
 use App\Support\Html;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -114,6 +116,35 @@ class PublicPagesTest extends TestCase
         $draft = ScholarshipCycle::factory()->create();
         $route = ScholarshipRoute::create(['cycle_id' => $draft->id, 'route_type' => 'other', 'name' => 'X', 'application_url' => 'https://example.org']);
         $this->get(route('scholarships.out', $route))->assertNotFound();
+    }
+
+    public function test_the_homepage_shows_real_figures_and_never_an_empty_apology_box(): void
+    {
+        $cycle = $this->publishedCycle(['last_verified_at' => now()->subDay()], $this->exactDeadline('+200 days'));
+        $cycle->programme->update(['title' => 'Recently Checked Award']);
+        $uni = new University;
+        $uni->forceFill(['name' => 'Showcase University', 'slug' => 'showcase-university', 'csc_key' => 'S-1', 'published' => true, 'city' => 'Wuhan'])->save();
+        (new UniversityProgramme)->forceFill(['university_id' => $uni->id, 'level' => 'master', 'name_zh' => '法学', 'published' => true])->save();
+
+        $html = $this->get('/')->assertOk()->getContent();
+
+        $this->assertStringContainsString('SAS in numbers', $html);
+        $this->assertStringContainsString('verified scholarship calls', $html);
+        $this->assertStringContainsString('Showcase University', $html, 'a real university from the catalogue is shown');
+        $this->assertStringContainsString('1 programmes', $html);
+        $this->assertStringContainsString('Recently Checked Award', $html, 'with nothing flagged as featured, the most recently checked call is shown');
+        $this->assertStringContainsString('Nothing closes in the next', $html);
+        $this->assertStringContainsString('next confirmed deadlines', $html, 'the closing-soon box shows the next deadlines instead of saying there are none');
+        $this->assertStringNotContainsString('will appear here', $html, 'no "will appear here" placeholder boxes');
+        $this->assertStringNotContainsString('id="resources"', $html, 'a section with nothing to show is left out');
+    }
+
+    public function test_the_homepage_fallbacks_still_respect_the_recheck_rule(): void
+    {
+        $stale = $this->publishedCycle(['last_verified_at' => now()->subDay(), 'review_due_at' => now()->subDay()], $this->exactDeadline('+200 days'));
+        $stale->programme->update(['title' => 'Overdue Award']);
+
+        $this->get('/')->assertOk()->assertDontSee('Overdue Award');
     }
 
     public function test_homepage_closing_soon_excludes_unknown_closed_and_rolling_calls(): void
