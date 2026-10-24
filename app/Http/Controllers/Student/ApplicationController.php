@@ -56,6 +56,23 @@ class ApplicationController extends Controller
         return redirect()->to($this->ctx($request)->route('applications.show', $plan))->with('status', 'Added to your applications. Follow the four steps to apply. Nothing is sent to the funder yet.');
     }
 
+    /** Starts one application for each ticked scholarship (the ones already started are left alone). */
+    public function storeMany(Request $request, PlanService $plans)
+    {
+        $data = $request->validate(['cycle_ids' => ['required', 'array', 'min:1', 'max:25'], 'cycle_ids.*' => ['integer']], ['cycle_ids.required' => 'Tick at least one scholarship first.']);
+        $student = $this->student($request);
+        $already = $student->applicationPlans()->pluck('cycle_id')->all();
+        $started = 0;
+        foreach (ScholarshipCycle::visible()->whereIn('id', $data['cycle_ids'])->get() as $cycle) {
+            if (! in_array($cycle->id, $already, true)) {
+                $plans->create($student, $cycle);
+                $started++;
+            }
+        }
+
+        return redirect()->to($this->ctx($request)->route('applications.index'))->with('status', $started.' '.str('application')->plural($started).' started'.($started < count($data['cycle_ids']) ? ' (the others were already started or not open)' : '').'. Open each one to follow the four steps. Nothing is sent to a funder yet.');
+    }
+
     /** Step 1: Apply now. Confirm the scholarship, the degree and the language of study. */
     public function show(Request $request, ApplicationPlan $plan, Requirements $requirements, StudyLanguages $languages)
     {

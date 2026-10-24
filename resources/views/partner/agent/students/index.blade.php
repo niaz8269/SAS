@@ -13,6 +13,7 @@
         <x-slot name="actions">
             <a class="inline-flex items-center gap-2 hover:underline" href="{{ route('partner.students.create') }}"><span class="text-lg leading-none" aria-hidden="true">+</span> Add students</a>
             <a class="inline-flex items-center gap-2 hover:underline" href="{{ route('partner.students.import') }}"><span class="text-lg leading-none" aria-hidden="true">+</span> Batch import</a>
+            <a class="inline-flex items-center gap-2 hover:underline" href="{{ route('partner.export.students') }}">Export CSV</a>
         </x-slot>
         <x-agent.pager :paginator="$students" search-label="Name/Email" :q="$q" :per-page="$perPage" />
         <div class="overflow-x-auto">

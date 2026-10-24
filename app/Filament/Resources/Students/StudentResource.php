@@ -8,6 +8,7 @@ use App\Domain\Counselling\Counselling;
 use App\Domain\Counselling\StudentGaps;
 use App\Filament\Resources\Students\Pages\ListStudents;
 use App\Filament\Resources\Students\Pages\ViewStudent;
+use App\Filament\Resources\Students\RelationManagers\AgentMessagesRelationManager;
 use App\Filament\Resources\Students\RelationManagers\ApplicationsRelationManager;
 use App\Filament\Resources\Students\RelationManagers\CasesRelationManager;
 use App\Filament\Resources\Students\RelationManagers\DocumentsRelationManager;
@@ -232,7 +233,7 @@ class StudentResource extends Resource
 
     public static function getRelations(): array
     {
-        return [MessagesRelationManager::class, FollowUpsRelationManager::class, DocumentsRelationManager::class, ApplicationsRelationManager::class, CasesRelationManager::class];
+        return [MessagesRelationManager::class, AgentMessagesRelationManager::class, FollowUpsRelationManager::class, DocumentsRelationManager::class, ApplicationsRelationManager::class, CasesRelationManager::class];
     }
 
     public static function getPages(): array

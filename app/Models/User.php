@@ -108,6 +108,11 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
         return $this->hasOne(StudentGoal::class, 'student_id');
     }
 
+    public function agentMessages(): HasMany
+    {
+        return $this->hasMany(AgentMessage::class, 'student_id');
+    }
+
     public function counsellorMessages(): HasMany
     {
         return $this->hasMany(CounsellorMessage::class, 'student_id');

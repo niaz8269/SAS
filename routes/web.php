@@ -104,6 +104,7 @@ $applicationRoutes = function () {
 
     Route::get('/applications', [Student\ApplicationController::class, 'index'])->name('applications.index');
     Route::post('/applications', [Student\ApplicationController::class, 'store'])->name('applications.store');
+    Route::post('/applications/many', [Student\ApplicationController::class, 'storeMany'])->name('applications.store-many');
     Route::get('/applications/{plan:public_id}', [Student\ApplicationController::class, 'show'])->name('applications.show');
     Route::get('/applications/{plan:public_id}/form', [Student\ApplicationFormController::class, 'show'])->name('applications.form');
     Route::put('/applications/{plan:public_id}/form', [Student\ApplicationFormController::class, 'update'])->name('applications.form.update');
@@ -210,12 +211,16 @@ Route::prefix('partner')->name('partner.')->middleware(['auth', 'active', 'verif
         Route::get('/students/import/template', [AgentStudentController::class, 'template'])->name('students.template');
         Route::post('/students/import', [AgentStudentController::class, 'import'])->middleware('throttle:enquiries')->name('students.import.store');
         Route::get('/applications', [AgentApplicationController::class, 'index'])->name('applications.index');
+        Route::get('/export/students', [\App\Http\Controllers\Partner\AgentExportController::class, 'students'])->name('export.students');
+        Route::get('/export/applications', [\App\Http\Controllers\Partner\AgentExportController::class, 'applications'])->name('export.applications');
+        Route::get('/statement', [\App\Http\Controllers\Partner\AgentExportController::class, 'statement'])->name('statement');
 
         Route::prefix('students/{student:public_id}')->name('student.')->middleware('student.context')->group(function () use ($applicationRoutes) {
             Route::get('/', [AgentStudentController::class, 'show'])->name('show');
             Route::get('/edit', [AgentStudentController::class, 'edit'])->name('edit');
             Route::put('/', [AgentStudentController::class, 'update'])->name('update');
             Route::post('/invite', [AgentStudentController::class, 'invite'])->middleware('throttle:enquiries')->name('invite');
+            Route::post('/message', [\App\Http\Controllers\Partner\AgentMessageController::class, 'store'])->middleware('throttle:enquiries')->name('message');
             $applicationRoutes();
         });
     });

@@ -48,6 +48,7 @@ class AgentStudentController extends Controller
         return view('partner.agent.students.show', [
             'student' => $student, 'plans' => $student->applicationPlans()->with('cycle.programme')->latest()->get(),
             'formPercent' => $forms->percent($forms->formFor($student)), 'ctx' => app(StudentContext::class),
+            'messages' => $student->agentMessages()->with('author')->oldest('id')->get(),
         ]);
     }
 

@@ -30,4 +30,24 @@
             </tbody>
         </table>
     </x-agent.list>
+    <section id="sas" class="mt-6 max-w-4xl border border-[#ddd]" aria-labelledby="sas-h">
+        <h2 id="sas-h" class="border-b border-[#ddd] bg-[#ececec] px-3 py-2 text-[15px] font-bold">Messages with SAS about {{ $student->name }}</h2>
+        <p class="px-4 pt-3 text-[13px] text-[#666]">Ask SAS about this student's application or documents. Only your agency and SAS staff see these messages, not the student.</p>
+        <ul class="space-y-2 px-4 py-3">
+            @forelse ($messages as $m)
+                <li class="max-w-[85%] border p-3 text-[13px] {{ $m->from_agent ? 'ml-auto border-[#bcd7ea] bg-[#eef6fb]' : 'border-[#ddd] bg-white' }}">
+                    <p class="text-[12px] text-[#777]">{{ $m->from_agent ? ($m->author?->name ?: 'Your agency') : ($m->author?->name ?: 'SAS').' (SAS)' }} &middot; {{ $m->created_at->format('j M Y, H:i') }}</p>
+                    <p class="mt-1 whitespace-pre-line">{{ $m->body }}</p>
+                </li>
+            @empty
+                <li class="text-[13px] text-[#777]">No messages yet.</li>
+            @endforelse
+        </ul>
+        <form method="POST" action="{{ route('partner.student.message', $student->public_id) }}" class="space-y-2 border-t border-[#eee] p-4">@csrf
+            <label for="sas-body" class="block text-[13px] font-semibold">Write to SAS</label>
+            <textarea id="sas-body" name="body" rows="3" maxlength="2000" required class="w-full border border-[#ccc] px-3 py-2 text-[14px] @error('body') border-[#d9534f] @enderror">{{ old('body') }}</textarea>
+            @error('body')<p class="text-[13px] text-[#d9534f]" role="alert">{{ $message }}</p>@enderror
+            <button class="bg-[#307cc7] px-6 py-2 text-white hover:bg-[#2a6fb4]">Send</button>
+        </form>
+    </section>
 </x-layouts.partner>

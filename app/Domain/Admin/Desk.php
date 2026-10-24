@@ -3,6 +3,7 @@
 namespace App\Domain\Admin;
 
 use App\Enums\EnquiryStatus;
+use App\Models\AgentMessage;
 use App\Models\ApplicationPlan;
 use App\Models\CounsellorMessage;
 use App\Models\Enquiry;
@@ -39,6 +40,9 @@ class Desk
 
         $unanswered = $this->unansweredMessages($now->copy()->subHours($sla['reply_hours']));
 
+        $agentAsked = AgentMessage::whereIn('id', AgentMessage::query()->selectRaw('max(id)')->groupBy('student_id'))->where('from_agent', true)->get();
+        $agentQuestions = Student::whereIn('users.id', $agentAsked->pluck('student_id'))->with('counsellor')->get()->each(fn ($s) => $s->setAttribute('waiting_since', $agentAsked->firstWhere('student_id', $s->id)->created_at))->sortBy('waiting_since')->values();
+
         $unpaid = Invoice::where('kind', 'agency_charge')->where('status', 'issued')->where('issued_at', '<', $now->copy()->subDays($sla['unpaid_days']))->with(['serviceCase', 'student'])->orderBy('issued_at')->limit(100)->get();
         $refunds = Invoice::where('refund_status', 'due')->with(['serviceCase', 'student'])->orderBy('refunded_at')->limit(100)->get();
 
@@ -46,6 +50,7 @@ class Desk
             'slow_enquiries' => ['title' => 'Enquiries with no reply for '.$sla['enquiry_hours'].' hours', 'hint' => 'Open the enquiry and answer it or give it an owner.', 'late' => true, 'rows' => $slowEnquiries],
             'unassigned_enquiries' => ['title' => 'Enquiries without an owner', 'hint' => 'Give each one to a counsellor.', 'late' => false, 'rows' => $unassignedEnquiries],
             'unanswered' => ['title' => 'Students waiting more than '.$sla['reply_hours'].' hours for a reply', 'hint' => 'Their counsellor has not answered. Nudge them or take it over.', 'late' => true, 'rows' => $unanswered],
+            'agent_questions' => ['title' => 'Agents waiting for an answer', 'hint' => 'An agency wrote about a student and nobody has answered yet.', 'late' => false, 'rows' => $agentQuestions],
             'review' => ['title' => 'Applications waiting for SAS review', 'hint' => 'Return with remarks or pass. Older than '.$sla['review_days'].' days counts as late.', 'late' => false, 'rows' => $review],
             'returned' => ['title' => 'Returned more than '.$sla['returned_days'].' days ago and still not fixed', 'hint' => 'Ask the student or agent, or their counsellor, to fix it.', 'late' => true, 'rows' => $returned],
             'unassigned_cases' => ['title' => 'Cases without a counsellor', 'hint' => 'Assign one so somebody owns the case.', 'late' => false, 'rows' => $unassignedCases],

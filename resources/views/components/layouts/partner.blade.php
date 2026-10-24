@@ -6,11 +6,13 @@
         'home' => 'M3 12 12 3l9 9M5 10v10h5v-6h4v6h5V10',
         'list' => 'M4 6h16M4 12h16M4 18h16',
         'apps' => 'M7 3h7l5 5v13H7V3Zm7 0v5h5M10 13h6M10 17h6',
+        'money' => 'M3 7h18v10H3V7Zm9 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM6 10v4M18 10v4',
     ];
     $nav = [
         ['Backend home', route('partner.home'), 'partner.home', 'home'],
         ['Student list', route('partner.students.index'), ['partner.students.*', 'partner.student.*'], 'list'],
         ['Application list', route('partner.applications.index'), 'partner.applications.*', 'apps'],
+        ['Fees statement', route('partner.statement'), 'partner.statement', 'money'],
     ];
 @endphp
 <!DOCTYPE html>

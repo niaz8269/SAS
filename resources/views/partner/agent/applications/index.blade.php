@@ -14,6 +14,7 @@
     </form>
 
     <x-agent.list title="List">
+        <x-slot name="actions"><a class="inline-flex items-center gap-2 hover:underline" href="{{ route('partner.export.applications') }}">Export CSV</a></x-slot>
         <x-agent.pager :paginator="$plans" search-label="Name/Email/Application number" :q="$filters['q']" :per-page="$perPage" />
         <div class="overflow-x-auto">
             <table class="w-full text-left text-[13px]">

@@ -37,12 +37,18 @@
         <label class="flex w-full items-center gap-2"><input type="checkbox" name="show_closed" value="1" class="border-slate-300" @checked($filters['show_closed'])> Also show scholarships that are closed now</label>
     </form>
 
-    <div class="mt-5 border border-[#2f7cc4]">
+    <form id="many" method="POST" action="{{ $ctx->route('applications.store-many') }}" class="mt-5 flex flex-wrap items-center justify-between gap-3 border border-[#ddd] bg-[#f9f9f9] p-3 text-[13px]">@csrf
+        <p>Tick several scholarships in the list and start them all at once.</p>
+        <button class="bg-[#0b4a8f] px-6 py-2 font-semibold text-white hover:bg-[#093d75]">Start the ticked applications</button>
+        @error('cycle_ids')<p class="w-full text-[#d9534f]" role="alert">{{ $message }}</p>@enderror
+    </form>
+    <div class="mt-3 border border-[#2f7cc4]">
         <div class="bg-[#307cc7] px-4 py-2.5 text-[14px] text-white" aria-live="polite">List &middot; {{ $cycles->count() }} {{ \Illuminate\Support\Str::plural('scholarship', $cycles->count()) }} shown</div>
         <ul class="divide-y divide-[#e5e5e5] bg-white">
             @forelse ($cycles as $c)
                 @php($next = app(\App\Domain\Scholarship\DeadlineService::class)->nextClosing($c))
                 <li class="flex flex-wrap items-center justify-between gap-3 px-4 py-3">
+                    @unless (isset($planned[$c->id]))<input type="checkbox" form="many" name="cycle_ids[]" value="{{ $c->id }}" class="h-4 w-4" aria-label="Select {{ $c->programme->title }}">@else<span class="inline-block w-4"></span>@endunless
                     <div class="min-w-0 flex-1 text-[13px]">
                         <p class="text-[15px] font-semibold text-[#333]">{{ $c->programme->title }}</p>
                         <p class="mt-0.5 text-[#666]">{{ $c->destinations->pluck('name')->implode(', ') ?: 'Country not listed' }} &middot; {{ $c->degreeLevels->pluck('name')->implode(', ') ?: 'Degree not listed' }}</p>
