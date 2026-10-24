@@ -58,7 +58,7 @@ try {
     Run 'npm ci' { npm ci --no-audit --no-fund }
     Run 'npm run build' { npm run build }
 
-    foreach ($p in 'node_modules', 'tests', '.github', 'scripts', 'phpunit.xml', 'pint.json', 'package.json', 'package-lock.json', 'vite.config.js', 'AGENTS.md', 'CLAUDE.md', '.editorconfig', '.gitattributes') {
+    foreach ($p in 'node_modules', 'tests', '.github', 'scripts', 'phpunit.xml', 'pint.json', 'package.json', 'package-lock.json', 'vite.config.js', 'AGENTS.md', 'CLAUDE.md', '.editorconfig', '.gitattributes', '.claude', 'phpstan.neon', '.npmrc') {
         if (Test-Path $p) { Remove-Item $p -Recurse -Force }
     }
     # Folders the application writes to must exist and be writable on the server.
