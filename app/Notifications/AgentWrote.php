@@ -3,6 +3,7 @@
 namespace App\Notifications;
 
 use App\Models\User;
+use App\Support\MailText;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -19,7 +20,7 @@ class AgentWrote extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)->subject(config('sas.brand.short').': '.$this->agent->name.' wrote about '.$this->student->name)
-            ->line($this->agent->name.' ('.($this->agent->partnerOrganisation?->name ?? 'agency').') wrote about '.$this->student->name.': "'.$this->excerpt.'"')
+            ->line(MailText::plain($this->agent->name.' ('.($this->agent->partnerOrganisation?->name ?? 'agency').') wrote about '.$this->student->name).': "'.MailText::plain($this->excerpt).'"')
             ->line('Open the student in the admin, then the Agent messages tab, to answer.')
             ->action('Open the student', url('/admin/students/'.$this->student->id));
     }

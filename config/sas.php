@@ -126,6 +126,10 @@ return [
      */
     'two_step' => ['enabled' => (bool) env('SAS_TWO_STEP', false)],
 
+    // Invitation emails an agency may send per day (an agent account must not become a mail relay), and the host names the site answers to.
+    'agents' => ['invites_per_day' => (int) env('SAS_AGENT_INVITES_PER_DAY', 200)],
+    'trusted_hosts' => array_values(array_filter(array_map('trim', explode(',', (string) env('SAS_TRUSTED_HOSTS', ''))))),
+
     'uploads' => [
         'max_kb' => (int) env('SAS_UPLOAD_MAX_KB', 20480), // FILE-01: 20 MB
         'quota_mb' => (int) env('SAS_UPLOAD_QUOTA_MB', 200), // proposed, pending owner approval

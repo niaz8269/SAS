@@ -5,9 +5,11 @@ namespace App\Domain\Identity;
 use App\Domain\Documents\DocumentService;
 use App\Domain\Editorial\AuditLog;
 use App\Models\ApplicationForm;
+use App\Models\ApplicationPlan;
 use App\Models\Audit;
 use App\Models\AvailabilitySlot;
 use App\Models\Consultation;
+use App\Models\Document;
 use App\Models\Enquiry;
 use App\Models\ServiceCase;
 use App\Models\User;
@@ -99,9 +101,17 @@ class AccountPrivacy
         $userId = $user->id;
 
         DB::transaction(function () use ($user, $email, $userId, &$files) {
+            // The audit trail keeps what happened, not who or what it was about. The ids are collected first and the entries blanked after the
+            // documents are deleted, because deleting a document writes an entry of its own.
+            $concerning = [[Document::class, $user->documents()->pluck('id')], [ApplicationPlan::class, $user->applicationPlans()->pluck('id')], [ApplicationForm::class, ApplicationForm::where('user_id', $userId)->pluck('id')]];
             foreach ($user->documents()->with('versions')->get() as $document) {
                 $files += $document->versions->count();
                 $this->documents->delete($document); // files, versions and links
+            }
+
+            DB::table('audits')->where('actor_id', $userId)->update(['ip' => null, 'before' => null, 'after' => null]); // what the person did keeps its date and kind, not its content
+            foreach ($concerning as [$model, $ids]) {
+                $ids->isNotEmpty() && DB::table('audits')->where('auditable_type', (new $model)->getMorphClass())->whereIn('auditable_id', $ids)->update(['before' => null, 'after' => null, 'ip' => null]);
             }
 
             // Enquiries and consultations keep service history but lose everything identifying.
@@ -119,6 +129,7 @@ class AccountPrivacy
 
             DB::table('sessions')->where('user_id', $userId)->delete();
             DB::table('password_reset_tokens')->where('email', $email)->delete();
+            DB::table('invite_tokens')->where('email', $email)->delete();
             DB::table('notifications')->where('notifiable_type', $user->getMorphClass())->where('notifiable_id', $userId)->delete();
 
             // Audits keep the event but lose the actor link (FK is set null); remove any payload that could identify the user.

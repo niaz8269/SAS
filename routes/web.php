@@ -33,8 +33,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class)->name('home');
 
 Route::get('/scholarships', [ScholarshipController::class, 'index'])->name('scholarships.index');
-Route::get('/scholarships/{programme:slug}/{cycle}', [ScholarshipController::class, 'show'])->name('scholarships.show');
-Route::get('/go/{route}', [ScholarshipController::class, 'out'])->name('scholarships.out');
+Route::get('/scholarships/{programme:slug}/{cycle}', [ScholarshipController::class, 'show'])->middleware('throttle:240,1')->name('scholarships.show'); // each view writes an analytics row, so the rate is capped per address
+Route::get('/go/{route}', [ScholarshipController::class, 'out'])->middleware('throttle:120,1')->name('scholarships.out');
 
 Route::get('/universities', [CatalogueController::class, 'universities'])->name('universities.index');
 Route::get('/universities/{university:slug}', [CatalogueController::class, 'university'])->name('universities.show');
@@ -174,6 +174,7 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::post('/security/recovery-codes', [Student\SecurityController::class, 'regenerate'])->middleware('throttle:login')->name('security.recovery');
 
     Route::get('/privacy', [Student\PrivacyController::class, 'show'])->name('privacy');
+    Route::post('/privacy/agency/stop', [Student\PrivacyController::class, 'stopAgency'])->middleware('throttle:login')->name('privacy.agency.stop');
     Route::post('/privacy/export', [Student\PrivacyController::class, 'export'])->middleware('throttle:login')->name('privacy.export');
     Route::post('/privacy/delete-request', [Student\PrivacyController::class, 'requestDeletion'])->middleware('throttle:login')->name('privacy.delete.request');
     Route::get('/privacy/delete/{token}', [Student\PrivacyController::class, 'confirm'])->name('privacy.delete.confirm');

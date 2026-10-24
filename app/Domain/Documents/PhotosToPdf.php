@@ -28,6 +28,9 @@ class PhotosToPdf
             if (! in_array($kind, ['image/jpeg', 'image/png'], true)) {
                 throw new InvalidArgumentException('Only JPEG or PNG photos can be combined into one PDF.');
             }
+            if (($dim = @getimagesize($photo->getRealPath())) && $dim[0] * $dim[1] > DocumentService::MAX_PIXELS) {
+                throw new InvalidArgumentException('One of the photos is far larger than a document photo needs. Please reduce it and try again.');
+            }
             $path = tempnam(sys_get_temp_dir(), 'sas-photo-').($kind === 'image/png' ? '.png' : '.jpg');
             File::copy($photo->getRealPath(), $path);
             $temp[] = $path;

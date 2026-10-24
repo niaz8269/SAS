@@ -61,6 +61,11 @@ class Booking
             if ($slot->isBooked() || ! $slot->starts_at->gt(now()->addHours(2))) {
                 throw new InvalidArgumentException('That time is no longer available. Please choose another.');
             }
+            // A student with a counsellor books that counsellor's times, not anybody else's (the list already shows only those).
+            $own = $student->counsellor_id ?: Student::find($student->id)?->cases()->whereNotNull('advisor_id')->latest('id')->value('advisor_id');
+            if ($own && $slot->counsellor_id !== (int) $own) {
+                throw new InvalidArgumentException('That time belongs to another counsellor. Please choose one of your own counsellor\'s times.');
+            }
             if (AvailabilitySlot::where('booked_by', $student->id)->where('starts_at', '>', now())->exists()) {
                 throw new InvalidArgumentException('You already have a call booked. Cancel it first if you want to change the time.');
             }

@@ -10,6 +10,7 @@ use App\Models\User;
 use App\Notifications\StudentInvited;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Password;
+use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use InvalidArgumentException;
@@ -59,9 +60,17 @@ class AgentStudents
         return $student;
     }
 
-    /** Sends (or resends) the email that lets the student choose their own password. */
+    /** Sends (or resends) the email that lets the student choose their own password. Only while the student has not taken over the account. */
     public function invite(User $student, PartnerOrganisation $agent): void
     {
+        if ($student->hasVerifiedEmail()) {
+            throw new InvalidArgumentException('This student has already taken over their account. They can reset their own password.');
+        }
+        $limit = (int) config('sas.agents.invites_per_day');
+        if (RateLimiter::tooManyAttempts('agent-invites:'.$agent->id, $limit)) {
+            throw new InvalidArgumentException('Your agency has reached the limit of '.$limit.' invitations for today. Try again tomorrow.');
+        }
+        RateLimiter::hit('agent-invites:'.$agent->id, 86400);
         $token = Password::broker('invites')->createToken($student);
         $student->notify(new StudentInvited($token, $agent));
     }
@@ -71,6 +80,10 @@ class AgentStudents
     {
         if (User::where('email', $data['email'])->where('id', '!=', $student->id)->exists()) {
             throw new InvalidArgumentException('Someone already has an account with the email '.$data['email'].'.');
+        }
+        if ($student->hasVerifiedEmail() && mb_strtolower($data['email']) !== mb_strtolower($student->email)) {
+            // Changing the address of an account the student has taken over, then sending a reset link there, would hand the account to the agent.
+            throw new InvalidArgumentException('This student has taken over their own account, so only they can change its email address.');
         }
         DB::transaction(function () use ($student, $actor, $data) {
             $student->forceFill(['name' => trim($data['name'].' '.$data['surname']), 'email' => $data['email']])->save();

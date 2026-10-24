@@ -93,10 +93,10 @@ return [
     */
 
     'passwords' => [
-        // Invitations (a recruiting agent adds a student): the same tokens as a password reset, but valid for a week.
+        // Invitations (a recruiting agent adds a student): valid for a week, kept in their own table so an ordinary reset link never gets a week.
         'invites' => [
             'provider' => 'users',
-            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'table' => 'invite_tokens',
             'expire' => 10080,
             'throttle' => 60,
         ],

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Student;
 
+use App\Domain\Editorial\AuditLog;
 use App\Domain\Identity\AccountPrivacy;
 use App\Http\Controllers\Controller;
 use App\Models\DeletionRequest;
@@ -26,6 +27,19 @@ class PrivacyController extends Controller
         if (! Hash::check($request->input('password'), $request->user()->password)) {
             throw ValidationException::withMessages(['password' => 'Password is incorrect.']);
         }
+    }
+
+    /** The student ends the agency's access to their application form, applications and documents. */
+    public function stopAgency(Request $request)
+    {
+        $this->confirmPassword($request);
+        $user = $request->user();
+        abort_unless($user->managed_by_organisation_id, 404);
+        $agency = $user->managedBy?->name;
+        $user->forceFill(['managed_by_organisation_id' => null])->save();
+        AuditLog::record('agent.access_ended_by_student', $user, ['agency' => $agency], null, null, $user);
+
+        return redirect()->route('student.privacy')->with('status', 'Your agency no longer has access to your applications and documents.');
     }
 
     public function export(Request $request, AccountPrivacy $privacy)

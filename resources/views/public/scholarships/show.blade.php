@@ -7,11 +7,11 @@
 @endphp
 <x-layouts.public :title="$title" :description="\Illuminate\Support\Str::limit(strip_tags($cycle->summary ?: $programme->summary), 155)">
     <x-slot:head>
-        <script type="application/ld+json">{!! json_encode(['@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => [
+        <script type="application/ld+json">{!! json_encode(['@@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
             ['@type' => 'ListItem', 'position' => 2, 'name' => 'Scholarships', 'item' => route('scholarships.index')],
             ['@type' => 'ListItem', 'position' => 3, 'name' => $title],
-        ]], JSON_UNESCAPED_SLASHES) !!}</script>
+        ]], JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}</script>
     </x-slot:head>
 
     <section class="border-b border-line bg-white">

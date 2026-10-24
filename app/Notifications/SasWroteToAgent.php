@@ -3,6 +3,7 @@
 namespace App\Notifications;
 
 use App\Models\User;
+use App\Support\MailText;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -18,8 +19,8 @@ class SasWroteToAgent extends Notification
 
     public function toMail(object $notifiable): MailMessage
     {
-        return (new MailMessage)->subject(config('sas.brand.short').': an answer about '.$this->student->name)->greeting('Hello '.$notifiable->name)
-            ->line($this->staff->name.' at SAS wrote about '.$this->student->name.': "'.$this->excerpt.'"')
+        return (new MailMessage)->subject(config('sas.brand.short').': an answer about '.$this->student->name)->greeting('Hello '.MailText::plain($notifiable->name))
+            ->line(MailText::plain($this->staff->name.' at SAS wrote about '.$this->student->name).': "'.MailText::plain($this->excerpt).'"')
             ->action('Open the student', route('partner.student.show', $this->student->public_id));
     }
 }

@@ -4,6 +4,7 @@ namespace App\Notifications;
 
 use App\Models\AvailabilitySlot;
 use App\Models\User;
+use App\Support\MailText;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -20,9 +21,9 @@ class CallBooked extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         $when = $this->slot->starts_at->copy()->timezone($notifiable->timezone ?: 'UTC')->format('l j F Y, H:i').' ('.($notifiable->timezone ?: 'UTC').')';
-        $mail = (new MailMessage)->subject(config('sas.brand.short').': '.$this->student->name.' booked a call')->line($this->student->name.' booked a '.$this->slot->duration_minutes.'-minute call with you on '.$when.'.');
+        $mail = (new MailMessage)->subject(config('sas.brand.short').': '.$this->student->name.' booked a call')->line(MailText::plain($this->student->name).' booked a '.$this->slot->duration_minutes.'-minute call with you on '.$when.'.');
         if ($this->note) {
-            $mail->line('Their note: "'.$this->note.'"');
+            $mail->line('Their note: "'.MailText::plain($this->note).'"');
         }
 
         return $mail->action('Open My calendar', url('/admin/my-calendar'));

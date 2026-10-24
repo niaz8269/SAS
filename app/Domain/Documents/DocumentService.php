@@ -19,6 +19,9 @@ use ZipArchive;
 class DocumentService
 {
     /** Extensions that must never appear anywhere in a filename (double-extension attempts). */
+    /** Largest photo (width x height) accepted: about 40 megapixels, far above any scan or phone photo of a document. */
+    public const MAX_PIXELS = 40_000_000;
+
     private const DANGEROUS = ['php', 'phtml', 'phar', 'exe', 'dll', 'bat', 'cmd', 'com', 'sh', 'js', 'jar', 'vbs', 'ps1', 'msi',
         'scr', 'zip', 'rar', '7z', 'tar', 'gz', 'html', 'htm', 'svg', 'py', 'rb', 'pl', 'cgi', 'asp', 'aspx', 'jsp', 'lnk', 'iso'];
 
@@ -51,6 +54,9 @@ class DocumentService
         $mime = $this->sniff($file->getRealPath(), $ext);
         if ($mime === null) {
             $fail('The file contents do not match its type.');
+        }
+        if (in_array($mime, ['image/jpeg', 'image/png'], true) && $this->hasWellFormedHeader($file->getRealPath(), $mime) && ($dim = @getimagesize($file->getRealPath())) && $dim[0] * $dim[1] > self::MAX_PIXELS) {
+            $fail('This image is far larger than a document photo needs ('.$dim[0].' x '.$dim[1].' pixels). Please reduce it and upload again.'); // a tiny file can declare a huge canvas that exhausts the server when it is turned into a PDF
         }
 
         $used = (int) DocumentVersion::whereHas('document', fn ($q) => $q->where('user_id', $user->id))
@@ -112,6 +118,12 @@ class DocumentService
         ScanDocumentJob::dispatch($document->current_version_id)->afterCommit();
 
         return $document;
+    }
+
+    /** A PNG states its size in the first chunk (IHDR); a header that is not well formed has no size to trust. */
+    private function hasWellFormedHeader(string $path, string $mime): bool
+    {
+        return $mime !== 'image/png' || substr((string) file_get_contents($path, false, null, 0, 16), 12, 4) === 'IHDR';
     }
 
     /** A gentle warning when a photo is probably too small or too thin to read. Never blocks the upload. */

@@ -44,3 +44,7 @@ Not imported (22): discontinued or paused (Vanier, Ontario Trillium, IDRC awards
 ## Files
 
 The raw research (JSON, one file per batch) and the per-scholarship reports are kept outside the repository. Re-running an import is safe: lists and components given in a file replace those stored, and nothing is duplicated.
+
+## Study guides (51 destination countries)
+
+Six research passes read each country's own study portal, immigration authority and education ministry. A guide holds the study system, how to apply, visa basics, living costs (only figures an official page states), working while studying and official links. Load them with `php artisan sas:import-guides file.json`; an import never makes a guide public. The 26 guides that were already public were upgraded in place; the 25 new ones are hidden until you read them and use **Countries > Show the study guide publicly**. Many official portals blocked automated access (for example Study Australia's visa pages, CSC sites, Hungary's maintenance pages), so some guides are short; each entry's notes list what is missing. Official languages were not imported from the guides (the site keeps its own list).

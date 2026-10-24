@@ -8,6 +8,15 @@
             <button class="btn-outline">Download</button></form>
     </section>
 
+    @if (auth()->user()->managed_by_organisation_id && auth()->user()->managedBy)
+        <section class="card mt-5 p-5" aria-labelledby="agency"><h2 id="agency" class="text-lg font-bold">Your agency</h2>
+            <p class="mt-1 text-sm text-muted"><strong>{{ auth()->user()->managedBy->name }}</strong> set up this account for you and can see and work on your application form, applications and documents. You can end that at any time. Your account, documents and applications stay yours; only the agency's access ends.</p>
+            <form method="POST" action="{{ route('student.privacy.agency.stop') }}" class="mt-3 flex flex-wrap items-end gap-2" onsubmit="return confirm('Stop {{ addslashes(auth()->user()->managedBy->name) }} from seeing and working on your applications?')">@csrf
+                <div><label for="pw-a" class="label">Confirm your password</label><input id="pw-a" type="password" name="password" required class="input"></div>
+                <button class="btn-danger">Stop my agency's access</button></form>
+        </section>
+    @endif
+
     <section class="card mt-5 border-alert/40 p-5" aria-labelledby="del"><h2 id="del" class="text-lg font-bold">Delete your account</h2>
         @if ($blocked)
             <p class="mt-2 text-sm">{{ $blocked }}</p>

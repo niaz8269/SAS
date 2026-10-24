@@ -106,6 +106,6 @@ class Html
     {
         $url = trim(preg_replace('/[\x00-\x20]+/', '', $url) ?? '');
 
-        return (bool) preg_match('#^(https?://|mailto:|/(?!/)|\#)#i', $url);
+        return (bool) preg_match('#^(https?://|mailto:|/(?![/\\\\])|\#)#i', $url); // a leading "/\" is read by browsers as "//", so it is not a local link
     }
 }

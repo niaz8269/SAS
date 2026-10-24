@@ -13,7 +13,7 @@ class MakeStaff extends Command
 {
     protected $signature = 'sas:make-staff {email} {name} {role : one of the staff roles} {--no-mail : do not send the password reset link}';
 
-    protected $description = 'Create (or promote) a named staff account. A random password is set and a reset link is emailed; MFA is enforced at first login.';
+    protected $description = 'Create (or promote) a named staff account. A random password is set and a reset link is emailed; Two-step sign-in is required only while SAS_TWO_STEP is switched on.';
 
     public function handle(): int
     {

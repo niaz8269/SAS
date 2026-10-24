@@ -22,8 +22,9 @@ class DemoAccountsSeeder extends Seeder
 
     public function run(): void
     {
-        if (app()->isProduction()) {
-            $this->command?->error('DemoAccountsSeeder refuses to run in production.');
+        $host = (string) parse_url((string) config('app.url'), PHP_URL_HOST);
+        if (app()->isProduction() || ! (in_array($host, ['localhost', '127.0.0.1', '[::1]'], true) || str_ends_with($host, '.test') || str_ends_with($host, '.localhost'))) {
+            $this->command?->error('DemoAccountsSeeder only runs on a local development address (it creates accounts with a published password).');
 
             return;
         }

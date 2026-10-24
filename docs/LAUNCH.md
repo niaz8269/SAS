@@ -7,7 +7,10 @@ A checklist for the day you move SAS from your computer to a real server. Nothin
 - A long random `APP_KEY` (`php artisan key:generate`). Never copy the local one.
 - `SAS_TWO_STEP=true`, so staff must use an authenticator app. Staff accounts can read student documents and record payments.
 - A real mail service (`MAIL_MAILER`, host, username, password, from address). With `log` or `array` no email leaves the server. The System health page warns about this.
+- `SESSION_SECURE_COOKIE=true`. Set `SAS_TRUSTED_HOSTS` (comma-separated) if the site answers on more than the `APP_URL` host, for example a `www.` name. The site refuses requests that arrive under any other host name, which stops password-reset links being poisoned.
 - `SAS_SLA_*` limits if 24 hours, 48 hours, 3 and 7 days are not what you want.
+- `SAS_AGENT_INVITES_PER_DAY` (default 200): invitation emails one agency may send in a day.
+- Never seed the demo accounts on the live server, and never copy `.env.example` to it unchanged: it is a development file. See `docs/SECURITY-REVIEW-2026-10-24.md` for what was fixed and what remains your decision (two-step sign-in, backup encryption).
 
 ## 2. Email that reaches inboxes
 - On the domain's DNS add the mail provider's **SPF** and **DKIM** records (the provider shows them), and a **DMARC** record. Without them, invitations, receipts and reminders land in spam.

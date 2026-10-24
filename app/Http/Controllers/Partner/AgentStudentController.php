@@ -73,7 +73,11 @@ class AgentStudentController extends Controller
 
     public function invite(Request $request, User $student, AgentStudents $agents)
     {
-        $agents->invite($student, $request->user()->partnerOrganisation);
+        try {
+            $agents->invite($student, $request->user()->partnerOrganisation);
+        } catch (InvalidArgumentException $e) {
+            return back()->with('error', $e->getMessage());
+        }
 
         return back()->with('status', 'Invitation sent to '.$student->email.'.');
     }

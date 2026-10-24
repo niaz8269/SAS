@@ -7,6 +7,8 @@ use App\Filament\Resources\Countries\Pages\ManageCountries;
 use App\Filament\Support\MediaPicker;
 use App\Models\Country;
 use BackedEnum;
+use Filament\Actions\BulkAction;
+use Filament\Actions\BulkActionGroup;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\DatePicker;
 use Filament\Forms\Components\Repeater;
@@ -24,6 +26,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TernaryFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 /** Countries double as nationality values and, when flagged, as study-destination pages (PUB-04). */
 class CountryResource extends Resource
@@ -87,7 +90,14 @@ class CountryResource extends Resource
             IconColumn::make('guidance_published')->boolean()->label('Published'),
             TextColumn::make('guidance_reviewed_at')->date()->label('Reviewed'),
         ])->filters([TernaryFilter::make('is_destination')->label('Destinations only')])
-            ->recordActions([EditAction::make()])->defaultSort('name');
+            ->recordActions([EditAction::make()])
+            ->toolbarActions([BulkActionGroup::make([
+                BulkAction::make('showGuides')->label('Show the study guide publicly')->icon('heroicon-o-eye')->requiresConfirmation()
+                    ->modalDescription('Only for guides you have read and checked against the official links. A guide without a review date is skipped.')
+                    ->action(fn (Collection $records) => $records->filter(fn ($c) => $c->is_destination && $c->guidance_reviewed_at !== null && filled($c->study_guidance))->each->update(['guidance_published' => true]))->deselectRecordsAfterCompletion(),
+                BulkAction::make('hideGuides')->label('Hide the study guide')->icon('heroicon-o-eye-slash')->requiresConfirmation()
+                    ->action(fn (Collection $records) => $records->each->update(['guidance_published' => false]))->deselectRecordsAfterCompletion(),
+            ])])->defaultSort('name');
     }
 
     public static function getPages(): array

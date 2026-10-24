@@ -65,8 +65,14 @@ class ServiceCaseResource extends Resource
         return $schema->components([
             Section::make('Case')->columns(2)->schema([
                 Select::make('user_id')->label('Student')->required()->searchable()->disabled(fn (?ServiceCase $record) => $record !== null)->dehydrated(fn (?ServiceCase $record) => $record === null)
-                    ->options(fn () => User::whereDoesntHave('userRoles')->orderBy('name')->get()->mapWithKeys(fn (User $u) => [$u->id => $u->name.' ('.$u->email.')'])->all())
-                    ->helperText('Students with a workspace account. A new case issues the application fee automatically.'),
+                    // Only the case's own student is listed on an existing case; a new case finds a student by typing 2 or more letters (name or email), for staff who may manage cases.
+                    ->options(fn (?ServiceCase $record) => $record ? [$record->user_id => (string) $record->student?->name] : [])
+                    ->getSearchResultsUsing(fn (string $search) => auth()->user()?->can('cases.manage') && mb_strlen(trim($search)) >= 2
+                        ? User::whereDoesntHave('userRoles')->where(fn ($w) => $w->where('name', 'like', '%'.addcslashes(trim($search), '%_\\').'%')->orWhere('email', 'like', '%'.addcslashes(trim($search), '%_\\').'%'))
+                            ->orderBy('name')->limit(20)->get()->mapWithKeys(fn (User $u) => [$u->id => $u->name.' ('.$u->email.')'])->all()
+                        : [])
+                    ->getOptionLabelUsing(fn ($value) => ($u = User::whereDoesntHave('userRoles')->find($value)) ? $u->name.' ('.$u->email.')' : null)
+                    ->helperText('Students with a workspace account: type at least 2 letters of the name or email. A new case issues the application fee automatically.'),
                 Select::make('cycle_id')->label('Scholarship call')->searchable()->placeholder('Not linked to a listing')->disabled(fn (?ServiceCase $record) => $record !== null)->dehydrated(fn (?ServiceCase $record) => $record === null)
                     ->options(fn () => ScholarshipCycle::with('programme')->orderByDesc('id')->limit(300)->get()->mapWithKeys(fn (ScholarshipCycle $c) => [$c->id => $c->programme->title.' ('.$c->intake_year.')'])->all()),
                 TextInput::make('title')->maxLength(200)->helperText('Leave empty to use the scholarship name.')->columnSpanFull(),
