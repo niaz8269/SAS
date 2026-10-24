@@ -37,6 +37,15 @@ class PublicPagesTest extends TestCase
             ->assertSee('does not send anything to the funder'); // applying here never implies submission
     }
 
+    public function test_the_homepage_has_a_fixed_whatsapp_button_that_follows_the_configured_number(): void
+    {
+        config(['sas.contact_whatsapp' => '+44 7700 900123']);
+        $this->get('/')->assertOk()->assertSee('https://wa.me/447700900123?text=', false)->assertSee('fixed left-0', false);
+
+        config(['sas.contact_whatsapp' => '']);
+        $this->get('/')->assertOk()->assertDontSee('wa.me/', false);
+    }
+
     public function test_drafts_and_in_review_cycles_are_404_on_the_public_site(): void
     {
         foreach ([PublicationState::Draft, PublicationState::InReview, PublicationState::Approved, PublicationState::ChangesRequested] as $state) {
