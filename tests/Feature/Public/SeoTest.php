@@ -2,7 +2,11 @@
 
 namespace Tests\Feature\Public;
 
+use App\Models\Article;
+use App\Models\CmsPage;
+use App\Models\Country;
 use App\Models\ScholarshipCycle;
+use App\Models\Service;
 use App\Models\University;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
@@ -36,6 +40,42 @@ class SeoTest extends TestCase
         $this->assertStringContainsString('<loc>'.route('home').'</loc></url>', $body, 'fixed pages carry no invented date');
         $this->assertStringNotContainsString('/login', $body);
         $this->assertStringNotContainsString('/student', $body);
+    }
+
+    public function test_new_content_appears_in_the_sitemap_at_once_and_unpublished_content_leaves_it(): void
+    {
+        Cache::forget('sitemap');
+        $this->get('/sitemap.xml')->assertOk(); // now cached
+
+        $article = Article::create(['slug' => 'visa-tips', 'title' => 'Visa tips', 'body' => 'x', 'status' => 'published', 'published_at' => now()->subDay()]);
+        $page = CmsPage::create(['slug' => 'visa-faq', 'title' => 'Visa FAQ', 'body' => '<p>x</p>', 'published' => true]);
+        $service = Service::factory()->create(['published' => true]);
+        $uni = University::create(['name' => 'New Test University', 'slug' => 'new-test-university', 'published' => true, 'csc_key' => 'nk1']);
+        $country = Country::factory()->destination()->create(['guidance_reviewed_at' => '2026-10-01', 'guidance_sources' => [['label' => 'Official portal', 'url' => 'https://example.gov/study']]]);
+        $cycle = $this->publishedCycle(['slug' => '2027-intake']);
+
+        $body = $this->get('/sitemap.xml')->getContent();
+        foreach ([
+            '/resources/visa-tips', '/pages/visa-faq', '/services/'.$service->slug, '/universities/new-test-university',
+            '/destinations/'.$country->slug, '/scholarships/'.$cycle->programme->slug.'/2027-intake',
+        ] as $path) {
+            $this->assertStringContainsString($path.'</loc>', $body, "$path should be listed as soon as it is published");
+        }
+
+        // taken down: gone again straight away
+        $article->update(['status' => 'draft']);
+        $page->update(['published' => false]);
+        $uni->update(['published' => false]);
+        $cycle->update(['publication_state' => 'draft']);
+        $body = $this->get('/sitemap.xml')->getContent();
+        foreach (['/resources/visa-tips', '/pages/visa-faq', '/universities/new-test-university', '/scholarships/'.$cycle->programme->slug.'/2027-intake'] as $path) {
+            $this->assertStringNotContainsString($path.'</loc>', $body);
+        }
+
+        // a renamed scholarship changes its address in the sitemap too
+        $cycle->update(['publication_state' => 'published']);
+        $cycle->programme->update(['slug' => 'renamed-scholarship']);
+        $this->assertStringContainsString('/scholarships/renamed-scholarship/2027-intake</loc>', $this->get('/sitemap.xml')->getContent());
     }
 
     public function test_a_repeated_year_in_a_scholarship_address_is_cleaned(): void

@@ -8,18 +8,25 @@ use App\Domain\Documents\Scanner;
 use App\Domain\Editorial\AuditLog;
 use App\Domain\Site\Site;
 use App\Listeners\BlockSuppressedRecipients;
+use App\Models\Article;
+use App\Models\CmsPage;
+use App\Models\Country;
 use App\Models\CycleBenefit;
 use App\Models\CycleCriterion;
 use App\Models\CycleMilestone;
 use App\Models\CycleRequirement;
 use App\Models\ScholarshipCycle;
+use App\Models\ScholarshipProgramme;
 use App\Models\ScholarshipRoute;
+use App\Models\Service;
 use App\Models\SourceEvidence;
+use App\Models\University;
 use App\Models\User;
 use App\Support\StudentContext;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Mail\Events\MessageSending;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\RateLimiter;
@@ -51,6 +58,13 @@ class AppServiceProvider extends ServiceProvider
 
         // Staff-edited brand name, tagline and contact details override config/sas.php so every view and email reads the live value.
         Site::applyToConfig();
+
+        // The sitemap is built from the database and cached for ten minutes; any change to a page that is listed in it clears the cache,
+        // so a newly published scholarship, university, guide, service, article or page appears in /sitemap.xml at once.
+        foreach ([ScholarshipCycle::class, ScholarshipProgramme::class, University::class, Country::class, Service::class, Article::class, CmsPage::class] as $model) {
+            $model::saved(fn () => Cache::forget('sitemap'));
+            $model::deleted(fn () => Cache::forget('sitemap'));
+        }
 
         Password::defaults(fn () => Password::min(10)->letters()->numbers());
 
