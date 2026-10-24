@@ -221,7 +221,7 @@ class ImportUniversityDetails extends Command
             return ['type' => 'supplied', 'url' => null];
         }
 
-        return ['type' => in_array($type, ['university', 'government'], true) ? $type : 'university', 'url' => $url && str_starts_with($url, 'https://') && $this->urls->safeUrl($url) ? $url : null];
+        return ['type' => in_array($type, ['university', 'government'], true) ? $type : 'university', 'url' => $url && $this->urls->safeUrl($url) ? $url : null]; // many official university sites are still http only
     }
 
     private function text(mixed $v, int $max): ?string

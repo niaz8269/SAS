@@ -139,6 +139,17 @@ class UniversityMedicalDetailsTest extends TestCase
         $this->assertSame(45000, UniversityFeeStructure::firstOrFail()->tuition_amount);
     }
 
+    public function test_a_national_programme_and_an_http_only_official_page_are_accepted(): void
+    {
+        $this->run_([$this->entry('Gov University', ['scholarships' => [['name' => 'National programme', 'provider' => 'government', 'source_url' => 'http://www.example.edu.cn/old-site-scholarship', 'published' => true]]])]);
+
+        $s = UniversityScholarship::where('name', 'National programme')->firstOrFail();
+
+        $this->assertSame('government', $s->provider);
+        $this->assertSame('http://www.example.edu.cn/old-site-scholarship', $s->source_url);
+        $this->assertTrue((bool) $s->published);
+    }
+
     public function test_an_alternative_to_another_fee_is_never_added_into_the_total(): void
     {
         $this->run_([$this->entry('Alt University', ['fee_structures' => [['other_fees' => [['label' => 'Double-room hostel (full price, instead of triple room)', 'amount' => 15000, 'when' => 'every_year']]]]])]);

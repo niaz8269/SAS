@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 /** A scholarship open to international students at one university (university, provincial, city or China Scholarship Council funded). */
 class UniversityScholarship extends Model
 {
-    public const PROVIDERS = ['csc' => 'Chinese Government (CSC)', 'provincial' => 'Provincial government', 'city' => 'City government', 'university' => 'The university'];
+    public const PROVIDERS = ['csc' => 'Chinese Government (CSC)', 'provincial' => 'Provincial government', 'city' => 'City government', 'government' => 'National government', 'university' => 'The university'];
 
     protected $guarded = ['id'];
 
