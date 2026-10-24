@@ -99,11 +99,31 @@ class ApplyFlowTest extends TestCase
         $this->upload($student, 'csc_application_form');
         $this->assertSame(1, $student->documents()->where('type', 'csc_application_form')->count());
 
-        // Only scholarships with a rule for it list the form, and a document type without a blank form has no download.
-        $this->get(route('student.applications.materials', app(PlanService::class)->create($student, $other)))->assertDontSee('SAS Application Form');
+        // Every application lists the form (optional unless the scholarship's rule makes it mandatory), and a document type without a blank form has no download.
+        $this->get(route('student.applications.materials', app(PlanService::class)->create($student, $other)))->assertSee('SAS Application Form')->assertSee('Download blank form');
         $this->get(route('student.documents.template', 'passport'))->assertNotFound();
         auth()->logout();
         $this->get(route('student.documents.template', 'csc_application_form'))->assertRedirect();
+    }
+
+    public function test_the_application_downloads_as_the_sas_form_with_the_students_answers(): void
+    {
+        $student = User::factory()->create(['name' => 'Amina Khan']);
+        $plan = app(PlanService::class)->create($student, $this->scholarship('Form Award'));
+        app(ApplicationFormService::class)->saveAll($student, ['personal' => ['surname' => 'Khan', 'given_name' => 'Amina', 'passport_no' => 'AB1234567'], 'employment' => ['rows' => [['employer' => 'Acme'], ['employer' => 'Beta']]]]);
+
+        $response = $this->actingAs($student)->get(route('student.applications.download', $plan))->assertOk()
+            ->assertHeader('content-type', 'application/pdf')->assertHeader('content-disposition', 'attachment; filename="SAS-application-form-'.$plan->application_no.'.pdf"');
+        $pdf = $response->getContent();
+        $this->assertStringStartsWith('%PDF', $pdf);
+        $this->assertSame(6, preg_match_all('#/Type\s*/Page[^s]#', $pdf), 'six pages, like the blank form');
+
+        $this->get(route('student.applications.materials', $plan))->assertSee('Download filled form')->assertSee(route('student.applications.download', $plan), false);
+        $this->get(route('student.applications.index'))->assertSee('Download Application Form');
+        $this->assertDatabaseHas('audits', ['action' => 'application_form.downloaded']);
+
+        // Someone else's application cannot be downloaded.
+        $this->actingAs(User::factory()->create())->get(route('student.applications.download', $plan))->assertForbidden();
     }
 
     public function test_documents_the_scholarship_does_not_ask_for_are_tucked_into_an_other_section(): void

@@ -31,7 +31,7 @@ class CscDocumentRulesSeeder extends Seeder
 
     /** kind key => [requirement, note] for every degree level of the scholarship. */
     private const SCHOLARSHIP = [
-        'csc_application_form' => ['required', 'Download the blank form with the button, fill it in on a computer or in print, sign it and upload the scan or PDF.'],
+        'csc_application_form' => ['required', 'Download the form (blank, or filled in with your answers), check it, sign it and upload the scan or PDF.'],
         'photo' => ['required', 'A passport-style photo, as listed with the CSC application form.'],
         'passport' => ['required', 'A clear scan of the page with your photo and details. If it is valid for less than 12 months from your expected start date, renew it before applying.'],
         'degree_certificate' => ['required', 'A notarised copy of your highest diploma. If you have not graduated yet, official proof of student status from your school. A diploma not in Chinese or English needs a notarised Chinese or English translation.'],

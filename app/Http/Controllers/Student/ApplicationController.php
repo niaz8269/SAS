@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Student;
 
+use App\Domain\Applications\ApplicationFormPdf;
 use App\Domain\Applications\ApplicationFormService;
 use App\Domain\Cases\CaseService;
 use App\Domain\Documents\Requirements;
+use App\Domain\Editorial\AuditLog;
 use App\Domain\StudentWorkspace\ApplicationReview;
 use App\Domain\StudentWorkspace\PlanService;
 use App\Domain\StudentWorkspace\StudyLanguages;
@@ -155,6 +157,18 @@ class ApplicationController extends Controller
 
         return response()->view('student.wizard.preview', ['plan' => $plan, 'form' => $forms->formFor($plan->user), 'sections' => $forms->sections(), 'rows' => $rows->filter(fn ($r) => $r['documents']->isNotEmpty() || $r['reason'])])
             ->header('Cache-Control', 'private, no-store'); // it holds the student's personal data
+    }
+
+    /** The application as the SAS application form (a PDF with the student's answers written into the blank form). */
+    public function download(Request $request, ApplicationPlan $plan, ApplicationFormPdf $pdf)
+    {
+        $this->authorize('view', $plan);
+        AuditLog::record('application_form.downloaded', $plan, null, null, null, $request->user()); // field values are never logged
+
+        return response($pdf->render($plan), 200, [
+            'Content-Type' => 'application/pdf', 'Content-Disposition' => 'attachment; filename="'.$pdf->filename($plan).'"',
+            'Cache-Control' => 'private, no-store', 'X-Content-Type-Options' => 'nosniff', // it holds the student's personal data
+        ]);
     }
 
     /** The old tracker: checklist, deadline, status, notes and linked documents. Optional, kept for students who use it. */

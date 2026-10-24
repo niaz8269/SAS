@@ -26,7 +26,7 @@
                     <td class="px-4 py-5 text-[13px]">
                         <p>Form {{ $formPercent >= 100 ? 'completed' : 'not completed' }} <a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.form', $p) }}">View</a></p>
                         <p>Attachment {{ $d['missing'] ? 'not completed' : 'completed' }} <a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.materials', $p) }}">View</a></p>
-                        <p><a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.preview', $p) }}" target="_blank" rel="noopener">Preview Application Form</a></p>
+                        <p><a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.download', $p) }}">Download Application Form</a> <span class="text-[#999]">|</span> <a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route('applications.preview', $p) }}" target="_blank" rel="noopener">Preview</a></p>
                         <p><a class="text-[#0b6ec7] hover:underline" href="{{ $ctx->route($p->isEditable() ? 'applications.submit' : 'applications.show', $p) }}">{{ $p->isEditable() ? 'Apply Submit' : 'View Details' }}</a></p>
                     </td>
                 </tr>

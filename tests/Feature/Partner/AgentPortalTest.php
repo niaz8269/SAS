@@ -176,6 +176,7 @@ class AgentPortalTest extends TestCase
         }
         // Even through the right agent's URL, someone else's application id gets nowhere.
         $this->get(route('partner.student.applications.show', [$mine->public_id, $plan->public_id]))->assertForbidden();
+        $this->get(route('partner.student.applications.download', [$mine->public_id, $plan->public_id]))->assertForbidden();
         $this->put(route('partner.student.update', $theirs->public_id), ['surname' => 'X', 'name' => 'Y', 'email' => 'x@example.test', 'country' => 'Pakistan', 'date_of_birth' => '2000-01-01'])->assertForbidden();
 
         $this->actingAs(User::factory()->create())->get(route('partner.student.show', $theirs->public_id))->assertForbidden(); // a student is not an agent
@@ -204,7 +205,8 @@ class AgentPortalTest extends TestCase
         $document = Document::where('type', 'passport')->firstOrFail();
         $this->assertSame($student->id, $document->user_id, 'the document belongs to the student');
         $this->get($base('/documents/'.$document->public_id.'/download'))->assertOk();
-        $this->get($base('/applications/'.$plan->public_id.'/materials'))->assertOk()->assertSee('passport.pdf');
+        $this->get($base('/applications/'.$plan->public_id.'/materials'))->assertOk()->assertSee('passport.pdf')->assertSee('Download filled form');
+        $this->get($base('/applications/'.$plan->public_id.'/download'))->assertOk()->assertHeader('content-type', 'application/pdf'); // the SAS application form with the student's answers
 
         $this->get($base('/applications/'.$plan->public_id.'/submit'))->assertOk()->assertSee('Not ready to submit yet'); // the form is still incomplete
         $this->post($base('/applications/'.$plan->public_id.'/submit'))->assertSessionHas('error');

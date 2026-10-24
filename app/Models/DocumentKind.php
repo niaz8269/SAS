@@ -13,6 +13,9 @@ class DocumentKind extends Model
 
     public const REQUIREMENTS = ['required' => 'Mandatory', 'optional' => 'Optional', 'not_needed' => 'Not needed'];
 
+    /** The document type for the SAS application form: its slot also offers the form filled in with the student's answers. */
+    public const APPLICATION_FORM = 'csc_application_form';
+
     protected $guarded = ['id'];
 
     protected function casts(): array

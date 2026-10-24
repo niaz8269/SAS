@@ -50,7 +50,7 @@
                         <td class="px-3 py-5">{{ $fee('application_fee') }}</td>
                         <td class="px-3 py-5">{{ $fee('agency_charge') }}</td>
                         <td class="px-3 py-3 text-[#428bb6]"><a class="block hover:underline" href="{{ route('partner.student.applications.show', [$p->user->public_id, $p->public_id]) }}">{{ $p->isEditable() ? 'Continue' : 'View Details' }}</a>
-                            <a class="block hover:underline" href="{{ route('partner.student.applications.preview', [$p->user->public_id, $p->public_id]) }}" target="_blank" rel="noopener">Download Application Form</a></td>
+                            <a class="block hover:underline" href="{{ route('partner.student.applications.download', [$p->user->public_id, $p->public_id]) }}">Download Application Form</a></td>
                     </tr>
                 @empty
                     <tr><td colspan="12" class="px-4 py-10 text-center text-[#777]">No applications match.</td></tr>

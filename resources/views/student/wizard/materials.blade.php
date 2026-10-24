@@ -3,8 +3,8 @@
 
     @php
         // What the scholarship itself asks for comes first; documents it does not mention are tucked away.
-        $main = collect($rows)->filter(fn ($r) => $r['requirement'] === 'required' || $r['ruled'])->sortBy(fn ($r) => $r['requirement'] === 'required' ? 0 : 1)->values();
-        $other = collect($rows)->reject(fn ($r) => $r['requirement'] === 'required' || $r['ruled'])->values();
+        $main = collect($rows)->filter(fn ($r) => $r['requirement'] === 'required' || $r['ruled'] || $r['kind']->template_path)->sortBy(fn ($r) => $r['requirement'] === 'required' ? 0 : 1)->values();
+        $other = collect($rows)->reject(fn ($r) => $r['requirement'] === 'required' || $r['ruled'] || $r['kind']->template_path)->values();
     @endphp
 
     @if ($multipleLevels && ! $levelId)
