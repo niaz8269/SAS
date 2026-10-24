@@ -3,9 +3,10 @@
     $archived = $cycle->publication_state === \App\Enums\PublicationState::Archived;
     $deadlinesByRoute = $cycle->currentDeadlines->groupBy(fn ($d) => $d->route_id ?? 0);
     $institutions = $cycle->universities->isNotEmpty() ? $cycle->universities : $programme->universities;
-    $title = $programme->title.' '.$cycle->cycle_key;
+    $title = $programme->title.' '.$cycle->keyLabel();
+    $metaTitle = \Illuminate\Support\Str::limit($programme->title, 48, '…', true).' '.$cycle->intake_year; // search results show about 60 characters: the full name stays in the heading
 @endphp
-<x-layouts.public :title="$title" :description="\Illuminate\Support\Str::limit(strip_tags($cycle->summary ?: $programme->summary), 155)">
+<x-layouts.public :title="$metaTitle" :description="\Illuminate\Support\Str::limit(strip_tags($cycle->summary ?: $programme->summary), 155)">
     <x-slot:head>
         <script type="application/ld+json">{!! json_encode(['@@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],

@@ -196,7 +196,7 @@ class ScholarshipImporter
             $cycle = new ScholarshipCycle($fields);
             $cycle->programme_id = $programme->id;
             $cycle->cycle_key = (string) (int) $row['cycle_year'].($row['intake_term'] !== '' ? '-'.Str::slug($row['intake_term']) : '');
-            $cycle->slug = $cycle->cycle_key;
+            $cycle->slug = ScholarshipCycle::cleanKey($cycle->cycle_key);
             $cycle->external_key = $key;
             $cycle->created_by = $by?->id;
             $cycle->publication_state = PublicationState::Draft; // never Published from an import

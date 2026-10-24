@@ -27,7 +27,7 @@
         <p class="text-xs text-muted">
             @if ($cycle->last_verified_at)Verified {{ $cycle->last_verified_at->format('j M Y') }}@else Not yet verified @endif
         </p>
-        <a href="{{ $url }}" class="btn-outline !py-1.5" aria-label="View {{ $programme->title }} {{ $cycle->cycle_key }}">View scholarship <span aria-hidden="true">&rarr;</span></a>
+        <a href="{{ $url }}" class="btn-outline !py-1.5" aria-label="View {{ $programme->title }} {{ $cycle->keyLabel() }}">View scholarship <span aria-hidden="true">&rarr;</span></a>
     </div>
     </div>
 </article>

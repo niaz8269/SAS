@@ -1,6 +1,6 @@
 @props(['title' => null, 'description' => null, 'canonical' => null, 'noindex' => false, 'og_image' => null])
 @php
-    $fullTitle = ($title ? $title.' | ' : '').config('sas.brand.name');
+    $fullTitle = $title ? $title.' | '.config('sas.brand.short') : config('sas.brand.name'); // the short brand keeps page titles near the 60 characters search results show
     $desc = $description ?? \App\Domain\Site\Site::get('default_meta_description', 'Find verified, officially sourced scholarships worldwide and get expert support at every step of your study abroad journey.');
     $nav = \App\Domain\Site\Site::menu('header');
 @endphp
@@ -15,15 +15,25 @@
     <meta name="theme-color" content="#123a7a">
     <title>{{ $fullTitle }}</title>
     <meta name="description" content="{{ $desc }}">
-    <link rel="canonical" href="{{ $canonical ?? url()->current() }}">
+    @php
+        // the address on the main domain, whichever host name the visit used (www, http, a staging name)
+        $canonicalUrl = $canonical ?? rtrim((string) config('app.url'), '/').request()->getPathInfo();
+    @endphp
+    <link rel="canonical" href="{{ $canonicalUrl }}">
     @if ($noindex)<meta name="robots" content="noindex, nofollow">@endif
     <meta property="og:site_name" content="{{ config('sas.brand.name') }}">
     <meta property="og:title" content="{{ $fullTitle }}">
     <meta property="og:description" content="{{ $desc }}">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="{{ $canonical ?? url()->current() }}">
-    @if ($og_image)<meta property="og:image" content="{{ $og_image }}">@endif
-    <meta name="twitter:card" content="summary">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="{{ $canonicalUrl }}">
+    <meta property="og:image" content="{{ $og_image ?? asset('images/og-default.jpg') }}">
+    @unless ($og_image)<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">@endunless
+    <meta property="og:image:alt" content="{{ config('sas.brand.name') }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $fullTitle }}">
+    <meta name="twitter:description" content="{{ $desc }}">
+    <meta name="twitter:image" content="{{ $og_image ?? asset('images/og-default.jpg') }}">
     {{ $head ?? '' }}
     <link rel="preload" href="{{ asset('fonts/inter-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="{{ asset('fonts/inter.css') }}">

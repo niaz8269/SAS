@@ -9,6 +9,7 @@ use App\Models\SavedScholarship;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
 use App\Models\ScholarshipRoute;
+use Illuminate\Support\Facades\DB;
 
 class ScholarshipController extends Controller
 {
@@ -20,12 +21,21 @@ class ScholarshipController extends Controller
     /** DIR-05. Only published (and, labelled, previously published archived) cycles resolve; drafts are 404. */
     public function show(ScholarshipProgramme $programme, string $cycle, MatchingService $matching)
     {
-        $cycle = ScholarshipCycle::where('programme_id', $programme->id)->where('slug', $cycle)
+        $slugOrOld = $cycle;
+        $cycle = ScholarshipCycle::where('programme_id', $programme->id)->where('slug', $slugOrOld)
             ->whereIn('publication_state', [PublicationState::Published->value, PublicationState::Archived->value])
             ->whereNotNull('published_at')
             ->with(['programme.funder', 'programme.universities', 'routes.university', 'destinations', 'nationalities', 'excludedNationalities', 'degreeLevels', 'subjects',
                 'universities', 'benefits', 'requirements', 'criteria', 'currentDeadlines', 'evidence', 'verifier'])
-            ->firstOrFail();
+            ->first();
+
+        if (! $cycle) { // an address that was changed: send people (and search engines) to the new one for good
+            $moved = DB::table('cycle_slug_redirects')->where('programme_id', $programme->id)->where('slug', $slugOrOld)->value('cycle_id');
+            $current = $moved ? ScholarshipCycle::visible()->where('id', $moved)->value('slug') : null;
+            abort_unless($current, 404);
+
+            return redirect()->route('scholarships.show', [$programme->slug, $current], 301);
+        }
 
         AnalyticsEvent::create(['name' => 'scholarship_view', 'cycle_id' => $cycle->id]);
 

@@ -3,6 +3,10 @@
     $total = $levelCounts->sum();
 @endphp
 <x-layouts.public :title="$university->name" :description="\Illuminate\Support\Str::limit(strip_tags((string) $university->summary) ?: $university->name.($place ? ' in '.$place : '').': programmes, tuition and teaching languages for international students.', 155)">
+    <x-slot:head>
+        <x-jsonld :data="array_filter(['@type' => 'CollegeOrUniversity', 'name' => $university->name, 'alternateName' => $university->name_zh ?: null, 'url' => route('universities.show', $university->slug), 'image' => url($university->imageUrl()), 'description' => strip_tags((string) $university->summary) ?: null, 'address' => array_filter(['@type' => 'PostalAddress', 'addressLocality' => $university->city, 'addressRegion' => $university->province, 'addressCountry' => $university->country?->code ?: 'CN'])])" />
+        <x-jsonld :data="['@type' => 'BreadcrumbList', 'itemListElement' => [['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')], ['@type' => 'ListItem', 'position' => 2, 'name' => 'Universities', 'item' => route('universities.index')], ['@type' => 'ListItem', 'position' => 3, 'name' => $university->name]]]" />
+    </x-slot:head>
     <section class="relative isolate overflow-hidden bg-navy-900">
         <img src="{{ $university->imageUrl() }}" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover object-center" width="960" height="540" fetchpriority="high">
         <div class="absolute inset-0 -z-10 bg-gradient-to-r from-navy-900/90 via-navy-800/70 to-navy-900/55" aria-hidden="true"></div>

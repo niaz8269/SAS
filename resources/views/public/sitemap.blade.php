@@ -1,6 +1,6 @@
 {!! '<?xml version="1.0" encoding="UTF-8"?>' !!}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-@foreach ($urls as $url)
-    <url><loc>{{ $url }}</loc></url>
+@foreach ($urls as [$url, $changed])
+    <url><loc>{{ $url }}</loc>@if ($changed)<lastmod>{{ \Illuminate\Support\Carbon::parse($changed)->toDateString() }}</lastmod>@endif</url>
 @endforeach
 </urlset>

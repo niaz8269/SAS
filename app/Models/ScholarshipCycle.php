@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\DB;
 
 class ScholarshipCycle extends Model
 {
@@ -182,6 +183,19 @@ class ScholarshipCycle extends Model
     }
 
     /** The plain name students see: the scholarship's title, without the internal cycle key. */
+    /** When a web address changes, the old one is remembered so links already shared or indexed still arrive (ScholarshipController::show redirects them). */
+    protected static function booted(): void
+    {
+        static::updating(function (self $cycle) {
+            if ($cycle->isDirty('slug') && $cycle->getOriginal('slug')) {
+                DB::table('cycle_slug_redirects')->updateOrInsert(
+                    ['programme_id' => $cycle->getOriginal('programme_id'), 'slug' => $cycle->getOriginal('slug')],
+                    ['cycle_id' => $cycle->id],
+                );
+            }
+        });
+    }
+
     public function displayName(): string
     {
         return $this->programme->title;
@@ -189,7 +203,19 @@ class ScholarshipCycle extends Model
 
     public function label(): string
     {
-        return trim($this->programme->title.' '.$this->cycle_key);
+        return trim($this->programme->title.' '.$this->keyLabel());
+    }
+
+    /** The intake in words people read, from the stored key: 2026-2026-intake becomes 2026 intake, 2026-2026-27-call becomes 2026-27 call. */
+    public function keyLabel(): string
+    {
+        return preg_replace('/(?<=\D)-|-(?=\D)/', ' ', self::cleanKey((string) $this->cycle_key));
+    }
+
+    /** The key without a repeated year at the front (2026-2026-intake is 2026-intake); used for the web address. */
+    public static function cleanKey(string $key): string
+    {
+        return preg_replace('/^(\d{4})-\1(?=-|$)/', '$1', trim($key)) ?: $key;
     }
 
     /** Status computed at read time from current deadlines (DEAD-03), not trusted from the stored column alone. */

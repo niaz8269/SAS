@@ -7,7 +7,7 @@
             <div class="absolute -left-[9999px] h-0 w-0 overflow-hidden" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
             @if ($cycle)
                 <input type="hidden" name="cycle_id" value="{{ $cycle->id }}">
-                <p class="rounded-md bg-navy-50 px-4 py-3 text-sm">About: <strong>{{ $cycle->programme->title }} {{ $cycle->cycle_key }}</strong></p>
+                <p class="rounded-md bg-navy-50 px-4 py-3 text-sm">About: <strong>{{ $cycle->label() }}</strong></p>
             @else
                 <div><label for="page_url" class="label">Page address (optional)</label><input id="page_url" type="url" name="page_url" value="{{ old('page_url') }}" class="input @error('page_url') input-error @enderror">@error('page_url')<p class="field-error" role="alert">{{ $message }}</p>@enderror</div>
             @endif

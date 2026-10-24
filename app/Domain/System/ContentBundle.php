@@ -20,7 +20,7 @@ class ContentBundle
     public const TABLES = [
         'countries', 'degree_levels', 'subjects', 'subject_aliases', 'funders', 'document_kinds',
         'universities', 'university_programmes', 'university_fee_structures', 'university_scholarships',
-        'scholarship_programmes', 'document_rules', 'programme_university', 'scholarship_cycles', 'scholarship_routes', 'source_evidence',
+        'scholarship_programmes', 'document_rules', 'programme_university', 'scholarship_cycles', 'cycle_slug_redirects', 'scholarship_routes', 'source_evidence',
         'cycle_benefits', 'cycle_requirements', 'cycle_criteria', 'cycle_deadlines', 'cycle_milestones', 'cycle_offerings',
         'cycle_degree_levels', 'cycle_destinations', 'cycle_nationalities', 'cycle_excluded_nationalities', 'cycle_subjects', 'cycle_universities',
         'cycle_search_index', 'services', 'menu_items', 'home_sections', 'page_blocks', 'trust_items',
@@ -38,7 +38,7 @@ class ContentBundle
 
     /** Tables whose rows belong to a cycle, filtered to the exported cycles. */
     private const BY_CYCLE = [
-        'scholarship_routes', 'source_evidence', 'cycle_benefits', 'cycle_requirements', 'cycle_criteria', 'cycle_deadlines', 'cycle_milestones', 'cycle_offerings',
+        'cycle_slug_redirects', 'scholarship_routes', 'source_evidence', 'cycle_benefits', 'cycle_requirements', 'cycle_criteria', 'cycle_deadlines', 'cycle_milestones', 'cycle_offerings',
         'cycle_degree_levels', 'cycle_destinations', 'cycle_nationalities', 'cycle_excluded_nationalities', 'cycle_subjects', 'cycle_universities', 'cycle_search_index',
     ];
 

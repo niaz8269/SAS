@@ -7,7 +7,7 @@
             <p class="mt-2 text-muted">{{ $intro?->body ?: 'Ask a question or tell us what help you need. Enquiries are free and never create a charge. Please do not include passport numbers or other sensitive details here.' }}</p>
 
             @if ($cycle)
-                <p class="mt-4 rounded-md bg-navy-50 px-4 py-3 text-sm">About: <strong>{{ $cycle->programme->title }} {{ $cycle->cycle_key }}</strong></p>
+                <p class="mt-4 rounded-md bg-navy-50 px-4 py-3 text-sm">About: <strong>{{ $cycle->label() }}</strong></p>
             @endif
 
             <form method="POST" action="{{ route('enquiries.store') }}" class="card mt-6 space-y-4 p-6" novalidate>

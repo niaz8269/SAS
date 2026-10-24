@@ -4,6 +4,10 @@
     $media = fn ($p) => \Illuminate\Support\Facades\Storage::disk('public_media')->url($p);
 @endphp
 <x-layouts.public :description="$sections['hero']->body ?? null">
+    <x-slot:head>
+        <x-jsonld :data="['@type' => 'Organization', 'name' => config('sas.brand.name'), 'url' => route('home'), 'logo' => asset('images/sas-seal.png'), 'email' => config('sas.contact_email'), 'telephone' => config('sas.contact_phone')]" />
+        <x-jsonld :data="['@type' => 'WebSite', 'name' => config('sas.brand.name'), 'url' => route('home'), 'inLanguage' => 'en']" />
+    </x-slot:head>
 @foreach ($sections as $s)
 @continue(! $s->enabled)
 @switch(str_starts_with($s->key, 'custom-') ? 'custom' : $s->key)
