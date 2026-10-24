@@ -43,6 +43,7 @@ Also keep a queue worker running if you switch the queue from `sync` to a real q
 - Create each recruiting agency and its people under **Recruiting agents**.
 
 ## 6. Content you own
+- **Live chat (tawk.to):** the chat widget loads on the public pages only (never on sign-in, student, agent or admin pages, where a third-party script could read personal data). Set SAS_TAWK_EMBED to empty to turn it off. Sign in to tawk.to and add your live domain to the widget's allowed sites, set who answers and the offline message, and read the cookies and chat paragraph in the privacy notice (section 3 and 4) before approving the legal text: loading the widget sets tawk.to's own cookies, so check whether your visitors' countries need a cookie banner.
 - Check the scholarship records and the document rules once more against the official pages (`data/document-rules`), the payment options under Website, the fees in `config/sas.php`, the privacy notice and the terms.
 - Confirm the contact email, phone, WhatsApp number and address under Site settings.
 

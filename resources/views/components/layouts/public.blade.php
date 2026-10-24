@@ -101,5 +101,6 @@
 
 @include('partials.footer')
 @livewireScripts
+@include('partials.tawk')
 </body>
 </html>

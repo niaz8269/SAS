@@ -46,6 +46,23 @@ class PublicPagesTest extends TestCase
         $this->get('/')->assertOk()->assertDontSee('wa.me/', false);
     }
 
+    public function test_the_tawk_chat_loads_on_public_pages_only_and_only_from_tawk(): void
+    {
+        $this->get('/')->assertOk()->assertSee('https://embed.tawk.to/6adcff3f803f96347af46f30/1k5nka51i', false);
+        $this->get('/scholarships')->assertOk()->assertSee('embed.tawk.to', false);
+        $this->get('/legal/privacy')->assertOk()->assertSee('tawk.to', false);
+
+        // Pages where a third-party script could read passwords or personal data never get it.
+        $this->get('/login')->assertOk()->assertDontSee('tawk', false);
+        $this->actingAs(User::factory()->create())->get('/student')->assertOk()->assertDontSee('tawk', false);
+
+        config(['sas.tawk_embed' => 'https://evil.example/x.js']);
+        $this->get('/')->assertDontSee('evil.example', false)->assertDontSee('Tawk_API', false);
+        config(['sas.tawk_embed' => '']);
+        $this->get('/')->assertDontSee('Tawk_API', false);
+        $this->get('/legal/privacy')->assertDontSee('tawk.to', false);
+    }
+
     public function test_drafts_and_in_review_cycles_are_404_on_the_public_site(): void
     {
         foreach ([PublicationState::Draft, PublicationState::InReview, PublicationState::Approved, PublicationState::ChangesRequested] as $state) {

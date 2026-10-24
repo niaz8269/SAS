@@ -29,6 +29,8 @@ return [
     'admissions_email' => env('SAS_ADMISSIONS_EMAIL', 'admissions@sas.cas.moe'),
     'accessibility_email' => env('SAS_ACCESSIBILITY_EMAIL', 'info@sas.cas.moe'),
     'contact_phone' => env('SAS_CONTACT_PHONE', '+86 176 4041 2827'),
+    // Live chat widget (tawk.to) loaded on the public pages only. Empty turns it off. Never loaded on signed-in or admin pages, where a third-party script could read personal data.
+    'tawk_embed' => env('SAS_TAWK_EMBED', 'https://embed.tawk.to/6adcff3f803f96347af46f30/1k5nka51i'),
     'contact_whatsapp' => env('SAS_CONTACT_WHATSAPP', '+86 176 4041 2827'),
     'contact_wechat' => env('SAS_CONTACT_WECHAT', 'cas-scholarships'),
     // New-enquiry alerts go to the enquiry mailbox.

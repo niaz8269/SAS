@@ -22,12 +22,15 @@
 </ul>
 
 <h2>3. Cookies</h2>
-<p>We use only the cookies the site needs to work: a session cookie, a security (CSRF) token, and, if you tick "remember me", a sign-in cookie. We do not set advertising or cross-site tracking cookies, so there is no cookie banner to accept.</p>
+<p>We use only the cookies the site needs to work: a session cookie, a security (CSRF) token, and, if you tick "remember me", a sign-in cookie. We do not set advertising or cross-site tracking cookies of our own.</p>
+@if (config('sas.tawk_embed'))
+<p><strong>Live chat.</strong> The public pages of this site (not your signed-in workspace) load the chat widget of tawk.to. When the widget loads, tawk.to sets its own cookies or similar storage in your browser to run the chat and recognise a returning visitor, and it can see your IP address, browser and the page you are on. Anything you type into the chat is processed by tawk.to under <a href="https://www.tawk.to/privacy-policy/" rel="noopener" target="_blank">its own privacy policy</a>. Do not send passport numbers or other sensitive documents in the chat; use your workspace instead.</p>
+@endif
 
 <h2>4. Who we share it with</h2>
 <p>We do not sell your information. We share it only with:</p>
 <ul>
-    <li><strong>Service providers</strong> that host the site and files and deliver email on our behalf, who may only use it for that purpose.</li>
+    <li><strong>Service providers</strong> that host the site and files and deliver email on our behalf, who may only use it for that purpose.@if (config('sas.tawk_embed')) The live chat on the public pages is run by tawk.to.@endif</li>
     <li><strong>Funders, universities or authorities</strong>, but only when you ask us to help with an application and only the information that application needs.</li>
     <li><strong>Authorities or advisers</strong> where the law requires it or to protect rights and safety.</li>
 </ul>
