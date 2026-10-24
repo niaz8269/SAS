@@ -51,14 +51,14 @@ return [
         // SAS needs at least two education records: the one above and entry 1 here. required_first lists the fields entry 1 must have; a later entry that is started must have them too.
         'other_education' => ['title' => 'Other education certificates', 'repeat' => 2, 'required_first' => ['level', 'institute', 'from', 'to'],
             'note' => 'Add at least one more education record besides the one above (for example your earlier degree or your high school). SAS needs two.', 'fields' => [
-            'level' => ['Education level', 'select', 'options' => ['Senior high school', 'Bachelor', 'Master', 'Doctoral', 'Other']],
-            'country' => ['Country of the institute', 'country'],
-            'institute' => ['Institute name', 'text'],
-            'from' => ['Studied from (day, month, year)', 'date'],
-            'to' => ['Studied until (day, month, year)', 'date'],
-            'field' => ['Field of study', 'text'],
-            'qualification' => ['Qualification', 'text'],
-        ]],
+                'level' => ['Education level', 'select', 'options' => ['Senior high school', 'Bachelor', 'Master', 'Doctoral', 'Other']],
+                'country' => ['Country of the institute', 'country'],
+                'institute' => ['Institute name', 'text'],
+                'from' => ['Studied from (day, month, year)', 'date'],
+                'to' => ['Studied until (day, month, year)', 'date'],
+                'field' => ['Field of study', 'text'],
+                'qualification' => ['Qualification', 'text'],
+            ]],
         'employment' => ['title' => 'Employment history', 'repeat' => 3, 'fields' => [
             'employer' => ['Employer', 'text'],
             'from' => ['Started (day, month, year)', 'date'],
