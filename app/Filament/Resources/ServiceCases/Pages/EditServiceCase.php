@@ -6,6 +6,7 @@ use App\Domain\Cases\CaseService;
 use App\Domain\Documents\Requirements;
 use App\Domain\Editorial\AuditLog;
 use App\Filament\Resources\ServiceCases\ServiceCaseResource;
+use App\Filament\Resources\Students\StudentResource;
 use App\Models\Audit;
 use App\Models\ServiceCase;
 use App\Models\User;
@@ -47,6 +48,9 @@ class EditServiceCase extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
+            Action::make('openStudent')->label('Open the student')->icon('heroicon-o-user')->color('gray')
+                ->visible(fn (ServiceCase $record) => (bool) auth()->user()->can('students.manage'))
+                ->url(fn (ServiceCase $record) => StudentResource::getUrl('view', ['record' => $record->user_id])),
             Action::make('applicationForm')->label('Application form')->icon('heroicon-o-clipboard-document-list')
                 ->visible(fn (ServiceCase $record) => $record->form_shared_at !== null && auth()->user()->can('view', $record))
                 ->modalHeading('Application form')->modalSubmitAction(false)->modalCancelActionLabel('Close')->modalWidth('4xl')

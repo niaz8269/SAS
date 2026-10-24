@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources\ServiceCases;
 
+use App\Domain\Admin\Desk;
+use App\Domain\Cases\CaseService;
 use App\Filament\Resources\ServiceCases\Pages\CreateServiceCase;
 use App\Filament\Resources\ServiceCases\Pages\EditServiceCase;
 use App\Filament\Resources\ServiceCases\Pages\ListServiceCases;
@@ -11,21 +13,29 @@ use App\Filament\Resources\ServiceCases\RelationManagers\SharedDocumentsRelation
 use App\Models\DegreeLevel;
 use App\Models\ScholarshipCycle;
 use App\Models\ServiceCase;
+use App\Models\Student;
+use App\Models\StudentFollowUp;
 use App\Models\User;
 use BackedEnum;
+use Filament\Actions\BulkAction;
+use Filament\Actions\BulkActionGroup;
 use Filament\Actions\EditAction;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Section;
+use Filament\Schemas\Components\Text;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Filters\Filter;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 
 /** One scholarship application SAS supports for a student: status, counsellor and fees. Access follows ServiceCasePolicy. */
 class ServiceCaseResource extends Resource
@@ -67,7 +77,33 @@ class ServiceCaseResource extends Resource
                     ->disabled(fn () => ! auth()->user()->can('cases.manage')),
                 Textarea::make('internal_note')->label('Internal note (staff only)')->rows(4)->maxLength(4000)->columnSpanFull(),
             ]),
+            Section::make("The student on the counsellor's file")->description('The same notes the counsellor keeps, so you can see the whole picture from the case.')->columns(2)
+                ->visible(fn (?ServiceCase $record) => $record !== null && auth()->user()->can('students.manage'))
+                ->schema([
+                    Text::make(fn (?ServiceCase $record) => static::studentLine($record, 'who'))->columnSpanFull(),
+                    Text::make(fn (?ServiceCase $record) => static::studentLine($record, 'wants'))->columnSpanFull(),
+                    Text::make(fn (?ServiceCase $record) => static::studentLine($record, 'comment'))->columnSpanFull(),
+                    Text::make(fn (?ServiceCase $record) => static::studentLine($record, 'goals'))->columnSpanFull(),
+                ]),
         ]);
+    }
+
+    /** One line of the student's counsellor file, for the panel on the case page. */
+    public static function studentLine(?ServiceCase $case, string $part): string
+    {
+        $student = $case ? Student::with(['latestFollowUp', 'counsellor', 'goals'])->find($case->user_id) : null;
+        if (! $student) {
+            return '';
+        }
+        $f = $student->latestFollowUp;
+
+        return match ($part) {
+            'who' => $student->name.' - counsellor: '.($student->counsellor?->name ?? 'none').' - status: '.($f ? StudentFollowUp::STATUSES[$f->status].' ('.$f->created_at->diffForHumans().')' : 'not updated yet').($f?->follow_up_on ? ' - follow up '.$f->follow_up_on->format('j M') : ''),
+            'wants' => 'Wants: '.($f?->wants ?: 'not written down yet'),
+            'comment' => 'Last comment: '.($f?->comment ?: 'none'),
+            'goals' => 'Aiming for: '.($student->goals ? collect([$student->goals->countries, $student->goals->degree, $student->goals->subject, $student->goals->intake])->filter()->implode(', ') : 'not set'),
+            default => '',
+        };
     }
 
     public static function table(Table $table): Table
@@ -86,7 +122,30 @@ class ServiceCaseResource extends Resource
         ])->filters([
             SelectFilter::make('status')->options(ServiceCase::STATUSES),
             SelectFilter::make('advisor_id')->label('Counsellor')->options(fn () => User::counsellors()->pluck('name', 'id')->all()),
-        ])->recordActions([EditAction::make()])->defaultSort('id', 'desc');
+            Filter::make('no_counsellor')->label('No counsellor')->query(fn (Builder $query) => $query->whereNull('advisor_id')),
+        ])->recordActions([EditAction::make()])->toolbarActions([
+            BulkActionGroup::make([
+                BulkAction::make('assignLeastBusy')->label('Assign to the least busy')->icon('heroicon-o-scale')->requiresConfirmation()
+                    ->visible(fn () => (bool) auth()->user()?->can('cases.manage'))
+                    ->action(function (Collection $records) {
+                        abort_unless(auth()->user()->can('cases.manage'), 403);
+                        foreach ($records as $case) {
+                            app(CaseService::class)->assign($case, app(Desk::class)->leastBusy(), auth()->user());
+                        }
+                        Notification::make()->title($records->count().' '.str('case')->plural($records->count()).' assigned')->success()->send();
+                    })->deselectRecordsAfterCompletion(),
+                BulkAction::make('assignTo')->label('Assign to...')->icon('heroicon-o-user-plus')
+                    ->visible(fn () => (bool) auth()->user()?->can('cases.manage'))
+                    ->schema([Select::make('advisor_id')->label('Counsellor')->options(fn () => User::counsellors()->pluck('name', 'id'))->searchable()->required()])
+                    ->action(function (Collection $records, array $data) {
+                        abort_unless(auth()->user()->can('cases.manage'), 403);
+                        foreach ($records as $case) {
+                            app(CaseService::class)->assign($case, User::find($data['advisor_id']), auth()->user());
+                        }
+                        Notification::make()->title($records->count().' '.str('case')->plural($records->count()).' assigned')->success()->send();
+                    })->deselectRecordsAfterCompletion(),
+            ]),
+        ])->defaultSort('id', 'desc');
     }
 
     public static function getRelations(): array

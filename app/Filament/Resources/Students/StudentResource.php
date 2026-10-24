@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Students;
 
+use App\Domain\Admin\Desk;
 use App\Domain\Applications\ApplicationFormService;
 use App\Domain\Counselling\Counselling;
 use App\Domain\Counselling\StudentGaps;
@@ -143,6 +144,15 @@ class StudentResource extends Resource
                                 }
                             }
                             Notification::make()->title($done.' '.str('student')->plural($done).' updated')->success()->send();
+                        })->deselectRecordsAfterCompletion(),
+                    BulkAction::make('bulkAssignLeast')->label('Assign to the least busy')->icon('heroicon-o-scale')->requiresConfirmation()
+                        ->visible(fn () => (bool) auth()->user()?->can('assign', Student::class))
+                        ->action(function (Collection $records) {
+                            abort_unless(auth()->user()->can('assign', Student::class), 403);
+                            foreach ($records as $student) {
+                                app(Counselling::class)->assign($student, app(Desk::class)->leastBusy(), auth()->user());
+                            }
+                            Notification::make()->title($records->count().' '.str('student')->plural($records->count()).' assigned')->success()->send();
                         })->deselectRecordsAfterCompletion(),
                     BulkAction::make('bulkAssign')->label('Assign counsellor')->icon('heroicon-o-user-plus')
                         ->visible(fn () => (bool) auth()->user()?->can('assign', Student::class))

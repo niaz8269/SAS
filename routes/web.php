@@ -179,6 +179,7 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
 
 // Staff read an application that was sent for review (the policy allows it only once it is no longer a draft).
 Route::get('/review/applications/{plan:public_id}/preview', [Student\ApplicationController::class, 'preview'])->middleware(['auth', 'active', 'verified'])->name('review.preview');
+Route::get('/review/reports/{section}.csv', \App\Http\Controllers\Admin\ReportCsvController::class)->middleware(['auth', 'active', 'verified'])->name('admin.reports.csv');
 Route::get('/review/students/{student:public_id}/documents.zip', [Student\StudentFilesController::class, 'zip'])->middleware(['auth', 'active', 'verified'])->name('students.documents.zip');
 Route::get('/review/applications/{plan:public_id}/download', [Student\ApplicationController::class, 'download'])->middleware(['auth', 'active', 'verified'])->name('review.download');
 

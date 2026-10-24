@@ -55,6 +55,17 @@ return [
         'advisor' => ['enquiries.assigned', 'consultations.assigned', 'cases.assigned', 'students.assigned'],
         'partner_manager' => [], // a recruiting agent's access is decided by their organisation and by policies, not by a role permission
     ],
+    /*
+     * How long before the Needs attention list and the admin alert email call something late. Change them in .env.
+     */
+    'sla' => [
+        'enquiry_hours' => (int) env('SAS_SLA_ENQUIRY_HOURS', 24), // no first reply to a new enquiry
+        'reply_hours' => (int) env('SAS_SLA_REPLY_HOURS', 48), // a student's message nobody answered
+        'review_days' => (int) env('SAS_SLA_REVIEW_DAYS', 3), // an application waiting for SAS review
+        'returned_days' => (int) env('SAS_SLA_RETURNED_DAYS', 7), // sent back and still not fixed
+        'unpaid_days' => (int) env('SAS_SLA_UNPAID_DAYS', 7), // an agency charge issued and still unpaid
+    ],
+
     'staff_roles' => ['super_admin', 'administrator', 'advisor'],
 
     // Bundled photographs (Unsplash licence: free to use; credit is given as a courtesy). Shown on /image-credits.
