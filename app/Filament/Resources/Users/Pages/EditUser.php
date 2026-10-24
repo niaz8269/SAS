@@ -38,11 +38,11 @@ class EditUser extends EditRecord
         }
 
         if ($actor->can('roles.manage') && array_key_exists('roles', $data)) {
-            $new = collect($data['roles'] ?? [])->filter(fn ($r) => Role::tryFrom($r))->values();
-            $old = $record->userRoles->pluck('role');
+            $new = collect($data['roles'] ?? [])->filter(fn ($r) => in_array($r, config('sas.staff_roles'), true))->values();
+            $old = $record->userRoles->pluck('role')->filter(fn ($r) => in_array($r, config('sas.staff_roles'), true))->values();
             if ($new->sort()->values()->all() !== $old->sort()->values()->all()) {
                 abort_if($record->id === $actor->id && ! $new->contains(Role::SuperAdmin->value), 422, 'You cannot remove your own super administrator role.');
-                $record->userRoles()->whereNotIn('role', $new)->delete();
+                $record->userRoles()->whereIn('role', config('sas.staff_roles'))->whereNotIn('role', $new)->delete(); // the agent role is not edited here
                 foreach ($new as $role) {
                     $record->userRoles()->firstOrCreate(['role' => $role], ['granted_by' => $actor->id]);
                 }

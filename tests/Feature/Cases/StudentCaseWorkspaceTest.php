@@ -152,8 +152,8 @@ class StudentCaseWorkspaceTest extends TestCase
         $private = $this->upload($student, 'Passport');
         $assigned = $this->staff(Role::Advisor);
         $otherAdvisor = $this->staff(Role::Advisor);
-        $manager = $this->staff(Role::ServiceManager);
-        $editor = $this->staff(Role::Editor);
+        $manager = $this->staff(Role::Administrator);
+        $editor = $this->staff(Role::Advisor);
         $service = app(CaseService::class);
         $case = $service->open($student, null, $assigned, ['title' => 'Docs']);
         $service->syncShares($case, $student, [$doc->id], 'consent');

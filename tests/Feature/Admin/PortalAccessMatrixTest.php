@@ -35,13 +35,8 @@ class PortalAccessMatrixTest extends TestCase
 
         return [
             'super admin' => [Role::SuperAdmin, $all],
-            'administrator' => [Role::Administrator, ['users' => true] + $all],
-            'service manager' => [Role::ServiceManager, ['payments' => false, 'users' => false] + $all],
-            'advisor' => [Role::Advisor, ['cases' => true] + ['invoices' => true] + $none], // sees only assigned cases and their fees
-            'specialist' => [Role::Specialist, ['cases' => true, 'invoices' => true] + $none],
-            'finance' => [Role::Finance, ['invoices' => true] + $none],
-            'editor' => [Role::Editor, $none],
-            'reviewer' => [Role::Reviewer, $none],
+            'admin' => [Role::Administrator, $all], // runs the service and the website
+            'counsellor' => [Role::Advisor, ['cases' => true, 'invoices' => true] + $none], // sees only assigned cases and their fees
         ];
     }
 
@@ -61,13 +56,13 @@ class PortalAccessMatrixTest extends TestCase
         }
     }
 
-    public function test_only_finance_and_managers_can_record_payments_not_advisors(): void
+    public function test_only_admins_can_record_payments_not_counsellors(): void
     {
         $this->as(Role::Advisor);
         $this->assertFalse(auth()->user()->can('invoices.manage'));
         auth()->logout();
-        $this->as(Role::Finance);
+        $this->as(Role::Administrator);
         $this->assertTrue(auth()->user()->can('invoices.manage'));
-        $this->assertFalse(auth()->user()->can('cases.manage'), 'finance does not run cases');
+        $this->assertTrue(auth()->user()->can('cases.manage'), 'an admin runs cases and money');
     }
 }

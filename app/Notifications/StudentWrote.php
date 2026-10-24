@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-/** Tells a counsellor (or the service managers, when the student has none) that a student wrote to them. */
+/** Tells a counsellor (or the admins, when the student has none) that a student wrote to them. */
 class StudentWrote extends Notification
 {
     public function __construct(public User $student, public string $excerpt) {}

@@ -121,7 +121,7 @@ class CounsellorExtrasTest extends TestCase
         Notification::assertNotSentTo($idle, CounsellorDigest::class);
 
         // A student with no counsellor reaches the service managers instead.
-        $manager = $this->staff(Role::ServiceManager, 'Manager');
+        $manager = $this->staff(Role::Administrator, 'Manager');
         $lone = $this->student('Lone Lena');
         app(Counselling::class)->message($lone, $lone, 'Is anyone there?');
         Notification::assertSentTo($manager, StudentWrote::class);
@@ -258,14 +258,14 @@ class CounsellorExtrasTest extends TestCase
         $this->assertTrue(Audit::where('action', 'student.documents_zipped')->exists());
 
         $this->actingAs($this->staff(Role::Advisor, 'Counsellor Two'))->get(route('students.documents.zip', $amina->public_id))->assertForbidden();
-        $this->actingAs($this->staff(Role::ServiceManager, 'Manager'))->get(route('students.documents.zip', $amina->public_id))->assertForbidden();
+        $this->actingAs($this->staff(Role::Administrator, 'Manager'))->get(route('students.documents.zip', $amina->public_id))->assertForbidden();
     }
 
     public function test_reply_templates_are_shared_or_private_and_fill_in_the_names(): void
     {
         $counsellor = $this->staff(Role::Advisor, 'Counsellor One');
         $other = $this->staff(Role::Advisor, 'Counsellor Two');
-        $manager = $this->staff(Role::ServiceManager, 'Manager');
+        $manager = $this->staff(Role::Administrator, 'Manager');
         $shared = new ReplyTemplate(['title' => 'Welcome', 'body' => 'Hello {name}, I am {counsellor}.']);
         $shared->forceFill(['owner_id' => null])->save();
         $mine = new ReplyTemplate(['title' => 'Mine', 'body' => 'Private']);
@@ -288,7 +288,7 @@ class CounsellorExtrasTest extends TestCase
     public function test_bulk_actions_update_many_students_and_only_managers_assign(): void
     {
         $counsellor = $this->staff(Role::Advisor, 'Counsellor One');
-        $manager = $this->staff(Role::ServiceManager, 'Manager');
+        $manager = $this->staff(Role::Administrator, 'Manager');
         $a = $this->student('Amina Khan', $counsellor);
         $b = $this->student('Bilal Shah', $counsellor);
         $c = $this->student('Carla Free');
@@ -307,7 +307,7 @@ class CounsellorExtrasTest extends TestCase
     public function test_the_report_is_for_managers_and_the_calendar_for_counsellors(): void
     {
         $counsellor = $this->staff(Role::Advisor, 'Counsellor One');
-        $manager = $this->staff(Role::ServiceManager, 'Manager');
+        $manager = $this->staff(Role::Administrator, 'Manager');
         $amina = $this->student('Amina Khan', $counsellor);
         app(Counselling::class)->message($amina, $amina, 'Hello');
         app(Counselling::class)->message($amina, $counsellor, 'Hi Amina');
@@ -320,7 +320,7 @@ class CounsellorExtrasTest extends TestCase
 
         $this->actingAs($manager)->get('/admin/counsellor-report')->assertOk()->assertSee('Counsellor One');
         $this->actingAs($counsellor)->get('/admin/counsellor-report')->assertForbidden();
-        $this->actingAs($this->staff(Role::Finance, 'Finance'))->get('/admin/my-calendar')->assertForbidden();
+        $this->actingAs(User::factory()->role(Role::PartnerManager)->create())->get('/admin/my-calendar')->assertForbidden();
         $this->actingAs($counsellor)->get('/admin/my-calendar')->assertOk()->assertSee('Follow-up')->assertSee('Amina Khan');
         $this->assertSame(1, collect((new CounsellorCalendar)->agenda())->flatten(1)->where('kind', 'Follow-up')->count());
     }

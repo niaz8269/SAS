@@ -170,8 +170,8 @@ class DirectoryTest extends TestCase
 
     public function test_publishing_indexes_the_cycle_so_it_is_findable_immediately(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
-        $reviewer = User::factory()->role(Role::Reviewer)->create();
+        $editor = User::factory()->role(Role::Administrator)->create();
+        $reviewer = User::factory()->role(Role::Administrator)->create();
         $cycle = ScholarshipCycle::factory()->create(['created_by' => $editor->id, 'summary' => 'Unique pelican wording']);
         SourceEvidence::create(['cycle_id' => $cycle->id, 'url' => 'https://example.org', 'publisher' => 'F', 'publisher_type' => 'funder', 'checked_at' => now()]);
         $wf = app(CycleWorkflow::class);

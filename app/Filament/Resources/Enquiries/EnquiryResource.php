@@ -62,7 +62,7 @@ class EnquiryResource extends Resource
             ]),
             Section::make('Handling')->columns(2)->schema([
                 Select::make('status')->options(EnquiryStatus::options())->required(),
-                Select::make('owner_id')->label('Assigned to')->options(fn () => User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager']))->where('status', 'active')->pluck('name', 'id'))
+                Select::make('owner_id')->label('Assigned to')->options(fn () => User::counsellors()->pluck('name', 'id'))
                     ->searchable()->placeholder('Unassigned')->disabled(fn () => ! auth()->user()->can('enquiries.assign')),
                 TextInput::make('next_action')->maxLength(190),
                 DateTimePicker::make('next_action_at'),

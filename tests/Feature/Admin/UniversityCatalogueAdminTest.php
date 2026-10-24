@@ -81,7 +81,7 @@ class UniversityCatalogueAdminTest extends TestCase
 
     public function test_universities_appear_in_the_sidebar_for_every_role_that_manages_reference_data(): void
     {
-        foreach ([Role::SuperAdmin, Role::Administrator, Role::Editor, Role::Reviewer] as $role) {
+        foreach ([Role::SuperAdmin, Role::Administrator, Role::Administrator] as $role) {
             $this->staff($role);
             $html = $this->get('/admin')->assertOk()->getContent();
             $this->assertStringContainsString('/admin/universities', $html);

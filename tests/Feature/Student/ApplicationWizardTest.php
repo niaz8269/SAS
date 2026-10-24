@@ -158,7 +158,7 @@ class ApplicationWizardTest extends TestCase
         $this->delete(route('student.applications.destroy', $plan))->assertForbidden();
         $this->get(route('student.applications.materials', $plan))->assertOk()->assertSee('Submitted for review')->assertDontSee('Choose files', false);
 
-        app(ApplicationReview::class)->review($plan->refresh(), 'return', 'The passport scan is blurred.', $this->staff(Role::ServiceManager));
+        app(ApplicationReview::class)->review($plan->refresh(), 'return', 'The passport scan is blurred.', $this->staff(Role::Administrator));
         $this->actingAs($student)->get(route('student.applications.materials', $plan))->assertSee('SAS returned this application')->assertSee('The passport scan is blurred.');
         $this->put(route('student.applications.form.update', $plan), ['sections' => ['contact' => ['phone' => '123456']]])->assertRedirect();
     }
@@ -171,7 +171,7 @@ class ApplicationWizardTest extends TestCase
         $this->completeForm($student);
         $this->upload($student, 'passport');
         app(ApplicationReview::class)->submit($plan, $student);
-        $manager = $this->staff(Role::ServiceManager);
+        $manager = $this->staff(Role::Administrator);
 
         $this->actingAs($manager);
         $this->assertTrue(ApplicationReviewResource::canViewAny());
@@ -197,12 +197,12 @@ class ApplicationWizardTest extends TestCase
         $student = User::factory()->create();
         $plan = app(PlanService::class)->create($student, $this->cycle());
 
-        foreach ([Role::Editor, Role::Finance] as $role) {
+        foreach ([Role::Advisor] as $role) {
             $this->actingAs($this->staff($role));
             $this->assertFalse(ApplicationReviewResource::canViewAny(), $role->value);
             auth()->logout();
         }
-        $manager = $this->staff(Role::ServiceManager);
+        $manager = $this->staff(Role::Administrator);
         $this->actingAs($manager)->get(route('review.preview', $plan))->assertForbidden(); // a draft is private to the student
         $this->completeForm($student);
         $this->upload($student, 'passport');
@@ -220,7 +220,7 @@ class ApplicationWizardTest extends TestCase
         $this->upload($student, 'cv'); // not asked for by this scholarship
         $passport = Document::where('type', 'passport')->firstOrFail();
         $cv = Document::where('type', 'cv')->firstOrFail();
-        $manager = $this->staff(Role::ServiceManager);
+        $manager = $this->staff(Role::Administrator);
 
         $this->actingAs($manager)->get(route('files.download', $passport))->assertForbidden(); // still a draft
         app(ApplicationReview::class)->submit($plan, $student);
@@ -239,7 +239,7 @@ class ApplicationWizardTest extends TestCase
         $this->completeForm($student);
         $this->upload($student, 'passport');
         $review = app(ApplicationReview::class);
-        $manager = $this->staff(Role::ServiceManager);
+        $manager = $this->staff(Role::Administrator);
 
         $review->submit($plan, $student);
         $review->review($plan->refresh(), 'return', 'Add your degree.', $manager);

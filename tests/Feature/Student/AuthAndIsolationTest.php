@@ -125,8 +125,8 @@ class AuthAndIsolationTest extends TestCase
         $other = User::factory()->create();
         $advisor = User::factory()->role(Role::Advisor)->create();
         $assigned = User::factory()->role(Role::Advisor)->create();
-        $manager = User::factory()->role(Role::ServiceManager)->create();
-        $finance = User::factory()->role(Role::Finance)->create();
+        $manager = User::factory()->role(Role::Administrator)->create();
+        $finance = User::factory()->role(Role::Advisor)->create();
         $enquiry = new Enquiry(['category' => 'advisory', 'name' => 'S', 'email' => 's@example.test', 'message' => 'Message long enough']);
         $enquiry->user_id = $student->id;
         $enquiry->owner_id = $assigned->id;
@@ -160,11 +160,11 @@ class AuthAndIsolationTest extends TestCase
             'enquiries.view_all', 'enquiries.assign', 'services.manage', 'finance.view', 'audit.view'] as $permission) {
             $this->assertFalse($student->can($permission), "student must not hold {$permission}");
         }
-        $this->assertFalse(User::factory()->role(Role::Editor)->create()->can('content.publish'));
-        $this->assertFalse(User::factory()->role(Role::Reviewer)->create()->can('roles.manage'));
+        $this->assertFalse(User::factory()->role(Role::Advisor)->create()->can('content.publish'));
+        $this->assertFalse(User::factory()->role(Role::Administrator)->create()->can('roles.manage'));
         $this->assertFalse(User::factory()->role(Role::Administrator)->create()->can('roles.manage')); // only super admin
         $this->assertTrue(User::factory()->role(Role::SuperAdmin)->create()->can('roles.manage'));
-        $this->assertFalse(User::factory()->role(Role::Finance)->create()->can('enquiries.view_all'));
+        $this->assertFalse(User::factory()->role(Role::Advisor)->create()->can('enquiries.view_all'));
         $this->assertFalse(User::factory()->role(Role::PartnerManager)->create()->can('content.publish'));
     }
 

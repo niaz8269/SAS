@@ -39,7 +39,7 @@ class AdminPanelTest extends TestCase
     }
 
     /** A staff member who has already completed multi-factor set-up. */
-    private function staff(Role ...$roles): User
+    private function staff(Role|string ...$roles): User
     {
         $user = User::factory()->role(...$roles)->create();
         $user->forceFill(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP', 'app_authentication_recovery_codes' => ['aaaa-bbbb']])->save();
@@ -65,7 +65,7 @@ class AdminPanelTest extends TestCase
 
     public function test_staff_are_not_asked_for_an_authenticator_while_two_step_is_switched_off(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $this->actingAs($editor)->get('/admin')->assertOk();
         $this->get('/admin/scholarship-cycles')->assertOk();
     }
@@ -81,24 +81,24 @@ class AdminPanelTest extends TestCase
     public function test_navigation_access_matches_each_role(): void
     {
         $matrix = [
-            [Role::Editor, ['email-suppressions' => 403, 'scholarship-cycles' => 200, 'imports' => 200, 'articles' => 200, 'users' => 403, 'audits' => 403, 'enquiries' => 403, 'services' => 403]],
-            [Role::Reviewer, ['scholarship-cycles' => 200, 'imports' => 403, 'articles' => 200, 'users' => 403, 'audits' => 403]],
-            [Role::Advisor, ['enquiries' => 200, 'consultations' => 200, 'scholarship-cycles' => 403, 'users' => 403, 'imports' => 403, 'services' => 403]],
-            [Role::ServiceManager, ['enquiries' => 200, 'services' => 200, 'scholarship-cycles' => 403, 'users' => 403]],
-            [Role::Finance, ['enquiries' => 403, 'scholarship-cycles' => 403, 'users' => 403, 'audits' => 403, 'imports' => 403]],
-            [Role::Administrator, ['users' => 200, 'audits' => 200, 'email-suppressions' => 200, 'enquiries' => 200, 'services' => 200, 'scholarship-cycles' => 200]],
+            ['editor', ['email-suppressions' => 403, 'scholarship-cycles' => 200, 'imports' => 200, 'articles' => 200, 'users' => 403, 'audits' => 403, 'enquiries' => 403, 'services' => 403]],
+            ['reviewer', ['scholarship-cycles' => 200, 'imports' => 403, 'articles' => 200, 'users' => 403, 'audits' => 403]],
+            [Role::Advisor, ['enquiries' => 200, 'consultations' => 200, 'students' => 200, 'scholarship-cycles' => 403, 'users' => 403, 'imports' => 403, 'services' => 403, 'invoices' => 200, 'audits' => 403, 'counsellor-report' => 403]],
+            [Role::Administrator, ['users' => 200, 'audits' => 200, 'email-suppressions' => 200, 'enquiries' => 200, 'consultations' => 200, 'services' => 200, 'scholarship-cycles' => 200, 'imports' => 200, 'articles' => 200, 'students' => 200, 'invoices' => 200]],
+            [Role::SuperAdmin, ['users' => 200, 'audits' => 200, 'enquiries' => 200, 'services' => 200, 'scholarship-cycles' => 200]],
         ];
         foreach ($matrix as [$role, $paths]) {
+            $name = $role instanceof Role ? $role->value : $role;
             $this->staff($role);
             foreach ($paths as $path => $status) {
-                $this->get('/admin/'.$path)->assertStatus($status, "{$role->value} on /admin/{$path}");
+                $this->get('/admin/'.$path)->assertStatus($status, "{$name} on /admin/{$path}");
             }
         }
     }
 
     public function test_dashboard_renders_for_every_staff_role(): void
     {
-        foreach ([Role::SuperAdmin, Role::Administrator, Role::Editor, Role::Reviewer, Role::Advisor, Role::ServiceManager, Role::Finance] as $role) {
+        foreach ([Role::SuperAdmin, Role::Administrator, 'editor', 'reviewer', Role::Advisor] as $role) {
             $this->staff($role);
             $this->get('/admin')->assertOk();
         }
@@ -106,7 +106,7 @@ class AdminPanelTest extends TestCase
 
     public function test_editor_creates_a_draft_and_cannot_set_state_or_placement(): void
     {
-        $editor = $this->staff(Role::Editor);
+        $editor = $this->staff('editor');
         $programme = ScholarshipProgramme::factory()->create();
 
         Livewire::test(CreateScholarshipCycle::class)->fillForm([
@@ -124,7 +124,7 @@ class AdminPanelTest extends TestCase
 
     public function test_editor_submits_reviewer_publishes_through_the_ui_and_editor_cannot_publish(): void
     {
-        $editor = $this->staff(Role::Editor);
+        $editor = $this->staff('editor');
         $cycle = $this->draftWithSource($editor);
 
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])
@@ -135,7 +135,7 @@ class AdminPanelTest extends TestCase
         // Once submitted the editor can no longer open it for editing, so cannot approve or publish it.
         $this->get('/admin/scholarship-cycles/'.$cycle->id.'/edit')->assertForbidden();
 
-        $reviewer = $this->staff(Role::Reviewer);
+        $reviewer = $this->staff('reviewer');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])
             ->assertActionVisible('approve')->callAction('approve', ['notes' => 'Checked against the source']);
         $this->assertSame('approved', $cycle->fresh()->publication_state->value);
@@ -149,7 +149,7 @@ class AdminPanelTest extends TestCase
 
     public function test_a_reviewer_cannot_approve_their_own_cycle_through_the_ui(): void
     {
-        $reviewer = $this->staff(Role::Reviewer);
+        $reviewer = $this->staff('reviewer');
         $cycle = $this->draftWithSource($reviewer);
         app(CycleWorkflow::class)->submitForReview($cycle, $reviewer);
 
@@ -160,17 +160,17 @@ class AdminPanelTest extends TestCase
     public function test_editors_may_open_a_published_cycle_to_propose_changes_but_cannot_change_its_child_records(): void
     {
         $cycle = ScholarshipCycle::factory()->published()->create();
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         $this->get('/admin/scholarship-cycles/'.$cycle->id.'/edit')->assertOk();
         $this->assertFalse(auth()->user()->can('editDirect', $cycle));
-        $this->staff(Role::Reviewer);
+        $this->staff('reviewer');
         $this->get('/admin/scholarship-cycles/'.$cycle->id.'/edit')->assertOk();
         $this->assertTrue(auth()->user()->can('editDirect', $cycle));
     }
 
     public function test_deadline_relation_manager_records_a_new_version_and_refuses_bad_input(): void
     {
-        $this->staff(Role::Reviewer);
+        $this->staff('reviewer');
         $cycle = ScholarshipCycle::factory()->published()->create();
 
         Livewire::test(DeadlinesRelationManager::class, ['ownerRecord' => $cycle, 'pageClass' => EditScholarshipCycle::class])
@@ -198,7 +198,7 @@ class AdminPanelTest extends TestCase
 
     public function test_service_manager_assigns_and_the_status_changes_with_an_audit_entry(): void
     {
-        $manager = $this->staff(Role::ServiceManager);
+        $manager = $this->staff(Role::Administrator);
         $advisor = User::factory()->role(Role::Advisor)->create();
         $enquiry = $this->enquiry(['name' => 'Student']);
 
@@ -239,7 +239,7 @@ class AdminPanelTest extends TestCase
 
     public function test_confirming_a_consultation_stores_the_time_in_utc_and_marks_it_confirmed(): void
     {
-        $manager = $this->staff(Role::ServiceManager);
+        $manager = $this->staff(Role::Administrator);
         $c = new Consultation(['name' => 'S', 'email' => 's@example.test', 'preferred_from' => now()->addDay(), 'student_timezone' => 'Asia/Karachi', 'contact_method' => 'email']);
         $c->save();
 
@@ -252,7 +252,7 @@ class AdminPanelTest extends TestCase
 
     public function test_editors_cannot_publish_articles_even_by_choosing_the_status(): void
     {
-        $editor = $this->staff(Role::Editor);
+        $editor = $this->staff('editor');
         // "Published" is not even offered to editors, and a crafted request is rejected by validation.
         Livewire::test(ManageArticles::class)->callAction('create', data: ['title' => 'Guide', 'slug' => 'guide', 'category' => 'guide', 'status' => 'published', 'body' => '<p>x</p>'])
             ->assertHasActionErrors(['status']);
@@ -267,9 +267,9 @@ class AdminPanelTest extends TestCase
 
     public function test_the_article_status_guard_downgrades_publish_attempts_by_non_publishers(): void
     {
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         $this->assertSame('in_review', ManageArticles::guardStatus(['status' => 'published'])['status']);
-        $this->staff(Role::Reviewer);
+        $this->staff('reviewer');
         $out = ManageArticles::guardStatus(['status' => 'published']);
         $this->assertSame('published', $out['status']);
         $this->assertNotNull($out['published_at']);
@@ -284,8 +284,8 @@ class AdminPanelTest extends TestCase
         $this->assertSame([], $target->fresh()->roleKeys()); // administrators cannot grant roles
 
         $super = $this->staff(Role::SuperAdmin);
-        Livewire::test(EditUser::class, ['record' => $target->getKey()])->fillForm(['name' => $target->name, 'status' => 'active', 'roles' => ['editor']])->call('save');
-        $this->assertSame(['editor'], $target->fresh()->roleKeys());
+        Livewire::test(EditUser::class, ['record' => $target->getKey()])->fillForm(['name' => $target->name, 'status' => 'active', 'roles' => ['advisor']])->call('save');
+        $this->assertSame(['advisor'], $target->fresh()->roleKeys());
         $this->assertDatabaseHas('audits', ['action' => 'user.roles_changed', 'actor_id' => $super->id]);
 
         try {
@@ -315,7 +315,7 @@ class AdminPanelTest extends TestCase
 
     public function test_cycle_list_filters_and_renders(): void
     {
-        $this->staff(Role::Reviewer);
+        $this->staff('reviewer');
         $stale = ScholarshipCycle::factory()->published()->create(['review_due_at' => now()->subDay()]);
         $fresh = ScholarshipCycle::factory()->published()->create();
         $this->assertTrue($stale->fresh()->needsRecheck());

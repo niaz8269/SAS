@@ -88,7 +88,7 @@ class ConsultationResource extends Resource
                         Select::make('timezone')->options(array_combine(\DateTimeZone::listIdentifiers(), \DateTimeZone::listIdentifiers()))->searchable()->required()
                             ->default(fn (Consultation $r) => $r->student_timezone),
                         TextInput::make('duration')->label('Minutes')->numeric()->default(30)->required()->minValue(10)->maxValue(240),
-                        Select::make('advisor_id')->label('Advisor')->options(fn () => User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'service_manager']))->where('status', 'active')->pluck('name', 'id'))
+                        Select::make('advisor_id')->label('Advisor')->options(fn () => User::counsellors()->pluck('name', 'id'))
                             ->required()->default(fn () => auth()->id()),
                     ])
                     ->action(function (Consultation $record, array $data) {

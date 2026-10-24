@@ -16,7 +16,7 @@ class SendCounsellorDigest extends Command
     public function handle(Workload $workload): int
     {
         $sent = 0;
-        User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager', 'administrator']))->where('status', 'active')->whereNotNull('email_verified_at')->get()
+        User::counsellors()->whereNotNull('email_verified_at')->get()
             ->filter(fn (User $u) => $u->hasPermission('students.assigned'))
             ->each(function (User $user) use ($workload, &$sent) {
                 $work = $workload->for($user);

@@ -28,8 +28,8 @@ class WorkflowTest extends TestCase
 
     public function test_full_happy_path_draft_to_published(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
-        $reviewer = User::factory()->role(Role::Reviewer)->create();
+        $editor = User::factory()->role('editor')->create();
+        $reviewer = User::factory()->role('reviewer')->create();
         $wf = app(CycleWorkflow::class);
         $cycle = $this->draft($editor);
 
@@ -47,7 +47,7 @@ class WorkflowTest extends TestCase
 
     public function test_editor_cannot_approve_or_publish_their_own_draft(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $wf = app(CycleWorkflow::class);
         $cycle = $this->draft($editor);
         $wf->submitForReview($cycle, $editor);
@@ -58,7 +58,7 @@ class WorkflowTest extends TestCase
 
     public function test_reviewer_cannot_approve_a_cycle_they_created(): void
     {
-        $reviewer = User::factory()->role(Role::Reviewer)->create();
+        $reviewer = User::factory()->role('reviewer')->create();
         $wf = app(CycleWorkflow::class);
         $cycle = $this->draft($reviewer);
         $wf->submitForReview($cycle, $reviewer);
@@ -86,8 +86,8 @@ class WorkflowTest extends TestCase
 
     public function test_aggregator_only_evidence_cannot_be_approved(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
-        $reviewer = User::factory()->role(Role::Reviewer)->create();
+        $editor = User::factory()->role('editor')->create();
+        $reviewer = User::factory()->role('reviewer')->create();
         $wf = app(CycleWorkflow::class);
         $cycle = $this->draft($editor, 'aggregator');
         $wf->submitForReview($cycle, $editor);
@@ -98,7 +98,7 @@ class WorkflowTest extends TestCase
 
     public function test_submitting_without_any_source_is_refused(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $cycle = ScholarshipCycle::factory()->create(['created_by' => $editor->id]);
         $this->expectException(ValidationException::class);
         app(CycleWorkflow::class)->submitForReview($cycle, $editor);
@@ -106,18 +106,18 @@ class WorkflowTest extends TestCase
 
     public function test_publish_requires_the_publish_permission_and_an_approved_cycle(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $cycle = $this->draft($editor);
         app(CycleWorkflow::class)->submitForReview($cycle, $editor);
 
         $this->expectException(ValidationException::class); // in review, not approved
-        app(CycleWorkflow::class)->publish($cycle->fresh(), User::factory()->role(Role::Reviewer)->create());
+        app(CycleWorkflow::class)->publish($cycle->fresh(), User::factory()->role('reviewer')->create());
     }
 
     public function test_editor_has_no_publish_permission(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
-        $reviewer = User::factory()->role(Role::Reviewer)->create();
+        $editor = User::factory()->role('editor')->create();
+        $reviewer = User::factory()->role('reviewer')->create();
         $wf = app(CycleWorkflow::class);
         $cycle = $this->draft($editor);
         $wf->submitForReview($cycle, $editor);
@@ -129,8 +129,8 @@ class WorkflowTest extends TestCase
 
     public function test_request_changes_needs_notes_and_returns_to_the_editor(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
-        $reviewer = User::factory()->role(Role::Reviewer)->create();
+        $editor = User::factory()->role('editor')->create();
+        $reviewer = User::factory()->role('reviewer')->create();
         $wf = app(CycleWorkflow::class);
         $cycle = $this->draft($editor);
         $wf->submitForReview($cycle, $editor);
@@ -148,7 +148,7 @@ class WorkflowTest extends TestCase
 
     public function test_dotted_permissions_resolve_through_the_gate_and_deny_unknown(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $this->assertTrue($editor->can('content.draft'));
         $this->assertFalse($editor->can('content.publish'));
         $this->assertFalse($editor->can('totally.unknown'));

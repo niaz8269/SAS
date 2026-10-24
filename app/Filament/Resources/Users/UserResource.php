@@ -72,7 +72,7 @@ class UserResource extends Resource
                 Select::make('status')->options(['active' => 'Active', 'suspended' => 'Suspended (all sessions end immediately)'])->required(),
             ]),
             Section::make('Staff roles')->description('Only super administrators can grant or remove roles. Staff must complete multi-factor set-up before using the admin.')->schema([
-                CheckboxList::make('roles')->options(collect(Role::cases())->mapWithKeys(fn (Role $r) => [$r->value => $r->label()])->all())->columns(3)
+                CheckboxList::make('roles')->options(Role::staffOptions())->columns(3)
                     ->disabled(fn () => ! auth()->user()->can('roles.manage'))->dehydrated(fn () => auth()->user()->can('roles.manage')),
             ]),
         ]);
@@ -89,7 +89,7 @@ class UserResource extends Resource
             IconColumn::make('mfa')->label('MFA')->boolean()->getStateUsing(fn (User $u) => filled($u->app_authentication_secret)),
             TextColumn::make('created_at')->date()->sortable(),
         ])->filters([
-            SelectFilter::make('role')->options(collect(Role::cases())->mapWithKeys(fn (Role $r) => [$r->value => $r->label()])->all())
+            SelectFilter::make('role')->options(Role::staffOptions())
                 ->query(fn (Builder $query, array $data) => $data['value'] ? $query->whereHas('userRoles', fn ($r) => $r->where('role', $data['value'])) : $query),
             SelectFilter::make('status')->options(['active' => 'Active', 'suspended' => 'Suspended']),
         ])->recordActions([EditAction::make()])->defaultSort('id', 'desc');

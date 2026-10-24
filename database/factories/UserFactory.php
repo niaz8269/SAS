@@ -32,11 +32,11 @@ class UserFactory extends Factory
         return $this->state(fn (array $attributes) => ['email_verified_at' => null]);
     }
 
-    public function role(Role ...$roles): static
+    public function role(Role|string ...$roles): static
     {
         return $this->afterCreating(function (User $user) use ($roles) {
             foreach ($roles as $role) {
-                UserRole::create(['user_id' => $user->id, 'role' => $role->value]);
+                UserRole::create(['user_id' => $user->id, 'role' => $role instanceof Role ? $role->value : $role]);
             }
             $user->unsetRelation('userRoles');
         });

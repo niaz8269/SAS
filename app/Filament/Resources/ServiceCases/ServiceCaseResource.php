@@ -63,7 +63,7 @@ class ServiceCaseResource extends Resource
                 Select::make('degree_level_id')->label('Degree level')->placeholder('Not chosen yet')->visible(fn (?ServiceCase $record) => $record !== null)
                     ->options(fn () => DegreeLevel::orderBy('sort')->pluck('name', 'id')->all())->helperText('Decides which document rules apply. The student can set it too.'),
                 Select::make('advisor_id')->label('Counsellor')->searchable()->placeholder('Unassigned')
-                    ->options(fn () => User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager']))->where('status', 'active')->pluck('name', 'id')->all())
+                    ->options(fn () => User::counsellors()->pluck('name', 'id')->all())
                     ->disabled(fn () => ! auth()->user()->can('cases.manage')),
                 Textarea::make('internal_note')->label('Internal note (staff only)')->rows(4)->maxLength(4000)->columnSpanFull(),
             ]),
@@ -85,7 +85,7 @@ class ServiceCaseResource extends Resource
             TextColumn::make('opened_at')->date('j M Y')->sortable(),
         ])->filters([
             SelectFilter::make('status')->options(ServiceCase::STATUSES),
-            SelectFilter::make('advisor_id')->label('Counsellor')->options(fn () => User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager']))->pluck('name', 'id')->all()),
+            SelectFilter::make('advisor_id')->label('Counsellor')->options(fn () => User::counsellors()->pluck('name', 'id')->all()),
         ])->recordActions([EditAction::make()])->defaultSort('id', 'desc');
     }
 

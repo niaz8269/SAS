@@ -83,7 +83,7 @@ class PartnerPortalTest extends TestCase
 
     public function test_the_admin_screens_create_agencies_and_their_people(): void
     {
-        $this->staff(Role::ServiceManager);
+        $this->staff(Role::Administrator);
         Livewire::test(CreatePartnerOrganisation::class)->fillForm(['name' => 'New Agency', 'status' => 'active'])->call('create')->assertHasNoFormErrors();
         $org = PartnerOrganisation::firstWhere('name', 'New Agency');
         $this->assertNotNull($org);
@@ -97,7 +97,7 @@ class PartnerPortalTest extends TestCase
         $this->assertTrue($person->isAgent());
 
         auth()->logout();
-        $this->staff(Role::Editor);
+        $this->staff(Role::Advisor);
         $this->assertFalse(auth()->user()->can('viewAny', PartnerOrganisation::class));
     }
 

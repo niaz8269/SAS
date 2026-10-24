@@ -46,7 +46,7 @@ class CasePortalsTest extends TestCase
     public function test_a_manager_opens_a_case_and_the_application_fee_is_issued(): void
     {
         $student = User::factory()->create();
-        $this->staff(Role::ServiceManager);
+        $this->staff(Role::Administrator);
         Livewire::test(CreateServiceCase::class)->fillForm(['user_id' => $student->id, 'title' => 'DAAD Master'])->call('create')->assertHasNoFormErrors();
         $case = ServiceCase::firstWhere('title', 'DAAD Master');
         $this->assertNotNull($case);
@@ -82,15 +82,17 @@ class CasePortalsTest extends TestCase
         $this->assertFalse($advisor->can('update', $mine->invoices()->first()), 'only finance and managers record payments');
     }
 
-    public function test_finance_can_open_the_invoice_list_but_editors_cannot(): void
+    public function test_admins_run_the_invoices_but_counsellors_can_only_read_their_own(): void
     {
-        $finance = $this->staff(Role::Finance);
+        $finance = $this->staff(Role::Administrator);
         $this->assertTrue($finance->can('viewAny', Invoice::class));
         $this->assertTrue($finance->can('update', app(CaseService::class)->open(User::factory()->create(), null, null, ['title' => 'X'])->invoices()->first()));
         $this->assertTrue(InvoiceResource::canViewAny());
 
         auth()->logout();
-        $editor = $this->staff(Role::Editor);
-        $this->assertFalse($editor->can('viewAny', Invoice::class));
+        $counsellor = $this->staff(Role::Advisor);
+        $invoice = Invoice::first();
+        $this->assertFalse($counsellor->can('update', $invoice), 'a counsellor never records payments');
+        $this->assertFalse($counsellor->can('view', $invoice), 'and only reads the fees of cases assigned to them');
     }
 }

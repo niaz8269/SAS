@@ -80,7 +80,7 @@ class StudentResource extends Resource
 
     public static function counsellorOptions(): array
     {
-        return User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager']))->where('status', 'active')->orderBy('name')->pluck('name', 'id')->all();
+        return User::counsellors()->orderBy('name')->pluck('name', 'id')->all();
     }
 
     public static function table(Table $table): Table

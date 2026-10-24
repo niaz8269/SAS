@@ -84,7 +84,7 @@ class TrustAndTestimonialsTest extends TestCase
 
     public function test_only_site_managers_can_open_the_screens(): void
     {
-        $this->staff(Role::Editor);
+        $this->staff(Role::Advisor);
         $this->get('/admin/testimonials')->assertForbidden();
         $this->get('/admin/trust-items')->assertForbidden();
     }

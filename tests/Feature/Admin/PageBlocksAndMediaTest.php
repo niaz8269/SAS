@@ -129,7 +129,7 @@ class PageBlocksAndMediaTest extends TestCase
 
     public function test_only_staff_with_the_site_permission_can_open_the_new_screens(): void
     {
-        $this->staff(Role::Editor);
+        $this->staff(Role::Advisor);
         $this->get('/admin/page-blocks')->assertForbidden();
         $this->get('/admin/media-files')->assertForbidden();
     }

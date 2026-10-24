@@ -16,7 +16,7 @@ class CounsellorReport
     /** @return Collection<int,array<string,mixed>> */
     public function rows(): Collection
     {
-        $counsellors = User::whereHas('userRoles', fn ($q) => $q->whereIn('role', ['advisor', 'specialist', 'service_manager', 'administrator']))->where('status', 'active')->orderBy('name')->get()
+        $counsellors = User::counsellors()->orderBy('name')->get()
             ->filter(fn (User $u) => $u->hasPermission('students.assigned'));
 
         return $counsellors->map(function (User $c) {

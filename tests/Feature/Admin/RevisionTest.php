@@ -30,7 +30,7 @@ class RevisionTest extends TestCase
         Filament::setCurrentPanel('admin');
     }
 
-    private function staff(Role $role): User
+    private function staff(Role|string $role): User
     {
         $u = User::factory()->role($role)->create();
         $u->forceFill(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP', 'app_authentication_recovery_codes' => ['a']])->save();
@@ -59,7 +59,7 @@ class RevisionTest extends TestCase
     public function test_an_editors_change_to_a_live_cycle_is_staged_not_applied(): void
     {
         $cycle = $this->live();
-        $editor = $this->staff(Role::Editor);
+        $editor = $this->staff('editor');
 
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])
             ->fillForm($this->form($cycle, ['funding_summary' => 'Changed wording', 'funding_type' => 'full']))->call('save');
@@ -77,7 +77,7 @@ class RevisionTest extends TestCase
     public function test_saving_without_changes_stages_nothing(): void
     {
         $cycle = $this->live();
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->fillForm($this->form($cycle))->call('save');
         $this->assertSame(0, CycleRevision::count());
     }
@@ -86,11 +86,11 @@ class RevisionTest extends TestCase
     {
         $cycle = $this->live();
         $newCountry = Country::factory()->create();
-        $editor = $this->staff(Role::Editor);
+        $editor = $this->staff('editor');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])
             ->fillForm($this->form($cycle, ['summary' => 'Corrected text', 'destinations' => [$newCountry->id]]))->call('save');
 
-        $reviewer = $this->staff(Role::Reviewer);
+        $reviewer = $this->staff('reviewer');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])
             ->assertActionVisible('applyRevision')->callAction('applyRevision', ['notes' => 'Checked against the source']);
 
@@ -109,7 +109,7 @@ class RevisionTest extends TestCase
     public function test_a_reviewers_own_proposal_cannot_be_self_approved_without_an_admin_override(): void
     {
         $cycle = $this->live();
-        $reviewer = $this->staff(Role::Reviewer);
+        $reviewer = $this->staff('reviewer');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->fillForm($this->form($cycle, ['summary' => 'Mine']))->call('save');
         $rev = CycleRevision::firstOrFail();
 
@@ -138,9 +138,9 @@ class RevisionTest extends TestCase
     public function test_editors_cannot_approve_or_see_the_review_action(): void
     {
         $cycle = $this->live();
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->fillForm($this->form($cycle, ['summary' => 'x']))->call('save');
-        $other = $this->staff(Role::Editor);
+        $other = $this->staff('editor');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->assertActionHidden('applyRevision');
         $this->expectException(AuthorizationException::class);
         app(CycleRevisions::class)->apply(CycleRevision::firstOrFail(), $other);
@@ -149,9 +149,9 @@ class RevisionTest extends TestCase
     public function test_rejecting_needs_a_reason_and_leaves_the_listing_unchanged(): void
     {
         $cycle = $this->live();
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->fillForm($this->form($cycle, ['summary' => 'Bad edit']))->call('save');
-        $this->staff(Role::Reviewer);
+        $this->staff('reviewer');
 
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->callAction('rejectRevision', ['notes' => ''])->assertHasActionErrors(['notes']);
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->callAction('rejectRevision', ['notes' => 'Not what the source says']);
@@ -162,11 +162,11 @@ class RevisionTest extends TestCase
     public function test_a_proposal_made_against_an_older_live_version_is_marked_outdated_not_applied(): void
     {
         $cycle = $this->live();
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->fillForm($this->form($cycle, ['summary' => 'Stale edit']))->call('save');
 
         $cycle->forceFill(['summary' => 'Someone else updated it'])->save(); // live moved on
-        $reviewer = $this->staff(Role::Reviewer);
+        $reviewer = $this->staff('reviewer');
         try {
             app(CycleRevisions::class)->apply(CycleRevision::firstOrFail(), $reviewer);
             $this->fail('should refuse');
@@ -179,7 +179,7 @@ class RevisionTest extends TestCase
     public function test_a_new_proposal_from_the_same_person_replaces_their_earlier_one(): void
     {
         $cycle = $this->live();
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         foreach (['First', 'Second'] as $text) {
             Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])->fillForm($this->form($cycle, ['summary' => $text]))->call('save');
         }
@@ -191,7 +191,7 @@ class RevisionTest extends TestCase
     public function test_non_reviewers_cannot_claim_verification_through_a_proposal(): void
     {
         $cycle = $this->live();
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         Livewire::test(EditScholarshipCycle::class, ['record' => $cycle->getKey()])
             ->fillForm($this->form($cycle, ['funding_type' => 'full', 'fully_funded_verified' => true]))->call('save');
         $this->assertArrayNotHasKey('fully_funded_verified', CycleRevision::firstOrFail()->changes['fields']);
@@ -199,7 +199,7 @@ class RevisionTest extends TestCase
 
     public function test_draft_cycles_still_save_directly(): void
     {
-        $this->staff(Role::Editor);
+        $this->staff('editor');
         $draft = ScholarshipCycle::factory()->create(['summary' => 'Draft text', 'created_by' => auth()->id()]);
         Livewire::test(EditScholarshipCycle::class, ['record' => $draft->getKey()])
             ->fillForm($this->form($draft, ['summary' => 'Draft edited']))->call('save');
@@ -210,7 +210,7 @@ class RevisionTest extends TestCase
     public function test_direct_child_changes_on_live_cycles_are_audited(): void
     {
         $cycle = $this->live();
-        $reviewer = $this->staff(Role::Reviewer);
+        $reviewer = $this->staff('reviewer');
         $base = Audit::where('action', 'cycle.child_changed')->count();
         $req = CycleRequirement::create(['cycle_id' => $cycle->id, 'text' => 'Transcript']);
         $req->update(['text' => 'Certified transcript']);

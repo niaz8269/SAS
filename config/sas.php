@@ -41,21 +41,21 @@ return [
      * Permission names contain a dot; App\Providers\AuthServiceProvider resolves them through the Gate.
      */
     'permissions' => [
+        // The owner: everything, including who holds which role.
         'super_admin' => ['*'],
+        // Runs the service and the website: content (draft, review, publish), imports, articles, reference data, the website itself, enquiries,
+        // services, cases, fees and payments, agents, document rules, students and counsellors, reports and users. Can also counsel students.
         'administrator' => [
-            'content.draft', 'content.override', 'import.stage', 'users.manage', 'audit.view', 'reports.view',
+            'content.draft', 'content.review', 'content.publish', 'content.override', 'import.stage', 'users.manage', 'audit.view', 'reports.view',
             'enquiries.view_all', 'enquiries.assign', 'services.manage', 'articles.manage', 'taxonomy.manage', 'corrections.manage', 'site.manage',
             'cases.manage', 'finance.view', 'invoices.manage', 'partners.manage', 'documents.manage', 'students.manage',
+            'enquiries.assigned', 'consultations.assigned', 'cases.assigned', 'students.assigned',
         ],
-        'service_manager' => ['services.manage', 'enquiries.view_all', 'enquiries.assign', 'reports.view', 'cases.manage', 'partners.manage', 'documents.manage', 'students.manage'],
+        // Looks after assigned students, enquiries, consultations and cases.
         'advisor' => ['enquiries.assigned', 'consultations.assigned', 'cases.assigned', 'students.assigned'],
-        'specialist' => ['enquiries.assigned', 'cases.assigned', 'students.assigned'],
-        'editor' => ['content.draft', 'import.stage', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],
-        'reviewer' => ['content.draft', 'content.review', 'content.publish', 'articles.manage', 'taxonomy.manage', 'corrections.manage'],
-        'finance' => ['finance.view', 'invoices.manage', 'reports.view'],
         'partner_manager' => [], // a recruiting agent's access is decided by their organisation and by policies, not by a role permission
     ],
-    'staff_roles' => ['super_admin', 'administrator', 'service_manager', 'advisor', 'specialist', 'editor', 'reviewer', 'finance'],
+    'staff_roles' => ['super_admin', 'administrator', 'advisor'],
 
     // Bundled photographs (Unsplash licence: free to use; credit is given as a courtesy). Shown on /image-credits.
     'image_credits' => [

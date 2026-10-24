@@ -131,7 +131,7 @@ class WebsiteCmsTest extends TestCase
 
     public function test_only_staff_with_the_site_permission_can_manage_the_website(): void
     {
-        $this->staff(Role::Editor);
+        $this->staff(Role::Advisor);
         $this->get('/admin/site-settings')->assertForbidden();
         $this->get('/admin/home-sections')->assertForbidden();
         $this->get('/admin/menu-items')->assertForbidden();
@@ -151,7 +151,7 @@ class WebsiteCmsTest extends TestCase
         $this->staff(Role::SuperAdmin);
         $this->get('/admin')->assertOk()->assertSee('Manage your website')->assertSee('Website content')->assertSee('Recent activity')->assertSee('Testimonials');
 
-        $this->staff(Role::Reviewer);
+        $this->staff(Role::Administrator);
         $this->get('/admin')->assertOk()->assertDontSee('This role cannot edit the website itself');
 
         $this->staff(Role::Advisor);

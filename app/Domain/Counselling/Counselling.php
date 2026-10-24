@@ -82,12 +82,12 @@ class Counselling
         return $message;
     }
 
-    /** Emails the student's counsellor (the assigned one, and the adviser on any of their cases); with none, the service managers. */
+    /** Emails the student's counsellor (the assigned one, and the adviser on any of their cases); with none, the admins. */
     private function alertStaff(User $student, CounsellorMessage $message): void
     {
         $people = collect([$student->counsellor])->merge(User::whereIn('id', ServiceCase::where('user_id', $student->id)->whereNotNull('advisor_id')->pluck('advisor_id'))->get())->filter()->unique('id');
         if ($people->isEmpty()) {
-            $people = User::whereHas('userRoles', fn ($q) => $q->where('role', 'service_manager'))->where('status', 'active')->get();
+            $people = User::whereHas('userRoles', fn ($q) => $q->where('role', 'administrator'))->where('status', 'active')->get();
         }
         Notification::send($people->filter(fn (User $u) => $u->isStaff() && $u->hasVerifiedEmail()), new StudentWrote($student, Str::limit($message->body, 160)));
     }

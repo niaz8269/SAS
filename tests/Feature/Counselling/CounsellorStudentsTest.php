@@ -70,7 +70,7 @@ class CounsellorStudentsTest extends TestCase
         $this->get('/admin/students/'.$amina->id)->assertOk();
         $this->get('/admin/students/'.$bilal->id)->assertNotFound();
 
-        $manager = $this->staff(Role::ServiceManager, 'Manager');
+        $manager = $this->staff(Role::Administrator, 'Manager');
         $this->actingAs($manager);
         Livewire::test(ListStudents::class)->assertCanSeeTableRecords([$amina, $bilal, $carla]);
     }
@@ -120,7 +120,7 @@ class CounsellorStudentsTest extends TestCase
 
         // A counsellor with no assignment, and a manager, cannot open the documents of a student they do not look after.
         $this->actingAs($this->staff(Role::Advisor, 'Counsellor Two'))->get(route('files.download', $document))->assertForbidden();
-        $this->actingAs($this->staff(Role::ServiceManager, 'Manager'))->get(route('files.download', $document))->assertForbidden();
+        $this->actingAs($this->staff(Role::Administrator, 'Manager'))->get(route('files.download', $document))->assertForbidden();
         Livewire::test(ViewStudent::class, ['record' => $amina->id])->assertSee('Update status');
     }
 
@@ -154,8 +154,8 @@ class CounsellorStudentsTest extends TestCase
     {
         $counsellor = $this->staff(Role::Advisor, 'Counsellor One');
         $amina = $this->student('Amina Khan');
-        $manager = $this->staff(Role::ServiceManager, 'Manager');
-        $editor = $this->staff(Role::Editor, 'Editor');
+        $manager = $this->staff(Role::Administrator, 'Manager');
+        $editor = User::factory()->create(); // a plain student cannot counsel
 
         $this->actingAs($manager);
         Livewire::test(ViewStudent::class, ['record' => $amina->id])->callAction('assign', ['counsellor_id' => $counsellor->id])->assertHasNoActionErrors();
@@ -173,8 +173,8 @@ class CounsellorStudentsTest extends TestCase
         $this->actingAs($counsellor);
         Livewire::test(ViewStudent::class, ['record' => $amina->id])->assertActionHidden('assign');
 
-        $this->actingAs($this->staff(Role::Finance, 'Finance'))->get('/admin/students')->assertForbidden();
-        $this->actingAs($this->staff(Role::Editor, 'Editor'))->get('/admin/students')->assertForbidden();
+        $this->actingAs(User::factory()->role(Role::PartnerManager)->create())->get('/admin/students')->assertForbidden();
+        $this->actingAs(User::factory()->create())->get('/admin/students')->assertForbidden();
         $this->actingAs($amina)->get('/admin/students')->assertForbidden();
     }
 

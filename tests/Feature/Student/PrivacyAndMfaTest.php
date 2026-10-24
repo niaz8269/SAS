@@ -192,7 +192,7 @@ class PrivacyAndMfaTest extends TestCase
 
     public function test_staff_accounts_cannot_self_delete(): void
     {
-        $staff = User::factory()->role(Role::Editor)->create();
+        $staff = User::factory()->role(Role::Administrator)->create();
         $this->actingAs($staff)->post('/student/privacy/delete-request', ['password' => 'password'])->assertSessionHas('error');
         $this->expectException(\DomainException::class);
         app(AccountPrivacy::class)->erase($staff);
@@ -317,7 +317,7 @@ class PrivacyAndMfaTest extends TestCase
 
     public function test_staff_with_an_authenticator_cannot_bypass_it_through_the_site_login(): void
     {
-        $staff = User::factory()->role(Role::Editor)->create(['email' => 's@example.test']);
+        $staff = User::factory()->role(Role::Administrator)->create(['email' => 's@example.test']);
         [$secret] = $this->enable($staff);
         $this->post('/login', ['email' => 's@example.test', 'password' => 'password'])->assertRedirect(route('two-factor.challenge'));
         $this->assertGuest();
@@ -342,7 +342,7 @@ class PrivacyAndMfaTest extends TestCase
         $this->post('/student/security/disable', ['password' => 'password']);
         $this->assertFalse(app(TwoFactor::class)->enabled($user->fresh()));
 
-        $staff = User::factory()->role(Role::Editor)->create();
+        $staff = User::factory()->role(Role::Administrator)->create();
         $this->enable($staff);
         $this->actingAs($staff)->post('/student/security/disable', ['password' => 'password'])->assertSessionHas('error');
         $this->assertTrue(app(TwoFactor::class)->enabled($staff->fresh()));

@@ -31,7 +31,10 @@ class DemoAccountsSeeder extends Seeder
         $password = env('SAS_DEMO_PASSWORD', 'demo-password-123');
         $codes = collect(range(1, 8))->map(fn ($i) => sprintf('demo-code-%04d', $i))->all();
 
-        foreach ([Role::SuperAdmin, Role::Administrator, Role::Editor, Role::Reviewer, Role::ServiceManager, Role::Advisor, Role::Specialist, Role::Finance] as $role) {
+        // The retired demo staff (editor, reviewer, finance, service manager, specialist) are removed: staff now work in three roles.
+        User::whereIn('email', array_map(fn ($r) => 'demo-'.$r.'@example.test', ['editor', 'reviewer', 'finance', 'service_manager', 'specialist']))->each->delete();
+
+        foreach ([Role::SuperAdmin, Role::Administrator, Role::Advisor] as $role) {
             $user = User::firstOrCreate(['email' => 'demo-'.$role->value.'@example.test'], ['name' => 'Demo '.$role->label(), 'password' => $password]);
             $user->forceFill(['email_verified_at' => now(), 'app_authentication_secret' => self::MFA_SECRET, 'app_authentication_recovery_codes' => $codes])->save();
             $user->userRoles()->firstOrCreate(['role' => $role->value]);

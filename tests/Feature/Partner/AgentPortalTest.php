@@ -256,7 +256,7 @@ class AgentPortalTest extends TestCase
         $student = $this->studentOf($agent);
         $plan = app(PlanService::class)->create($student, $this->cycle());
         $plan->forceFill(['stage' => 'submitted'])->save();
-        $staff = User::factory()->role(Role::ServiceManager)->create();
+        $staff = User::factory()->role(Role::Administrator)->create();
 
         app(ApplicationReview::class)->review($plan, 'return', 'Please fix the passport.', $staff);
 

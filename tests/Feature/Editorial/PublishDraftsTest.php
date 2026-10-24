@@ -43,7 +43,7 @@ class PublishDraftsTest extends TestCase
     public function test_it_needs_a_reason_and_a_staff_account_that_may_publish_and_override(): void
     {
         $owner = User::factory()->role(Role::SuperAdmin)->create();
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $this->draft();
 
         $this->artisan('sas:publish-drafts', ['email' => $owner->email])->assertFailed();

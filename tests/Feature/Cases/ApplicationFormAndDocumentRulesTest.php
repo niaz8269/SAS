@@ -246,10 +246,10 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
 
     public function test_only_staff_with_document_permission_manage_document_types_and_rules(): void
     {
-        $this->actingAs($this->staff(Role::ServiceManager));
+        $this->actingAs($this->staff(Role::Administrator));
         $this->assertTrue(DocumentKindResource::canViewAny());
         auth()->logout();
-        foreach ([Role::Advisor, Role::Editor, Role::Finance] as $role) {
+        foreach ([Role::Advisor] as $role) {
             $this->actingAs($this->staff($role));
             $this->assertFalse(DocumentKindResource::canViewAny(), $role->value);
             auth()->logout();
@@ -258,7 +258,7 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
 
     public function test_a_manager_sets_rules_per_document_and_per_scholarship_and_duplicates_are_refused(): void
     {
-        $manager = $this->staff(Role::ServiceManager);
+        $manager = $this->staff(Role::Administrator);
         $this->actingAs($manager);
         $level = DegreeLevel::factory()->create(['name' => 'Bachelor']);
         $cycle = ScholarshipCycle::factory()->published()->create();
@@ -279,7 +279,7 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
 
     public function test_an_editor_cannot_see_the_document_rules_on_a_scholarship(): void
     {
-        $this->actingAs($this->staff(Role::Editor));
+        $this->actingAs($this->staff(Role::Advisor));
         $this->assertFalse(DocumentRulesRelationManager::canViewForRecord(ScholarshipCycle::factory()->published()->create(), EditScholarshipCycle::class));
     }
 

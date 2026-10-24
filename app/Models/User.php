@@ -14,6 +14,7 @@ use Filament\Panel;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
@@ -42,6 +43,12 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
             'app_authentication_secret' => 'encrypted',
             'app_authentication_recovery_codes' => 'encrypted:array',
         ];
+    }
+
+    /** Active staff who can look after students and own enquiries: counsellors, admins and the super admin. */
+    public function scopeCounsellors(Builder $q): Builder
+    {
+        return $q->where('status', 'active')->whereHas('userRoles', fn ($r) => $r->whereIn('role', Role::counsellorKeys()));
     }
 
     public function userRoles(): HasMany

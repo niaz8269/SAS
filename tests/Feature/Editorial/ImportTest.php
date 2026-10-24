@@ -5,7 +5,6 @@ namespace Tests\Feature\Editorial;
 use App\Domain\Editorial\CycleWorkflow;
 use App\Domain\Editorial\ScholarshipImporter;
 use App\Enums\PublicationState;
-use App\Enums\Role;
 use App\Models\CycleDeadline;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
@@ -53,7 +52,7 @@ class ImportTest extends TestCase
 
     public function test_valid_rows_are_staged_then_committed_as_drafts_never_published(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $importer = app(ScholarshipImporter::class);
 
         $import = $importer->stage($this->csv([$this->row()]), 'cycles.csv', $editor);
@@ -74,7 +73,7 @@ class ImportTest extends TestCase
 
     public function test_replaying_an_import_creates_no_duplicates_and_no_new_deadline_versions(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $importer = app(ScholarshipImporter::class);
         $file = $this->csv([$this->row()]);
 
@@ -93,7 +92,7 @@ class ImportTest extends TestCase
 
     public function test_a_changed_deadline_in_a_reimport_creates_a_new_version(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $importer = app(ScholarshipImporter::class);
         $importer->commit($importer->stage($this->csv([$this->row()]), 'a.csv', $editor), $editor);
         $importer->commit($importer->stage($this->csv([$this->row(['deadline_local_datetime' => '2028-02-28 17:00'])]), 'b.csv', $editor), $editor);
@@ -104,7 +103,7 @@ class ImportTest extends TestCase
 
     public function test_the_same_cycle_without_an_external_key_is_matched_by_programme_and_year(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $importer = app(ScholarshipImporter::class);
         $importer->commit($importer->stage($this->csv([$this->row(['external_key' => ''])]), 'a.csv', $editor), $editor);
         $again = $importer->stage($this->csv([$this->row(['external_key' => ''])]), 'a.csv', $editor);
@@ -115,7 +114,7 @@ class ImportTest extends TestCase
 
     public function test_a_new_year_creates_a_new_cycle_under_the_same_programme(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role('editor')->create();
         $importer = app(ScholarshipImporter::class);
         $importer->commit($importer->stage($this->csv([$this->row(['external_key' => '']), $this->row(['external_key' => '', 'cycle_year' => '2029'])]), 'a.csv', $editor), $editor);
         $this->assertSame(1, ScholarshipProgramme::count());
@@ -167,8 +166,8 @@ class ImportTest extends TestCase
 
     public function test_imports_cannot_change_live_or_in_review_content(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
-        $reviewer = User::factory()->role(Role::Reviewer)->create();
+        $editor = User::factory()->role('editor')->create();
+        $reviewer = User::factory()->role('reviewer')->create();
         $importer = app(ScholarshipImporter::class);
         $importer->commit($importer->stage($this->csv([$this->row()]), 'a.csv', $editor), $editor);
 

@@ -44,7 +44,7 @@ class PaymentOptionsTest extends TestCase
         $this->assertDatabaseHas('payment_options', ['name' => 'Bank transfer', 'kind' => 'bank']);
 
         auth()->logout();
-        $this->staff(Role::Reviewer);
+        $this->staff(Role::Advisor);
         $this->get('/admin/payment-options')->assertForbidden();
     }
 }

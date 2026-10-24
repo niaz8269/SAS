@@ -143,7 +143,7 @@ class DocumentRulesImportTest extends TestCase
     public function test_the_copy_action_is_in_the_admin_and_only_for_document_managers(): void
     {
         Filament::setCurrentPanel('admin');
-        $manager = User::factory()->role(Role::ServiceManager)->create();
+        $manager = User::factory()->role(Role::Administrator)->create();
         $manager->forceFill(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP', 'app_authentication_recovery_codes' => ['a-b']])->save();
         $from = ScholarshipCycle::factory()->published()->create();
         $to = ScholarshipCycle::factory()->published()->create();
@@ -155,7 +155,7 @@ class DocumentRulesImportTest extends TestCase
         $this->assertSame(1, DocumentRule::where('programme_id', $to->programme_id)->count());
 
         auth()->logout();
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role(Role::Advisor)->create();
         $editor->forceFill(['app_authentication_secret' => 'JBSWY3DPEHPK3PXP', 'app_authentication_recovery_codes' => ['a-b']])->save();
         $this->actingAs($editor);
         $this->assertFalse(DocumentRulesRelationManager::canViewForRecord($to, EditScholarshipCycle::class));

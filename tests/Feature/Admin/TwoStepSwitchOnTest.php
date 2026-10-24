@@ -30,7 +30,7 @@ class TwoStepSwitchOnTest extends TestCase
 
     public function test_staff_without_mfa_are_forced_to_set_it_up_first_when_two_step_is_on(): void
     {
-        $editor = User::factory()->role(Role::Editor)->create();
+        $editor = User::factory()->role(Role::Administrator)->create();
         $this->actingAs($editor)->get('/admin')->assertRedirect(route('filament.admin.auth.multi-factor-authentication.set-up-required'));
         $this->actingAs($editor)->get('/admin/scholarship-cycles')->assertRedirect(route('filament.admin.auth.multi-factor-authentication.set-up-required'));
     }
