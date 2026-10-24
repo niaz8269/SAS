@@ -2,7 +2,6 @@
 
 namespace App\Filament\Widgets;
 
-use App\Enums\Role;
 use App\Filament\Pages\SiteSettings;
 use App\Filament\Resources\Articles\ArticleResource;
 use App\Filament\Resources\CmsPages\CmsPageResource;
@@ -29,12 +28,14 @@ class WebsiteShortcuts extends Widget
 
     protected string $view = 'filament.widgets.website-shortcuts';
 
+    /** Only people who can open at least one of these screens see the card (an advisor, for example, sees nothing here). */
     public static function canView(): bool
     {
-        return (bool) auth()->user()?->isStaff();
+        return (bool) auth()->user()?->isStaff() && static::links() !== [];
     }
 
-    protected function getViewData(): array
+    /** @return list<array{0:string,1:string,2:string,3:bool}> */
+    private static function links(): array
     {
         $links = [
             ['Site settings', 'Name, logo, contact details, footer, announcement bar', SiteSettings::getUrl(), SiteSettings::canAccess()],
@@ -52,9 +53,11 @@ class WebsiteShortcuts extends Widget
             ['Destinations', 'Countries and study guidance', CountryResource::getUrl(), CountryResource::canViewAny()],
         ];
 
-        $user = auth()->user();
-        $roles = $user->userRoles->map(fn ($r) => Role::tryFrom($r->role)?->label())->filter()->implode(', ');
+        return array_values(array_filter($links, fn ($l) => $l[3]));
+    }
 
-        return ['links' => array_values(array_filter($links, fn ($l) => $l[3])), 'siteUrl' => url('/'), 'roles' => $roles, 'canEditSite' => SiteSettings::canAccess()];
+    protected function getViewData(): array
+    {
+        return ['links' => static::links(), 'siteUrl' => url('/')];
     }
 }

@@ -146,12 +146,15 @@ class WebsiteCmsTest extends TestCase
         }
     }
 
-    public function test_dashboard_shows_content_and_activity_widgets_and_explains_a_limited_role(): void
+    public function test_dashboard_shows_content_and_activity_widgets_without_a_role_warning(): void
     {
         $this->staff(Role::SuperAdmin);
         $this->get('/admin')->assertOk()->assertSee('Manage your website')->assertSee('Website content')->assertSee('Recent activity')->assertSee('Testimonials');
 
         $this->staff(Role::Reviewer);
-        $this->get('/admin')->assertOk()->assertSee('This role cannot edit the website itself');
+        $this->get('/admin')->assertOk()->assertDontSee('This role cannot edit the website itself');
+
+        $this->staff(Role::Advisor);
+        $this->get('/admin')->assertOk()->assertDontSee('Manage your website')->assertDontSee('This role cannot edit the website itself'); // nothing to manage: no card
     }
 }
