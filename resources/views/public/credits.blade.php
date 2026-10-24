@@ -1,5 +1,5 @@
 <x-layouts.public title="Image credits" description="Where the photographs on this site come from.">
-    <div class="container-page max-w-3xl py-10">
+    <div class="container-page py-10">
         <h1 class="text-3xl font-extrabold sm:text-4xl">Image credits</h1>
         <p class="mt-3 text-muted">Photographs on this site are used under the free Unsplash licence, under the open licences shown below (Wikimedia Commons), or with the owner's permission. Thank you to the photographers.</p>
         <ul class="mt-6 space-y-3">

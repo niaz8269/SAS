@@ -1,5 +1,5 @@
 <x-layouts.public :title="'Enquiry '.$enquiry->reference" :noindex="true">
-    <div class="container-page max-w-3xl py-10">
+    <div class="container-page py-10">
         <h1 class="text-2xl font-extrabold">Enquiry {{ $enquiry->reference }}</h1>
         <p class="mt-1 text-sm text-muted">Status: <span class="badge-neutral">{{ $enquiry->status->label() }}</span> &middot; Sent {{ $enquiry->created_at->format('j M Y, H:i') }} UTC @if ($enquiry->service) &middot; {{ $enquiry->service->name }} @endif</p>
 

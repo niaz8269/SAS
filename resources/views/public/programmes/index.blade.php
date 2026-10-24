@@ -7,7 +7,7 @@
     <section class="container-page py-10">
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('universities.index') }}">Universities</a> / <span aria-current="page">Programmes</span></nav>
         <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Search programmes' }}</h1>
-        <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Find degree programmes at universities in China by subject, degree level, teaching language and province.' }}</p>
+        <p class="mt-2 text-muted">{{ $intro?->body ?: 'Find degree programmes at universities in China by subject, degree level, teaching language and province.' }}</p>
 
         <form method="GET" action="{{ route('programmes.index') }}" class="card mt-6 grid gap-3 p-4 md:grid-cols-4 md:items-end" role="search">
             <div class="md:col-span-2"><label for="p-q" class="label">Subject or programme</label><input id="p-q" name="q" type="search" value="{{ $filters['q'] }}" class="input" placeholder="e.g. computer science, 临床医学" maxlength="80"></div>

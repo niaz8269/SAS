@@ -2,7 +2,7 @@
     $titles = ['privacy' => 'Privacy notice', 'terms' => 'Terms and conditions', 'refunds' => 'Cancellation and refund policy', 'accessibility' => 'Accessibility statement'];
 @endphp
 <x-layouts.public :title="$titles[$page]">
-    <div class="container-page max-w-3xl py-10">
+    <div class="container-page py-10">
         <h1 class="text-3xl font-extrabold">{{ $titles[$page] }}</h1>
         @unless (config('sas.legal_approved'))
         <div class="mt-4 rounded-md border border-warn/30 bg-warn-soft px-4 py-3 text-sm text-warn" role="note">

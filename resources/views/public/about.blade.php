@@ -1,5 +1,5 @@
 <x-layouts.public title="About" description="What SAS does, how listings are verified and what we do not promise.">
-    <div class="container-page max-w-3xl py-10">
+    <div class="container-page py-10">
         <h1 class="text-3xl font-extrabold sm:text-4xl">About {{ config('sas.brand.short') }}</h1>
         <p class="mt-3 text-lg text-muted">{{ config('sas.brand.name') }} helps students find scholarships and prepare strong applications. Reading about scholarships is always free and never needs an account.</p>
 

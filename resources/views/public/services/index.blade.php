@@ -3,8 +3,8 @@
     <x-page-blocks page="services" position="top" />
     <section class="container-page py-10">
         <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Support beyond the scholarship' }}</h1>
-        <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Professional help at each step. Every service starts with a free enquiry; we confirm scope, deliverables and any fee with you before work begins. No service guarantees scholarship selection, admission, attestation acceptance or a visa decision.' }}</p>
-        <div class="mt-6 max-w-5xl">
+        <p class="mt-2 text-muted">{{ $intro?->body ?: 'Professional help at each step. Every service starts with a free enquiry; we confirm scope, deliverables and any fee with you before work begins. No service guarantees scholarship selection, admission, attestation acceptance or a visa decision.' }}</p>
+        <div class="mt-6">
             <h2 class="text-xl font-bold">Our fees</h2>
             @include('public.legal.fees')
             @include('public.legal.payment-options')

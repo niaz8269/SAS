@@ -3,7 +3,7 @@
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('services.index') }}">Our services</a> / <span aria-current="page">{{ $service->name }}</span></nav>
         <p class="eyebrow mt-3">{{ ucfirst(str_replace('_', ' ', $service->category)) }}</p>
         <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">{{ $service->name }}</h1>
-        <p class="mt-3 max-w-3xl text-lg text-muted">{{ $service->summary }}</p>
+        <p class="mt-3 text-lg text-muted">{{ $service->summary }}</p>
     </div></section>
 
     <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_20rem]">

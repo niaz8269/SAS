@@ -7,7 +7,7 @@
     <section class="container-page py-10">
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <span aria-current="page">Universities</span></nav>
         <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Universities in China' }}</h1>
-        <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Universities listed on the official study-in-China system for international students. Programme lists, tuition and scholarship eligibility are copied from that system and change every year: always confirm with the university and the official scholarship pages.' }}</p>
+        <p class="mt-2 text-muted">{{ $intro?->body ?: 'Universities listed on the official study-in-China system for international students. Programme lists, tuition and scholarship eligibility are copied from that system and change every year: always confirm with the university and the official scholarship pages.' }}</p>
         <p class="mt-2"><a class="font-semibold text-navy-700 underline" href="{{ route('programmes.index') }}">Search programmes across all universities &rarr;</a></p>
 
         <form method="GET" action="{{ route('universities.index') }}" class="card mt-6 grid gap-3 p-4 md:grid-cols-[2fr_1fr_1fr_auto] md:items-end" role="search">
@@ -24,7 +24,7 @@
         @if ($universities->isEmpty())
             <p class="card mt-4 p-6 text-sm text-muted">{{ $emptyMsg?->body ?: 'No universities match your search.' }}</p>
         @else
-            <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 @foreach ($universities as $u)
                     <li class="card flex flex-col overflow-hidden">
                         <a href="{{ route('universities.show', $u) }}" tabindex="-1" aria-hidden="true"><img src="{{ $u->imageUrl() }}" alt="" class="aspect-video w-full object-cover" loading="lazy" width="960" height="540"></a>

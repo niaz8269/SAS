@@ -2,7 +2,7 @@
     <section class="border-b border-line bg-white"><div class="container-page py-8">
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('destinations.index') }}">Study destinations</a> / <span aria-current="page">{{ $country->name }}</span></nav>
         <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">Study in {{ $country->name }}</h1>
-        @if ($country->summary)<p class="mt-3 max-w-3xl text-lg text-muted">{{ $country->summary }}</p>@endif
+        @if ($country->summary)<p class="mt-3 text-lg text-muted">{{ $country->summary }}</p>@endif
         <figure class="mt-4 max-w-xl"><img src="{{ $country->imageUrl() }}" alt="" class="aspect-video w-full rounded-xl border border-line object-cover" width="960" height="540"></figure>
         <p class="mt-3 text-sm text-muted">
             @if ($country->guidance_reviewed_at) Last reviewed {{ $country->guidance_reviewed_at->format('j F Y') }}. @else Review date not recorded. @endif

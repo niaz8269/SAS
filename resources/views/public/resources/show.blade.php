@@ -1,5 +1,5 @@
 <x-layouts.public :title="$article->seo_title ?: $article->title" :description="$article->seo_description ?: \Illuminate\Support\Str::limit(strip_tags((string) $article->excerpt), 155)">
-    <article class="container-page max-w-3xl py-10">
+    <article class="container-page py-10">
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('resources.index') }}">Resources</a> / <span aria-current="page">{{ $article->title }}</span></nav>
         <p class="eyebrow mt-4">{{ ucfirst($article->category) }}</p>
         <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl">{{ $article->title }}</h1>

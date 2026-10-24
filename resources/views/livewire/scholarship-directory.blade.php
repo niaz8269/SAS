@@ -111,7 +111,7 @@
                 </ul>
             @endif
 
-            <div wire:loading.delay class="mt-4 grid gap-4 sm:grid-cols-2" aria-hidden="true">
+            <div wire:loading.delay class="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-3" aria-hidden="true">
                 @for ($i = 0; $i < 4; $i++)<div class="skeleton h-56"></div>@endfor
             </div>
 
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                 @else
-                    <div class="grid gap-4 sm:grid-cols-2">
+                    <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                         @foreach ($results as $cycle)
                             <x-cycle-card :cycle="$cycle" wire:key="cycle-{{ $cycle->id }}" />
                         @endforeach

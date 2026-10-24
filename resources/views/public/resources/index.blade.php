@@ -3,7 +3,7 @@
     <x-page-blocks page="resources" position="top" />
     <section class="container-page py-10">
         <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Resources' }}</h1>
-        <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Practical guides for international students.' }}</p>
+        <p class="mt-2 text-muted">{{ $intro?->body ?: 'Practical guides for international students.' }}</p>
         @if ($articles->isEmpty())
             <p class="card mt-6 p-6 text-sm text-muted">{{ $emptyMsg?->body ?: 'Guides will appear here once they are published.' }}</p>
         @else

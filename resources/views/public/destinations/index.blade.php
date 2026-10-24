@@ -3,7 +3,7 @@
     <x-page-blocks page="destinations" position="top" />
     <section class="container-page py-10">
         <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Study destinations' }}</h1>
-        <p class="mt-2 max-w-3xl text-muted">{{ $intro?->body ?: 'Each guide shows its sources and the date it was last reviewed. Visa and entry rules change: always confirm with the official authority.' }}</p>
+        <p class="mt-2 text-muted">{{ $intro?->body ?: 'Each guide shows its sources and the date it was last reviewed. Visa and entry rules change: always confirm with the official authority.' }}</p>
         @if ($countries->isEmpty())
             <p class="card mt-6 p-6 text-sm text-muted">{{ $emptyMsg?->body ?: 'Destination guides will appear here once they have been reviewed and published.' }} In the meantime you can <a class="text-navy-700 underline" href="{{ route('scholarships.index') }}">browse scholarships</a>.</p>
         @else
