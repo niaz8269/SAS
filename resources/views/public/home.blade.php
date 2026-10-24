@@ -208,6 +208,21 @@
     @endif
     @break
 
+@case('blog')
+    @if ($blogPosts->isNotEmpty())
+    <section class="container-page pb-10" aria-labelledby="home-blog">
+        <div class="flex flex-wrap items-end justify-between gap-3">
+            <h2 id="home-blog" class="section-title">{{ $s->heading }}</h2>
+            @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="text-sm font-semibold text-navy-700 underline">{{ $s->cta_label }} &rarr;</a>@endif
+        </div>
+        @if ($s->subheading)<p class="mt-1 text-muted">{{ $s->subheading }}</p>@endif
+        <div class="mt-5 grid gap-5 md:grid-cols-3">
+            @foreach ($blogPosts as $post)<x-blog-card :post="$post" />@endforeach
+        </div>
+    </section>
+    @endif
+    @break
+
 @case('consultation')
     <section class="container-page pb-4">
         <div class="flex flex-wrap items-center justify-between gap-6 rounded-2xl border border-gold/60 bg-white p-6 shadow-sm sm:p-8">

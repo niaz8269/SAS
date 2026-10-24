@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Domain\Scholarship\DeadlineService;
 use App\Models\Article;
+use App\Models\BlogPost;
 use App\Models\Country;
 use App\Models\DegreeLevel;
 use App\Models\HomeSection;
@@ -71,6 +72,7 @@ class HomeController extends Controller
             ->sortBy(fn ($u) => [$u->sort_order === null ? 1 : 0, $u->sort_order ?? 0, file_exists(public_path('images/universities/'.$u->slug.'.jpg')) ? 0 : 1])->take(8)->values(); // placed by staff first, then those with a photo
 
         return view('public.home', [
+            'blogPosts' => BlogPost::published()->with('category')->limit(3)->get(),
             'featuredIsFallback' => $featuredIsFallback, 'nextDeadlines' => $nextDeadlines, 'stats' => $stats, 'universities' => $universities,
             'sections' => HomeSection::ordered(),
             'trustItems' => TrustItem::where('enabled', true)->orderBy('sort')->orderBy('id')->get(),

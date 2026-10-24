@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\BlogCategory;
+use App\Models\BlogPost;
 use App\Models\CmsPage;
 use App\Models\Country;
 use App\Models\MediaFile;
@@ -101,12 +103,14 @@ class PageController extends Controller
         $xml = Cache::remember('sitemap', 600, function () {
             // Each entry is [address, date it last changed]; the date comes from the record, and stays out where the page is a list or fixed text.
             $urls = collect([route('home'), route('scholarships.index'), route('destinations.index'), route('services.index'),
-                route('resources.index'), route('about'), route('contact'), route('universities.index'), route('programmes.index')])->map(fn ($u) => [$u, null]);
+                route('resources.index'), route('about'), route('contact'), route('universities.index'), route('programmes.index'), route('blog.index')])->map(fn ($u) => [$u, null]);
             Country::destinations()->where('guidance_published', true)->get()->each(fn ($c) => $urls->push([route('destinations.show', $c), $c->guidance_reviewed_at ?? $c->updated_at]));
             Service::published()->get()->each(fn ($s) => $urls->push([route('services.show', $s), $s->updated_at]));
             Article::published()->get()->each(fn ($a) => $urls->push([route('resources.show', $a), $a->updated_at]));
             University::inCatalogue()->get(['slug', 'updated_at'])->each(fn ($u) => $urls->push([route('universities.show', $u->slug), $u->updated_at]));
             CmsPage::published()->whereNotIn('slug', ['about', 'partners', 'privacy', 'terms', 'refunds', 'accessibility'])->get()->each(fn ($p) => $urls->push([route('pages.show', $p->slug), $p->updated_at]));
+            BlogCategory::query()->whereHas('posts', fn ($p) => $p->published())->get()->each(fn ($c) => $urls->push([route('blog.category', $c->slug), $c->updated_at]));
+            BlogPost::published()->get(['slug', 'updated_at'])->each(fn ($b) => $urls->push([route('blog.show', $b->slug), $b->updated_at]));
             ScholarshipCycle::visible()->with('programme')->get()->each(fn ($c) => $urls->push([route('scholarships.show', [$c->programme->slug, $c->slug]), $c->updated_at]));
 
             return view('public.sitemap', ['urls' => $urls])->render();

@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\TwoFactorChallengeController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CatalogueController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\CorrectionController;
@@ -45,6 +46,10 @@ Route::get('/services', [PageController::class, 'services'])->name('services.ind
 Route::get('/services/{service:slug}', [PageController::class, 'service'])->name('services.show');
 Route::get('/resources', [PageController::class, 'resources'])->name('resources.index');
 Route::get('/resources/{article:slug}', [PageController::class, 'resource'])->name('resources.show');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/feed.xml', [BlogController::class, 'feed'])->name('blog.feed');
+Route::get('/blog/category/{category:slug}', [BlogController::class, 'index'])->name('blog.category');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->where('slug', '[A-Za-z0-9_-]+')->name('blog.show');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/image-credits', [PageController::class, 'credits'])->name('credits');
 Route::get('/partners', [PageController::class, 'partners'])->name('partners');
