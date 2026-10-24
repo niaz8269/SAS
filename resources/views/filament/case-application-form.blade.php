@@ -1,6 +1,6 @@
 @php($sections = config('application_form.sections'))
 <div style="font-size:.875rem;line-height:1.4">
-    <p style="color:#6b7280">Shared by the student on {{ $case->form_shared_at->format('j M Y') }}. Read it only to prepare this application.</p>
+    <p style="color:#6b7280">Read it only to prepare this application.</p>
     @if ($form && $form->data)
         @foreach ($sections as $key => $section)
             @php($rows = isset($section['repeat']) ? ($form->value($key, [])) : [collect($section['fields'])->keys()->mapWithKeys(fn ($n) => [$n => $form->value($n)])->all()])

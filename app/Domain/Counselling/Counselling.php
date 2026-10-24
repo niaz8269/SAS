@@ -77,7 +77,10 @@ class Counselling
         $document = $attachment ? app(DocumentService::class)->store($student, $attachment, 'other', 'Sent with a message: '.Str::limit(pathinfo($attachment->getClientOriginalName(), PATHINFO_FILENAME), 80, '')) : null;
         $message = new CounsellorMessage(['body' => trim($body)]);
         $message->forceFill(['student_id' => $student->id, 'author_id' => $author->id, 'document_id' => $document?->id])->save();
-        if ($author->id !== $student->id) {
+        // One conversation serves every application, so the "reply needed" flag on the student's open cases follows who wrote last.
+        $fromStudent = $author->id === $student->id;
+        ServiceCase::where('user_id', $student->id)->whereNotIn('status', ['accepted', 'rejected', 'withdrawn'])->update(['awaiting_reply' => $fromStudent]);
+        if (! $fromStudent) {
             $this->tell($student, ($author->name ?: 'Your counsellor').' sent you a message.');
         } else {
             $this->alertStaff($student, $message);

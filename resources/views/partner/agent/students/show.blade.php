@@ -18,7 +18,7 @@
     @endunless
 
     <x-agent.list title="Applications" class="max-w-4xl">
-        <table class="w-full text-left text-[13px]">
+        <div class="overflow-x-auto"><table class="w-full text-left text-[13px]">
             <thead><tr><x-agent.th name="no" :sortable="false">Application number</x-agent.th><x-agent.th name="sch" :sortable="false">Scholarship</x-agent.th><x-agent.th name="st" :sortable="false">Status</x-agent.th><x-agent.th name="op" :sortable="false"><span class="text-[#428bb6]">operate</span></x-agent.th></tr></thead>
             <tbody>
             @forelse ($plans as $p)
@@ -28,7 +28,7 @@
                 <tr><td colspan="4" class="px-4 py-8 text-center text-[#777]">No applications yet. Press + Add application to choose a scholarship.</td></tr>
             @endforelse
             </tbody>
-        </table>
+        </table></div>
     </x-agent.list>
     <section id="sas" class="mt-6 max-w-4xl border border-[#ddd]" aria-labelledby="sas-h">
         <h2 id="sas-h" class="border-b border-[#ddd] bg-[#ececec] px-3 py-2 text-[15px] font-bold">Messages with SAS about {{ $student->name }}</h2>

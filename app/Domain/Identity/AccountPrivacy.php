@@ -6,8 +6,10 @@ use App\Domain\Documents\DocumentService;
 use App\Domain\Editorial\AuditLog;
 use App\Models\ApplicationForm;
 use App\Models\Audit;
+use App\Models\AvailabilitySlot;
 use App\Models\Consultation;
 use App\Models\Enquiry;
+use App\Models\ServiceCase;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 
@@ -23,8 +25,8 @@ class AccountPrivacy
     /** @return array<string,mixed> everything held about the user, excluding file contents and secrets */
     public function export(User $user): array
     {
-        $user->load(['studentProfile', 'savedScholarships.cycle.programme', 'applicationPlans.tasks', 'applicationPlans.cycle.programme',
-            'documents.versions', 'enquiries.messages', 'consultations']);
+        $user->load(['studentProfile', 'savedScholarships.cycle.programme', 'applicationPlans.tasks', 'applicationPlans.journeyTasks', 'applicationPlans.cycle.programme',
+            'documents.versions', 'documents.comments.author', 'enquiries.messages', 'consultations', 'counsellor', 'goals']);
 
         $data = [
             'exported_at' => now()->toIso8601String(),
@@ -36,9 +38,12 @@ class AccountPrivacy
                 'scholarship' => $p->cycle->label(), 'status' => $p->status->value, 'status_source' => $p->status_source,
                 'submitted_at' => $p->submitted_at, 'submission_reference' => $p->submission_reference, 'notes' => $p->notes,
                 'tasks' => $p->tasks->map(fn ($t) => $t->only(['title', 'due_at', 'completed_at', 'notes']))->all(),
+                'journey_stage' => $p->journey_stage,
+                'journey_tasks' => $p->journeyTasks->map(fn ($t) => $t->only(['stage', 'title', 'due_on', 'done_at']))->all(),
             ])->all(),
             'documents' => $user->documents->map(fn ($d) => [
                 'title' => $d->title, 'type' => $d->type,
+                'comments' => $d->comments->map(fn ($c) => ['from' => $c->author?->name ?? 'SAS team', 'body' => $c->body, 'at' => $c->created_at])->all(),
                 'versions' => $d->versions->map(fn ($v) => $v->only(['version', 'original_name', 'size', 'mime', 'checksum', 'scan_status', 'created_at']))->all(),
             ])->all(),
             'notification_preferences' => DB::table('notification_preferences')->where('user_id', $user->id)
@@ -50,6 +55,17 @@ class AccountPrivacy
             ])->all(),
             'consultations' => Consultation::where('user_id', $user->id)->orWhere('email', $user->email)->get()
                 ->map(fn ($c) => $c->only(['reference', 'status', 'preferred_from', 'preferred_to', 'student_timezone', 'confirmed_start_utc']))->all(),
+            // Counselling. The counsellor's private follow-up notes (status, what the student wants, comment, call log) and agent messages are staff records and are not part of the export.
+            'counsellor' => $user->counsellor?->name,
+            'goals' => $user->goals?->only(['countries', 'degree', 'subject', 'budget', 'intake']),
+            'counsellor_messages' => $user->counsellorMessages()->with('author:id,name')->oldest('id')->get()
+                ->map(fn ($m) => ['from' => $m->author_id === $user->id ? 'you' : ($m->author?->name ?? 'SAS team'), 'body' => $m->body, 'at' => $m->created_at])->all(),
+            'booked_calls' => AvailabilitySlot::where('booked_by', $user->id)->with('counsellor:id,name')->oldest('starts_at')->get()
+                ->map(fn ($s) => ['counsellor' => $s->counsellor?->name, 'starts_at' => $s->starts_at, 'minutes' => $s->duration_minutes])->all(),
+            'cases' => ServiceCase::where('user_id', $user->id)->with(['invoices', 'advisor:id,name', 'cycle.programme'])->get()->map(fn ($c) => [
+                'title' => $c->title, 'status' => $c->statusLabel(), 'opened_at' => $c->opened_at, 'counsellor' => $c->advisor?->name,
+                'invoices' => $c->invoices->map(fn ($i) => $i->only(['kind', 'description', 'amount_cents', 'currency', 'status', 'due_on', 'paid_at', 'payment_reference', 'refund_cents', 'refund_status']))->all(),
+            ])->all(), // staff-only case notes and internal case messages are not included
         ];
 
         AuditLog::record('account.exported', $user, null, null, null, $user);

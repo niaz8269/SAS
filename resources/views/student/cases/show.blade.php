@@ -51,62 +51,24 @@
         </section>
     @endif
     <section id="messages" class="card mt-5 p-5" aria-labelledby="msg-h">
-        <h2 id="msg-h" class="font-bold">Messages with your counsellor</h2>
-        <div class="mt-3 space-y-3">
-            @forelse ($messages as $m)
-                @php($mine = $m->author_id === $case->user_id)
-                <div class="rounded-md border p-3 text-sm {{ $mine ? 'border-line bg-white' : 'border-navy-300 bg-navy-50' }}">
-                    <p class="text-xs text-muted"><strong>{{ $mine ? 'You' : ($m->author?->name ?? 'SAS team') }}</strong> &middot; {{ $m->created_at->format('j M Y, H:i') }}</p>
-                    <p class="mt-1 whitespace-pre-line">{{ $m->body }}</p>
-                </div>
-            @empty
-                <p class="text-sm text-muted">No messages yet. Ask your counsellor a question about this application below.</p>
-            @endforelse
-        </div>
-        <form method="POST" action="{{ route('student.cases.messages.store', $case) }}" class="mt-4">
-            @csrf
-            <label for="msg-body" class="label">Your message</label>
-            <textarea id="msg-body" name="body" rows="3" required minlength="2" maxlength="2000" class="input">{{ old('body') }}</textarea>
-            @error('body')<p class="mt-1 text-sm text-alert" role="alert">{{ $message }}</p>@enderror
-            <p class="mt-1 text-xs text-muted">Do not put passwords or payment card numbers in a message. Share documents below instead.</p>
-            <button class="btn-primary mt-3">Send message</button>
-        </form>
+        <h2 id="msg-h" class="font-bold">Messages</h2>
+        <p class="mt-1 text-sm text-muted">You and your counsellor use one conversation for everything, this application included. <a class="text-navy-700 underline" href="{{ route('student.counsellor') }}">Open my conversation</a></p>
+        @if ($earlierMessages->isNotEmpty())
+            <h3 class="mt-4 text-sm font-semibold">Earlier messages about this application</h3>
+            <div class="mt-2 space-y-3">
+                @foreach ($earlierMessages as $m)
+                    @php($mine = $m->author_id === $case->user_id)
+                    <div class="rounded-md border p-3 text-sm {{ $mine ? 'border-line bg-white' : 'border-navy-300 bg-navy-50' }}">
+                        <p class="text-xs text-muted"><strong>{{ $mine ? 'You' : ($m->author?->name ?? 'SAS team') }}</strong> &middot; {{ $m->created_at->format('j M Y, H:i') }}</p>
+                        <p class="mt-1 whitespace-pre-line">{{ $m->body }}</p>
+                    </div>
+                @endforeach
+            </div>
+        @endif
     </section>
 
-    <section id="form" class="card mt-5 p-5" aria-labelledby="form-h">
-        <h2 id="form-h" class="font-bold">Let your counsellor see your details</h2>
-        <p class="mt-1 text-sm text-muted">Your counsellor can only read what you share. Your <a class="text-navy-700 underline" href="{{ route('student.form.show') }}">application form</a> is {{ $formPercent }}% filled in.</p>
-        <form method="POST" action="{{ route('student.cases.form.update', $case) }}" class="mt-3">
-            @csrf @method('PUT')
-            <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="share" value="1" class="mt-0.5 rounded border-slate-300 text-navy-700" @checked($case->form_shared_at)> <span>{{ $formConsent }}</span></label>
-            @if ($case->form_shared_at)<p class="mt-1 text-xs text-muted">Shared since {{ $case->form_shared_at->format('j M Y') }}.</p>@endif
-            <button class="btn-primary mt-3">Save</button>
-        </form>
-    </section>
-    <section id="share" class="card mt-5 p-5" aria-labelledby="share-h">
-        <h2 id="share-h" class="font-bold">Documents shared with your counsellor</h2>
-        <p class="mt-1 text-sm text-muted">Your documents are private. Tick only what your counsellor needs for this application. You can untick a document at any time and they will no longer be able to open it.</p>
-        @if ($documents->isEmpty())
-            <p class="mt-3 text-sm">You have no documents yet. <a class="text-navy-700 underline" href="{{ route('student.documents.index') }}">Upload documents</a> first.</p>
-        @else
-            <form method="POST" action="{{ route('student.cases.documents.update', $case) }}" class="mt-3">
-                @csrf @method('PUT')
-                <fieldset>
-                    <legend class="sr-only">Documents to share</legend>
-                    <ul class="divide-y divide-line">
-                        @foreach ($documents as $d)
-                            <li class="py-2"><label class="flex items-start gap-3 text-sm">
-                                <input type="checkbox" name="documents[]" value="{{ $d->id }}" class="mt-0.5 rounded border-slate-300 text-navy-700" @checked(in_array($d->id, old('documents', $sharedIds)))>
-                                <span><span class="font-medium">{{ $d->title }}</span> <span class="text-muted">({{ \App\Models\DocumentKind::label($d->type) }})</span>
-                                    @if (! $d->currentVersion?->isDownloadable())<span class="block text-xs text-muted">Not available yet: still being checked.</span>@endif</span>
-                            </label></li>
-                        @endforeach
-                    </ul>
-                </fieldset>
-                <label class="mt-3 flex items-start gap-2 text-sm"><input type="checkbox" name="consent" value="1" class="mt-0.5 rounded border-slate-300 text-navy-700" @checked(old('consent'))> <span>{{ $consent }}</span></label>
-                @error('consent')<p class="mt-1 text-sm text-alert" role="alert">{{ $message }}</p>@enderror
-                <button class="btn-primary mt-3">Save sharing</button>
-            </form>
-        @endif
+    <section id="privacy" class="card mt-5 p-5" aria-labelledby="priv-h">
+        <h2 id="priv-h" class="font-bold">Who can see your details</h2>
+        <p class="mt-1 text-sm text-muted">Your SAS counsellor reads your <a class="text-navy-700 underline" href="{{ route('student.form.show') }}">application form</a> ({{ $formPercent }}% filled in), your applications and your documents, only to prepare your applications. Other SAS staff open only what a task needs, for example the documents of an application waiting for review. <a class="text-navy-700 underline" href="{{ route('legal.show', 'privacy') }}">Privacy notice</a></p>
     </section>
 </x-layouts.student>

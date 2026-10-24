@@ -2,12 +2,19 @@
 
 namespace Tests\Feature\Student;
 
+use App\Domain\Cases\CaseService;
+use App\Domain\Counselling\Counselling;
 use App\Domain\Identity\AccountPrivacy;
 use App\Domain\Identity\TwoFactor;
 use App\Enums\Role;
+use App\Models\AvailabilitySlot;
 use App\Models\Document;
+use App\Models\DocumentComment;
 use App\Models\Enquiry;
 use App\Models\EnquiryMessage;
+use App\Models\JourneyTask;
+use App\Models\StudentFollowUp;
+use App\Models\StudentGoal;
 use App\Models\User;
 use App\Notifications\ConfirmAccountDeletion;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -180,6 +187,61 @@ class PrivacyAndMfaTest extends TestCase
         $this->assertSame(0, $e->messages()->count());
         $this->assertDatabaseHas('deletion_tombstones', ['email_hash' => app(AccountPrivacy::class)->emailHash('AMINA@example.test ')]); // case/space-insensitive
         $this->assertSame(0, DB::table('audits')->where('after', 'like', '%amina%')->count());
+    }
+
+    /** A student with a counsellor, a conversation, goals, a journey task, a booked call, a document comment and a case with an invoice. */
+    private function counselled(): User
+    {
+        $user = $this->populated();
+        $counsellor = User::factory()->role(Role::Advisor)->create(['name' => 'Sara Counsellor']);
+        $counselling = app(Counselling::class);
+        $counselling->assign($user, $counsellor);
+        $counselling->message($user, $user, 'I need help with my transcript');
+        $counselling->message($user, $counsellor, 'Please upload the stamped copy');
+        (new StudentGoal(['countries' => 'China', 'degree' => 'Master']))->forceFill(['student_id' => $user->id])->save();
+        (new StudentFollowUp(['status' => 'contacted', 'comment' => 'PRIVATE COUNSELLOR JUDGEMENT']))->forceFill(['student_id' => $user->id, 'author_id' => $counsellor->id])->save();
+        $plan = $user->applicationPlans()->firstOrFail();
+        (new JourneyTask(['stage' => 'prepare', 'title' => 'Book the language test']))->forceFill(['plan_id' => $plan->id])->save();
+        $slot = (new AvailabilitySlot(['starts_at' => now()->addDays(3), 'duration_minutes' => 30]))->forceFill(['counsellor_id' => $counsellor->id, 'booked_by' => $user->id, 'booked_at' => now()])->save();
+        (new DocumentComment(['body' => 'The scan is too dark']))->forceFill(['document_id' => Document::firstOrFail()->id, 'author_id' => $counsellor->id])->save();
+        $case = app(CaseService::class)->open($user, null, $counsellor, ['title' => 'Export case']);
+        $case->forceFill(['internal_note' => 'STAFF ONLY CASE NOTE'])->save();
+        app(CaseService::class)->postMessage($case, $counsellor, 'INTERNAL CASE MESSAGE', 'internal');
+
+        return $user;
+    }
+
+    public function test_the_export_includes_the_counselling_records_but_not_private_staff_notes(): void
+    {
+        $user = $this->counselled();
+
+        $export = app(AccountPrivacy::class)->export($user);
+        $json = json_encode($export);
+
+        $this->assertSame('Sara Counsellor', $export['counsellor']);
+        $this->assertSame('China', $export['goals']['countries']);
+        $this->assertSame(['you', 'Sara Counsellor'], array_column($export['counsellor_messages'], 'from'));
+        $this->assertSame('Book the language test', $export['application_plans'][0]['journey_tasks'][0]['title']);
+        $this->assertSame('Sara Counsellor', $export['booked_calls'][0]['counsellor']);
+        $this->assertSame('The scan is too dark', $export['documents'][0]['comments'][0]['body']);
+        $this->assertSame('Export case', $export['cases'][0]['title']);
+        $this->assertStringNotContainsString('PRIVATE COUNSELLOR JUDGEMENT', $json);
+        $this->assertStringNotContainsString('STAFF ONLY CASE NOTE', $json);
+        $this->assertStringNotContainsString('INTERNAL CASE MESSAGE', $json);
+    }
+
+    public function test_erasure_also_removes_the_counselling_records(): void
+    {
+        $user = $this->counselled();
+        $counsellor = User::where('name', 'Sara Counsellor')->firstOrFail();
+
+        app(AccountPrivacy::class)->erase($user);
+
+        foreach (['counsellor_messages', 'student_goals', 'student_follow_ups', 'journey_tasks', 'document_comments', 'service_cases', 'invoices', 'case_messages'] as $table) {
+            $this->assertSame(0, DB::table($table)->count(), "{$table} should be empty");
+        }
+        $this->assertNull(DB::table('availability_slots')->value('booked_by'), 'the free time stays, the booking link goes');
+        $this->assertNotNull(User::find($counsellor->id), 'the counsellor keeps their account');
     }
 
     public function test_the_tombstone_holds_no_readable_email(): void

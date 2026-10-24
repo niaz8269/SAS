@@ -2,6 +2,7 @@
 
 namespace App\Domain\Cases;
 
+use App\Domain\Counselling\Counselling;
 use App\Domain\Editorial\AuditLog;
 use App\Domain\StudentWorkspace\PlanService;
 use App\Models\ApplicationPlan;
@@ -169,20 +170,22 @@ class CaseService
         AuditLog::record('case.degree_level_set', $case, ['degree_level_id' => $before], ['degree_level_id' => $levelId], null, $actor);
     }
 
-    /** A message in the case. A student's message is always public; staff may reply publicly or leave an internal note. */
-    public function postMessage(ServiceCase $case, User $author, string $body, string $visibility = 'public'): CaseMessage
+    /**
+     * Staff write about a case. A public reply goes into the student's one conversation with their counsellor (they are notified there);
+     * an internal note stays on the case and is never shown to the student. Returns the internal note, or null for a reply.
+     */
+    public function postMessage(ServiceCase $case, User $author, string $body, string $visibility = 'public'): ?CaseMessage
     {
-        $fromStudent = $case->user_id === $author->id;
-        $visibility = $fromStudent ? 'public' : (in_array($visibility, ['public', 'internal'], true) ? $visibility : 'public');
-        $message = new CaseMessage(['body' => trim($body)]);
-        $message->forceFill(['case_id' => $case->id, 'author_id' => $author->id, 'visibility' => $visibility])->save();
-
-        if ($fromStudent) {
-            $case->forceFill(['awaiting_reply' => true])->save();
-        } elseif ($visibility === 'public') {
-            $case->forceFill(['awaiting_reply' => false])->save();
-            $this->notifier->tell($case, ($author->name ?: 'Your counsellor').' replied in your case "'.$case->title.'".');
+        if ($case->user_id === $author->id) {
+            throw new InvalidArgumentException('Students write in their conversation with the counsellor.');
         }
+        if ($visibility !== 'internal') {
+            app(Counselling::class)->message($case->student, $author, $body);
+
+            return null;
+        }
+        $message = new CaseMessage(['body' => trim($body)]);
+        $message->forceFill(['case_id' => $case->id, 'author_id' => $author->id, 'visibility' => 'internal'])->save();
 
         return $message;
     }

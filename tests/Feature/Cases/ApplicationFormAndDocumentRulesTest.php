@@ -283,25 +283,18 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
         $this->rule('csca', 'required', $cycle->programme_id, $level->id);
 
         $this->actingAs($student)->get(route('student.cases.show', $case))->assertOk()
-            ->assertSee('Your documents')->assertSee(route('student.applications.materials', $plan))->assertSee('Let your counsellor see your details');
+            ->assertSee('Your documents')->assertSee(route('student.applications.materials', $plan))->assertSee('Who can see your details');
 
         $this->put(route('student.applications.level.update', $plan), ['degree_level_id' => $level->id])->assertRedirect();
         $this->assertSame($level->id, $case->refresh()->degree_level_id, 'the case follows the level the student chose');
         $this->get(route('student.applications.materials', $plan))->assertSee('CSCA score report');
         $this->assertSame('required', $this->rows($case)['csca']);
 
-        $this->put(route('student.cases.form.update', $case), ['share' => '1'])->assertRedirect();
-        $this->assertNotNull($case->refresh()->form_shared_at);
-        $this->assertStringContainsString('may read my application form', $case->form_consent_text);
-        $this->put(route('student.cases.form.update', $case), [])->assertRedirect();
-        $this->assertNull($case->refresh()->form_shared_at);
-
         $other = User::factory()->create();
         $this->actingAs($other)->put(route('student.applications.level.update', $plan), ['degree_level_id' => $level->id])->assertForbidden();
-        $this->put(route('student.cases.form.update', $case), ['share' => '1'])->assertForbidden();
     }
 
-    public function test_staff_read_the_form_only_after_the_student_shares_it_and_only_for_their_cases(): void
+    public function test_the_students_counsellor_reads_the_form_and_other_staff_only_where_it_was_shared_earlier(): void
     {
         $student = User::factory()->create(['name' => 'Amina Khan']);
         $form = app(ApplicationFormService::class)->formFor($student);
@@ -310,11 +303,12 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
         $mine = app(CaseService::class)->open($student, null, $advisor, ['title' => 'Mine']);
         $notMine = app(CaseService::class)->open($student, null, null, ['title' => 'Not mine']);
 
-        $this->actingAs($advisor);
-        Livewire::test(EditServiceCase::class, ['record' => $mine->getRouteKey()])->assertActionHidden('applicationForm');
+        $manager = $this->staff(Role::Administrator);
+        $this->actingAs($manager);
+        Livewire::test(EditServiceCase::class, ['record' => $mine->getRouteKey()])->assertActionHidden('applicationForm'); // not this student's counsellor, nothing shared
 
-        app(CaseService::class)->shareForm($mine, $student, true, 'consent');
-        Livewire::test(EditServiceCase::class, ['record' => $mine->getRouteKey()])->assertActionVisible('applicationForm')->mountAction('applicationForm');
+        $this->actingAs($advisor);
+        Livewire::test(EditServiceCase::class, ['record' => $mine->getRouteKey()])->assertActionVisible('applicationForm')->mountAction('applicationForm'); // the case's counsellor needs no extra consent step
         $this->assertTrue(Audit::where('action', 'case.form_viewed')->where('auditable_id', $mine->id)->exists());
         $this->assertStringContainsString('ZZ9876543', view('filament.case-application-form', ['case' => $mine->refresh(), 'form' => $mine->sharedForm()])->render());
 

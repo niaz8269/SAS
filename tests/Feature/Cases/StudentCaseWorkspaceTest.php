@@ -7,7 +7,6 @@ use App\Domain\StudentWorkspace\PlanService;
 use App\Enums\Role;
 use App\Filament\Resources\ServiceCases\Pages\EditServiceCase;
 use App\Filament\Resources\ServiceCases\RelationManagers\MessagesRelationManager;
-use App\Models\CaseDocumentShare;
 use App\Models\Document;
 use App\Models\ScholarshipCycle;
 use App\Models\User;
@@ -18,6 +17,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
 use Tests\TestCase;
@@ -94,8 +94,8 @@ class StudentCaseWorkspaceTest extends TestCase
         $advisor = $this->staff(Role::Advisor);
         $case = app(CaseService::class)->open($student, null, $advisor, ['title' => 'Messages']);
 
-        $this->actingAs($student)->post(route('student.cases.messages.store', $case), ['body' => 'Which transcript do you need?'])->assertRedirect();
-        $this->assertTrue($case->refresh()->awaiting_reply);
+        $this->actingAs($student)->post(route('student.counsellor.store'), ['body' => 'Which transcript do you need?'])->assertRedirect();
+        $this->assertTrue($case->refresh()->awaiting_reply, 'the one conversation flags the open case');
 
         $this->actingAs($advisor);
         Livewire::test(MessagesRelationManager::class, ['ownerRecord' => $case, 'pageClass' => EditServiceCase::class])
@@ -107,42 +107,32 @@ class StudentCaseWorkspaceTest extends TestCase
             ->callTableAction('reply', null, ['visibility' => 'public', 'body' => 'The official one, please.']);
         $this->assertFalse($case->refresh()->awaiting_reply);
         $this->assertSame($told + 1, $student->notifications()->count(), 'only the public reply notifies the student');
+        $this->assertSame(1, $case->messages()->count(), 'a reply goes to the conversation, only the note stays on the case');
 
-        $this->actingAs($student)->get(route('student.cases.show', $case))->assertOk()
+        $this->actingAs($student)->get(route('student.counsellor'))->assertOk()
             ->assertSee('Which transcript do you need?')->assertSee('The official one, please.')->assertDontSee('call them');
+        $this->get(route('student.cases.show', $case))->assertOk()->assertDontSee('call them')->assertSee(route('student.counsellor'));
     }
 
-    public function test_a_student_cannot_message_or_share_on_someone_elses_case(): void
+    public function test_a_student_cannot_open_someone_elses_case_and_the_old_share_routes_are_gone(): void
     {
-        $this->withoutMiddleware(ThrottleRequests::class);
         $owner = User::factory()->create();
         $intruder = User::factory()->create();
         $case = app(CaseService::class)->open($owner, null, null, ['title' => 'Private']);
 
-        $this->actingAs($intruder)->post(route('student.cases.messages.store', $case), ['body' => 'hello there'])->assertForbidden();
-        $this->actingAs($intruder)->put(route('student.cases.documents.update', $case), ['documents' => [1], 'consent' => '1'])->assertForbidden();
-        $this->assertSame(0, $case->messages()->count());
+        $this->actingAs($intruder)->get(route('student.cases.show', $case))->assertForbidden();
+        $this->assertFalse(Route::has('student.cases.documents.update'));
+        $this->assertFalse(Route::has('student.cases.form.update'));
+        $this->assertFalse(Route::has('student.cases.messages.store'));
     }
 
-    public function test_sharing_needs_consent_and_only_the_students_own_documents_can_be_shared(): void
+    public function test_a_student_can_no_longer_write_in_a_case_only_staff_notes_and_replies(): void
     {
         $student = User::factory()->create();
-        $stranger = User::factory()->create();
-        $mine = $this->upload($student);
-        $theirs = $this->upload($stranger, 'Passport');
-        $case = app(CaseService::class)->open($student, null, null, ['title' => 'Share']);
+        $case = app(CaseService::class)->open($student, null, null, ['title' => 'Mine']);
 
-        $this->actingAs($student)->put(route('student.cases.documents.update', $case), ['documents' => [$mine->id]])->assertSessionHasErrors('consent');
-        $this->assertSame(0, CaseDocumentShare::count());
-
-        $this->actingAs($student)->put(route('student.cases.documents.update', $case), ['documents' => [$mine->id, $theirs->id], 'consent' => '1'])->assertRedirect();
-        $this->assertSame([$mine->id], CaseDocumentShare::pluck('document_id')->all(), "another person's document is ignored");
-        $this->assertStringContainsString('only to prepare my application', CaseDocumentShare::first()->consent_text);
-
-        $this->actingAs($student)->put(route('student.cases.documents.update', $case), ['documents' => []])->assertSessionHasNoErrors()->assertRedirect();
-        $this->assertSame(1, CaseDocumentShare::count());
-        $this->assertSame(0, $case->shares()->count(), 'no active shares remain');
-        $this->assertNotNull(CaseDocumentShare::first()->revoked_at, 'unticking stops the sharing');
+        $this->expectException(\InvalidArgumentException::class);
+        app(CaseService::class)->postMessage($case, $student, 'hello');
     }
 
     public function test_the_students_counsellor_opens_their_documents_and_managers_only_what_is_shared(): void
@@ -185,13 +175,14 @@ class StudentCaseWorkspaceTest extends TestCase
         $this->get(route('student.cases.show', $case))->assertOk()->assertSee(route('student.applications.materials', $plan));
     }
 
-    public function test_the_share_and_message_sections_render(): void
+    public function test_the_case_page_says_who_sees_the_details_and_has_no_sharing_boxes(): void
     {
         $student = User::factory()->create();
         $this->upload($student, 'Degree certificate');
         $case = app(CaseService::class)->open($student, null, null, ['title' => 'Render']);
 
         $this->actingAs($student)->get(route('student.cases.show', $case))->assertOk()
-            ->assertSee('Messages with your counsellor')->assertSee('Documents shared with your counsellor')->assertSee('Degree certificate')->assertSee('I can stop sharing at any time');
+            ->assertSee('Who can see your details')->assertSee('Open my conversation')
+            ->assertDontSee('can only read what you share')->assertDontSee('I can stop sharing at any time')->assertDontSee('name="consent"', false);
     }
 }

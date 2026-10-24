@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ReportCsvController;
 use App\Http\Controllers\Auth\EmailVerificationController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\PasswordResetController;
@@ -11,9 +12,12 @@ use App\Http\Controllers\CorrectionController;
 use App\Http\Controllers\EmailWebhookController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InvoicePdfController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Partner\AgentAccountController;
 use App\Http\Controllers\Partner\AgentApplicationController;
+use App\Http\Controllers\Partner\AgentExportController;
+use App\Http\Controllers\Partner\AgentMessageController;
 use App\Http\Controllers\Partner\AgentStudentController;
 use App\Http\Controllers\Partner\OrganisationController;
 use App\Http\Controllers\PartnerController;
@@ -158,9 +162,6 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
     Route::post('/counsellor/messages', [Student\CounsellorController::class, 'store'])->middleware('throttle:enquiries')->name('counsellor.store');
     Route::get('/cases', [Student\CaseController::class, 'index'])->name('cases.index');
     Route::get('/cases/{case:public_id}', [Student\CaseController::class, 'show'])->name('cases.show');
-    Route::post('/cases/{case:public_id}/messages', [Student\CaseController::class, 'message'])->middleware('throttle:enquiries')->name('cases.messages.store');
-    Route::put('/cases/{case:public_id}/form', [Student\CaseController::class, 'shareForm'])->name('cases.form.update');
-    Route::put('/cases/{case:public_id}/documents', [Student\CaseController::class, 'share'])->name('cases.documents.update');
 
     Route::get('/documents', [Student\DocumentController::class, 'index'])->name('documents.index');
     Route::post('/documents/{document:public_id}/versions', [Student\DocumentController::class, 'storeVersion'])->middleware('throttle:uploads')->name('documents.versions.store');
@@ -185,12 +186,12 @@ Route::prefix('student')->name('student.')->middleware(['auth', 'active', 'verif
 
 // Staff read an application that was sent for review (the policy allows it only once it is no longer a draft).
 Route::get('/review/applications/{plan:public_id}/preview', [Student\ApplicationController::class, 'preview'])->middleware(['auth', 'active', 'verified'])->name('review.preview');
-Route::get('/review/reports/{section}.csv', \App\Http\Controllers\Admin\ReportCsvController::class)->middleware(['auth', 'active', 'verified'])->name('admin.reports.csv');
+Route::get('/review/reports/{section}.csv', ReportCsvController::class)->middleware(['auth', 'active', 'verified'])->name('admin.reports.csv');
 Route::get('/review/students/{student:public_id}/documents.zip', [Student\StudentFilesController::class, 'zip'])->middleware(['auth', 'active', 'verified'])->name('students.documents.zip');
 Route::get('/review/applications/{plan:public_id}/download', [Student\ApplicationController::class, 'download'])->middleware(['auth', 'active', 'verified'])->name('review.download');
 
 // Staff open a document a student shared on a case. The policy allows only active shares on cases the staff member may view.
-Route::get('/invoices/{invoice:public_id}/pdf', \App\Http\Controllers\InvoicePdfController::class)->middleware(['auth', 'active', 'verified'])->name('invoices.pdf');
+Route::get('/invoices/{invoice:public_id}/pdf', InvoicePdfController::class)->middleware(['auth', 'active', 'verified'])->name('invoices.pdf');
 Route::get('/files/{document:public_id}/download', [Student\DocumentController::class, 'download'])->middleware(['auth', 'active', 'verified'])->name('files.download');
 
 /*
@@ -215,16 +216,16 @@ Route::prefix('partner')->name('partner.')->middleware(['auth', 'active', 'verif
         Route::get('/students/import/template', [AgentStudentController::class, 'template'])->name('students.template');
         Route::post('/students/import', [AgentStudentController::class, 'import'])->middleware('throttle:enquiries')->name('students.import.store');
         Route::get('/applications', [AgentApplicationController::class, 'index'])->name('applications.index');
-        Route::get('/export/students', [\App\Http\Controllers\Partner\AgentExportController::class, 'students'])->name('export.students');
-        Route::get('/export/applications', [\App\Http\Controllers\Partner\AgentExportController::class, 'applications'])->name('export.applications');
-        Route::get('/statement', [\App\Http\Controllers\Partner\AgentExportController::class, 'statement'])->name('statement');
+        Route::get('/export/students', [AgentExportController::class, 'students'])->name('export.students');
+        Route::get('/export/applications', [AgentExportController::class, 'applications'])->name('export.applications');
+        Route::get('/statement', [AgentExportController::class, 'statement'])->name('statement');
 
         Route::prefix('students/{student:public_id}')->name('student.')->middleware('student.context')->group(function () use ($applicationRoutes) {
             Route::get('/', [AgentStudentController::class, 'show'])->name('show');
             Route::get('/edit', [AgentStudentController::class, 'edit'])->name('edit');
             Route::put('/', [AgentStudentController::class, 'update'])->name('update');
             Route::post('/invite', [AgentStudentController::class, 'invite'])->middleware('throttle:enquiries')->name('invite');
-            Route::post('/message', [\App\Http\Controllers\Partner\AgentMessageController::class, 'store'])->middleware('throttle:enquiries')->name('message');
+            Route::post('/message', [AgentMessageController::class, 'store'])->middleware('throttle:enquiries')->name('message');
             $applicationRoutes();
         });
     });

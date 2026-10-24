@@ -52,7 +52,7 @@ class EditServiceCase extends EditRecord
                 ->visible(fn (ServiceCase $record) => (bool) auth()->user()->can('students.manage'))
                 ->url(fn (ServiceCase $record) => StudentResource::getUrl('view', ['record' => $record->user_id])),
             Action::make('applicationForm')->label('Application form')->icon('heroicon-o-clipboard-document-list')
-                ->visible(fn (ServiceCase $record) => $record->form_shared_at !== null && auth()->user()->can('view', $record))
+                ->visible(fn (ServiceCase $record) => $record->formReadableBy(auth()->user()) && auth()->user()->can('view', $record))
                 ->modalHeading('Application form')->modalSubmitAction(false)->modalCancelActionLabel('Close')->modalWidth('4xl')
                 ->modalContent(function (ServiceCase $record) {
                     $this->logFormView($record); // the modal re-renders on every interaction, so a view is logged once per 15 minutes

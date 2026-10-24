@@ -100,6 +100,12 @@
     .prose-sas a { @apply text-navy-700 underline; }
 }
 
+/* Touch targets: WCAG 2.2 asks for at least 24px. Unlayered on purpose, so it wins over the size utilities used on individual checkboxes. */
+input[type='checkbox'], input[type='radio'] { width: max(24px, 1.5rem); height: max(24px, 1.5rem); }
+button:not([class*='btn']) { min-height: 24px; min-width: 24px; }
+/* A table that scrolls inside its box must also contain its screen-reader-only labels, or they widen the whole page on a phone. */
+.overflow-x-auto { position: relative; }
+
 /* Skeleton loading state used by Livewire wire:loading targets */
 .skeleton { @apply animate-pulse rounded-md bg-ivory-deep; }
 @media (prefers-reduced-motion: reduce) {

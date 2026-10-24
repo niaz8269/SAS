@@ -12,7 +12,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
 
-/** The conversation with the student. A public reply notifies them; an internal note is staff-only and is never shown in the student workspace. */
+/** Staff side of the case. A reply to the student goes into their one conversation with the counsellor (and notifies them); an internal note is staff-only and is never shown in the student workspace. */
 class MessagesRelationManager extends RelationManager
 {
     protected static string $relationship = 'messages';
@@ -32,6 +32,7 @@ class MessagesRelationManager extends RelationManager
     public function table(Table $table): Table
     {
         return $table
+            ->description('Replies to the student appear in their conversation with the counsellor (open the student, Messages). This list holds internal notes and older messages written in the case.')
             ->columns([
                 TextColumn::make('created_at')->label('When')->dateTime('j M Y, H:i'),
                 TextColumn::make('author.name')->label('From')->placeholder('SAS team'),

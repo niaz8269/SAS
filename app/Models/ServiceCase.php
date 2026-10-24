@@ -75,10 +75,15 @@ class ServiceCase extends Model
         return $this->belongsTo(DegreeLevel::class, 'degree_level_id');
     }
 
-    /** The student's master form, readable by staff only while the student has shared it on this case. */
+    /** Whether this staff member may read the student's master form: the student's own counsellor always, anyone else only where the student shared it on this case (older cases). */
+    public function formReadableBy(User $viewer): bool
+    {
+        return $this->form_shared_at !== null || $viewer->counsels($this->student);
+    }
+
     public function sharedForm(): ?ApplicationForm
     {
-        return $this->form_shared_at ? ApplicationForm::where('user_id', $this->user_id)->first() : null;
+        return ApplicationForm::where('user_id', $this->user_id)->first();
     }
 
     public function invoices(): HasMany
