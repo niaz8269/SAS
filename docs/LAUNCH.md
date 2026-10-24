@@ -2,10 +2,19 @@
 
 A checklist for the day you move SAS from your computer to a real server. Nothing here has been done for you: hosting was deferred, and each step needs a decision or a login only you have. Tick them off in order.
 
+## 0. The package and the content (prepared, ready to use)
+- **Build the package** on your computer: `.\scripts\build-release.ps1 -Php C:\xampp\php\php.exe -Composer C:\Users\82335\Projects\tools\composer.phar`. It takes the last commit only (so no `.env`, no local database and no uploads can slip in), installs the packages without development tools, builds the CSS/JS and writes `dist\sas-release-<date>-<commit>.zip`.
+- **Start the settings file** from `.env.production.example` (copy it to `.env` on the server and fill every `<...>`). The example is production-ready; `.env.example` is for development only.
+- **Create the tables**: `php artisan migrate --force`. This also puts the starting reference rows in.
+- **Load the content** (121 scholarships, 646 universities with the 27 medical ones, fees, guides, homepage, menus): `php artisan sas:import-content --replace`, then `php artisan sas:reindex-search`. The file is `data/launch/sas-content.jsonl.gz` (about 1.5 MB, 64,889 rows). It holds **no** users, students, cases, documents, payments or audit history, and the columns that name a staff account are blanked. `--replace` is refused once any student profile, case or document exists, so it cannot wipe a live site. Without `--replace` the command stops if the content tables already hold rows.
+- **Then**: `php artisan sas:make-staff you@example.com "Your Name" super_admin`, `php artisan storage:link`, `php artisan optimize`, and add the cron line in step 3.
+- To refresh the file after more editing on your computer: `php artisan sas:export-content`, commit it, and rebuild the package. On a live site do not re-import over real data; edit in the admin or use the importers (they never overwrite).
+- Checked on 24 October 2026: all 490 pages in the sitemap return 200 (the 27 medical universities among them), the route/config/view/event caches build, the front-end build passes, and a copy of the content loaded into an empty database gives the same counts and a working search index.
+
 ## 1. Settings in `.env` on the server
 - `APP_ENV=production`, `APP_DEBUG=false`, `APP_URL` set to the real address (https).
 - A long random `APP_KEY` (`php artisan key:generate`). Never copy the local one.
-- `SAS_TWO_STEP=true`, so staff must use an authenticator app. Staff accounts can read student documents and record payments.
+- `SAS_TWO_STEP`: the owner has chosen **false** for now (staff sign in with email and password only). Staff accounts can read student documents and record payments, so turning it on (`true`, authenticator app) before real students register is strongly recommended; it needs no code change.
 - A real mail service (`MAIL_MAILER`, host, username, password, from address). With `log` or `array` no email leaves the server. The System health page warns about this.
 - `SESSION_SECURE_COOKIE=true`. Set `SAS_TRUSTED_HOSTS` (comma-separated) if the site answers on more than the `APP_URL` host, for example a `www.` name. The site refuses requests that arrive under any other host name, which stops password-reset links being poisoned.
 - `SAS_SLA_*` limits if 24 hours, 48 hours, 3 and 7 days are not what you want.
