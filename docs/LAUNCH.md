@@ -24,6 +24,7 @@ A checklist for the day you move SAS from your computer to a real server. Nothin
 ## 2. Email that reaches inboxes
 - On the domain's DNS add the mail provider's **SPF** and **DKIM** records (the provider shows them), and a **DMARC** record. Without them, invitations, receipts and reminders land in spam.
 - Send a test to a Gmail and an Outlook address and check the spam folder.
+- **Sign-up depends on this email.** A new student registering, and an agent person added by staff (at their first sign-in), must type a 6-digit code emailed to them before they can use the site. The code works for 15 minutes, once, with 5 wrong tries, and a new one can be requested after a minute. With `MAIL_MAILER=log` (development) the code is only written to `storage/logs/laravel.log`. Test a real registration end to end before announcing the site.
 
 ## 3. The scheduler must run every minute
 Reminders, the morning emails to counsellors and admins, the daily backup and the System health heartbeat all depend on it. On the server add one cron job (or the host's "scheduled task"):

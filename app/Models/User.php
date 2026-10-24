@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Domain\Identity\EmailCodes;
 use App\Domain\Identity\Permissions;
 use App\Enums\Role;
 use Database\Factories\UserFactory;
@@ -196,6 +197,12 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
             $this->hasRole(Role::PartnerManager) => route('partner.home'),
             default => route('student.dashboard'),
         };
+    }
+
+    /** Verification is by a 6-digit emailed code (see EmailCodes), not a link, for students and agents alike. */
+    public function sendEmailVerificationNotification(): void
+    {
+        app(EmailCodes::class)->issue($this, force: true);
     }
 
     public function isStaff(): bool

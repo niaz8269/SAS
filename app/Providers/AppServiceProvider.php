@@ -92,6 +92,7 @@ class AppServiceProvider extends ServiceProvider
         RateLimiter::for('register', fn (Request $r) => Limit::perHour(10)->by($r->ip()));
         RateLimiter::for('password-reset', fn (Request $r) => Limit::perMinute(3)->by(strtolower((string) $r->input('email')).'|'.$r->ip()));
         RateLimiter::for('verification', fn (Request $r) => Limit::perMinute(3)->by($r->user()?->id ?: $r->ip()));
+        RateLimiter::for('verification-code', fn (Request $r) => Limit::perMinute(10)->by($r->user()?->id ?: $r->ip()));
         RateLimiter::for('enquiries', fn (Request $r) => [Limit::perMinute(3)->by($r->ip()), Limit::perDay(20)->by($r->ip())]);
         RateLimiter::for('uploads', fn (Request $r) => Limit::perMinute(10)->by($r->user()?->id ?: $r->ip()));
     }

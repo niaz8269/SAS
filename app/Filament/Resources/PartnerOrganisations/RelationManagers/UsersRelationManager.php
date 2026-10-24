@@ -36,7 +36,7 @@ class UsersRelationManager extends RelationManager
         return $schema->components([
             TextInput::make('name')->required()->maxLength(120),
             TextInput::make('email')->email()->required()->maxLength(190)->unique(User::class, 'email'),
-            TextInput::make('password')->password()->revealable()->required()->minLength(12)->helperText('At least 12 characters. Give it to the partner securely; they can change it after signing in.'),
+            TextInput::make('password')->password()->revealable()->required()->minLength(12)->helperText('At least 12 characters. Give it to the partner securely; they can change it after signing in. At their first sign-in they must also type a 6-digit code emailed to the address above, so check it is spelled correctly.'),
         ]);
     }
 
@@ -47,7 +47,7 @@ class UsersRelationManager extends RelationManager
                 CreateAction::make()->label('Add a person')->using(function (array $data): User {
                     abort_unless(auth()->user()->can('create', $this->getOwnerRecord()::class), 403);
                     $user = new User(['name' => $data['name'], 'email' => $data['email'], 'password' => $data['password']]);
-                    $user->forceFill(['partner_organisation_id' => $this->getOwnerRecord()->getKey(), 'email_verified_at' => now(), 'status' => 'active'])->save();
+                    $user->forceFill(['partner_organisation_id' => $this->getOwnerRecord()->getKey(), 'status' => 'active'])->save(); // not verified yet: at first sign-in they type the code emailed to this address
                     $user->userRoles()->create(['role' => 'partner_manager']);
                     AuditLog::record('partner.user_created', $user, null, ['organisation_id' => $this->getOwnerRecord()->getKey()]);
 

@@ -9,8 +9,8 @@ use App\Models\Document;
 use App\Models\Enquiry;
 use App\Models\PartnerOrganisation;
 use App\Models\User;
+use App\Notifications\VerifyEmailCode;
 use Filament\Facades\Filament;
-use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Notification;
@@ -35,7 +35,7 @@ class AuthAndIsolationTest extends TestCase
         $this->assertSame([], $user->roleKeys());
         $this->assertFalse($user->isStaff());
         $this->assertSame('Asia/Karachi', $user->timezone);
-        Notification::assertSentTo($user, VerifyEmail::class);
+        Notification::assertSentTo($user, VerifyEmailCode::class);
         // Defaults are visible and editable; optional categories start off (NOT-02).
         $this->assertFalse(Preferences::enabled($user, 'marketing', 'mail'));
         $this->assertFalse(Preferences::enabled($user, 'deadline_reminders', 'mail'));
