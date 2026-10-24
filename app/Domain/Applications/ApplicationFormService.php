@@ -5,6 +5,7 @@ namespace App\Domain\Applications;
 use App\Domain\Editorial\AuditLog;
 use App\Models\ApplicationForm;
 use App\Models\User;
+use Illuminate\Support\Carbon;
 use Illuminate\Validation\Rule;
 
 /** Reads, validates and saves the master application form described in config/application_form.php. */
@@ -58,7 +59,7 @@ class ApplicationFormService
     private function fieldRules(array $def): array
     {
         return ['nullable', ...match ($def[1]) {
-            'date' => ['date'],
+            'date' => ['date_format:Y-m-d'], // a whole date: day, month and year
             'email' => ['email', 'max:190'],
             'textarea' => ['string', 'max:600'],
             'select' => ['string', Rule::in($def['options'])],
@@ -117,16 +118,46 @@ class ApplicationFormService
         return $form;
     }
 
+    /**
+     * The required answers of a section as [label, answered] pairs. Ordinary sections list their `required` fields. A repeating section
+     * with `required_first` needs those fields in its first entry (so SAS gets at least two education records), and in any later entry
+     * the student has started.
+     *
+     * @return list<array{0:string,1:bool}>
+     */
+    private function requiredCells(string $key, array $section, array $data): array
+    {
+        $cells = [];
+        if (! isset($section['repeat'])) {
+            foreach ($section['fields'] as $name => $def) {
+                ($def['required'] ?? false) && $cells[] = [$def[0], filled($data[$name] ?? null)];
+            }
+
+            return $cells;
+        }
+        $required = $section['required_first'] ?? [];
+        $rows = array_values((array) ($data[$key] ?? []));
+        foreach (range(0, $section['repeat'] - 1) as $i) {
+            $row = (array) ($rows[$i] ?? []);
+            if ($required === [] || ($i > 0 && collect($row)->filter(fn ($v) => filled($v))->isEmpty())) {
+                continue;
+            }
+            foreach ($required as $name) {
+                $cells[] = [$section['title'].', entry '.($i + 1).': '.$section['fields'][$name][0], filled($row[$name] ?? null)];
+            }
+        }
+
+        return $cells;
+    }
+
     /** Labels of the required answers still missing, plus the declaration. Empty means complete. */
     public function missing(ApplicationForm $form): array
     {
         $data = $form->data ?? [];
         $missing = [];
-        foreach ($this->sections() as $section) {
-            foreach ($section['fields'] as $name => $def) {
-                if (($def['required'] ?? false) && blank($data[$name] ?? null)) {
-                    $missing[] = $def[0];
-                }
+        foreach ($this->sections() as $key => $section) {
+            foreach ($this->requiredCells($key, $section, $data) as [$label, $answered]) {
+                $answered || $missing[] = $label;
             }
         }
         if (blank($data['_declared_at'] ?? null)) {
@@ -142,8 +173,8 @@ class ApplicationFormService
         $data = $form->data ?? [];
         $out = [];
         foreach ($this->sections() as $key => $section) {
-            $required = collect($section['fields'])->filter(fn ($d) => $d['required'] ?? false)->keys();
-            $out[$key] = ['required' => $required->count(), 'answered' => $required->filter(fn ($n) => filled($data[$n] ?? null))->count()];
+            $cells = collect($this->requiredCells($key, $section, $data));
+            $out[$key] = ['required' => $cells->count(), 'answered' => $cells->filter(fn ($c) => $c[1])->count()];
         }
 
         return $out;
@@ -151,9 +182,45 @@ class ApplicationFormService
 
     public function percent(ApplicationForm $form): int
     {
-        $total = collect($this->sections())->sum(fn ($s) => collect($s['fields'])->filter(fn ($d) => $d['required'] ?? false)->count()) + 1;
+        $total = collect($this->sections())->sum(fn ($s, $key = null) => isset($s['repeat']) ? count($s['required_first'] ?? []) : collect($s['fields'])->filter(fn ($d) => $d['required'] ?? false)->count()) + 1;
 
-        return (int) round(($total - count($this->missing($form))) / $total * 100);
+        return max(0, (int) round(($total - count($this->missing($form))) / $total * 100));
+    }
+
+    /**
+     * Problems with study dates that single-field rules cannot see: an end before the start, a start in the future, a date before 1940.
+     *
+     * @param  array<string,array>  $sections  the submitted sections, as in saveAll
+     * @return array<string,string> error message by input path
+     */
+    public function periodErrors(array $sections): array
+    {
+        $errors = [];
+        $check = function (string $path, ?string $from, ?string $to, array $what) use (&$errors) {
+            try {
+                $f = filled($from) ? Carbon::parse($from) : null;
+                $t = filled($to) ? Carbon::parse($to) : null;
+            } catch (\Throwable) {
+                return;
+            }
+            if ($f && ($f->lt(Carbon::parse('1940-01-01')) || $f->isFuture())) {
+                $errors[$path.'.'.$what[0]] = 'The start date must be between 1940 and today.';
+            }
+            if ($t && $t->lt(Carbon::parse('1940-01-01'))) {
+                $errors[$path.'.'.$what[1]] = 'The end date is too early.';
+            }
+            if ($f && $t && $t->lt($f)) {
+                $errors[$path.'.'.$what[1]] = 'The end date must be on or after the start date.';
+            }
+        };
+        if (isset($sections['education'])) {
+            $check('sections.education', $sections['education']['edu_from'] ?? null, $sections['education']['edu_to'] ?? null, ['edu_from', 'edu_to']);
+        }
+        foreach ((array) ($sections['other_education']['rows'] ?? $sections['other_education'] ?? []) as $i => $row) {
+            $check('sections.other_education.rows.'.$i, $row['from'] ?? null, $row['to'] ?? null, ['from', 'to']);
+        }
+
+        return $errors;
     }
 
     private function forget(array &$data, string $name): void

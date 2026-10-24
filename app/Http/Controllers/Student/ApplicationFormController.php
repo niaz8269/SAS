@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ApplicationPlan;
 use App\Models\Country;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 /**
  * The master application form: one set of answers for every scholarship (step 2 of an application, or on its own).
@@ -47,6 +48,9 @@ class ApplicationFormController extends Controller
         }
         $input = $request->validate($rules);
         $present = collect($input['sections'] ?? [])->only(array_keys($forms->sections()))->all();
+        if ($periodErrors = $forms->periodErrors($present)) {
+            throw ValidationException::withMessages($periodErrors);
+        }
         $forms->saveAll($student, $present, $request->user());
         $forms->declare($student, $request->boolean('declared'));
 

@@ -238,7 +238,7 @@
 "y": 144.9,
 "w": 198.0,
 "h": 15.2,
-"src": "edu_years"
+"src": "@period.edu"
 },
 {
 "p": 2,
@@ -286,7 +286,7 @@
 "y": 294.9,
 "w": 198.0,
 "h": 15.2,
-"src": "other_education.0.years"
+"src": "@period.other_education.0"
 },
 {
 "p": 2,
@@ -334,7 +334,7 @@
 "y": 444.9,
 "w": 198.0,
 "h": 15.2,
-"src": "other_education.1.years"
+"src": "@period.other_education.1"
 },
 {
 "p": 2,

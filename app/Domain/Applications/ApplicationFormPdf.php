@@ -87,6 +87,7 @@ class ApplicationFormPdf
             $src === '@agency' => $plan->user->managedBy?->name,
             $src === '@language' => $plan->study_language,
             str_starts_with($src, '@chinese.') => $this->chinese($data, substr($src, 9)),
+            str_starts_with($src, '@period.') => $this->period($data, substr($src, 8)),
             str_contains($src, '.') => data_get($data, $src),
             default => $data[$src] ?? null,
         };
@@ -95,6 +96,26 @@ class ApplicationFormPdf
         return match ($raw) {
             'yes' => 'Yes', 'no' => 'No', default => trim($raw),
         };
+    }
+
+    /** The dates a student studied somewhere, as "15 Sep 2019 to 30 Jun 2023". Older records that only have free text still show it. */
+    private function period(array $data, string $where): ?string
+    {
+        [$from, $to, $legacy] = $where === 'edu'
+            ? [$data['edu_from'] ?? null, $data['edu_to'] ?? null, $data['edu_years'] ?? null]
+            : [data_get($data, $where.'.from'), data_get($data, $where.'.to'), data_get($data, $where.'.years')];
+        $show = function ($d) {
+            try {
+                return Carbon::parse($d)->format('j M Y');
+            } catch (\Throwable) {
+                return (string) $d;
+            }
+        };
+        if (blank($from) && blank($to)) {
+            return $legacy;
+        }
+
+        return trim((filled($from) ? $show($from) : '').' to '.(filled($to) ? $show($to) : ''), ' ');
     }
 
     /** The Chinese row of "Other languages you know", for the form's Chinese proficiency and HSK boxes. */

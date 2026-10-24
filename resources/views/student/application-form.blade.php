@@ -30,6 +30,7 @@
                     <section id="{{ $key }}" class="border border-[#ddd] bg-white" aria-labelledby="{{ $key }}-h">
                         <h2 id="{{ $key }}-h" class="border-b border-[#ddd] bg-[#ececec] px-3 py-2 text-[15px] font-bold text-[#222]">{{ $section['title'] }}</h2>
                         <div class="p-4">
+                            @if (isset($section['note']))<p class="mb-3 border border-[#f0b46a] bg-[#fdebd0] px-3 py-2 text-[13px] text-[#b4530b]">{{ $section['note'] }}</p>@endif
                             @if (isset($section['repeat']))
                                 @php($rows = $form->value($key, []))
                                 @for ($i = 0; $i < $section['repeat']; $i++)
@@ -37,7 +38,7 @@
                                         <p class="mb-2 text-[13px] font-semibold text-[#666]">Entry {{ $i + 1 }}</p>
                                         <div class="grid gap-x-8 gap-y-3 lg:grid-cols-2">
                                             @foreach ($section['fields'] as $name => $def)
-                                                @include('student._form-field', ['id' => "$key-$i-$name", 'field' => "sections[$key][rows][$i][$name]", 'def' => $def, 'value' => old("sections.$key.rows.$i.$name", $rows[$i][$name] ?? null), 'errorKey' => "sections.$key.rows.$i.$name", 'countries' => $countries])
+                                                @include('student._form-field', ['id' => "$key-$i-$name", 'field' => "sections[$key][rows][$i][$name]", 'def' => ($i === 0 && in_array($name, $section['required_first'] ?? [], true)) ? array_merge($def, ['required' => true]) : $def, 'value' => old("sections.$key.rows.$i.$name", $rows[$i][$name] ?? null), 'errorKey' => "sections.$key.rows.$i.$name", 'countries' => $countries])
                                             @endforeach
                                         </div>
                                     </div>

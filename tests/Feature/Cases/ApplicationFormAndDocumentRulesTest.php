@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Cases;
 
+use App\Domain\Applications\ApplicationFormPdf;
 use App\Domain\Applications\ApplicationFormService;
 use App\Domain\Cases\CaseService;
 use App\Domain\Documents\Requirements;
@@ -23,6 +24,7 @@ use App\Models\DocumentRule;
 use App\Models\ScholarshipCycle;
 use App\Models\ServiceCase;
 use App\Models\User;
+use Database\Seeders\TaxonomySeeder;
 use Filament\Facades\Filament;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
@@ -189,11 +191,63 @@ class ApplicationFormAndDocumentRulesTest extends TestCase
                 }
             }
         }
+        $this->assertContains('Other education certificates, entry 1: Institute name', $service->missing($form->forceFill(['data' => $answers])), 'one education record is not enough');
+        $answers['other_education'] = [['level' => 'Senior high school', 'institute' => 'Another School', 'from' => '2015-09-01', 'to' => '2019-06-30']]; // SAS needs two education records
         $form->forceFill(['data' => $answers])->save();
         $this->assertSame(['Declaration'], $service->missing($form));
         $this->actingAs($student)->put(route('student.form.update'), ['declared' => '1'])->assertRedirect();
         $this->assertSame([], $service->missing($form->refresh()));
         $this->assertSame(100, $service->percent($form));
+    }
+
+    public function test_education_needs_two_records_with_full_dates_and_the_end_cannot_precede_the_start(): void
+    {
+        $this->seed(TaxonomySeeder::class); // the country list
+        $student = User::factory()->create();
+        $service = app(ApplicationFormService::class);
+        $this->actingAs($student);
+        $save = fn (array $education, array $other = []) => $this->put(route('student.form.update'), ['sections' => ['education' => $education, 'other_education' => ['rows' => $other]]]);
+        $record = ['edu_level' => 'Bachelor', 'edu_country' => 'Pakistan', 'edu_institute' => 'University of the Punjab', 'edu_from' => '2019-09-15', 'edu_to' => '2023-06-30'];
+
+        // The first record alone is not enough: the second one is asked for by name.
+        $save($record)->assertRedirect()->assertSessionHasNoErrors();
+        $missing = $service->missing($service->formFor($student)->refresh());
+        $this->assertContains('Other education certificates, entry 1: Education level', $missing);
+        $this->assertContains('Other education certificates, entry 1: Studied from (day, month, year)', $missing);
+        $this->assertNotContains('Studied from (day, month, year)', $missing, 'the first record is complete');
+
+        // Dates are whole dates, and the end must not come before the start.
+        $save(['edu_from' => '2023-06-30', 'edu_to' => '2019-09-15'] + $record)->assertSessionHasErrors('sections.education.edu_to');
+        $save(['edu_from' => now()->addYear()->toDateString(), 'edu_to' => now()->addYears(3)->toDateString()] + $record)->assertSessionHasErrors('sections.education.edu_from');
+        $save(['edu_from' => '1900-01-01'] + $record)->assertSessionHasErrors('sections.education.edu_from');
+        $save(['edu_from' => 'September 2019'] + $record)->assertSessionHasErrors('sections.education.edu_from');
+        $save($record, [['level' => 'Senior high school', 'institute' => 'City School', 'from' => '2018-06-01', 'to' => '2015-01-01']])->assertSessionHasErrors('sections.other_education.rows.0.to');
+
+        // Two good records: complete. A third that is started must be filled in properly too.
+        $save($record, [['level' => 'Senior high school', 'institute' => 'City School', 'from' => '2015-09-01', 'to' => '2017-06-30']])->assertRedirect()->assertSessionHasNoErrors();
+        $this->assertNotContains('Other education certificates, entry 1: Institute name', $service->missing($service->formFor($student)->refresh()));
+        $save($record, [['level' => 'Senior high school', 'institute' => 'City School', 'from' => '2015-09-01', 'to' => '2017-06-30'], ['institute' => 'Half done']])->assertRedirect();
+        $missing = $service->missing($service->formFor($student)->refresh());
+        $this->assertContains('Other education certificates, entry 2: Education level', $missing);
+        $this->assertNotContains('Other education certificates, entry 1: Education level', $missing);
+        $progress = $service->sectionProgress($service->formFor($student)->refresh());
+        $this->assertSame(['required' => 8, 'answered' => 5], $progress['other_education'], 'four needed in each of the two entries; entry 1 is complete and entry 2 has only its institute');
+
+        // The page shows the note and the date boxes.
+        $this->get(route('student.form.show'))->assertOk()->assertSee('SAS needs two')->assertSee('Studied from (day, month, year)')->assertSee('type="date"', false);
+    }
+
+    public function test_the_sas_form_pdf_writes_the_study_dates_in_full(): void
+    {
+        $pdf = new \ReflectionMethod(ApplicationFormPdf::class, 'period');
+        $pdf->setAccessible(true);
+        $instance = app(ApplicationFormPdf::class);
+        $data = ['edu_from' => '2019-09-15', 'edu_to' => '2023-06-30', 'other_education' => [['from' => '2015-09-01', 'to' => '2017-06-30'], ['years' => '2010 to 2012']]];
+
+        $this->assertSame('15 Sep 2019 to 30 Jun 2023', $pdf->invoke($instance, $data, 'edu'));
+        $this->assertSame('1 Sep 2015 to 30 Jun 2017', $pdf->invoke($instance, $data, 'other_education.0'));
+        $this->assertSame('2010 to 2012', $pdf->invoke($instance, $data, 'other_education.1'), 'an older record with only free text still shows');
+        $this->assertNull($pdf->invoke($instance, [], 'edu'));
     }
 
     public function test_the_case_page_links_to_the_documents_and_the_level_follows_the_students_application(): void

@@ -71,6 +71,7 @@ class ApplicationWizardTest extends TestCase
                 }
             }
         }
+        $answers['other_education'] = [['level' => 'Senior high school', 'institute' => 'Another School', 'from' => '2015-09-01', 'to' => '2019-06-30']]; // SAS needs two education records
         $forms->formFor($student)->forceFill(['data' => $answers + ['_declared_at' => now()->toDateTimeString()]])->save();
     }
 
