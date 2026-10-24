@@ -43,7 +43,8 @@
     /* Form fields stay at 16px or more on phones so iOS does not zoom the page when one is focused. */
     @media (max-width: 767px) { input, select, textarea { font-size: max(1rem, 16px); } }
     /* Laptops, desktops, monitors and TVs (1200px and wider): one fixed design on a 1440px-wide canvas that is scaled to the screen, so every size, gap and margin keeps the same proportions on a small laptop, a 24 inch monitor and a 32 inch screen. Phones and tablets (under 1200px) have their own layout. Everything is in rem, so the root size alone does the scaling; heights that depend on the screen height (vh) are avoided in this range so the look does not change with the shape of the window. */
-    @media (min-width: 1200px) { html { font-size: calc(100vw / 90); } }
+    /* The canvas is 90rem wide and 50.6rem tall (a 1440 by 810 window). The size is the smaller of "fit the width" and "fit the height", so on a short, wide window (a 1920 by 880 browser) the whole first screen, with the search box, still fits and looks the same, just with wider side margins. Never below 13px. */
+    @media (min-width: 1200px) { html { font-size: max(13px, min(calc(100vw / 90), calc(100vh / 50.6))); } }
     body { @apply bg-ivory text-ink antialiased; font-family: var(--font-sans); }
     h1, h2, h3, h4 { font-family: var(--font-display); @apply tracking-tight text-ink; }
     a { @apply underline-offset-2; }
