@@ -6,7 +6,7 @@
     <x-slot:head>
         <link rel="alternate" type="application/rss+xml" title="{{ config('sas.brand.short') }} blog" href="{{ route('blog.feed') }}">
         @unless ($preview)
-            <x-jsonld :data="array_filter(['@type' => 'BlogPosting', 'headline' => $post->title, 'description' => $post->summary(200), 'image' => $cover, 'datePublished' => $post->published_at?->toIso8601String(), 'dateModified' => $post->updated_at?->toIso8601String(), 'mainEntityOfPage' => $canonical, 'articleSection' => $post->category?->name, 'author' => ['@type' => 'Person', 'name' => $post->author?->name ?: config('sas.brand.name')], 'publisher' => ['@type' => 'Organization', 'name' => config('sas.brand.name'), 'logo' => ['@type' => 'ImageObject', 'url' => asset('images/sas-seal.png')]]])" />
+            <x-jsonld :data="array_filter(['@type' => 'BlogPosting', 'headline' => $post->title, 'description' => $post->summary(200), 'image' => $cover, 'datePublished' => $post->published_at?->toIso8601String(), 'dateModified' => $post->updated_at?->toIso8601String(), 'mainEntityOfPage' => $canonical, 'articleSection' => $post->category?->name, 'author' => ['@type' => $post->author ? 'Person' : 'Organization', 'name' => $post->author?->name ?: config('sas.brand.name')], 'publisher' => ['@type' => 'Organization', 'name' => config('sas.brand.name'), 'logo' => ['@type' => 'ImageObject', 'url' => asset('images/sas-seal.png')]]])" />
             <x-jsonld :data="['@type' => 'BreadcrumbList', 'itemListElement' => [['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')], ['@type' => 'ListItem', 'position' => 2, 'name' => 'Blog', 'item' => route('blog.index')], ['@type' => 'ListItem', 'position' => 3, 'name' => $post->title]]]" />
         @endunless
     </x-slot:head>
@@ -21,9 +21,10 @@
             <h1 class="mt-1 text-3xl font-extrabold sm:text-4xl lg:text-5xl">{{ $post->title }}</h1>
             @if ($post->excerpt)<p class="mt-3 text-lg text-muted">{{ \App\Support\Html::text($post->excerpt) }}</p>@endif
             <p class="mt-3 text-sm text-muted">
-                @if ($post->author)By <strong class="text-ink">{{ $post->author->name }}</strong> &middot; @endif
+                By <strong class="text-ink">{{ $post->author?->name ?: 'the '.config('sas.brand.short').' editorial team' }}</strong> &middot;
                 <time datetime="{{ $post->published_at?->toDateString() }}">{{ $post->published_at?->format('j F Y') ?? 'Not published' }}</time> &middot; {{ $post->readingMinutes() }} min read
             </p>
+            <div class="mt-4"><x-share-button :url="$canonical" :title="$post->title" /></div>
         </header>
         @if ($post->imageUrl())
             <figure class="mt-6"><img src="{{ $post->imageUrl() }}" alt="{{ $post->image_alt }}" class="max-h-[32rem] w-full rounded-xl object-cover" width="1200" height="630" fetchpriority="high">
@@ -31,13 +32,10 @@
         @endif
         <div class="prose-sas mt-6">{!! \App\Support\Html::rich($post->body) !!}</div>
 
-        <aside class="mt-8 flex flex-wrap items-center gap-3 border-t border-line pt-5 text-sm" aria-label="Share this post">
-            <span class="font-semibold">Share:</span>
-            <a class="btn-outline !py-1.5" rel="noopener" target="_blank" href="https://wa.me/?text={{ rawurlencode($post->title.' '.$canonical) }}">WhatsApp</a>
-            <a class="btn-outline !py-1.5" rel="noopener" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ rawurlencode($canonical) }}">Facebook</a>
-            <a class="btn-outline !py-1.5" rel="noopener" target="_blank" href="https://twitter.com/intent/tweet?url={{ rawurlencode($canonical) }}&text={{ rawurlencode($post->title) }}">X</a>
-            <a class="btn-outline !py-1.5" rel="noopener" target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url={{ rawurlencode($canonical) }}">LinkedIn</a>
-        </aside>
+        <div class="mt-8 flex flex-wrap items-center gap-3 border-t border-line pt-5 text-sm">
+            <span class="font-semibold">Found this useful? Share it:</span>
+            <x-share-button :url="$canonical" :title="$post->title" />
+        </div>
 
     </article>
     <aside class="space-y-5 lg:sticky lg:top-28 lg:self-start" aria-label="Blog sidebar">

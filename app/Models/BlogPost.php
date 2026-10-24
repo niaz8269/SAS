@@ -50,7 +50,12 @@ class BlogPost extends Model
 
     public function imageUrl(): ?string
     {
-        return $this->image_path ? Storage::disk('public_media')->url($this->image_path) : null;
+        if (! $this->image_path) {
+            return null;
+        }
+
+        // Pictures that ship with the site live in public/images; pictures uploaded in the admin live in the media storage.
+        return str_starts_with($this->image_path, 'images/') ? asset($this->image_path) : Storage::disk('public_media')->url($this->image_path);
     }
 
     /** About 200 words a minute, never less than one. */

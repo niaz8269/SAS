@@ -217,4 +217,20 @@ class BlogTest extends TestCase
         $this->assertNotNull($back);
         $this->assertNull($back->author_id);
     }
+
+    public function test_a_post_has_a_share_button_the_whole_card_opens_the_post_and_pictures_shipped_with_the_site_work(): void
+    {
+        $post = $this->makePost(['slug' => 'shareable', 'title' => 'A shareable post', 'image_path' => 'images/blog/chinese-government-scholarship-2027-28-how-to-prepare.jpg', 'image_alt' => 'The Great Wall', 'image_credit' => 'Photo: someone, Unsplash']);
+        $this->assertSame(asset('images/blog/chinese-government-scholarship-2027-28-how-to-prepare.jpg'), $post->imageUrl());
+        $this->assertFileExists(public_path('images/blog/chinese-government-scholarship-2027-28-how-to-prepare.jpg'));
+
+        $page = $this->get('/blog/shareable')->assertOk();
+        $page->assertSee('navigator.share', false)->assertSee('Share on WhatsApp')->assertSee('Copy link')->assertSee('Send by email')
+            ->assertSee(rtrim(config('app.url'), '/').'/blog/shareable', false)
+            ->assertSee('By <strong class="text-ink">the SAS editorial team</strong>', false)->assertSee('Photo: someone, Unsplash');
+        $this->assertGreaterThanOrEqual(2, substr_count($page->getContent(), 'aria-label="Share this post"'), 'a share button near the title and another after the text');
+
+        // the card is one big link to the post: the title link covers the whole card
+        $this->get('/blog')->assertSee('after:absolute after:inset-0', false)->assertSee('href="'.route('blog.show', 'shareable').'"', false);
+    }
 }

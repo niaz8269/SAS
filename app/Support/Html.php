@@ -126,7 +126,13 @@ class Html
             }
         }
         if ($tag === 'a') {
-            $el->setAttribute('rel', 'noopener nofollow ugc');
+            // links inside our own site pass on normally; links to other sites are marked so nobody gains from pasting them
+            $href = trim($el->getAttribute('href'));
+            if (str_starts_with($href, '/') || str_starts_with($href, '#') || str_starts_with($href, rtrim((string) config('app.url'), '/').'/')) {
+                $el->removeAttribute('rel');
+            } else {
+                $el->setAttribute('rel', 'noopener nofollow ugc');
+            }
         }
     }
 
