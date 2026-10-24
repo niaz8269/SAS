@@ -29,7 +29,7 @@
             <tbody>
             @foreach ($case->invoices as $i)
                 <tr class="border-b border-line/60 align-top">
-                    <td class="py-2 pr-3 font-medium">{{ \App\Models\Invoice::KINDS[$i->kind] ?? $i->kind }}<br><span class="text-xs font-normal text-muted">{{ $i->description }}</span></td>
+                    <td class="py-2 pr-3 font-medium">{{ \App\Models\Invoice::KINDS[$i->kind] ?? $i->kind }}<br><span class="text-xs font-normal text-muted">{{ $i->description }}</span>@if ($i->status !== 'void')<br><a class="text-xs text-navy-700 underline" href="{{ route('invoices.pdf', $i) }}">{{ $i->status === 'paid' ? 'Download receipt (PDF)' : 'Download invoice (PDF)' }}</a>@endif</td>
                     <td class="py-2 pr-3 whitespace-nowrap">{{ $i->amount() }}</td>
                     <td class="py-2 pr-3">{{ \App\Models\Invoice::STATUSES[$i->status] ?? $i->status }}@if ($i->paid_at) <span class="block text-xs text-muted">paid {{ $i->paid_at->format('j M Y') }}@if ($i->payment_reference), ref. {{ $i->payment_reference }}@endif</span>@endif</td>
                     <td class="py-2">@if ($i->refund_status === 'due')Refund of {{ $i->refundAmount() }} is being processed @elseif ($i->refund_status === 'paid')Refunded {{ $i->refundAmount() }} on {{ $i->refunded_at?->format('j M Y') }} @else &mdash; @endif</td>

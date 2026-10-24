@@ -190,6 +190,7 @@ Route::get('/review/students/{student:public_id}/documents.zip', [Student\Studen
 Route::get('/review/applications/{plan:public_id}/download', [Student\ApplicationController::class, 'download'])->middleware(['auth', 'active', 'verified'])->name('review.download');
 
 // Staff open a document a student shared on a case. The policy allows only active shares on cases the staff member may view.
+Route::get('/invoices/{invoice:public_id}/pdf', \App\Http\Controllers\InvoicePdfController::class)->middleware(['auth', 'active', 'verified'])->name('invoices.pdf');
 Route::get('/files/{document:public_id}/download', [Student\DocumentController::class, 'download'])->middleware(['auth', 'active', 'verified'])->name('files.download');
 
 /*

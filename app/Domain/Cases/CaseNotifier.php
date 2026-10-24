@@ -3,13 +3,14 @@
 namespace App\Domain\Cases;
 
 use App\Domain\Communication\Preferences;
+use App\Models\Invoice;
 use App\Models\ServiceCase;
 use App\Notifications\CaseUpdateNotification;
 
 /** Tells a student about a change to their case or fees, through the channels they allowed for account messages. */
 class CaseNotifier
 {
-    public function tell(ServiceCase $case, string $message): void
+    public function tell(ServiceCase $case, string $message, ?Invoice $receipt = null): void
     {
         $student = $case->student;
         if (! $student || ! $student->isActive()) {
@@ -24,7 +25,7 @@ class CaseNotifier
             $channels[] = 'mail';
         }
         if ($channels !== []) {
-            $student->notify(new CaseUpdateNotification($message, route('student.cases.show', $case), $channels));
+            $student->notify(new CaseUpdateNotification($message, route('student.cases.show', $case), $channels, 'View your case', $receipt));
         }
     }
 }

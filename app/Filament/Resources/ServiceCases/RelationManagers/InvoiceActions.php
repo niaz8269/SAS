@@ -26,6 +26,9 @@ class InvoiceActions
         };
 
         return [
+            Action::make('pdf')->label('PDF')->icon('heroicon-o-document-arrow-down')->color('gray')
+                ->visible(fn (Invoice $r) => $r->status !== 'void' && auth()->user()->can('view', $r))
+                ->url(fn (Invoice $r) => route('invoices.pdf', $r), shouldOpenInNewTab: true),
             Action::make('markPaid')->label('Mark as paid')->icon('heroicon-o-banknotes')->color('success')
                 ->visible(fn (Invoice $r) => $r->status === 'issued' && auth()->user()->can('update', $r))
                 ->schema([

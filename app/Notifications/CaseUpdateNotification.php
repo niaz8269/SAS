@@ -2,6 +2,8 @@
 
 namespace App\Notifications;
 
+use App\Domain\Documents\InvoicePdf;
+use App\Models\Invoice;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -9,7 +11,7 @@ use Illuminate\Notifications\Notification;
 class CaseUpdateNotification extends Notification
 {
     /** @param list<string> $channels subset of ['database', 'mail'] */
-    public function __construct(public string $message, public string $url, public array $channels, public string $label = 'View your case') {}
+    public function __construct(public string $message, public string $url, public array $channels, public string $label = 'View your case', public ?Invoice $receipt = null) {}
 
     public function via(object $notifiable): array
     {
@@ -18,12 +20,18 @@ class CaseUpdateNotification extends Notification
 
     public function toMail(object $notifiable): MailMessage
     {
-        return (new MailMessage)
+        $mail = (new MailMessage)
             ->subject(config('sas.brand.short').': an update on your application')
             ->greeting('Hello '.$notifiable->name)
             ->line($this->message)
             ->action($this->label, $this->url)
             ->line('You can choose which updates you receive under Notifications in your workspace.');
+        if ($this->receipt) {
+            $pdf = app(InvoicePdf::class);
+            $mail->attachData($pdf->render($this->receipt), $pdf->filename($this->receipt), ['mime' => 'application/pdf']);
+        }
+
+        return $mail;
     }
 
     /** @return array<string,string> */

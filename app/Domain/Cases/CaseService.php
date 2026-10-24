@@ -96,7 +96,7 @@ class CaseService
         }
         $invoice->forceFill(['status' => 'paid', 'paid_at' => now(), 'payment_option_id' => $option?->id, 'payment_reference' => $reference ? mb_substr(trim($reference), 0, 120) : null])->save();
         AuditLog::record('invoice.paid', $invoice, null, ['amount_cents' => $invoice->amount_cents, 'reference' => $invoice->payment_reference], null, $actor);
-        $this->notifier->tell($invoice->serviceCase, 'We recorded your payment of '.$invoice->amount().' ('.$invoice->description.'). Thank you.');
+        $this->notifier->tell($invoice->serviceCase, 'We recorded your payment of '.$invoice->amount().' ('.$invoice->description.'). Thank you. Your receipt is attached to this email and under Cases and fees.', $invoice);
 
         return $invoice;
     }
