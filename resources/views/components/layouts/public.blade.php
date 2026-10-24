@@ -49,23 +49,22 @@
         <a href="{{ route('home') }}" class="shrink-0" aria-label="{{ config('sas.brand.name') }} – home"><x-brand class="[&_img]:!h-[3.75rem] min-[1200px]:[&_img]:!h-[4.75rem] [&_img]:!max-w-none" /></a>
 
         <nav aria-label="Primary" class="hidden min-w-0 flex-1 justify-center min-[1100px]:flex">
-            <ul class="flex items-center gap-0.5 whitespace-nowrap text-[0.8125rem] font-medium min-[1280px]:text-sm">
+            <ul class="flex items-center gap-0.5 whitespace-nowrap text-[0.8125rem] font-medium min-[1200px]:text-base">
                 @foreach ($nav as $item)
                     <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif
-                           class="group relative block rounded-lg px-1.5 py-2 transition hover:bg-navy-50 min-[1280px]:px-2.5 hover:text-navy-800 {{ $item['active'] ? 'font-semibold text-navy-800' : 'text-ink' }}">{{ $item['label'] }}
-                           <span class="absolute inset-x-1.5 -bottom-0.5 min-[1280px]:inset-x-2.5 h-0.5 rounded-full bg-gold transition {{ $item['active'] ? 'opacity-100' : 'opacity-0 group-hover:opacity-60' }}" aria-hidden="true"></span></a></li>
+                           class="group relative block rounded-lg px-1.5 py-2 transition hover:bg-navy-50 min-[1200px]:px-2 hover:text-navy-800 {{ $item['active'] ? 'font-semibold text-navy-800' : 'text-ink' }}">{{ $item['label'] }}
+                           <span class="absolute inset-x-1.5 -bottom-0.5 min-[1200px]:inset-x-2 h-0.5 rounded-full bg-gold transition {{ $item['active'] ? 'opacity-100' : 'opacity-0 group-hover:opacity-60' }}" aria-hidden="true"></span></a></li>
                 @endforeach
             </ul>
         </nav>
 
         <div class="hidden shrink-0 items-center gap-2 whitespace-nowrap min-[1100px]:ml-3 min-[1100px]:flex">
             @auth
-                <a href="{{ auth()->user()->isStaff() ? url('/admin') : route('student.dashboard') }}" class="rounded-lg px-2 py-2 text-[0.8125rem] font-medium text-ink transition hover:bg-navy-50 min-[1280px]:px-2.5 min-[1280px]:text-sm">{{ auth()->user()->isStaff() ? 'Staff admin' : 'Student dashboard' }}</a>
+                <a href="{{ auth()->user()->isStaff() ? url('/admin') : route('student.dashboard') }}" class="rounded-lg px-2 py-2 text-[0.8125rem] font-medium text-ink transition hover:bg-navy-50 min-[1200px]:px-2 min-[1200px]:text-base">{{ auth()->user()->isStaff() ? 'Staff admin' : 'Student dashboard' }}</a>
             @else
-                <a href="{{ route('login') }}" class="rounded-lg px-2 py-2 text-[0.8125rem] font-medium text-ink transition hover:bg-navy-50 min-[1280px]:px-2.5 min-[1280px]:text-sm">Login</a>
-                <a href="{{ route('register') }}" class="hidden rounded-lg border border-navy-200 px-3 py-2 text-sm font-semibold min-[1366px]:block text-navy-800 transition hover:border-navy-500 hover:bg-navy-50">Register</a>
+                <a href="{{ route('login') }}" class="rounded-lg px-2 py-2 text-[0.8125rem] font-medium text-ink transition hover:bg-navy-50 min-[1200px]:px-2 min-[1200px]:text-base">Login</a>
             @endauth
-            <a href="{{ route('consultations.create') }}" class="btn-primary rounded-lg px-3 py-2.5 text-[0.8125rem] shadow-sm min-[1280px]:px-3.5 min-[1280px]:text-sm shadow-navy-900/20">Book a Consultation <span aria-hidden="true">&rarr;</span></a>
+            <a href="{{ route('consultations.create') }}" class="btn-primary rounded-lg px-3 py-2.5 text-[0.8125rem] shadow-sm min-[1200px]:px-3.5 min-[1200px]:text-base shadow-navy-900/20">Book a Consultation <span aria-hidden="true">&rarr;</span></a>
         </div>
 
         <button type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-line bg-white transition hover:bg-navy-50 min-[1100px]:hidden" @click="open = !open"
