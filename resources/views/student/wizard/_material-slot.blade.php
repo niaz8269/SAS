@@ -25,6 +25,10 @@
                         </li>
                     @endforeach
                 </ul>
+                @foreach ($r['documents'] as $d)
+                    @php($note = $d->comments->sortByDesc('id')->first())
+                    @if ($note)<p class="mt-2 border-l-4 border-[#f0b46a] bg-[#fdebd0] px-2 py-1 text-[12px] text-[#b4530b]">Comment from {{ $note->author?->name ?: 'SAS' }} on {{ \Illuminate\Support\Str::limit($d->currentVersion?->original_name ?? $d->title, 24) }}: {{ $note->body }}</p>@endif
+                @endforeach
             @endif
         </div>
     </div>

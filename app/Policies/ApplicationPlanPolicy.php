@@ -31,9 +31,15 @@ class ApplicationPlanPolicy
         return $this->update($user, $plan);
     }
 
-    /** Staff with case permission decide on an application that is waiting for review. */
+    /** Staff with case permission, and the student's own counsellor, decide on an application that is waiting for review. */
     public function review(User $user, ApplicationPlan $plan): bool
     {
-        return $user->isStaff() && $user->hasPermission('cases.manage') && $plan->stage === 'submitted';
+        return $plan->stage === 'submitted' && $user->isStaff() && ($user->hasPermission('cases.manage') || $user->counsels($plan->user));
+    }
+
+    /** A student's counsellor (or their agent) can send an unfinished application to SAS review on the student's behalf. */
+    public function submitForReview(User $user, ApplicationPlan $plan): bool
+    {
+        return $plan->isEditable() && ($user->counsels($plan->user) || $this->update($user, $plan));
     }
 }

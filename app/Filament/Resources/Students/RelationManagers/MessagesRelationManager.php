@@ -3,10 +3,13 @@
 namespace App\Filament\Resources\Students\RelationManagers;
 
 use App\Domain\Counselling\Counselling;
+use App\Models\ReplyTemplate;
 use Filament\Actions\Action;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Notifications\Notification;
 use Filament\Resources\RelationManagers\RelationManager;
+use Filament\Schemas\Components\Utilities\Set;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Model;
@@ -23,9 +26,10 @@ class MessagesRelationManager extends RelationManager
         return (bool) auth()->user()?->can('view', $ownerRecord);
     }
 
+    /** Not read only: the buttons on this tab are the point of it (read access is decided by the policies). */
     public function isReadOnly(): bool
     {
-        return true;
+        return false;
     }
 
     public function table(Table $table): Table
@@ -42,7 +46,15 @@ class MessagesRelationManager extends RelationManager
             ->headerActions([
                 Action::make('reply')->label('Write to the student')->icon('heroicon-o-chat-bubble-left-right')
                     ->visible(fn () => (bool) auth()->user()?->can('update', $this->getOwnerRecord()))
-                    ->schema([Textarea::make('body')->label('Message')->required()->minLength(2)->maxLength(2000)->rows(5)])
+                    ->schema([
+                        Select::make('template')->label('Start from a saved reply')->placeholder('Write my own')->dehydrated(false)->live()
+                            ->options(fn () => ReplyTemplate::usableBy(auth()->user())->orderBy('title')->pluck('title', 'id')->all())
+                            ->afterStateUpdated(function ($state, Set $set) {
+                                $template = $state ? ReplyTemplate::usableBy(auth()->user())->find($state) : null;
+                                $template && $set('body', $template->fill_for($this->getOwnerRecord(), auth()->user()));
+                            }),
+                        Textarea::make('body')->label('Message')->required()->minLength(2)->maxLength(2000)->rows(6),
+                    ])
                     ->action(function (array $data) {
                         app(Counselling::class)->message($this->getOwnerRecord(), auth()->user(), $data['body']);
                         Notification::make()->title('Message sent to the student')->success()->send();

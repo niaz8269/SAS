@@ -96,6 +96,11 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
         return $this->hasOne(StudentFollowUp::class, 'student_id')->latestOfMany();
     }
 
+    public function goals(): HasOne
+    {
+        return $this->hasOne(StudentGoal::class, 'student_id');
+    }
+
     public function counsellorMessages(): HasMany
     {
         return $this->hasMany(CounsellorMessage::class, 'student_id');

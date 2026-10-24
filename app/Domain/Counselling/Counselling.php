@@ -5,9 +5,16 @@ namespace App\Domain\Counselling;
 use App\Domain\Communication\Preferences;
 use App\Domain\Editorial\AuditLog;
 use App\Models\CounsellorMessage;
+use App\Models\Document;
+use App\Models\DocumentComment;
+use App\Models\ServiceCase;
 use App\Models\StudentFollowUp;
+use App\Models\StudentGoal;
 use App\Models\User;
 use App\Notifications\CaseUpdateNotification;
+use App\Notifications\StudentWrote;
+use Illuminate\Support\Facades\Notification;
+use Illuminate\Support\Str;
 use InvalidArgumentException;
 
 /** What a counsellor does for a student: take them on, record where they stand, and talk to them. */
@@ -28,16 +35,37 @@ class Counselling
     }
 
     /** Records a status, what the student wants and the counsellor's comment. Staff only; the student never sees it. */
-    public function followUp(User $student, User $author, string $status, ?string $wants, ?string $comment): StudentFollowUp
+    public function followUp(User $student, User $author, string $status, ?string $wants, ?string $comment, ?string $followUpOn = null): StudentFollowUp
     {
         if (! array_key_exists($status, StudentFollowUp::STATUSES)) {
             throw new InvalidArgumentException('Unknown status.');
         }
-        $entry = new StudentFollowUp(['status' => $status, 'wants' => filled($wants) ? trim($wants) : null, 'comment' => filled($comment) ? trim($comment) : null]);
+        $entry = new StudentFollowUp(['status' => $status, 'wants' => filled($wants) ? trim($wants) : null, 'comment' => filled($comment) ? trim($comment) : null, 'follow_up_on' => filled($followUpOn) ? $followUpOn : null]);
         $entry->forceFill(['student_id' => $student->id, 'author_id' => $author->id])->save();
         AuditLog::record('student.follow_up', $student, null, ['status' => $status], null, $author); // the text itself is not logged
 
         return $entry;
+    }
+
+    /** A staff comment on one of the student's documents; the student is told and sees it next to the file. */
+    public function commentOnDocument(Document $document, User $author, string $body): DocumentComment
+    {
+        $comment = new DocumentComment(['body' => trim($body)]);
+        $comment->forceFill(['document_id' => $document->id, 'author_id' => $author->id])->save();
+        AuditLog::record('document.commented', $document, null, null, null, $author);
+        $this->tell($document->user, ($author->name ?: 'Your counsellor').' left a comment on your document "'.$document->title.'": '.Str::limit($comment->body, 120));
+
+        return $comment;
+    }
+
+    /** Saves what the student is aiming for (blank values are cleared). */
+    public function setGoals(User $student, User $author, array $data): StudentGoal
+    {
+        $goal = StudentGoal::firstOrNew(['student_id' => $student->id]);
+        $goal->forceFill(['student_id' => $student->id] + collect($data)->only(['countries', 'degree', 'subject', 'budget', 'intake'])->map(fn ($v) => filled($v) ? trim((string) $v) : null)->all())->save();
+        AuditLog::record('student.goals_saved', $student, null, null, null, $author);
+
+        return $goal;
     }
 
     /** A message in the student's conversation with their counsellor. A reply from staff notifies the student. */
@@ -47,9 +75,21 @@ class Counselling
         $message->forceFill(['student_id' => $student->id, 'author_id' => $author->id])->save();
         if ($author->id !== $student->id) {
             $this->tell($student, ($author->name ?: 'Your counsellor').' sent you a message.');
+        } else {
+            $this->alertStaff($student, $message);
         }
 
         return $message;
+    }
+
+    /** Emails the student's counsellor (the assigned one, and the adviser on any of their cases); with none, the service managers. */
+    private function alertStaff(User $student, CounsellorMessage $message): void
+    {
+        $people = collect([$student->counsellor])->merge(User::whereIn('id', ServiceCase::where('user_id', $student->id)->whereNotNull('advisor_id')->pluck('advisor_id'))->get())->filter()->unique('id');
+        if ($people->isEmpty()) {
+            $people = User::whereHas('userRoles', fn ($q) => $q->where('role', 'service_manager'))->where('status', 'active')->get();
+        }
+        Notification::send($people->filter(fn (User $u) => $u->isStaff() && $u->hasVerifiedEmail()), new StudentWrote($student, Str::limit($message->body, 160)));
     }
 
     /** Whether the last message in the conversation is the student's, so a counsellor still owes a reply. */

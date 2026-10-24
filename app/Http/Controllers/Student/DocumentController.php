@@ -23,7 +23,7 @@ class DocumentController extends Controller
 
     public function index(Request $request, DocumentService $service)
     {
-        $documents = $this->student($request)->documents()->with(['versions', 'currentVersion', 'associations'])->latest()->get();
+        $documents = $this->student($request)->documents()->with(['versions', 'currentVersion', 'associations', 'comments.author'])->latest()->get();
         $used = $documents->flatMap->versions->where('scan_status', '!=', ScanStatus::Rejected)->sum('size');
 
         return view('student.documents.index', [

@@ -25,6 +25,11 @@ class StudentFollowUp extends Model
     // Student and author are set by Counselling, never from request data.
     protected $guarded = ['id', 'student_id', 'author_id'];
 
+    protected function casts(): array
+    {
+        return ['follow_up_on' => 'date'];
+    }
+
     public function student(): BelongsTo
     {
         return $this->belongsTo(User::class, 'student_id');

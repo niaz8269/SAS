@@ -43,7 +43,7 @@ class Requirements
         $programmeId = $cycle?->programme_id;
         $levelId = $this->effectiveLevel($cycle, $levelId);
         $documents = Document::where('user_id', $userId)->when($onlyDocumentIds !== null, fn ($q) => $q->whereIn('id', $onlyDocumentIds ?: [0]))
-            ->with('currentVersion')->get()->groupBy('type'); // staff pass the shared ids: they see only what the student shared
+            ->with(['currentVersion', 'comments.author'])->get()->groupBy('type'); // staff pass the shared ids: they see only what the student shared
 
         return DocumentKind::where('active', true)->with('rules')->orderBy('sort')->orderBy('name')->get()
             ->map(function (DocumentKind $kind) use ($programmeId, $levelId, $documents, $reasons) {

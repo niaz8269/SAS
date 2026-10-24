@@ -4,6 +4,7 @@ namespace App\Providers\Filament;
 
 use App\Filament\Widgets\OperationsOverview;
 use Filament\Auth\MultiFactor\App\AppAuthentication;
+use Filament\Enums\ThemeMode;
 use Filament\FontProviders\LocalFontProvider;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
@@ -42,7 +43,8 @@ class AdminPanelProvider extends PanelProvider
             ->unsavedChangesAlerts()
             ->login()
             ->profile() // where staff set up and manage their authenticator app
-            ->colors(['primary' => Color::hex('#3b6fc4'), 'warning' => Color::hex('#caa249')])
+            ->defaultThemeMode(ThemeMode::Light) // the light SAS look, like the agent and student portals; staff can still switch to dark
+            ->colors(['primary' => Color::hex('#428bb6'), 'warning' => Color::hex('#caa249')])
             ->favicon(asset('images/favicon-64.png'))
             ->font('Inter Variable', url: asset('fonts/inter.css'), provider: LocalFontProvider::class)
             ->navigationGroups(['Website', 'Editorial', 'Service desk', 'Finance', 'Recruiting agents', 'Content', 'Reference data', 'Administration'])

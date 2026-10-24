@@ -26,6 +26,7 @@
                         @if ($v?->isDownloadable())<a class="btn-outline !py-1.5" href="{{ route('student.documents.download', $d) }}">Download</a>@endif
                     </div>
                 </div>
+                @foreach ($d->comments->sortByDesc('id')->take(2) as $note)<p class="mt-2 rounded-md border border-warn/40 bg-warn-soft px-3 py-2 text-sm">Comment from {{ $note->author?->name ?: 'SAS' }} ({{ $note->created_at->format('j M') }}): {{ $note->body }}</p>@endforeach
                 @if ($v?->scan_status === \App\Enums\ScanStatus::Rejected)<p class="mt-2 text-sm text-alert">This file was rejected by the security scan and has been removed. Please upload a clean copy.</p>@endif
                 <div class="mt-3 flex flex-wrap items-end gap-3 border-t border-line pt-3">
                     <form method="POST" action="{{ route('student.documents.versions.store', $d) }}" enctype="multipart/form-data" class="flex items-end gap-2">@csrf

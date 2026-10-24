@@ -22,6 +22,12 @@ class Student extends User
         return 'user_id';
     }
 
+    /** The students a counsellor looks after: assigned to them, or on one of their cases. */
+    public function scopeCounselledBy(Builder $q, User $counsellor): Builder
+    {
+        return $q->where(fn (Builder $w) => $w->where('users.counsellor_id', $counsellor->id)->orWhereIn('users.id', ServiceCase::where('advisor_id', $counsellor->id)->select('user_id')));
+    }
+
     public function cases(): HasMany
     {
         return $this->hasMany(ServiceCase::class, 'user_id');
