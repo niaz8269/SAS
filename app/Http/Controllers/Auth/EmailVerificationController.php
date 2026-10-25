@@ -51,9 +51,13 @@ class EmailVerificationController extends Controller
             return redirect($request->user()->homeUrl());
         }
 
-        return $codes->issue($request->user())
-            ? back()->with('status', 'A new code has been sent. Older codes no longer work.')
-            : back()->with('status', 'A code was sent a moment ago. Please wait a minute before asking for another.');
+        if (! $codes->issue($request->user())) {
+            return back()->with('status', 'A code was sent a moment ago. Please wait a minute before asking for another.');
+        }
+
+        return $codes->lastSendFailed()
+            ? back()->with('mail_error', EmailCodes::MAIL_ERROR)
+            : back()->with('status', 'A new code has been sent. Older codes no longer work.');
     }
 
     private function welcome(User $user)

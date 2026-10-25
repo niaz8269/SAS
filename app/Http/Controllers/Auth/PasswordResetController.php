@@ -22,7 +22,11 @@ class PasswordResetController extends Controller
     public function email(Request $request)
     {
         $request->validate(['email' => ['required', 'email']]);
-        Password::sendResetLink($request->only('email'));
+        try {
+            Password::sendResetLink($request->only('email'));
+        } catch (\Throwable $e) {
+            report($e); // the mail service refused us; the answer below stays the same so nothing about accounts leaks
+        }
 
         // Always the same answer so the form cannot be used to discover which emails have accounts.
         return back()->with('status', 'If that email has an account, a reset link is on its way.');

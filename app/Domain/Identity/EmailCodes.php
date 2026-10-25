@@ -20,6 +20,10 @@ class EmailCodes
 
     public const RESEND_SECONDS = 60;
 
+    public const MAIL_ERROR = 'We could not send the email just now. Your account is saved. Please wait a minute and press "Send me a new code"; if it keeps failing, contact us and we will help you.';
+
+    private bool $mailFailed = false;
+
     /** Emails a fresh code. Returns false (and sends nothing) when one was sent less than a minute ago, unless $force. */
     public function issue(User $user, bool $force = false): bool
     {
@@ -33,9 +37,25 @@ class EmailCodes
             'email' => mb_strtolower($user->email), 'code_hash' => $this->hash($user, $code), 'attempts' => 0,
             'expires_at' => now()->addMinutes(self::TTL_MINUTES), 'sent_at' => now(),
         ]);
-        $user->notify(new VerifyEmailCode($code, self::TTL_MINUTES));
+        $this->mailFailed = false;
+        try {
+            $user->notify(new VerifyEmailCode($code, self::TTL_MINUTES));
+        } catch (\Throwable $e) {
+            // The mail service is down or refusing us: sign-up must not crash. The person is told, and can ask for a new code.
+            report($e);
+            $this->mailFailed = true;
+            if (app()->bound('request') && request()->hasSession()) {
+                request()->session()->flash('mail_error', self::MAIL_ERROR);
+            }
+        }
 
         return true;
+    }
+
+    /** True when the last issue() could not hand the email to the mail service. */
+    public function lastSendFailed(): bool
+    {
+        return $this->mailFailed;
     }
 
     public function hasLiveCode(User $user): bool

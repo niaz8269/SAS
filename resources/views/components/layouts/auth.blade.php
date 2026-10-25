@@ -35,6 +35,7 @@
             <a href="{{ route('home') }}" class="mb-4 hidden text-sm font-medium text-navy-700 hover:underline lg:inline-block" aria-label="Back to the {{ config('sas.brand.short') }} homepage">&larr; Back to the website</a>
             <main id="main" class="card p-6 shadow-lg shadow-navy-900/5 sm:p-8">
                 @if (session('status'))<div class="mb-4 rounded-md bg-navy-50 px-3 py-2 text-sm text-navy-900" role="status">{{ session('status') }}</div>@endif
+                @if (session('mail_error'))<div class="mb-4 rounded-md border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-800" role="alert">{{ session('mail_error') }}</div>@endif
                 <h1 class="mb-5 text-2xl font-extrabold">{{ $title }}</h1>
                 {{ $slot }}
             </main>
