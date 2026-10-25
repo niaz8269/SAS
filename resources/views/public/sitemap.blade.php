@@ -1,4 +1,4 @@
-{!! '<?xml version="1.0" encoding="UTF-8"?>' !!}
+{{-- the declaration is built in pieces: a literal question-mark tag would start PHP on servers that have short_open_tag on --}}{!! '<'.'?xml version="1.0" encoding="UTF-8"?'.'>' !!}
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 @foreach ($urls as [$url, $changed])
     <url><loc>{{ $url }}</loc>@if ($changed)<lastmod>{{ \Illuminate\Support\Carbon::parse($changed)->toDateString() }}</lastmod>@endif</url>
