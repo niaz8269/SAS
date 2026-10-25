@@ -80,7 +80,7 @@ class UserResource extends Resource
             Section::make('Password')->description('Leave empty to keep the current password. Or use "Send password reset link" at the top so the person chooses their own. A new password signs the person out of every other device.')
                 ->columns(2)->visible(fn () => (bool) auth()->user()->can('roles.manage'))->schema([
                     TextInput::make('new_password')->label('New password')->password()->revealable()->autocomplete('new-password')
-                        ->rule(PasswordRule::min(12)->letters()->mixedCase()->numbers())->confirmed()->dehydrated(),
+                        ->rule(PasswordRule::defaults())->confirmed()->dehydrated(),
                     TextInput::make('new_password_confirmation')->label('Repeat the new password')->password()->revealable()->autocomplete('new-password')->dehydrated(false),
                 ]),
             Section::make('Staff roles')->description('Only super administrators can grant or remove roles. Staff must complete multi-factor set-up before using the admin.')->schema([

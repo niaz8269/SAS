@@ -15,7 +15,7 @@
         <div>
             <label for="password" class="label">Password</label>
             <input id="password" name="password" type="password" required autocomplete="new-password" class="input @error('password') input-error @enderror" aria-describedby="pw-hint">
-            <p id="pw-hint" class="field-hint">At least 10 characters, with letters and numbers.</p>
+            <p id="pw-hint" class="field-hint">At least 8 characters, with letters and numbers.</p>
             @error('password')<p class="field-error" role="alert">{{ $message }}</p>@enderror
         </div>
         <div>

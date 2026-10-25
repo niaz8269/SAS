@@ -74,7 +74,7 @@ class AppServiceProvider extends ServiceProvider
             });
         }
 
-        Password::defaults(fn () => Password::min(10)->letters()->numbers());
+        Password::defaults(fn () => Password::min(8)->letters()->numbers());
 
         // AUTH-03 / AUTH-05: dotted ability names ("content.publish") are role permissions. Anything else falls through
         // to ordinary policies. Unknown dotted names are denied rather than ignored.
