@@ -8,7 +8,7 @@
         </div>
         <div>
             <label for="password" class="label">Password</label>
-            <input id="password" name="password" type="password" required autocomplete="current-password" class="input @error('password') input-error @enderror">
+            <x-password-input id="password" name="password" autocomplete="current-password" :invalid="$errors->has('password')" />
             @error('password')<p class="field-error" role="alert">{{ $message }}</p>@enderror
         </div>
         <div class="flex items-center justify-between text-sm">

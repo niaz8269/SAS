@@ -14,13 +14,13 @@
         </div>
         <div>
             <label for="password" class="label">Password</label>
-            <input id="password" name="password" type="password" required autocomplete="new-password" class="input @error('password') input-error @enderror" aria-describedby="pw-hint">
+            <x-password-input id="password" name="password" autocomplete="new-password" :strength="true" :invalid="$errors->has('password')" describedby="pw-hint" />
             <p id="pw-hint" class="field-hint">At least 8 characters, with letters and numbers.</p>
             @error('password')<p class="field-error" role="alert">{{ $message }}</p>@enderror
         </div>
         <div>
             <label for="password_confirmation" class="label">Confirm password</label>
-            <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" class="input">
+            <x-password-input id="password_confirmation" name="password_confirmation" autocomplete="new-password" />
         </div>
         <div>
             <label class="flex items-start gap-2 text-sm"><input type="checkbox" name="accept_privacy" value="1" class="mt-1 rounded border-slate-300 text-navy-700" @checked(old('accept_privacy'))>

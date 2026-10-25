@@ -9,12 +9,12 @@
         </div>
         <div>
             <label for="password" class="label">New password</label>
-            <input id="password" name="password" type="password" required autocomplete="new-password" class="input @error('password') input-error @enderror">
+            <x-password-input id="password" name="password" autocomplete="new-password" :strength="true" :invalid="$errors->has('password')" />
             @error('password')<p class="field-error" role="alert">{{ $message }}</p>@enderror
         </div>
         <div>
             <label for="password_confirmation" class="label">Confirm new password</label>
-            <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" class="input">
+            <x-password-input id="password_confirmation" name="password_confirmation" autocomplete="new-password" />
         </div>
         <button class="btn-primary w-full">Reset password</button>
     </form>

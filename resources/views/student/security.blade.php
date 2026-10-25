@@ -13,11 +13,11 @@
     @if ($enabled)
         <section class="card mt-5 p-5"><p><span class="badge-green">On</span> Your account asks for a code when you log in.</p>
             <form method="POST" action="{{ route('student.security.recovery') }}" class="mt-4 flex flex-wrap items-end gap-2">@csrf
-                <div><label for="pw1" class="label">Password</label><input id="pw1" type="password" name="password" required class="input"></div>
+                <div><label for="pw1" class="label">Password</label><x-password-input id="pw1" name="password" autocomplete="current-password" /></div>
                 <button class="btn-outline">New recovery codes</button></form>
             @unless (auth()->user()->isStaff())
                 <form method="POST" action="{{ route('student.security.disable') }}" class="mt-3 flex flex-wrap items-end gap-2">@csrf
-                    <div><label for="pw2" class="label">Password</label><input id="pw2" type="password" name="password" required class="input"></div>
+                    <div><label for="pw2" class="label">Password</label><x-password-input id="pw2" name="password" autocomplete="current-password" /></div>
                     <button class="btn-danger">Turn off</button></form>
             @endunless
             @error('password')<p class="field-error" role="alert">{{ $message }}</p>@enderror
