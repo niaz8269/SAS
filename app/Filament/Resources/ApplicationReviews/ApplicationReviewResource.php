@@ -5,7 +5,9 @@ namespace App\Filament\Resources\ApplicationReviews;
 use App\Domain\Documents\Requirements;
 use App\Domain\StudentWorkspace\ApplicationReview;
 use App\Filament\Resources\ApplicationReviews\Pages\ListApplicationReviews;
+use App\Filament\Resources\Students\StudentResource;
 use App\Models\ApplicationPlan;
+use App\Models\Student;
 use BackedEnum;
 use Filament\Actions\Action;
 use Filament\Forms\Components\Textarea;
@@ -14,6 +16,7 @@ use Filament\Resources\Resource;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Grouping\Group;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use InvalidArgumentException;
@@ -56,7 +59,11 @@ class ApplicationReviewResource extends Resource
                 TextColumn::make('review_requested_at')->label('Sent')->dateTime('j M Y, H:i')->sortable(),
             ])
             ->filters([SelectFilter::make('stage')->options(collect(ApplicationPlan::STAGES)->except('draft')->all())->default('submitted')])
+            ->groups([Group::make('user_id')->label('Student')->getTitleFromRecordUsing(fn (ApplicationPlan $r) => $r->user->name.($r->user->managedBy ? ' (agent: '.$r->user->managedBy->name.')' : ''))->collapsible()])
             ->recordActions([
+                Action::make('student')->label('Student')->icon('heroicon-o-user')->color('gray')
+                    ->visible(fn (ApplicationPlan $record) => ($student = Student::find($record->user_id)) && auth()->user()->can('view', $student))
+                    ->url(fn (ApplicationPlan $record) => StudentResource::getUrl('view', ['record' => $record->user_id])),
                 Action::make('details')->label('Open')->icon('heroicon-o-eye')
                     ->modalHeading(fn (ApplicationPlan $record) => $record->application_no.': '.$record->user->name)->modalSubmitAction(false)->modalCancelActionLabel('Close')->modalWidth('4xl')
                     ->modalContent(function (ApplicationPlan $record) {

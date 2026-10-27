@@ -14,6 +14,7 @@ use App\Filament\Resources\Students\RelationManagers\CasesRelationManager;
 use App\Filament\Resources\Students\RelationManagers\DocumentsRelationManager;
 use App\Filament\Resources\Students\RelationManagers\FollowUpsRelationManager;
 use App\Filament\Resources\Students\RelationManagers\MessagesRelationManager;
+use App\Models\ApplicationPlan;
 use App\Models\CounsellorMessage;
 use App\Models\Student;
 use App\Models\StudentFollowUp;
@@ -64,7 +65,7 @@ class StudentResource extends Resource
 
     public static function getEloquentQuery(): Builder
     {
-        $q = parent::getEloquentQuery()->with(['latestFollowUp', 'counsellor', 'managedBy', 'goals']);
+        $q = parent::getEloquentQuery()->with(['latestFollowUp', 'counsellor', 'managedBy', 'goals'])->withCount('applicationPlans');
         $user = auth()->user();
         if ($user?->hasPermission('students.manage')) {
             return $q;
@@ -80,6 +81,14 @@ class StudentResource extends Resource
         return StudentFollowUp::query()->whereIn('id', StudentFollowUp::query()->selectRaw('max(id)')->groupBy('student_id'));
     }
 
+    /** One line per application, scholarship by scholarship: "Scholarship (Degree): status". Drafts are included. */
+    public static function applicationLines(Student $student): Collection
+    {
+        return $student->applicationPlans()->with(['cycle.programme', 'degreeLevel'])->orderBy('id')->get()->map(
+            fn (ApplicationPlan $p) => $p->cycle->displayName().($p->degreeLevel ? ' ('.$p->degreeLevel->name.')' : '').': '.(ApplicationPlan::STAGES[$p->stage] ?? $p->stage)
+        );
+    }
+
     public static function counsellorOptions(): array
     {
         return User::counsellors()->orderBy('name')->pluck('name', 'id')->all();
@@ -90,6 +99,9 @@ class StudentResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')->searchable()->sortable()->weight('semibold'),
+                TextColumn::make('application_plans_count')->label('Applications')->badge()->sortable()
+                    ->color(fn ($state) => $state > 0 ? 'primary' : 'gray')
+                    ->tooltip(fn (Student $r) => $r->application_plans_count > 0 ? static::applicationLines($r)->implode("\n") : 'No applications yet'),
                 TextColumn::make('latestFollowUp.status')->label('Status')->badge()->placeholder('Not updated yet')
                     ->formatStateUsing(fn ($state) => StudentFollowUp::STATUSES[$state] ?? $state)
                     ->color(fn ($state) => match ($state) {
@@ -121,6 +133,7 @@ class StudentResource extends Resource
                     }),
                 Filter::make('follow_up_due')->label('Follow-up due')->query(fn (Builder $query) => $query->whereIn('users.id', static::latestFollowUps()->whereDate('follow_up_on', '<=', today())->select('student_id'))),
                 Filter::make('reply_needed')->label('Reply needed')->query(fn (Builder $query) => $query->whereIn('users.id', CounsellorMessage::query()->select('student_id')->whereIn('id', CounsellorMessage::query()->selectRaw('max(id)')->groupBy('student_id'))->whereColumn('author_id', 'student_id'))),
+                Filter::make('has_applications')->label('Has applications')->query(fn (Builder $query) => $query->has('applicationPlans')),
                 Filter::make('no_follow_up')->label('Not updated yet')->query(fn (Builder $query) => $query->whereDoesntHave('followUps')),
                 Filter::make('unassigned')->label('No counsellor')->query(fn (Builder $query) => $query->whereNull('users.counsellor_id'))
                     ->visible(fn () => (bool) auth()->user()?->hasPermission('students.manage')),
@@ -187,6 +200,12 @@ class StudentResource extends Resource
                 TextEntry::make('latestFollowUp.wants')->label('What the student wants')->placeholder('Not written down yet')->columnSpan(3)->prose(),
                 TextEntry::make('latestFollowUp.next_step')->label('Next step')->placeholder('None')->columnSpan(3),
                 TextEntry::make('latestFollowUp.comment')->label('Last comment')->placeholder('No comment yet')->columnSpan(3)->prose(),
+            ]),
+            Section::make('Applications')->icon('heroicon-o-academic-cap')->visible(fn (Student $record) => (bool) auth()->user()?->counsels($record))->schema([
+                TextEntry::make('applications_list')->hiddenLabel()->bulleted()->listWithLineBreaks()
+                    ->state(fn (Student $record) => static::applicationLines($record)->all())
+                    ->placeholder('No applications yet. The student or their agent adds them under Choose scholarships.')
+                    ->helperText('Every scholarship the student applied for, drafts included. Open the Applications tab below for dates, documents and actions.'),
             ]),
             Section::make('Aiming for')->columns(3)->collapsible()->schema([
                 TextEntry::make('goals.countries')->label('Countries')->placeholder('-'),
