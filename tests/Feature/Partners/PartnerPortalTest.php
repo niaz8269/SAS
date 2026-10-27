@@ -101,11 +101,11 @@ class PartnerPortalTest extends TestCase
         $this->assertFalse(auth()->user()->can('viewAny', PartnerOrganisation::class));
     }
 
-    public function test_there_is_no_partners_page_any_more_and_the_be_a_partner_tab_leads_to_the_contact_form(): void
+    public function test_there_is_no_partners_page_any_more_and_the_be_a_partner_tab_leads_to_the_application_form(): void
     {
         $this->get('/partners')->assertNotFound();
-        $this->get('/')->assertOk()->assertDontSee('For partner organisations')->assertSee('Be a Partner')->assertSee(route('contact', ['category' => 'partnership']), false);
-        $this->get(route('contact', ['category' => 'partnership']))->assertOk()->assertSee('Become a partner or recruiting agent');
+        $this->get('/')->assertOk()->assertDontSee('For partner organisations')->assertSee('Be a Partner')->assertSee(route('partners.apply'), false);
+        $this->get(route('partners.apply'))->assertOk()->assertSee('Your agency')->assertSee('About you');
     }
 
     public function test_the_two_side_tabs_have_exactly_the_same_size_and_the_partner_tab_sits_just_below_the_story_tab(): void

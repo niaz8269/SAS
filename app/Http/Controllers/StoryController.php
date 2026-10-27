@@ -101,9 +101,14 @@ class StoryController extends Controller
         RateLimiter::hit($hour, 3600);
         RateLimiter::hit($day, 86400);
 
-        Notification::route('mail', $testimonial->submitter_email)->notify(new StoryReceived($testimonial));
-        if ($staff = config('sas.staff_notification_email')) {
-            Notification::route('mail', $staff)->notify(new StoryAlert($testimonial));
+        // The story is saved: a mail service that refuses us must not turn this into an error page.
+        try {
+            Notification::route('mail', $testimonial->submitter_email)->notify(new StoryReceived($testimonial));
+            if ($staff = config('sas.staff_notification_email')) {
+                Notification::route('mail', $staff)->notify(new StoryAlert($testimonial));
+            }
+        } catch (\Throwable $e) {
+            report($e);
         }
 
         return redirect()->route('stories.thanks')->with('story_sent', true);

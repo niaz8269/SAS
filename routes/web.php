@@ -21,6 +21,7 @@ use App\Http\Controllers\Partner\AgentExportController;
 use App\Http\Controllers\Partner\AgentMessageController;
 use App\Http\Controllers\Partner\AgentStudentController;
 use App\Http\Controllers\Partner\OrganisationController;
+use App\Http\Controllers\PartnerApplicationController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ScholarshipController;
 use App\Http\Controllers\StoryController;
@@ -56,6 +57,9 @@ Route::get('/stories/{slug}', [StoryController::class, 'show'])->where('slug', '
 Route::get('/share-your-story', [StoryController::class, 'create'])->name('stories.create');
 Route::post('/share-your-story', [StoryController::class, 'store'])->name('stories.store');
 Route::get('/share-your-story/thanks', [StoryController::class, 'thanks'])->name('stories.thanks');
+Route::get('/be-a-partner', [PartnerApplicationController::class, 'create'])->name('partners.apply');
+Route::post('/be-a-partner', [PartnerApplicationController::class, 'store'])->name('partners.store');
+Route::get('/be-a-partner/thanks', [PartnerApplicationController::class, 'thanks'])->name('partners.thanks');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/image-credits', [PageController::class, 'credits'])->name('credits');
 Route::get('/legal/{page}', [PageController::class, 'legal'])->name('legal.show');
