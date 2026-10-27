@@ -42,7 +42,7 @@ class ServiceResource extends Resource
         return $schema->components([
             TextInput::make('name')->required(),
             TextInput::make('slug')->required()->alphaDash()->unique(ignoreRecord: true),
-            Select::make('category')->options(config('sas.enquiry_categories'))->required(),
+            Select::make('category')->options(array_diff_key(config('sas.enquiry_categories'), ['partnership' => 1]))->required(),
             TextInput::make('team'),
             Textarea::make('summary')->rows(2)->columnSpanFull(),
             Textarea::make('audience')->rows(2)->columnSpanFull(),

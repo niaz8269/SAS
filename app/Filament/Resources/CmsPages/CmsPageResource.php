@@ -25,7 +25,7 @@ class CmsPageResource extends Resource
 {
     use ChecksPermission;
 
-    public const REPLACES = ['about' => '/about', 'partners' => '/partners', 'privacy' => '/legal/privacy', 'terms' => '/legal/terms', 'refunds' => '/legal/refunds', 'accessibility' => '/legal/accessibility'];
+    public const REPLACES = ['about' => '/about', 'privacy' => '/legal/privacy', 'terms' => '/legal/terms', 'refunds' => '/legal/refunds', 'accessibility' => '/legal/accessibility'];
 
     protected static ?string $model = CmsPage::class;
 

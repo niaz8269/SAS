@@ -261,5 +261,6 @@ return [
         'visa' => 'Visa assistance',
         'pre_departure' => 'Pre-departure',
         'correction' => 'Report a correction',
+        'partnership' => 'Become a partner or recruiting agent',
     ],
 ];

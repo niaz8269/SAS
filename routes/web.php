@@ -58,7 +58,6 @@ Route::post('/share-your-story', [StoryController::class, 'store'])->name('stori
 Route::get('/share-your-story/thanks', [StoryController::class, 'thanks'])->name('stories.thanks');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/image-credits', [PageController::class, 'credits'])->name('credits');
-Route::get('/partners', [PageController::class, 'partners'])->name('partners');
 Route::get('/legal/{page}', [PageController::class, 'legal'])->name('legal.show');
 Route::get('/pages/{slug}', [PageController::class, 'cms'])->where('slug', '[A-Za-z0-9_-]+')->name('pages.show');
 Route::get('/sitemap.xml', [PageController::class, 'sitemap'])->name('sitemap');

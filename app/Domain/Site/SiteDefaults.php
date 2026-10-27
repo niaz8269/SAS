@@ -48,7 +48,7 @@ class SiteDefaults
             'header' => [['Home', '/'], ['Scholarships', '/scholarships'], ['Study Destinations', '/destinations'], ['Our Services', '/services'],
                 ['Resources', '/resources'], ['About', '/about'], ['Contact', '/contact']],
             'footer_explore' => [['Scholarships', '/scholarships'], ['Study destinations', '/destinations'], ['Our services', '/services'],
-                ['Resources', '/resources'], ['For partner organisations', '/partners']],
+                ['Resources', '/resources']],
             'footer_policies' => [['Privacy policy', '/legal/privacy'], ['Terms and conditions', '/legal/terms'], ['Cancellation and refunds', '/legal/refunds'],
                 ['Accessibility', '/legal/accessibility'], ['Accuracy and corrections', '/corrections/new']],
         ];

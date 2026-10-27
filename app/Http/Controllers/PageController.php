@@ -76,11 +76,6 @@ class PageController extends Controller
         return $this->cmsOverride('about') ?? view('public.about');
     }
 
-    public function partners()
-    {
-        return $this->cmsOverride('partners') ?? view('public.partners');
-    }
-
     public function legal(string $page)
     {
         abort_unless(in_array($page, ['privacy', 'terms', 'refunds', 'accessibility'], true), 404);
@@ -109,7 +104,7 @@ class PageController extends Controller
             Service::published()->get()->each(fn ($s) => $urls->push([route('services.show', $s), $s->updated_at]));
             Article::published()->get()->each(fn ($a) => $urls->push([route('resources.show', $a), $a->updated_at]));
             University::inCatalogue()->get(['slug', 'updated_at'])->each(fn ($u) => $urls->push([route('universities.show', $u->slug), $u->updated_at]));
-            CmsPage::published()->whereNotIn('slug', ['about', 'partners', 'privacy', 'terms', 'refunds', 'accessibility'])->get()->each(fn ($p) => $urls->push([route('pages.show', $p->slug), $p->updated_at]));
+            CmsPage::published()->whereNotIn('slug', ['about', 'privacy', 'terms', 'refunds', 'accessibility'])->get()->each(fn ($p) => $urls->push([route('pages.show', $p->slug), $p->updated_at]));
             BlogCategory::query()->whereHas('posts', fn ($p) => $p->published())->get()->each(fn ($c) => $urls->push([route('blog.category', $c->slug), $c->updated_at]));
             BlogPost::published()->get(['slug', 'updated_at'])->each(fn ($b) => $urls->push([route('blog.show', $b->slug), $b->updated_at]));
             Testimonial::visible()->whereNotNull('story')->whereNotNull('slug')->get(['slug', 'updated_at'])->each(fn ($s) => $urls->push([route('stories.show', $s->slug), $s->updated_at]));

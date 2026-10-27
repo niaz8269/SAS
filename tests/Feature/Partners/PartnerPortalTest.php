@@ -101,8 +101,24 @@ class PartnerPortalTest extends TestCase
         $this->assertFalse(auth()->user()->can('viewAny', PartnerOrganisation::class));
     }
 
-    public function test_the_public_page_for_agents_explains_how_to_get_an_account(): void
+    public function test_there_is_no_partners_page_any_more_and_the_be_a_partner_tab_leads_to_the_contact_form(): void
     {
-        $this->get(route('partners'))->assertOk()->assertSee('For recruiting agents')->assertSee('Agent accounts are created by our team')->assertDontSee('list a scholarship');
+        $this->get('/partners')->assertNotFound();
+        $this->get('/')->assertOk()->assertDontSee('For partner organisations')->assertSee('Be a Partner')->assertSee(route('contact', ['category' => 'partnership']), false);
+        $this->get(route('contact', ['category' => 'partnership']))->assertOk()->assertSee('Become a partner or recruiting agent');
+    }
+
+    public function test_the_two_side_tabs_have_exactly_the_same_size_and_the_partner_tab_sits_just_below_the_story_tab(): void
+    {
+        $html = $this->get('/')->assertOk()->getContent();
+        preg_match_all('/<a href="[^"]+" aria-label="(?:Share your story|Be a partner)[^"]*" class="([^"]+)"/', $html, $m);
+        $this->assertCount(2, $m[1]);
+        $size = fn (string $classes) => collect(explode(' ', $classes))->filter(fn ($c) => preg_match('/^(sm:)?(h|w)-/', $c))->sort()->values()->all();
+        $this->assertSame($size($m[1][0]), $size($m[1][1]), 'same width and height');
+        $this->assertNotEmpty($size($m[1][0]));
+        $this->assertLessThan(strpos($html, 'Be a partner of'), strpos($html, 'Share your story with'), 'the partner tab comes below');
+        $this->assertStringContainsString('gap-2', $html);
+
+        $this->get('/share-your-story')->assertOk()->assertDontSee('Be a Partner'); // the story form page shows neither tab
     }
 }
