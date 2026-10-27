@@ -95,6 +95,8 @@ class PartnerApplicationTest extends TestCase
         $this->post(route('partners.store'), $this->payload(['agency_country' => 'Atlantis', 'website' => 'javascript:alert(1)', 'years_in_business' => 'x']))
             ->assertSessionHasErrors(['agency_country', 'website', 'years_in_business']);
         $this->assertSame(0, PartnerApplication::count());
+
+        $this->from(route('partners.apply'))->followingRedirects()->post(route('partners.store'), [])->assertSee('The full name field is required.')->assertDontSee('applicant name field');
     }
 
     public function test_an_email_that_already_has_an_account_is_told_to_log_in(): void

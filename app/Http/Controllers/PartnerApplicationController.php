@@ -59,6 +59,10 @@ class PartnerApplicationController extends Controller
             'agency_country.exists' => 'Please choose the country from the list.',
             'website.url' => 'Please write the full web address, starting with https://',
             'consent.accepted' => 'Please tick the box to confirm the information is true and that we may use it to review your application.',
+        ], [
+            'agency_name' => 'agency name', 'agency_country' => 'country', 'agency_phone' => 'agency phone', 'agency_email' => 'agency email',
+            'applicant_name' => 'full name', 'applicant_position' => 'position', 'applicant_email' => 'email', 'applicant_phone' => 'phone',
+            'years_in_business' => 'years in business', 'students_per_year' => 'number of students', 'registration_number' => 'registration number',
         ]);
 
         $email = mb_strtolower(trim($data['applicant_email']));
