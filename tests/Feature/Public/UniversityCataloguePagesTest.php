@@ -68,6 +68,14 @@ class UniversityCataloguePagesTest extends TestCase
         $this->get('/universities/peking-university?level=bogus')->assertSessionHasErrors('level');
     }
 
+    public function test_a_university_page_does_not_link_to_the_universitys_own_website(): void
+    {
+        [$pku] = $this->seedCatalogue();
+        $pku->update(['website' => 'https://www.pku.example.cn']);
+        $this->get('/universities/peking-university')->assertOk()->assertDontSee('pku.example.cn')->assertDontSee('Website');
+        $this->get('/universities')->assertOk()->assertDontSee('pku.example.cn');
+    }
+
     public function test_hidden_and_unknown_universities_are_404(): void
     {
         $this->seedCatalogue();

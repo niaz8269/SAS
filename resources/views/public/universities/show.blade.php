@@ -19,7 +19,6 @@
                     <dl class="mt-5 grid gap-x-8 gap-y-3 text-sm sm:grid-cols-2">
                         <div><dt class="font-semibold text-gold-soft">Location</dt><dd>{{ $place ?: 'Not listed' }}</dd></div>
                         @if ($university->csc_key)<div><dt class="font-semibold text-gold-soft">Programmes listed</dt><dd>{{ $total ? number_format($total) : 'None listed on the official system' }}</dd></div>@endif
-                        @if ($university->website)<div class="sm:col-span-2"><dt class="font-semibold text-gold-soft">Website</dt><dd><a class="underline" rel="noopener" href="{{ \App\Domain\Site\Site::href($university->website) }}">{{ $university->website }}</a></dd></div>@endif
                     </dl>
                     @if ($university->summary)<div class="rich mt-4 max-w-xl text-white/90 [&_a]:text-white">{!! \App\Support\Html::rich($university->summary) !!}</div>@endif
                 </div>
