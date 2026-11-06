@@ -23,7 +23,7 @@
         <div class="absolute inset-0 -z-10 bg-gradient-to-b from-navy-900/70 via-navy-800/35 to-navy-900/75" aria-hidden="true"></div>
         <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,rgba(202,162,73,0.18),transparent_60%)]" aria-hidden="true"></div>
         <div class="container-page hero-inner relative flex flex-col items-center text-center">
-            @if ($s->eyebrow)<p class="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true"></span>{{ $s->eyebrow }}</p>@endif
+            @if ($s->eyebrow)<p class="inline-flex items-center gap-2 [@media(max-height:600px)]:hidden rounded-full border border-gold/50 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-gold-soft backdrop-blur"><span class="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true"></span>{{ $s->eyebrow }}</p>@endif
             <h1 class="hero-title hero-gap max-w-5xl font-extrabold text-white [text-shadow:0_0.125rem_1.5rem_rgba(10,34,80,0.55)]">{!! nl2br(e($s->heading)) !!}</h1>
             <div class="hero-gap h-1 w-24 rounded-full bg-gradient-to-r from-transparent via-gold to-transparent" aria-hidden="true"></div>
             @if ($s->body)<p class="hero-lead hero-gap max-w-2xl leading-relaxed text-white/85">{{ $s->body }}</p>@endif
@@ -31,21 +31,22 @@
                 @if ($s->cta_label)<a href="{{ $href($s->cta_url) }}" class="btn-gold btn-lg rounded-lg shadow-lg shadow-black/20">{{ $s->cta_label }} <span aria-hidden="true">&rarr;</span></a>@endif
                 @if ($s->cta2_label)<a href="{{ $href($s->cta2_url) }}" class="btn btn-lg rounded-lg border border-white/70 bg-white/10 text-white backdrop-blur transition hover:bg-white hover:text-navy-900">{{ $s->cta2_label }}</a>@endif
             </div>
-            <form method="GET" action="{{ route('scholarships.index') }}" class="hero-gap-lg w-full max-w-5xl rounded-2xl border border-white/30 bg-white/95 p-4 text-left shadow-2xl shadow-navy-900/30 backdrop-blur sm:p-5" role="search" aria-labelledby="hero-search">
-                <div class="mb-3 flex flex-wrap items-center justify-between gap-2">
-                    <h2 id="hero-search" class="text-base font-bold sm:text-lg">{{ $s->subheading ?: 'Search scholarships' }}</h2>
-                    <p class="hidden text-sm text-muted sm:block">Find the right opportunities for your goals.</p>
+            {{-- On phones the four fields sit two by two with the labels read aloud but not drawn (each field's first option already says what it is), and on short windows the box is tighter, so it fits under the headline block. --}}
+            <form method="GET" action="{{ route('scholarships.index') }}" class="hero-gap-lg w-full max-w-5xl rounded-2xl border border-white/30 bg-white/95 p-4 text-left shadow-2xl shadow-navy-900/30 backdrop-blur sm:p-5 [@media(max-height:760px)]:p-3 [@media(max-height:760px)]:sm:p-3" role="search" aria-labelledby="hero-search">
+                <div class="mb-3 flex flex-wrap items-center justify-between gap-2 [@media(max-height:760px)]:mb-2">
+                    <h2 id="hero-search" class="text-base font-bold sm:text-lg [@media(max-height:640px)]:sr-only">{{ $s->subheading ?: 'Search scholarships' }}</h2>
+                    <p class="hidden text-sm text-muted sm:block [@media(max-height:760px)]:hidden">Find the right opportunities for your goals.</p>
                 </div>
-                <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] lg:items-end">
-                    <div><label for="h-dest" class="label">Destination</label>
+                <div class="grid grid-cols-2 gap-x-3 gap-y-2 sm:gap-3 lg:grid-cols-[1fr_1fr_1fr_1fr_auto] lg:items-end">
+                    <div><label for="h-dest" class="label max-sm:sr-only">Destination</label>
                         <select id="h-dest" name="destination[]" class="input"><option value="">Any destination</option>@foreach($destinationsAll as $c)<option value="{{ $c->slug }}">{{ $c->name }}</option>@endforeach</select></div>
-                    <div><label for="h-nat" class="label">Your nationality</label>
+                    <div><label for="h-nat" class="label max-sm:sr-only">Your nationality</label>
                         <select id="h-nat" name="nationality[]" class="input"><option value="">Any nationality</option>@foreach($nationalities as $n)<option value="{{ $n->slug }}">{{ $n->name }}</option>@endforeach</select></div>
-                    <div><label for="h-deg" class="label">Degree level</label>
+                    <div><label for="h-deg" class="label max-sm:sr-only">Degree level</label>
                         <select id="h-deg" name="degree[]" class="input"><option value="">Any degree level</option>@foreach($degrees as $d)<option value="{{ $d->slug }}">{{ $d->name }}</option>@endforeach</select></div>
-                    <div><label for="h-sub" class="label">Field of study</label>
+                    <div><label for="h-sub" class="label max-sm:sr-only">Field of study</label>
                         <select id="h-sub" name="subject[]" class="input"><option value="">Any field of study</option>@foreach($subjects as $sub)<option value="{{ $sub->slug }}">{{ $sub->name }}</option>@endforeach</select></div>
-                    <button class="btn-primary btn-lg w-full lg:w-auto">Find scholarships <span aria-hidden="true">&rarr;</span></button>
+                    <button class="btn-primary btn-lg col-span-2 w-full lg:col-span-1 lg:w-auto">Find scholarships <span aria-hidden="true">&rarr;</span></button>
                 </div>
             </form>
         </div>

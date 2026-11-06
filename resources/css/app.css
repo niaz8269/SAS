@@ -87,23 +87,27 @@
     .badge-warn { @apply badge bg-warn-soft text-warn; }
     .badge-alert { @apply badge bg-alert-soft text-alert; }
 
-    /* Hero: exactly one screen tall below the header (never taller than the viewport on laptops and monitors); text sizes follow both width and height. */
-    .hero { min-height: calc(100svh - 5.5rem); display: flex; align-items: center; }
-    .hero-inner { padding-block: clamp(1.5rem, 4vh, 4rem); }
-    .hero-title { font-size: clamp(2rem, min(7vw, 6.6vh + 0.5rem), 4.75rem); line-height: 1.06; }
-    .hero-lead { font-size: clamp(1rem, min(2.4vw, 2.2vh + 0.35rem), 1.35rem); }
-    /* The gaps inside the hero: relative to the screen height on phones and tablets, fixed on the scaled canvas. */
-    .hero-gap { margin-top: clamp(0.75rem, 2.5vh, 1.5rem); }
-    .hero-gap-md { margin-top: clamp(0.75rem, 3vh, 2rem); }
-    .hero-gap-lg { margin-top: clamp(1rem, 4vh, 2.5rem); }
-    @media (min-width: 1200px) {
-        .hero { min-height: 45rem; }
-        .hero-inner { padding-block: 3rem; }
+    /* Hero: one screen tall below the sticky header (header = 0.25rem colour line + 5.5rem bar + 1px border, see layouts/public), on every device.
+       The headline block (eyebrow, heading, text, buttons) is sized from both width and height so it always sits inside that first screen;
+       padding and gaps follow the screen height too, so a short window (a laptop with toolbars, a phone turned sideways) gets tighter spacing, not a clipped hero.
+       If a phone is too short for the search box as well, the search box continues below the fold and the headline block stays fully in view. */
+    :root { --site-header: calc(5.75rem + 1px); }
+    .hero { min-height: calc(100vh - var(--site-header)); min-height: calc(100svh - var(--site-header)); display: flex; align-items: center; }
+    .hero-inner { padding-block: clamp(0.75rem, 3.5vh, 3rem); }
+    .hero-title { font-size: clamp(1.75rem, min(7vw, 6.6vh + 0.4rem, 3.85rem), 4.75rem); line-height: 1.06; }
+    .hero-lead { font-size: clamp(0.9375rem, min(2.4vw, 2.2vh + 0.35rem), 1.35rem); }
+    /* The gaps inside the hero follow the screen height. */
+    .hero-gap { margin-top: clamp(0.5rem, 2.2vh, 1.25rem); }
+    .hero-gap-md { margin-top: clamp(0.625rem, 2.6vh, 1.5rem); }
+    .hero-gap-lg { margin-top: clamp(0.75rem, 3.4vh, 2rem); }
+    /* On a big, tall screen the type stays at its design size (the page itself scales up there). */
+    @media (min-width: 1200px) and (min-height: 700px) {
         .hero-title { font-size: 3.85rem; }
         .hero-lead { font-size: 1.35rem; }
         .hero-gap { margin-top: 1.25rem; }
         .hero-gap-md { margin-top: 1.5rem; }
         .hero-gap-lg { margin-top: 2rem; }
+        .hero-inner { padding-block: 3rem; }
     }
 
     .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.14em] text-navy-600; }
