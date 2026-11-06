@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
 /**
- * The master application form: one set of answers for every scholarship (step 2 of an application, or on its own).
+ * The master application form: one set of answers for every scholarship (Your details: a page of an application, or on its own).
  * The whole form is saved at once; saving never requires every field.
  */
 class ApplicationFormController extends Controller

@@ -96,10 +96,11 @@ class ApplicationWizardTest extends TestCase
 
         $this->assertMatchesRegularExpression('/^SAS\d{10}$/', $plan->application_no);
         $this->actingAs($student)->get(route('student.applications.show', $plan))->assertOk()
-            ->assertSee('The program you are applying for is Wizard Award')->assertSee($plan->application_no)->assertSee('Apply Now')->assertSee('Apply Submit');
-        $this->get(route('student.applications.form', $plan))->assertOk()->assertSee('Application Form')->assertSee('Personal information')->assertSee('name="sections[personal][surname]"', false);
-        $this->get(route('student.applications.materials', $plan))->assertOk()->assertSee('Upload Materials')->assertSee('Notice')->assertSee('Currently cannot provide the document');
-        $this->get(route('student.applications.submit', $plan))->assertOk()->assertSee('Apply Submit')->assertSee('Not ready to submit yet');
+            ->assertSee('Wizard Award')->assertSee($plan->application_no)->assertSee('Degree and language')->assertSee('Send to SAS')->assertSee('Status:')->assertSee('Not sent yet')
+            ->assertSee('Nothing goes to the scholarship from here')->assertDontSee('Apply Now')->assertDontSee('Apply Submit')->assertDontSee('Upload Materials');
+        $this->get(route('student.applications.form', $plan))->assertOk()->assertSee('Your details')->assertSee('Personal information')->assertSee('name="sections[personal][surname]"', false);
+        $this->get(route('student.applications.materials', $plan))->assertOk()->assertSee('Documents')->assertSee('Before you upload')->assertSee('Currently cannot provide the document');
+        $this->get(route('student.applications.submit', $plan))->assertOk()->assertSee('Send to SAS')->assertSee('What happens when you press Send to SAS')->assertSee('Not ready to submit yet');
         $this->get(route('student.applications.preview', $plan))->assertOk()->assertSee('Application form')->assertSee($plan->application_no)->assertHeader('Cache-Control', 'no-store, private');
     }
 
@@ -140,7 +141,7 @@ class ApplicationWizardTest extends TestCase
         $this->assertSame('submitted', $plan->stage);
         $this->assertNotNull($plan->review_requested_at);
         Notification::assertSentOnDemand(ApplicationSubmittedAlert::class);
-        $this->get(route('student.applications.index'))->assertSee('Submitted for review');
+        $this->get(route('student.applications.index'))->assertSee('With SAS')->assertDontSee('Submitted for review');
         $this->get(route('student.applications.index', ['show' => 'finished']))->assertSee($plan->application_no);
         $this->get(route('student.applications.index', ['show' => 'unfinished']))->assertDontSee($plan->application_no);
     }
@@ -157,7 +158,7 @@ class ApplicationWizardTest extends TestCase
         $this->put(route('student.applications.level.update', $plan), ['degree_level_id' => 1])->assertForbidden();
         $this->put(route('student.applications.reasons', $plan), [])->assertForbidden();
         $this->delete(route('student.applications.destroy', $plan))->assertForbidden();
-        $this->get(route('student.applications.materials', $plan))->assertOk()->assertSee('Submitted for review')->assertDontSee('Choose files', false);
+        $this->get(route('student.applications.materials', $plan))->assertOk()->assertSee('Sent to SAS')->assertSee('With SAS')->assertDontSee('Choose files', false);
 
         app(ApplicationReview::class)->review($plan->refresh(), 'return', 'The passport scan is blurred.', $this->staff(Role::Administrator));
         $this->actingAs($student)->get(route('student.applications.materials', $plan))->assertSee('SAS returned this application')->assertSee('The passport scan is blurred.');
@@ -250,7 +251,7 @@ class ApplicationWizardTest extends TestCase
 
         $review->review($plan, 'pass', null, $manager);
         $case = app(CaseService::class)->open($student, $cycle, null, []);
-        $this->assertSame('Review passed. New', $plan->refresh()->statusFor($case));
+        $this->assertSame('Passed. New', $plan->refresh()->statusFor($case));
     }
 
     public function test_the_application_form_page_keeps_the_declaration_and_other_sections_together(): void

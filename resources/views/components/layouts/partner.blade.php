@@ -1,4 +1,4 @@
-@props(['title' => 'Backend home', 'crumb' => null])
+@props(['title' => 'Agent home', 'crumb' => null])
 @php
     $user = auth()->user();
     $organisation = $user->partnerOrganisation;
@@ -9,7 +9,7 @@
         'money' => 'M3 7h18v10H3V7Zm9 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM6 10v4M18 10v4',
     ];
     $nav = [
-        ['Backend home', route('partner.home'), 'partner.home', 'home'],
+        ['Agent home', route('partner.home'), 'partner.home', 'home'],
         ['Student list', route('partner.students.index'), ['partner.students.*', 'partner.student.*'], 'list'],
         ['Application list', route('partner.applications.index'), 'partner.applications.*', 'apps'],
         ['Fees statement', route('partner.statement'), 'partner.statement', 'money'],

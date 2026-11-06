@@ -80,7 +80,7 @@ class ApplyFlowTest extends TestCase
         $this->post(route('student.applications.store'), ['cycle_id' => $chevening->id])->assertRedirect();
         $plan = $student->applicationPlans()->firstOrFail();
         $this->get(route('student.applications.materials', $plan))->assertOk()
-            ->assertSee('Upload Materials')->assertSee('Two reference letters from your referees.')->assertSee('Pre-admission letter');
+            ->assertSee('Documents for this scholarship')->assertSee('Two reference letters from your referees.')->assertSee('Pre-admission letter');
         $this->get(route('student.choose.index'))->assertSee('Open application');
     }
 

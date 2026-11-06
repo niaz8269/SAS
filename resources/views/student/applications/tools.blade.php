@@ -1,7 +1,7 @@
 <x-dynamic-component :component="$ctx->layout()" title="Notes and tracker">
     @include('student.wizard._header')
-    <h2 class="mt-5 border-b border-[#cfd8e3] pb-2 text-[1.125rem] text-[#0b6ec7]">Notes, deadlines and tracker</h2>
-    <p class="mt-1 text-sm text-[#777]">Optional tools: a personal checklist, the deadline, your own notes and linked documents. The four steps above are all you need to apply.</p>
+    <h2 class="mt-5 border-b border-line pb-2 text-xl font-bold">Notes, deadlines and tracker</h2>
+    <p class="mt-1 text-base text-muted">Optional tools: a personal checklist, the deadline, your own notes and linked documents. The four steps above are all you need to apply.</p>
 
     @if ($changed)
         <div class="mt-4 rounded-md border border-warn/40 bg-warn-soft p-4 text-sm" role="alert">
@@ -47,7 +47,7 @@
                     <form method="POST" action="{{ $ctx->route('applications.documents.attach', $plan) }}" class="mt-3 flex gap-2">@csrf
                         <label for="doc" class="sr-only">Document</label><select id="doc" name="document" class="w-full border border-[#ccc] bg-white px-3 py-2">@foreach ($documents as $d)<option value="{{ $d->public_id }}">{{ $d->title }}</option>@endforeach</select><button class="border border-[#bbb] bg-white px-4 py-2 hover:bg-[#f5f5f5]">Link</button></form>
                 @else
-                    <p class="mt-3 text-sm text-[#777]">Upload documents in {!! $ctx->isAgent() ? 'the Upload Materials step' : '<a class="text-[#428bb6] underline" href="'.e($ctx->route('documents.index')).'">your document vault</a>' !!} first.</p>
+                    <p class="mt-3 text-sm text-[#777]">Upload documents in {!! $ctx->isAgent() ? 'the Documents step' : '<a class="text-[#428bb6] underline" href="'.e($ctx->route('documents.index')).'">your document vault</a>' !!} first.</p>
                 @endif
             </section>
         </div>

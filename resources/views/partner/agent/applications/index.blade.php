@@ -1,5 +1,5 @@
-<x-layouts.partner title="Application list" crumb="Application list">
-    <x-agent.title>Application list
+<x-layouts.partner title="Applications" crumb="Applications">
+    <x-agent.title>Applications
         <x-slot name="actions"><button type="button" class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[0.875rem] text-white hover:bg-[#c9453f]" onclick="document.getElementById('advanced').toggleAttribute('hidden')" aria-controls="advanced"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m16 16 5 5"/></svg>Advanced Search</button></x-slot>
     </x-agent.title>
 
@@ -24,14 +24,14 @@
                     <x-agent.th name="application_no" :sort="$sort" :dir="$dir">Application number</x-agent.th>
                     <x-agent.th name="scholarship" :sortable="false">Scholarship</x-agent.th>
                     <x-agent.th name="name" :sort="$sort" :dir="$dir">Name</x-agent.th>
-                    <x-agent.th name="gender" :sortable="false">gender</x-agent.th>
+                    <x-agent.th name="gender" :sortable="false">Gender</x-agent.th>
                     <x-agent.th name="country" :sortable="false">Country of Citizenship</x-agent.th>
                     <x-agent.th name="updated_at" :sort="$sort" :dir="$dir">Last operation time</x-agent.th>
                     <x-agent.th name="status" :sortable="false">Application status</x-agent.th>
-                    <x-agent.th name="notes" :sortable="false">Review notes</x-agent.th>
+                    <x-agent.th name="notes" :sortable="false">Notes from SAS</x-agent.th>
                     <x-agent.th name="fee" :sortable="false">Application fee payment status</x-agent.th>
                     <x-agent.th name="charge" :sortable="false">Agency charge payment status</x-agent.th>
-                    <x-agent.th name="operate" :sortable="false"><span class="text-[#428bb6]">operate</span></x-agent.th>
+                    <x-agent.th name="operate" :sortable="false"><span class="text-[#428bb6]">Action</span></x-agent.th>
                 </tr></thead>
                 <tbody>
                 @forelse ($plans as $p)

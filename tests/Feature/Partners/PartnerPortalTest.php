@@ -59,7 +59,7 @@ class PartnerPortalTest extends TestCase
         foreach (['/partner/submissions', '/partner/submissions/new'] as $url) {
             $this->actingAs($user)->get($url)->assertNotFound();
         }
-        $this->get(route('partner.home'))->assertOk()->assertSee('Backend home')->assertDontSee('Submit a scholarship');
+        $this->get(route('partner.home'))->assertOk()->assertSee('Agent home')->assertDontSee('Submit a scholarship');
     }
 
     public function test_students_and_suspended_agents_cannot_use_the_partner_area(): void

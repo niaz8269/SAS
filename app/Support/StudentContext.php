@@ -19,10 +19,10 @@ class StudentContext
         return $this->agent !== null;
     }
 
-    /** The page shell for the application pages: the same for a student and for an agent working on a student's application. */
+    /** The page shell for the application pages: a student stays in their own workspace (same menu as Home); an agent keeps the agent shell. */
     public function layout(): string
     {
-        return 'layouts.applicant';
+        return $this->isAgent() ? 'layouts.applicant' : 'layouts.student';
     }
 
     /** A link to a page of the application flow, for the student or for the agent working on that student. */

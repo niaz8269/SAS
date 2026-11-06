@@ -1,5 +1,5 @@
-<x-layouts.partner title="Backend home" crumb="Backend home">
-    <x-agent.title>Backend home</x-agent.title>
+<x-layouts.partner title="Agent home" crumb="Agent home">
+    <x-agent.title>Agent home</x-agent.title>
 
     <div class="mt-6 flex flex-wrap items-start gap-8">
         <div class="w-full max-w-[18.75rem]">

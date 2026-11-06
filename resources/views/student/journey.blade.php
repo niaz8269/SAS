@@ -2,8 +2,8 @@
     @include('student.wizard._header')
 
     <div class="mx-auto mt-6 max-w-4xl">
-        <h2 class="border-b border-[#cfd8e3] pb-2 text-[1.125rem] text-[#0b6ec7]">Your journey</h2>
-        <p class="mt-2 text-[0.8125rem] text-[#666]">Where this application is now, and what you need to do next. SAS moves it along as things happen.</p>
+        <h2 class="border-b border-line pb-2 text-xl font-bold">Your journey</h2>
+        <p class="mt-2 text-base text-muted">Where this application is now, and what you need to do next. SAS moves it along as things happen.</p>
 
         <ol class="mt-5 space-y-3">
             @php($currentIndex = $journey->index($current))

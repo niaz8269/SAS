@@ -1,6 +1,6 @@
 <x-layouts.partner title="Batch import" crumb="Student list › Batch import">
     <div class="flex items-start justify-between gap-3">
-        <div><p class="text-[0.8125rem]">Backend home</p><h1 class="text-[1.5rem] font-light leading-tight text-[#3a87ad]">Batch import</h1></div>
+        <div><p class="text-[0.8125rem]">Agent home</p><h1 class="text-[1.5rem] font-light leading-tight text-[#3a87ad]">Batch import</h1></div>
         <a class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[0.875rem] text-white hover:bg-[#c9453f]" href="{{ route('partner.students.index') }}"><span aria-hidden="true">↩</span> return</a>
     </div>
     <div class="mt-2 border-b border-[#e5e5e5]"></div>

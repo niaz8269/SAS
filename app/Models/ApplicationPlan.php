@@ -13,6 +13,9 @@ class ApplicationPlan extends Model
     /** The student's stage with SAS: draft (still filling in) > submitted (waiting for staff) > returned (fix and resend) or passed. */
     public const STAGES = ['draft' => 'Unfinished', 'submitted' => 'Submitted for review', 'returned' => 'Returned', 'passed' => 'Review passed'];
 
+    /** The same stages in the words a student or recruiting agent sees (staff screens keep STAGES). */
+    public const APPLICANT_STAGES = ['draft' => 'Not sent yet', 'submitted' => 'With SAS', 'returned' => 'Needs changes', 'passed' => 'Passed'];
+
     protected $attributes = ['stage' => 'draft'];
 
     protected $guarded = ['id', 'user_id', 'review_requested_at', 'review_enquiry_id', 'stage', 'review_remarks', 'reviewed_at', 'reviewed_by', 'application_no'];
@@ -43,10 +46,16 @@ class ApplicationPlan extends Model
         return in_array($this->stage, ['draft', 'returned'], true);
     }
 
-    /** What the student and agent see: the review stage, or once passed the status of SAS's own case for it. */
+    /** What the student and agent see: the review stage in plain words, or once passed the status of SAS's own case for it. */
     public function statusFor(?ServiceCase $case): string
     {
-        return $this->stage === 'passed' && $case ? 'Review passed. '.$case->statusLabel() : $this->stageLabel();
+        return $this->stage === 'passed' && $case ? 'Passed. '.$case->statusLabel() : $this->applicantLabel();
+    }
+
+    /** One short status for the student and the agent: Not sent yet, With SAS, Needs changes or Passed. */
+    public function applicantLabel(): string
+    {
+        return self::APPLICANT_STAGES[$this->stage] ?? $this->stageLabel();
     }
 
     public function stageLabel(): string

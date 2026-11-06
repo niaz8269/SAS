@@ -1,14 +1,14 @@
 <x-layouts.partner :title="$student->name" :crumb="'Student list › '.$student->name">
     <div class="flex flex-wrap items-start justify-between gap-3">
-        <div><p class="text-[0.8125rem]">Backend home</p><h1 class="text-[1.5rem] font-light uppercase leading-tight text-[#3a87ad]">{{ $student->name }}</h1>
+        <div><p class="text-sm"><a class="text-[#428bb6] underline" href="{{ route('partner.home') }}">Agent home</a></p><h1 class="text-[1.5rem] font-light uppercase leading-tight text-[#3a87ad]">{{ $student->name }}</h1>
             <p class="mt-1 text-[0.8125rem] text-[#555]">{{ $student->email }} &middot; {{ $student->email_verified_at ? 'Account active' : 'Invitation pending' }} &middot; details {{ $formPercent }}% filled in</p></div>
-        <a class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[0.875rem] text-white hover:bg-[#c9453f]" href="{{ route('partner.students.index') }}"><span aria-hidden="true">↩</span> return</a>
+        <a class="inline-flex items-center gap-2 bg-[#d9534f] px-5 py-2.5 text-[0.875rem] text-white hover:bg-[#c9453f]" href="{{ route('partner.students.index') }}"><span aria-hidden="true">↩</span> Back to students</a>
     </div>
     <div class="mt-2 border-b border-[#e5e5e5]"></div>
 
     <div class="mt-5 flex flex-wrap gap-2 text-[0.875rem]">
         <a class="bg-[#307cc7] px-5 py-2.5 text-white hover:bg-[#2a6fb4]" href="{{ route('partner.student.choose.index', $student->public_id) }}">+ Add application</a>
-        <a class="bg-[#86b87c] px-5 py-2.5 text-white hover:bg-[#78aa6e]" href="{{ route('partner.student.form.show', $student->public_id) }}">Application form</a>
+        <a class="bg-[#86b87c] px-5 py-2.5 text-white hover:bg-[#78aa6e]" href="{{ route('partner.student.form.show', $student->public_id) }}">Student details (shared form)</a>
         <a class="bg-[#a5adb3] px-5 py-2.5 text-white hover:bg-[#939ba1]" href="{{ route('partner.student.edit', $student->public_id) }}">Edit</a>
     </div>
 
@@ -19,11 +19,11 @@
 
     <x-agent.list title="Applications" class="max-w-4xl">
         <div class="overflow-x-auto"><table class="w-full text-left text-[0.8125rem]">
-            <thead><tr><x-agent.th name="no" :sortable="false">Application number</x-agent.th><x-agent.th name="sch" :sortable="false">Scholarship</x-agent.th><x-agent.th name="st" :sortable="false">Status</x-agent.th><x-agent.th name="op" :sortable="false"><span class="text-[#428bb6]">operate</span></x-agent.th></tr></thead>
+            <thead><tr><x-agent.th name="no" :sortable="false">Application number</x-agent.th><x-agent.th name="sch" :sortable="false">Scholarship</x-agent.th><x-agent.th name="st" :sortable="false">Status</x-agent.th><x-agent.th name="op" :sortable="false"><span class="text-[#428bb6]">Action</span></x-agent.th></tr></thead>
             <tbody>
             @forelse ($plans as $p)
-                <tr class="border-b border-[#e5e5e5]"><td class="px-3 py-4">{{ $p->application_no }}</td><td class="px-3 py-4">{{ $p->cycle->displayName() }}</td><td class="px-3 py-4">{{ $p->stageLabel() }}</td>
-                    <td class="px-3 py-4"><a class="text-[#428bb6] hover:underline" href="{{ route('partner.student.applications.show', [$student->public_id, $p->public_id]) }}">{{ $p->isEditable() ? 'Continue' : 'View Details' }}</a></td></tr>
+                <tr class="border-b border-[#e5e5e5]"><td class="px-3 py-4">{{ $p->application_no }}</td><td class="px-3 py-4">{{ $p->cycle->displayName() }}</td><td class="px-3 py-4">{{ $p->applicantLabel() }}</td>
+                    <td class="px-3 py-4"><a class="text-[#428bb6] hover:underline" href="{{ route('partner.student.applications.show', [$student->public_id, $p->public_id]) }}">{{ $p->isEditable() ? 'Continue' : 'View' }}</a></td></tr>
             @empty
                 <tr><td colspan="4" class="px-4 py-8 text-center text-[#777]">No applications yet. Press + Add application to choose a scholarship.</td></tr>
             @endforelse

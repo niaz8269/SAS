@@ -25,8 +25,8 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 
 /**
- * One application to one scholarship, in four steps: 1 Apply now (the scholarship, degree, language), 2 Application form,
- * 3 Upload materials, 4 Apply submit. Used by the student, and by an agent working for a student they look after.
+ * One application to one scholarship, in four steps: 1 Degree and language, 2 Your details (the shared form), 3 Documents,
+ * 4 Send to SAS. Used by the student, and by an agent working for a student they look after.
  */
 class ApplicationController extends Controller
 {
@@ -53,7 +53,7 @@ class ApplicationController extends Controller
         $cycle = ScholarshipCycle::visible()->findOrFail($data['cycle_id']);
         $plan = $plans->create($this->student($request), $cycle);
 
-        return redirect()->to($this->ctx($request)->route('applications.show', $plan))->with('status', 'Added to your applications. Follow the four steps to apply. Nothing is sent to the funder yet.');
+        return redirect()->to($this->ctx($request)->route('applications.show', $plan))->with('status', 'Added to your applications. Follow the four steps: degree and language, your details, documents, then Send to SAS. Nothing is sent to the funder yet.');
     }
 
     /** Starts one application for each ticked scholarship (the ones already started are left alone). */
@@ -70,10 +70,10 @@ class ApplicationController extends Controller
             }
         }
 
-        return redirect()->to($this->ctx($request)->route('applications.index'))->with('status', $started.' '.str('application')->plural($started).' started'.($started < count($data['cycle_ids']) ? ' (the others were already started or not open)' : '').'. Open each one to follow the four steps. Nothing is sent to a funder yet.');
+        return redirect()->to($this->ctx($request)->route('applications.index'))->with('status', $started.' '.str('application')->plural($started).' started'.($started < count($data['cycle_ids']) ? ' (the others were already started or not open)' : '').'. Open each one and follow its four steps, ending with Send to SAS. Nothing is sent to a funder yet.');
     }
 
-    /** Step 1: Apply now. Confirm the scholarship, the degree and the language of study. */
+    /** Degree and language (the first page of an application). Confirm the scholarship, the degree and the language of study. */
     public function show(Request $request, ApplicationPlan $plan, Requirements $requirements, StudyLanguages $languages)
     {
         $this->authorize('view', $plan); // 403 for another user's plan id (UAT-07)
@@ -96,7 +96,7 @@ class ApplicationController extends Controller
             $cases->setDegreeLevel($case, $levelId, $request->user()); // a case SAS opened for this scholarship follows the student's choice
         }
 
-        return redirect()->to($this->ctx($request)->route('applications.show', $plan).'#level')->with('status', 'Degree saved. The documents in step 3 follow it.');
+        return redirect()->to($this->ctx($request)->route('applications.show', $plan).'#level')->with('status', 'Degree saved. The documents you upload follow it.');
     }
 
     public function language(Request $request, ApplicationPlan $plan, StudyLanguages $languages)
@@ -110,7 +110,7 @@ class ApplicationController extends Controller
         return redirect()->to($this->ctx($request)->route('applications.show', $plan).'#language')->with('status', 'Language of study saved.');
     }
 
-    /** Step 3: Upload materials. Every document the scholarship asks for gets its own slot. */
+    /** Documents. Every document the scholarship asks for gets its own slot. */
     public function materials(Request $request, ApplicationPlan $plan, Requirements $requirements)
     {
         $this->authorize('view', $plan);
@@ -144,7 +144,7 @@ class ApplicationController extends Controller
         return redirect()->to($this->ctx($request)->route('applications.materials', $plan))->with('status', 'Saved.');
     }
 
-    /** Step 4: Apply submit. A summary of what is done and what is missing, then send to SAS for review. */
+    /** Send to SAS (the last page). A summary of what is done and what is missing, then send to SAS for review. */
     public function submitPage(Request $request, ApplicationPlan $plan, Requirements $requirements, ApplicationFormService $forms, ApplicationReview $review)
     {
         $this->authorize('view', $plan);
@@ -162,7 +162,7 @@ class ApplicationController extends Controller
             return back()->with('error', $e->getMessage());
         }
 
-        return redirect()->to($this->ctx($request)->route('applications.submit', $plan))->with('status', 'Submitted. SAS will review the application and tell you if anything needs to be fixed.');
+        return redirect()->to($this->ctx($request)->route('applications.submit', $plan))->with('status', 'Sent to SAS. SAS will check the application and tell you here if anything needs to be fixed.');
     }
 
     /** The application form as a printable page ("Preview" and "Download application form"). */

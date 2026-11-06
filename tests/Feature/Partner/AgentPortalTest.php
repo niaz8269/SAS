@@ -78,7 +78,7 @@ class AgentPortalTest extends TestCase
         $agent = $this->agent();
         $legacy = $this->agent('Old organisation', 'university'); // a leftover organisation that is not marked as an agent
 
-        $this->actingAs($agent)->get(route('partner.home'))->assertOk()->assertSee('Backend home')->assertSee('Number of students');
+        $this->actingAs($agent)->get(route('partner.home'))->assertOk()->assertSee('Agent home')->assertSee('Number of students');
         $this->get(route('partner.students.index'))->assertOk();
         $this->get(route('partner.applications.index'))->assertOk();
 
@@ -197,7 +197,7 @@ class AgentPortalTest extends TestCase
         $this->assertSame($student->id, $plan->user_id, 'the application belongs to the student, not the agent');
         $this->assertSame(0, $agent->applicationPlans()->count());
 
-        $this->get($base('/applications/'.$plan->public_id))->assertOk()->assertSee('for Amina Khan')->assertSee('Agent backend'); // the agent header
+        $this->get($base('/applications/'.$plan->public_id))->assertOk()->assertSee('for Amina Khan')->assertSee('Agent home'); // the agent header
         $this->put($base('/applications/'.$plan->public_id.'/form'), ['sections' => ['contact' => ['phone' => '+923001234567', 'address' => 'Lahore']]])->assertRedirect();
         $this->assertSame('+923001234567', app(ApplicationFormService::class)->formFor($student)->value('phone'));
 

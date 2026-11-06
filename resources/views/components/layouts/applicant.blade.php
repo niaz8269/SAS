@@ -26,7 +26,7 @@
         <a href="{{ $agent ? route('partner.home') : route('student.dashboard') }}" aria-label="{{ config('sas.brand.short') }} home"><span class="flex items-center gap-3"><x-brand compact class="[&_img]:!h-[3.375rem] [&_img]:!w-[3.375rem] [&_img]:rounded-full [&_img]:ring-2 [&_img]:ring-white" /><span class="hidden text-[1.625rem] font-semibold tracking-[0.25em] sm:inline" aria-hidden="true">SAS</span></span></a>
         <nav aria-label="Application" class="hidden items-center gap-5 text-[0.9375rem] md:flex">
             @if ($agent)
-                <a class="hover:underline" href="{{ route('partner.home') }}">Agent backend</a>
+                <a class="hover:underline" href="{{ route('partner.home') }}">Agent home</a>
                 <a class="hover:underline" href="{{ route('partner.student.show', $context->student->public_id) }}">{{ $context->student->name }}</a>
                 <a class="hover:underline" href="{{ $context->route('applications.index') }}">Applications</a>
             @else
@@ -43,7 +43,7 @@
             </summary>
             <ul class="absolute right-0 z-40 mt-1 w-56 border border-[#ddd] bg-white py-1 text-[#333] shadow-lg">
                 @if ($agent)
-                    <li><a class="block px-4 py-2 hover:bg-[#f0f6fa]" href="{{ route('partner.home') }}">Back to the agent backend</a></li>
+                    <li><a class="block px-4 py-2 hover:bg-[#f0f6fa]" href="{{ route('partner.home') }}">Back to agent home</a></li>
                 @else
                     <li><a class="block px-4 py-2 hover:bg-[#f0f6fa]" href="{{ route('student.dashboard') }}">Home</a></li>
                     <li><a class="block px-4 py-2 hover:bg-[#f0f6fa]" href="{{ route('student.documents.index') }}">My documents</a></li>

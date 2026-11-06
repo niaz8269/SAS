@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Notification;
 use InvalidArgumentException;
 
 /**
- * Step 4 of an application. The student (or the agent for them) sends the finished application to SAS staff, who either
+ * The last step of an application, Send to SAS. The student (or the agent for them) sends the finished application to SAS staff, who either
  * return it with remarks to fix or pass it. Sending is allowed only when nothing is missing. Nothing is charged here.
  */
 class ApplicationReview
@@ -30,18 +30,18 @@ class ApplicationReview
             return ['This application is already with SAS.'];
         }
         if ($plan->cycle->degreeLevels->count() > 1 && ! $plan->degree_level_id) {
-            $problems[] = 'Choose the degree you are applying for (step 1).';
+            $problems[] = 'Choose the degree you are applying for (Degree and language).';
         }
         if (count($this->languages->optionsFor($plan->cycle)) > 1 && ! $plan->study_language) {
-            $problems[] = 'Choose the language you want to study in (step 1).';
+            $problems[] = 'Choose the language you want to study in (Degree and language).';
         }
         $missing = $this->forms->missing($this->forms->formFor($plan->user));
         if ($missing) {
-            $problems[] = 'The application form is not complete (step 2): '.implode(', ', array_slice($missing, 0, 6)).(count($missing) > 6 ? ' and '.(count($missing) - 6).' more' : '').'.';
+            $problems[] = 'Your details are not complete: '.implode(', ', array_slice($missing, 0, 6)).(count($missing) > 6 ? ' and '.(count($missing) - 6).' more' : '').'.';
         }
         $docs = $this->requirements->progress($this->requirements->forPlan($plan));
         if ($docs['missing']) {
-            $problems[] = 'Mandatory documents are missing (step 3): '.implode(', ', $docs['missing']).'. Upload each one, or tick "I cannot provide it now" and write the reason.';
+            $problems[] = 'Mandatory documents are missing (Documents): '.implode(', ', $docs['missing']).'. Upload each one, or tick "I cannot provide it now" and write the reason.';
         }
 
         return $problems;

@@ -1,10 +1,7 @@
 @props(['title' => 'Student workspace'])
 @php
-    $steps = [
-        ['1', 'Your details', route('student.form.show'), 'student.form.*'],
-        ['2', 'Choose scholarships', route('student.choose.index'), 'student.choose.*'],
-        ['3', 'Upload documents', route('student.applications.index'), 'student.applications.*'],
-    ];
+    // The same four steps, names and ticks as on Home (one rule in ApplyProgress). Steps 3 and 4 happen inside an application.
+    $menuSteps = collect(app(\App\Domain\Applications\ApplyProgress::class)->for(auth()->user())['steps'])->map(fn ($s) => $s + ['pattern' => [1 => 'student.form.*', 2 => 'student.choose.*', 3 => 'student.applications.materials', 4 => 'student.applications.submit'][$s['n']]]);
     $unread = auth()->user()->unreadNotifications()->count();
     $hasCases = \App\Models\ServiceCase::where('user_id', auth()->id())->exists();
     $more = [
@@ -58,10 +55,12 @@
             <a href="{{ route('student.dashboard') }}" @if(request()->routeIs('student.dashboard')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.dashboard')) }}">Home</a>
             <p class="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">How to apply</p>
             <ol class="space-y-0.5">
-                @foreach ($steps as [$n, $label, $url, $pattern])
-                    <li><a href="{{ $url }}" @if(request()->routeIs($pattern)) aria-current="page" @endif class="{{ $link(request()->routeIs($pattern)) }}"><span class="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-navy-100 text-xs font-bold text-navy-800" aria-hidden="true">{{ $n }}</span>{{ $label }}</a></li>
+                @foreach ($menuSteps as $s)
+                    <li><a href="{{ $s['url'] }}" @if(request()->routeIs($s['pattern'])) aria-current="page" @endif class="{{ $link(request()->routeIs($s['pattern'])) }}"><span class="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full text-xs font-bold {{ $s['done'] ? 'bg-navy-700 text-white' : 'bg-navy-100 text-navy-800' }}" aria-hidden="true">{{ $s['done'] ? '✓' : $s['n'] }}</span>{{ $s['title'] }}@if ($s['done'])<span class="sr-only"> (done)</span>@endif</a></li>
                 @endforeach
             </ol>
+            @php($onApplications = request()->routeIs('student.applications.index', 'student.applications.show', 'student.applications.form', 'student.applications.tools', 'student.applications.journey', 'student.applications.preview'))
+            <a href="{{ route('student.applications.index') }}" @if($onApplications) aria-current="page" @endif class="mt-1 {{ $link($onApplications) }}">My applications</a>
             <p class="px-3 pb-1 pt-3 text-xs font-semibold uppercase tracking-wide text-muted">SAS help</p>
             <a href="{{ route('student.counsellor') }}" @if(request()->routeIs('student.counsellor*')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.counsellor*')) }}">My counsellor</a>
             <a href="{{ route('student.book') }}" @if(request()->routeIs('student.book*')) aria-current="page" @endif class="{{ $link(request()->routeIs('student.book*')) }}">Book a call</a>
