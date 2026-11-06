@@ -1,5 +1,5 @@
 @php $intro = \App\Models\PageBlock::builtIn('contact', 'intro'); $aside = \App\Models\PageBlock::builtIn('contact', 'aside'); @endphp
-<x-layouts.public title="Contact" :description="$intro?->subheading ?: 'Send an enquiry to the team. We reply by email or phone as you prefer.'">
+<x-layouts.public title="Contact SAS: send an enquiry" :crumbs="[['Home', route('home')], ['Contact']]" :description="$intro?->subheading ?: 'Send an enquiry to the team. We reply by email or phone as you prefer.'">
     <x-page-blocks page="contact" position="top" />
     <div class="container-page grid gap-8 py-10 lg:grid-cols-[1fr_20rem]">
         <div>

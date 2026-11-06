@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use App\Domain\Seo\Sitemap;
 use App\Models\Concerns\AuditsChanges;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Cache;
 
 class CmsPage extends Model
 {
@@ -20,8 +20,8 @@ class CmsPage extends Model
 
     protected static function booted(): void
     {
-        static::saved(fn () => Cache::forget('sitemap'));
-        static::deleted(fn () => Cache::forget('sitemap'));
+        static::saved(fn () => Sitemap::forget());
+        static::deleted(fn () => Sitemap::forget());
     }
 
     public function scopePublished(Builder $query): Builder

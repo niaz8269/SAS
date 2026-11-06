@@ -123,7 +123,7 @@ class BlogTest extends TestCase
     {
         Cache::forget('sitemap');
         Cache::forget('blog.feed');
-        $this->get('/sitemap.xml')->assertOk(); // cached
+        $this->sitemapXml(); // cached
         $this->get('/blog/feed.xml')->assertOk();
 
         $cat = BlogCategory::create(['name' => 'News', 'slug' => 'news']);
@@ -136,16 +136,16 @@ class BlogTest extends TestCase
         $this->assertStringNotContainsString('not-yet', $feed);
         $this->assertNotFalse(simplexml_load_string($feed), 'the feed is valid XML');
 
-        $map = $this->get('/sitemap.xml')->getContent();
+        $map = $this->sitemapXml();
         $this->assertStringContainsString('/blog/fees-update</loc>', $map);
         $this->assertStringContainsString('/blog/category/news</loc>', $map);
         $this->assertStringContainsString(route('blog.index').'</loc>', $map);
         $this->assertStringNotContainsString('/blog/not-yet', $map);
 
         $draft->update(['status' => 'published']);
-        $this->assertStringContainsString('/blog/not-yet</loc>', $this->get('/sitemap.xml')->getContent());
+        $this->assertStringContainsString('/blog/not-yet</loc>', $this->sitemapXml());
         $live->update(['status' => 'draft']);
-        $this->assertStringNotContainsString('/blog/fees-update', $this->get('/sitemap.xml')->getContent());
+        $this->assertStringNotContainsString('/blog/fees-update', $this->sitemapXml());
     }
 
     public function test_the_home_page_has_a_latest_posts_strip_only_when_there_are_posts(): void

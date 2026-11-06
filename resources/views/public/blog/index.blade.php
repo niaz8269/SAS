@@ -1,8 +1,8 @@
 @php
-    $title = $category ? $category->name.' | Blog' : ($q !== '' ? 'Search the blog' : 'Blog');
-    $desc = $category?->description ?: 'News, advice and stories on scholarships, applications, universities and studying abroad.';
+    $title = $category ? $category->name.' | Blog' : ($q !== '' ? 'Search the blog' : 'Scholarship and study abroad blog');
+    $desc = $category?->description ?: ($category ? 'Posts on '.mb_strtolower($category->name).' from the '.config('sas.brand.short').' blog: scholarships, applications, universities and studying abroad.' : 'News, advice and stories on scholarships, applications, universities and studying abroad.');
 @endphp
-<x-layouts.public :title="$title" :description="$desc" :noindex="$q !== ''">
+<x-layouts.public :title="$title" :description="$desc" :noindex="$q !== ''" :crumbs="$category ? [['Home', route('home')], ['Blog', route('blog.index')], [$category->name]] : [['Home', route('home')], ['Blog']]">
     <x-slot:head>
         <link rel="alternate" type="application/rss+xml" title="{{ config('sas.brand.short') }} blog" href="{{ route('blog.feed') }}">
     </x-slot:head>

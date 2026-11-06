@@ -1,5 +1,5 @@
 @php $intro = \App\Models\PageBlock::builtIn('directory', 'intro'); @endphp
-<x-layouts.public title="Scholarships" :description="$intro?->subheading ?: 'Search officially sourced scholarships by destination, degree, subject, funding and deadline. No account needed.'">
+<x-layouts.public title="Scholarships: search by destination, degree and deadline" :crumbs="[['Home', route('home')], ['Scholarships']]" :description="$intro?->subheading ?: 'Search officially sourced scholarships by destination, degree, subject, funding and deadline. No account needed.'">
     <section class="bg-white">
         <div class="container-page py-8">
             <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <span aria-current="page">Scholarships</span></nav>

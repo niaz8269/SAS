@@ -6,6 +6,7 @@ use App\Domain\Documents\ClamAvScanner;
 use App\Domain\Documents\FakeScanner;
 use App\Domain\Documents\Scanner;
 use App\Domain\Editorial\AuditLog;
+use App\Domain\Seo\Sitemap;
 use App\Domain\Site\Site;
 use App\Listeners\BlockSuppressedRecipients;
 use App\Models\Article;
@@ -62,15 +63,15 @@ class AppServiceProvider extends ServiceProvider
         // Staff-edited brand name, tagline and contact details override config/sas.php so every view and email reads the live value.
         Site::applyToConfig();
 
-        // The sitemap is built from the database and cached for ten minutes; any change to a page that is listed in it clears the cache,
+        // The sitemaps are built from the database and cached for ten minutes; any change to a page that is listed in them clears the cache,
         // so a newly published scholarship, university, guide, service, article or page appears in /sitemap.xml at once.
         foreach ([ScholarshipCycle::class, ScholarshipProgramme::class, University::class, Country::class, Service::class, Article::class, CmsPage::class, BlogPost::class, BlogCategory::class, Testimonial::class] as $model) {
             // These must return nothing: a listener that returns false stops every listener registered after it (the audit trail, search index and so on).
             $model::saved(function () {
-                Cache::deleteMultiple(['sitemap', 'blog.feed']);
+                Sitemap::forget();
             });
             $model::deleted(function () {
-                Cache::deleteMultiple(['sitemap', 'blog.feed']);
+                Sitemap::forget();
             });
         }
 

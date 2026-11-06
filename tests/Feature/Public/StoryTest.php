@@ -92,7 +92,7 @@ class StoryTest extends TestCase
         $this->get('/stories')->assertOk()->assertDontSee('Amina');
         $this->get('/stories/'.$t->slug)->assertNotFound();
         $this->get('/')->assertDontSee('Tsinghua University');
-        $this->assertStringNotContainsString($t->slug, $this->get('/sitemap.xml')->getContent());
+        $this->assertStringNotContainsString($t->slug, $this->sitemapXml());
         $this->get('/share-your-story/thanks')->assertNotFound(); // the thank-you page is only for someone who just sent a story
     }
 
@@ -147,7 +147,7 @@ class StoryTest extends TestCase
         $admin = $this->staff();
 
         Cache::forget('sitemap');
-        $this->get('/sitemap.xml'); // cached before approval
+        $this->sitemapXml(); // cached before approval
 
         Livewire::test(ManageTestimonials::class)->assertSuccessful()
             ->callTableAction('edit', $t, ['name' => 'Bilal', 'story' => str_repeat('I fixed a spelling mistake and kept my words. ', 6), 'quote' => 'I applied early and it worked.', 'review_status' => 'pending', 'consent_given' => true, 'consent_date' => now()->toDateString(), 'nationality' => 'Pakistan', 'study_country' => 'China', 'university' => 'Tsinghua University', 'gender' => 'male'])
@@ -165,7 +165,7 @@ class StoryTest extends TestCase
         $this->get('/stories')->assertOk()->assertSee('Bilal')->assertSee('Tsinghua University')->assertSee('images/avatars/male.svg', false)->assertSee('I applied early and it worked.');
         $this->get('/stories/'.$t->slug)->assertOk()->assertSee('Nationality:')->assertSee('Pakistan')->assertSee('Country of the scholarship:')->assertSee('China')->assertSee('University:')->assertSee('I fixed a spelling mistake')->assertSee('Share this post', false);
         $this->get('/')->assertSee('What students say')->assertSee('Bilal')->assertSee('Read the full story');
-        $this->assertStringContainsString('/stories/'.$t->slug.'</loc>', $this->get('/sitemap.xml')->getContent());
+        $this->assertStringContainsString('/stories/'.$t->slug.'</loc>', $this->sitemapXml());
         $this->get('/stories/'.$t->slug)->assertDontSee('amina@example.test')->assertDontSee('Amina@Example.test');
     }
 

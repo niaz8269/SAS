@@ -1,5 +1,5 @@
 @php $intro = \App\Models\PageBlock::builtIn('services', 'intro'); $emptyMsg = \App\Models\PageBlock::builtIn('services', 'empty'); @endphp
-<x-layouts.public title="Our services" :description="$intro?->subheading ?: 'Advisory, writing, document evaluation, translation, attestation, admissions and visa support for international students.'">
+<x-layouts.public title="Study abroad services: advice, translation, visas" :crumbs="[['Home', route('home')], ['Our services']]" :description="$intro?->subheading ?: 'Advisory, writing, document evaluation, translation, attestation, admissions and visa support for international students.'">
     <x-page-blocks page="services" position="top" />
     <section class="container-page py-10">
         <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Support beyond the scholarship' }}</h1>

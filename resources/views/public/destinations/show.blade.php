@@ -1,4 +1,7 @@
-<x-layouts.public :title="'Study in '.$country->name" :description="\Illuminate\Support\Str::limit(strip_tags($country->summary ?? 'Study guidance and scholarships in '.$country->name), 155)">
+<x-layouts.public :title="'Study in '.$country->name.': costs and scholarships'" :crumbs="[['Home', route('home')], ['Study destinations', route('destinations.index')], ['Study in '.$country->name]]" :description="\Illuminate\Support\Str::limit(strip_tags($country->summary ?? 'Study guidance and scholarships in '.$country->name), 155)">
+    <x-slot:head>
+        <x-jsonld :data="array_filter(['@type' => 'WebPage', 'name' => 'Study in '.$country->name, 'url' => route('destinations.show', $country), 'description' => \Illuminate\Support\Str::limit(strip_tags((string) $country->summary), 300) ?: null, 'dateModified' => $country->guidance_reviewed_at?->toDateString(), 'isPartOf' => ['@type' => 'WebSite', 'name' => config('sas.brand.name'), 'url' => route('home')]])" />
+    </x-slot:head>
     <section class="border-b border-line bg-white"><div class="container-page py-8">
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('destinations.index') }}">Study destinations</a> / <span aria-current="page">{{ $country->name }}</span></nav>
         <h1 class="mt-2 text-3xl font-extrabold sm:text-4xl">Study in {{ $country->name }}</h1>

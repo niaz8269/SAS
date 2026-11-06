@@ -77,6 +77,14 @@ class SiteSettings extends Page
                     ->helperText('A wide picture, 1200 by 630 pixels. Shown when a page without its own picture is shared. Empty uses the bundled picture.'),
                 Textarea::make('default_meta_description')->label('Default search-engine description')->rows(2)->maxLength(300)->columnSpanFull(),
             ]),
+            Section::make('Search engines')->description('Prove to Google and Bing that this site is yours, so you can send them the sitemap (https://sas.cas.moe/sitemap.xml) and see how many pages are indexed. Paste only the code, not the whole tag.')->columns(2)->schema([
+                TextInput::make('google_site_verification')->label('Google Search Console code')->maxLength(100)->regex('/^[A-Za-z0-9_-]+$/')
+                    ->validationMessages(['regex' => 'Paste only the code: letters, numbers, dashes and underscores.'])
+                    ->helperText('In Search Console choose "URL prefix", then "HTML tag". Copy the text after content=.'),
+                TextInput::make('bing_site_verification')->label('Bing Webmaster Tools code')->maxLength(100)->regex('/^[A-Za-z0-9_-]+$/')
+                    ->validationMessages(['regex' => 'Paste only the code: letters, numbers, dashes and underscores.'])
+                    ->helperText('In Bing Webmaster Tools choose "HTML Meta Tag". Copy the text after content=.'),
+            ]),
             Section::make('Contact and legal')->columns(2)->schema([
                 TextInput::make('contact_email')->label('General email')->email()->placeholder(config('sas.contact_email')),
                 TextInput::make('enquiry_email')->label('Enquiries email')->email()->placeholder(config('sas.enquiry_email')),

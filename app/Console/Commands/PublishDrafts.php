@@ -3,11 +3,11 @@
 namespace App\Console\Commands;
 
 use App\Domain\Editorial\CycleWorkflow;
+use App\Domain\Seo\Sitemap;
 use App\Enums\PublicationState;
 use App\Models\ScholarshipCycle;
 use App\Models\User;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Cache;
 
 /**
  * Publishes draft cycles through the normal workflow (submit, approve, publish) on one person's recorded authority.
@@ -52,7 +52,7 @@ class PublishDrafts extends Command
                 $failed[] = ($cycle->external_key ?: $cycle->id).': '.$e->getMessage();
             }
         }
-        Cache::forget('sitemap');
+        Sitemap::forget();
 
         $this->info("Published {$done} cycle(s).");
         foreach ($failed as $f) {

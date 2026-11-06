@@ -57,6 +57,7 @@
             &copy; {{ now()->year }} {{ config('sas.brand.name') }}. Scholarship details are summarised from official sources and can change: always confirm the latest details with us or the funder.
             SAS is an information and support service. It does not guarantee scholarship selection, admission or visa approval.
             @if ($note = \App\Domain\Site\Site::get('footer_note')) {{ $note }} @endif
+            <a class="underline hover:no-underline" href="{{ route('site-map') }}">Site map</a>.
         </p>
     </div>
 </footer>

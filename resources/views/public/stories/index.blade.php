@@ -1,4 +1,4 @@
-<x-layouts.public title="Student stories" description="Real stories from students who found their scholarship and studied abroad, in their own words.">
+<x-layouts.public title="Student scholarship stories" :crumbs="[['Home', route('home')], ['Student stories']]" description="Real stories from students who found their scholarship and studied abroad, in their own words.">
     <section class="border-b border-line bg-white">
         <div class="container-page py-8 sm:py-10">
             <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <span aria-current="page">Student stories</span></nav>

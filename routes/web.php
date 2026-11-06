@@ -24,6 +24,7 @@ use App\Http\Controllers\Partner\OrganisationController;
 use App\Http\Controllers\PartnerApplicationController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ScholarshipController;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\Student;
 use Illuminate\Support\Facades\Route;
@@ -64,7 +65,9 @@ Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/image-credits', [PageController::class, 'credits'])->name('credits');
 Route::get('/legal/{page}', [PageController::class, 'legal'])->name('legal.show');
 Route::get('/pages/{slug}', [PageController::class, 'cms'])->where('slug', '[A-Za-z0-9_-]+')->name('pages.show');
-Route::get('/sitemap.xml', [PageController::class, 'sitemap'])->name('sitemap');
+Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+Route::get('/sitemap-{section}.xml', [SitemapController::class, 'section'])->where('section', '[a-z]+')->name('sitemap.section');
+Route::get('/site-map', [SitemapController::class, 'page'])->name('site-map');
 Route::get('/robots.txt', [PageController::class, 'robots'])->name('robots');
 
 Route::get('/contact', [EnquiryController::class, 'create'])->name('contact');

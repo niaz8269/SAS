@@ -126,7 +126,9 @@ class WebsiteCmsTest extends TestCase
         $this->get('/pages/nope')->assertNotFound();
         CmsPage::create(['slug' => 'secret', 'title' => 'Secret', 'published' => false]);
         $this->get('/pages/secret')->assertNotFound();
-        $this->get('/sitemap.xml')->assertSee('/pages/visa-faq', false)->assertDontSee('/pages/secret', false);
+        $map = $this->sitemapXml();
+        $this->assertStringContainsString('/pages/visa-faq', $map);
+        $this->assertStringNotContainsString('/pages/secret', $map);
     }
 
     public function test_only_staff_with_the_site_permission_can_manage_the_website(): void

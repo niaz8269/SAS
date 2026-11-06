@@ -1,7 +1,14 @@
-@props(['title' => null, 'description' => null, 'canonical' => null, 'noindex' => false, 'og_image' => null])
+@props(['title' => null, 'description' => null, 'canonical' => null, 'noindex' => false, 'og_image' => null, 'crumbs' => null])
 @php
-    $fullTitle = $title ? $title.' | '.config('sas.brand.short') : config('sas.brand.name'); // the short brand keeps page titles near the 60 characters search results show
+    // Numbered pages of a list (?page=2) are real pages: each names itself as canonical and gets its own title and description, so none is read as a copy of page 1.
+    // Any other query (a search or filter) names the plain address as canonical.
+    $pageNo = (int) request()->query('page');
+    $numbered = $pageNo > 1 && array_keys(request()->query()) === ['page'];
+    $fullTitle = $title ? $title.($numbered ? ' (page '.$pageNo.')' : '').' | '.config('sas.brand.short') : config('sas.brand.name'); // the short brand keeps page titles near the 60 characters search results show
     $desc = $description ?? \App\Domain\Site\Site::get('default_meta_description', 'Find verified, officially sourced scholarships worldwide and get expert support at every step of your study abroad journey.');
+    if ($numbered) {
+        $desc = rtrim($desc, ' .').'. Page '.$pageNo.'.';
+    }
     $nav = \App\Domain\Site\Site::menu('header');
 @endphp
 <!DOCTYPE html>
@@ -15,12 +22,18 @@
     <meta name="description" content="{{ $desc }}">
     @php
         // the address on the main domain, whichever host name the visit used (www, http, a staging name)
-        $canonicalUrl = $canonical ?? rtrim((string) config('app.url'), '/').request()->getPathInfo();
+        $canonicalUrl = $canonical ?? rtrim((string) config('app.url'), '/').request()->getPathInfo().($numbered ? '?page='.$pageNo : '');
+        $verify = array_filter(['google-site-verification' => \App\Domain\Site\Site::get('google_site_verification'), 'msvalidate.01' => \App\Domain\Site\Site::get('bing_site_verification')]);
         $shareImage = $og_image ?? \App\Domain\Site\Site::mediaUrl('og_image_path') ?? asset('images/og-default.jpg');
         $shareIsBundled = ! $og_image && ! \App\Domain\Site\Site::get('og_image_path');
     @endphp
     <link rel="canonical" href="{{ $canonicalUrl }}">
-    @if ($noindex)<meta name="robots" content="noindex, nofollow">@endif
+    @if ($noindex)<meta name="robots" content="noindex, nofollow">@else<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">@endif
+    @foreach ($verify as $name => $token)<meta name="{{ $name }}" content="{{ $token }}">
+    @endforeach
+    @if ($crumbs)
+        <x-jsonld :data="['@type' => 'BreadcrumbList', 'itemListElement' => collect($crumbs)->values()->map(fn ($c, $i) => array_filter(['@type' => 'ListItem', 'position' => $i + 1, 'name' => $c[0], 'item' => $c[1] ?? null]))->all()]" />
+    @endif
     <meta property="og:site_name" content="{{ config('sas.brand.name') }}">
     <meta property="og:title" content="{{ $fullTitle }}">
     <meta property="og:description" content="{{ $desc }}">

@@ -237,7 +237,7 @@ class PublicPagesTest extends TestCase
     {
         $pub = $this->publishedCycle();
         $draft = ScholarshipCycle::factory()->create();
-        $xml = $this->get('/sitemap.xml')->assertOk()->getContent();
+        $xml = $this->sitemapXml();
         $this->assertStringContainsString($pub->slug, $xml);
         $this->assertStringNotContainsString(route('scholarships.show', [$draft->programme->slug, $draft->slug]), $xml);
         $this->get('/robots.txt')->assertSee('Disallow: /student')->assertSee('Disallow: /admin')->assertSee('Sitemap:');

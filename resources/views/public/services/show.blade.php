@@ -1,4 +1,8 @@
-<x-layouts.public :title="$service->name" :description="\Illuminate\Support\Str::limit($service->summary, 155)">
+<x-layouts.public :title="$service->name.' for international students'" :crumbs="[['Home', route('home')], ['Our services', route('services.index')], [$service->name]]"
+    :description="\Illuminate\Support\Str::limit(mb_strlen((string) $service->summary) < 100 ? rtrim((string) $service->summary, '. ').'. Ask the '.config('sas.brand.short').' team how we can help with your application.' : $service->summary, 155)">
+    <x-slot:head>
+        <x-jsonld :data="['@type' => 'Service', 'name' => $service->name, 'description' => $service->summary, 'serviceType' => ucfirst(str_replace('_', ' ', $service->category)), 'url' => route('services.show', $service), 'provider' => ['@type' => 'Organization', 'name' => config('sas.brand.name'), 'url' => route('home')]]" />
+    </x-slot:head>
     <section class="border-b border-line bg-white"><div class="container-page py-8">
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('services.index') }}">Our services</a> / <span aria-current="page">{{ $service->name }}</span></nav>
         <p class="eyebrow mt-3">{{ ucfirst(str_replace('_', ' ', $service->category)) }}</p>

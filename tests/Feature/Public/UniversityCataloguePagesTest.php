@@ -110,7 +110,10 @@ class UniversityCataloguePagesTest extends TestCase
         \Cache::forget('page.blocks');
         $this->get('/universities')->assertSee('Where to study in China');
         $this->get('/')->assertSee('/universities', false);
-        $this->get('/sitemap.xml')->assertSee('/universities/peking-university', false)->assertSee('/programmes', false)->assertDontSee('hidden-university', false);
+        $map = $this->sitemapXml();
+        $this->assertStringContainsString('/universities/peking-university', $map);
+        $this->assertStringContainsString('/programmes', $map);
+        $this->assertStringNotContainsString('hidden-university', $map);
     }
 
     public function test_pagination_keeps_filters(): void

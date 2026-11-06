@@ -1,5 +1,5 @@
 @php $intro = \App\Models\PageBlock::builtIn('resources', 'intro'); $emptyMsg = \App\Models\PageBlock::builtIn('resources', 'empty'); @endphp
-<x-layouts.public title="Resources" :description="$intro?->subheading ?: 'Guides and articles on scholarships, applications and studying abroad.'">
+<x-layouts.public title="Scholarship guides and articles" :crumbs="[['Home', route('home')], ['Resources']]" :description="$intro?->subheading ?: 'Guides and articles on scholarships, applications and studying abroad.'">
     <x-page-blocks page="resources" position="top" />
     <section class="container-page py-10">
         <h1 class="text-3xl font-extrabold sm:text-4xl">{{ $intro?->heading ?: 'Resources' }}</h1>

@@ -2,7 +2,7 @@
     $intro = \App\Models\PageBlock::builtIn('programmes', 'intro');
     $emptyMsg = \App\Models\PageBlock::builtIn('programmes', 'empty');
 @endphp
-<x-layouts.public title="Search programmes" :description="$intro?->subheading ?: 'Search degree programmes at universities in China by subject, level, language, province and Chinese Government Scholarship eligibility.'">
+<x-layouts.public title="Search degree programmes at universities in China" :crumbs="[['Home', route('home')], ['Programmes']]" :description="$intro?->subheading ?: 'Search degree programmes at universities in China by subject, level, language, province and Chinese Government Scholarship eligibility.'">
     <x-page-blocks page="programmes" position="top" />
     <section class="container-page py-10">
         <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('universities.index') }}">Universities</a> / <span aria-current="page">Programmes</span></nav>

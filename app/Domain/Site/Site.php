@@ -31,6 +31,8 @@ class Site
         'contact_address' => null,
         'footer_note' => null,
         'default_meta_description' => null,
+        'google_site_verification' => null,
+        'bing_site_verification' => null,
         'logo_path' => null,
         'favicon_path' => null,
         'og_image_path' => null,
