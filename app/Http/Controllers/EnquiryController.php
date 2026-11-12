@@ -6,10 +6,13 @@ use App\Enums\EnquiryStatus;
 use App\Mail\EnquiryReceived;
 use App\Mail\StaffEnquiryAlert;
 use App\Models\AnalyticsEvent;
+use App\Models\Country;
+use App\Models\DegreeLevel;
 use App\Models\Enquiry;
 use App\Models\EnquiryMessage;
 use App\Models\ScholarshipCycle;
 use App\Models\Service;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
@@ -55,16 +58,71 @@ class EnquiryController extends Controller
             return redirect()->route('contact')->with('status', 'Thanks. If you do not hear from us, please email '.config('sas.contact_email').'.');
         }
 
+        [$enquiry, $link] = $this->record($request, $data, 'I agree that SAS may contact me about this enquiry by '.$data['contact_preference'].'.');
+
+        return redirect()->route('enquiries.thanks')->with('enquiry', ['reference' => $enquiry->reference, 'link' => $link]);
+    }
+
+    /**
+     * The short form in the pop-up on the home page: what the person wants to study, who they are and how to reach them. It becomes an ordinary
+     * enquiry (same consent record, same duplicate flag, same emails); the message is written here from the chosen values, never typed free text.
+     * Answers in JSON so the pop-up can thank the person without leaving the page.
+     */
+    public function quick(Request $request)
+    {
+        $data = $request->validate([
+            'degree' => ['nullable', 'string', Rule::exists('degree_levels', 'code')],
+            'subject' => ['nullable', 'string', Rule::exists('subjects', 'slug')],
+            'name' => ['required', 'string', 'max:120'],
+            'nationality' => ['required', 'string', Rule::exists('countries', 'slug')],
+            'email' => ['required', 'email:rfc', 'max:190'],
+            'whatsapp' => ['nullable', 'string', 'max:32', 'regex:/^\+?[0-9 ()\-]{6,32}$/'],
+            'consent' => ['accepted'],
+            'website' => ['nullable', 'max:0'], // honeypot
+            '_ts' => ['nullable', 'string'],
+        ], [
+            'consent.accepted' => 'Please confirm we may contact you.',
+            'nationality.required' => 'Please choose your nationality.',
+            'nationality.exists' => 'Please choose your nationality from the list.',
+            'whatsapp.regex' => 'Use digits, spaces, brackets or dashes, with + and the country code first.',
+        ]);
+
+        if (filled($request->input('website')) || $this->tooFast($request->input('_ts'))) {
+            return response()->json(['ok' => true, 'reference' => null]); // dropped quietly, like the contact form
+        }
+
+        $degree = ! empty($data['degree']) ? DegreeLevel::where('code', $data['degree'])->value('name') : null;
+        $subject = ! empty($data['subject']) ? Subject::where('slug', $data['subject'])->value('name') : null;
+        $country = Country::where('slug', $data['nationality'])->value('name');
+        $message = implode("\n", array_filter([
+            'Quick enquiry from the home page.',
+            'Degree level: '.($degree ?? 'not chosen'),
+            'Subject: '.($subject ?? 'not chosen'),
+            'Nationality: '.$country,
+            ! empty($data['whatsapp']) ? 'WhatsApp: '.$data['whatsapp'] : null,
+        ]));
+        $payload = ['category' => 'advisory', 'name' => $data['name'], 'email' => $data['email'], 'phone' => $data['whatsapp'] ?? null, 'message' => $message,
+            'contact_preference' => ! empty($data['whatsapp']) ? 'phone' : 'email'];
+        $consent = 'I agree that SAS may contact me about this enquiry by email'.(! empty($data['whatsapp']) ? ' or on the WhatsApp number I gave' : '').'.';
+
+        [$enquiry] = $this->record($request, $payload, $consent);
+
+        return response()->json(['ok' => true, 'reference' => $enquiry->reference]);
+    }
+
+    /** Stores an enquiry, then queues the emails. @return array{0: Enquiry, 1: string} the enquiry and its private view link */
+    private function record(Request $request, array $data, string $consentText): array
+    {
         $token = Str::random(40);
         $duplicate = Enquiry::where('email', $data['email'])->where('category', $data['category'])->where('created_at', '>', now()->subDays(7))->first();
 
-        $enquiry = DB::transaction(function () use ($data, $request, $token, $duplicate) {
+        $enquiry = DB::transaction(function () use ($data, $request, $token, $duplicate, $consentText) {
             $enquiry = new Enquiry([
                 'category' => $data['category'], 'name' => $data['name'], 'email' => $data['email'], 'phone' => $data['phone'] ?? null,
                 'message' => $data['message'], 'contact_preference' => $data['contact_preference'],
                 'cycle_id' => $data['cycle_id'] ?? null,
                 'service_id' => ! empty($data['service']) ? Service::where('slug', $data['service'])->value('id') : null,
-                'consent_text' => 'I agree that SAS may contact me about this enquiry by '.$data['contact_preference'].'.',
+                'consent_text' => $consentText,
                 'consent_at' => now(),
                 'view_token_hash' => hash('sha256', $token), 'view_token_expires_at' => now()->addDays(30),
             ]);
@@ -85,7 +143,7 @@ class EnquiryController extends Controller
             Mail::to($staff)->queue(new StaffEnquiryAlert($enquiry));
         }
 
-        return redirect()->route('enquiries.thanks')->with('enquiry', ['reference' => $enquiry->reference, 'link' => $link]);
+        return [$enquiry, $link];
     }
 
     public function thanks(Request $request)

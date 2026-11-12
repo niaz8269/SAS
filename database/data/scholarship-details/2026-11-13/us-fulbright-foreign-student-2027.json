@@ -1,0 +1,94 @@
+[{
+  "external_key": "us-fulbright-foreign-student-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://foreign.fulbrightonline.org/about/foreign-student-program", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "Programme overview, placement models, country list"},
+    {"url": "https://foreign.fulbrightonline.org/applicants", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "Benefits, eligibility, restrictions, English test scores, placement models, administering agencies"},
+    {"url": "https://foreign.fulbrightonline.org/apply", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "How to apply through the home-country office; requirements summary"},
+    {"url": "https://foreign.fulbrightonline.org/about/partner-agencies", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "Roles of IIE and AMIDEAST"},
+    {"url": "https://foreign.fulbrightonline.org/host-institutions/foreign-student-program", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "What IIE placement offers: fee waivers, admission, cost-sharing"},
+    {"url": "https://foreign.fulbrightonline.org/host-institutions/foreign-student-program/degree-seeking-student-placement-information", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "Degree-seeking placement overview"},
+    {"url": "https://foreign.fulbrightonline.org/host-institutions/foreign-student-program/degree-seeking-student-placement-information/placement-timeline", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "Month-by-month IIE placement timeline"},
+    {"url": "https://foreign.fulbrightonline.org/host-institutions/foreign-student-program/degree-seeking-student-placement-information/foreign-fulbright-student-information-resources", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "Placement process, funding mix, visa handling"},
+    {"url": "https://foreign.fulbrightonline.org/host-institutions/foreign-student-program/fulbright-program-placement-facts", "publisher": "Fulbright Program (administered by IIE for the U.S. Department of State)", "publisher_type": "government", "note": "Programme administration, J-1 visa and DS-2019"},
+    {"url": "https://fulbrightprogram.org/apply/", "publisher": "Fulbright Program, U.S. Department of State", "publisher_type": "government", "note": "Programme overview, one year or longer, eligibility varies by country"},
+    {"url": "https://fulbrightprogram.org/about/faq-contact/", "publisher": "Fulbright Program, U.S. Department of State", "publisher_type": "government", "note": "FAQ: residence, no age limit, selection by the Fulbright Foreign Scholarship Board, funding sources"}
+  ],
+  "summary": "The Fulbright Foreign Student Program is a U.S. Department of State programme, administered by IIE and AMIDEAST, that lets graduate students, young professionals and artists from abroad study and do research at U.S. universities for one year or longer. It operates in more than 160 countries and about 4,000 foreign students receive awards each year. You apply in your home country to the Fulbright Commission or Foundation or the U.S. Embassy, and the rules, deadlines and award terms differ by country.",
+  "eligibility_notes": "You must be a non-U.S. citizen who lives in your country of nomination when you apply. Dual U.S. citizens are not eligible, and U.S. permanent residents are not eligible. People already in the United States are not eligible. If you are a citizen of one country and a permanent resident of another, you can generally apply from the country where you live if you can hold its passport, but some commissions require applicants to be resident citizens, so ask the office where you live.\n\nYou need the equivalent of a U.S. bachelor's degree with a good academic record by the programme start date, and you must be fluent in English. The page lists these English scores for the Foreign Student Program: paper TOEFL 550 (recommended, no less than), internet-based TOEFL 79 to 80, or IELTS overall 6.5. Scores can be sent to IIE using institution code 2326.\n\nThe programme has no age limit. All fields, including arts, sciences, engineering and technology, are eligible, but you cannot apply for programmes with clinical requirements such as dentistry, medicine, pharmacy or nursing; public health, global health and nursing administration are allowed. Grants do not fund study in third countries (for example a Nigerian citizen cannot get a grant to study in Norway).\n\nOnly residents of countries listed in the country drop-down on the Fulbright site can apply. Eligibility and selection rules differ by country and are set by the home-country Fulbright office. Applicants from some Middle East and North Africa countries (Algeria, Bahrain, Egypt, Iraq, Jordan, Lebanon, Libya, Morocco, Tunisia, the UAE, the West Bank and Gaza, and Yemen) are sent to a separate AMIDEAST page.",
+  "age_experience_notes": "No age limit. The pages do not state a work experience requirement for the Foreign Student Program, but individual countries may add requirements.",
+  "funding_summary": "The official pages do not itemise the grant. They list four benefits: funding support, J-1 visa sponsorship, a health benefit plan and enrichment activities. Funding varies widely by country and each grant is individualised; students are typically funded through a mix of grant funding, university support and personal funds, and many students' needs are not covered by the grant alone. IIE reports negotiating cost-sharing from universities in the first year, generally renewed at the same or higher rates in later years. The pages give no amounts and no standard grant length beyond 'one year or longer'.",
+  "programmes_note": "Master's or doctoral study and research at U.S. campuses, in almost all fields. Excluded fields are those with clinical requirements such as dentistry, medicine, pharmacy and nursing (public health and nursing administration are permitted), and IIE says certain fields that do not fit J-visa rules are not placed. The pages do not list individual programmes.",
+  "institutions_note": "IIE places candidates at colleges and universities in all 50 states and the District of Columbia; no list of named universities is published. Under IIE-Placement, IIE applies to institutions for you and negotiates funding. Under Self-Placement you apply to universities yourself and secure your own admission and funding. Student participants generally propose their own host institution. Which route applies depends on your country, so ask your home-country office.",
+  "levels": [
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {
+        "detail": "Master's study and research at a U.S. university; most fields except clinical programmes. Programme length is not stated beyond 'one year or longer'. IIE seeks full or conditional admission to master's programmes.",
+        "source_text": "Master's or Doctorate study and research at U.S. campuses",
+        "url": "https://foreign.fulbrightonline.org/applicants"
+      },
+      "programmes": []
+    },
+    {
+      "code": "doctorate",
+      "confirmed": true,
+      "summary": {
+        "detail": "Doctoral study and research at a U.S. university, or a pre-doctoral research affiliation; most fields except clinical programmes. Duration of funding is not stated.",
+        "source_text": "Master's or Doctorate study and research at U.S. campuses",
+        "url": "https://foreign.fulbrightonline.org/applicants"
+      },
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": "https://foreign.fulbrightonline.org/applicants",
+  "benefits": [
+    {"type": "other", "coverage": "covered", "limit_text": "Funding support for study and research; no amount is stated", "conditions": "Varies by country and by award. Often a mix of the grant, university support (cost-sharing negotiated by IIE) and personal funds. Host universities may give partial or full tuition waivers."},
+    {"type": "tuition", "coverage": "unknown", "limit_text": "Not stated as a fixed benefit; tuition support depends on the grant and on university funding negotiated by IIE", "conditions": "Under Self-Placement the candidate secures any tuition award."},
+    {"type": "insurance", "coverage": "covered", "limit_text": "Health benefit plan", "conditions": "Details are not on the pages read."},
+    {"type": "other", "coverage": "covered", "limit_text": "J-1 visa sponsorship (IIE issues the DS-2019 form and handles the visa process for placed students)", "conditions": null},
+    {"type": "other", "coverage": "covered", "limit_text": "Enrichment activities", "conditions": "Not described on the pages read."},
+    {"type": "travel", "coverage": "unknown", "limit_text": "Travel to the U.S. is not mentioned on the pages read", "conditions": "Ask your home-country Fulbright office."},
+    {"type": "living_allowance", "coverage": "unknown", "limit_text": "Stipend or living allowance is not mentioned on the pages read", "conditions": "Ask your home-country Fulbright office."}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "The Fulbright application and supporting documents, submitted to your home-country Fulbright Commission or Foundation or U.S. Embassy by its country or award deadline. The document list is set by each country's office.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "degree_certificate", "text": "Proof that you hold, or will hold by the programme start date, the equivalent of a U.S. bachelor's degree with a good academic record (exact documents set per country).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "language_certificate", "text": "English proof: paper TOEFL 550, internet-based TOEFL 79 to 80, or IELTS 6.5 overall; recent scores can be sent to IIE with institution code 2326.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "University application materials, test scores, fees and deposits for each school, handled by you.", "conditional_rule": "Self-Placement route only", "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Find your country's Fulbright office", "detail": "Choose your country in the drop-down on the Fulbright site to see whether it takes part and who to apply to: the binational Fulbright Commission or Foundation, or the U.S. Embassy. If your country is not listed you cannot apply. Eligibility, deadlines and award terms vary by country and award.", "source_url": "https://foreign.fulbrightonline.org/apply"},
+    {"phase": "apply", "title": "Submit your Fulbright application at home", "detail": "Send the application and supporting documents to your home-country office by its deadline. Applications are not made directly to IIE. Ask the office whether your country uses IIE-Placement or Self-Placement.", "source_url": "https://foreign.fulbrightonline.org/applicants"},
+    {"phase": "apply", "title": "Prepare English test scores", "detail": "Show English fluency with paper TOEFL 550, internet-based TOEFL 79 to 80, or IELTS 6.5. Scores can be sent to IIE with institution code 2326. Under IIE-Placement, IIE may recommend additional testing.", "source_url": "https://foreign.fulbrightonline.org/applicants"},
+    {"phase": "selection", "title": "Home-country selection", "detail": "Selection happens in your home country and is merit-based; factors may include academic qualifications, project feasibility, leadership and potential for lasting impact. Commissions and Embassies recommend candidates, and the Fulbright Foreign Scholarship Board (12 members appointed by the President) makes final selections.", "source_url": "https://fulbrightprogram.org/about/faq-contact/"},
+    {"phase": "selection", "title": "University placement by IIE or by you", "detail": "Under IIE-Placement the IIE team reviews selected candidates' applications (typically September to October), applies to programmes on their behalf (October to December), negotiates university funding and coordinates any interviews (January to March), and announces admissions decisions as they arrive (February to April). The IIE advisor then recommends a placement, and the final decision is made by the candidate or the sponsor depending on home-country policy. Under Self-Placement you apply to universities yourself and secure admission and funding.", "source_url": "https://foreign.fulbrightonline.org/host-institutions/foreign-student-program/degree-seeking-student-placement-information/placement-timeline"},
+    {"phase": "after_award", "title": "Placement is finalised and grant papers prepared", "detail": "IIE finalises placements for candidates in April to June, and the grant documentation, called the Fulbright Terms of Appointment, is prepared in May to June. In July and August IIE updates final tuition and financial support figures.", "source_url": "https://foreign.fulbrightonline.org/host-institutions/foreign-student-program/degree-seeking-student-placement-information/placement-timeline"},
+    {"phase": "after_award", "title": "Travel to the U.S. on a J-1 visa", "detail": "Fulbright students enter the U.S. on an exchange visitor (J-1) visa sponsored under the programme. IIE issues the DS-2019 form needed for the visa application and handles the visa process for students it places. Grantees also join enrichment activities and a health benefit plan.", "source_url": "https://foreign.fulbrightonline.org/host-institutions/foreign-student-program/fulbright-program-placement-facts"}
+  ],
+  "not_stated": [
+    "Stipend, tuition, travel and insurance amounts, and the grant length",
+    "Application opening dates and deadlines (they are set by each country's office; the pages read give none)",
+    "Documents required in the application (set per country)",
+    "Selection process details per country, and whether interviews are held at home",
+    "Obligations after the award, such as the J-1 two-year home residency rule, return, or reporting",
+    "Details of the health benefit plan and the enrichment activities",
+    "Work restrictions and dependants",
+    "Minimum academic result (only 'good academic record' is stated)",
+    "Numbers of awards per country"
+  ],
+  "fetch_problems": [
+    "The country-specific application pages (set by each Commission or Embassy) were not opened because the Fulbright site gives them only through a country drop-down; no single country was assigned to this record.",
+    "The /candidates page showed a password prompt, so restricted candidate information could not be read.",
+    "The timeline graphic on the placement timeline page is not available as text."
+  ],
+  "notes": [
+    "The stored English-test line 'TOEFL or IELTS, institution code 2326' is confirmed; the minimum scores (550 / 79-80 / 6.5) were added from the official applicants page.",
+    "The applicants page says dual citizens (with U.S. citizenship) are ineligible; the FAQ says a citizen of one country who is a permanent resident of another can generally apply from the country of residence if allowed its passport. These are different situations.",
+    "The country drop-down lists Gaza & West Bank and Kosovo; the stored nationality list says Palestine and omits Kosovo. The list was not re-edited here.",
+    "The placement timeline months describe IIE's usual cycle for IIE-placed candidates and may not apply to Self-Placement countries.",
+    "Carried over from stored data: milestones that say 'Depends on your country or route'."
+  ]
+}]

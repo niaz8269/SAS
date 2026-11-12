@@ -1,0 +1,232 @@
+[
+  {
+    "external_key": "cn-bgs-2026",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html",
+        "publisher": "Beijing Municipal People's Government (international web portal)",
+        "publisher_type": "government",
+        "note": "Official procedures: categories, benefits, eligibility, application, selection, annual review"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=819",
+        "publisher": "Peking University International Student Division",
+        "publisher_type": "university",
+        "note": "How new graduate applicants are considered, results timing"
+      },
+      {
+        "url": "https://isd.pku.edu.cn/en/detail.php?id=835",
+        "publisher": "Peking University International Student Division",
+        "publisher_type": "university",
+        "note": "Current-student round: Categories A, B, C, who can apply, results timing"
+      },
+      {
+        "url": "https://is.buaa.edu.cn/en/info/1003/3572.htm",
+        "publisher": "Beihang University",
+        "publisher_type": "university",
+        "note": "New postgraduate application by form"
+      },
+      {
+        "url": "https://isc.bit.edu.cn/admissionsaid/financialaid/scholarships/958501cc93dd4cf285d0e903f24432da.htm",
+        "publisher": "Beijing Institute of Technology",
+        "publisher_type": "university",
+        "note": "Categories and document list used by one institution"
+      },
+      {
+        "url": "https://osao.bfsu.edu.cn/info/2472/6852.htm",
+        "publisher": "Beijing Foreign Studies University",
+        "publisher_type": "university",
+        "note": "Round for enrolled students: category amounts, selection, results"
+      },
+      {
+        "url": "https://osao.bfsu.edu.cn/info/2602/7102.htm",
+        "publisher": "Beijing Foreign Studies University",
+        "publisher_type": "university",
+        "note": "2026 round with 20 places: coverage, eligibility, review stages"
+      }
+    ],
+    "summary": "The Beijing Government Scholarship is paid by the Beijing municipal government to support outstanding international students who study or do research at higher education institutions and research institutes in Beijing. It is for non-Chinese citizens, both new and already enrolled students, at degree level (bachelor's, master's, doctoral) and non-degree level (preparatory, visiting and research scholars). Students apply through their host institution, which reviews applications, decides who receives an award and puts each recipient in Category A, B or C. Each category covers different components of cost.",
+    "eligibility_notes": "Applicants must not be Chinese citizens, must be friendly toward China and must be in good physical and mental health. Newly admitted students and students already enrolled can apply, through their host institution. They must also pass that institution's admission assessments or entrance exams and meet its academic and language requirements.\n\nEducation level required: bachelor's and preparatory - senior secondary education or equivalent (preparatory applicants also need a pre-admission letter from the admitting institution); master's - bachelor's degree or equivalent; doctoral - master's degree or equivalent; visiting and inter-university exchange students - bachelor's-level qualification or study as an undergraduate or master's student; research scholars - master's degree or above, or associate professor or above.\n\nLanguage: Chinese-taught preparatory and visiting programmes need HSK level 3 or above; Chinese-taught degree programmes need HSK level 4 or above. For programmes taught in another language, applicants must show a high level of proficiency with a valid, widely recognised certificate. For English-taught programmes, Category A applicants need TOEFL at least 85, IELTS at least 6.5 or an equivalent.\n\nAcademic results: Category A - graduated from a university in the QS World University Rankings top 500 or from a key senior secondary school, with an average mark of at least 85 or a GPA of at least 3.6 (current students need an average of at least 85 in the previous year). Categories B and C - graduated from a key university or research institute, or a key senior secondary school, with an average mark of at least 80 or a GPA of at least 3.0 (current students need at least 80 in the previous year). Research scholars generally come from QS top-500 universities. Applicants below these marks may give other evidence of academic or research ability; the institution decides collectively.\n\nRecommendations: master's, doctoral and research-scholar applicants need two letters in Chinese or English from referees with the title of associate professor or above.\n\nApplicants may not hold another scholarship from a Chinese government body, social organisation or the admitting institution at the same time; one-off awards are excluded. One Beijing university also states that the scholarship there is only for self-financed students and only for programmes with regular tuition fees.",
+    "age_experience_notes": "Age limits at enrolment: bachelor's 25 or under; preparatory 24 or under; master's 35 or under; doctoral 40 or under; visiting and exchange students 45 or under; research scholars 50 or under. No work experience requirement is stated, except that research scholars need a master's degree or an associate professor post or above.",
+    "funding_summary": "Funding is by category. Category A covers tuition, accommodation, living expenses and comprehensive medical insurance. Category B covers tuition, accommodation and comprehensive medical insurance. Category C covers tuition and comprehensive medical insurance. Degree students are funded for no longer than the standard length of the programme (doctoral students who cannot finish on time for special reasons may apply for an extension). Preparatory students are funded for one academic year; visiting and exchange students for up to one academic year at master's level; research scholars for up to one academic year at doctoral level. Every recipient is reviewed each year.",
+    "programmes_note": "Degree programmes (bachelor's, master's, doctoral) and non-degree programmes (preparatory students, visiting students including inter-university exchange students, and research scholars) at Beijing institutions. The category given depends on the level of study and the discipline. No fields of study are listed on the official page; the list of programmes is that of each host institution, and applicants find institutions and programmes in the Studying in Beijing section of the Beijing international web portal. Two universities add limits: at one, the scholarship is only for programmes with regular tuition fees; at another, only for its Beijing campus.",
+    "institutions_note": "Higher education institutions and research institutes in Beijing take part; the official page lists no participating institutions. Institutions whose own pages describe a 2026 round: Peking University (new graduate and current students), Beihang University (new postgraduate students), Beijing Institute of Technology (Beijing campus only), Beijing Foreign Studies University (enrolled students). The international web portal also names 20 Beijing universities in a general list of places to study, which is not a list of institutions offering this award. This is not a complete list.",
+    "levels": [
+      {
+        "code": "bachelor",
+        "confirmed": true,
+        "summary": {
+          "detail": "Degree study in Beijing, funded for no more than the standard length of the programme. Age 25 or under at enrolment; senior secondary education or equivalent. Chinese-taught degree programmes need HSK level 4; English-taught Category A applicants need TOEFL 85 or IELTS 6.5 or equivalent. One Beijing university says in principle only Category C is open to bachelor's and master's students.",
+          "source_text": "Undergraduate: senior secondary education; age 25 or under",
+          "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+        },
+        "programmes": []
+      },
+      {
+        "code": "master",
+        "confirmed": true,
+        "summary": {
+          "detail": "Degree study in Beijing, funded for no more than the standard length of the programme. Age 35 or under; bachelor's degree or equivalent; two recommendation letters from associate professors or above. Peking University states a master's programme length of 2 to 3 years for its new-student round.",
+          "source_text": "Master's: bachelor's degree or equivalent; age 35 or under",
+          "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+        },
+        "programmes": []
+      },
+      {
+        "code": "doctorate",
+        "confirmed": true,
+        "summary": {
+          "detail": "Degree study in Beijing, funded for no more than the standard length of the programme; an extension is possible if a doctoral student cannot finish on time for special reasons. Age 40 or under; master's degree or equivalent; two recommendation letters. Peking University states a doctoral length of 4 to 5 years for its new-student round.",
+          "source_text": "Doctoral: master's degree or equivalent; age 40 or under",
+          "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+        },
+        "programmes": []
+      },
+      {
+        "code": "diploma",
+        "confirmed": true,
+        "summary": {
+          "detail": "Non-degree categories: preparatory students (funded for one academic year, age 24 or under, pre-admission letter needed), visiting students including inter-university exchange students (up to one academic year, funded at master's level, age 45 or under) and research scholars (up to one academic year, funded at doctoral level, age 50 or under, two recommendation letters).",
+          "source_text": "Non-degree students: preparatory, visiting, research scholars",
+          "url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+        },
+        "programmes": []
+      }
+    ],
+    "levels_not_offered": [],
+    "benefits": [
+      {
+        "type": "tuition",
+        "coverage": "covered",
+        "limit_text": "Recipients are exempt from tuition",
+        "conditions": "In all categories. Peking University's new-student page describes the award there as a tuition waiver only (full or partial); this differs from the city page."
+      },
+      {
+        "type": "accommodation",
+        "coverage": "partial",
+        "limit_text": "Categories A and B: on-campus accommodation fees are waived; Category C: not listed",
+        "conditions": "With the host institution's approval, students living off campus receive an allowance, paid monthly or quarterly at the applicable standard. Example from one university: RMB 700 a month for bachelor's and master's, RMB 1,000 for doctoral."
+      },
+      {
+        "type": "living_allowance",
+        "coverage": "partial",
+        "limit_text": "Category A only; paid regularly by the host institution",
+        "conditions": "The city page states no amount. One university's page for enrolled students gives RMB 2,500 a month (bachelor's), RMB 3,000 (master's) and RMB 3,500 (doctoral)."
+      },
+      {
+        "type": "insurance",
+        "coverage": "covered",
+        "limit_text": "Comprehensive medical insurance in all categories",
+        "conditions": "Either paid to the recipient at registration or bought by the institution for the recipient. One university states RMB 800 per person."
+      },
+      {
+        "type": "travel",
+        "coverage": "unknown",
+        "limit_text": "Not mentioned on the official page",
+        "conditions": "The source does not say whether international travel is covered."
+      }
+    ],
+    "requirements": [
+      {
+        "document_type": "reference",
+        "text": "Two recommendation letters in Chinese or English from referees of associate professor level or above.",
+        "conditional_rule": "master's, doctoral and research-scholar applicants",
+        "mandatory": true
+      },
+      {
+        "document_type": "language_certificate",
+        "text": "Valid, widely recognised certificate: HSK for Chinese-taught programmes (level 3 for preparatory and visiting, level 4 for degree); TOEFL, IELTS or equivalent for English-taught programmes (Category A: TOEFL 85 or IELTS 6.5).",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "transcript",
+        "text": "Academic records showing the required average mark or GPA (official transcripts; Peking University warns that unofficial copies such as screenshots can affect the result).",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Pre-admission letter from the admitting institution.",
+        "conditional_rule": "preparatory students",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Other documents are set by each institution. One university's list (applying to its Beijing campus) names: passport copy, notarized highest degree and transcript, CV, personal statement and study plan, two recommendation letters, a recommendation form from the supervisor, physical examination record with blood test report, language proof and a non-criminal record. The official city page gives no full list.",
+        "conditional_rule": "per institution",
+        "mandatory": false
+      }
+    ],
+    "application_steps": [
+      {
+        "phase": "apply",
+        "title": "Find an institution and programme in Beijing",
+        "detail": "Use the Studying in Beijing section of the Beijing international web portal to see which institutions and programmes take part. The programme details and the documents needed come from the institution you choose.",
+        "source_url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+      },
+      {
+        "phase": "apply",
+        "title": "Apply to the institution, not to the city",
+        "detail": "Newly admitted and enrolled students apply directly to the host institution, which sets its own deadline and publishes it. All materials must reach it before that deadline. Routes differ: Peking University evaluates new graduate applicants automatically from their admission application; Beihang asks new postgraduates to email a scholarship form after submitting their online application; Beijing Foreign Studies University has enrolled students apply in its own student portal in a set window.",
+        "source_url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+      },
+      {
+        "phase": "apply",
+        "title": "Prepare academic proof and language proof",
+        "detail": "Have transcripts that show the required average or GPA, a language certificate at the level for your programme, and two recommendation letters if you are a master's, doctoral or research-scholar applicant. Applicants below the marks may add other evidence of academic or research ability.",
+        "source_url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+      },
+      {
+        "phase": "selection",
+        "title": "The institution evaluates applications",
+        "detail": "Each institution sets its own procedure: it reviews materials and runs exams or assessments. Applicants are judged on academic performance, overall performance and development potential. Beijing Foreign Studies University describes three stages: personal application, faculty recommendation and comprehensive university review.",
+        "source_url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+      },
+      {
+        "phase": "selection",
+        "title": "The institution decides recipients and categories",
+        "detail": "The institution decides the recipient list and the category (A, B or C) of each recipient, then notifies applicants. Peking University says its new-student decisions are sent by email around July and August and its current-student decisions around October; Beijing Foreign Studies University publishes its winner list on its website after a notice period without objections.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=819"
+      },
+      {
+        "phase": "after_award",
+        "title": "Receive the benefits at registration",
+        "detail": "Tuition is waived. Accommodation fees on campus are waived for Categories A and B, or an allowance is paid with approval for living off campus. Living expenses (Category A) are paid regularly by the institution. Medical insurance is either paid to the recipient at registration or bought by the institution.",
+        "source_url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+      },
+      {
+        "phase": "after_award",
+        "title": "Pass the annual review",
+        "detail": "Every recipient is reviewed each year by the host institution on academic performance, attitude to study, attendance and conduct. A recipient who fails has the scholarship suspended or revoked from the next academic year. After the review, institutions can change categories through their own decisions; Peking University lets Category C holders in their second year or above apply to move up to B or A.",
+        "source_url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+      },
+      {
+        "phase": "after_award",
+        "title": "Do not hold other scholarships",
+        "detail": "Recipients cannot hold another scholarship from a Chinese government body, social organisation or the admitting institution at the same time, except one-off awards. Materials must be truthful: Peking University says false materials lead to disqualification.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=835"
+      }
+    ],
+    "not_stated": [
+      "Participating institutions (no official list on the city page).",
+      "Fields of study (set by each institution).",
+      "A single deadline (each institution sets its own).",
+      "Stipend, allowance and insurance amounts on the official city page (amounts above come from a university's own page for enrolled students).",
+      "Whether international travel is covered.",
+      "The number of awards in total (one university states 20 places for its own 2026 round).",
+      "Full document list (set by each institution)."
+    ],
+    "fetch_problems": [
+      "Beijing Normal University admissions page: opened but gave no scholarship detail (navigation link only).",
+      "The city page for the Chinese Government Scholarship in the Beijing portal returned HTTP 404.",
+      "Beihang University's separate procedure document for categories and amounts was not read."
+    ],
+    "notes": [
+      "Peking University's new-student page says the Beijing Government Scholarship there gives a tuition waiver only (full or partial), and its single application is also considered for the Chinese Government Scholarship and a university scholarship, with only one awarded. Its current-student page lists Categories A, B and C like the city page. Beijing Foreign Studies University's 2026 round with 20 places covers tuition and medical insurance. Institutions therefore do not all offer every category.",
+      "Stored funding_type is 'other'",
+      "Stored universities field lists Peking University, Beihang University and Beijing Normal University; Beijing Normal University gave no BGS information on the page read, while Beijing Institute of Technology and Beijing Foreign Studies University did."
+    ]
+  }
+]

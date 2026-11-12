@@ -1,0 +1,74 @@
+[
+  {
+    "external_key": "za-uct-international-refugee-pg-2027",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {"url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/applying-funding", "publisher": "University of Cape Town, Postgraduate Funding Office", "publisher_type": "university", "note": "How to apply for International/Refugee scholarships: deadline, form, referee report, Section E, durations, appeals"},
+      {"url": "https://uct.ac.za/students/fees-funding-postgraduate-degree-funding-bursaries-scholarships/international-and-refugee-scholarships", "publisher": "University of Cape Town, Postgraduate Funding Office", "publisher_type": "university", "note": "Main scholarship page: eligibility, preference for senior candidates, supplementary value, notice that the 2026 call would not open, funding-tenure limits"},
+      {"url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/managing-funding", "publisher": "University of Cape Town, Postgraduate Funding Office", "publisher_type": "university", "note": "Payment, renewal, progress reports, deferral of awards"},
+      {"url": "https://www.uct.ac.za/sites/default/files/media/documents/uct-handbook-14-2027-final.pdf", "publisher": "University of Cape Town (Handbook 14, 2027 edition)", "publisher_type": "university", "note": "General rules for UCT postgraduate funding: international and refugee students, admission, employment limit, tenure, appeals"},
+      {"url": "https://uct.ac.za/students/fees-funding-postgraduate-degree-funding-faqs/postgraduate-degree-funding-faqs", "publisher": "University of Cape Town, Postgraduate Funding Office", "publisher_type": "university", "note": "General funding FAQ: result timing in December, award acceptance, cancellation rules (written for the main PG funding application)"},
+      {"url": "https://uct.ac.za/postgraduate-hub/apply-uct-application-process/do-you-need-funding", "publisher": "University of Cape Town, Postgraduate Hub", "publisher_type": "university", "note": "General advice: apply for admission first, have funding secured before registration"}
+    ],
+    "summary": "A limited number of competitive postgraduate scholarships from the University of Cape Town for international and refugee students, for study in any discipline. They are supplementary: they add to, and do not replace, the money a student must already have for the cost of study. They can be held for one year of Honours, two years of Master's and three years of doctoral study, with renewal depending on satisfactory progress.",
+    "eligibility_notes": "The scholarships are for international students and refugees who want to study at postgraduate level at UCT (Honours, Master's or doctoral), in any discipline. The applicant's country of origin does not affect the decision. Refugee applicants must provide proof of refugee status.\n\nYou must apply for full-time admission to UCT through the Admissions Office or the Faculty Office. A funding application cannot be considered unless you have applied for admission. A funding offer is not an offer of a place to study, and the reverse is also true; the two processes are separate.\n\nThe scholarships are supplementary, so you must be able to pay for your studies from other sources as well. UCT says every effort should be made to find outside funding too. UCT states there is no guarantee of funding because the budget is limited and awards are competitive, and the main scholarship page says preference is given to senior candidates.\n\nPeople employed full time (more than 20 hours a week) are not eligible for UCT postgraduate funding. The funding rules in the handbook exclude some programmes from UCT-administered awards, for example the fourth year of a bachelor's degree, postgraduate diplomas and certificates, the PGCE, LLB and BArch, and other part-time or professional programmes it names.\n\nUCT cannot extend funding for applicants who are out of their funding tenure, which means third-year Master's students and above, and fourth-year doctoral students and above.",
+    "age_experience_notes": "",
+    "funding_summary": "The scholarships are supplementary and contribute towards the cost of attendance; they do not cover the full cost of study. The pages I read do not give an amount. They can be held for one year at Honours level, two years at Master's level and three years at doctoral level. They are renewable for the length of the course, but renewal is not automatic: it needs a progress report signed by the supervisor and depends on satisfactory academic progress. Awards are usually paid into the student's UCT fees account, and any amount above the fees owed is paid out to the student's bank account.",
+    "programmes_note": "Postgraduate study only, in any discipline: Honours (one year of support), Master's (two years) and doctoral (three years). Master's by Research and doctoral applicants who already have a prospective or established supervisor must complete Section E of the application form. UCT lists its postgraduate programmes through its faculties, and you must apply separately for admission to the programme you want.",
+    "institutions_note": "University of Cape Town only.",
+    "levels": [
+      {
+        "code": "master",
+        "confirmed": true,
+        "summary": {"detail": "Support can be held for the first and second years of Master's study, renewable if progress is satisfactory. Master's by Research applicants with a prospective or established supervisor complete Section E of the form. Any discipline. A third-year Master's student is out of funding tenure.", "source_text": "two years for a master's degree", "url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/applying-funding"},
+        "programmes": []
+      },
+      {
+        "code": "doctorate",
+        "confirmed": true,
+        "summary": {"detail": "Support can be held for the first, second and third years of doctoral study, renewable if progress is satisfactory. Doctoral applicants with a prospective or established supervisor complete Section E of the form. Any discipline. A fourth-year doctoral student is out of funding tenure.", "source_text": "three years for a doctoral degree", "url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/applying-funding"},
+        "programmes": []
+      }
+    ],
+    "levels_not_offered": ["bachelor"],
+    "benefits": [
+      {"type": "other", "coverage": "partial", "limit_text": "Supplementary contribution towards the cost of attendance; amount not stated", "conditions": "Honours: one year. Master's: two years. Doctoral: three years. Renewal needs a signed progress report and satisfactory progress. Combined UCT funding is capped at an annual limit per level in the handbook (Honours R190 000, Master's R254 000, doctoral R315 000); students who exceed it may have to return funds."},
+      {"type": "tuition", "coverage": "partial", "limit_text": "Paid into the UCT fees account; does not cover the full fees", "conditions": "If the award is smaller than the total fees, the student owes UCT the balance. If it is larger, the remainder is paid to the student's bank account."},
+      {"type": "living_allowance", "coverage": "unknown", "limit_text": "Not stated as a separate item", "conditions": "The handbook says UCT funding is treated as an award for the student's own tuition and living costs."},
+      {"type": "other", "coverage": "not_covered", "limit_text": "Cost of dependents; student fee debt (except in rare cases)", "conditions": "Handbook: UCT cannot assist with the cost of dependents, and UCT awards usually cannot be used to clear fee debt."}
+    ],
+    "requirements": [
+      {"document_type": "other", "text": "The International/Refugee scholarship application form, completed, with the supporting documents the form asks for; sent by email to the UCT Postgraduate Funding Office (the full document list is not printed on the pages I read).", "conditional_rule": "", "mandatory": true},
+      {"document_type": "reference", "text": "A referee report, emailed separately to the Postgraduate Funding Office with the subject line 'Student Name - International/Refugee scholarship referee report'.", "conditional_rule": "", "mandatory": true},
+      {"document_type": "other", "text": "Section E of the form, completed.", "conditional_rule": "Master's by Research or doctoral applicants who have a prospective or established supervisor", "mandatory": true},
+      {"document_type": "other", "text": "Proof of refugee status.", "conditional_rule": "Applicants applying as refugees", "mandatory": true},
+      {"document_type": "other", "text": "Evidence that you have applied for admission to UCT (a separate application through the Admissions Office or the Faculty Office).", "conditional_rule": "", "mandatory": true}
+    ],
+    "application_steps": [
+      {"phase": "apply", "title": "Apply for admission to UCT first", "detail": "Apply for full-time postgraduate admission through the UCT Admissions Office or the Faculty Office. Funding committees only consider people who have applied for admission, but you do not have to wait for an admission decision before applying for funding.", "source_url": "https://www.uct.ac.za/sites/default/files/media/documents/uct-handbook-14-2027-final.pdf"},
+      {"phase": "apply", "title": "Complete the scholarship form by 30 August", "detail": "The deadline stated on the UCT application guidance page is 30 August of the year before you study. Complete the International/Refugee form with its supporting documents and email them to the Postgraduate Funding Office. There is one call a year; late or incomplete applications are not accepted. Master's by Research and doctoral applicants with a supervisor also complete Section E.", "source_url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/applying-funding"},
+      {"phase": "apply", "title": "Arrange the referee report", "detail": "Ask your referee to email the referee report to the Postgraduate Funding Office with the exact subject line 'Student Name - International/Refugee scholarship referee report'. Refugee applicants add proof of refugee status. Make sure you also have other money for your studies, because the scholarship is supplementary.", "source_url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/applying-funding"},
+      {"phase": "selection", "title": "Competitive selection by UCT", "detail": "Awards are made competitively, and the main scholarship page says preference is given to senior candidates. Country of origin does not matter. The pages do not describe the scoring or the committee. UCT's general postgraduate funding page says results for UCT-sourced awards are communicated in December of the application year; that page is written for the main funding application, not specifically for this scholarship.", "source_url": "https://uct.ac.za/students/fees-funding-postgraduate-degree-funding-bursaries-scholarships/international-and-refugee-scholarships"},
+      {"phase": "selection", "title": "If you are not awarded, you may appeal", "detail": "Appeals are allowed only in exceptional circumstances, such as changed financial circumstances, late applications with documented reasons (for example medical reasons), deferral of an award, extension of funding tenure or a change of programme. Send a Financial Aid Appeal form with documents to the Postgraduate Funding Office. The appeal must be in writing and strongly motivated.", "source_url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/applying-funding"},
+      {"phase": "after_award", "title": "Register at UCT and receive the award", "detail": "You can only claim the award once you have been accepted and registered in the department for the programme you applied for. Most awards are paid after a claim form sent to your UCT email, into your student fees account. If your award is smaller than your fees you pay UCT the balance; if you cannot start, you can ask the Postgraduate Funding Office to defer the award.", "source_url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/managing-funding"},
+      {"phase": "after_award", "title": "Renew each year with a progress report", "detail": "Renewal is not automatic. The Postgraduate Funding Office emails instructions and a progress report that your supervisor must sign, even if your marks are good. The award can continue for up to one year of Honours, two years of Master's and three years of doctoral study if progress is satisfactory.", "source_url": "https://uct.ac.za/postgraduate-hub/fees-funding-funding-support/managing-funding"}
+    ],
+    "not_stated": [
+      "The value (amount) of the scholarship",
+      "The full list of documents for the application form (Sections A to D are not described)",
+      "How candidates are scored and who sits on the committee",
+      "The date results are announced for this specific scholarship",
+      "Any minimum academic result or age limit",
+      "Whether a call is open for 2027 study (see notes)"
+    ],
+    "fetch_problems": [
+      "The UCT handbook PDF layout is in columns, so the International and Refugee paragraph was read in a short form only.",
+      "The postgraduate funding applications-and-requirements page returned a 503 error page when fetched and could not be read."
+    ],
+    "notes": [
+      "Source pages disagree about the current call. The older main scholarship page says the call for 2026 applications would not open because of funding constraints. The newer Postgraduate Hub page and the 2027 handbook describe a deadline of 30 August of the year before study and do not mention a 2027 call being cancelled or open. Editors should confirm with UCT whether any call exists for 2027 study (the 30 August 2026 date has already passed).",
+      "The 2027 handbook says most UCT awards, and the online funding application, are for South African citizens and permanent residents; international and refugee students use their own form.",
+      "Stored text said 'Value not stated' and 'country of origin does not affect eligibility': both are confirmed. The stored text 'People employed full time (more than 20 hours a week) are not eligible' is confirmed in the handbook."
+    ]
+  }
+]

@@ -83,9 +83,19 @@ class ImportOfferings extends Command
                     $totals['cycles']++;
                     $totals['rows'] += count($rows);
                     if (! $dry) {
-                        $cycle->offerings()->delete();
-                        foreach ($rows as $r) {
-                            CycleOffering::create($r);
+                        // Only the levels in the file are replaced. Where the file names fewer programmes for a level than are stored, the stored
+                        // named programmes stay (only that level's summary line is refreshed): a reload must never make a list shorter.
+                        foreach (collect($rows)->groupBy('degree_level_id') as $levelId => $levelRows) {
+                            $stored = CycleOffering::where('cycle_id', $cycle->id)->where('degree_level_id', $levelId);
+                            if ($levelRows->whereNotNull('name')->count() < (clone $stored)->whereNotNull('name')->count()) {
+                                (clone $stored)->whereNull('name')->delete();
+                                $levelRows = $levelRows->whereNull('name');
+                            } else {
+                                $stored->delete();
+                            }
+                            foreach ($levelRows as $r) {
+                                CycleOffering::create($r);
+                            }
                         }
                     }
                 }

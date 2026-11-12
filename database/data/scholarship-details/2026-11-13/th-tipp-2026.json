@@ -1,0 +1,497 @@
+[
+ {
+  "external_key": "th-tipp-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://tica-thaigov.mfa.go.th/en/content/tipp-2027",
+    "publisher": "TICA, Ministry of Foreign Affairs of Thailand",
+    "publisher_type": "government",
+    "note": "TIPP 2026 course list: 22 courses with university, duration and theme, and course detail sheets"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Guidelines_for_TIPP_2026_2.pdf",
+    "publisher": "TICA, Ministry of Foreign Affairs of Thailand",
+    "publisher_type": "government",
+    "note": "Guidelines for TIPP 2026: qualifications, application procedure, documents, selection, conditions, benefits"
+   },
+   {
+    "url": "https://tica-thaigov.mfa.go.th/en/page/99196-guidelines-for-tipp-how-to-apply",
+    "publisher": "TICA, Ministry of Foreign Affairs of Thailand",
+    "publisher_type": "government",
+    "note": "Guidelines page that links the PDF; last updated 6 January 2026"
+   },
+   {
+    "url": "https://tica-thaigov.mfa.go.th/en/page/tipp?menu=605b13abb6f1b76ed31778b2",
+    "publisher": "TICA, Ministry of Foreign Affairs of Thailand",
+    "publisher_type": "government",
+    "note": "What is TIPP: purpose, since 2000, themes"
+   },
+   {
+    "url": "https://tica-thaigov.mfa.go.th/en/page/list-of-eligible-countries-for-tipp?menu=605b13d42a9d1e3f537649e2",
+    "publisher": "TICA, Ministry of Foreign Affairs of Thailand",
+    "publisher_type": "government",
+    "note": "List of eligible countries: points to the three country-list PDFs"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/List_of_countries-territories_eligible_for_Full-support_scholarship_1_1.pdf",
+    "publisher": "TICA, Ministry of Foreign Affairs of Thailand",
+    "publisher_type": "government",
+    "note": "Countries and territories eligible for full-support awards (as of 4 March 2026)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/List_of_countries-territories_eligible_for_Partial-support_scholarship_2_1.pdf",
+    "publisher": "TICA, Ministry of Foreign Affairs of Thailand",
+    "publisher_type": "government",
+    "note": "Countries and territories eligible for partial-support awards (as of 4 March 2026)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/1._MA._Science_for_Sustainable_Local_Development_CMRU.pdf",
+    "publisher": "Chiang Mai Rajabhat University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: Master of Arts Program in Science for Sustainable Local Development"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/2._M.Sc._in_Integrative_Biosciences_and_Innovation_(Postharvest)__KMUTT.pdf",
+    "publisher": "King Mongkut's University of Technology Thonburi (KMUTT)",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. in Integrative Biosciences and Innovation (Postharvest) (International Program)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/3._M.Sc._in_Organic_Agriculture_MJU_TIPP_2026.pdf",
+    "publisher": "Maejo University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. in Organic Agriculture Management and Innovative Agricultural Products (International Program)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/4._แก้ไข_Master_of_Science_Program_in_Veterinary_Public_Heallth__Chiang_Mai_U.pdf",
+    "publisher": "Chiang Mai University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. Program in Veterinary Public Health (International Program)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/5._M.Sc._in_Agriculture_Research_and_Development_(ม._เกษตร_กำแพงแสน).pdf",
+    "publisher": "Kasetsart University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. Program in Agriculture Research and Development (International Program) (Kamphaeng Saen Campus)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/6._M.Sc._in_Health__Environment_and_Safety__WU.pdf",
+    "publisher": "Walailak University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. Program in Health, Environment and Safety"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/9._M.P.H._in_Global_Health_and_One_Health__Chiang_Mai_U..pdf",
+    "publisher": "Chiang Mai University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.P.H. Program in Global Health and One Health (International Program)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/11._MPH__Naresuan_U..pdf",
+    "publisher": "Naresuan University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: Master of Public Health"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/13._Innovation_and_Tropical_Health__Mahasarakham_University.pdf",
+    "publisher": "Mahasarakham University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. Program in Innovation and Tropical Health"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/14._Master_of_Sciences_in_Public_Health_Sciences__CU.pdf",
+    "publisher": "Chulalongkorn University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. in Public Health Sciences"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/16._Master_of_Economics_Program__Chiang_Mai_U..pdf",
+    "publisher": "Chiang Mai University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: Master of Economics Program (International Program)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/17._M.Sc._in_Pharmacy_and_Health_Innovation__WU.pdf",
+    "publisher": "Walailak University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. Program in Pharmacy and Health Innovation (International Program)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/TIPP/PSU_Science-TIPP_Microbiology_2026-2028.pdf",
+    "publisher": "Prince of Songkla University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. Program in Microbiology (International Program)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/19._M.Sc._Industrial_Chemistry_Naresuan_U..pdf",
+    "publisher": "Naresuan University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.Sc. in Industrial Chemistry"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/20._M.B.A._in_Digital_Economics_and_Management_Innovation__Mae_Jo_U..pdf",
+    "publisher": "Maejo University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.B.A. Program in Digital Economics and Management Innovation (International Program)"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/21._M.A._in_Social_Science__Chiang_Mai_U..pdf",
+    "publisher": "Chiang Mai University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.A. Program in Social Science"
+   },
+   {
+    "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Coure_detail_TIPP_2026/22._M.A._in_Diplomacy_and_International_Studies._Rangsit_U..pdf",
+    "publisher": "Rangsit University",
+    "publisher_type": "university",
+    "note": "Course detail sheet: M.A. Program in Diplomacy and International Studies (International Program)"
+   }
+  ],
+  "summary": "The Thailand International Postgraduate Programme (TIPP) is a scholarship framework of the Thailand International Cooperation Agency (TICA), part of the Ministry of Foreign Affairs of Thailand, running since 2000 for people from developing countries. Candidates are nominated by their government. The 2026 round offers 22 courses at Thai universities: 21 master's programmes and one diploma, in six themes such as agriculture and food security, health and wellness, climate resilience, and trade and economy. The award covers tuition, insurance, allowances for living, accommodation, settlement, books and thesis, and in some cases airfare.",
+  "eligibility_notes": "Candidates must be nominated by the National Focal Point for International Development Cooperation (for example the foreign ministry) of a country or territory on the TIPP eligible list, or by the central government agency where they work. Each country or territory can nominate up to three candidates per academic programme.\n\nCandidates should preferably work in the government sector or in the field of the course. They need a bachelor's degree and/or professional experience in a related field, and good English. If English is not their first language and their bachelor's was not taught in English, they must pass an English test under the university's rules. Other conditions follow the university's own regulations.\n\nCandidates must be in good physical and mental condition and must not be pregnant.\n\nThe forms must be completed in English and endorsed by the candidate's supervisor and the National Focal Point.\n\nSelection looks closely at the candidate's background, current government position, and the expected use of the knowledge on return, with attention to geographic spread and gender balance. Full-support countries are: Indonesia, Lao PDR, Malaysia, Myanmar, Philippines, Timor-Leste, Vietnam, China, Mongolia, Bangladesh, Bhutan, India, Nepal, Pakistan, Sri Lanka, Jordan, Iraq, Palestine (West Bank and Gaza Strip), Iran, Lebanon, Kyrgyz Republic, Tajikistan, Uzbekistan, Algeria, Egypt, Djibouti, Eritrea, Morocco, Mauritania, Tunisia, Kenya, Uganda, Tanzania, Comoros, DR Congo, Burundi, Rwanda, South Sudan, Ethiopia, Somalia, South Africa, Zimbabwe, Lesotho, Angola, Zambia, Botswana, Namibia, Eswatini, Malawi, Madagascar, Senegal, Guinea, Guinea-Bissau, Mali, Gambia, Cote d'Ivoire, Sierra Leone, Togo, Burkina Faso, Gabon, Cabo Verde, Liberia, Niger, Nigeria, Benin, Cameroon, Ghana, Central African (as printed), Congo, Equatorial Guinea, Sao Tome and Principe, Chad, Mozambique, Armenia, Moldova, Ukraine, Kosovo, Azerbaijan, Jamaica, Guatemala, Honduras, Nicaragua, Belize, Haiti, Peru, Venezuela, Colombia, Bolivia, Ecuador, El Salvador, Suriname, Paraguay, Papua New Guinea, Vanuatu, Solomon Islands, Fiji, Kiribati, Tonga, Samoa, Tuvalu, Micronesia, Tokelau. Partial-support countries are: Maldives, Kazakhstan, Turkmenistan, Mauritius, Saint Helena, Belarus, Bosnia and Herzegovina, Montenegro, Albania, Turkiye, Georgia, North Macedonia, Serbia, Montserrat, Grenada, Dominican Republic, Dominica, Saint Lucia, Saint Vincent and the Grenadines, Mexico, Cuba, Costa Rica, Panama, Brazil, Guyana, Argentina, Nauru, Niue, Marshall Islands, Palau, Wallis and Futuna. Countries on neither list can apply if they are on the general TIPP eligible list, but then the scholarship covers tuition only; that general list was not found.",
+  "age_experience_notes": "No more than 45 years of age. A bachelor's degree and/or professional experience in a related field is needed; some courses add their own rules, for example Walailak's Health, Environment and Safety course asks for a GPAX of at least 2.75 or 3 years of related work.",
+  "funding_summary": "TICA pays the tuition fee (not the equipment insurance fee, transcript and certificate fee), accident and hospitalisation insurance, a living allowance of 7,000 baht per month, an accommodation allowance of 7,000 or 9,000 baht per month, a 6,000 baht settlement allowance on first arrival, a books allowance of 10,000 baht per year (4 semesters for a master's), and a thesis allowance. Round-trip economy airfare is covered only for awardees from full-support countries. The courses run 1 or 2 years.",
+  "programmes_note": "The 2026 list has 22 courses in six themes: Sufficiency Economy Philosophy for the SDGs; Agriculture and Food Security; Climate Resilience; Health and Wellness; Trade and Economy; Inclusive Development. Most are 2 years; Mahidol's Master of Primary Health Care Management and the Institute of Dermatology diploma are 1 year. The overview page names a seventh theme, Science, Technology and Innovation for Development, which has no course in the 2026 list. The TICA page does not state the teaching language; many course titles say International Program. Awardees must study full time and may not change the programme topic or study plan.",
+  "institutions_note": "Thirteen Thai institutions host the 22 courses: Chiang Mai Rajabhat University, King Mongkut's University of Technology Thonburi, Maejo University, Chiang Mai University, Kasetsart University (Kamphaeng Saen campus), Walailak University, Mahidol University, Naresuan University, Mahasarakham University, Chulalongkorn University, the Institute of Dermatology, Prince of Songkla University and Rangsit University. Each university's own admission rules also apply.",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "21 master's courses at 12 Thai universities, mostly 2 years and 1 year for the Mahidol Primary Health Care Management course. Entry: a bachelor's degree (usually in a related field) plus English proof as the university requires. Candidates must be nominated by their government and be 45 or younger.",
+     "source_text": "TIPP 2026 courses; Guidelines for TIPP",
+     "url": "https://tica-thaigov.mfa.go.th/en/content/tipp-2027"
+    },
+    "programmes": [
+     {
+      "name": "Master of Arts Program in Science for Sustainable Local Development",
+      "institution": "Chiang Mai Rajabhat University",
+      "detail": "Theme: Sufficiency Economy Philosophy for the SDGs. 2 years (June 2026 to May 2028). Entry: a bachelor's degree in any field, under the university's graduate rules. Documents named: application form with medical report, transcript, recommendation letter, English test result.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/1._MA._Science_for_Sustainable_Local_Development_CMRU.pdf"
+     },
+     {
+      "name": "M.Sc. in Integrative Biosciences and Innovation (Postharvest) (International Program)",
+      "institution": "King Mongkut's University of Technology Thonburi (KMUTT)",
+      "detail": "Theme: Agriculture and Food Security. 2 years (August 2026 to December 2028). Entry: a bachelor's degree in biochemical technology, biotechnology, agricultural or other science, or an equivalent background approved by the committee; English proficiency under KMUTT rules. Documents named: application form, transcript, CV, physical and mental health certificates (not over 3 months old), statement of academic background, study plan statement, recommendation letter with institution seal, English test.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/2._M.Sc._in_Integrative_Biosciences_and_Innovation_(Postharvest)__KMUTT.pdf"
+     },
+     {
+      "name": "M.Sc. in Organic Agriculture Management and Innovative Agricultural Products (International Program)",
+      "institution": "Maejo University",
+      "detail": "Theme: Agriculture and Food Security. 2 years (June 2026 to March 2028). Entry: a bachelor's degree in any discipline or equivalent, under the university's rules; international applicants must be approved by the instructor in charge.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/3._M.Sc._in_Organic_Agriculture_MJU_TIPP_2026.pdf"
+     },
+     {
+      "name": "M.Sc. Program in Veterinary Public Health (International Program)",
+      "institution": "Chiang Mai University",
+      "detail": "Theme: Agriculture and Food Security. 2 years (June 2026 to May 2028). Entry: a bachelor's degree in veterinary science or equivalent; other related degrees are considered by the programme committee. English proof dated within 2 years, for example TOEFL iBT 69, IELTS 5.5 or CMU-eTEGS 65.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/4._%E0%B9%81%E0%B8%81%E0%B9%89%E0%B9%84%E0%B8%82_Master_of_Science_Program_in_Veterinary_Public_Heallth__Chiang_Mai_U.pdf"
+     },
+     {
+      "name": "M.Sc. Program in Agriculture Research and Development (International Program) (Kamphaeng Saen Campus)",
+      "institution": "Kasetsart University",
+      "detail": "Theme: Agriculture and Food Security. 2 years, 4 semesters (August 2026 to July 2028). Documents named: application form, bachelor's certificate and transcript showing the graduation date, CV, a conceptual research proposal, recommendation letter.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/5._M.Sc._in_Agriculture_Research_and_Development_(%E0%B8%A1._%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3_%E0%B8%81%E0%B8%B3%E0%B9%81%E0%B8%9E%E0%B8%87%E0%B9%81%E0%B8%AA%E0%B8%99).pdf"
+     },
+     {
+      "name": "M.Sc. Program in Health, Environment and Safety",
+      "institution": "Walailak University",
+      "detail": "Theme: Climate Resilience. 2 years (May 2026 to April 2028). Entry: a bachelor's degree in science, engineering, technology or health science in a related field with a final GPAX of at least 2.75, or at least 3 years of related work experience; other fields considered by the committee. Documents named: application form and medical report, transcripts and degree certificate, English test results (not older than 2 years), passport copy, two recommendation letters, research proposal, 1-inch photo.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/6._M.Sc._in_Health__Environment_and_Safety__WU.pdf"
+     },
+     {
+      "name": "M.Eng. Program in Environmental and Water Resources Engineering",
+      "institution": "Mahidol University",
+      "detail": "Theme: Climate Resilience. 2 years (TICA course page). The course sheet is a scanned image and could not be read.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/7._M.Eng_in_Environment_and_Water_Resources_%E0%B8%A1.%E0%B8%A1%E0%B8%AB%E0%B8%B4%E0%B8%94%E0%B8%A5.pdf"
+     },
+     {
+      "name": "M.Sc. in Smart Grid Technology",
+      "institution": "Naresuan University",
+      "detail": "Theme: Climate Resilience. 2 years (TICA course page). The course sheet is a scanned image and could not be read.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/8._Smart_Grid_Technology__Naresuan_U..pdf"
+     },
+     {
+      "name": "M.P.H. Program in Global Health and One Health (International Program)",
+      "institution": "Chiang Mai University",
+      "detail": "Theme: Health and Wellness. 2 years. Documents named: two application forms, two photos, name-change or marriage documents where relevant, bachelor's transcript with GPA; the original application is posted to the faculty and the university sends its decision by post.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/9._M.P.H._in_Global_Health_and_One_Health__Chiang_Mai_U..pdf"
+     },
+     {
+      "name": "M.Sc. in Mental Health",
+      "institution": "Chiang Mai University",
+      "detail": "Theme: Health and Wellness. 2 years (TICA course page). The course sheet is mostly an image and could not be read.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/10._Master_of_Mental_Health__Chiang_Mai.pdf"
+     },
+     {
+      "name": "Master of Public Health",
+      "institution": "Naresuan University",
+      "detail": "Theme: Health and Wellness. 2 years. Entry: a bachelor's degree in health sciences or a related field (public health, medicine, dentistry, veterinary medicine, pharmacy, nursing, medical technology and similar); final-year students expected to finish before the semester starts may apply.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/11._MPH__Naresuan_U..pdf"
+     },
+     {
+      "name": "Master of Primary Health Care Management",
+      "institution": "Mahidol University",
+      "detail": "Theme: Health and Wellness. 1 year (TICA course page). The course sheet is a scanned image and could not be read.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/12._Primary_Health_Care_Management_%E0%B8%A1._%E0%B8%A1%E0%B8%AB%E0%B8%B4%E0%B8%94%E0%B8%A5.pdf"
+     },
+     {
+      "name": "M.Sc. Program in Innovation and Tropical Health",
+      "institution": "Mahasarakham University",
+      "detail": "Theme: Health and Wellness. 2 years (June 2026 to June 2028). Documents named: degree or certificate, recommendation letters, publications if any, an agreement and approval letter from the embassy.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/13._Innovation_and_Tropical_Health__Mahasarakham_University.pdf"
+     },
+     {
+      "name": "M.Sc. in Public Health Sciences",
+      "institution": "Chulalongkorn University",
+      "detail": "Theme: Health and Wellness. 2 years.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/14._Master_of_Sciences_in_Public_Health_Sciences__CU.pdf"
+     },
+     {
+      "name": "Master of Economics Program (International Program)",
+      "institution": "Chiang Mai University",
+      "detail": "Theme: Trade and Economy. 2 academic years (June 2026 to May 2028).",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/16._Master_of_Economics_Program__Chiang_Mai_U..pdf"
+     },
+     {
+      "name": "M.Sc. Program in Pharmacy and Health Innovation (International Program)",
+      "institution": "Walailak University",
+      "detail": "Theme: Trade and Economy. 2 years (for example June 2026 to April 2028).",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/17._M.Sc._in_Pharmacy_and_Health_Innovation__WU.pdf"
+     },
+     {
+      "name": "M.Sc. Program in Microbiology (International Program)",
+      "institution": "Prince of Songkla University",
+      "detail": "Theme: Trade and Economy. 2 years (June 2026 to May 2028).",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/TIPP/PSU_Science-TIPP_Microbiology_2026-2028.pdf"
+     },
+     {
+      "name": "M.Sc. in Industrial Chemistry",
+      "institution": "Naresuan University",
+      "detail": "Theme: Trade and Economy. 2 years (June 2026 to May 2028).",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/19._M.Sc._Industrial_Chemistry_Naresuan_U..pdf"
+     },
+     {
+      "name": "M.B.A. Program in Digital Economics and Management Innovation (International Program)",
+      "institution": "Maejo University",
+      "detail": "Theme: Trade and Economy. 2 years (TICA course page).",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/20._M.B.A._in_Digital_Economics_and_Management_Innovation__Mae_Jo_U..pdf"
+     },
+     {
+      "name": "M.A. Program in Social Science",
+      "institution": "Chiang Mai University",
+      "detail": "Theme: Inclusive Development. 2 academic years.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/21._M.A._in_Social_Science__Chiang_Mai_U..pdf"
+     },
+     {
+      "name": "M.A. Program in Diplomacy and International Studies (International Program)",
+      "institution": "Rangsit University",
+      "detail": "Theme: Inclusive Development. 2 years (August 2026 to August 2028).",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/Coure_detail_TIPP_2026/22._M.A._in_Diplomacy_and_International_Studies._Rangsit_U..pdf"
+     }
+    ]
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "One diploma course: Diploma Course in Dermatology and Dermatosurgery (International Program) at the Institute of Dermatology, 1 year.",
+     "source_text": "TIPP 2026 courses",
+     "url": "https://tica-thaigov.mfa.go.th/en/content/tipp-2027"
+    },
+    "programmes": [
+     {
+      "name": "Diploma Course in Dermatology and Dermatosurgery (International Program)",
+      "institution": "Institute of Dermatology",
+      "detail": "Theme: Health and Wellness. 1 year (TICA course page). The course sheet is a scanned image and could not be read.",
+      "source_text": "TIPP 2026 course list; course detail sheet",
+      "url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/%E0%B9%80%E0%B8%AD%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A3/15._Diploma_course_in_Dermatology_and_Dermatosurgery__Institute_of_Dermatology.pdf"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": "https://tica-thaigov.mfa.go.th/en/content/tipp-2027",
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Tuition fee, reimbursed directly by TICA, except the equipment insurance fee and the transcript and certificate fee",
+    "conditions": "Where the awardee's country is on neither the full-support nor the partial-support list, the scholarship covers tuition only."
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "Living allowance of 7,000 baht per month",
+    "conditions": "Paid monthly during study in Thailand."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "covered",
+    "limit_text": "Accommodation allowance of 7,000 or 9,000 baht per month",
+    "conditions": "The rate that applies is not explained. Awardees should bring about USD 300 for a rental deposit (usually 2 months) and the first month's rent; the deposit is returned when the contract ends."
+   },
+   {
+    "type": "travel",
+    "coverage": "partial",
+    "limit_text": "Round-trip economy airfare from the home country to Bangkok, plus domestic travel in Thailand to the university city; airport transfer",
+    "conditions": "Airfare is paid for awardees from full-support countries only; partial-support countries pay their own airfare and travel costs. TICA books all tickets; extra baggage and home-country domestic travel are not covered."
+   },
+   {
+    "type": "insurance",
+    "coverage": "covered",
+    "limit_text": "Accident and hospitalisation insurance during study",
+    "conditions": "Pre-existing illness, dental treatment, brain disease, mental illness, pregnancy and glasses are not covered. Awardees are advised to buy their own travel insurance for lost or stolen belongings."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "Settlement allowance of 6,000 baht on first arrival; books allowance of 10,000 baht per year (4 semesters for a master's)",
+    "conditions": null
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "Thesis allowance: up to 20,000 baht for compulsory fieldwork or data collection, plus 12,000 baht for thesis printing or 8,000 baht for independent study printing",
+    "conditions": "Fieldwork money needs expense details and TICA approval case by case."
+   },
+   {
+    "type": "other",
+    "coverage": "unknown",
+    "limit_text": "Thai Non-immigrant visa (Type F) fees",
+    "conditions": "The guidelines are not consistent: one list says TICA pays the visa fee for full-support countries, while the visa section says awardees pay all visa costs (visa fee, travel to the embassy, postage, transit visa)."
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "other",
+    "text": "TIPP application form, one original plus two copies, filled in English and endorsed by the candidate's supervisor and the National Focal Point. Also filled in online.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "medical",
+    "text": "TICA medical report form (other health certificates are not accepted; an application without it is not considered).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "transcript",
+    "text": "Transcript of the bachelor's degree showing the courses taken.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Certificate of the bachelor's degree.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "reference",
+    "text": "Recommendation letters from at least 3 persons, one letter per person (for example a university teacher, supervisor or employer).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "language_certificate",
+    "text": "English test score (for example TOEFL or IELTS) as the university requires, not more than 2 years old at admission.",
+    "conditional_rule": "Required of all; the university sets the minimum score",
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Other documents the university asks for, listed under the 'Document Required' heading of each course sheet (for example CV, research proposal, photographs, passport copy, health certificates). All documents must be in English.",
+    "conditional_rule": "Depends on the course",
+    "mandatory": false
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Check that your country can nominate and pick a course",
+    "detail": "Your government's National Focal Point must nominate you (the ministry of foreign affairs, or the central agency where you work). Each country or territory can nominate up to three candidates per programme. Choose one of the 22 courses and read its course sheet for the documents it needs.",
+    "source_url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Guidelines_for_TIPP_2026_2.pdf"
+   },
+   {
+    "phase": "apply",
+    "title": "Fill in the online application form and prepare the documents",
+    "detail": "Complete the online form on the TICA site and prepare one original and two copies of each document: application form, TICA medical report, bachelor's transcript and certificate, at least 3 recommendation letters, an English test score and any extra documents the course asks for. Items 1 to 6 are mandatory. Everything must be in English and endorsed by your supervisor and the National Focal Point.",
+    "source_url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Guidelines_for_TIPP_2026_2.pdf"
+   },
+   {
+    "phase": "apply",
+    "title": "Hand in the hard copy through the Royal Thai Embassy",
+    "detail": "The National Focal Point forwards the papers to the Royal Thai Embassy, Permanent Mission or Consulate-General for your country. The application is complete only when TICA has the hard copy. For 2026 the guidelines asked for papers to reach the embassy by 23 February 2026; this date has passed.",
+    "source_url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Guidelines_for_TIPP_2026_2.pdf"
+   },
+   {
+    "phase": "selection",
+    "title": "TICA reviews nominations",
+    "detail": "TICA looks at each candidate's background, current government position, and how they plan to use the knowledge after returning. It also balances countries and gender, unless priority is set for certain countries or cooperation frameworks.",
+    "source_url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Guidelines_for_TIPP_2026_2.pdf"
+   },
+   {
+    "phase": "selection",
+    "title": "University admission rules apply",
+    "detail": "Candidates also meet the host university's rules, including its English test when English is not their first language and their bachelor's was not taught in English. The sheets for some courses name extra papers, such as a research proposal or health certificates. The guidelines do not state when results are announced.",
+    "source_url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Guidelines_for_TIPP_2026_2.pdf"
+   },
+   {
+    "phase": "after_award",
+    "title": "Arrange travel and the Thai visa",
+    "detail": "Awardees must get a Non-immigrant visa Type F before travelling; TICA helps with the embassy and advice on papers. TICA books and changes the e-ticket for those on the full-support list, and an airport transfer is provided on arrival. Visa costs are discussed under benefits.",
+    "source_url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Guidelines_for_TIPP_2026_2.pdf"
+   },
+   {
+    "phase": "after_award",
+    "title": "Study full time under the conditions of the award",
+    "detail": "Awardees study full time and may not change the programme topic or study plan. Part-time work is not allowed and family members may not stay with them. An awardee who becomes pregnant in a way that stops attendance may lose the scholarship. TICA can withdraw the award if rules are broken.",
+    "source_url": "https://image.mfa.go.th/mfa/0/GH2PYnujXi/เอกสาร/Guidelines_for_TIPP_2026_2.pdf"
+   }
+  ],
+  "not_stated": [
+   "Application results date and how awardees are told (an 'Approved Candidates' page exists but was not read)",
+   "Teaching language of each course",
+   "Minimum English test scores (set by each university)",
+   "Number of awards available",
+   "The general list of eligible countries for tuition-only awards (it is a separate document that was not found)",
+   "Entry requirements and documents for courses whose sheet is an image: Mahidol Environmental and Water Resources Engineering, Naresuan Smart Grid Technology, Chiang Mai Mental Health, Mahidol Primary Health Care Management and the Dermatology diploma",
+   "Return or service obligations after the award",
+   "Which rate (7,000 or 9,000 baht) of accommodation allowance applies"
+  ],
+  "fetch_problems": [
+   "Five course sheets are scanned images with no readable text (Mahidol Environmental and Water Resources Engineering, Naresuan Smart Grid Technology, Chiang Mai Mental Health, Mahidol Primary Health Care Management, Dermatology diploma), so only the TICA page facts were used for them.",
+   "The Chulalongkorn course sheet and some others were read only for duration; their entry rules were not extracted.",
+   "The nomination contact-point list of Royal Thai Embassies and the general eligible-country list were not read."
+  ],
+  "notes": [
+   "The stored record said each country can nominate up to two candidates per programme; the 2026 guidelines say three, so the new figure is used.",
+   "The stored record said airfare and visa fee are paid for countries not marked with an asterisk; the 2026 country lists instead split countries into a full-support list (airfare paid) and a partial-support list (airfare not paid).",
+   "The page address contains 2027 but the content is the TIPP 2026 course list.",
+   "The overview page names seven themes; the 2026 list has courses in six."
+  ]
+ }
+]

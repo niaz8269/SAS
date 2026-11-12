@@ -58,19 +58,18 @@ class ScholarshipFacts
             $faq[] = ['Is '.$title.' still open?', 'Applications for this call are closed. See the timeline on this page, and the related scholarships below.'];
         }
 
-        $who = array_filter([
-            $this->nationalities($c),
-            $c->degreeLevels->isNotEmpty() ? 'Degree levels: '.$this->join($c->degreeLevels->pluck('name')->all()).'.' : null,
-            $c->any_subject ? 'Open to any subject.' : ($c->subjects->isNotEmpty() ? 'Subjects: '.$this->join($c->subjects->take(8)->pluck('name')->all()).'.' : null),
-            filled($c->teaching_language) ? 'Teaching language: '.$c->teaching_language.'.' : null,
-        ]);
-        if ($who) {
-            $faq[] = ['Who can apply for '.$title.'?', implode(' ', $who)];
+        if ($who = $this->whoCanApply($c)) {
+            $faq[] = ['Who can apply for '.$title.'?', $who];
         }
 
         $docs = $c->requirements->where('mandatory', true)->pluck('text')->map(fn ($t) => rtrim(Str::limit(trim(strip_tags((string) $t)), 100, '…', true), '.'))->filter()->values();
         if ($docs->isNotEmpty()) {
             $faq[] = ['What documents are required for '.$title.'?', 'Required documents listed for this call: '.implode('; ', $docs->take(6)->all()).($docs->count() > 6 ? '; and '.($docs->count() - 6).' more' : '').'. The full list, with any conditions, is on this page.'];
+        }
+
+        $apply = $c->applicationSteps->where('phase', 'apply')->pluck('title')->map(fn ($t) => rtrim(trim($t), '.'))->values();
+        if ($apply->isNotEmpty()) {
+            $faq[] = ['How do I apply for '.$title.'?', 'The steps, in order: '.implode('; ', $apply->take(8)->map(fn ($t, $i) => ($i + 1).') '.$t)->all()).'. Each step is explained under "Application process" on this page.'];
         }
 
         $funding = match (true) {
@@ -91,6 +90,19 @@ class ScholarshipFacts
         }
 
         return $faq;
+    }
+
+    /** Who can apply, from the stored nationalities, degree levels, subjects and teaching language; null when none of them is stored. */
+    public function whoCanApply(ScholarshipCycle $c): ?string
+    {
+        $who = array_filter([
+            $this->nationalities($c),
+            $c->degreeLevels->isNotEmpty() ? 'Degree levels: '.$this->join($c->degreeLevels->pluck('name')->all()).'.' : null,
+            $c->any_subject ? 'Open to any subject.' : ($c->subjects->isNotEmpty() ? 'Subjects: '.$this->join($c->subjects->take(8)->pluck('name')->all()).'.' : null),
+            filled($c->teaching_language) ? 'Teaching language: '.$c->teaching_language.'.' : null,
+        ]);
+
+        return $who ? implode(' ', $who) : null;
     }
 
     /** A description for search results when the scholarship has no summary of its own. */

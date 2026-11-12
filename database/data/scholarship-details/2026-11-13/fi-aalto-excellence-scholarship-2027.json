@@ -1,0 +1,486 @@
+[
+  {
+    "external_key": "fi-aalto-excellence-scholarship-2027",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.aalto.fi/en/admission-services/scholarships-and-tuition-fees",
+        "publisher": "Aalto University",
+        "publisher_type": "university",
+        "note": "Excellence Scholarship rules, tuition fees, exemptions, other costs, other scholarships (page updated 15.10.2026)"
+      },
+      {
+        "url": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes",
+        "publisher": "Aalto University",
+        "publisher_type": "university",
+        "note": "Master's application dates, steps, documents, scholarship question, selection, results, acceptance"
+      },
+      {
+        "url": "https://www.aalto.fi/en/admission-services/language-requirements-in-masters-admissions",
+        "publisher": "Aalto University",
+        "publisher_type": "university",
+        "note": "Accepted English tests, minimum scores, exemptions, deadlines"
+      },
+      {
+        "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english",
+        "publisher": "Aalto University",
+        "publisher_type": "university",
+        "note": "English-taught bachelor's application: rounds A and B, dates, selection, fee, results"
+      },
+      {
+        "url": "https://www.aalto.fi/en/admission-services/from-english-taught-bachelors-programmes-to-masters-programmes",
+        "publisher": "Aalto University",
+        "publisher_type": "university",
+        "note": "List of the 11 English-taught bachelor's programmes"
+      },
+      {
+        "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements",
+        "publisher": "Aalto University",
+        "publisher_type": "university",
+        "note": "List of master's study options by field"
+      }
+    ],
+    "summary": "The Aalto University Excellence Scholarship is a tuition fee waiver given by Aalto to a very limited number of top applicants who must pay tuition fees, for English-taught bachelor's and master's programmes in Espoo, Finland. It is merit-based and is requested inside the admission application. It pays the tuition fee only; living and study costs stay with the student.",
+    "eligibility_notes": "Only applicants who are liable for tuition fees can apply. In general that means citizens of countries outside the EU, EEA and Switzerland, for English-taught bachelor's and master's programmes. EU, EEA and Swiss citizens do not pay tuition fees and cannot apply. People with certain Finnish residence permits valid on 1 August of the start year are exempt from fees (for example permanent residence, EU long-term residence, EU Blue Card, a family member card of an EU citizen held personally, Brexit withdrawal-agreement permits, and temporary protection permits). A continuous (type A) permit can exempt a person if it was granted on a ground other than study; the exemption is lost if the first Finnish permit was for study or a family permit traces back to a study permit. Holders of such permits must upload the permit card, both sides.\n\nThe scholarship must be requested in the admission application form by answering yes to the scholarship question during the application period; it cannot be requested later. Applying does not affect admission chances. Candidates admitted from the waiting list cannot receive a scholarship. Scholarship candidates are checked against EU sanctions lists.\n\nA master's applicant must hold a bachelor's degree of at least 180 ECTS or three years of full-time study that gives master's eligibility in the awarding country, from a recognised institution, and must prove language proficiency. A previous master's degree does not qualify, apart from long-cycle degrees. A bachelor's degree may be incomplete at application if it is awarded by 31 July 2027. Art and design applicants without a degree may apply on the basis of equivalent skills and experience. Business and economics applicants with foreign degrees (Admission Group 2) must submit GMAT or GRE scores. English-taught bachelor's applicants must hold an upper-secondary qualification that qualifies for higher education.\n\nThe award is tied to the study option it was granted for; a scholarship for a lower-ranked option does not move to a first-choice option, and it is lost if that place is not accepted. Scholarships are not reallocated. Studies must be full-time and follow an approved personal study plan.",
+    "age_experience_notes": "No age limit and no work experience requirement stated on the pages read.",
+    "funding_summary": "The scholarship waives the tuition fee for the normative length of the programme: 3 years for a bachelor's degree and 2 years for a master's degree. It does not cover living costs or other study-related costs. It continues during exchange or internships abroad, but the tuition fee must still be paid during that time. The pages say students need at least EUR 800 per month for living costs, and that the capital region is more expensive.",
+    "programmes_note": "Eleven English-taught bachelor's programmes (Design and Media; Economics; Finance; International Business; Chemical Engineering; Mechanical and Civil Engineering; Computer Engineering; Data Science; Digital Systems and Design; Quantum Technology; Technology, Business and Design) and about 75 master's study options in art, design and architecture; business and economics; and technology and engineering. Some master's options are international joint degrees with their own funding and application rules. Programmes may decide not to award any scholarships; each programme's evaluation criteria are on its own page.",
+    "institutions_note": "Aalto University, Espoo, Finland (art and design, business, and technology schools). Applicants choose study options when applying: up to two in the master's admission and up to three in an English-taught bachelor's round.",
+    "levels": [
+      {
+        "code": "bachelor",
+        "confirmed": true,
+        "summary": {
+          "detail": "The scholarship is given for the 3-year normative bachelor's period. Annual tuition fees for rights to study starting on or after 1 August 2025 are EUR 12,000 (Business), EUR 15,000 (Art and Architecture), EUR 12,000 (Technology) and EUR 12,000 (the multidisciplinary Technology, Business and Design programme). Applications for autumn 2027 run from 7 to 22 January 2027 in round A (SAT or ACT based) or round B (grades based; Design and Media on assignments and interview); the fee is EUR 100 for non-EU/EEA/Swiss citizens. Bachelor graduates who held the scholarship and finish in target time with a weighted average of at least 3.5 can get a 100 percent waiver for a direct-right Aalto master's.",
+          "source_text": "3 years for a bachelor's degree",
+          "url": "https://www.aalto.fi/en/admission-services/scholarships-and-tuition-fees"
+        },
+        "programmes": [
+          {
+            "name": "Design and Media",
+            "institution": "Aalto University",
+            "detail": "Art and Design; round B; preliminary and intake assignments and interview",
+            "source_text": "Art and Design: Design and Media",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Economics",
+            "institution": "Aalto University",
+            "detail": "Business and Economics",
+            "source_text": "Business and Economics",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "International Business",
+            "institution": "Aalto University",
+            "detail": "Business and Economics",
+            "source_text": "Business and Economics",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Finance",
+            "institution": "Aalto University",
+            "detail": "Business and Economics; new for autumn 2027",
+            "source_text": "Business and Economics",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Chemical Engineering",
+            "institution": "Aalto University",
+            "detail": "Science and Technology",
+            "source_text": "Science and Technology",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Computer Engineering",
+            "institution": "Aalto University",
+            "detail": "Science and Technology",
+            "source_text": "Science and Technology",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Data Science",
+            "institution": "Aalto University",
+            "detail": "Science and Technology",
+            "source_text": "Science and Technology",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Digital Systems and Design",
+            "institution": "Aalto University",
+            "detail": "Science and Technology",
+            "source_text": "Science and Technology",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Mechanical and Civil Engineering",
+            "institution": "Aalto University",
+            "detail": "Science and Technology",
+            "source_text": "Science and Technology",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Quantum Technology",
+            "institution": "Aalto University",
+            "detail": "Science and Technology",
+            "source_text": "Science and Technology",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          },
+          {
+            "name": "Technology, Business and Design",
+            "institution": "Aalto University",
+            "detail": "Interdisciplinary; selection uses a preliminary assignment",
+            "source_text": "Interdisciplinary",
+            "url": "https://www.aalto.fi/en/admission-services/apply-to-bachelors-programmes-in-english"
+          }
+        ]
+      },
+      {
+        "code": "master",
+        "confirmed": true,
+        "summary": {
+          "detail": "The scholarship is given for the 2-year normative master's period and decided during the academic evaluation of admissions, with the admission decision. Annual tuition fees are EUR 15,000 (Business), EUR 20,000 (Art and Architecture), EUR 17,000 (Technology) and EUR 17,000 for the multidisciplinary options (Creative Sustainability; International Design Business Management; Urban Studies and Planning). Applicants may choose up to two study options, ranked. The programme list pages do not state the teaching language of each option, and a few options are taught in Finnish or Swedish.",
+          "source_text": "2 years for a master's degree",
+          "url": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+        },
+        "programmes": [
+          {
+            "name": "Architecture",
+            "institution": "Aalto University",
+            "detail": "Art, Design and Architecture",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Interior Architecture",
+            "institution": "Aalto University",
+            "detail": "Art, Design and Architecture",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Urban Studies and Planning (Architecture)",
+            "institution": "Aalto University",
+            "detail": "Art, Design and Architecture",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Civil Engineering (Technology)",
+            "institution": "Aalto University",
+            "detail": "Art, Design and Architecture group",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Urban Studies and Planning in Real Estate Economics (Technology)",
+            "institution": "Aalto University",
+            "detail": "Art, Design and Architecture group",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Animation",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Game Design and Development (Art and Design)",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Game Design and Development (Technology)",
+            "institution": "Aalto University",
+            "detail": "",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "New Media",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Photography",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Sound in New Media",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Visual Communication Design",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Visual Cultures, Curating and Contemporary Art",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Collaborative and Industrial Design",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Contemporary Design",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Creative Sustainability (Art and Design)",
+            "institution": "Aalto University",
+            "detail": "Multidisciplinary, tuition EUR 17,000",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Fashion and Textile Design",
+            "institution": "Aalto University",
+            "detail": "Art and design",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "International Design Business Management (Art and Design)",
+            "institution": "Aalto University",
+            "detail": "Multidisciplinary, tuition EUR 17,000",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Cinematography",
+            "institution": "Aalto University",
+            "detail": "Film",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Costume Design: Performing Arts and Film",
+            "institution": "Aalto University",
+            "detail": "Film",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Documentary Film",
+            "institution": "Aalto University",
+            "detail": "Film",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Film and Television Producing",
+            "institution": "Aalto University",
+            "detail": "Film",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Film Directing",
+            "institution": "Aalto University",
+            "detail": "Film",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Film Editing",
+            "institution": "Aalto University",
+            "detail": "Film",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          },
+          {
+            "name": "Film Sound Design",
+            "institution": "Aalto University",
+            "detail": "Film",
+            "source_text": "Art, Design and Architecture",
+            "url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements"
+          }
+        ]
+      }
+    ],
+    "levels_not_offered": [],
+    "catalogue_url": "https://www.aalto.fi/en/admission-services/masters-programmes-and-requirements",
+    "benefits": [
+      {
+        "type": "tuition",
+        "coverage": "covered",
+        "limit_text": "Waiver of the tuition fee for the normative study period: 3 years for a bachelor's degree, 2 years for a master's degree",
+        "conditions": "Full-time study and progress under an approved personal study plan are required. It is specific to the study option it was granted for. Tuition must still be paid during exchange or internship abroad."
+      },
+      {
+        "type": "living_allowance",
+        "coverage": "not_covered",
+        "limit_text": "Living costs are not covered; the pages say at least EUR 800 per month is needed",
+        "conditions": "The capital region is more expensive."
+      },
+      {
+        "type": "insurance",
+        "coverage": "not_covered",
+        "limit_text": "Valid health insurance is needed and is not paid by the scholarship; student healthcare fee EUR 36 per semester (2026)",
+        "conditions": "Health insurance is also needed for the residence permit. The student union membership is EUR 65 (2025-2026)."
+      },
+      {
+        "type": "travel",
+        "coverage": "not_covered",
+        "limit_text": "Travel and other study-related costs are not covered",
+        "conditions": ""
+      },
+      {
+        "type": "other",
+        "coverage": "not_covered",
+        "limit_text": "Application fee EUR 100 for non-EU/EEA/Swiss citizens; no waivers",
+        "conditions": "Paid within seven days of submitting the application; unpaid applications are not processed."
+      }
+    ],
+    "requirements": [
+      {
+        "document_type": "other",
+        "text": "Application form in the national admissions service with the scholarship question answered yes, during the application period. No separate scholarship documents.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "degree_certificate",
+        "text": "Master's: bachelor's degree certificate showing name, degree, awarding institution and award date; a diploma supplement alone is not accepted; a provisional certificate with the same details is accepted; leave blank if the degree is not yet complete.",
+        "conditional_rule": "Master's applicants",
+        "mandatory": true
+      },
+      {
+        "document_type": "transcript",
+        "text": "Official transcript of records listing courses, grades, credits and dates with all pages; screenshots from student systems are not accepted.",
+        "conditional_rule": "Master's applicants",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Authorised translations of documents not in English, Finnish or Swedish, made by the awarding institution or a certified translator with stamp and signature.",
+        "conditional_rule": "If documents are in another language",
+        "mandatory": true
+      },
+      {
+        "document_type": "passport",
+        "text": "Passport personal details page or a government photo ID showing citizenship (expired within 12 months of 7 December 2026 is accepted).",
+        "conditional_rule": "Non-Finnish citizens",
+        "mandatory": true
+      },
+      {
+        "document_type": "language_certificate",
+        "text": "Master's English proof: IELTS Academic overall 6.5 with writing 6.0; TOEFL iBT total 92 with writing 22 (tests before 21 January 2026) or total 4.5 with 4.0 in each part (later tests); PTE Academic overall 68 with writing 61; Cambridge C1 Advanced grade A, B or C; Cambridge C2 Proficiency grade A, B, C or level C1; or YKI English level 5 in all four parts. Scores must reach Aalto by the document deadline and tests must be from 7 December 2024 or later.",
+        "conditional_rule": "Unless exempt (for example a qualifying degree taught in English in a listed country, a Finnish degree, or an Aalto exchange)",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "GMAT or GRE scores sent electronically by the test provider.",
+        "conditional_rule": "Business and economics, Admission Group 2 (foreign degree or Finnish university of applied sciences); GRE also for the Machine Learning, Data Science and AI option",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Portfolio as one PDF, named as instructed, uploaded separately for each option that requires one.",
+        "conditional_rule": "Art, design and architecture options",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Residence permit card, front and back, to show fee exemption.",
+        "conditional_rule": "Only if exempt from fees",
+        "mandatory": false
+      },
+      {
+        "document_type": "other",
+        "text": "Study-option-specific documents listed on each option's page, uploaded to the right option section; documents that were not asked for should not be uploaded. All files are PDFs, each document in its own file.",
+        "conditional_rule": "Depends on option",
+        "mandatory": true
+      }
+    ],
+    "application_steps": [
+      {
+        "phase": "apply",
+        "title": "Choose study options and check fee status",
+        "detail": "Read the eligibility rules, study option criteria and document instructions. Master's applicants rank up to two options; English-taught bachelor's applicants rank up to three in one round (round A or round B). Only fee-liable applicants can ask for the Excellence Scholarship.",
+        "source_url": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+      },
+      {
+        "phase": "apply",
+        "title": "Submit the application form and answer yes to the scholarship question",
+        "detail": "The master's application form opens 7 December 2026 at 09:00 and closes 5 January 2027 at 23:59 (UTC+2). English-taught bachelor's applications run 7 to 22 January 2027. Only one form is allowed, edits are possible until the period ends, and the scholarship question must be answered inside this period.",
+        "source_url": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+      },
+      {
+        "phase": "apply",
+        "title": "Pay the application fee and upload documents",
+        "detail": "Non-EU/EEA/Swiss citizens pay EUR 100 through the national admissions service within seven days of submitting. Master's documents, language proof and test scores must be uploaded by 12 January 2027 at 23:59 (UTC+2); the deadlines are strict and incomplete applications are not evaluated.",
+        "source_url": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+      },
+      {
+        "phase": "selection",
+        "title": "Evaluation by each study option",
+        "detail": "Complete, eligible applications are ranked by each option's own criteria such as relevance of previous study, academic performance, motivation, portfolios, interviews or assignments. The Excellence Scholarship goes to the top-ranked fee-liable applicants during the academic evaluation; programmes may award none. Admission and scholarship decisions are issued together, no updates are given during evaluation, and scholarship decisions cannot be appealed. Bachelor's selection uses SAT or ACT (round A) or grades (round B), with assignments for some programmes.",
+        "source_url": "https://www.aalto.fi/en/admission-services/scholarships-and-tuition-fees"
+      },
+      {
+        "phase": "selection",
+        "title": "Results and acceptance",
+        "detail": "Master's results come on 30 March 2027 at the earliest by email; the offer must be accepted, binding, by 21 April 2027 at 23:59 (UTC+3). Waiting-list admissions end 14 June 2027, and a person admitted from the waiting list cannot receive a scholarship. Bachelor's results are by 31 March 2027 (round A) or 28 May 2027 (round B). A written rectification request for procedural errors can be sent within 14 days of publication.",
+        "source_url": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+      },
+      {
+        "phase": "after_award",
+        "title": "Certified documents and enrolment",
+        "detail": "Admitted master's students send officially certified copies by the deadline set for their admission date (13 May 2027 for those admitted 30 March to 4 April, 17 August 2027 for later admissions); admission stays conditional until they arrive. Students pay their own costs and cannot enrol until any fee that applies is paid; new students are advised to pay by 31 July. Residence permit or fee exemption must be valid on 1 August 2027.",
+        "source_url": "https://www.aalto.fi/en/admission-services/apply-to-masters-programmes"
+      },
+      {
+        "phase": "after_award",
+        "title": "Keep the waiver by studying full-time",
+        "detail": "The waiver lasts for the normative period and depends on full-time study and progress under the approved study plan. Bachelor's scholarship holders who graduate within three years with a weighted average of at least 3.5 can receive a 100 percent waiver for the 2-year master's in programmes with a direct right to continue.",
+        "source_url": "https://www.aalto.fi/en/admission-services/scholarships-and-tuition-fees"
+      }
+    ],
+    "not_stated": [
+      "The number of Excellence Scholarships awarded per year.",
+      "Required documents for the English-taught bachelor's application (the bachelor's page says to upload them but does not list them) and bachelor's language requirements.",
+      "Age limits and work experience requirements.",
+      "Teaching language of each master's study option on the list page.",
+      "Pages read: scholarships and tuition fees, master's application, master's language requirements, English-taught bachelor's application, bachelor-to-master table, master's programme list."
+    ],
+    "fetch_problems": [
+      "An earlier guessed address for the bachelor's application page returned 404; the correct page (apply to bachelor's programmes in English) was found by search and read.",
+      "The study options search page loads programmes by script and returned no list; the master's programmes and requirements page was used instead.",
+      "The Aalto Into catalogue page for English-taught masters redirected to a 'not found' page."
+    ],
+    "notes": [
+      "Stored tuition fees (EUR 15,000 Business, 17,000 Technology and multidisciplinary, 20,000 Art and Architecture) are the master's fees; bachelor's fees are lower (EUR 12,000, 15,000, 12,000). Both are included.",
+      "Stored document deadline said 12 January 2027 at 15:00 (UTC+2); the master's application page now states 23:59 (UTC+2).",
+      "The bachelor's page says six English-taught programmes but lists eleven study options; the bachelor-to-master page lists 11.",
+      "The master's list page gives no language per option and includes options that may be taught in other languages; check each option page.",
+      "Programme names for master's list carried in the page's source order (first 25 of about 75).",
+      "Other schemes on the same page (Pekka Mattila scholarship cannot be combined with the Excellence Scholarship; Fulbright-Aalto; FUNED; COLFUTURO; joint degree programmes with their own schemes) are separate and not included here."
+    ]
+  }
+]

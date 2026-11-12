@@ -10,6 +10,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CatalogueController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\CorrectionController;
+use App\Http\Controllers\CscGuideController;
 use App\Http\Controllers\EmailWebhookController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\HomeController;
@@ -41,6 +42,10 @@ Route::get('/scholarships', [ScholarshipController::class, 'index'])->name('scho
 // Landing pages made from the published scholarships (App\Domain\Seo\Landing). They come before the two-part scholarship address below so "in" and "for" are never read as a programme.
 Route::get('/scholarships/in/{country}', [LandingController::class, 'destination'])->where('country', '[a-z0-9-]+')->name('landing.destination');
 Route::get('/scholarships/for/{degree}', [LandingController::class, 'degree'])->where('degree', 'bachelor|masters|phd|postdoctoral|diploma')->name('landing.degree');
+Route::get('/scholarships/subject/{subject}', [LandingController::class, 'subject'])->where('subject', '[a-z0-9-]+')->name('landing.subject');
+Route::get('/scholarships/from/{country}', [LandingController::class, 'from'])->where('country', '[a-z0-9-]+')->name('landing.from');
+Route::get('/scholarships/any-nationality', [LandingController::class, 'open'])->name('landing.open');
+Route::get('/chinese-government-scholarship', CscGuideController::class)->name('csc.guide');
 Route::get('/scholarships/{funding}', [LandingController::class, 'funding'])->where('funding', 'fully-funded|partial-funding|tuition-covered')->name('landing.funding');
 Route::get('/scholarships/{programme:slug}/{cycle}', [ScholarshipController::class, 'show'])->middleware('throttle:240,1')->name('scholarships.show'); // each view writes an analytics row, so the rate is capped per address
 Route::get('/go/{route}', [ScholarshipController::class, 'out'])->middleware('throttle:120,1')->name('scholarships.out');
@@ -77,6 +82,7 @@ Route::get('/robots.txt', [PageController::class, 'robots'])->name('robots');
 
 Route::get('/contact', [EnquiryController::class, 'create'])->name('contact');
 Route::post('/enquiries', [EnquiryController::class, 'store'])->middleware('throttle:enquiries')->name('enquiries.store');
+Route::post('/enquiries/quick', [EnquiryController::class, 'quick'])->middleware('throttle:enquiries')->name('enquiries.quick');
 Route::get('/enquiries/thanks', [EnquiryController::class, 'thanks'])->name('enquiries.thanks');
 Route::get('/enquiries/{enquiry:public_id}', [EnquiryController::class, 'show'])->name('enquiries.show');
 Route::post('/enquiries/{enquiry:public_id}/reply', [EnquiryController::class, 'reply'])->middleware('throttle:enquiries')->name('enquiries.reply');

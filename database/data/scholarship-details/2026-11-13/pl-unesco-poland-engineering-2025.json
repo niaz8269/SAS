@@ -1,0 +1,443 @@
+[
+  {
+    "external_key": "pl-unesco-poland-engineering-2025",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.unesco.org/en/fellowships/poland-engineering",
+        "publisher": "UNESCO",
+        "publisher_type": "funder",
+        "note": "Programme page, 2025 edition (page updated 13 June 2025; edition closed)"
+      },
+      {
+        "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/05/Annex%20I%20-%20Terms%20and%20Conditions%202025.pdf",
+        "publisher": "UNESCO",
+        "publisher_type": "funder",
+        "note": "Annex I, terms and conditions: benefits, visa, application documents"
+      },
+      {
+        "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20II-List%20of%20invited%20Member%20States%202025-26.pdf",
+        "publisher": "UNESCO",
+        "publisher_type": "funder",
+        "note": "Annex II, list of 57 invited Member States 2025-26"
+      },
+      {
+        "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf",
+        "publisher": "UNESCO",
+        "publisher_type": "funder",
+        "note": "Annex III, list of proposed projects with entry requirements and age limits"
+      },
+      {
+        "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20IV-List%20of%20projects%20and%20list%20of%20research%20fields_2025A.pdf",
+        "publisher": "UNESCO",
+        "publisher_type": "funder",
+        "note": "Annex IV, list of research fields and project titles, with age limit and academic requirement"
+      }
+    ],
+    "summary": "The UNESCO/Poland Co-Sponsored Fellowships in Engineering are offered by the Polish National Commission for UNESCO and the UNESCO Chair for Science, Technology and Engineering at AGH University of Krakow. The 2025 edition offered 28 fellowships for an individual research programme of six months (1 October 2025 to 31 March 2026) in science, technology and engineering. Candidates come from 57 invited developing Member States and are endorsed by their National Commission for UNESCO. The edition is closed; no later edition was found on the UNESCO pages read.",
+    "eligibility_notes": "Nationality: citizens of the 57 invited Member States in Annex II: Africa (21), Arab States (2: Bahrain and Iraq), Asia and the Pacific (22) and Latin America and the Caribbean (12). Some projects are open only to candidates from certain regions (for example projects 05 and 06 only to Latin America and the Caribbean, project 07 to South-East Asia and the Pacific, project 08 to Africa).\n\nEducation: each of the 28 research projects names its own entry degree. Most need at least a B.Sc. in the named field; others need an M.Sc. (projects 02 and 03) or an M.Sc. or PhD (projects 14 and 15). You must also be a confirmed student, or a member of a research institution or university staff, for the whole period 1 October 2025 to 31 March 2026.\n\nAge: not more than 32 years of age for most projects, and not more than 30 for projects 07 and 08.\n\nLanguage: proficient reading and writing in English. A UNESCO language certificate is needed if English is not your mother tongue. Several geology projects (09, 10, 11) require you to bring your own samples to study.\n\nIndividuals cannot apply to UNESCO directly; only candidates endorsed by their National Commission for UNESCO are considered. Incomplete documents lead to rejection on formal grounds.",
+    "age_experience_notes": "Age limit: not more than 32 years for most projects and not more than 30 for projects 07 and 08 (Annexes III and IV). Required skills differ per project (for example programming, laboratory work or geological sampling).",
+    "funding_summary": "For six months the Polish side gives free tuition and access to university facilities, a monthly allowance of 1,800 PLN (BSc) or 2,200 PLN (MSc) meant to cover all living and accommodation costs, and a one-time arrival allowance of the same amount that covers a compulsory medical check-up and study-related visits, conferences, workshops and seminars. UNESCO pays international travel to and from Poland by the most direct economical route, health insurance for fellows declared medically fit, and a one-time pocket allowance of US$120. Passport and visa costs and the cost of family members are not covered.",
+    "programmes_note": "Individual research programmes in science, technology and engineering, supervised by a tutor and coordinated by the UNESCO AGH Chair. Annex IV lists 28 projects in these disciplines: Biomedical Engineering; Computer and Information Sciences; Earth and Related Environmental Sciences; Environmental Engineering, Mining and Energy; Materials Engineering; Mechanical Engineering; Sociology. Each project has a set number of places (Annex III table shows 39 positions in total). Projects are split between the bachelor and master levels below by the minimum degree each asks for.",
+    "institutions_note": "AGH University of Krakow, through the UNESCO AGH Chair for Science, Technology and Engineering. Each project is assigned to a tutor at AGH; candidates choose a project from Annex IV and apply for it.",
+    "levels": [
+      {
+        "code": "bachelor",
+        "confirmed": true,
+        "summary": {
+          "detail": "Projects whose minimum entry is a B.Sc. degree in the named field (24 projects, listed below). Six-month research stay at AGH University of Krakow from 1 October 2025, in English. BSc-level fellows get 1,800 PLN a month and a one-time 1,800 PLN arrival allowance. Fellows must be confirmed students or staff of a research institution or university during the stay.",
+          "source_text": "Monthly allowance of 1800 PLN for BSc degree students",
+          "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/05/Annex%20I%20-%20Terms%20and%20Conditions%202025.pdf"
+        },
+        "programmes": [
+          {
+            "name": "Project 01: Innovative methods for distant measurement of vital signs",
+            "institution": "AGH University of Krakow",
+            "detail": "Biomedical Engineering. Entry: B.Sc. in biomedical engineering, electrical engineering or computer science. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 01",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 04: Application of functionalized mineral materials for sorption of inorganic and organic pollutants from aqueous solutions",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences / Environmental Engineering, Mining and Energy. Entry: B.Sc. in chemistry, materials science, environmental engineering, environmental sciences or a related discipline. Age: up to 32 years of age. Places: 2. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 04",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 05: Geology and mineralogy of the Cu-Ag indices as a potential for the red bed type deposit in S-America",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 05",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 06: Geology of the stratabound Cu-Ag deposits in S-America",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 06",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 07: Mineral characterization and evaluation of selected Cu, Sn-W (-Mo) deposit in SE Asia",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology. Age: up to 30 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 07",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 08: Potential areas/deposits of one of African countries in some Cu, REE, critical resources deposit as a key for the country development",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology. Age: up to 30 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 08",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 09: Carbonatites in Eastern African rift: mineralogical and geochemical study",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology; own samples for study are required. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 09",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 10: Copper mineralization in the Central Asia metallogenic belt: mineralogical and geochemical study",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology; own samples for study are required. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 10",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 11: Mineralogical characteristics of the epithermal systems in South America",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology; own samples for study are required. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 11",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 12: Assessment of geotourism potential of geological resources of selected regions in the developing countries",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 12",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 13: Biostratigraphy of deep-sea foraminiferal assemblages",
+            "institution": "AGH University of Krakow",
+            "detail": "Earth and Related Environmental Sciences. Entry: B.Sc. in geology. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 13",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 16: Scalable distributed energy systems using hydrogen as an energy storage and carrier (H2-off-grid-ES)",
+            "institution": "AGH University of Krakow",
+            "detail": "Environmental Engineering, Mining and Energy. Entry: B.Sc. in technical science or engineering (power engineering, electrical engineering). Age: up to 32 years of age. Places: 2. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 16",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 17: Drilling related geomechanics",
+            "institution": "AGH University of Krakow",
+            "detail": "Environmental Engineering, Mining and Energy. Entry: B.Sc., preferably in petroleum, earth engineering, physics, IT or mathematics. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 17",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 18: Analysis of chemical composition of atmospheric aerosols in Krakow agglomeration",
+            "institution": "AGH University of Krakow",
+            "detail": "Environmental Engineering, Mining and Energy. Entry: B.Sc. in chemistry, environmental engineering, biochemistry or environmental chemistry. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 18",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 19: Hybrid hydrogels based on natural biomaterials loaded with natural plant extract for treatment of chronic wounds",
+            "institution": "AGH University of Krakow",
+            "detail": "Materials Engineering, Biomedical Engineering. Entry: B.Sc. in material science, biomaterials engineering, biomedical engineering or organic chemistry. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 19",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 20: Electrochemical synthesis of high entropy alloy coatings with enhanced catalytic activity and corrosion resistance",
+            "institution": "AGH University of Krakow",
+            "detail": "Materials Engineering. Entry: B.Sc. in materials science, materials engineering, metallurgy or chemistry. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 20",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 21: Additive manufacturing of complex shape ceramic parts",
+            "institution": "AGH University of Krakow",
+            "detail": "Materials Engineering. Entry: B.Sc. in materials science, chemical engineering, chemistry or mechanical engineering. Age: up to 32 years of age. Places: 3. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 21",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 22: Functional materials for Solid Oxide Cells in energy storage and conversion",
+            "institution": "AGH University of Krakow",
+            "detail": "Materials Engineering. Entry: B.Sc. in materials science, chemical engineering or chemistry. Age: up to 32 years of age. Places: 2. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 22",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 23: Automated transportation technology systems and devices",
+            "institution": "AGH University of Krakow",
+            "detail": "Mechanical Engineering. Entry: B.Sc. in engineering. Age: up to 32 years of age. Places: 2. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 23",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 24: Cyber-physical systems",
+            "institution": "AGH University of Krakow",
+            "detail": "Mechanical Engineering. Entry: B.Sc. in engineering. Age: up to 32 years of age. Places: 2. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 24",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 25: Decision-making processes in engineering",
+            "institution": "AGH University of Krakow",
+            "detail": "Mechanical Engineering. Entry: B.Sc. in engineering. Age: up to 32 years of age. Places: 2. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 25",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 26: Maintenance technology",
+            "institution": "AGH University of Krakow",
+            "detail": "Mechanical Engineering. Entry: B.Sc. in engineering. Age: up to 32 years of age. Places: 2. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 26",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 27: Soundscape planning as a method of environmental noise management in a selected national park",
+            "institution": "AGH University of Krakow",
+            "detail": "Mechanical Engineering. Entry: B.Sc. in mechanical engineering. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 27",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 28: Interrelations between new technologies and social and economic life in a globalizing world",
+            "institution": "AGH University of Krakow",
+            "detail": "Sociology. Entry: B.Sc. or M.Sc., or an MA in humanities, social sciences or economics. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 28",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          }
+        ]
+      },
+      {
+        "code": "master",
+        "confirmed": true,
+        "summary": {
+          "detail": "Projects that ask for an M.Sc. (02 and 03) or an M.Sc. or PhD (14 and 15). Six-month research stay at AGH University of Krakow from 1 October 2025, in English. MSc-level fellows get 2,200 PLN a month and a one-time 2,200 PLN arrival allowance.",
+          "source_text": "2200 PLN for MSc degree students",
+          "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/05/Annex%20I%20-%20Terms%20and%20Conditions%202025.pdf"
+        },
+        "programmes": [
+          {
+            "name": "Project 02: Video-based recognition of human body activity in stress conditions",
+            "institution": "AGH University of Krakow",
+            "detail": "Biomedical Engineering. Entry: M.Sc. in biomedical engineering, electrical or mechanical engineering or computer science. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 02",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 03: Intelligent artificial autonomous decision systems (AADS)",
+            "institution": "AGH University of Krakow",
+            "detail": "Computer and Information Sciences. Entry: M.Sc. in computer science, mathematics, automatic control, robotics or computational physics/astrophysics/neurobiology (the project table in Annex IV says B.Sc. or M.Sc.). Age: up to 32 years of age. Places: 3. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 03",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 14: Energy efficiency management of buildings",
+            "institution": "AGH University of Krakow",
+            "detail": "Environmental Engineering, Mining and Energy. Entry: M.Sc. or PhD in mining or civil engineering related fields. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 14",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          },
+          {
+            "name": "Project 15: Ventilation and safety systems in tunnels and subways",
+            "institution": "AGH University of Krakow",
+            "detail": "Environmental Engineering, Mining and Energy. Entry: M.Sc. or PhD in mining or civil engineering related fields. Age: up to 32 years of age. Places: 1. 6 months from 1 October 2025, in English.",
+            "source_text": "Annex III, project 15",
+            "url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20III%20-%20List%20of%20proposed%20projects%20ed.2025A.pdf"
+          }
+        ]
+      }
+    ],
+    "levels_not_offered": [
+      "doctorate",
+      "postdoctoral"
+    ],
+    "catalogue_url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/04/Annex%20IV-List%20of%20projects%20and%20list%20of%20research%20fields_2025A.pdf",
+    "benefits": [
+      {
+        "type": "tuition",
+        "coverage": "covered",
+        "limit_text": "Free tuition for six months and access to university facilities under local rules",
+        "conditions": "Provided by the Polish authorities."
+      },
+      {
+        "type": "living_allowance",
+        "coverage": "covered",
+        "limit_text": "1,800 PLN per month (BSc students); 2,200 PLN per month (MSc students), about 1 USD = 4.0 PLN",
+        "conditions": "Paid by the Polish authorities for six months, under national tax rules. Meant to cover all living expenses and accommodation in Poland."
+      },
+      {
+        "type": "other",
+        "coverage": "covered",
+        "limit_text": "One-time arrival allowance: 1,800 PLN (BSc) or 2,200 PLN (MSc)",
+        "conditions": "Covers the compulsory medical check-up on arrival and cultural or study-related visits, conferences, workshops and seminars."
+      },
+      {
+        "type": "accommodation",
+        "coverage": "partial",
+        "limit_text": "No separate housing; the monthly allowance is meant to cover accommodation",
+        "conditions": ""
+      },
+      {
+        "type": "travel",
+        "coverage": "covered",
+        "limit_text": "International travel to and from Poland by the most direct, economical route, paid by UNESCO",
+        "conditions": ""
+      },
+      {
+        "type": "insurance",
+        "coverage": "covered",
+        "limit_text": "Health insurance for the fellowship period, taken out by UNESCO",
+        "conditions": "Only for fellows declared medically fit."
+      },
+      {
+        "type": "other",
+        "coverage": "covered",
+        "limit_text": "One-time pocket allowance of US$120 from UNESCO",
+        "conditions": ""
+      },
+      {
+        "type": "other",
+        "coverage": "not_covered",
+        "limit_text": "Passport and visa costs",
+        "conditions": "Neither UNESCO nor Poland pays them. Fellows get their own entry visa from a Polish embassy or consulate (the nearest one if there is none in their country)."
+      },
+      {
+        "type": "other",
+        "coverage": "not_covered",
+        "limit_text": "Funding or lodging for family members",
+        "conditions": "No provision is made."
+      }
+    ],
+    "requirements": [
+      {
+        "document_type": "other",
+        "text": "UNESCO fellowship application form with medical certificate: all four pages completed in English in capital letters. Illegible forms are disqualified.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "passport",
+        "text": "Copy of the passport.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "photo",
+        "text": "Copy of an identity photo.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "degree_certificate",
+        "text": "Certified copies in English of the Bachelor's, Master's or PhD degrees obtained, with an Apostille or authorisation by the competent authority. If your country does not recognise the Apostille, the documents must be legalised in the country of issue.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "language_certificate",
+        "text": "UNESCO certificate of language knowledge, completed by a relevant authority.",
+        "conditional_rule": "if English is not the candidate's mother tongue",
+        "mandatory": true
+      },
+      {
+        "document_type": "reference",
+        "text": "Two letters of recommendation from people familiar with your work, confirming your qualifications and dated 2025.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Endorsement letter from your National Commission for UNESCO, sent with the scanned documents by the Commission.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Online information sheet, completed by endorsed candidates after their National Commission has endorsed them.",
+        "conditional_rule": "",
+        "mandatory": true
+      }
+    ],
+    "application_steps": [
+      {
+        "phase": "apply",
+        "title": "Check the terms, countries and projects",
+        "detail": "Read the terms and conditions (Annex I) and the list of fields and projects (Annex IV), and check that your country is among the 57 invited Member States (Annex II) and that you meet the entry degree and age limit of the project you want (Annex III).",
+        "source_url": "https://www.unesco.org/en/fellowships/poland-engineering"
+      },
+      {
+        "phase": "apply",
+        "title": "Contact your National Commission for UNESCO",
+        "detail": "Ask your National Commission about its national procedure. UNESCO does not accept individual applications; only candidates endorsed by their Commission are considered. The Commission sends the endorsement letter and scanned documents by email to the programme address.",
+        "source_url": "https://www.unesco.org/en/fellowships/poland-engineering"
+      },
+      {
+        "phase": "apply",
+        "title": "Prepare the documents and complete the online sheet",
+        "detail": "Prepare the four-page form in capital letters, passport and photo copies, certified degree copies with Apostille or legalisation, a language certificate if needed, and two recommendation letters dated 2025. After endorsement, complete the online information sheet. The page gave Monday 26 May 2025 (midnight, Paris time) as the Commission's deadline; Annex I says 12 May 2025.",
+        "source_url": "https://www.unesco.org/en/fellowships/poland-engineering"
+      },
+      {
+        "phase": "selection",
+        "title": "National selection by your Commission",
+        "detail": "National Commissions choose their candidates and send their endorsement letters and documents to UNESCO. Late or incomplete applications are not considered.",
+        "source_url": "https://www.unesco.org/en/fellowships/poland-engineering"
+      },
+      {
+        "phase": "selection",
+        "title": "Final selection by the Polish authorities",
+        "detail": "The Polish authorities make the final selection, with attention to gender equality and diversity. UNESCO tells the National Commissions which fellows were chosen; only selected candidates are notified, through their Commissions.",
+        "source_url": "https://www.unesco.org/en/fellowships/poland-engineering"
+      },
+      {
+        "phase": "after_award",
+        "title": "Visa and travel",
+        "detail": "Selected fellows obtain their own Polish entry visa before departure, from a Polish embassy or consulate in their country or the nearest one, at their own cost. UNESCO pays the international travel to and from Poland.",
+        "source_url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/05/Annex%20I%20-%20Terms%20and%20Conditions%202025.pdf"
+      },
+      {
+        "phase": "after_award",
+        "title": "Six-month research stay at AGH University of Krakow",
+        "detail": "The stay runs 1 October 2025 to 31 March 2026 with a tutor at AGH. Fellows receive the monthly allowance and arrival allowance from the Polish authorities and take the compulsory medical check-up on arrival. UNESCO provides health insurance for fellows declared medically fit.",
+        "source_url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/05/Annex%20I%20-%20Terms%20and%20Conditions%202025.pdf"
+      },
+      {
+        "phase": "after_award",
+        "title": "Reports and certificate",
+        "detail": "At the end of the research stay fellows receive a certificate of attendance at the host institution. It is issued after the requested reports are received and financial clearance is given by the institution.",
+        "source_url": "https://www.unesco.org/sites/default/files/medias/fichiers/2025/05/Annex%20I%20-%20Terms%20and%20Conditions%202025.pdf"
+      }
+    ],
+    "not_stated": [
+      "Exact interview or test stages",
+      "Weights of selection criteria beyond gender equality and diversity",
+      "The content and deadline of any later (2026) edition",
+      "How a fellow's allowance level (BSc or MSc) is decided when the project accepts either degree"
+    ],
+    "fetch_problems": [
+      "Direct page download from the UNESCO site is blocked by a browser check in a scripted request; the page and annex PDFs were read through the page fetch tool instead. No bypass was attempted.",
+      "Annex IV was read only in its first part (projects 01 to 05 in full; later projects were taken from Annex III, which lists every project in full). Annex V (application form) was not opened."
+    ],
+    "notes": [
+      "This is the 2025 edition (closed). The stored cycle title says 2025 and the period is 1 October 2025 to 31 March 2026; treat as past unless a later edition appears.",
+      "The programme page gives Monday 26 May 2025 as the deadline for National Commissions; Annex I gives 12 May 2025.",
+      "The page says 28 fellowships; the Annex III summary table counts 28 projects and 39 positions in total (the maximum number of places per project adds up to 39). Both are given as stated.",
+      "Annex III and Annex IV give different titles for project 02 (Annex III: 'human body activity in stress conditions'; Annex IV: 'human emotional response to a visual stimulus'). The Annex III title is used.",
+      "Project 03: Annex III asks for an M.Sc.; the Annex IV table says B.Sc. or M.Sc. It is placed at master level.",
+      "The stored statement 'BSc and MSc students are named in the benefits' is replaced by the project-level entry degrees from Annex III. Stored nationality list (57 entries) is carried over from stored data; Annex II also lists 57 Member States."
+    ]
+  }
+]

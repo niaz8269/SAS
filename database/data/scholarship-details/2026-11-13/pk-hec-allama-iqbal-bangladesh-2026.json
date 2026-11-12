@@ -1,0 +1,68 @@
+[{
+  "external_key": "pk-hec-allama-iqbal-bangladesh-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx", "publisher": "Higher Education Commission (HEC), Pakistan", "publisher_type": "government", "note": "Scheme page: number of awards, fields, eligibility by level, age limits, benefits, terms, selection, application steps, deadline"},
+    {"url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/default.aspx", "publisher": "Higher Education Commission (HEC), Pakistan - Pak-Bangladesh Knowledge Corridor", "publisher_type": "government", "note": "Programme overview: the three strands of the Knowledge Corridor and the aims of the scholarships"},
+    {"url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/Expo.aspx", "publisher": "Higher Education Commission (HEC), Pakistan", "publisher_type": "government", "note": "Pakistan Higher Education Expo in Bangladesh, where eligibility and admission information is given to students"},
+    {"url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/Contact-us.aspx", "publisher": "Higher Education Commission (HEC), Pakistan", "publisher_type": "government", "note": "Contact office for the Pak-Bangladesh Knowledge Corridor"}
+  ],
+  "summary": "The Allama Muhammad Iqbal Scholarships are offered by the Government of Pakistan through the Higher Education Commission (HEC) to young people from Bangladesh. They are part of the Pak-Bangladesh Knowledge Corridor, which aims to strengthen education, research and people-to-people ties between the two countries. HEC announces 500 scholarships for undergraduate, master's and PhD study at Pakistani public and private universities, in fields such as medicine, engineering, computer science, business administration and mass communication. The award covers tuition, a stipend, hostel and mess charges, a settlement allowance, an air ticket, and books and stationery.",
+  "eligibility_notes": "Only citizens of Bangladesh can apply.\n\nBachelor's level: 12 years of education in the subjects the programme requires, with at least 60% marks. For Medicine, Dentistry and Pharmacy the applicant needs F.Sc. or equivalent (pre-medical) with at least 65%. For Engineering the applicant needs F.Sc. or equivalent (pre-engineering) with at least 65%.\n\nMaster's level: 16 years of education in relevant subjects, with a CGPA of at least 3.00 or at least 65% marks.\n\nDoctoral level: 18 years of education in relevant subjects, with a CGPA of at least 3.00 or at least 65% marks.\n\nThe required qualification must be obtained on or before the application deadline. Applicants whose qualification is from a foreign institution need an Equivalence Certificate from IBCC and HEC.\n\nAfter finishing their studies in Pakistan, recipients are expected to serve Bangladesh. Giving wrong information or misrepresenting facts can lead to termination of the scholarship at any stage.",
+  "age_experience_notes": "Bachelor's (BS) programmes: 17 to 23 years. Doctoral programmes: maximum 35 years. The official page states no age limit for master's programmes, and no work experience requirement for any level.",
+  "funding_summary": "The award covers full tuition fee, a stipend, hostel and mess charges, a settlement allowance, an air ticket, and books and stationery. The official page does not give amounts for the stipend, settlement allowance or books, and does not state for how many years the award is paid.",
+  "programmes_note": "Fields named by HEC are Medicine, Engineering, Computer Science, Business Administration, Mass Communication, Media Studies, and Basic and Social Sciences. Study is at undergraduate, master's and PhD level. Teaching is in English. HEC decides the placement (which university and programme) at its sole discretion; the page does not list individual programmes.",
+  "institutions_note": "Public and private universities in Pakistan. HEC places selected students at its sole discretion; applicants do not pick the university on the pages read.",
+  "levels": [
+    {"code": "bachelor", "confirmed": true,
+     "summary": {"detail": "Undergraduate (BS) programmes at Pakistani universities, taught in English. Entry: 12 years of education in the required subjects with at least 60% marks; 65% in F.Sc. pre-medical for Medicine, Dentistry and Pharmacy, and 65% in F.Sc. pre-engineering for Engineering. Age 17 to 23.", "source_text": "Allama Muhammad Iqbal Scholarships - eligibility and terms", "url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx"},
+     "programmes": []},
+    {"code": "master", "confirmed": true,
+     "summary": {"detail": "Master's programmes at Pakistani universities, taught in English. Entry: 16 years of education in relevant subjects with a CGPA of at least 3.00 or at least 65%. No age limit is stated.", "source_text": "Allama Muhammad Iqbal Scholarships - eligibility and terms", "url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx"},
+     "programmes": []},
+    {"code": "doctorate", "confirmed": true,
+     "summary": {"detail": "PhD programmes at Pakistani universities, taught in English. Entry: 18 years of education in relevant subjects with a CGPA of at least 3.00 or at least 65%. Maximum age 35.", "source_text": "Allama Muhammad Iqbal Scholarships - eligibility and terms", "url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx"},
+     "programmes": []}
+  ],
+  "levels_not_offered": [],
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Full tuition fee", "conditions": "Paid for the placement HEC arranges at a Pakistani university."},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "Stipend (amount not stated on the official pages)", "conditions": null},
+    {"type": "accommodation", "coverage": "covered", "limit_text": "Hostel and mess charges", "conditions": null},
+    {"type": "travel", "coverage": "covered", "limit_text": "Air ticket (route and number of tickets not stated)", "conditions": null},
+    {"type": "other", "coverage": "covered", "limit_text": "Settlement allowance (amount not stated)", "conditions": null},
+    {"type": "other", "coverage": "covered", "limit_text": "Books and stationery (amount not stated)", "conditions": null}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "Documents that support the application. The official page does not list them; it says selection is made after a physical examination of the documents the applicant provides.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "degree_certificate", "text": "Equivalence Certificate from IBCC and HEC for a foreign qualification.", "conditional_rule": "Applicants whose qualification was obtained abroad", "mandatory": false}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Complete the online application on the HEC scholarship portal", "detail": "Applications are made online through the HEC scholarship portal, in the section for the Pak-Bangladesh scholarships. The page states that applications close on 10 June 2026. The qualification you apply with must be completed on or before the application deadline.", "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx"},
+    {"phase": "selection", "title": "Sit the HEC scholarship test", "detail": "All registered candidates take a scholarship test. HEC organises it together with the Pakistan High Commission in Dhaka and the Ministry of Higher Education of Bangladesh.", "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx"},
+    {"phase": "selection", "title": "Online interview for shortlisted candidates", "detail": "Candidates who are shortlisted after the test take an online interview. Selection is on merit, after a physical examination of the documents each applicant provides, and the merit list is based on the information the applicant gives.", "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx"},
+    {"phase": "after_award", "title": "Placement at a Pakistani university", "detail": "HEC decides the placement at its sole discretion. Teaching is in English. Providing wrong information or misrepresenting facts can lead to termination of the scholarship at any stage.", "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx"},
+    {"phase": "after_award", "title": "Serve Bangladesh after your studies", "detail": "The terms state that scholarship holders must serve Bangladesh after completing their education in Pakistan.", "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/PBKC/Pages/AISB.aspx"}
+  ],
+  "not_stated": [
+    "Amount of the monthly stipend, the settlement allowance and the books and stationery allowance",
+    "Length of funding for each level",
+    "Full list of required documents (the official pages only name the IBCC and HEC Equivalence Certificate)",
+    "Test format, test date, interview date and the date results are announced",
+    "Which universities and programmes are offered, and how a university is allocated",
+    "Whether a language test is needed (teaching is in English)",
+    "Age limit for master's applicants",
+    "Medical, insurance and visa arrangements",
+    "Rules on renewal or academic progress during the award"
+  ],
+  "fetch_problems": [
+    "The programme flyer PDF linked from the Knowledge Corridor page is a single scanned image with no readable text, so its content could not be read.",
+    "The scholarship portal home page returned only its title, with no scheme details.",
+    "The Ministry of Foreign Affairs press release about the second phase and two HEC news items about the education expos could not be fetched (certificate/permission errors), so they were not used."
+  ],
+  "notes": [
+    "The page states a closing date of 10 June 2026, which has passed. A third-party report says a second phase was launched in May 2026; this was not confirmed on an official page that could be read, so it is not stated in the text fields.",
+    "The overview page says the awards cover international travel, living stipends, a book allowance and tuition; the scheme page also names hostel and mess charges and a settlement allowance.",
+    "The Contact Us page shows one email address in the text and a different one in the link, so check which is current before publishing a contact."
+  ]
+}]

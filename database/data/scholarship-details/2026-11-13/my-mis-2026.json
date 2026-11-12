@@ -1,0 +1,73 @@
+[{
+  "external_key": "my-mis-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf", "publisher": "Ministry of Higher Education (MOHE), Malaysia", "publisher_type": "government", "note": "Official 7-page MIS 2026 guidelines: recipient countries, eligibility, documents, benefits, areas of study, selection criteria, terms and conditions, institutions, contacts. Read in full."},
+    {"url": "https://biasiswa.mohe.gov.my/INTER/index.php", "publisher": "Ministry of Higher Education (MOHE), Malaysia", "publisher_type": "government", "note": "Official MIS portal home page: overview, statement that 2026/2027 applications are closed, application-status checking period."}
+  ],
+  "summary": "The Malaysia International Scholarship (MIS) is a Malaysian Government scheme run by the Ministry of Higher Education (MOHE). It attracts high-potential graduates from a set list of recipient countries to full-time postgraduate study (master's or PhD) at 24 supported Malaysian public and private institutions. It pays tuition fees and a monthly living allowance. The 2026/2027 application round on the portal is closed.",
+  "eligibility_notes": "Applicants must be graduates who are citizens of one of the MIS 2026 recipient countries. They must either plan to study full-time for a master's or PhD in Malaysia, or already be studying full-time for a postgraduate degree at a listed Malaysian institution with at least two semesters left before the end of the study period.\n\nRecipient countries named in the 2026 guidelines: the ASEAN countries (Brunei Darussalam, Cambodia, Indonesia, Lao PDR, Myanmar, Philippines, Singapore, Thailand, Vietnam); Commonwealth countries in the CPA regions of Africa, Asia, Australia, British Islands and Mediterranean, Canada, the Caribbean/Americas/Atlantic, India and the Pacific; and Afghanistan, Albania, Algeria, Azerbaijan, Bahrain, Brazil, Chile, China, Egypt, Georgia, Hong Kong, Hungary, Iran, Iraq, Japan, Jordan, Kazakhstan, Kosovo, Kuwait, Kyrgyzstan, Libya, Morocco, Palestine, Qatar, Russia, Saudi Arabia, Senegal, Serbia, South Korea, Sudan, Syria, Tajikistan, Timor-Leste, Tunisia, Turkiye, Turkmenistan, United Arab Emirates, Uzbekistan and Yemen.\n\nAge: not more than 40 years old at the time of application for a master's, and not more than 45 for a PhD.\n\nAcademic results: for a master's, a CGPA of 3.00 or second class upper (honours) or higher at bachelor's level. For a PhD, a CGPA of 3.00 or excellent results at master's level in courses related to the intended PhD programme.\n\nEnglish: IELTS band 6.0 or higher; or a TOEFL paper-based score of 550 or higher (or the equivalent score in other TOEFL tests); or a previous degree taught in English, shown by an official declaration from the university.\n\nMaster's by research and PhD applicants must submit a written research proposal of at least 1,000 words that is relevant to the intended field of study.\n\nStudy must be full-time only. Research must be carried out in Malaysia.",
+  "age_experience_notes": "Maximum age at the time of application: 40 for a master's and 45 for a PhD. The guidelines state no work-experience requirement.",
+  "funding_summary": "Tuition fees for the whole sponsorship period are paid directly to the university after the university sends its invoice to MOHE. A living allowance of RM 1,500.00 per month is paid to scholars every four months, after the scholar submits a progress report to MOHE. The guidelines do not state the length of the sponsorship period in years or semesters, and they do not mention travel, accommodation or insurance.",
+  "programmes_note": "Applicants may apply for any accredited course. Priority goes to courses in these areas of study: Education; Arts and Humanities; Social Sciences, Journalism and Information; Business, Administration and Law; Natural Sciences, Mathematics and Statistics; Information and Communication Technologies; Engineering, Manufacturing and Construction; Agriculture, Forestry, Fisheries and Veterinary; and Health and Welfare (not including medicine, nursing and pharmacy). The guidelines do not list individual programmes.",
+  "institutions_note": "24 institutions are supported under MIS: 20 public universities and 4 private ones. Scholars must enrol in full-time postgraduate study and are themselves responsible for confirming their admission to the university. The scholarship can only be used at Malaysian universities and higher education institutions.",
+  "levels": [
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {"detail": "Master's degree, full-time only, at one of the 24 supported institutions. Applicant must be 40 or younger, with a bachelor's CGPA of 3.00 or second class upper honours or higher. A research proposal of at least 1,000 words is needed for master's by research only.", "source_text": "Level of Study: Master's degree; full-time study only", "url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"},
+      "programmes": []
+    },
+    {
+      "code": "doctorate",
+      "confirmed": true,
+      "summary": {"detail": "Doctor of Philosophy (PhD), full-time only, at one of the 24 supported institutions. Applicant must be 45 or younger, with a CGPA of 3.00 or excellent results at master's level in courses related to the intended PhD programme. A research proposal of at least 1,000 words is required.", "source_text": "Level of Study: Doctor of Philosophy (PhD) degree", "url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"},
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": ["bachelor", "diploma", "postdoctoral"],
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Tuition fees for the entire sponsorship period", "conditions": "Paid directly to the university after the university issues an invoice to MOHE. Full-time master's or PhD at a supported institution."},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "RM 1,500.00 per month", "conditions": "Paid to the scholar every four months, after the scholar submits a progress report to MOHE. Monthly allowances are not payable while a scholar is suspended from the university."},
+    {"type": "travel", "coverage": "unknown", "limit_text": "Not mentioned in the 2026 guidelines", "conditions": "The guidelines say nothing about airfare or other travel costs."},
+    {"type": "accommodation", "coverage": "unknown", "limit_text": "Not mentioned in the 2026 guidelines", "conditions": null},
+    {"type": "insurance", "coverage": "unknown", "limit_text": "Not mentioned in the 2026 guidelines", "conditions": null}
+  ],
+  "requirements": [
+    {"document_type": "passport", "text": "Certified copy of the passport as evidence of nationality, with a minimum validity of 6 months.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "transcript", "text": "Certified copy of the academic transcript(s): undergraduate transcripts (plus the master's transcript for PhD applicants). They must show the record of all courses taken in the previous programme(s). If the transcript has no CGPA, marks or percentile, add a certified official document from the previous university explaining its grading system.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "language_certificate", "text": "Certified copy of an English proficiency result (IELTS or TOEFL), or an official letter from the previous institution declaring that English was the medium of instruction for the degree(s).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "reference", "text": "Letters of recommendation from two referees.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Admission letter to a Malaysian university.", "conditional_rule": "Only if the applicant is currently doing postgraduate study in Malaysia or has already secured admission to a university.", "mandatory": false},
+    {"document_type": "cv", "text": "Curriculum vitae.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "research_proposal", "text": "Written research proposal of at least 1,000 words, relevant to the intended field of study.", "conditional_rule": "Master's by research and PhD applicants only.", "mandatory": false},
+    {"document_type": "other", "text": "All documents must be in English. Documents in any other language need certified translated copies. Scan everything and upload it as PDF files with the online application form.", "conditional_rule": null, "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Check you are a citizen of a recipient country", "detail": "The scheme is for graduates who hold citizenship of one of the MIS 2026 recipient countries. They plan full-time master's or PhD study in Malaysia, or are already enrolled full-time at a supported institution with at least two semesters left.", "source_url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"},
+    {"phase": "apply", "title": "Fill in the online application form", "detail": "Applications are made through the MIS online application system run by MOHE. Fill in all the information requested in the application form. For technical problems with the form, email MOHE a description with screenshots.", "source_url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"},
+    {"phase": "apply", "title": "Scan and upload the compulsory documents as PDF", "detail": "Upload the certified passport copy, certified transcripts, English proficiency proof, two recommendation letters, CV, admission letter (if applicable) and research proposal (research master's and PhD only). Documents not in English need certified translations.", "source_url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"},
+    {"phase": "selection", "title": "Applications are assessed on three criteria", "detail": "Applications that meet the eligibility criteria are considered against: outstanding academic and co-curricular achievement; the quality of the research proposal and its potential contribution to technology and human well-being, with a preference for Malaysia-related topics; and excellent English communication, writing and reading skills. The guidelines do not describe interviews or who sits on the selection panel.", "source_url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"},
+    {"phase": "selection", "title": "Check your application status on the portal", "detail": "For the 2026/2027 round the portal says applications are closed and that applicants can check their application status or scholarship offer from 8 October 2026 to 31 December 2026.", "source_url": "https://biasiswa.mohe.gov.my/INTER/index.php"},
+    {"phase": "after_award", "title": "Confirm admission and enrol full-time", "detail": "Scholars must enrol in a full-time postgraduate programme and are responsible for confirming their own admission to the university. They may not change programme during the scholarship except with written permission from the university and MOHE.", "source_url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"},
+    {"phase": "after_award", "title": "Apply for the entry visa and medical examination", "detail": "Successful candidates must apply for and meet the requirements for the proper entry visa, including a medical examination. The scholarship offer does not guarantee that a visa will be granted.", "source_url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"},
+    {"phase": "after_award", "title": "Keep to the scholarship conditions during study", "detail": "Scholars must follow Malaysian law and university rules and keep satisfactory academic progress, or the scholarship is withdrawn. A suspension from the university means immediate suspension of the scholarship, with no allowance paid. Paid employment needs written approval from the host university. Research must be carried out in Malaysia. Submit a progress report to MOHE to receive the allowance every four months.", "source_url": "https://biasiswa.mohe.gov.my/INTER/doc/MIS/Guidelines%20MIS%202026.pdf"}
+  ],
+  "not_stated": [
+    "Closing date and opening date of the 2026/2027 application round (the portal only says it is closed)",
+    "Length of the sponsorship period in years or semesters for master's and PhD",
+    "Whether travel, accommodation, health insurance, a settlement or book allowance are provided",
+    "Number of awards or the selection stages, panel, interview or results date",
+    "Any bond or obligation to return home or work after graduation",
+    "Whether the English proficiency result must be recent (no validity period given)"
+  ],
+  "fetch_problems": [
+    "The portal's 'MIS Online Application System' link on the home page is only a placeholder, so the online form itself could not be read.",
+    "The portal home page lists no eligibility, benefits, FAQ or document text; the 7-page guideline PDF was the only detailed official source. Contact page (index_ralatS.php) was not opened."
+  ],
+  "notes": [
+    "The stored 'nationalities' list on the site is a flattened and partly different country list than the guideline text. The guideline names ASEAN members, Commonwealth countries (by CPA region) and a list of other countries; the Commonwealth list is not enumerated in the PDF.",
+    "Stored benefit conditions, requirements and eligibility were re-confirmed against the 2026 PDF; the stored 'Travel to Malaysia is not mentioned' remark is confirmed (travel is not mentioned).",
+    "Contact for questions: MOHE Scholarship Division, email international@mohe.gov.my, phone +603-8870 6346 / +603-8870 6375 (Monday to Friday, 9.00 am to 4.30 pm Malaysia time)."
+  ]
+}]

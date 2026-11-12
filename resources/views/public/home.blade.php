@@ -287,4 +287,7 @@
 
 @endswitch
 @endforeach
+    @if (config('sas.apply_popup'))
+        @guest<x-apply-popup :subjects="$subjects" />@endguest
+    @endif
 </x-layouts.public>

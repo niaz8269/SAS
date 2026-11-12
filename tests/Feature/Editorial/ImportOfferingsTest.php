@@ -42,6 +42,31 @@ class ImportOfferingsTest extends TestCase
             ->assertSee('MSc Data Science')->assertSee('University X')->assertSee('Two-year taught master, English')->assertSee('Three-year PhD');
     }
 
+    public function test_a_reload_replaces_only_the_levels_in_the_file_and_never_shortens_a_stored_list(): void
+    {
+        $this->seed(TaxonomySeeder::class);
+        $cycle = $this->publishedCycle([], $this->exactDeadline());
+        $cycle->forceFill(['external_key' => 'offer-3'])->save();
+        $cycle->degreeLevels()->sync(DegreeLevel::whereIn('code', ['bachelor', 'master'])->pluck('id'));
+
+        $first = ['external_key' => 'offer-3', 'levels' => [
+            ['code' => 'bachelor', 'confirmed' => true, 'summary' => ['detail' => 'Four-year bachelor']],
+            ['code' => 'master', 'confirmed' => true, 'summary' => ['detail' => 'Old master line'],
+                'programmes' => [['name' => 'MSc One'], ['name' => 'MSc Two'], ['name' => 'MSc Three']]],
+        ]];
+        $this->artisan('sas:import-offerings', ['files' => [$this->file($first)]])->assertSuccessful();
+
+        // The reload covers only the master's level, and names fewer programmes.
+        $second = ['external_key' => 'offer-3', 'levels' => [
+            ['code' => 'master', 'confirmed' => true, 'summary' => ['detail' => 'New master line'], 'programmes' => [['name' => 'MSc One']]],
+        ]];
+        $this->artisan('sas:import-offerings', ['files' => [$this->file($second)]])->assertSuccessful();
+
+        $this->assertSame('Four-year bachelor', $cycle->offerings()->whereNull('name')->whereHas('degreeLevel', fn ($q) => $q->where('code', 'bachelor'))->value('detail'), 'the bachelor line was not in the file, so it stays');
+        $this->assertSame(3, $cycle->offerings()->whereNotNull('name')->count(), 'the three stored master programmes stay');
+        $this->assertSame('New master line', $cycle->offerings()->whereNull('name')->whereHas('degreeLevel', fn ($q) => $q->where('code', 'master'))->value('detail'), 'the level summary is refreshed');
+    }
+
     public function test_dry_run_changes_nothing_and_unconfirmed_levels_are_left_alone(): void
     {
         $this->seed(TaxonomySeeder::class);

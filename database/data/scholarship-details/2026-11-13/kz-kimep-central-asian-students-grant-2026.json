@@ -1,0 +1,88 @@
+[{
+  "external_key": "kz-kimep-central-asian-students-grant-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad", "publisher": "KIMEP University", "publisher_type": "university", "note": "The grant entry: number, eligibility, English options, documents, how to apply, deadline, coverage, exclusions, retention rules; general financial aid rules"},
+    {"url": "https://kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?citizenship=&degree=grad", "publisher": "KIMEP University", "publisher_type": "university", "note": "Checked that the Central Asian grant exists only at undergraduate level; general scholarship application text"},
+    {"url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/", "publisher": "KIMEP University", "publisher_type": "university", "note": "Undergraduate admission steps, English proficiency table, medical documents, Foundation programme, programme list"},
+    {"url": "https://www.kimep.kz/prospective-students/en/admission/application-deadlines/", "publisher": "KIMEP University", "publisher_type": "university", "note": "Admission application dates; no scholarship-specific dates"},
+    {"url": "https://www.kimep.kz/prospective-students/en/admission/kimep-university-tests-schedule/", "publisher": "KIMEP University", "publisher_type": "university", "note": "Entrance tests: none required for this grant on the page"}
+  ],
+  "summary": "A KIMEP University grant for undergraduate students from Kyrgyzstan, Tajikistan, Turkmenistan and Uzbekistan, offering 10 grants. It is for secondary or vocational school graduates of 2025 or 2026 with a school certificate average of at least 4.50 out of 5.00 (90%) and good English. It covers 100% of tuition for 4 academic years at KIMEP in Almaty, Kazakhstan; it does not pay a stipend, housing, fees or deposits. Applications closed on 12 July 2026.",
+  "eligibility_notes": "Citizens of Kyrgyzstan, Tajikistan, Turkmenistan or Uzbekistan who graduated from secondary school or a vocational school in 2025 or 2026. Citizens of Kazakhstan are not eligible. Students already enrolled at KIMEP (registered for Fall 2025, Spring 2026 or Summer 2026 courses) cannot apply.\n\nAcademic result: an average of at least 4.50 out of 5.00 (90%) on the school certificate; every grade on every page of the document is counted.\n\nEnglish: strong English shown by at least one of these: IELTS Academic 5.5 with no section below 5.0; TOEFL iBT 3.5 (Reading 3.5, Listening 3, Speaking 3, Writing 3); Duolingo 95 with no section below 90; CEFR B2; Cambridge FCE 160; LanguageCert Academic 60; or PTE Academic 39. Applicants who have no certificate can register for KIMEP's own English test through the online form, according to the admissions page.\n\nOther criteria: achievements at national or international level in the last 3 years are considered. The Financial Aid Office may add its own criteria, such as English level, average grades for grades 5 to 11/12, or an interview.\n\nTo keep the grant: a full load each Fall and Spring semester (at least 4 courses or 12 credits), a semester GPA of at least 3.00, and retaken or withdrawn courses are not counted. Recipients must follow the Financial Aid Policy.",
+  "age_experience_notes": "No age limit or work experience requirement is stated; applicants must be 2025 or 2026 school or vocational school graduates.",
+  "funding_summary": "Covers 100% of tuition for 4 academic years; the grant cannot be extended. It does not cover a stipend, housing, student and medical fees, fines, library fees, deposits or other charges. KIMEP's page for most grants also states a 38-credit limit for 2026-2027; the Central Asian entry does not repeat it.",
+  "programmes_note": "The grant entry does not limit the grant to a field; it applies to undergraduate admission at KIMEP. KIMEP's undergraduate programmes are listed below. Most teaching is in English, and students below the required English level must complete the Foundation programme, which has three English levels of 225 class hours each and cannot be waived.",
+  "institutions_note": "KIMEP University, Almaty, Kazakhstan only.",
+  "levels": [
+    {
+      "code": "bachelor",
+      "confirmed": true,
+      "summary": {"detail": "10 grants for undergraduate study; 100% tuition for 4 academic years, not extendable. For 2025 and 2026 school and vocational school graduates from Kyrgyzstan, Tajikistan, Turkmenistan and Uzbekistan. Taught mainly in English; Foundation English is required for applicants below the English level (225 class hours per level).", "source_text": "Grants for students from Central Asian countries", "url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"},
+      "programmes": [
+        {"name": "Economics", "institution": "KIMEP University", "detail": "Undergraduate programme (UNT profile subjects: Geography, Mathematics)", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Management", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Accounting and Audit", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Finance", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Public and Local Administration", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Marketing", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "International Law", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Jurisprudence (Law)", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "International Relations", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Foreign Languages: Two Foreign Languages", "institution": "KIMEP University", "detail": "Undergraduate programme; the admissions page notes an online essay exam for this programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Cognitive Science", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Translation", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Information Systems", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Computer Science", "institution": "KIMEP University", "detail": "Undergraduate programme; a math level assessment test applies", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Journalism", "institution": "KIMEP University", "detail": "Undergraduate programme; creative entrance exam (essay)", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+        {"name": "Psychology", "institution": "KIMEP University", "detail": "Undergraduate programme", "source_text": "Undergraduate programmes", "url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"}
+      ]
+    }
+  ],
+  "levels_not_offered": ["master", "doctorate"],
+  "catalogue_url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/",
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "100% of tuition for 4 academic years", "conditions": "Cannot be extended. Kept only with a full load (at least 4 courses or 12 credits) in Fall and Spring and a semester GPA of at least 3.00; retaken and withdrawn courses are not counted."},
+    {"type": "living_allowance", "coverage": "not_covered", "limit_text": "No stipend is included", "conditions": null},
+    {"type": "accommodation", "coverage": "not_covered", "limit_text": "Housing is not included", "conditions": null},
+    {"type": "insurance", "coverage": "not_covered", "limit_text": "Student and medical fees are not included", "conditions": null},
+    {"type": "other", "coverage": "not_covered", "limit_text": "Fines, library fees, deposits and other charges are not included", "conditions": null}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "Completed online registration form for the grant.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "passport", "text": "Electronic copy of ID card or passport.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "language_certificate", "text": "Valid copies of English test certificates (IELTS Academic, TOEFL iBT, Duolingo, CEFR, Cambridge FCE, LanguageCert Academic or PTE Academic), if the applicant holds them.", "conditional_rule": "If held; applicants without one can use the university's English test", "mandatory": false},
+    {"document_type": "transcript", "text": "Copy of the school certificate (attestat) with its appendix of grades; all grades on every page count towards the 4.50 out of 5.00 (90%) average.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Certificates of prize places in republican and/or international olympiads and competitions from the last 3 years.", "conditional_rule": "Only if the applicant has them", "mandatory": false},
+    {"document_type": "medical", "text": "Medical documents for admission to KIMEP: a medical certificate (form 075/u or an equivalent for foreign citizens), fluorography valid for 6 months or less, and the vaccination card copy. Foreign students may be asked for a notarised translation and may take the medical exam after arriving in Almaty.", "conditional_rule": "Admission step, requested by the university after admission", "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Check the grant criteria and apply to KIMEP", "detail": "Check you are a citizen of Kyrgyzstan, Tajikistan, Turkmenistan or Uzbekistan, a 2025 or 2026 school or vocational graduate, and not a current KIMEP student. Apply to KIMEP undergraduate admission through the Applicant Portal: fill in the online questionnaire, upload an ID copy and any English certificate, and upload the school certificate with its appendix.", "source_url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+    {"phase": "apply", "title": "Complete the grant registration form and upload documents", "detail": "Fill in the grant's online registration form and upload the electronic ID or passport copy, English test certificates if you have any, the school certificate with its appendix, and certificates of olympiad or competition prizes from the last 3 years. Applications were accepted until 12 July 2026, inclusive.", "source_url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"},
+    {"phase": "apply", "title": "Show your English level", "detail": "Valid international certificates exempt applicants from KIMEP's English test; otherwise register for the English test through the online form and upload an ID copy. Applicants below the needed level are placed in Foundation English.", "source_url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+    {"phase": "selection", "title": "Financial Aid Office checks the criteria", "detail": "The grant is judged on the school certificate average (at least 4.50 out of 5.00, 90%), English level and achievements from the last 3 years. The Financial Aid Office may add criteria such as an interview, English level or grade averages for grades 5 to 11/12.", "source_url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"},
+    {"phase": "selection", "title": "Admission and aid are reviewed separately", "detail": "The Student Admissions and Financial Aid Allocation Committee reviews admission applications and financial aid applications separately; being admitted does not guarantee financial aid. The pages do not give a results date or how winners are told.", "source_url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+    {"phase": "after_award", "title": "Accept admission, sign the contract and register for courses", "detail": "The admission notice comes by e-mail and in the Acceptance Package section of the portal. Print the education services contract, sign two copies and give them to the Admissions Committee before course registration closes, then register for courses with Student Academic Advising. Send the medical documents requested by the university.", "source_url": "https://www.kimep.kz/prospective-students/en/admission/high-school-graduates/"},
+    {"phase": "after_award", "title": "Keep the grant through study", "detail": "The grant lasts 4 academic years and is not extended. Each Fall and Spring semester you need at least 4 courses or 12 credits and a semester GPA of at least 3.00, and retaken or withdrawn courses are not counted. You must follow the Financial Aid Policy.", "source_url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"}
+  ],
+  "not_stated": [
+    "Date when results are announced and how winners are notified",
+    "Number of grants per country (10 grants in total)",
+    "Whether a Foundation English year counts within the 4 academic years of the grant",
+    "Visa, housing and tuition-fee amounts for international students on the pages read",
+    "Date or conditions of the next call (the 2026 deadline of 12 July 2026 has passed)",
+    "Whether the entrance tests used for other applicants (UNT) apply to Central Asian applicants"
+  ],
+  "fetch_problems": [
+    "The admission and deadlines pages were returned in Kazakh-language form by the page reader and were summarised in English; dates and figures were taken as shown.",
+    "The KIMEP international brochure PDF could not be read because it exceeded the reader's size limit.",
+    "The online grant registration form itself was not opened."
+  ],
+  "notes": [
+    "The stored data said the application opening and test dates were not announced; the grant page now shows a deadline of 12 July 2026 (inclusive), which has passed. The 2027 call is not announced.",
+    "A web search snippet mentioned older pages with 20 or 40 awards and a 2025 deadline; they were not opened, and the current KIMEP page states 10 grants.",
+    "The KIMEP page says the combined support for applicants in two or more financial support categories cannot exceed 30%; this appears to concern other aid categories, not this grant.",
+    "The page's header says most grants carry a 38-credit limit for 2026-2027; whether the Central Asian grant is subject to it is not stated in its own entry.",
+    "Stored retention rules (full-time load, semester GPA 3.00) are confirmed by the page; the page adds the 3.50 requirement for most other grants and a 'no retaken or withdrawn courses' rule."
+  ]
+}]

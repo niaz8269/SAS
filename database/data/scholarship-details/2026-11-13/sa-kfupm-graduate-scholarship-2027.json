@@ -1,0 +1,522 @@
+[
+  {
+    "external_key": "sa-kfupm-graduate-scholarship-2027",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://cgis.kfupm.edu.sa/admission/kfupm-scholarship",
+        "publisher": "King Fahd University of Petroleum and Minerals (KFUPM), College of Graduate and Interdisciplinary Studies",
+        "publisher_type": "university",
+        "note": "Scholarship eligibility, benefits, direct PhD funding, self-sponsored fee table"
+      },
+      {
+        "url": "https://cgis.kfupm.edu.sa/admission/admissionrequirement",
+        "publisher": "KFUPM College of Graduate and Interdisciplinary Studies",
+        "publisher_type": "university",
+        "note": "Admission requirements for MS (thesis), PhD and direct-entry PhD: degrees, GPA, English tests, references"
+      },
+      {
+        "url": "https://cgis.kfupm.edu.sa/",
+        "publisher": "KFUPM College of Graduate and Interdisciplinary Studies",
+        "publisher_type": "university",
+        "note": "Current application windows, application portal, programme tracks"
+      },
+      {
+        "url": "https://www.kfupm.edu.sa/study/international-students/apply-as-an-international-student",
+        "publisher": "KFUPM",
+        "publisher_type": "university",
+        "note": "Steps for international graduate applicants, decision timing, visa, English minimums"
+      },
+      {
+        "url": "https://www.kfupm.edu.sa/study/graduate-programs",
+        "publisher": "KFUPM",
+        "publisher_type": "university",
+        "note": "List of graduate programmes with durations"
+      },
+      {
+        "url": "https://apply.kfupm.edu.sa/",
+        "publisher": "KFUPM Admissions",
+        "publisher_type": "university",
+        "note": "Status of each graduate track (thesis MS and PhD open; project-based and executive tracks closed)"
+      },
+      {
+        "url": "https://bulletin.kfupm.edu.sa/programs/graduate-programs/",
+        "publisher": "KFUPM Bulletin",
+        "publisher_type": "university",
+        "note": "Index of graduate programmes by college"
+      }
+    ],
+    "summary": "KFUPM (King Fahd University of Petroleum and Minerals) in Dhahran, Saudi Arabia offers full-time scholarships to distinguished graduate applicants admitted to thesis-based MS or PhD programmes, including direct-entry PhD. Scholarship holders study without a tuition fee and receive a stipend, free on-campus housing, medical and dental care, subsidised meals and free textbooks; air tickets are for international students. Admission is competitive and there is no separate scholarship form on the pages read.",
+    "eligibility_notes": "Who gets it: the scholarship page says distinguished graduate applicants with exceptional qualifications, performance and a high GPA can be admitted as full-time MS or PhD students with a full scholarship, and that scholarships are offered for all PhD programmes and PhD direct-entry programmes. The page states no minimum GPA for the scholarship itself and does not say which MS programmes carry one. The admission page says the thesis-based MS needs a GPA of 3.00 or higher for scholarship applicants (2.50 or higher for non-scholarship applicants).\n\nMS (thesis-based): a four-year B.S. in engineering or science from a recognised institution, in the proposed field or with suitable background.\n\nPhD (regular): an M.S. in engineering or science from an institution with graduate programmes equivalent to KFUPM's, in the proposed field or with suitable background, and a GPA of at least 3.00 on a 4.00 scale (or equivalent) in both the B.S. and the M.S.\n\nPhD direct entry: a four-year B.S. with a GPA of at least 3.00 on a 4.00 scale (or equivalent); the programme takes five years and the scholarship covers the first four.\n\nEnglish: official scores are needed. MS (thesis): TOEFL 520 paper, 190 computer or 70 internet-based; or IELTS 6.0; or Duolingo 105. PhD and direct-entry PhD: TOEFL 550 paper, 213 computer or 80 internet-based; or IELTS 6.5; or Duolingo 120. TOEFL scores are sent directly to the College of Graduate Studies using KFUPM code 0868. The test is waived for KFUPM graduates and for graduates of the USA, Canada, UK, Australia and New Zealand.\n\nNationality: the admission requirements are open to Saudis and internationals alike; no nationality list or restriction is stated. Meeting the minimums does not guarantee admission; final decisions depend on a full review and programme capacity. Departments and the university may add requirements.",
+    "age_experience_notes": "No age limit or work-experience requirement is stated for the thesis MS and PhD scholarship routes. (Work experience is required only for the MS in Business Administration and project-based routes, which are not scholarship routes on the pages read.)",
+    "funding_summary": "Scholarship holders study with no tuition fee and receive a stipend (amount depends on category; no figures given), free furnished air-conditioned on-campus housing including utilities and maintenance, medical and dental care, subsidised meals, free textbooks and air tickets (international students only). Conference funding is available under conditions that the page does not specify; there are chances to become an RA-PhD or to work on paid research projects. The direct PhD takes five years and the full scholarship covers the first four. The page gives no funding length for MS or regular PhD students (programme durations listed are 2 years for the MS and 3 to 4 years for the PhD).",
+    "programmes_note": "Full-time thesis-based MS and PhD programmes (about 30 MS entries and 19 PhD entries in the programme list) in engineering, sciences, business and related fields, plus direct-entry PhD. Project-based (cohort) master's programmes and executive programmes are separate tracks with their own windows; the pages read do not say whether the scholarship applies to them. The list below gives the first 25 thesis-based MS entries in the source order.",
+    "institutions_note": "All study is at KFUPM in Dhahran, Saudi Arabia, in its colleges (Computing and Mathematics, Petroleum Engineering and Geosciences, Engineering and Physics, Chemicals and Materials, Design and Built Environment, Business School, General Studies).",
+    "levels": [
+      {
+        "code": "master",
+        "confirmed": true,
+        "summary": {
+          "detail": "Thesis-based MS, listed as 2 years (3 for the Geophysics M.T. entry). Four-year B.S. in engineering or science needed, GPA 3.00 or higher for scholarship applicants, English minimum TOEFL 70 iBT or IELTS 6.0 or Duolingo 105, two recommendation letters. The scholarship page does not spell out MS funding terms beyond 'full-time MS' admitted with a scholarship.",
+          "source_text": "Admission requirements: MS (Thesis-Based)",
+          "url": "https://cgis.kfupm.edu.sa/admission/admissionrequirement"
+        },
+        "programmes": [
+          {
+            "name": "Master of Science in Aerospace Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Applied Statistics",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Architectural Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Architecture (Thesis Option)",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Business Studies - Accounting",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Business Studies - Finance",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Business Studies - Management",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Business Studies - Management Information System",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Business Studies - Marketing",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Business Studies - Operations Management",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Chemical Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Chemistry",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Civil Engineering - Geotechnical Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Civil Engineering - Structures and Civil Engineering Materials",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Civil Engineering - Transportation Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Civil Engineering - Water Resources and Environmental Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Computer Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Computer Science",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Electrical Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Environmental Sciences",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Geology (Thesis Option)",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Geophysics (Thesis Option)",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Industrial and Systems Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Materials Science and Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Master of Science in Mathematics",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 2 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          }
+        ]
+      },
+      {
+        "code": "doctorate",
+        "confirmed": true,
+        "summary": {
+          "detail": "PhD for M.S. holders (regular entry) and direct-entry PhD for B.S. holders (five years, scholarship covers the first four). Scholarships are offered for all PhD programmes and direct-entry programmes. English minimum TOEFL 80 iBT or IELTS 6.5 or Duolingo 120. Listed programme durations are 3 or 4 years.",
+          "source_text": "Scholarships are offered for all PhD programs",
+          "url": "https://cgis.kfupm.edu.sa/admission/kfupm-scholarship"
+        },
+        "programmes": [
+          {
+            "name": "Doctor of Philosophy in Aerospace Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Bioengineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Business Administration",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 4 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Chemical Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Chemistry",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 4 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Civil Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Computer Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Computer Science",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Construction and Building Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 4 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Electrical Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Geology",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Geophysics",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Industrial and Systems Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Materials Science and Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Mathematics",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 4 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Mechanical Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Petroleum Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Physics",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          },
+          {
+            "name": "Doctor of Philosophy in Systems and Control Engineering",
+            "institution": "KFUPM",
+            "detail": "Duration listed: 3 years",
+            "source_text": "Graduate programs list",
+            "url": "https://www.kfupm.edu.sa/study/graduate-programs"
+          }
+        ]
+      }
+    ],
+    "levels_not_offered": [
+      "bachelor"
+    ],
+    "catalogue_url": "https://www.kfupm.edu.sa/study/graduate-programs",
+    "benefits": [
+      {
+        "type": "tuition",
+        "coverage": "covered",
+        "limit_text": "Scholarship recipients study with no tuition fee",
+        "conditions": "The self-sponsored fee table (registration per semester and per credit hour) does not apply to scholarship holders."
+      },
+      {
+        "type": "living_allowance",
+        "coverage": "covered",
+        "limit_text": "Stipend paid by category; the page gives no amounts",
+        "conditions": null
+      },
+      {
+        "type": "accommodation",
+        "coverage": "covered",
+        "limit_text": "Free, furnished, air-conditioned on-campus housing including utilities and maintenance",
+        "conditions": null
+      },
+      {
+        "type": "insurance",
+        "coverage": "covered",
+        "limit_text": "Medical and dental care",
+        "conditions": null
+      },
+      {
+        "type": "travel",
+        "coverage": "covered",
+        "limit_text": "Air tickets, for international students only",
+        "conditions": "No route, frequency or cap is stated."
+      },
+      {
+        "type": "other",
+        "coverage": "covered",
+        "limit_text": "Free textbooks; subsidised meals; funding for conference participation under certain conditions (conditions not specified)",
+        "conditions": "Also listed: chance to become an RA-PhD, chance to work on research projects for financial benefit, access to the main library and department resource centres, recreational facilities including a private beach."
+      }
+    ],
+    "requirements": [
+      {
+        "document_type": "transcript",
+        "text": "Official transcripts: the B.S. transcript for MS and direct-entry PhD applicants; the B.S. and M.S. transcripts for regular PhD applicants.",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "degree_certificate",
+        "text": "Degree certificates.",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "reference",
+        "text": "Two recommendation letters submitted through the online recommendation system, preferably from faculty who taught the applicant (graduate courses for PhD applicants, university-level courses for MS applicants).",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "language_certificate",
+        "text": "Official English test score (TOEFL, IELTS or Duolingo) at the programme minimum; TOEFL scores are sent directly to the College of Graduate Studies with KFUPM code 0868.",
+        "conditional_rule": "waived for KFUPM graduates and for graduates of the USA, Canada, UK, Australia and New Zealand",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Any additional departmental or university requirements.",
+        "conditional_rule": "only where a department or the university asks",
+        "mandatory": false
+      }
+    ],
+    "application_steps": [
+      {
+        "phase": "apply",
+        "title": "Check the application window and programme requirements",
+        "detail": "The College of Graduate and Interdisciplinary Studies lists the MS (thesis-based) and PhD window as 1 November 2026 to 15 December 2026 and marks it open. (Stored data gave 23 November 2026 to 20 January 2027; the current page shows the earlier dates.) Check your degree, GPA and English score against the admission requirements and choose one of the thesis-based MS or PhD programmes.",
+        "source_url": "https://cgis.kfupm.edu.sa/"
+      },
+      {
+        "phase": "apply",
+        "title": "Create an account and submit the online application",
+        "detail": "Apply for MS (thesis-based) and PhD through the Nabegh application portal of the college, where applicants can create an account and later log in to review their form. The admission page names these items: official transcripts and degree certificates, two recommendation letters through the online recommendation system, and an English test score (TOEFL scores are sent directly under code 0868). There is no separate scholarship form on the pages read.",
+        "source_url": "https://www.kfupm.edu.sa/study/international-students/apply-as-an-international-student"
+      },
+      {
+        "phase": "selection",
+        "title": "Review and possible interview",
+        "detail": "Applications are reviewed in full against programme requirements and capacity; meeting the minimum scores does not guarantee admission. Some highly competitive programmes may require an interview, and KFUPM will contact you to schedule it. The scholarship goes to distinguished applicants with exceptional qualifications, performance and a high GPA.",
+        "source_url": "https://www.kfupm.edu.sa/study/international-students/apply-as-an-international-student"
+      },
+      {
+        "phase": "selection",
+        "title": "Decision by email and in the applicant portal",
+        "detail": "You get the decision by email and an update in your applicant portal; the page says this can take 2 to 3 months. The pages do not say how scholarship decisions are communicated separately.",
+        "source_url": "https://www.kfupm.edu.sa/study/international-students/apply-as-an-international-student"
+      },
+      {
+        "phase": "after_award",
+        "title": "Visa processing starts after official admission",
+        "detail": "Visa processing for accepted international students begins as soon as you are officially admitted. Visa documents and arrival steps are on separate pages that were not read.",
+        "source_url": "https://www.kfupm.edu.sa/study/international-students/apply-as-an-international-student"
+      },
+      {
+        "phase": "after_award",
+        "title": "Receive benefits while studying full time",
+        "detail": "Scholarship holders get free on-campus housing, medical and dental care, subsidised meals, free textbooks, a stipend, an air ticket if international, and conference funding under conditions. Direct-entry PhD students are funded for the first four of five years.",
+        "source_url": "https://cgis.kfupm.edu.sa/admission/kfupm-scholarship"
+      }
+    ],
+    "not_stated": [
+      "Stipend amounts and the stipend categories",
+      "Number of scholarships and any separate scholarship selection criteria",
+      "Whether MS scholarships are given for all thesis-based MS programmes (only PhD and direct-entry PhD are stated to carry scholarships for all programmes)",
+      "Conditions for conference funding",
+      "How long MS and regular PhD scholarships are paid, and any return or service obligation",
+      "Whether the scholarship applies to project-based master's programmes",
+      "Teaching language of programmes",
+      "Document upload list beyond transcripts, certificates, references and English score; visa documents and arrival steps",
+      "Nationality restrictions (none stated)"
+    ],
+    "fetch_problems": [
+      "The programme-specific application page on the college site redirects to the bulletin page, which only lists programmes and holds no application steps.",
+      "The application portal page is a login page, so portal screens and document uploads could not be read.",
+      "No dedicated page listing required documents beyond the admission requirements page was found."
+    ],
+    "notes": [
+      "Application window conflict: the college site now shows 1 November 2026 to 15 December 2026 for MS (thesis-based) and PhD, while stored data says 23 November 2026 to 20 January 2027. Stored milestones should be updated. The project-based MS window (3 January to 10 February 2027) is marked closed on the same page, which conflicts with its future dates.",
+      "The programme list gives 'Master of Science in Petroleum Engineering' with a B.Sc. code and a Master in Geology and Geophysics with M.T. codes; only M.Sc. entries are used above, so 25 of about 30 are shown. The remaining entries are Geology/Geophysics variants, Master in Geophysics, Mechanical Engineering, Petroleum Engineering, Physics and Systems and Control Engineering (Thesis option).",
+      "Stored 'teaching_language' (not stated) remains unconfirmed.",
+      "Self-sponsored (non-scholarship) thesis programme fees: Saudi SAR 5,000 and non-Saudi SAR 7,500 per semester registration (then SAR 2,500 / 3,750 from the second thesis semester) plus SAR 500 per credit hour; these do not apply to scholarship holders."
+    ]
+  }
+]

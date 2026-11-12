@@ -1,0 +1,87 @@
+[{
+  "external_key": "kz-state-scholarship-foreign-citizens-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://bolashak.gov.kz/en/scholarship-program", "publisher": "JSC Center for International Programs (Bolashak Centre), operator for the Ministry of Science and Higher Education of Kazakhstan", "publisher_type": "government", "note": "Quotas, application window with closing time, operator, language of application, where the university list is shown"},
+    {"url": "https://bolashak.gov.kz/en/scholarship-program/requirements-bachelors-degree", "publisher": "JSC Center for International Programs (Bolashak Centre)", "publisher_type": "government", "note": "Requirements and document list for bachelor's, master's and doctoral applicants; language score minimums"},
+    {"url": "https://bolashak.gov.kz/en/allnews/application-process-has-begun-scholarship-program-foreign-students-including-kazakhs-without-kazakhstani-citizenship-study-higher-andor-postgraduate-education-institutions", "publisher": "JSC Center for International Programs (Bolashak Centre)", "publisher_type": "government", "note": "2026-2027 call announcement: dates, quotas, application in Kazakh, Russian or English"},
+    {"url": "https://bolashak.gov.kz/en/allnews/550-international-students-awarded-scholarships-study-kazakhstan", "publisher": "JSC Center for International Programs (Bolashak Centre)", "publisher_type": "government", "note": "Result: main list of 550 recipients approved, 31 July 2026"},
+    {"url": "https://www.oq.gov.kz/en/b-ship", "publisher": "Ministry of Education of Kazakhstan", "publisher_type": "government", "note": "Programme length in ECTS credits, benefits and what is not covered, selection method, application steps"},
+    {"url": "https://astanait.edu.kz/scholarship-foreign", "publisher": "Astana IT University", "publisher_type": "university", "note": "Participating university: steps, documents, English score minimums, benefits and exclusions, schools"},
+    {"url": "https://bolashak.gov.kz/storage/app/media/stipendialnaya-programma/vuzy/2025/1.%20%D1%81%D0%BF%D0%B8%D1%81%D0%BE%D0%BA%20%D0%B2%D1%83%D0%B7%D0%BE%D0%B2%20%D0%B0%D0%BD%D0%B3%D0%BB.pdf", "publisher": "JSC Center for International Programs (Bolashak Centre)", "publisher_type": "government", "note": "List of 37 participating universities (2025 edition, previous year)"}
+  ],
+  "summary": "A Kazakhstan state scholarship for foreign citizens, including ethnic Kazakhs who are not citizens of Kazakhstan, to study at Kazakhstani universities. It is run for the Ministry of Science and Higher Education by the Bolashak Centre for International Programmes. The 2026-2027 call offered 490 bachelor's, 50 master's and 10 PhD scholarships, and the main list of 550 recipients was approved on 31 July 2026. The award covers tuition plus a monthly allowance.",
+  "eligibility_notes": "The scholarship is for foreign citizens, including people of Kazakh ethnicity who are not citizens of Kazakhstan. The applicant must be studying each education level for the first time.\n\nBachelor's: a secondary education certificate with an average grade of at least \"good\".\n\nMaster's: a previous degree with a transcript. The Bolashak requirements page asks for a GPA of at least 3.0 out of 4.0 or equivalent; the Ministry of Education page gives 2.33 out of 4. The two official pages disagree, so check the figure shown on the application portal.\n\nPhD: a master's degree with a transcript (GPA minimum as for master's, same disagreement), plus an international language certificate and a dissertation topic justification.\n\nLanguage: master's and PhD applicants need an international language certificate with these minimums: English IELTS Academic 5.5, TOEFL iBT 46 or TOEFL PBT 453; German DSH or TestDaF at B2; French TFI (B2 in reading and listening), DELF B2, DALF B2 or TCF at least 50 points; Chinese HSK level 4 or higher. No certificate is needed if the previous education was in the language of the programme.\n\nThe application for the whole study period must be completed in Kazakh, Russian or English. A refugee certificate is accepted as an identity document.",
+  "age_experience_notes": "No age limit and no work experience requirement are stated on the pages read.",
+  "funding_summary": "Per the Ministry of Education and the partner university page, the scholarship covers the full tuition fee and pays a monthly allowance that depends on academic progress. It does not cover travel, accommodation, visa or medical insurance. The allowance amount is not stated. The pages state the programme lengths in ECTS credits: bachelor's 180 to 240, master's 60 to 120, PhD 180.",
+  "programmes_note": "Scholarships are given at three levels: bachelor's (490 places in 2026-2027), master's (50) and PhD (10). The list of participating universities and the available fields of study is shown on the Study In portal during the application period; it was not readable for this check. Astana IT University, one participating university, names seven schools: Intelligent Systems; AI and Data Science; Software Engineering; Cybersecurity; Creative Industries; General Education Disciplines; and Digital Public Administration.",
+  "institutions_note": "The 2025 edition of the official list names 37 participating universities (the 2026-2027 list was not opened, so treat this as the previous year): Al-Farabi Kazakh National University; L.N. Gumilyov Eurasian National University; Satbayev University; Abai Kazakh National Pedagogical University; Kazakh National Women's Teacher Training University; Kazakh National Agrarian University; K. Zhubanov Aktobe Regional University; Almaty University of Power Engineering and Telecommunications; Y. Altynsarin Arkalyk Pedagogical Institute; Kh. Dosmukhamedov Atyrau University; S. Utebayev Atyrau Oil and Gas University; D. Serikbayev East Kazakhstan Technical University; S. Amanzholov East Kazakhstan University; I. Zhansugurov Zhetysu University; M. Utemisov West Kazakhstan University; Zhangir Khan West Kazakhstan Agrarian-Technical University; S. Seifullin Kazakh Agro Technical University; Kazakh Ablai Khan University of International Relations and Foreign Languages; E. Buketov Karaganda University; Karaganda Technical University; Karaganda Industrial University; Yessenov University; Sh. Ualikhanov Kokshetau University; A. Baitursynov Kostanay University; Korkyt Ata Kyzylorda University; Toraighyrov University; Pavlodar Pedagogical University; Rudny Industrial Institute; M. Kozybayev North Kazakhstan University; M. Dulaty Taraz University; Shakarim University; South-Kazakhstan State Pedagogical University; M. Auezov South-Kazakhstan University; Astana IT University; Kazakh-British Technical University; M.S. Narikbayev KAZGUU University; Almaty Management University. The applicant chooses a university and programme on the Study In portal.",
+  "levels": [
+    {
+      "code": "bachelor",
+      "confirmed": true,
+      "summary": {"detail": "490 scholarships in 2026-2027. Programme length 180 to 240 ECTS credits. Needs a secondary education certificate with an average of at least 'good', one recommendation letter and a motivational essay. No language certificate is listed for bachelor's applicants.", "source_text": "Requirements for applicants, bachelor's degree", "url": "https://bolashak.gov.kz/en/scholarship-program/requirements-bachelors-degree"}
+    },
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {"detail": "50 scholarships in 2026-2027. Programme length 60 to 120 ECTS credits. Needs a previous degree with transcript (GPA minimum differs between the two official pages: 3.0 or 2.33 out of 4), two recommendation letters, a motivational essay and a language certificate unless the previous study was in the programme language.", "source_text": "Requirements for applicants, master's degree", "url": "https://bolashak.gov.kz/en/scholarship-program/requirements-bachelors-degree"}
+    },
+    {
+      "code": "doctorate",
+      "confirmed": true,
+      "summary": {"detail": "10 scholarships in 2026-2027. Programme length 180 ECTS credits. Needs a master's degree with transcript, two recommendation letters, a motivational essay, a language certificate unless the previous study was in the programme language, and a justification of the dissertation topic in the language of instruction.", "source_text": "Requirements for applicants, doctoral programme", "url": "https://bolashak.gov.kz/en/scholarship-program/requirements-bachelors-degree"}
+    }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": "https://studyin.kz/admission",
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Full tuition fee", "conditions": "Stated on the Ministry of Education page and on the Astana IT University page; paid by the state budget. The pages do not say how long it is paid beyond the programme."},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "Monthly allowance; amount not stated on the pages read", "conditions": "The allowance depends on academic progress."},
+    {"type": "travel", "coverage": "not_covered", "limit_text": "Travel costs are not covered", "conditions": null},
+    {"type": "accommodation", "coverage": "not_covered", "limit_text": "Accommodation is not covered", "conditions": null},
+    {"type": "insurance", "coverage": "not_covered", "limit_text": "Medical insurance is not covered", "conditions": null},
+    {"type": "other", "coverage": "not_covered", "limit_text": "Visa costs are not covered", "conditions": null}
+  ],
+  "requirements": [
+    {"document_type": "passport", "text": "Identity document (a refugee certificate is accepted).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "degree_certificate", "text": "Document of previous education with transcript and attachment (if available), with a notarised translation into Kazakh, Russian or English. Bachelor's: average grade at least 'good'. Master's and PhD: GPA at least 3.0 out of 4.0 or equivalent per the Bolashak page (2.33 per the Ministry of Education page).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "statement", "text": "Motivational essay in Kazakh, Russian or English.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "reference", "text": "Recommendation letter in Kazakh, Russian or English from the school or university attended, or from an employer. One letter for bachelor's; two letters for master's and PhD.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "medical", "text": "Two health certificates issued by the official health authority of the country of residence: one for travel to study abroad and one confirming absence of HIV/AIDS.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Application form (English template provided on the Bolashak page).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Invitation letter from a Kazakhstani university, if available.", "conditional_rule": null, "mandatory": false},
+    {"document_type": "language_certificate", "text": "International language certificate. English: IELTS Academic 5.5, TOEFL iBT 46 or TOEFL PBT 453. German: DSH or TestDaF at B2. French: TFI (B2 reading and listening), DELF B2, DALF B2 or TCF at least 50 points. Chinese: HSK level 4 or higher.", "conditional_rule": "Master's and PhD applicants; not needed if the previous education was in the programme language", "mandatory": true},
+    {"document_type": "research_proposal", "text": "Justification of the dissertation research topic in the language of instruction (Kazakh, Russian or English).", "conditional_rule": "PhD applicants only", "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Check requirements and register on the Study In portal", "detail": "Read the requirements for your level, then register on the Study In Kazakhstan application portal and upload the scanned documents with the application form. The online window for the 2026-2027 call was 30 March to 31 May 2026, closing at 23:59 Astana time. The full application must be completed in Kazakh, Russian or English.", "source_url": "https://bolashak.gov.kz/en/scholarship-program"},
+    {"phase": "apply", "title": "Choose a university and programme", "detail": "Pick a Kazakhstani university and a programme from the list shown on the portal during the application period. Astana IT University's page also notes that an invitation letter from a university is accepted if you already have one.", "source_url": "https://www.oq.gov.kz/en/b-ship"},
+    {"phase": "apply", "title": "Take the online adaptive-potential test", "detail": "After your documents are accepted, you take an online test that measures adaptive potential. Carried over from stored data (could not be re-checked on an official page): the test has 80 questions and lasts 120 minutes.", "source_url": "https://www.oq.gov.kz/en/b-ship"},
+    {"phase": "selection", "title": "Online interview by invitation", "detail": "Applicants who pass the test are invited to an online interview in the study language they chose. The selection commission reviews applicants who meet the minimum requirements and sent all documents; it decides using the documents, the test result and the interview. The pages do not describe scoring.", "source_url": "https://astanait.edu.kz/scholarship-foreign"},
+    {"phase": "selection", "title": "Main list of recipients is approved", "detail": "A competition commission approves the main list of recipients and the list is published. For the 2026-2027 call the main list of 550 recipients was approved on 31 July 2026. Carried over from stored data: the commission also draws up a reserve list.", "source_url": "https://bolashak.gov.kz/en/allnews/550-international-students-awarded-scholarships-study-kazakhstan"},
+    {"phase": "after_award", "title": "Check the list and arrange your own travel and stay", "detail": "Check the published scholar list. The award pays tuition and a monthly allowance that depends on academic progress; you must arrange and pay for travel, accommodation, visa and medical insurance yourself. The pages read say nothing more about enrolment, arrival or renewal steps.", "source_url": "https://www.oq.gov.kz/en/b-ship"}
+  ],
+  "not_stated": [
+    "Amount of the monthly allowance",
+    "Maximum age and any work experience requirement",
+    "Scoring or pass mark of the adaptive-potential test and interview format and topics (the 80 questions and 120 minutes are only carried over from stored data)",
+    "The 2026-2027 list of participating universities and programmes (shown only on the application portal during the window)",
+    "Countries that are eligible or excluded (any foreign citizen and ethnic Kazakhs without Kazakhstani citizenship are named)",
+    "Opening date and quota of the next call",
+    "Obligations after graduation, renewal and progress rules beyond 'allowance depends on academic progress'",
+    "Visa, arrival and enrolment steps for award holders"
+  ],
+  "fetch_problems": [
+    "The legal act with the selection rules (Order No. 548 on the legal information site) returned a connection reset on repeated attempts, so facts that only it provided (test length, reserve list) are marked as carried over.",
+    "The application portal page itself rendered only a title (needs JavaScript), so the programme and university list for 2026-2027 could not be read; the 2025 university list PDF was used instead.",
+    "The 2026-2027 'Main List' PDF linked from the results news item was not opened.",
+    "The Kazakh higher-education centre site pages and the Study In Kazakhstan platform pages did not describe the scholarship; the Ministry of Education page was used for selection steps."
+  ],
+  "notes": [
+    "Stored data said the allowance partly covers food, accommodation and literature; the Ministry of Education and Astana IT University pages instead say accommodation is not covered. The file follows the pages read. Please keep an eye on this.",
+    "The master's and PhD GPA minimum differs between official pages: 3.0 out of 4.0 (Bolashak requirements page) versus 2.33 out of 4 (Ministry of Education page).",
+    "Astana IT University's page lists an English test minimum including TOEFL ITP 460; this is a university list and was not added to the scheme-wide minimums.",
+    "The stored nationality setting is 'any nationality'; the official pages say foreign citizens and ethnic Kazakhs without Kazakhstani citizenship and name no country list."
+  ]
+}]

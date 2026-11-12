@@ -1,0 +1,423 @@
+[
+ {
+  "external_key": "tr-turkiye-burslari-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/en",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "Home page, menu, latest announcements"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/announcements/turkiye-scholarships-2026-applications-121",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "2026 call: dates, levels, benefits"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/whyturkiyescholarships",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "What the scholarship covers, stipend and housing allowance amounts"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/scholarshipsprograms",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "General criteria: minimum grades, age limits, who is not eligible"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "Full-time programmes by level, Art and Merit scholarships, stipend rates"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/applysteps",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "Required documents and language rules"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/evaluationandselectionprocess",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "Five-stage evaluation and selection"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/calendar",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "Yearly calendar for each programme"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/scholarshipsprocess",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "Page listing the procedure topics and the Procedures Guide"
+   },
+   {
+    "url": "https://tbbsweb.azureedge.net/tbbsweb/Page/TurkiyeScholarhips/ScholarshipsProcess/Scholarship-Procedures-Guide.pdf",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "Scholarship Procedures Guide (PDF, 32 pages; the edition read carries a 2019 page marker): durations, payments, supports, language course, conditions for deduction or loss"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/shorttermprograms",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "Short-term programmes: Success Scholarship, Research Scholarship, KATIP"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/FAQ/Category/2",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "FAQ on accommodation"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/FAQ/Category/5",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "FAQ on Turkish preparatory courses"
+   },
+   {
+    "url": "https://www.turkiyeburslari.gov.tr/FAQ/Category/6",
+    "publisher": "Presidency for Turks Abroad and Related Communities (Turkiye Scholarships)",
+    "publisher_type": "government",
+    "note": "FAQ on transportation support"
+   }
+  ],
+  "summary": "Turkiye Burslari (Turkiye Scholarships) is the Turkish government scholarship run by the Presidency for Turks Abroad and Related Communities. It offers competitive, merit-based places at associate, bachelor's, master's and doctoral level at Turkish universities, with placement in a university and department made through the programme. Short programmes exist for researchers, outstanding students already in Turkiye and public officials. Applications are free and made online through the Turkiye Scholarships Application System (TBBS).",
+  "eligibility_notes": "Citizens of all countries can apply, except Turkish citizens and people who have lost Turkish citizenship. People currently enrolled in a Turkish university at the level they are applying for are not eligible. Applicants must be graduates, or finish their current studies at the end of the current academic year with graduation before August.\n\nMinimum academic achievement: 70% for associate and bachelor's candidates; 75% for graduate (master's and PhD) candidates; 90% for Health Sciences (Medicine, Dentistry, Pharmacy). Age limits: under 21 for associate and bachelor's; under 30 for master's; under 35 for PhD; under 50 for the Research Scholarship.\n\nLanguage: many programmes are taught in Turkish; some departments offer English or other languages. Applicants to non-Turkish programmes must give an internationally accepted language certificate such as TOEFL or one the university accepts, and most English-language programmes ask for international admission tests (GRE, GMAT, SAT and similar). The language of instruction is shown when you choose programmes in the system. Undergraduate applicants with international qualifications (such as SAT or GCSE) instead of national exam scores must give the minimum qualifications needed to finish secondary school under those exams.\n\nAll awardees without a C1 Turkish certificate, including those in English or other-language programmes, take a one-year Turkish course and must obtain the C1 certificate by the end of that year. Health sciences are not awarded at master's or PhD level.\n\nThe Research Scholarship is for researchers and academics: PhD holders and PhD candidates at dissertation stage. The Success Scholarship is only for students already studying at Turkish universities on their own who show outstanding academic performance. Research, Success Scholarship and KATIP have their own application periods. The Merit Scholarship has higher grade and test thresholds (see levels).",
+  "age_experience_notes": "Age limits: associate and bachelor's under 21; master's under 30; PhD under 35; Research Scholarship under 50. The pages do not say on which date age is measured. No work experience is required for the degree levels. The Research Scholarship is for PhD holders and PhD candidates at dissertation stage; KATIP is for foreign public officials, diplomats, academics and researchers.",
+  "funding_summary": "Full-time awardees receive university placement, tuition coverage, a monthly stipend, accommodation, general health insurance, a one-year Turkish language course and a flight ticket at the start of study and after graduation. Stipend rates on the pages read: 6,500 TL (associate and bachelor's), 9,500 TL (master's), 13,000 TL (PhD); the Merit Scholarship pays twice the regular amount. Duration according to the Scholarship Procedures Guide: the one-year Turkish preparatory programme plus the normal length of the programme (associate or bachelor's: normal length, 4 years for Law and International Relations, 5 for Dentistry, 6 for Medicine; master's: 2 years; PhD: 4 years). One extra year may be granted for those who do not finish in time, with a 50% cut in the stipend.",
+  "programmes_note": "Levels: associate (two-year technical and vocational programmes), bachelor's (engineering, social sciences, health sciences, basic sciences), master's and PhD (social sciences, humanities, natural sciences, engineering; no health sciences). The Art Scholarship covers music, performing arts and fine arts at three named universities. Programmes and universities can be searched on the official site and the language of instruction is shown in the application system. Master's and PhD applicants only see the universities and departments that match their educational background. Candidates choose among 12 options in the online application and are placed in a university and department by the programme. Check that your field is recognised in your home country before applying.",
+  "institutions_note": "Placement is made through the scholarship programme at Turkish universities; the pages describe them as prestigious but name none, except for the Art Scholarship: Ankara Music and Fine Arts University, Ankara Haci Bayram Veli University and Istanbul Technical University. Students place themselves by ranking up to 12 options in TBBS, and the programme makes the placement.",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Engineering, social sciences, health sciences and basic sciences. Minimum academic achievement 70% (90% for Medicine, Dentistry, Pharmacy); age under 21. One-year Turkish preparatory programme plus the normal programme length (4 years for departments such as Law and International Relations, 5 for Dentistry, 6 for Medicine). Undergraduate applicants take a 30-question quantitative test before the interview. Merit Scholarship (double stipend, so 13,000 TL): general weighted average of 90% plus at least one of SAT 1400 (Math 680/800) for engineering or SAT 1350 for other fields, or IB at least 33 with High Level in one relevant subject; or TOEFL iBT 80/120 or IELTS 6.5/9.0; or top 10 in national exams; or a gold, silver or bronze medal in a TUBITAK-recognised international science olympiad.",
+     "source_text": "Bachelor's: engineering, social sciences, health sciences and basic sciences",
+     "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    "programmes": [
+     {
+      "name": "Instrument Education",
+      "detail": "Art Scholarship, bachelor's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Voice Training",
+      "detail": "Art Scholarship, bachelor's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Technology",
+      "detail": "Art Scholarship, bachelor's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Theory",
+      "detail": "Art Scholarship, bachelor's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Musicology",
+      "detail": "Art Scholarship, bachelor's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Photography and Video",
+      "detail": "Art Scholarship, bachelor's (fine arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Painting",
+      "detail": "Art Scholarship, bachelor's (fine arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Visual Communication Design",
+      "detail": "Art Scholarship, bachelor's (fine arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     }
+    ]
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Social sciences, humanities, natural sciences and engineering; no scholarships in health sciences at graduate level. Minimum academic achievement 75%; age under 30. Available universities and departments depend on the applicant's educational background. One-year Turkish preparatory programme plus 2 years. Merit Scholarship (double stipend, so 19,000 TL): general weighted average of 90%, plus ALES Quantitative 80 (engineering), 75 (science) or Equal Weight 75 (other fields), or GRE Quantitative 155 (engineering) or 153 (other fields), plus TOEFL iBT 90/120 or IELTS 7.0/9.0. Programmes that need a scientific preparation programme can add up to one year.",
+     "source_text": "Master's and PhD (Graduate)",
+     "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    "programmes": [
+     {
+      "name": "Instrument Education",
+      "detail": "Art Scholarship, master's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Technologies",
+      "detail": "Art Scholarship, master's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Theory",
+      "detail": "Art Scholarship, master's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Musicology",
+      "detail": "Art Scholarship, master's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Voice Education",
+      "detail": "Art Scholarship, master's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Instrument-Sound",
+      "detail": "Art Scholarship, master's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     },
+     {
+      "name": "Music Theory and Composition",
+      "detail": "Art Scholarship, master's (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Social sciences, humanities, natural sciences and engineering; no scholarships in health sciences at graduate level. Minimum academic achievement 75%; age under 35. A research topic proposal and a written sample of previous research are required. One-year Turkish preparatory programme plus 4 years. Merit Scholarship (double stipend, so 26,000 TL): general weighted average of 90%, plus ALES Quantitative 85 (engineering), 75 (science) or Equal Weight 75 (other fields), or GRE Quantitative 160 (engineering) or 157 (other fields), plus TOEFL iBT 90/120 or IELTS 7.0/9.0. Doctoral qualifying exam must be taken by the end of the fifth semester.",
+     "source_text": "Master's and PhD (Graduate)",
+     "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    "programmes": [
+     {
+      "name": "Music Sciences",
+      "detail": "Art Scholarship, PhD (music and performing arts)",
+      "source_text": "Art Scholarship list",
+      "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+     }
+    ]
+   },
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "Associate degree (TVET): two-year technical and vocational programmes that add professional skills; departments and universities are listed on the site. Minimum academic achievement 70%; age under 21. One-year Turkish preparatory programme plus the normal programme length.",
+     "source_text": "Associate Degree (TVET)",
+     "url": "https://www.turkiyeburslari.gov.tr/fulltimeprograms"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": "https://www.turkiyeburslari.gov.tr/en",
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "University tuition fees and Turkish language preparatory programme fees covered",
+    "conditions": "Stated on the why-Turkiye-Scholarships page and in the Procedures Guide. Applies for the scholarship period (language year plus normal programme length, with a possible extension)."
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "Monthly stipend: 6,500 TL (associate and bachelor's), 9,500 TL (master's), 13,000 TL (PhD)",
+    "conditions": "Paid into a bank account opened on arrival, monthly and in arrears (January's payment is made on 1 February); paid for a month only if no condition blocks payment for at least 20 days. Merit Scholarship receives twice the regular amount (13,000 / 19,000 / 26,000 TL). Reduced 25% to 50% or stopped if academic or attendance rules are missed; the extension year carries a 50% deduction. Success Scholarship: 3,500 / 5,000 / 6,500 TL for one year with no other support; Research Scholarship: 37,000 TL per month for 3 to 12 months; KATIP: 20,000 TL per month for 8 months plus accommodation and round-trip air tickets."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "covered",
+    "limit_text": "Dormitory place, with fees paid by the scholarship",
+    "conditions": "Undergraduate students can stay in dormitories (state KYK dormitories first) for the whole study period. Master's and PhD students get a dormitory place in the first year, then can rent housing with an allowance: 6,000 TL in Istanbul and Ankara, 5,000 TL in other cities (why-Turkiye-Scholarships page). The accommodation FAQ states 750 TL per month for the cash accommodation aid, so the two pages disagree. Up to 2 more months of housing support after graduation. A student who gives up the dormitory right at acceptance cannot ask for it later."
+   },
+   {
+    "type": "insurance",
+    "coverage": "covered",
+    "limit_text": "General Health Insurance (GHI)",
+    "conditions": "The programme handles registration and premium payments with the Social Security Institution; students must get their Foreign Identity Number and send it to the programme. GHI students can use public hospitals free of charge and pay only the contribution fee for medicine with a prescription."
+   },
+   {
+    "type": "travel",
+    "coverage": "covered",
+    "limit_text": "One flight ticket at first arrival in Turkiye and one after graduation",
+    "conditions": "Either a purchased ticket or cash reimbursement of the cost. For the return trip: give proof of graduation, request within six months of graduating and at least 15 days before the intended travel date. Students who buy their own ticket on arrival send copies of tickets and receipts."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "One-year Turkish language course (960 hours of Turkish and 140 hours of academic Turkish, per the FAQ)",
+    "conditions": "Compulsory for all awardees without a C1 certificate, also for English, Arabic or French programmes. Absence over 20 hours in a month cuts the stipend by 25% for three months; more than 100 unexcused hours can end the scholarship."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "University and department placement, plus student clubs, the International Student Academy, specialisation programmes, student congresses and art competitions",
+    "conditions": null
+   },
+   {
+    "type": "other",
+    "coverage": "unknown",
+    "limit_text": "Visa and residence-permit costs and support for dependants are not mentioned on the pages read",
+    "conditions": "Check the scholarship acceptance letter."
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "passport",
+    "text": "A valid identity document (ID card or passport).",
+    "mandatory": true
+   },
+   {
+    "document_type": "photo",
+    "text": "A photograph of the candidate taken within the last year.",
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "National exam results.",
+    "conditional_rule": "If applicable",
+    "mandatory": false
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Diploma or temporary graduation certificate.",
+    "mandatory": true
+   },
+   {
+    "document_type": "transcript",
+    "text": "Transcript.",
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "International exam results (for example GRE, GMAT, SAT).",
+    "conditional_rule": "If the chosen university or programme requires them; most English-language programmes do",
+    "mandatory": false
+   },
+   {
+    "document_type": "language_certificate",
+    "text": "International language test results (for example TOEFL, DELF) or a certificate the university officially accepts.",
+    "conditional_rule": "If the university or programme requires it; needed for non-Turkish programmes",
+    "mandatory": false
+   },
+   {
+    "document_type": "research_proposal",
+    "text": "A research topic proposal and a written sample of your previous research.",
+    "conditional_rule": "PhD applicants only",
+    "mandatory": true
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Check the call, your level and the age and grade limits",
+    "detail": "The general call runs from 10 January to 20 February each year (2026 call: 10 January to 20 February 2026) for associate, bachelor's, master's and doctoral degrees and the Art Scholarship. Check nationality, minimum grade (70%, 75%, or 90% for health sciences) and age limit for your level. Research, Success Scholarship and KATIP have separate periods.",
+    "source_url": "https://www.turkiyeburslari.gov.tr/calendar"
+   },
+   {
+    "phase": "apply",
+    "title": "Apply online in the Turkiye Scholarships Application System",
+    "detail": "Applications are free and made only through the online application system (TBBS). Choose among 12 programme options in the system; the language of instruction is shown when you choose. Upload all required documents to the system.",
+    "source_url": "https://www.turkiyeburslari.gov.tr/applysteps"
+   },
+   {
+    "phase": "apply",
+    "title": "Prepare language and test evidence for the programmes you choose",
+    "detail": "Non-Turkish programmes need an accepted language certificate (such as TOEFL), and most English-language programmes need GRE, GMAT, SAT or similar results. PhD applicants add a research topic proposal and a written sample of previous research.",
+    "source_url": "https://www.turkiyeburslari.gov.tr/applysteps"
+   },
+   {
+    "phase": "selection",
+    "title": "Preliminary assessment and expert evaluation",
+    "detail": "Applications are first checked for minimum academic achievement, age limit and documents. The Expert Committee then reviews eligible applications on academic standing, previous qualifications, academic interests, career goals, consistency of preferences, letter of intent and participation in social activities, and sets the list invited to interview. The calendar shows evaluation in March and April.",
+    "source_url": "https://www.turkiyeburslari.gov.tr/evaluationandselectionprocess"
+   },
+   {
+    "phase": "selection",
+    "title": "Test for undergraduate candidates",
+    "detail": "Undergraduate candidates sit a 30-question quantitative test (mathematics, geometry, logic) in 60 minutes, in Turkish and English, held before the interviews. It is required for health sciences, science and engineering; social sciences applicants also take it and are compared only within their field. Azerbaijan, Greece, TRNC, Afghanistan and Sudan have different formats.",
+    "source_url": "https://www.turkiyeburslari.gov.tr/evaluationandselectionprocess"
+   },
+   {
+    "phase": "selection",
+    "title": "Interview",
+    "detail": "Committees of academics and experts interview candidates for usually 15 to 30 minutes: welcome, document check, purpose of the application, academic knowledge and career goals, and questions from the candidate. It takes place on the same day as the test, in a morning or afternoon session given in the invitation. Bring the documents for your most recent completed education. The calendar shows interviews from April to June.",
+    "source_url": "https://www.turkiyeburslari.gov.tr/evaluationandselectionprocess"
+   },
+   {
+    "phase": "selection",
+    "title": "Final assessment and results",
+    "detail": "A selection committee reviews interview results and the overall eligibility of each candidate and produces the list of scholarship recipients. The calendar says results are announced in early August.",
+    "source_url": "https://www.turkiyeburslari.gov.tr/evaluationandselectionprocess"
+   },
+   {
+    "phase": "after_award",
+    "title": "Initial procedures, scholarship agreement and visa",
+    "detail": "Initial procedures are in August. The scholarship starts when the scholarship agreement is signed. Awardees get a visa or residence permit from the Turkish representation in their country and prepare the documents named in the acceptance letter, then apply to the migration office in Turkiye for the residence permit within the legal period. Grantees travel to Turkiye in September.",
+    "source_url": "https://tbbsweb.azureedge.net/tbbsweb/Page/TurkiyeScholarhips/ScholarshipsProcess/Scholarship-Procedures-Guide.pdf"
+   },
+   {
+    "phase": "after_award",
+    "title": "Enrol, take the Turkish course and start studying",
+    "detail": "Payments start once you enrol; if you do not enrol within the set time the award ends unless there is a compelling reason. Awardees without a C1 Turkish certificate take a one-year Turkish preparatory programme (or pass the free exemption exam) and then start their programme the next academic year. Failing the language year suspends the scholarship, and no certificate by the end of the second year ends it.",
+    "source_url": "https://tbbsweb.azureedge.net/tbbsweb/Page/TurkiyeScholarhips/ScholarshipsProcess/Scholarship-Procedures-Guide.pdf"
+   },
+   {
+    "phase": "after_award",
+    "title": "Keep the scholarship: progress, attendance and reporting rules",
+    "detail": "Academic progress and attendance are monitored; payments can be cut by 25% to 50%, suspended or ended for low grade point average, repeated courses, long absence, failing to enrol, suspension or dismissal, wrong information, other scholarships, or acquiring Turkish citizenship. Report changes of status (suspension, transfer, leave, marriage, address) within 15 days. Master's and PhD students have limits such as completing coursework within four semesters and the doctoral qualifying exam by the fifth semester.",
+    "source_url": "https://tbbsweb.azureedge.net/tbbsweb/Page/TurkiyeScholarhips/ScholarshipsProcess/Scholarship-Procedures-Guide.pdf"
+   }
+  ],
+  "not_stated": [
+   "A list of Turkish universities in the programme (only the three Art Scholarship universities are named)",
+   "Programme or field lists for associate, bachelor's, master's and PhD beyond the broad field groups and the Art Scholarship list",
+   "Whether the minimum grades are on a percentage or other scale, and the date on which the age limit is measured",
+   "Visa and residence permit fees, and the exact content of the five-step application diagram (shown only as an image)",
+   "A closing time for the application window",
+   "Any repayment or return-home obligation (none found on the pages read; the 2019-marked Procedures Guide lists conditions for termination but not a return rule)",
+   "Documents for the Success Scholarship, Research Scholarship and KATIP (not stated on the short-term programmes page)"
+  ],
+  "fetch_problems": [
+   "The five-step application diagram on the how-to-apply page is an image; its text could not be read.",
+   "The legislation PDFs (law, regulation, directive) are in Turkish and were not opened.",
+   "The six video explanations on the procedures page were not watched; the 32-page Scholarship Procedures Guide PDF was read instead, but its pages carry a 2019 edition marker, so details may have changed.",
+   "The health, residence-and-immigration and International Student Academy FAQ pages were not opened (the accommodation, Turkish education and transportation FAQs were)."
+  ],
+  "notes": [
+   "Stored data said bachelor's English proficiency 'TOEFL iBT 80/120 or IELTS 6.5/9.0' and master's/PhD 'TOEFL iBT 90/120 or IELTS 7.0/9.0' were general requirements; the full-time programmes page lists them only as Merit Scholarship conditions, so they are placed under Merit in the levels here.",
+   "Stored data said 'no associate stipend listed'; the why-Turkiye-Scholarships page gives 6,500 TL for associate and bachelor's together.",
+   "Stored funding summary said tuition 'not explicitly mentioned'; the why-Turkiye-Scholarships page and the Procedures Guide both state tuition is covered.",
+   "The graduate housing allowance differs between pages: 6,000 TL (Istanbul, Ankara) or 5,000 TL elsewhere on the why-Turkiye-Scholarships page, 750 TL monthly in the accommodation FAQ. Editors should pick one after checking the live site.",
+   "The 2026 call (10 January to 20 February 2026) has closed; the calendar says the general application window is 10 January to 20 February each year. The 2027 dates have not been announced on the pages read.",
+   "Calendar for the general scholarship: evaluation March to April, interviews April to June, results early August, initial procedures August, arrival September.",
+   "The Success Scholarship application period is October to November, with results in November (calendar) or December (short-term programmes page); the two pages disagree. The Research Scholarship has four periods a year (January to March, April to June, July to September, October to December)."
+  ]
+ }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "external_key": "sa-moe-government-university-scholarships-2026",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {"url": "https://www.moe.gov.sa/en/education/admission-and-registration/publicuniversitiesscholarships", "publisher": "Ministry of Education, Saudi Arabia", "publisher_type": "government", "note": "Main page: scope, scholarship types, eligibility conditions, how to apply, benefits of external scholarships, visa and residence note"},
+      {"url": "https://www.moe.gov.sa/en/knowledgecenter/eservices/pages/nonsaudiinternalscholarship.aspx", "publisher": "Ministry of Education, Saudi Arabia (e-service page)", "publisher_type": "government", "note": "Internal scholarships service for non-Saudis: portal, steps, 5 business days, free, updated 4 November 2026"},
+      {"url": "https://studyinsaudi.sa/en", "publisher": "Ministry of Education, Saudi Arabia (Study in Saudi platform)", "publisher_type": "government", "note": "Platform overview, funding types, application steps, 2026 second-semester window"},
+      {"url": "https://studyinsaudi.sa/en/Faq", "publisher": "Ministry of Education, Saudi Arabia (Study in Saudi platform)", "publisher_type": "government", "note": "FAQ on admission, documents, status, data changes"},
+      {"url": "https://studyinsaudi.sa/en/VisaOptions", "publisher": "Ministry of Education, Saudi Arabia (Study in Saudi platform)", "publisher_type": "government", "note": "Scholarship types and student visa requirements"},
+      {"url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full", "publisher": "Ministry of Education, Saudi Arabia (Study in Saudi platform)", "publisher_type": "government", "note": "Programme search: levels, filters, example listings with scholarship type, language and duration"},
+      {"url": "https://dar.ksu.edu.sa/en/overseas", "publisher": "King Saud University", "publisher_type": "university", "note": "Example of a participating public university: external scholarship conditions (age, certificate date, SAT, exclusions, interviews)"},
+      {"url": "https://isd.ksu.edu.sa/en/node/3091", "publisher": "King Saud University (International Students Department)", "publisher_type": "university", "note": "Example: levels offered and eligibility for external scholarships"},
+      {"url": "https://isd.ksu.edu.sa/ar/node/3063", "publisher": "King Saud University (International Students Department)", "publisher_type": "university", "note": "Example: external scholarship benefits with stipend amounts, housing, health care"}
+    ],
+    "summary": "Saudi public universities offer scholarships to non-Saudi students under rules set by the Saudi Ministry of Education. External scholarships are for students living outside the Kingdom; internal ones are for non-Saudis legally resident in the Kingdom. Study levels are an Arabic-language diploma for non-native speakers, bachelor, higher diploma, master's and PhD, in all specialisations except health and medical ones. Applications go through the Ministry's Study in Saudi platform or the chosen university, and the university decides on admission.",
+    "eligibility_notes": "Who can apply: non-Saudi students from any country. Internal scholarships are for non-Saudis who are legally resident in the Kingdom and need approval from whoever is on their record; external scholarships are for those outside the Kingdom. Saudi admission requirements apply to both.\n\nAge: 17 to 25 for undergraduate and Arabic-language institute study, up to 30 for master's and up to 35 for PhD. For the platform visa the student must be at least 16.\n\nOther conditions listed by the Ministry: approval of your own government to study in the Kingdom, where your country requires it; no other scholarship from an educational institution in the Kingdom (a student cannot hold two scholarships for the same degree); certificates and supporting papers attested by the competent authorities; a certificate of no criminal record from the security services of your home country; never dismissed from an educational institution in the Kingdom; a mahram (male guardian) accompanying the student where the applicable instructions require it (the page applies this to students on a grant, with regular residence or registered with an employer needing their services); passing the required medical examination; and a recommendation from a body, institution or person the institution names, if it asks for one.\n\nUniversities add their own conditions. King Saud University, for example, asks external-scholarship applicants for a high school diploma recognised for the chosen programme and obtained within five years, age 17 to 25, a valid SAT score of at least 1010 (at least 1200 for Medicine and Surgery), no existing bachelor's degree, no enrolment at another university and a passed medical exam; it also holds a personal interview for Medicine and Dentistry and a written test for Architecture and Planning. Its International Students Department also states a minimum high school average of 'very good' and that applicants must not have been accepted before into a similar programme in Saudi Arabia. Other universities set their own rules.\n\nLanguage: the platform says proof of proficiency in the language of study is needed for the long-term student visa, but not for Arabic. The platform filters programmes by language of instruction (Arabic, English, French, Chinese or mixed). A test called Hamza is linked from the platform, but its role is not explained on the pages read.\n\nHealth and medical specialisations are excluded from this scheme.",
+    "age_experience_notes": "Age limits by level: 17 to 25 for bachelor and Arabic-language institute, up to 30 for master's, up to 35 for PhD. No work experience requirement is stated.",
+    "funding_summary": "The Ministry names three scholarship types: free scholarships with full benefits, partial scholarships (for example a seat only, or a seat and housing) and paid study. For external scholarships it lists health care for the student and family members who come to reside with them (where regulations require), a financial reward on arrival, housing, the advantages given to the institution's other students, and annual travel tickets under the applicable regulations. The Ministry pages give no amounts or lengths of funding. As an example of one university, King Saud University lists a monthly stipend of SAR 1,000 for undergraduate scientific majors, SAR 850 for undergraduate theoretical majors and SAR 900 for graduate students, an arrival equipment allowance of two months of stipend and a book shipping allowance of three months of stipend at graduation. Length of funding follows the programme (for example 4 years for the bachelor's listings, 2 years for the master's listing and 3 years for the PhD listings shown on the platform).",
+    "programmes_note": "All available specialisations except health and medical ones, at Arabic-language diploma (for non-native speakers), bachelor, higher diploma, master's and PhD levels. The Study in Saudi platform lets you browse programmes by tab (diploma, associate diploma, bachelor, higher diploma, master, PhD and other, which links to fellowships) and filter by city, institution (about 38), scholarship type (full, partial, paid) and language (Arabic, English, Arabic and English, Chinese, French); programmes are added and updated continuously and the list runs to many pages. Each university sets its own special conditions.",
+    "institutions_note": "The Ministry says 27 Saudi public universities take part and does not name them on the page. You apply on the website of the university you choose, during its application period, or through the Saudi Cultural Attache in your country, or the Saudi embassy where there is no attache. The Study in Saudi platform lists institutions in many cities; listings seen include Jouf University, King Abdulaziz University, King Saud University, Umm al-Qura University, Qassim University and King Faisal University.",
+    "levels": [
+      {
+        "code": "bachelor",
+        "confirmed": true,
+        "summary": {
+          "detail": "Undergraduate study at Saudi public universities in any available specialisation except health and medical ones. Age 17 to 25. Programme listings seen on the platform show 4-year bachelor degrees taught in English or Arabic. King Saud University requires a high school diploma obtained within five years and sets its own SAT and interview or test rules.",
+          "source_text": "Scholarships in Public Universities: levels",
+          "url": "https://www.moe.gov.sa/en/education/admission-and-registration/publicuniversitiesscholarships"
+        },
+        "programmes": [
+          {"name": "Scientific Engineering Track", "institution": "Jouf University", "detail": "Bachelor, 4 years, English, Full scholarship listing, Skaka campus", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Sharia", "institution": "Jouf University", "detail": "Bachelor, 4 years, Arabic, Full scholarship listing, Skaka campus", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"}
+        ]
+      },
+      {
+        "code": "master",
+        "confirmed": true,
+        "summary": {
+          "detail": "Master's at Saudi public universities in any available specialisation except health and medical ones. Age up to 30.",
+          "source_text": "Scholarships in Public Universities: levels",
+          "url": "https://www.moe.gov.sa/en/education/admission-and-registration/publicuniversitiesscholarships"
+        },
+        "programmes": [
+          {"name": "English Language (TESOL)", "institution": "King Abdulaziz University", "detail": "Master, 2 years, English, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"}
+        ]
+      },
+      {
+        "code": "doctorate",
+        "confirmed": true,
+        "summary": {
+          "detail": "PhD at Saudi public universities in any available specialisation except health and medical ones. Age up to 35. Listings seen on the platform are 3-year PhD programmes.",
+          "source_text": "Scholarships in Public Universities: levels",
+          "url": "https://www.moe.gov.sa/en/education/admission-and-registration/publicuniversitiesscholarships"
+        },
+        "programmes": [
+          {"name": "Industrial Engineering (Engineering Management and Systems)", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, English, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Mechanical Engineering (Applied Mechanics)", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, English, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Structural Geology and Remote Sensing", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, English, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Accounting", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, Arabic, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Business Administration", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, English, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Clothing and Textiles (Fashion Design)", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, Arabic and English, Full scholarship listing, Jeddah, female students", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Communications and Media", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, Arabic and English, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Economics", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, English, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+          {"name": "Health Administration", "institution": "King Abdulaziz University", "detail": "PhD, 3 years, English, Full scholarship listing, Jeddah", "source_text": "Programme listing", "url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"}
+        ]
+      },
+      {
+        "code": "diploma",
+        "confirmed": true,
+        "summary": {
+          "detail": "Arabic-language diploma for non-native speakers, and higher diploma. The platform also has diploma and associate diploma tabs. King Saud University offers an Intermediate Diploma (four semesters, 20 hours of study a week) and Arabic as a Second Language programmes at its College of Language Sciences, including a Higher Diploma, two master's degrees and a PhD in Applied Arabic Linguistics.",
+          "source_text": "Arabic diploma for non-native speakers; Higher Diploma",
+          "url": "https://www.moe.gov.sa/en/education/admission-and-registration/publicuniversitiesscholarships"
+        },
+        "programmes": [
+          {"name": "Intermediate Diploma in Arabic as a Second Language", "institution": "King Saud University", "detail": "Four semesters, 20 hours of study per week, College of Language Sciences", "source_text": "First level: Intermediate Diploma", "url": "https://isd.ksu.edu.sa/en/node/3091"}
+        ]
+      }
+    ],
+    "levels_not_offered": [],
+    "catalogue_url": "https://studyinsaudi.sa/en/Programs",
+    "benefits": [
+      {"type": "tuition", "coverage": "partial", "limit_text": "Free scholarships carry full benefits; partial scholarships may give only a seat, or a seat and housing; paid study is self-funded", "conditions": "The university decides which type it offers for each programme. The Ministry pages do not say tuition is charged or waived for each type beyond this."},
+      {"type": "living_allowance", "coverage": "covered", "limit_text": "A financial reward on arrival (Ministry, no amount given). King Saud University lists a monthly stipend of SAR 1,000 (undergraduate scientific), SAR 850 (undergraduate theoretical) or SAR 900 (graduate), plus two months of stipend as an arrival equipment allowance and three months of stipend for book shipping at graduation.", "conditions": "Listed for external scholarships. The amounts are King Saud University's, not the Ministry's."},
+      {"type": "accommodation", "coverage": "partial", "limit_text": "Housing is listed among the benefits of external scholarships", "conditions": "Partial scholarships may or may not include housing. King Saud University gives university housing to all external scholarship students, with temporary hospitality housing on arrival."},
+      {"type": "insurance", "coverage": "covered", "limit_text": "Health care for the student and for family members who come to reside with them, if the regulations require it", "conditions": "King Saud University adds a referral to the university hospital and an initial fitness exam on arrival."},
+      {"type": "travel", "coverage": "covered", "limit_text": "Annual travel tickets, under the applicable regulations", "conditions": "King Saud University's benefits page does not mention flight tickets; check the rules of your university."},
+      {"type": "other", "coverage": "covered", "limit_text": "The same advantages that the institution gives its other students; a free residence permit for the study period after arrival, on a letter from the university's passport department", "conditions": "A study visa from a Saudi embassy requires a scholarship from a Saudi university."}
+    ],
+    "requirements": [
+      {"document_type": "other", "text": "Student profile completed on the Study in Saudi platform before you apply to academic programmes (some data cannot be changed after submission; a passport number can be changed only on a new account with no applications).", "conditional_rule": null, "mandatory": true},
+      {"document_type": "passport", "text": "Valid passport; for a visa it must have at least 6 months of validity left from the intended entry date.", "conditional_rule": null, "mandatory": true},
+      {"document_type": "degree_certificate", "text": "Certificates and supporting papers attested by the competent authorities the institution specifies (the platform notes that some universities need no document upload except for certain cases such as international school or foreign certificates; King Saud University says so).", "conditional_rule": null, "mandatory": true},
+      {"document_type": "other", "text": "Certificate of no criminal record from the security services of the home country.", "conditional_rule": null, "mandatory": true},
+      {"document_type": "medical", "text": "Medical examination as set by the regulations; the platform says a medical report confirming freedom from infectious diseases is needed for a long-term student visa.", "conditional_rule": null, "mandatory": true},
+      {"document_type": "reference", "text": "Recommendation from a body, institution or person that the institution specifies.", "conditional_rule": "only if the institution requires it", "mandatory": false},
+      {"document_type": "other", "text": "Approval of your own government to study in the Kingdom.", "conditional_rule": "only for countries that require it", "mandatory": false},
+      {"document_type": "language_certificate", "text": "Proof of proficiency in the language of study (the platform says this is not required for Arabic) and, at King Saud University, a valid SAT score of at least 1010 for external bachelor applicants.", "conditional_rule": "for the long-term student visa; SAT only at universities that require it", "mandatory": false},
+      {"document_type": "other", "text": "Medical insurance for the visa holder and dependents, proof of financial ability or a financial guarantee, and written consent of a guardian for applicants under 18 (listed as student visa requirements).", "conditional_rule": "student visa stage", "mandatory": false}
+    ],
+    "application_steps": [
+      {"phase": "apply", "title": "Find a scholarship programme and complete your student profile", "detail": "On the Study in Saudi platform complete your student profile, which is required before applying. Browse programmes by level and filter by scholarship type (full, partial or paid), city, institution and language. Internal scholarships for non-Saudi residents use the Ministry's government university scholarship portal. Health and medical specialisations are not available online under this scheme.", "source_url": "https://studyinsaudi.sa/en/Programs?scholarshipType=Full"},
+      {"phase": "apply", "title": "Apply to the chosen public university in its application period", "detail": "Apply on the website of the public university you choose, during its application period, or through the Saudi Cultural Attache in your country (or the Saudi embassy if there is no attache). The application goes to the institution you selected. The platform's window for the second semester of academic year 2026 was 16 September to 6 October for international and resident students (the year is not printed on the page).", "source_url": "https://www.moe.gov.sa/en/education/admission-and-registration/publicuniversitiesscholarships"},
+      {"phase": "selection", "title": "University reviews your application", "detail": "The institution reviews the application and decides on admission, checking the Saudi admission requirements and its own conditions (for example SAT score, interview or written test at King Saud University). Status 'under process' means it is still being reviewed; a rejection means one or more admission requirements were not met. You can cancel only before the institution has acted.", "source_url": "https://studyinsaudi.sa/en/Faq"},
+      {"phase": "selection", "title": "Ministry and institution finish the admission", "detail": "If the institution approves, the Ministry of Education and the institution complete the remaining procedures until a final decision is issued. For internal scholarships, the service is carried out through the universities once conditions are met and the applicant contacts the university for the result; the service is free and takes 5 business days.", "source_url": "https://www.moe.gov.sa/en/knowledgecenter/eservices/pages/nonsaudiinternalscholarship.aspx"},
+      {"phase": "after_award", "title": "Get the study visa and travel", "detail": "A study visa from a Saudi embassy requires a scholarship from a Saudi university. The long-term student visa is for one year, renewable annually, and asks for a valid passport, acceptance from an accredited institution, a medical report, medical insurance, language proof (not for Arabic) and, for applicants under 18, guardian consent.", "source_url": "https://studyinsaudi.sa/en/VisaOptions"},
+      {"phase": "after_award", "title": "Arrive, receive benefits and get a residence permit", "detail": "After arrival the student can get a free residence permit for the study period with a letter from the university's passport department. External scholarship benefits listed by the Ministry are health care, a financial reward on arrival, housing and annual travel tickets. At King Saud University students are met at the airport in Riyadh, taken to housing, and referred to the university hospital for a medical file and fitness exam.", "source_url": "https://www.moe.gov.sa/en/education/admission-and-registration/publicuniversitiesscholarships"}
+    ],
+    "not_stated": [
+      "Closing dates for 2027-28 intake (the pages read show the 2026 second-semester window and no 2027 call)",
+      "Number of scholarships and any selection criteria or scoring used by the Ministry",
+      "Amounts of the financial reward, housing and travel tickets on the Ministry pages",
+      "Names of the 27 public universities on the Ministry page",
+      "Length of funding and return or service obligations",
+      "Language test minimums and the role of the Hamza test",
+      "Full document checklist on the Ministry page (it lists conditions, not a document list)"
+    ],
+    "fetch_problems": [
+      "The Study in Saudi Student Guide (PDF, 7.8 MB, Arabic) was downloaded but its text could not be extracted (embedded fonts and images), so it was not used.",
+      "The government university scholarship portal login page failed with a connection reset.",
+      "King Saud University's scholarship page on the admissions site returned HTTP 403; the overseas admission page and International Students Department pages were read instead.",
+      "An English page of Islamic University of Madinah could not be resolved (host not found); no facts from it are used."
+    ],
+    "notes": [
+      "Stored subject list (Engineering, Computer Science and so on) is not on the Ministry page; the Ministry page says all specialisations except health and medical ones. The stored list is carried over from stored data and not re-confirmed.",
+      "Stored milestone 'Application deadline 1448 AH at Jouf University 21 May 2026' is carried over from stored data; it was not re-read in this pass.",
+      "Study in Saudi's page says Saudi Arabia has more than 50 public and private universities; the Ministry page says 27 public universities take part.",
+      "KSU benefit amounts and conditions are one university's rules and may not apply to other universities."
+    ]
+  }
+]

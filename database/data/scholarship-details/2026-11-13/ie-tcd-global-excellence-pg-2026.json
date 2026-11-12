@@ -1,0 +1,64 @@
+[{
+  "external_key": "ie-tcd-global-excellence-pg-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php", "publisher": "Trinity College Dublin", "publisher_type": "university", "note": "Scholarship page: value, eligibility, exclusions, deadlines, how to apply, selection, terms"},
+    {"url": "https://www.tcd.ie/study/international/scholarships/postgraduate/claddaghpg.php", "publisher": "Trinity College Dublin", "publisher_type": "university", "note": "The separate scholarship for students from China, which the Global Excellence page points to"},
+    {"url": "https://www.tcd.ie/study/apply/making-an-application/postgraduate/", "publisher": "Trinity College Dublin", "publisher_type": "university", "note": "How the course application that must come first is made, and which documents it needs"},
+    {"url": "https://www.tcd.ie/study/apply/admission-requirements/postgraduate/", "publisher": "Trinity College Dublin", "publisher_type": "university", "note": "Academic entry level for postgraduate courses"},
+    {"url": "https://www.tcd.ie/study/english-language-requirements/", "publisher": "Trinity College Dublin", "publisher_type": "university", "note": "English test scores accepted for course entry"}
+  ],
+  "summary": "A one-time reduction of tuition fees offered by Trinity College Dublin to exceptional international students who hold an offer for a full-time postgraduate taught course. The student must be billed at the non-EU fee rate. The amount is between EUR 2,000 and EUR 5,000 depending on the student's region. Awards are chosen on academic achievement and the potential to contribute to the Trinity community. This page describes the 2026/27 round.",
+  "eligibility_notes": "You must have non-EU fee status, meaning Trinity bills your tuition at the non-EU rate.\n\nYou must hold an offer to start a full-time postgraduate degree at Trinity in academic year 2026/2027. The scholarship is for postgraduate taught courses.\n\nStudents from China are not eligible for this scholarship. Trinity directs them to its separate Claddagh Postgraduate Scholarship, which is for Chinese nationals living in China.\n\nBusiness, engineering, natural sciences, and computer science and statistics courses are outside this scholarship. They have their own scholarship routes (business, and a joint route for engineering, natural sciences, computer science and statistics).\n\nYou must fully accept your course offer to receive the award.\n\nThe page sets no scholarship-specific grade, age, nationality list or language score. The course itself has entry rules: for postgraduate courses Trinity asks for at least a 2.1 honours degree or an equivalent result from another country, and some courses ask for more. English proof is needed from all applicants; the standard level for most courses is IELTS Academic 6.5 overall with 6.0 in each band, with other tests accepted (for example TOEFL iBT, PTE Academic, Duolingo, Cambridge). Results must be issued within two years before the course start, and some courses ask for a higher level.",
+  "age_experience_notes": "",
+  "funding_summary": "The award is a single reduction of the tuition fee bill, worth between EUR 2,000 and EUR 5,000 depending on region. The page does not link specific amounts to specific regions. It is applied once to the tuition fee bill; the page does not describe any other benefit such as living costs, accommodation, flights or insurance.",
+  "programmes_note": "Any full-time postgraduate taught programme at Trinity, except business, engineering, natural sciences, and computer science and statistics courses. The page does not list individual programmes; students choose from Trinity's postgraduate courses.",
+  "institutions_note": "Trinity College Dublin only. The scholarship is held at the course you hold an offer for.",
+  "levels": [
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {"detail": "Full-time postgraduate taught programmes at Trinity College Dublin starting in 2026/27, with an offer already held. Business, engineering, natural sciences, and computer science and statistics courses are excluded.", "source_text": "full-time postgraduate taught programme", "url": "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"},
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": ["bachelor", "doctorate"],
+  "catalogue_url": "https://www.tcd.ie/courses",
+  "benefits": [
+    {"type": "tuition", "coverage": "partial", "limit_text": "EUR 2,000 to EUR 5,000, depending on region", "conditions": "One-time reduction applied to the tuition fee bill. The page does not say which region gets which amount. You must fully accept your course offer."},
+    {"type": "accommodation", "coverage": "unknown", "limit_text": "Not mentioned as part of the award", "conditions": "The page lists only a tuition fee reduction."},
+    {"type": "living_allowance", "coverage": "unknown", "limit_text": "Not mentioned as part of the award", "conditions": "The page lists only a tuition fee reduction."},
+    {"type": "travel", "coverage": "unknown", "limit_text": "Not mentioned as part of the award", "conditions": "The page lists only a tuition fee reduction."},
+    {"type": "insurance", "coverage": "unknown", "limit_text": "Not mentioned as part of the award", "conditions": "The page lists only a tuition fee reduction."}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "Online scholarship form with your basic personal details. If you cannot open the form in your region, ask your Trinity Regional Manager or Advisor for an alternative form.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "statement", "text": "A short statement on how you will contribute to the Trinity community, entered in the scholarship form. No length is stated.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "A course offer from Trinity for a full-time postgraduate taught programme for 2026/27. The course application itself needs: third-level results and transcripts for each year and all qualifications awarded, English language proof, two letters of recommendation, passport, and the non-refundable application fee (amount not stated). An application CV and personal statement are also part of that course form.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "language_certificate", "text": "English proof for the course application: for example IELTS Academic 6.5 overall with 6.0 in each band for most courses. Applicants whose first degree was taught wholly in English can ask the course director for an exemption with a letter from the awarding institution.", "conditional_rule": "required for the course application from applicants from predominantly non-English-speaking countries; some courses ask for a higher level", "mandatory": false}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Apply to your postgraduate course and get an offer", "detail": "Apply through the page of the course you want. The online course form has nine sections, including English proficiency, education, personal statement, references and a CV upload; two letters of recommendation and a non-refundable fee are part of it. You need an offer for a full-time postgraduate taught course before the scholarship can be awarded; the scholarship deadlines below apply to the scholarship form. Each course sets its own course deadline.", "source_url": "https://www.tcd.ie/study/apply/making-an-application/postgraduate/"},
+    {"phase": "apply", "title": "Check that you qualify", "detail": "You must be billed non-EU fees and hold an offer for 2026/27. Students from China cannot use this scholarship and should look at the Claddagh Postgraduate Scholarship. Business, engineering, natural sciences, and computer science and statistics courses are excluded and have separate routes.", "source_url": "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"},
+    {"phase": "apply", "title": "Submit the online scholarship form before your regional deadline", "detail": "Give basic personal information and a statement on how you will contribute to the Trinity community. Deadlines for 2026/27: 1 April 2026 for Central, North and South America; 1 May 2026 for Africa; 15 June 2026 for all other regions; 15 July 2026 for South East Asia and Oceania. Applying early is advised because applications are assessed on a rolling basis. If you cannot access the form, contact your Trinity Regional Manager or Advisor.", "source_url": "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"},
+    {"phase": "selection", "title": "Assessment on a rolling basis", "detail": "Trinity assesses applications as they arrive. Selection is based on academic achievement and the potential to contribute to the Trinity community. Allocations also take regional and programme diversity into account. The page does not name a selection panel or interview.", "source_url": "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"},
+    {"phase": "selection", "title": "Wait for contact after the closing date", "detail": "Successful applicants are contacted after the closing date. If you hear nothing in that time, treat the application as unsuccessful: Trinity does not contact unsuccessful applicants one by one.", "source_url": "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"},
+    {"phase": "after_award", "title": "Fully accept your course offer", "detail": "You must fully accept your course offer to receive the award. The page gives no other conditions.", "source_url": "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"},
+    {"phase": "after_award", "title": "Award is taken off your tuition fee bill", "detail": "The scholarship is applied to your tuition fee bill as a single reduction. The page does not describe renewal or any reporting duty.", "source_url": "https://www.tcd.ie/study/international/scholarships/postgraduate/gexpg.php"}
+  ],
+  "not_stated": [
+    "Which region receives which amount between EUR 2,000 and EUR 5,000",
+    "Number of awards available",
+    "Required length or format of the contribution statement",
+    "Any minimum grade for the scholarship itself (only the course entry rule of a 2.1 or equivalent is stated elsewhere)",
+    "Deadlines or terms for the 2027/28 intake (the page covers 2026/27 only)",
+    "Whether the award is renewed or any return or reporting obligation",
+    "Amount of the course application fee"
+  ],
+  "fetch_problems": [],
+  "notes": [
+    "Pages read: the scholarship page, the Claddagh page, the postgraduate application and admission pages, the English language requirements page, and the international scholarships lists. The postgraduate funding and international scholarship index pages carry no Global Excellence details.",
+    "The scholarship page covers academic year 2026/27 and its deadlines have passed as of the check date. A 2027/28 round was not published on the pages read.",
+    "Stored deadlines (1 April, 1 May, 15 June, 15 July 2026 by region) and the exclusions were re-read on the scholarship page and are unchanged. Regional groupings are as the source lists them."
+  ]
+}]

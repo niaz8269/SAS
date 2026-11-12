@@ -1,0 +1,392 @@
+[
+  {
+    "external_key": "fi-helsinki-tuition-waiver-2027",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/tuition-fees-and-scholarship-programme",
+        "publisher": "University of Helsinki",
+        "publisher_type": "university",
+        "note": "Tuition fees, who pays, exemptions, scholarship programme rules, selection criteria, loss of scholarship, other funding"
+      },
+      {
+        "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/how-apply",
+        "publisher": "University of Helsinki",
+        "publisher_type": "university",
+        "note": "Autumn 2027 master's application dates and steps; scholarship applied for in the same form"
+      },
+      {
+        "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/required-application-attachments",
+        "publisher": "University of Helsinki",
+        "publisher_type": "university",
+        "note": "Mandatory attachments, translations, certified copies, submission format"
+      },
+      {
+        "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/after-submitting-your-application",
+        "publisher": "University of Helsinki",
+        "publisher_type": "university",
+        "note": "Selection stages, results date, acceptance and registration deadlines"
+      },
+      {
+        "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/international-masters-programmes-faq",
+        "publisher": "University of Helsinki",
+        "publisher_type": "university",
+        "note": "FAQ on selection, language proof, conditional admission"
+      },
+      {
+        "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes",
+        "publisher": "University of Helsinki",
+        "publisher_type": "university",
+        "note": "List of 38 international master's programmes"
+      },
+      {
+        "url": "https://www.helsinki.fi/en/degree-programmes/one-health-masters-programme",
+        "publisher": "University of Helsinki",
+        "publisher_type": "university",
+        "note": "Example programme page: 2027 application period, 120 ECTS, tuition EUR 18,000, waiver statement"
+      },
+      {
+        "url": "https://www.studyinfinland.fi/funding-your-studies/bachelors-and-masters-scholarships",
+        "publisher": "Study in Finland (Finnish National Agency for Education)",
+        "publisher_type": "government",
+        "note": "General note that Finnish universities set their own waivers and there is no government scholarship scheme"
+      }
+    ],
+    "summary": "The University of Helsinki offers a limited number of tuition fee waivers to high-achieving applicants who must pay tuition fees and are admitted to its English-taught international master's programmes. The waiver is requested on the same form as the master's application, lasts two years, and is mostly 50 percent. The university states that it gives no scholarships that pay living costs, and the waiver covers tuition only.",
+    "eligibility_notes": "The waiver is for applicants who are liable for tuition fees: in general citizens of countries outside the EU, EEA and Switzerland who do not have permanent residence in Finland. People who are not liable cannot receive a waiver. Exempting documents include a permanent residence card (type P), an EU long-term resident permit (P-EU), a temporary protection permit, an EU Blue Card, a Brexit withdrawal agreement permit, a residence card as a family member of an EU citizen, and an Erasmus Mundus scholarship in an EU-funded programme. A continuous type A permit may exempt a person only if it was not granted for study; a first Finnish permit granted for study, or a family permit tracing back to a study permit, leaves the person liable. Exchange students and doctoral students are also not liable. Exemption papers must be valid on 1 August of the start year.\n\nThe applicant must be admitted to a University of Helsinki master's programme, must be able to meet the entry visa and residence permit conditions, and must show excellent results in previous studies in the application. Selection looks at the overall academic assessment, previous academic performance, a motivation letter if the programme requires one, the grounds given in the scholarship application, and possibly strategic goals of the university or the programme. Scholarship applications are evaluated separately from admission. A programme may award only 50 percent waivers depending on its policy and the number of applicants.\n\nTo be admitted the applicant needs a completed bachelor's degree or equivalent (or one finished by the deadline, with conditional admission), must meet the programme's language requirement, and needs enough relevant earlier studies. Each programme sets its own prior-study and language rules in its admission criteria in the national application service. Up to three master's programmes can be listed on one form.\n\nA scholarship is lost if the student stops being liable for fees, gives false information, or cheats in studies. Bachelor's students cannot receive waivers; second- and third-year bachelor's students may be given a EUR 1,000 Dean's award based on the previous year's performance (this is not a waiver).",
+    "age_experience_notes": "No age limit and no work experience requirement are stated on the pages read.",
+    "funding_summary": "A 50 percent or 100 percent waiver of the annual tuition fee (EUR 13,000, 15,000 or 18,000 per year depending on the programme), for two years; most waivers are 50 percent. A student with a 50 percent waiver pays the rest of the fee. Living costs, student union membership, healthcare fee, health insurance and possible residence permit fees are not covered. A student must be full-time and earn at least 55 ECTS per year, with progress checked after the first year.",
+    "programmes_note": "The waiver applies to the university's international master's programmes taught in English (38 listed; the example programme page shows 120 ECTS over two years). English-taught bachelor's programmes have no waivers. Graduates of the university's English-taught bachelor's programmes who finish in target time can receive a master's waiver by grade average (see conditions).",
+    "institutions_note": "University of Helsinki, Finland. Applicants choose up to three master's programmes on one form; each programme evaluates applicants against its own published criteria, and some use interviews, portfolios or assignments.",
+    "levels": [
+      {
+        "code": "master",
+        "confirmed": true,
+        "summary": {
+          "detail": "The international master's programmes are taught in English; the programme page read (One Health) shows 120 ECTS over two years. Annual tuition for fee-liable students is EUR 13,000, 15,000 or 18,000 depending on the programme. The fee stays the same for the whole programme. The waiver lasts two years, requires at least 55 ECTS per year and is reviewed after the first year. Graduates of the university's English-taught bachelor's programmes may receive a 100 percent waiver with a GPA of at least 3.8 out of 5, or 50 percent with a GPA of 3.4 to 3.7, and it also covers the second year if at least 55 credits were completed in the first.",
+          "source_text": "Scholarships last two years",
+          "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/tuition-fees-and-scholarship-programme"
+        },
+        "programmes": [
+          {
+            "name": "Agricultural Sciences",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Agricultural, Environmental and Resource Economics (AGERE)",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Area and Cultural Studies",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Changing Education",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Chemistry",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Computer Science",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Contemporary Societies",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Data Science",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Ecology, Evolution and Biodiversity Conservation",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Economics",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "English Studies",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Environmental Change and Global Sustainability",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "European and Nordic Studies",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Food Sciences",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Forest Sciences",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Genetics and Molecular Biosciences",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Geography",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Geology and Geophysics",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Global Politics and Communication",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "International Food Business and Gastronomy",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Law and Contemporary Governance",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Life Science Informatics",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Linguistic Diversity and Digital Humanities",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Materials Research (MATRES)",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          },
+          {
+            "name": "Mathematics and Statistics",
+            "institution": "University of Helsinki",
+            "detail": "",
+            "source_text": "Explore our International Master's Programmes",
+            "url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes"
+          }
+        ]
+      }
+    ],
+    "levels_not_offered": [
+      "bachelor"
+    ],
+    "catalogue_url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/explore-our-international-masters-programmes",
+    "benefits": [
+      {
+        "type": "tuition",
+        "coverage": "partial",
+        "limit_text": "50 percent or 100 percent waiver of the annual tuition fee of EUR 13,000, 15,000 or 18,000, for two years; most waivers are 50 percent",
+        "conditions": "Full-time study with at least 55 ECTS per year; progress checked after the first year. With a 50 percent waiver the student pays the remaining half. A student must sign a scholarship agreement before it takes effect. The tuition must be paid (or the waiver agreement accepted for a 100 percent waiver) before registering."
+      },
+      {
+        "type": "living_allowance",
+        "coverage": "not_covered",
+        "limit_text": "Living costs are not funded by the university",
+        "conditions": "Rent, food, transport and other expenses are the student's."
+      },
+      {
+        "type": "insurance",
+        "coverage": "not_covered",
+        "limit_text": "Valid health insurance and the basic student healthcare fee are paid by the student",
+        "conditions": "The student union membership fee is also separate."
+      },
+      {
+        "type": "other",
+        "coverage": "not_covered",
+        "limit_text": "Residence permit fees and application fee",
+        "conditions": "A non-refundable application fee is collected through the national application service from those who must pay it; no waivers; amount not stated on the Helsinki pages read."
+      }
+    ],
+    "requirements": [
+      {
+        "document_type": "other",
+        "text": "One master's application form in the national application service during the application period, with the scholarship requested on the same form and up to three programmes listed. No draft can be saved; edits are possible until the period closes.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "degree_certificate",
+        "text": "Bachelor's degree certificate showing awarding institution, graduation date, name and degree title; a provisional certificate with the same details is accepted. For an incomplete degree, the latest transcript that names the degree, with graduation by the end of August.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "transcript",
+        "text": "Transcript of records with course names, grades (or an official explanation of grading) and completion dates; transcripts for every part of a multi-institution degree. My Studyinfo screenshots are not accepted for Finnish studies.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "passport",
+        "text": "Copy of the passport ID page, a national ID card, or both sides of a residence permit card; a photo ID is required for interview-based programmes.",
+        "conditional_rule": "",
+        "mandatory": true
+      },
+      {
+        "document_type": "language_certificate",
+        "text": "Proof of language proficiency by one of the methods listed by the university; no other methods are accepted. Scores are not stated on the pages read.",
+        "conditional_rule": "Unless exempt under the university's rules",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Authorised translations of documents not in English, Finnish or Swedish, provided together with a copy of the original, each page stamped and signed by an official translator or the issuing institution.",
+        "conditional_rule": "If documents are in another language",
+        "mandatory": true
+      },
+      {
+        "document_type": "statement",
+        "text": "Programme-specific attachments listed in each programme's admission criteria in the national application service, which may include a motivation letter, portfolio, reference letters or a video cover letter. Submit them separately for each programme.",
+        "conditional_rule": "Programme-dependent",
+        "mandatory": false
+      },
+      {
+        "document_type": "other",
+        "text": "Proof of exemption from tuition fees (for example a residence permit card) and of exemption from the application fee.",
+        "conditional_rule": "Only if exempt",
+        "mandatory": false
+      }
+    ],
+    "application_steps": [
+      {
+        "phase": "apply",
+        "title": "Choose up to three programmes and check the admission criteria",
+        "detail": "Compare the international master's programmes and read the published admission criteria for each, including language requirements and any extra attachments. There is one application period a year; for studies starting in autumn 2027 it runs from 5 January 2027 at 08:00 to 19 January 2027 at 23:59 (UTC+2). Only fee-liable applicants can ask for a waiver.",
+        "source_url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/how-apply"
+      },
+      {
+        "phase": "apply",
+        "title": "Submit one form and request the waiver on it",
+        "detail": "Submit a single application form in the national application service within the period; late applications are not accepted. Tick the scholarship request on the same form; there is no separate scholarship form. If a fee must be paid it is collected while the form is filled in, and there are no waivers of that fee.",
+        "source_url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/how-apply"
+      },
+      {
+        "phase": "apply",
+        "title": "Upload all required attachments",
+        "detail": "Upload good-quality copies (certified copies are not needed at this stage), each as a separate PDF, by 26 January 2027 at 23:59 (UTC+2). Missing mandatory attachments mean rejection, and extra files are not evaluated. Language test results and transcripts can take long to get, so start early.",
+        "source_url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/required-application-attachments"
+      },
+      {
+        "phase": "selection",
+        "title": "Eligibility check and academic evaluation",
+        "detail": "Admission Services checks language skills, educational documents and degree eligibility, then the programme ranks eligible applicants against its published criteria in March 2027. Some programmes add an interview, portfolio or preliminary assignment. Scholarship applications are evaluated separately, on academic assessment, previous performance, motivation letter if required, and possible strategic goals.",
+        "source_url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/after-submitting-your-application"
+      },
+      {
+        "phase": "selection",
+        "title": "Results by email",
+        "detail": "Admission results are published no later than 16 April 2027 and sent to the email on the application; the waiver result appears in the official admission email. A scholarship recipient must sign a scholarship agreement before it takes effect, and the scholarship then shows in the national application service.",
+        "source_url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/tuition-fees-and-scholarship-programme"
+      },
+      {
+        "phase": "after_award",
+        "title": "Accept the place and send certified documents",
+        "detail": "Accept the offer by 13 July 2027 (the time given is 15:00 on one page and 23:59 on another, UTC+3). Conditionally admitted applicants send officially certified copies by 31 May 2027 if their bachelor's was complete when they applied, or by 31 August 2027 if it was not. Waiting-list admissions end 3 August 2027.",
+        "source_url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/apply-international-masters-programmes/how-apply"
+      },
+      {
+        "phase": "after_award",
+        "title": "Register, pay any remaining fee and keep the waiver",
+        "detail": "By 31 August 2027 (23:59 UTC+3) pay tuition if required, which for a 50 percent waiver is the remaining half, and register for the academic year; studies cannot begin until the fee is paid. A 100 percent waiver holder accepts the agreement and meets other conditions. The waiver continues for the second year if at least 55 ECTS are completed in the first.",
+        "source_url": "https://www.helsinki.fi/en/admissions-and-education/apply-bachelors-and-masters-programmes/tuition-fees-and-scholarship-programme"
+      }
+    ],
+    "not_stated": [
+      "How many waivers are awarded.",
+      "The accepted English tests and minimum scores (the pages read refer to a separate list).",
+      "The amount of the application fee and which groups are exempt (the pages read say a fee may be due and no waivers exist).",
+      "The exact documents asked for the scholarship (the pages read say there is no separate form and point to each programme's admission criteria).",
+      "Age limits and work experience requirements.",
+      "Pages read: tuition fees and scholarship programme, how to apply, required attachments, after submitting your application, FAQ, programme list, One Health programme page, Study in Finland scholarships page."
+    ],
+    "fetch_problems": [
+      "A guessed language-requirements page returned 404, and the FAQ page did not cover language scores, so language test minimums were not obtained.",
+      "The Study in Finland page has no University of Helsinki specifics; it was used only for the general statement that no government scholarship scheme exists."
+    ],
+    "notes": [
+      "The tuition and scholarship page still shows dates from the previous round (first-year fee by 31 August 2026, registration from 1 April 2026, 'Categories (2025-26 round)'). The 2027 dates here come from the master's application pages.",
+      "Acceptance deadline on 13 July 2027 is shown as 23:59 (UTC+3) on one page and 15:00 (UTC+3) on another.",
+      "Master's programme list carries the first 25 of 38 in the page order; the programme page for One Health states the 2027 application period 5 to 19 January 2027.",
+      "Stored facts carried over and re-confirmed: fees EUR 13,000/15,000/18,000, two years, 55 ECTS, Dean's award EUR 1,000 for bachelor's students in years 2 and 3 (the page says second and third-year students)."
+    ]
+  }
+]

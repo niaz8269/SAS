@@ -1,0 +1,630 @@
+[
+ {
+  "external_key": "cz-government-scholarship-development-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries",
+    "publisher": "Ministry of Education, Youth and Sports of the Czech Republic (MEYS)",
+    "publisher_type": "government",
+    "note": "Official call page for 2027/2028: countries, tracks, tests, steps, links to guidelines and programme lists"
+   },
+   {
+    "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf",
+    "publisher": "Ministry of Education, Youth and Sports of the Czech Republic (MEYS)",
+    "publisher_type": "government",
+    "note": "Guidelines for Granting Scholarships (issue August 2026, effective 21 August 2026), read in full: documents, deadlines, benefits, obligations"
+   },
+   {
+    "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/FAQ_2026.pdf",
+    "publisher": "Ministry of Education, Youth and Sports of the Czech Republic (MEYS)",
+    "publisher_type": "government",
+    "note": "FAQ 2026: eligible countries, tests, evaluation period, doctoral rules"
+   },
+   {
+    "url": "https://studyin.gov.cz/scholarships/scholarship-detail?id=339",
+    "publisher": "Study in Czechia (Czech National Agency for International Education and Research, DZS)",
+    "publisher_type": "government",
+    "note": "Call detail page: age range, benefit amounts, tuition and health statements, application steps"
+   },
+   {
+    "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx",
+    "publisher": "Ministry of Education, Youth and Sports of the Czech Republic (MEYS)",
+    "publisher_type": "government",
+    "note": "List of selected English-taught follow-up master's programmes (126 rows)"
+   },
+   {
+    "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx",
+    "publisher": "Ministry of Education, Youth and Sports of the Czech Republic (MEYS)",
+    "publisher_type": "government",
+    "note": "List of selected English-taught doctoral programmes (118 rows)"
+   },
+   {
+    "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_areas_of_study_for_programmes_offered_in_Czech_2026-1.xlsx",
+    "publisher": "Ministry of Education, Youth and Sports of the Czech Republic (MEYS)",
+    "publisher_type": "government",
+    "note": "Areas of study open to the Czech-language track"
+   },
+   {
+    "url": "https://mzv.gov.cz/phnompenh/en/development_cooperation_and_business/governmental_scholarships/czech_governmental_scholarships_for_6.html",
+    "publisher": "Embassy of the Czech Republic in Phnom Penh (Ministry of Foreign Affairs)",
+    "publisher_type": "embassy",
+    "note": "Notice for Cambodian applicants: 21 English-taught scholarships and priority fields"
+   }
+  ],
+  "summary": "The Czech Government Scholarship for developing countries is run by the Ministry of Education, Youth and Sports and the Ministry of Foreign Affairs, with the Czech National Agency for International Education and Research handling the practical side. It supports follow-up master's and doctoral studies at Czech public universities for citizens of 13 listed countries. Studies in English are open to all 13 countries; a Czech-language master's route, with a one-year language year first, is open only to four of them. The scholarship pays a monthly amount for the standard length of study (CZK 16,000 for a master's student, CZK 24,960 for a doctoral student); the studyin page adds that tuition is paid by the Czech Government. The call text below is for study from 2027/2028.",
+  "eligibility_notes": "Countries (2027/2028 call): Bangladesh, Belarus (democratic forces), Bosnia and Herzegovina, Cambodia, Ethiopia, Gabon, Georgia, Guatemala, Honduras, Mauritania, Palestine, Ukraine and Zambia. You must be a citizen: permanent residence in one of these countries is not enough. The Czech-language route is only for citizens of Bosnia and Herzegovina, Georgia, Ukraine and Belarus (democratic forces).\n\nNot eligible: Czech citizens, EU citizens, and foreigners with permanent residence in the Czech Republic. There is no legal claim to a scholarship.\n\nAge (studyin call page): born between 1 September 1991 and 31 August 2008.\n\nEducation: a follow-up master's needs a completed bachelor's degree; a doctoral programme needs a completed master's degree. The FAQ says people who already hold a master's degree can no longer receive a government scholarship for the same or a lower level. Foreign education must be recognised as equivalent; the Czech university that admits you decides on recognition.\n\nLanguage: for English-taught programmes you need advanced English and must pass an online English entrance test during the application. Czech-route applicants take only the general study prerequisites test. Applicants with Czech at CEFR B2 or higher can skip the one-year language year, but they must pass admission to a Czech-taught master's at the chosen university.\n\nStudents already enrolled at a Czech university can apply (see steps); the studyin page says applicants must not be enrolled in Czechia, which differs from the Guidelines. Once a scholarship is granted, the university, programme and language of study cannot be changed.",
+  "age_experience_notes": "Born between 1 September 1991 and 31 August 2008 (studyin call page). No work experience requirement is stated; the motivation letter and CV are to show studies and employment.",
+  "funding_summary": "The scholarship is granted for a specific programme and the standard length of full-time study named in the decision, and for the one-year Czech language year where it applies. It pays CZK 16,000 a month to follow-up master's students and CZK 24,960 a month to doctoral students; accommodation, food and public transport are paid from this amount, as for Czech students. Tuition is paid by the Czech Government (studyin page). Health services are reimbursed by the Ministry of Health on the same terms as for Czech insured persons. Travel to and from the Czech Republic is not paid.",
+  "programmes_note": "English-taught: selected follow-up master's programmes (two years) and selected doctoral programmes (three to four years). The 2026 lists name 126 master's and 118 doctoral entries, grouped by area (agriculture, forestry, fisheries and veterinary; business, administration and law; economics; engineering, manufacturing and construction; ICT; natural sciences, mathematics and statistics; political sciences; some health and social care programmes at technical universities; transport; security). Czech-taught: selected follow-up master's areas only (economics; international relations, political science, security and European studies; journalism; finance, banking and insurance; management and administration; natural sciences, mathematics and statistics; ICT; engineering, manufacturing and construction; agriculture, forestry, fisheries and veterinary; and interdisciplinary health and social care programmes at technical universities). Czech-route applicants pick the university later, during the language year. Doctoral studies in Czech and bachelor's studies are not covered.",
+  "institutions_note": "Czech public universities. The English-taught lists name these 20: Brno University of Technology, Charles University, Czech Technical University in Prague, Czech University of Life Sciences Prague, Institute of Technology and Business in Ceske Budejovice, Jan Evangelista Purkyne University, Masaryk University, Mendel University in Brno, Palacky University in Olomouc, Prague University of Economics and Business, Silesian University in Opava, Technical University of Liberec, Tomas Bata University in Zlin, University of Chemistry and Technology Prague, University of Hradec Kralove, University of Ostrava, University of Pardubice, University of South Bohemia in Ceske Budejovice, University of Veterinary Sciences in Brno, and VSB Technical University Ostrava. English-track applicants apply for a named programme; the Czech language year is given by the Institute for Language and Preparatory Studies of Charles University.",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Follow-up master's, two years in English; the Czech route is two to three years after a one-year Czech language year (open to Bosnia and Herzegovina, Georgia, Ukraine and Belarus only). Needs a completed bachelor's degree. English route: online English test plus general study prerequisites test; motivation letter of one A4 page. CZK 16,000 a month.",
+     "source_text": "Follow-up Master's study programmes",
+     "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries"
+    },
+    "programmes": [
+     {
+      "name": "Agricultural Engineering",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Engineering; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Forest Science in Global Change",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Forestry and Wood Sciences; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Agri-food Systems and Rural Development",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "International Development and Agricultural Economics",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Tropical Crop Management and Ecology",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Wildlife and Livestock Production, Management and Conservation",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "General Agriculture",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of AgriSciences; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "International Master of Horticultural Science",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Horticulture; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Multifunctional Agriculture",
+      "institution": "University of South Bohemia in České Budějovice",
+      "detail": "Faculty of Agriculture and Technology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Fishery and Protection of Waters",
+      "institution": "University of South Bohemia in České Budějovice",
+      "detail": "Faculty of Fisheries & Protection of Waters; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Innovation Project Management",
+      "institution": "Czech Technical University in Prague",
+      "detail": "Masaryk Institute of Advanced Studies; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Business Administration",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Economics and Management; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Economics and Management",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Economics and Management; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Business Administration",
+      "institution": "Institute of Technology and Business in České Budějovice",
+      "detail": "--; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Business Management",
+      "institution": "Masaryk University",
+      "detail": "Faculty of Economics and Administration; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Finance",
+      "institution": "Masaryk University",
+      "detail": "Faculty of Economics and Administration; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Economics and Management",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Business and Economics; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Digital Society, Social Innovation and Global Citizenship",
+      "institution": "Palacky University in Olomouc",
+      "detail": "Faculty of Law; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "International and European Law",
+      "institution": "Palacky University in Olomouc",
+      "detail": "Faculty of Law; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Management",
+      "institution": "Prague University of Economics and Business",
+      "detail": "Faculty of Business Administration; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Finance and Accounting",
+      "institution": "Prague University of Economics and Business",
+      "detail": "Faculty of Finance and Accounting; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Economics and Management",
+      "institution": "Silesian University in Opava",
+      "detail": "School of Business Administration in Karvina; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Business Administration and Entrepreneuship",
+      "institution": "Tomas Bata University in Zlín",
+      "detail": "Faculty of Management and Economics; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Finance",
+      "institution": "Tomas Bata University in Zlín",
+      "detail": "Faculty of Management and Economics; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Management and Marketing",
+      "institution": "Tomas Bata University in Zlín",
+      "detail": "Faculty of Management and Economics; Business, administration and law; taught in English",
+      "source_text": "Selected follow-up Master's programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Master_s_programmes_offered_in_English_2026-1-1.xlsx"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Doctoral programmes taught in English, three to four years; no doctoral route in Czech. Needs a completed master's degree. Motivation letter of two A4 pages, overview of publications, a 3 to 5 page outline of the dissertation focus and two recommendation letters from professors. CZK 24,960 a month.",
+     "source_text": "Selected Doctoral study programmes",
+     "url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries"
+    },
+    "programmes": [
+     {
+      "name": "Agricultural Chemistry",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Animal Science",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Applied Animal Science",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Crop Science",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Plant Protection",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Plant Sciences",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Agrobiology, Food and Natural Resources; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Engineering of Agricultural Technological systems",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Engineering; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Sustainable Rural Development",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Tropical Agrobiology and Bioresource Management",
+      "institution": "Czech University of Life Sciences Prague",
+      "detail": "Faculty of Tropical AgriSciences; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Forest Ecology",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Forestry and Wood Technology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Forest Phytology",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Forestry and Wood Technology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Landscape Management and Engineering",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Forestry and Wood Technology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Silviculture",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Forestry and Wood Technology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "European Horticulture",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Horticulture; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Ph.D. in Horticulture",
+      "institution": "Mendel University in Brno",
+      "detail": "Faculty of Horticulture; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Fishery",
+      "institution": "University of South Bohemia in České Budějovice",
+      "detail": "Faculty of Fisheries & Protection of Waters; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Animal Husbandry, Animal Nutrition and Biochemistry",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Animal Protection, Welfare and Behaviour",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Food Hygiene and Technology",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Veterinary Ecology and Wildlife Diseases",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Veterinary Public Health, Forensic Veterinary Medicine and Toxicology",
+      "institution": "University of Veterinary Sciences in Brno",
+      "detail": "Faculty of Veterinary Hygiene and Ecology; Agriculture, forestry, fisheries and veterinary; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "International and European Law",
+      "institution": "Palacky University in Olomouc",
+      "detail": "Faculty of Law; Business, administration and law; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Law and Digital Technologies",
+      "institution": "Palacky University in Olomouc",
+      "detail": "Faculty of Law; Business, administration and law; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Management and Managerial Economics",
+      "institution": "Prague University of Economics and Business",
+      "detail": "Faculty of Business Administration; Business, administration and law; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     },
+     {
+      "name": "Economics and Management",
+      "institution": "Silesian University in Opava",
+      "detail": "School of Business Administration in Karvina; Business, administration and law; taught in English",
+      "source_text": "Selected Doctoral programmes offered in English",
+      "url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Selected_Doctoral_programmes_offered_in_English_2026-1-1.xlsx"
+     }
+    ]
+   }
+  ],
+  "catalogue_url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries",
+  "benefits": [
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "CZK 16,000 per month for follow-up master's students; CZK 24,960 per month for doctoral students",
+    "conditions": "Meant to cover the necessary costs of staying and studying; the amount can be changed by the Ministry and the decision states the current figure. Paid monthly by the host institution after arrival and admission. Not paid for absences over 30 consecutive days outside holidays or study duties, during an interruption of studies, or after studies end; only half is paid in a month with more than 15 days of absence for non-study reasons."
+   },
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Tuition paid by the Czech Government",
+    "conditions": "Stated on the studyin call page for the standard length of full-time study. If the standard period is exceeded, the holder loses the status and pays the university's fees for prolonged study."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "not_covered",
+    "limit_text": "No separate accommodation payment; paid from the monthly scholarship",
+    "conditions": "Accommodation, food and public transport are paid by the holder from the scholarship on the same terms as Czech students. Dormitories and canteens are optional."
+   },
+   {
+    "type": "insurance",
+    "coverage": "partial",
+    "limit_text": "Health services reimbursed by the Ministry of Health, to the same extent and conditions as Czech insured persons",
+    "conditions": "Holders pay regulatory fees and co-payments for medicines and some devices, and anything beyond standard care. Pregnancy, delivery and childcare are not reimbursed. An initial medical examination is required within 30 days of arrival. After a serious illness is found, the holder must show own health insurance within 60 days."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "One-year Czech language and preparatory course at Charles University",
+    "conditions": "Only for the Czech-language route; part of the scholarship."
+   },
+   {
+    "type": "travel",
+    "coverage": "not_covered",
+    "limit_text": "Travel to the Czech Republic and back home after graduation is not paid",
+    "conditions": "The holder pays, or the party that nominated them. On arrival, expect to pay about CZK 5,000 to CZK 8,000 from own funds for administrative fees, local transport and settling in."
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "other",
+    "text": "Electronic application form on the Study in Czechia portal, plus a printed, personally signed application with a current photograph attached (paper copy as instructed by the embassy).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "statement",
+    "text": "Motivation letter: one A4 page for master's, two A4 pages for doctoral, stressing how the learning will be used and what it brings your home country. Doctoral letters also describe the issues you will focus on.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "cv",
+    "text": "CV focused on studies and employment.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "passport",
+    "text": "Photocopy of your passport, if issued.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Three declarations signed by your own hand: acceptance of the scholarship terms (Annex 1), acceptance of the health services terms (Annex 2), and affirmation that you will return to your country after studies (Annex 3).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Legalised copy of your birth certificate with a certified translation into Czech (English translation is allowed where Czech is impossible in your country).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "medical",
+    "text": "Medical confirmation of your health, not more than two months old, with a certified translation into English or Czech (Annex 4 form).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Legalised copy of your foreign diploma with the diploma supplement (bachelor's for master's applicants, master's for doctoral), with apostille or superlegalisation and a certified Czech translation by a sworn translator; proof is also asked that the institution was allowed to provide university education, and information about the content of your education.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "transcript",
+    "text": "List of completed subjects and examinations with scope and grades, with certified Czech translation.",
+    "conditional_rule": "Only applicants with an incomplete bachelor's (master's applicants) or master's degree (doctoral applicants)",
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Overview of publication activity, 3 to 5 pages of ideas on the focus of the dissertation, and other documents showing your scholarly activity to date.",
+    "conditional_rule": "Doctoral applicants",
+    "mandatory": true
+   },
+   {
+    "document_type": "reference",
+    "text": "Two letters of recommendation from professors at an academic institution.",
+    "conditional_rule": "Doctoral applicants from abroad",
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Applicants already studying in the Czech Republic send a printed signed application and a current confirmation of studies, plus a document showing all study results to date, and for doctoral applicants an overview of expert topics and a recommendation letter from a supervisor or a letter of acceptance from a Czech university.",
+    "conditional_rule": "Only students already enrolled at a Czech university",
+    "mandatory": true
+   },
+   {
+    "document_type": "language_certificate",
+    "text": "No language certificate is uploaded: English applicants take an online English entrance test and all applicants take the general study prerequisites test inside the application. A Czech B2 certificate lets you skip the language year (Czech route only).",
+    "conditional_rule": "Tests compulsory for all; Czech B2 certificate only for the Czech route",
+    "mandatory": true
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Register on the Study in Czechia portal",
+    "detail": "Check that your country is one of the 13 and read the Guidelines and FAQ, which are binding. Register on the portal and open the application under the Foreign Development Cooperation call. Each applicant may register and submit only one application. Prepare your passport, records of all studies, a five-year overview of study or research stays abroad, motivation letter and academic CV.",
+    "source_url": "https://msmt.gov.cz/en/scholarships/government-scholarships-developing-countries"
+   },
+   {
+    "phase": "apply",
+    "title": "Complete the form, motivation letter and tests",
+    "detail": "Fill in the form in order: applicant details, application information and documents, then tests. English-programme applicants choose a specific programme from the official list and take the English test plus the general study prerequisites test; Czech-route applicants choose study areas and take only the general test. The tests can be taken at any time before the deadline. The application is complete only after the letter and all tests are done; a missing test means no processing.",
+    "source_url": "https://studyin.gov.cz/scholarships/scholarship-detail?id=339"
+   },
+   {
+    "phase": "apply",
+    "title": "Submit by 30 September 2026",
+    "detail": "The electronic application had to be submitted by 30 September 2026 for study from 2027/2028 (the portal opened on 21 August 2026). Applicants already studying in Czechia also post a printed signed application with a study confirmation by 20 December 2026; they are assessed after applicants from abroad and have no interview.",
+    "source_url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf"
+   },
+   {
+    "phase": "selection",
+    "title": "Evaluation and embassy interview",
+    "detail": "The first part of evaluation runs from 1 October to 31 January. The Czech embassy for your country asks selected applicants to attend an interview and to upload or hand in the required documents by a deadline it sets. The English-programme page notes that an interview may be requested.",
+    "source_url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/FAQ_2026.pdf"
+   },
+   {
+    "phase": "selection",
+    "title": "Final decision in the Czech Republic",
+    "detail": "Final proposals for awards are forwarded to the Czech Republic in January 2027. The decision on granting the scholarship is delivered to successful applicants through the embassy by the end of June 2027 (the FAQ says June or July). The call pages do not publish scoring criteria.",
+    "source_url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf"
+   },
+   {
+    "phase": "after_award",
+    "title": "Accept the decision and secure recognition",
+    "detail": "Sign to accept the Decision on Granting a Scholarship; without it nothing can be paid. English-route students must get their earlier education recognised before arriving, following their university's procedure. Czech-route students apply for recognition after arriving, so they should bring two copies of their documents.",
+    "source_url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf"
+   },
+   {
+    "phase": "after_award",
+    "title": "Language year and university admission (Czech route)",
+    "detail": "Czech-route holders spend one year at the Institute for Language and Preparatory Studies of Charles University. During it they apply to a university for a follow-up master's, pass its admission, and then ask for the scholarship decision for that programme, attaching the course certificate or a Czech B2 exam certificate and the admission confirmation.",
+    "source_url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf"
+   },
+   {
+    "phase": "after_award",
+    "title": "Visa, arrival, registration and medical check",
+    "detail": "Apply at the embassy for a long-term visa or long-term residence permit for study, enclosing the scholarship decision, a valid travel document, proof of accommodation, a photograph and a criminal-record extract. Email the national agency your arrival date; start on the date in the decision (late start only for serious obstacles, reported within 30 days). On arrival register as a scholarship holder, show a medical certificate not older than 3 months, report to the Alien Police within 3 working days if you hold a study visa, and take the initial medical examination within 30 days.",
+    "source_url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf"
+   },
+   {
+    "phase": "after_award",
+    "title": "Study obligations, reporting and return",
+    "detail": "Concentrate on the programme and finish in the standard period, follow Czech law and university rules, and tell the national agency at once about changes or anything that may extend your studies. Payment can end for low credits or under 80 percent attendance. After studies, send a final report through an online form and return to your country of origin. Obtaining Czech permanent residence ends the scholarship.",
+    "source_url": "https://msmt.gov.cz/media/wp-content/uploads/2026/08/Guidelines_2026-1.pdf"
+   }
+  ],
+  "not_stated": [
+   "The scoring criteria and weights used to rank applications (the pages say only that the guidelines hold the conditions).",
+   "The number of scholarships overall (only the Cambodian embassy notice gives 21 for its country; no total is published).",
+   "Minimum English test score for the online entrance test (the call says 'sufficient command' or 'advanced knowledge' only).",
+   "Whether the country-by-country quota or priority fields in the Cambodian notice apply to other countries.",
+   "Exact tuition wording in the Guidelines: the Guidelines read do not mention tuition; the statement that tuition is paid by the Government comes from the studyin call page."
+  ],
+  "fetch_problems": [
+   "The Czech-language Guidelines and the Czech FAQ were not opened; the English versions were used.",
+   "The Annexes (forms) at the end of the Guidelines were skimmed only to the second annex; Annex 4 to 6 form text was not read.",
+   "The call page for the Czech-language track does not publish a country-specific area list; one combined list for the four countries was read."
+  ],
+  "notes": [
+   "The deadline of 30 September 2026 has passed, so the 2027/2028 intake is closed at the date checked (13 November 2026); the evaluation runs to 31 January 2027 and decisions come by the end of June 2027.",
+   "Source disagreement: the studyin call page lists 'Bachelor study programme' as the education level and says the call period began on 1 August 2026, and that applicants must not be enrolled at a Czech university; the MEYS call page and Guidelines give 21 August 2026 as the start, cover master's and doctoral only, and allow applicants already studying in Czechia to apply (assessed after applicants from abroad). The MEYS/Guidelines text is followed here.",
+   "The age range (born 1 September 1991 to 31 August 2008) appears only on the studyin call page; the MEYS page and the Guidelines do not state an age limit.",
+   "The stored note that the Cambodian embassy notice mentions 21 English-taught scholarships and priority fields was re-read and confirmed; it is written for Cambodian applicants.",
+   "The Guidelines say Czech-route master's studies last two to three years; the MEYS page says two years."
+  ]
+ }
+]

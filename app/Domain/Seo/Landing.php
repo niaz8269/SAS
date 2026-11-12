@@ -3,6 +3,7 @@
 namespace App\Domain\Seo;
 
 use App\Domain\Scholarship\DeadlineService;
+use App\Models\Country;
 use App\Models\ScholarshipCycle;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
@@ -34,6 +35,12 @@ class Landing
         'partial-funding' => ['partial', 'partially funded', 'Partially Funded Scholarships for International Students', false],
         'tuition-covered' => ['tuition_only', 'tuition-covered', 'Scholarships That Cover Tuition for International Students', false],
     ];
+
+    /** Students' home countries people search with ("scholarships for Nigerian students"); a page exists for each one that has enough scholarships naming it. */
+    private const NATIONALITIES = ['india', 'pakistan', 'nigeria', 'bangladesh', 'kenya', 'philippines', 'ghana', 'nepal', 'sri-lanka', 'egypt', 'ethiopia', 'uganda', 'tanzania', 'indonesia', 'vietnam', 'zimbabwe'];
+
+    /** Subject slug => the words used for it in a title, where the stored name reads oddly (people search "medical scholarships"). */
+    private const SUBJECT_NAMES = ['medicine-and-health' => 'Medical and Health'];
 
     /** Countries whose name takes "the" in a sentence. */
     private const THE = ['United Kingdom', 'United States', 'United Arab Emirates', 'Netherlands', 'Philippines', 'Czech Republic', 'Maldives', 'Seychelles', 'Bahamas', 'Gambia'];
@@ -87,7 +94,8 @@ class Landing
 
     private function build(): array
     {
-        $cycles = ScholarshipCycle::visible()->with(['destinations:id,name,slug', 'degreeLevels:id,code'])->get(['id', 'funding_type', 'fully_funded_verified', 'updated_at']);
+        $cycles = ScholarshipCycle::visible()->with(['destinations:id,name,slug', 'degreeLevels:id,code', 'subjects:id,name,slug', 'nationalities:id'])
+            ->get(['id', 'funding_type', 'fully_funded_verified', 'any_nationality', 'updated_at']);
         $pages = [];
         $add = function (string $type, string $slug, string $url, string $label, string $title, string $name, Collection $set, ?string $country = null) use (&$pages) {
             if ($set->count() < self::MIN) {
@@ -113,6 +121,26 @@ class Landing
             $set = $cycles->filter(fn ($c) => $c->funding_type === $type && (! $verified || $c->fully_funded_verified));
             $add('funding', $word, route('landing.funding', $word), Str::ucfirst($name).' scholarships', $title, $name.' scholarships', $set);
         }
+        foreach ($cycles->flatMap(fn ($c) => $c->subjects)->unique('id') as $subject) {
+            $set = $cycles->filter(fn ($c) => $c->subjects->contains('id', $subject->id));
+            $name = self::SUBJECT_NAMES[$subject->slug] ?? $subject->name;
+            $title = $name.' Scholarships for International Students';
+            $add('subject', $subject->slug, route('landing.subject', $subject->slug), $name.' scholarships', mb_strlen($title) <= 60 ? $title : $name.' Scholarships', mb_strtolower($name).' scholarships', $set);
+        }
+        // Only the scholarships that NAME the country are listed; the many open to any nationality have one shared page, so country pages are never copies of each other.
+        foreach (Country::whereIn('slug', self::NATIONALITIES)->get(['id', 'name', 'slug', 'demonym']) as $country) {
+            $set = $cycles->filter(fn ($c) => $c->nationalities->contains('id', $country->id));
+            $who = $country->demonym ? $country->demonym.' students' : 'students from '.$country->name;
+            $add('from', $country->slug, route('landing.from', $country->slug), 'Scholarships for '.$who, 'Scholarships for '.Str::replaceLast('students', 'Students', $who), 'scholarships for '.$who, $set, $country->name);
+        }
+        $add('open', 'any-nationality', route('landing.open'), 'Scholarships open to any nationality', 'Scholarships Open to Students of Any Nationality', 'scholarships open to any nationality', $cycles->where('any_nationality', true));
+
+        // The Chinese Government Scholarship guide has its own layout (see CscGuide) but joins the same lists: sitemap, site map and footer.
+        $csc = app(CscGuide::class)->summary();
+        if ($csc !== null) {
+            $pages[] = ['type' => 'guide', 'slug' => 'chinese-government-scholarship', 'url' => route('csc.guide'), 'label' => 'Chinese Government Scholarship', 'title' => $csc['title'],
+                'name' => 'Chinese Government Scholarship calls', 'count' => $csc['count'], 'ids' => $csc['ids'], 'updated' => $csc['updated'], 'country' => null, 'priority' => true];
+        }
 
         return $pages;
     }
@@ -127,7 +155,15 @@ class Landing
         // Opening: how many, and what they are open to.
         $any = $cycles->where('any_nationality', true)->count();
         $opening = 'SAS lists '.$n.' published '.$page['name'].'.';
-        if ($any > 0) {
+        if ($page['type'] === 'from') {
+            // These scholarships name the country; those open to any nationality (unless this country is excluded) are on their own page.
+            $anyOpen = ScholarshipCycle::visible()->where('any_nationality', true)
+                ->whereDoesntHave('excludedNationalities', fn ($q) => $q->where('countries.slug', $page['slug']))->count();
+            $opening = 'SAS lists '.$n.' published scholarships that name '.self::withThe($page['country']).' among the nationalities they accept.'
+                .($anyOpen > 0 ? ' '.$anyOpen.' more are open to students of any nationality.' : '');
+        } elseif ($page['type'] === 'open') {
+            $opening = 'SAS lists '.$n.' published scholarships that are open to students of any nationality, unless a scholarship page says that a country is excluded.';
+        } elseif ($any > 0) {
             $opening .= ' '.$any.' of them '.($any === 1 ? 'is' : 'are').' open to students of any nationality; the others name the nationalities they accept.';
         }
         $paragraphs[] = $opening;

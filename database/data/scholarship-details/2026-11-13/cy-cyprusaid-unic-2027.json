@@ -1,0 +1,106 @@
+[{
+  "external_key": "cy-cyprusaid-unic-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/", "publisher": "University of Nicosia (UNIC), with CyprusAid and the Cyprus Ministry of Foreign Affairs", "publisher_type": "university", "note": "Announcement dated 12 June 2026: countries, programmes, benefits, eligibility, documents, how to apply, deadline"},
+    {"url": "https://www.unic.ac.cy/study-at-unic/admission-requirements", "publisher": "University of Nicosia", "publisher_type": "university", "note": "UNIC admission and English language requirements for undergraduate and master's applicants"},
+    {"url": "https://www.unic.ac.cy/study-at-unic/admission-requirements/application-procedure/", "publisher": "University of Nicosia", "publisher_type": "university", "note": "General application procedure and document list per level"},
+    {"url": "https://www.unic.ac.cy/call-for-applications-to-the-doctorate-phd-in-international-relations-and-european-studies-fall-2026/", "publisher": "University of Nicosia", "publisher_type": "university", "note": "Entry requirements, documents and selection for the PhD in International Relations and European Studies (Fall 2026 call)"},
+    {"url": "https://www.unic.ac.cy/international-relations-and-eastern-mediterranean-studies-ma-1-5-years-or-3-semesters/", "publisher": "University of Nicosia", "publisher_type": "university", "note": "MA programme duration, ECTS, admission requirements and documents"},
+    {"url": "https://www.unic.ac.cy/nicosia/master-degrees/", "publisher": "University of Nicosia", "publisher_type": "university", "note": "Duration of the MBA and MA programmes named in the announcement"},
+    {"url": "https://www.unic.ac.cy/nicosia/bachelor-degrees/", "publisher": "University of Nicosia", "publisher_type": "university", "note": "Bachelor's programme catalogue at the Nicosia campus"}
+  ],
+  "summary": "The CyprusAid scholarship scheme at the University of Nicosia (UNIC) is offered by UNIC together with CyprusAid and the Cyprus Ministry of Foreign Affairs. It is open to nationals of ten African countries and covers 100% of tuition for English-taught on-campus bachelor's programmes (not Medical School), three named master's programmes and a PhD in International Relations, plus accommodation and other costs listed below. The announcement is dated 12 June 2026 and gives a deadline of 6 November 2026 for the Spring 2027 intake.",
+  "eligibility_notes": "Applicants must be nationals of Kenya, Uganda, Rwanda, Zambia, Botswana, Mauritius, Ghana, Senegal, Tanzania or Madagascar, and hold a valid passport or official identification document confirming that nationality.\n\nThey must meet UNIC's admission requirements for the chosen programme and the programme's English language requirements, and submit all the admission and scholarship evaluation documents.\n\nUNIC's general English requirement for undergraduate programmes is, for example, IELTS 6.0 or TOEFL iBT 72; for master's programmes IELTS 6.5 or TOEFL iBT 79 (other accepted tests and grades are listed by UNIC). Master's applicants whose first degree was taught in English meet the requirement. UNIC accepts applicants with IELTS 4.5 or above (or equivalent) who then take an English placement test and may join English support classes. For the PhD, the Fall 2026 call asks for IELTS 6.5 or TOEFL (600 paper-based, 250 computer-based or 100 internet-based), with an exemption for graduates of English-speaking universities.\n\nThe announcement does not state the number of scholarships, age limits, or academic grade minimums for the scholarship itself. UNIC says undergraduate applicants with a school leaving result below 7.5/10 (or 15/20) receive extra academic guidance in the first year.",
+  "age_experience_notes": "",
+  "funding_summary": "The scheme covers 100% of tuition for the approved programme, plus accommodation, a monthly sponsorship allowance, medical examinations, visa or residence permit fees, insurance, and other personal or administrative expenses, as listed by UNIC. The amount of the allowance is not stated. The announcement does not state how long funding lasts beyond the approved programme, or conditions for continuing.",
+  "programmes_note": "Undergraduate: English-taught, on-campus bachelor's programmes offered by UNIC, excluding Medical School programmes. Master's: MBA; MA in International Relations and Eastern Mediterranean Studies; MA in Digital Media and Communications. Doctoral: PhD in International Relations. The announcement does not give a list of the eligible bachelor's programmes.",
+  "institutions_note": "University of Nicosia, Cyprus, with CyprusAid and the Cyprus Ministry of Foreign Affairs.",
+  "levels": [
+    {
+      "code": "bachelor",
+      "confirmed": true,
+      "summary": {
+        "detail": "100% of tuition for English-taught, on-campus bachelor's programmes offered by UNIC; Medical School programmes are excluded. Entry: recognised high school leaving certificate; English test such as IELTS 6.0 or TOEFL iBT 72 (UNIC's general table). Most UNIC bachelor's programmes at the Nicosia campus last 4 years.",
+        "source_text": "Undergraduate: 100% of tuition fees",
+        "url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"
+      },
+      "programmes": []
+    },
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {
+        "detail": "100% of tuition for three master's programmes. Entry: bachelor's degree from a recognised institution; English test such as IELTS 6.5 or TOEFL iBT 79, or a first degree taught in English. The Nicosia listing shows 1.5 years or 3 semesters (90 ECTS) for each of the three programmes.",
+        "source_text": "Postgraduate (Master's)",
+        "url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"
+      },
+      "programmes": [
+        {"name": "MBA (Master in Business Administration)", "institution": "University of Nicosia", "detail": "Nicosia listing: 1.5 years or 3 semesters, 90 ECTS (the listing also shows MBA specialisations)", "source_text": "MBA programmes", "url": "https://www.unic.ac.cy/nicosia/master-degrees/"},
+        {"name": "MA in International Relations and Eastern Mediterranean Studies", "institution": "University of Nicosia", "detail": "1.5 years (3 semesters), 90 ECTS, taught in English, full-time or part-time", "source_text": "International Relations and Eastern Mediterranean Studies (MA)", "url": "https://www.unic.ac.cy/international-relations-and-eastern-mediterranean-studies-ma-1-5-years-or-3-semesters/"},
+        {"name": "MA in Digital Media and Communications", "institution": "University of Nicosia", "detail": "Nicosia listing: 1.5 years or 3 semesters, 90 ECTS", "source_text": "Digital Media and Communications MA", "url": "https://www.unic.ac.cy/nicosia/master-degrees/"}
+      ]
+    },
+    {
+      "code": "doctorate",
+      "confirmed": true,
+      "summary": {
+        "detail": "100% of tuition for the PhD in International Relations. UNIC's own Fall 2026 call for the PhD in International Relations and European Studies lists a duration of 3 to 8 years, up to five positions, and requires master's and bachelor's degrees in politics, international relations, governance, European studies, law or a relevant field, a research proposal of 1,000 to 2,000 words, two recommendation letters and a statement of purpose. It is not clear from the pages read whether this is the same programme as the one named in the scholarship announcement.",
+        "source_text": "Doctoral: PhD in International Relations",
+        "url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"
+      },
+      "programmes": [
+        {"name": "PhD in International Relations", "institution": "University of Nicosia", "detail": "As named in the scholarship announcement", "source_text": "PhD in International Relations", "url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"}
+      ]
+    }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": "https://www.unic.ac.cy/nicosia/bachelor-degrees/",
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "100% of tuition fees for the approved programme", "conditions": "Bachelor's: English-taught, on-campus programmes, excluding Medical School. Master's: the three named programmes. Doctoral: PhD in International Relations."},
+    {"type": "accommodation", "coverage": "covered", "limit_text": "Accommodation", "conditions": "No details on type or duration are given."},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "Monthly sponsorship allowance (amount not stated)", "conditions": "The announcement does not give the amount or payment rules."},
+    {"type": "insurance", "coverage": "covered", "limit_text": "Insurance and medical examinations", "conditions": "No details are given on the type of insurance."},
+    {"type": "other", "coverage": "covered", "limit_text": "Visa or residence permit fees, and other personal or administrative expenses", "conditions": "Listed in the announcement without amounts."},
+    {"type": "travel", "coverage": "unknown", "limit_text": "International travel is not mentioned", "conditions": "The announcement does not say whether flights are covered."}
+  ],
+  "requirements": [
+    {"document_type": "passport", "text": "Valid passport. For master's applicants a national ID confirming nationality is also accepted by the announcement.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "degree_certificate", "text": "Undergraduate: secondary school leaving certificate. Postgraduate: bachelor's degree from a recognised institution (for the PhD, UNIC's call also asks for the master's degree and copies of all awarded degrees). Academic records must be true copies of the originals.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "transcript", "text": "Official academic transcripts (undergraduate: where applicable; postgraduate: with the degree).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "cv", "text": "Curriculum Vitae, where applicable (postgraduate). UNIC's general procedure lists a CV for master's and doctoral applicants.", "conditional_rule": "Postgraduate applicants", "mandatory": false},
+    {"document_type": "language_certificate", "text": "Proof of English language proficiency as set by UNIC for the programme (master's applicants whose first degree was taught in English meet the requirement).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "reference", "text": "Two letters of recommendation or reference (from professors or employers), listed in UNIC's general procedure for master's and doctoral applicants and in the MA programme page; the PhD call asks for at least one from the institution where you studied.", "conditional_rule": "Master's and PhD applicants", "mandatory": true},
+    {"document_type": "statement", "text": "Personal statement (master's); statement of purpose (PhD).", "conditional_rule": "Master's and PhD applicants", "mandatory": true},
+    {"document_type": "research_proposal", "text": "Initial research proposal of 1,000 to 2,000 words (title, brief literature review, gaps and rationale, aims and objectives, hypotheses, methodology, ethical considerations if applicable, references), plus previous theses and relevant publications if any.", "conditional_rule": "PhD applicants (from UNIC's Fall 2026 PhD call)", "mandatory": true},
+    {"document_type": "other", "text": "Any additional documents required for admission and visa purposes; the application form for admission and enrolment.", "conditional_rule": null, "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Check country, programme and English requirements", "detail": "Confirm you are a national of one of the ten listed countries, hold a valid passport or official identification document, and meet UNIC's admission and English requirements for the programme (bachelor's, one of the three named master's, or the PhD in International Relations).", "source_url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"},
+    {"phase": "apply", "title": "Email UNIC International Admissions with the required documents", "detail": "Send an email to the University of Nicosia International Admissions Office with the subject line \"CyprusAid\" scholarship scheme and attach the required admission and scholarship evaluation documents for your level. Contact by phone is also listed on the announcement.", "source_url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"},
+    {"phase": "apply", "title": "Submit before the deadline for the Spring 2027 intake", "detail": "The announcement gives 6 November 2026 as the deadline for the Spring 2027 intake. That date has passed as of this check. The announcement does not mention a later round, so ask the International Admissions Office whether another intake is open.", "source_url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"},
+    {"phase": "selection", "title": "Application assessed against UNIC admission rules and the scheme terms", "detail": "UNIC assesses applications under its admission requirements and the terms of the scheme, and final decisions follow the relevant evaluation process. Selection criteria and ranking methods are not listed. For PhD applications UNIC's own call describes a preselection, a possible interview and a ranking on merit by the department committee.", "source_url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"},
+    {"phase": "selection", "title": "Wait for the electronic notification", "detail": "Applicants are told the outcome electronically. UNIC's general procedure says an admissions counsellor contacts applicants after the application is reviewed.", "source_url": "https://www.unic.ac.cy/study-at-unic/admission-requirements/application-procedure/"},
+    {"phase": "after_award", "title": "Complete admission and student visa steps with the counsellor", "detail": "UNIC's admissions counsellor guides applicants through the rest of the process and, where applicable, the student visa. Non-EU applicants should ask about visa and residence permit requirements, which vary by nationality and programme. Visa or residence permit fees are listed as covered by the scheme.", "source_url": "https://www.unic.ac.cy/study-at-unic/admission-requirements/application-procedure/"}
+  ],
+  "not_stated": [
+    "Number of scholarships available",
+    "Amount of the monthly sponsorship allowance",
+    "Duration of funding and any renewal or progress conditions",
+    "Selection criteria and ranking method for the scholarship",
+    "Obligations after graduation (such as return home)",
+    "Whether international flights are covered",
+    "Deadline for any intake after Spring 2027",
+    "The list of eligible bachelor's programmes"
+  ],
+  "fetch_problems": [
+    "The official CyprusAid page on the Cyprus Ministry of Foreign Affairs site returned HTTP 403 (access forbidden), so the funder's own description of the scheme could not be read; only UNIC's announcement and UNIC admission pages were used.",
+    "UNIC's bachelor's catalogue page does not show language or mode of study, so it was not possible to identify which bachelor's programmes are English-taught from the pages read."
+  ],
+  "notes": [
+    "Deadline for the Spring 2027 intake (6 November 2026) had already passed on 13 November 2026; the editors may want to show this scholarship as closed or awaiting a new round.",
+    "The announcement names the doctoral programme 'PhD in International Relations'; UNIC's PhD call is titled 'PhD in International Relations and European Studies'.",
+    "Stored data also cited a Neapolis University Pafos notice; that source was not re-read in this pass and is not used here.",
+    "Stored data said accommodation, insurance and allowance are covered; this matches the announcement. The word 'full scholarship' used by UNIC is not repeated here; benefits are listed per component."
+  ]
+}]

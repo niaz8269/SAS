@@ -2,12 +2,14 @@
 
 namespace Tests\Feature\Public;
 
+use App\Domain\Seo\CscGuide;
 use App\Domain\Seo\Landing;
 use App\Domain\Seo\ScholarshipFacts;
 use App\Models\Country;
 use App\Models\DegreeLevel;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
+use App\Models\Subject;
 use Database\Seeders\TaxonomySeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
@@ -101,6 +103,74 @@ class LandingPagesTest extends TestCase
         ScholarshipCycle::query()->first()->forceFill(['publication_state' => 'draft'])->save(); // the listeners clear the caches
         $this->assertStringNotContainsString('/scholarships/in/china', $this->sitemapXml('scholarships'));
         $this->get('/scholarships/in/china')->assertNotFound();
+    }
+
+    public function test_subject_pages_exist_only_with_three_scholarships_that_name_the_subject(): void
+    {
+        $subject = Subject::firstOrCreate(['slug' => 'medicine-and-health'], ['name' => 'Medicine and Health']);
+        foreach (['A', 'B'] as $x) {
+            $this->cycle($x.' Award', 'Japan')->subjects()->sync([$subject->id]);
+        }
+        Cache::flush();
+        $this->get('/scholarships/subject/medicine-and-health')->assertNotFound();
+
+        $this->cycle('C Award', 'Japan')->subjects()->sync([$subject->id]);
+        $this->cycle('Other Award', 'Japan'); // no subject stored: not listed
+        Cache::flush();
+        $this->get('/scholarships/subject/medicine-and-health')->assertOk()
+            ->assertSee('Medical and Health Scholarships for International Students')->assertSee('SAS lists 3 published medical and health scholarships')
+            ->assertSee('C Award')->assertDontSee('Other Award');
+        $this->assertStringContainsString('/scholarships/subject/medicine-and-health', $this->sitemapXml('scholarships'));
+    }
+
+    public function test_a_nationality_page_lists_only_scholarships_that_name_the_country_and_points_to_the_open_ones(): void
+    {
+        $pakistan = Country::where('name', 'Pakistan')->first();
+        foreach (['A', 'B', 'C'] as $x) {
+            $this->cycle($x.' Named Award', 'Japan')->nationalities()->sync([$pakistan->id]);
+        }
+        foreach (['X', 'Y', 'Z'] as $x) {
+            $this->cycle($x.' Open Award', 'Japan', 'master', ['any_nationality' => true]);
+        }
+        Cache::flush();
+
+        $page = $this->get('/scholarships/from/pakistan')->assertOk()
+            ->assertSee('Scholarships for Pakistani Students')
+            ->assertSee('SAS lists 3 published scholarships that name Pakistan among the nationalities they accept. 3 more are open to students of any nationality.')
+            ->assertSee('A Named Award')->assertDontSee('X Open Award');
+        $this->assertStringContainsString('"@type":"FAQPage"', $page->getContent());
+        $this->get('/scholarships/from/france')->assertNotFound(); // not one of the countries with a page
+        $this->get('/scholarships/any-nationality')->assertOk()->assertSee('Scholarships Open to Students of Any Nationality')->assertSee('X Open Award')->assertDontSee('A Named Award');
+        $this->assertStringContainsString('/scholarships/from/pakistan', $this->sitemapXml('scholarships'));
+    }
+
+    public function test_the_chinese_government_scholarship_guide_is_written_from_the_stored_calls(): void
+    {
+        $this->cycle('Chinese Government Scholarship (CSC) 2027', 'China', 'master', ['funding_type' => 'full', 'fully_funded_verified' => false])->requirements()->create(['document_type' => 'passport', 'text' => 'Valid passport', 'mandatory' => true]);
+        $this->get('/chinese-government-scholarship')->assertNotFound(); // one call is not enough for a guide
+
+        $second = $this->cycle('Silk Road Program', 'China', 'doctorate', ['funding_type' => 'full', 'fully_funded_verified' => false]);
+        $second->programme->update(['title' => 'Chinese Government Scholarship: Silk Road Program']);
+        $second->benefits()->create(['type' => 'tuition', 'coverage' => 'covered']);
+        $second->benefits()->create(['type' => 'travel', 'coverage' => 'not_covered']);
+        Cache::flush();
+
+        $page = $this->get('/chinese-government-scholarship')->assertOk()
+            ->assertSee('Chinese Government Scholarship: Requirements and Deadlines')
+            ->assertSee('SAS lists 2 published calls')->assertSee('Valid passport')
+            ->assertSee('has not verified full funding for any of these calls')
+            ->assertSee('Chinese Government Scholarship: Silk Road Program');
+        $this->assertStringContainsString('"@type":"FAQPage"', $page->getContent());
+        $this->assertStringNotContainsString('Not confirmed', implode(' ', array_column(app(CscGuide::class)->content()['faq'], 1)));
+        $this->assertStringContainsString('/chinese-government-scholarship', $this->sitemapXml('scholarships'));
+
+        // The production cache refuses objects (config/cache.php serializable_classes), so what is cached must be plain arrays and text.
+        $plain = function ($value) use (&$plain) {
+            return is_array($value) ? collect($value)->every($plain) : ! is_object($value);
+        };
+        $this->assertTrue($plain(app(CscGuide::class)->content()), 'CscGuide::content() must not hold objects');
+        $this->assertTrue($plain(app(Landing::class)->pages()->all()), 'Landing::pages() must not hold objects');
+        $this->get('/about')->assertSee('/chinese-government-scholarship', false);
     }
 
     public function test_the_scholarship_page_gets_an_at_a_glance_paragraph_and_quick_answers_from_its_data(): void

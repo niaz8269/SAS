@@ -1,0 +1,581 @@
+[
+ {
+  "external_key": "kz-nu-abay-kunanbayev-scholarship-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://nu.edu.kz/admissions/international-admission/",
+    "publisher": "Nazarbayev University",
+    "publisher_type": "university",
+    "note": "Scholarship description, international admission process, supporting documents"
+   },
+   {
+    "url": "https://nu.edu.kz/admissions/international-admission/international-admission_general/",
+    "publisher": "Nazarbayev University",
+    "publisher_type": "university",
+    "note": "Scholarship, process, documents, deadline note for international candidates"
+   },
+   {
+    "url": "https://nu.edu.kz/admissions/fees-and-funding/",
+    "publisher": "Nazarbayev University",
+    "publisher_type": "university",
+    "note": "Tuition fees by level; other financial aid (not the Abay scholarship)"
+   },
+   {
+    "url": "https://nu.edu.kz/admissions/how-to-apply/masters/regular-admissions-masters/",
+    "publisher": "Nazarbayev University",
+    "publisher_type": "university",
+    "note": "Master's steps, English and GPA requirements, selection"
+   },
+   {
+    "url": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/regular-admissions-phd/",
+    "publisher": "Nazarbayev University",
+    "publisher_type": "university",
+    "note": "PhD steps, requirements by school, selection, scholarship sentence, living costs"
+   },
+   {
+    "url": "https://nu.edu.kz/other/frequently-asked-questions/",
+    "publisher": "Nazarbayev University",
+    "publisher_type": "university",
+    "note": "Scholarship eligibility sentence, stipend amounts, language of instruction, guarantee fee"
+   },
+   {
+    "url": "https://nu.edu.kz/admissions/programs/",
+    "publisher": "Nazarbayev University",
+    "publisher_type": "university",
+    "note": "Master's and PhD programme names"
+   },
+   {
+    "url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/",
+    "publisher": "Nazarbayev University",
+    "publisher_type": "university",
+    "note": "Undergraduate steps and requirements; the page does not mention the Abay scholarship"
+   }
+  ],
+  "summary": "The Abay Kunanbayev Scholarship is a merit-based award from Nazarbayev University in Astana for top international applicants. It is given to candidates whom the admissions committee of a school recommends for admission, with no separate scholarship form. The university states that it covers the tuition fee, basic medical insurance and a monthly stipend. The pages tie it to master's and PhD admission.",
+  "eligibility_notes": "There is no separate scholarship application. You apply to a programme through the university's online admissions system, go through its selection steps, and are considered by default. The award goes to those whom the admissions committee of the programme's school recommends for admission.\n\nThe university says the award is for top international candidates. No countries, minimum grades or number of awards are published. Entry requirements are the same for all candidates whatever their citizenship, and depend on the programme.\n\nMaster's admission: a bachelor's degree or equivalent with a CGPA of at least 2.5 out of 4.0 (final-year students may send the current transcript). English: Academic IELTS overall 6.0 (writing 6.0, other parts 5.5) or equivalent TOEFL; some programmes differ (MBA writing 5.5; Doctor of Medicine IELTS 6.5 with no part below 6.0). Exemption is at the committee's discretion for people with a degree from an English-speaking country or an English-taught degree, or NU graduates. Many programmes add work experience, a statement of purpose and recommendation letters.\n\nPhD admission: a CGPA of at least 2.75 out of 4.0 in the master's (or bachelor's and/or master's depending on the school). English: IELTS overall 6.5 with no part below 6.0, or equivalent TOEFL; Eurasian Studies needs IELTS 7.0 with no part below 6.0. IELTS Online, IELTS Indicator, TOEFL iBT Home Edition and TOEFL PDT are not accepted.\n\nA person who already earned a master's or PhD in Kazakhstan on a state scholarship cannot receive the same degree on a state grant again (this rule is in the FAQ and is not specific to the Abay award).",
+  "age_experience_notes": "No age limit is stated. Work experience depends on the programme: for example the MBA asks for about 3 years, the Executive MBA 5 years, Master in Public Policy 2 years, Master in Public Administration 3 years and Educational Leadership/Multilingual Education 1 year; the committee may consider less. Most other master's and PhD programmes state none.",
+  "funding_summary": "The university says the scholarship covers the tuition fee, basic medical insurance and a monthly stipend. For comparison, tuition per year without a scholarship is USD 16,000 for master's and USD 23,500 for doctoral study (2025/2026). The stipend is the same for all students whatever their citizenship. The pages do not say for how many years the scholarship is held or what is needed to keep it.",
+  "programmes_note": "The pages read do not restrict the scholarship to particular fields. The university's programme list for master's and doctoral study is on its Programs A-Z page: 32 master's programmes and 22 doctoral programmes were listed there. All master's and PhD programmes are taught in English, except the Executive MBA, which is in English with simultaneous interpretation into Russian. Graduate programmes are listed under the schools of Medicine, Engineering, Computing and AI, Sciences and Humanities, Business, Public Policy and Education.",
+  "institutions_note": "Nazarbayev University only (Astana). The scholarship is recommended by the admissions committee of each of its schools.",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Merit-based scholarship for top international applicants recommended for admission. Taught in English (the Executive MBA with simultaneous interpretation into Russian). Entry: bachelor's degree with CGPA at least 2.5 out of 4.0 and English proof; programme length and number of awards not stated. Stipend for master's students per the FAQ: 200,000 tenge a month (another FAQ lists 218,750 tenge, so confirm with the university).",
+     "source_text": "merit-based Abay Kunanbayev scholarships for top international applicants",
+     "url": "https://nu.edu.kz/other/frequently-asked-questions/"
+    },
+    "programmes": [
+     {
+      "name": "Master of Science in Biomedicine",
+      "institution": "Nazarbayev University",
+      "detail": "School of Medicine; taught in English",
+      "source_text": "Programs A-Z, School of Medicine",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Arts in Global Affairs and Eurasian Studies (Joint Degree with SOAS)",
+      "institution": "Nazarbayev University",
+      "detail": "School of Sciences and Humanities; taught in English",
+      "source_text": "Programs A-Z, School of Sciences and Humanities",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Geosciences",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Chemistry",
+      "institution": "Nazarbayev University",
+      "detail": "School of Sciences and Humanities; taught in English",
+      "source_text": "Programs A-Z, School of Sciences and Humanities",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Applied Mathematics",
+      "institution": "Nazarbayev University",
+      "detail": "School of Computing and Artificial Intelligence; taught in English",
+      "source_text": "Programs A-Z, School of Computing and Artificial Intelligence",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Physics",
+      "institution": "Nazarbayev University",
+      "detail": "School of Sciences and Humanities; taught in English",
+      "source_text": "Programs A-Z, School of Sciences and Humanities",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Arts in Multilingual Education",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Education; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Education",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Educational Leadership",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Education; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Education",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master in Public Administration",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Public Policy; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Public Policy",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master in Public Policy",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Public Policy; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Public Policy",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Arts in Political Science and International Relations",
+      "institution": "Nazarbayev University",
+      "detail": "School of Sciences and Humanities; taught in English",
+      "source_text": "Programs A-Z, School of Sciences and Humanities",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Arts in Eurasian Studies",
+      "institution": "Nazarbayev University",
+      "detail": "School of Sciences and Humanities; taught in English",
+      "source_text": "Programs A-Z, School of Sciences and Humanities",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Applied Artificial Intelligence and Data Science",
+      "institution": "Nazarbayev University",
+      "detail": "School of Computing and Artificial Intelligence; taught in English",
+      "source_text": "Programs A-Z, School of Computing and Artificial Intelligence",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Data Science",
+      "institution": "Nazarbayev University",
+      "detail": "School of Computing and Artificial Intelligence; taught in English",
+      "source_text": "Programs A-Z, School of Computing and Artificial Intelligence",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Computer Science",
+      "institution": "Nazarbayev University",
+      "detail": "School of Computing and Artificial Intelligence; taught in English",
+      "source_text": "Programs A-Z, School of Computing and Artificial Intelligence",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Nursing",
+      "institution": "Nazarbayev University",
+      "detail": "School of Medicine; taught in English",
+      "source_text": "Programs A-Z, School of Medicine",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Doctor of Medicine",
+      "institution": "Nazarbayev University",
+      "detail": "School of Medicine; taught in English (listed by the university under its master's filter; the pages read do not say whether the scholarship applies to it)",
+      "source_text": "Programs A-Z, School of Medicine",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Public Health",
+      "institution": "Nazarbayev University",
+      "detail": "School of Medicine; taught in English",
+      "source_text": "Programs A-Z, School of Medicine",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Life Sciences",
+      "institution": "Nazarbayev University",
+      "detail": "School of Medicine; taught in English",
+      "source_text": "Programs A-Z, School of Medicine",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Executive Master of Business Administration",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Business; taught in English with simultaneous interpretation into Russian",
+      "source_text": "Programs A-Z, Graduate School of Business",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Finance",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Business; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Business",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Business Administration",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Business; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Business",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Arts in Economics",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Business; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Business",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Petroleum Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Master of Science in Mining Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "The PhD admission page says merit-based Abay Kunanbayev scholarships exist for top international applicants recommended for admission. Taught in English. Entry: CGPA at least 2.75 out of 4.0, IELTS 6.5 (no part below 6.0). Stipend for PhD students per the FAQ: 240,000 tenge a month (another FAQ lists 262,500 tenge, so confirm with the university). PhD students may also work as research or teaching assistants for a salary. Tuition without a scholarship: USD 23,500 per year.",
+     "source_text": "merit-based Abay Kunanbayev scholarships for top international applicants",
+     "url": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/regular-admissions-phd/"
+    },
+    "programmes": [
+     {
+      "name": "Doctor of Business Administration",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Business; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Business",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Geosciences",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Chemistry",
+      "institution": "Nazarbayev University",
+      "detail": "School of Sciences and Humanities; taught in English",
+      "source_text": "Programs A-Z, School of Sciences and Humanities",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Mathematics",
+      "institution": "Nazarbayev University",
+      "detail": "School of Computing and Artificial Intelligence; taught in English",
+      "source_text": "Programs A-Z, School of Computing and Artificial Intelligence",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Physics",
+      "institution": "Nazarbayev University",
+      "detail": "School of Sciences and Humanities; taught in English",
+      "source_text": "Programs A-Z, School of Sciences and Humanities",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Doctor of Philosophy in Education",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Education; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Education",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "PhD in Eurasian Studies",
+      "institution": "Nazarbayev University",
+      "detail": "School of Sciences and Humanities; taught in English",
+      "source_text": "Programs A-Z, School of Sciences and Humanities",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Doctor of Public Management",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Public Policy; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Public Policy",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Public Policy",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Public Policy; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Public Policy",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Computer Science",
+      "institution": "Nazarbayev University",
+      "detail": "School of Computing and Artificial Intelligence; taught in English",
+      "source_text": "Programs A-Z, School of Computing and Artificial Intelligence",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Global Health",
+      "institution": "Nazarbayev University",
+      "detail": "School of Medicine; taught in English",
+      "source_text": "Programs A-Z, School of Medicine",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Biomedical Sciences",
+      "institution": "Nazarbayev University",
+      "detail": "School of Medicine; taught in English",
+      "source_text": "Programs A-Z, School of Medicine",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Life Sciences",
+      "institution": "Nazarbayev University",
+      "detail": "School of Medicine; taught in English",
+      "source_text": "Programs A-Z, School of Medicine",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "PhD in Business Administration",
+      "institution": "Nazarbayev University",
+      "detail": "Graduate School of Business; taught in English",
+      "source_text": "Programs A-Z, Graduate School of Business",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "PhD in Mining Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "PhD in Petroleum Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "PhD in Science, Engineering and Technology",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Chemical Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Robotics Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Computing and Artificial Intelligence; taught in English",
+      "source_text": "Programs A-Z, School of Computing and Artificial Intelligence",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Mechanical Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Electrical Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     },
+     {
+      "name": "Ph.D. in Civil Engineering",
+      "institution": "Nazarbayev University",
+      "detail": "School of Engineering; taught in English",
+      "source_text": "Programs A-Z, School of Engineering",
+      "url": "https://nu.edu.kz/admissions/programs/"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": "https://nu.edu.kz/admissions/programs/",
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Tuition fee",
+    "conditions": "Without a scholarship tuition is USD 16,000 per year for master's and USD 23,500 per year for doctoral study (2025/2026 figures)."
+   },
+   {
+    "type": "insurance",
+    "coverage": "covered",
+    "limit_text": "Basic medical insurance",
+    "conditions": null
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "Monthly stipend, the same for all students whatever their citizenship: master's 200,000 tenge, PhD 240,000 tenge (FAQ figures)",
+    "conditions": "Another FAQ on the same site gives 218,750 tenge for master's and 262,500 tenge for PhD; the pages do not explain the difference. Confirm the current amount with the university."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "unknown",
+    "limit_text": "The pages say accommodation is guaranteed for international students; a dormitory is estimated at about USD 55 a month",
+    "conditions": "The scholarship description does not list accommodation as covered."
+   },
+   {
+    "type": "travel",
+    "coverage": "unknown",
+    "limit_text": "Travel is not listed as covered",
+    "conditions": null
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "transcript",
+    "text": "Academic transcripts (final-year students may send the current transcript, with full documents required later).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "reference",
+    "text": "Letters of recommendation. Referees receive an automatic e-mail request after you submit the form. The number depends on the programme (usually two; PhD letters from the last 12 months or two years depending on school).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "language_certificate",
+    "text": "Proof of English proficiency: IELTS or TOEFL (valid at submission, two years; sent by the test centre to the university and also uploaded as a scan with its certificate number). Master's: IELTS 6.0 overall, writing 6.0, other parts 5.5. PhD: IELTS 6.5 overall, no part below 6.0 (Eurasian Studies 7.0).",
+    "conditional_rule": "Not needed for applicants who studied in English or hold a degree from an English-speaking country, at the committee's discretion",
+    "mandatory": true
+   },
+   {
+    "document_type": "passport",
+    "text": "Copy of passport (national ID for citizens of Kazakhstan).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "statement",
+    "text": "Statement of purpose or personal statement, for programmes that require it (for example Political Science and International Relations, Eurasian Studies, Medicine, Engineering Management, all PhD schools).",
+    "conditional_rule": "Depends on the programme",
+    "mandatory": false
+   },
+   {
+    "document_type": "cv",
+    "text": "CV of up to 1 page.",
+    "conditional_rule": "PhD applicants",
+    "mandatory": true
+   },
+   {
+    "document_type": "research_proposal",
+    "text": "Research proposal, writing sample or project proposal.",
+    "conditional_rule": "Some PhD programmes (for example Eurasian Studies, Business, Public Policy, Education, Medicine)",
+    "mandatory": false
+   },
+   {
+    "document_type": "other",
+    "text": "GRE, GMAT or ALEKS result.",
+    "conditional_rule": "Required for MBA, MSc Finance, Business PhD and Engineering Management unless waived; optional or recommended elsewhere",
+    "mandatory": false
+   },
+   {
+    "document_type": "photo",
+    "text": "One 3x4 photo uploaded to the online profile.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "medical",
+    "text": "Medical certificate.",
+    "conditional_rule": "School of Medicine PhD applicants only (equivalent form for international applicants)",
+    "mandatory": false
+   },
+   {
+    "document_type": "other",
+    "text": "Non-refundable application fee of 15,000 tenge paid online (tripled in the last two weeks before the first approved deadline and during an extension); a refundable guarantee fee of 100,000 tenge is paid by graduate admits.",
+    "conditional_rule": null,
+    "mandatory": true
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Create an account and choose your programme",
+    "detail": "Register on the university admissions portal, choose Master's or PhD, and confirm your e-mail. You may apply to at most two master's or PhD programmes and must choose one if admitted to both. There is no separate scholarship application: all candidates are considered by default.",
+    "source_url": "https://nu.edu.kz/admissions/how-to-apply/masters/regular-admissions-masters/"
+   },
+   {
+    "phase": "apply",
+    "title": "Complete the form and upload documents",
+    "detail": "Fill in the application form with the data consent, upload the documents and a 3x4 photo, then pay the 15,000 tenge application fee online and submit. Changes are not possible after submission. Recommendation letters are requested from your referees automatically by e-mail.",
+    "source_url": "https://nu.edu.kz/admissions/how-to-apply/masters/regular-admissions-masters/"
+   },
+   {
+    "phase": "apply",
+    "title": "Send English test results and any GRE or GMAT",
+    "detail": "Have the test centre send IELTS or TOEFL results electronically to the university (allow at least 7 to 10 working days), and upload a scan with the certificate number. Results arriving after the deadline are not considered. Deadlines for 2027-2028 were shown as to be announced.",
+    "source_url": "https://nu.edu.kz/admissions/how-to-apply/masters/regular-admissions-masters/"
+   },
+   {
+    "phase": "selection",
+    "title": "Committee review and shortlisting",
+    "detail": "The admissions committee of each school reviews the full package (motivation, transcripts, recommendations) and shortlists eligible candidates for interview. Each committee has its own evaluation method; it looks at academic skills, competitiveness, motivation and likely contribution to the university.",
+    "source_url": "https://nu.edu.kz/admissions/how-to-apply/doctoral_programs/regular-admissions-phd/"
+   },
+   {
+    "phase": "selection",
+    "title": "Interview in English",
+    "detail": "Shortlisted candidates are interviewed by the admissions committee by video call or face to face. PhD interviews last at least 15 minutes and are held in English. The committee recommends scholarship holders from the candidates it admits.",
+    "source_url": "https://nu.edu.kz/admissions/international-admission/"
+   },
+   {
+    "phase": "selection",
+    "title": "Notification of results",
+    "detail": "Selected candidates are told by e-mail and can find the offer letter in their personal account.",
+    "source_url": "https://nu.edu.kz/admissions/international-admission/"
+   },
+   {
+    "phase": "after_award",
+    "title": "Accept the offer and complete enrolment steps",
+    "detail": "Admission requires completing orientation week and signing a contract with the school. Graduate admits pay a refundable guarantee fee of 100,000 tenge, returned in the second semester after signing the education services agreement, attending orientation and finishing the first semester in good standing. International students need authorisation to study (a study visa); the visa steps were not readable on the pages read.",
+    "source_url": "https://nu.edu.kz/other/frequently-asked-questions/"
+   }
+  ],
+  "not_stated": [
+   "Number of Abay Kunanbayev scholarships awarded",
+   "Whether undergraduate students can receive it (the international admission page does not name levels; the undergraduate admissions page does not mention it)",
+   "How many years the scholarship is held and the conditions for keeping it (GPA, progress)",
+   "Whether accommodation and travel are covered by the scholarship",
+   "A scholarship-specific deadline (2027-2028 master's and PhD deadlines are shown as to be announced)",
+   "Any minimum grade or country list for the scholarship itself",
+   "Obligations after graduation for international scholarship holders"
+  ],
+  "fetch_problems": [
+   "Several nu.edu.kz pages were returned truncated by the page reader (master's regular admissions, master's financial aid page), so the Tuition fees section of the master's page and the master's financial aid page text could not be read in full.",
+   "The Visa and Documents page is only an overview; the Study Visa Requirements and Accommodation sub-pages were not opened."
+  ],
+  "notes": [
+   "Stipend figures in the university FAQ conflict (master's 200,000 vs 218,750 tenge; PhD 240,000 vs 262,500 tenge). The file gives the first set and flags the second.",
+   "The master's regular admissions page gives IELTS 6.0; a web search snippet suggested the university's separate master's admission policy document says 6.5. That document was not opened, so check the programme page.",
+   "NU also offers citizenship-based partial scholarships covering 50% to 90% of tuition, and 200 PhD scholarships for its 15th anniversary; these are separate from the Abay scholarship and not described here beyond this note.",
+   "Stored teaching language 'English' is confirmed by the FAQ.",
+   "Master's level confirmation is carried over from stored data (the master's page text read was truncated); the PhD page and the FAQ were read directly."
+  ]
+ }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "external_key": "us-humphrey-fellowship-2027",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {"url": "https://www.humphreyfellowship.org/how-to-apply/", "publisher": "Hubert H. Humphrey Fellowship Program (IIE, for the U.S. Department of State)", "publisher_type": "funder", "note": "Overview of the application section, pre-academic programme, links to sub-pages"},
+      {"url": "https://www.humphreyfellowship.org/how-to-apply/eligibility/", "publisher": "Hubert H. Humphrey Fellowship Program (IIE)", "publisher_type": "funder", "note": "Eligibility, documents, selection route"},
+      {"url": "https://www.humphreyfellowship.org/how-to-apply/frequently-asked-questions/", "publisher": "Hubert H. Humphrey Fellowship Program (IIE)", "publisher_type": "funder", "note": "Deadlines, English tests, prior US experience, benefits, placement, family"},
+      {"url": "https://www.humphreyfellowship.org/how-to-apply/fellowship-components/", "publisher": "Hubert H. Humphrey Fellowship Program (IIE)", "publisher_type": "funder", "note": "Programme components"},
+      {"url": "https://www.humphreyfellowship.org/our-network/host-universities/", "publisher": "Hubert H. Humphrey Fellowship Program (IIE)", "publisher_type": "funder", "note": "Host universities and impact areas, group size"},
+      {"url": "https://www.humphreyfellowship.org/how-to-apply/u-s-embassies-commissions/", "publisher": "Hubert H. Humphrey Fellowship Program (IIE)", "publisher_type": "funder", "note": "Country list (148 entries) and who runs the application in each country"},
+      {"url": "https://www.humphreyfellowship.org/program-overview/", "publisher": "Hubert H. Humphrey Fellowship Program (IIE)", "publisher_type": "funder", "note": "Programme background and funding"},
+      {"url": "https://www.humphreyfellowship.org/program-overview/fields-of-study/", "publisher": "Hubert H. Humphrey Fellowship Program (IIE)", "publisher_type": "funder", "note": "Six fields of study"}
+    ],
+    "summary": "The Hubert H. Humphrey Fellowship is a ten-month, non-degree programme in the United States for mid-career professionals who already show leadership and a record of public service. It is a Fulbright exchange funded by the U.S. Department of State and run by the Institute of International Education (IIE). Fellows join a group of 13 to 15 colleagues at one of seven host universities and also do a six-week professional affiliation and leadership events. Candidates apply through the U.S. Embassy or Fulbright Commission in their own country.",
+    "eligibility_notes": "You must be a citizen of a country on the programme's eligible list. The programme site lists 148 countries, grouped by region, and each country's embassy or Fulbright Commission handles applications.\n\nYou must hold an undergraduate (first university) degree and have at least five full-time years of professional experience. Candidates with only part-time experience may not be eligible.\n\nYou need to show leadership qualities and a record of public service in your community, and be able to make full use of a self-defined, non-degree study programme at a leading U.S. university.\n\nYou need limited experience in the United States. Earlier time in the U.S. is not an automatic bar: you may apply if you spent no more than three years there and have been back home, working in a professionally responsible job, for at least four years.\n\nYou must show English ability. If you do not meet the TOEFL standard, ask your embassy or commission about your eligibility. The site says the IELTS and the Duolingo English Test can be used by all candidates.\n\nThe programme is not a degree course. Participants may take academic classes at the host university but receive no degree. Past participants can generally reapply; check the guidelines with your embassy or commission.",
+    "age_experience_notes": "At least five years of full-time professional experience; part-time experience alone may not qualify. No age limit is stated. Prior U.S. time must be three years or less, and you must have been back home in a professional-level job for at least four years.",
+    "funding_summary": "For the ten-month fellowship the programme covers tuition and fees at the assigned host university, a maintenance allowance that includes a one-time settling-in allowance, accident and sickness coverage, a book allowance, a one-time computer subsidy, international air travel to and from the U.S. plus domestic travel to required programme events, and a professional development allowance for field trips, professional visits and conferences. No extra maintenance allowance is paid for family members. Amounts are not stated on the pages read.",
+    "programmes_note": "The fellowship is non-degree professional enrichment with no set degree or diploma requirements, built around five components: an academic enrichment placement with a cohort at a host university, the Humphrey Seminar (a required course where each fellow sets personal goals and plans, with U.S. society, networking and leadership development), a six-week Professional Affiliation with a U.S. organisation, a Global Leadership Forum, and professional development workshops, visits and events with policymakers and scholars. The programme site names six fields of study: Communications and Journalism; Law and Governance; Natural Resources Policy; Public and Economic Policy; Public Health Policy and Management; Technology Policy and Management. Fellows cannot choose their own university.",
+    "institutions_note": "Seven host universities each take a group of 13 to 15 international fellows in one impact area (list under levels). Fellows are assigned to a host according to their area of interest and professional field; they cannot choose. IIE selects hosts in a competition (request for proposals each summer, five-year cycle by field), so the list can change between years. The Embassy Public Affairs Section or Binational Fulbright Commission in your country runs the nomination (Fulbright Commissions in 28 countries, embassies elsewhere).",
+    "levels": [
+      {
+        "code": "diploma",
+        "confirmed": false,
+        "summary": {
+          "detail": "Ten-month non-degree fellowship; the programme says it carries no specific degree or diploma requirements, so no formal diploma is awarded on the pages read. Fellows start in the U.S. between August and September. A pre-academic programme of eight weeks (intensive English and professional training) is described on the application page. Entry requirement: an undergraduate degree plus at least five years of full-time professional experience. Teaching language: English.",
+          "source_text": "non-degree, ten-month programme for mid-career professionals",
+          "url": "https://www.humphreyfellowship.org/how-to-apply/eligibility/"
+        },
+        "programmes": [
+          {"name": "Law and Human Rights", "institution": "American University", "detail": "Non-degree cohort programme; group of 13-15 fellows", "source_text": "American University: Law & Human Rights", "url": "https://www.humphreyfellowship.org/our-network/host-universities/"},
+          {"name": "Communication and Journalism", "institution": "Arizona State University", "detail": "Non-degree cohort programme; group of 13-15 fellows", "source_text": "Arizona State University: Communication & Journalism", "url": "https://www.humphreyfellowship.org/our-network/host-universities/"},
+          {"name": "Public Health Policy and Management", "institution": "Emory University", "detail": "Non-degree cohort programme; group of 13-15 fellows", "source_text": "Emory University: Public Health Policy and Management", "url": "https://www.humphreyfellowship.org/our-network/host-universities/"},
+          {"name": "Urban Planning", "institution": "Massachusetts Institute of Technology", "detail": "Non-degree cohort programme; group of 13-15 fellows", "source_text": "Massachusetts Institute of Technology: Urban Planning", "url": "https://www.humphreyfellowship.org/our-network/host-universities/"},
+          {"name": "Public Policy", "institution": "Syracuse University", "detail": "Non-degree cohort programme; group of 13-15 fellows", "source_text": "Syracuse University: Public Policy", "url": "https://www.humphreyfellowship.org/our-network/host-universities/"},
+          {"name": "Natural Resources, Sustainability, and Environmental Policy", "institution": "University of California, Davis", "detail": "Non-degree cohort programme; group of 13-15 fellows", "source_text": "University of California, Davis: Natural Resources, Sustainability, and Environmental Policy", "url": "https://www.humphreyfellowship.org/our-network/host-universities/"},
+          {"name": "Public Policy and Human Rights", "institution": "University of Minnesota", "detail": "Non-degree cohort programme; group of 13-15 fellows", "source_text": "University of Minnesota: Public Policy & Human Rights", "url": "https://www.humphreyfellowship.org/our-network/host-universities/"}
+        ]
+      }
+    ],
+    "levels_not_offered": ["bachelor", "master", "doctorate"],
+    "benefits": [
+      {"type": "tuition", "coverage": "covered", "limit_text": "Tuition and fees at the assigned host university", "conditions": "The programme is non-degree; fellows may take academic courses at the host university but receive no degree."},
+      {"type": "living_allowance", "coverage": "covered", "limit_text": "Maintenance (living) allowance, including a one-time settling-in allowance; amounts not stated", "conditions": "No additional maintenance allowance is paid for family members."},
+      {"type": "insurance", "coverage": "covered", "limit_text": "Accident and sickness coverage", "conditions": "For the fellow. Dependents must have insurance that meets U.S. State Department requirements before J-2 visas can be approved."},
+      {"type": "travel", "coverage": "covered", "limit_text": "Air travel: international travel to and from the U.S. and domestic travel to required programme events", "conditions": ""},
+      {"type": "other", "coverage": "covered", "limit_text": "Book allowance", "conditions": ""},
+      {"type": "other", "coverage": "covered", "limit_text": "One-time computer subsidy", "conditions": ""},
+      {"type": "other", "coverage": "covered", "limit_text": "Professional development allowance for activities such as field trips, professional visits and conferences", "conditions": ""},
+      {"type": "other", "coverage": "not_covered", "limit_text": "No additional maintenance allowance for dependents", "conditions": "Fellows may apply for family members to join them after arrival. Before J-2 visas are approved, fellows must show proof of financial support, insurance meeting U.S. State Department requirements and child care plans. Not all countries allow dependents; check with your embassy or commission."}
+    ],
+    "requirements": [
+      {"document_type": "statement", "text": "Complete answers to every application question. The essays must be in English and must thoroughly answer each prompt.", "conditional_rule": "", "mandatory": true},
+      {"document_type": "reference", "text": "Two letters of recommendation in English, one of them from your current employer.", "conditional_rule": "", "mandatory": true},
+      {"document_type": "transcript", "text": "Official English transcripts listing the courses taken and grades received.", "conditional_rule": "", "mandatory": true},
+      {"document_type": "degree_certificate", "text": "Diploma upload only if the transcript does not show that the degree was obtained.", "conditional_rule": "only if the transcript does not prove the degree was awarded", "mandatory": false},
+      {"document_type": "language_certificate", "text": "Proof of English ability. The FAQ says the IELTS and the Duolingo English Test can be used by all candidates; candidates who do not meet the TOEFL standard should ask the embassy or commission.", "conditional_rule": "", "mandatory": true}
+    ],
+    "application_steps": [
+      {"phase": "apply", "title": "Contact your U.S. Embassy or Fulbright Commission", "detail": "Applications are made only through the U.S. Embassy (Public Affairs Section) or the Binational Fulbright Commission in your own country, which supplies the application and sets its own deadline. Deadlines vary by country. Nominations reach IIE in Washington, D.C. by mid-September, so the national deadline is earlier.", "source_url": "https://www.humphreyfellowship.org/how-to-apply/frequently-asked-questions/"},
+      {"phase": "apply", "title": "Complete the application and upload your documents", "detail": "Answer every question in English and address each essay prompt fully. Provide two English recommendation letters (one from your current employer), official English transcripts, and proof of English ability (IELTS, Duolingo or TOEFL). Upload a diploma only if the transcript does not show the degree.", "source_url": "https://www.humphreyfellowship.org/how-to-apply/eligibility/"},
+      {"phase": "selection", "title": "National selection by the embassy or commission", "detail": "National selection comes first. The embassy or Fulbright Commission chooses and nominates candidates, and nominations go to IIE in Washington, D.C. by mid-September.", "source_url": "https://www.humphreyfellowship.org/how-to-apply/eligibility/"},
+      {"phase": "selection", "title": "U.S. review, final approval and notification", "detail": "Independent review committees in the United States then review the nominations. The J. William Fulbright Foreign Scholarship Board gives final approval. The embassy or commission tells candidates their status; selections are announced in March of the following year.", "source_url": "https://www.humphreyfellowship.org/how-to-apply/eligibility/"},
+      {"phase": "after_award", "title": "Placement at a host university", "detail": "Fellows cannot choose their university. They are assigned in groups of 13 to 15 to one of seven host universities according to their area of interest and professional field. Fellows begin in the U.S. between August and September.", "source_url": "https://www.humphreyfellowship.org/how-to-apply/frequently-asked-questions/"},
+      {"phase": "after_award", "title": "Programme year: pre-academic, host university, affiliation, forum", "detail": "An eight-week pre-academic programme of intensive English and professional training prepares fellows for the year. During the ten months fellows join the Humphrey Seminar, academic enrichment at the host university, a six-week Professional Affiliation with a U.S. organisation, the Global Leadership Forum and professional development events. The schedule is demanding and does not follow a regular graduate-student timetable.", "source_url": "https://www.humphreyfellowship.org/how-to-apply/fellowship-components/"},
+      {"phase": "after_award", "title": "Bringing family members", "detail": "Fellows may apply for family members to join them after arrival. No extra maintenance allowance is paid. Before J-2 visas are approved, fellows must show financial support, suitable insurance and child care plans. Some countries do not allow dependents.", "source_url": "https://www.humphreyfellowship.org/how-to-apply/frequently-asked-questions/"}
+    ],
+    "not_stated": [
+      "The amount of the maintenance allowance, settling-in allowance, book allowance, computer subsidy or professional development allowance",
+      "Any age limit",
+      "The minimum TOEFL score (the FAQ only refers to 'the TOEFL standard')",
+      "The country-specific closing dates (they are set by each embassy or commission)",
+      "Interview or test stages, and selection criteria weights",
+      "Return-home obligations, any visa home-residency rule, or reporting duties after the fellowship (not on the pages read)",
+      "Any application fee"
+    ],
+    "fetch_problems": [],
+    "notes": [
+      "The programme overview page gives two different figures for the number of U.S. institutions ('more than 12' and 'more than 7') and two alumni counts (about 6,450 and over 7,000); these were not used.",
+      "The host universities page notes a five-year competition schedule listing fields that differ from the current seven hosts, and the fields-of-study page lists six fields (e.g. Technology Policy and Management) that do not map one-to-one to the seven current host impact areas. Both are given as the source states them.",
+      "The country list page contains small errors of its own (for example Cyprus is placed under the Western Hemisphere). The 148-country list already stored was not re-copied here.",
+      "Level 'diploma' is the stored label for a non-degree fellowship; the official pages call it non-degree and do not mention a diploma, so it is marked unconfirmed.",
+      "Stored text that is unchanged and carried over from stored data: the nationality list (148 entries), which matches the entry count on the official page."
+    ]
+  }
+]

@@ -27,7 +27,7 @@ class ScholarshipController extends Controller
             ->whereIn('publication_state', [PublicationState::Published->value, PublicationState::Archived->value])
             ->whereNotNull('published_at')
             ->with(['programme.funder', 'programme.universities', 'routes.university', 'destinations', 'nationalities', 'excludedNationalities', 'degreeLevels', 'subjects',
-                'universities', 'benefits', 'requirements', 'criteria', 'currentDeadlines', 'evidence', 'verifier'])
+                'universities', 'benefits', 'requirements', 'applicationSteps', 'criteria', 'currentDeadlines', 'evidence', 'verifier'])
             ->first();
 
         if (! $cycle) { // an address that was changed: send people (and search engines) to the new one for good

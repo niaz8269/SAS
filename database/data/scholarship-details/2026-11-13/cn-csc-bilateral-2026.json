@@ -1,0 +1,814 @@
+[
+  {
+    "external_key": "cn-csc-bilateral-2026",
+    "checked_on": "2026-11-13",
+    "sources": [
+      {
+        "url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm",
+        "publisher": "Sun Yat-sen University",
+        "publisher_type": "university",
+        "note": "2026 Bilateral Program guide: coverage, eligibility, documents, steps, interview, results, obligations"
+      },
+      {
+        "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf",
+        "publisher": "Sun Yat-sen University",
+        "publisher_type": "university",
+        "note": "List of majors for the 2026 Bilateral Program with language and length"
+      },
+      {
+        "url": "https://admission.blcu.edu.cn/en/2025/1106/c1146a3007/page.htm",
+        "publisher": "Beijing Language and Culture University",
+        "publisher_type": "university",
+        "note": "Type A guide: coverage with monthly rates, documents, steps, review and obligations"
+      },
+      {
+        "url": "https://cie.jlu.edu.cn/info/1079/3602.htm",
+        "publisher": "Jilin University",
+        "publisher_type": "university",
+        "note": "Bilateral Type A guide: preparatory year, accommodation subsidy, CSC checks, arrival"
+      },
+      {
+        "url": "https://montreal.china-consulate.gov.cn/jy/202611/t20261105_12053500.htm",
+        "publisher": "Consulate General of the PRC in Montreal",
+        "publisher_type": "embassy",
+        "note": "Example of a dispatching authority: Type A online steps and document list"
+      },
+      {
+        "url": "https://pl.china-embassy.gov.cn/pol/ywsz/jyhz/202510/t20251024_11740127.htm",
+        "publisher": "Embassy of the PRC in Poland",
+        "publisher_type": "embassy",
+        "note": "Example of a dispatching authority: documents and interview selection"
+      },
+      {
+        "url": "https://id.china-embassy.gov.cn/eng/sgdt/202510/t20251027_11741674.htm",
+        "publisher": "Embassy of the PRC in Indonesia",
+        "publisher_type": "embassy",
+        "note": "Example of a quota channel: review stages, results timing, restrictions, travel not covered"
+      },
+      {
+        "url": "https://us.china-embassy.gov.cn/eng/lxfw/studyinchina/chinesegovernmentscholarship/202501/t20250104_11527005.htm",
+        "publisher": "Embassy of the PRC in the United States",
+        "publisher_type": "embassy",
+        "note": "Type A only route, interview, funding limited to the academic year"
+      },
+      {
+        "url": "https://yz.tsinghua.edu.cn/en/info/1027/1117.htm",
+        "publisher": "Tsinghua University",
+        "publisher_type": "university",
+        "note": "Definition of Type A and annual review"
+      }
+    ],
+    "summary": "The Bilateral Program (Type A) of the Chinese Government Scholarship is for citizens of other countries who want to study at a Chinese university for a degree (bachelor's, master's, doctoral) or as a general or senior scholar. It is run by the China Scholarship Council, and candidates apply through the authority of their home country, usually the Chinese embassy or consulate, and in the CSC online application system. The award is described as covering tuition, accommodation, living expenses and medical insurance, each as a separate component.",
+    "eligibility_notes": "Applicants must hold a valid foreign passport, not be a Chinese citizen and be in good physical and mental health (able to pass the visa or residence-permit physical examination). They should be academically strong, of good moral character, law-abiding and have no record of school discipline problems, security penalties or crimes. Applicants from mainland China, Hong Kong, Macao or Taiwan who later took foreign nationality need extra documents, including proof of giving up the earlier status.\n\nLevel and age (generally): bachelor's - senior high school or equivalent, under 25; master's - bachelor's degree or equivalent, under 35; doctoral - master's degree or equivalent, under 40; general scholar - high school diploma or higher, under 45; senior scholar - master's degree or associate professor or above, under 50.\n\nLanguage: for Chinese-taught general scholar (except Chinese-language majors) and senior scholar programmes, HSK level 3; for Chinese-taught master's and doctoral programmes, HSK level 4 (one university also accepts a certificate of Chinese-medium instruction). Programmes taught in English follow the university's rule; Sun Yat-sen University states TOEFL iBT at least 79 (no section below 15) or IELTS Academic at least 6.5 (no part below 5.5), or an English-medium-instruction certificate for non-native speakers. Bachelor's applicants must take the China Scholastic Competency Assessment (CSCA) and upload the score report.\n\nHow to apply: applicants cannot apply to the China Scholarship Council directly. They apply to the home-country authority (usually the Chinese embassy or consulate) for a recommendation, complete the online Chinese Government Scholarship application as Type A and apply to the university. The Ministry-approved list of majors applies: Sun Yat-sen University states that applications for majors outside its approved list are invalid. Which countries have a Type A quota and how many places each has is decided by the authorities and is not on the university pages.\n\nRecipients cannot hold another Chinese government scholarship, or a scholarship from the admitting university, at the same time (one-off awards excepted). One embassy notice says hiding funding status leads to disqualification and a three-year ban. One embassy notice states that the award covers only the academic year named in its call and that the host university must fund study beyond it.",
+    "age_experience_notes": "Generally under 25 (bachelor's), 35 (master's), 40 (doctoral), 45 (general scholar) and 50 (senior scholar). No work experience requirement is stated for degree levels; senior scholars need a master's degree or associate professor post or above.",
+    "funding_summary": "Components named by the university guides: tuition; a free university dormitory or an accommodation subsidy; a monthly stipend; and comprehensive medical insurance. A Beijing university guide gives stipend rates of CNY 2,500 (bachelor's), CNY 3,000 (master's and general scholar) and CNY 3,500 (doctoral and senior scholar) a month and insurance of CNY 800 per person per year. Sun Yat-sen University says amounts follow the CSC announcement for the year. Funding covers one year of Chinese preparatory study, where a programme needs it, plus the standard length of the major. International travel is not covered (stated in an embassy notice).",
+    "programmes_note": "Each university offers scholarship holders only majors on its own approved list for this programme. Sun Yat-sen University's 2026 list has bachelor's (about 90 rows), master's (over 110 rows) and doctoral (over 100 rows) majors; nearly all are taught in Chinese, with a few English-taught master's and doctoral majors. The first 25 rows named per level are listed here and the full list is in the catalogue link. Jilin University gives standard lengths: bachelor's 4 or 5 years, master's 2 or 3 years, doctoral 4 years, advanced students 0.5 or 1 year, with Chinese tutoring students 1 year; its list of majors is in an attachment that could not be read.",
+    "institutions_note": "Many Chinese universities take part and each publishes its own guide and list of majors. In the CSC application, applicants name target universities (Jilin University asks to be named as first choice); the CSC checks eligibility and academic performance and may adjust the university, major, award category or duration, and only candidates recommended by the home-country authority are considered. The university also decides admission from the application and its capacity. Universities whose Type A guides were read: Sun Yat-sen University, Beijing Language and Culture University, Jilin University. This is not a complete list.",
+    "levels": [
+      {
+        "code": "bachelor",
+        "confirmed": true,
+        "summary": {
+          "detail": "Senior high school graduates under 25. All bachelor's applicants take the CSCA. At Sun Yat-sen University the majors are almost all Chinese-taught, mostly 4 years (some 5). At Jilin University undergraduate study is 4 or 5 years in Chinese. Where a Chinese-taught degree needs it, funding includes a Chinese preparatory year; Jilin University says applicants who do not pass the CSCA must do preparatory study.",
+          "source_text": "Undergraduate: High school graduate under 25 (BLCU wording)",
+          "url": "https://admission.blcu.edu.cn/en/2025/1106/c1146a3007/page.htm"
+        },
+        "programmes": [
+          {
+            "name": "Chemical Engineering and Technics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Biomedical Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Environmental Science",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Electronic and Information Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Marine Engineering and Technology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Communication Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Mechanical Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Materials Science and Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Polymer Materials and Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Software Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Computer Science and Technology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Politics and Administration",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Sociology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Chinese Language",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Journalism",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "German",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 5 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Japanese",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 5 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Korean",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Preventive Medicine",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Clinical Medicine",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Pharmacy",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Nursing",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Philosophy",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "International Politics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Law",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          }
+        ]
+      },
+      {
+        "code": "master",
+        "confirmed": true,
+        "summary": {
+          "detail": "Bachelor's degree holders under 35. Sun Yat-sen University majors are mostly Chinese-taught, 2 to 3 years, with a few English-taught majors (Materials Engineering, Microbiology, Civil Engineering, Computer Class). Chinese-taught master's programmes need HSK level 4. A study plan of about 3,000 words is asked for at Sun Yat-sen University.",
+          "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+          "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+        },
+        "programmes": [
+          {
+            "name": "Civil, Water and Ocean Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Smart Agriculture",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Computer Class",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in English; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Intelligence Transportation",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Flexible Electronics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Nuclear Medicine",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 2 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Chemical Engineering and Technology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Mechanical Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 2 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Nuclear Science and Technology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Hydraulic Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Comparative Politics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Finance",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Chinese Language and Literature",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Clinics of Integration of Chinese and Western Medicine",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Paediatrics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Internal Medicine",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Clinical Diagnostics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Philosophy",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "International Politics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "International Relations",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Child, Adolescent and Maternal Health",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Marxism Theory",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Law",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Integrated Circuit Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Materials Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in English; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          }
+        ]
+      },
+      {
+        "code": "doctorate",
+        "confirmed": true,
+        "summary": {
+          "detail": "Master's degree holders under 40. Sun Yat-sen University majors are mostly Chinese-taught, 3 to 4 years, with a few English-taught majors (Nuclear Science and Technology, Civil Engineering). A study plan of about 6,000 words signed by the prospective Chinese advisor is asked for at Sun Yat-sen University; Beijing Language and Culture University asks for a supervisor's pre-acceptance letter on its template.",
+          "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+          "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+        },
+        "programmes": [
+          {
+            "name": "International Chinese Language Education",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Nuclear Science and Technology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in English; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Hydraulic Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Chinese Language and Literature",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Clinical Stomatology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Epidemiology and Health Statistics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Anaesthesiology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Rehabilitation",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Physiotherapy",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Medicine Image Science and Nuclear Medicine",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Clinics of Integration of Chinese and Western Medicine",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Paediatrics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Internal Medicine",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Clinical Diagnostics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Philosophy",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "International Politics",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "International Relations",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Child, Adolescent and Maternal Health",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Marxism Theory",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Law",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Integrated Circuit Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Materials Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Environmental Engineering",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Biology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 3 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          },
+          {
+            "name": "Cell Biology",
+            "institution": "Sun Yat-sen University",
+            "detail": "Taught in Chinese; 4 years",
+            "source_text": "List of Majors for CSC Bilateral Program in 2026 SYSU",
+            "url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf"
+          }
+        ]
+      },
+      {
+        "code": "diploma",
+        "confirmed": true,
+        "summary": {
+          "detail": "Non-degree categories under the programme: general scholar (high school diploma or higher, under 45) and senior scholar (master's degree or associate professor or above, under 50). Jilin University gives the length as half a year or one year, mostly in Chinese with some English-taught classes.",
+          "source_text": "general scholar and senior scholar categories",
+          "url": "https://admission.blcu.edu.cn/en/2025/1106/c1146a3007/page.htm"
+        },
+        "programmes": []
+      }
+    ],
+    "levels_not_offered": [],
+    "catalogue_url": "https://iso.sysu.edu.cn/docs/2025-12/20251230103442768709.pdf",
+    "benefits": [
+      {
+        "type": "tuition",
+        "coverage": "covered",
+        "limit_text": "Tuition fees covered; no amount is stated",
+        "conditions": "Also covers the one-year Chinese preparatory course and the programme of study where a preparatory year is needed."
+      },
+      {
+        "type": "accommodation",
+        "coverage": "covered",
+        "limit_text": "Free university dormitory, or an accommodation subsidy",
+        "conditions": "Jilin University states the subsidy as CNY 700 per person per month (bachelor's and master's) and CNY 1,000 (doctoral)."
+      },
+      {
+        "type": "living_allowance",
+        "coverage": "covered",
+        "limit_text": "CNY 2,500 per month (bachelor's); CNY 3,000 (master's, general scholar); CNY 3,500 (doctoral, senior scholar)",
+        "conditions": "Rates from the Beijing Language and Culture University guide; Sun Yat-sen University and Jilin University do not state the stipend amount and say it follows the CSC announcement."
+      },
+      {
+        "type": "insurance",
+        "coverage": "covered",
+        "limit_text": "Comprehensive medical insurance; CNY 800 per person per year (CNY 400 for programmes under six months) in one guide",
+        "conditions": "Amount stated by the Beijing university, not by the others."
+      },
+      {
+        "type": "travel",
+        "coverage": "not_covered",
+        "limit_text": "International travel expenses are not covered",
+        "conditions": "Stated in an embassy notice for a Type A national quota."
+      }
+    ],
+    "requirements": [
+      {
+        "document_type": "other",
+        "text": "Online Chinese Government Scholarship application form (Type A) completed in the CSC system, plus the application form of the university where it has its own system (for example Sun Yat-sen University asks for a printed, signed information form with commitment letters and financial proof).",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "passport",
+        "text": "Passport photo page, clear scan. Validity asked: at least 12 months from the expected start date (Beijing Language and Culture University and the embassy notices) or until at least 1 December 2026 (Sun Yat-sen University). Applicants already in mainland China add visa or residence permit and entry stamp pages.",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "degree_certificate",
+        "text": "Notarized highest degree or school certificate. Current students give a certificate of expected graduation or student status and must show the final certificate before registration. Foreign degrees may be verified through the national degree verification centre named by the university.",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "transcript",
+        "text": "Academic transcripts, stamped by the institution, for the qualifications needed for the level; bachelor's applicants may give high school transcripts or SAT, ACT, A-Level or IB results (Sun Yat-sen University). Notarized translation if not in Chinese or English.",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "language_certificate",
+        "text": "HSK report (or certificate of Chinese-medium instruction) for Chinese-taught programmes; for English-taught programmes TOEFL iBT at least 79 or IELTS Academic at least 6.5 at Sun Yat-sen University, or an English-medium-instruction certificate.",
+        "conditional_rule": "depends on the language of teaching",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "CSCA score report.",
+        "conditional_rule": "bachelor's applicants",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Pre-admission document or invitation letter from the university (required by Beijing Language and Culture University for postgraduate, doctoral and scholar applicants, where it gives priority in awards).",
+        "conditional_rule": "postgraduate, doctoral and scholar applicants at some universities",
+        "mandatory": true
+      },
+      {
+        "document_type": "reference",
+        "text": "Two recommendation letters: school principal and one teacher for bachelor's; professors, associate professors or equivalent experts for master's, doctoral and senior scholar. Beijing Language and Culture University asks only one teacher's letter for bachelor's.",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "research_proposal",
+        "text": "Study plan or research plan in Chinese or English. Word counts: national notices ask at least 200 (bachelor's), 500 (non-degree) and 800 (postgraduate); Beijing Language and Culture University asks 200, 500 and 1,000; Sun Yat-sen University asks about 3,000 for master's and about 6,000 for doctoral (signed by the prospective advisor).",
+        "conditional_rule": "per level",
+        "mandatory": true
+      },
+      {
+        "document_type": "medical",
+        "text": "Foreigner Physical Examination Form, fully completed, signed, stamped and with a sealed photo; valid six months. Sun Yat-sen University also asks for chest X-ray, ECG and lab reports.",
+        "conditional_rule": "stays over six months",
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Certificate of no criminal record, generally dated within six months.",
+        "conditional_rule": null,
+        "mandatory": true
+      },
+      {
+        "document_type": "other",
+        "text": "Recommendation from the home-country authority (usually the Chinese embassy or consulate) and the national notice's documents; guardian documents for applicants under 18; portfolio for art or design majors.",
+        "conditional_rule": "authority-specific; under 18; art or design",
+        "mandatory": true
+      }
+    ],
+    "application_steps": [
+      {
+        "phase": "apply",
+        "title": "Ask your home-country authority about the Type A round",
+        "detail": "Contact the dispatching authority, usually the Chinese embassy or consulate, for the deadline, quota and agency number. Applicants cannot apply to the China Scholarship Council directly. Jilin University says applications are usually accepted from early January to April, but the real deadline depends on the country.",
+        "source_url": "https://cie.jlu.edu.cn/info/1079/3602.htm"
+      },
+      {
+        "phase": "apply",
+        "title": "Choose a university and an approved major",
+        "detail": "Pick a university and a major on that university's approved list for this programme. Request a pre-admission or invitation letter where the university offers one (Sun Yat-sen University had cut-off dates in January and February 2026 for invitation-letter requests only; Beijing Language and Culture University charges no fee for this).",
+        "source_url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm"
+      },
+      {
+        "phase": "apply",
+        "title": "Take the CSCA for a bachelor's degree",
+        "detail": "Bachelor's applicants take the China Scholastic Competency Assessment and upload the score report; for September 2026 entry the sessions were 21 December 2025 and 25 January 2026.",
+        "source_url": "https://pl.china-embassy.gov.cn/pol/ywsz/jyhz/202510/t20251024_11740127.htm"
+      },
+      {
+        "phase": "apply",
+        "title": "Apply online as Type A with the agency number",
+        "detail": "In the CSC system choose Type A and enter the agency number of your embassy or consulate; the two must match. Name your target universities (Jilin University asks to be first choice) and upload the documents. Then apply in the university's system if it has one (Sun Yat-sen University has its own online application), and print, sign and upload its information form with commitment letters and financial proof.",
+        "source_url": "https://montreal.china-consulate.gov.cn/jy/202611/t20261105_12053500.htm"
+      },
+      {
+        "phase": "selection",
+        "title": "Authority recommendation and university review",
+        "detail": "The home-country authority screens applications, can interview, and passes its recommended list and documents to the CSC. Sun Yat-sen University reviews documents and invites qualified applicants to interview on overall competence and language; preliminary results show in its system 15 days after the interview.",
+        "source_url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm"
+      },
+      {
+        "phase": "selection",
+        "title": "CSC review and final decision",
+        "detail": "The CSC asks the university to check eligibility and academic performance, then decides the final list; it may change the university, major, award category or duration. The university decides admission from the application and its capacity; final admission depends on CSC expert review. The CSC tells the authority, which tells the applicant. In one national round results were available in the system around July and August.",
+        "source_url": "https://admission.blcu.edu.cn/en/2025/1106/c1146a3007/page.htm"
+      },
+      {
+        "phase": "after_award",
+        "title": "Receive admission documents and register",
+        "detail": "The CSC sends the admission letter and confirmation form (or they are downloaded from the system with the JW201 visa form). Register on the date and at the place in the admission letter; early registration is not allowed and late registration without approval means withdrawal and loss of the scholarship. Bring original documents; falsified materials end admission and are reported to the CSC.",
+        "source_url": "https://iso.sysu.edu.cn/en/application/scholarship/1420675.htm"
+      },
+      {
+        "phase": "after_award",
+        "title": "Pass the physical check and the annual review",
+        "detail": "Pass the post-admission physical examination and eligibility review; failing means the admission and scholarship are revoked. Pass the annual scholarship review or the award may be suspended or cancelled. In principle holders may not change university, major or length of study, and awards cannot be deferred if the admission period is missed.",
+        "source_url": "https://cie.jlu.edu.cn/info/1079/3602.htm"
+      }
+    ],
+    "not_stated": [
+      "Which countries have a Type A quota and how many places each has (decided by the authorities; only one embassy quota, 20 places for Indonesia, was seen).",
+      "Stipend amount at Sun Yat-sen University and Jilin University (they say it follows the CSC announcement).",
+      "Selection scoring or ranking criteria.",
+      "Whether the award can be renewed beyond the academic year named in the call.",
+      "A closing time of day for the Type A round (varies by authority and dates are loaded elsewhere).",
+      "Jilin University's list of majors (given only in an attachment that could not be read)."
+    ],
+    "fetch_problems": [
+      "The CSC Study in China application site: host name could not be resolved from the fetch tool; the China Scholarship Council main site and its Study in China portal: HTTP 412.",
+      "Beijing Language and Culture University majors list (Excel attachment) and Jilin University catalogue attachment could not be read.",
+      "About 23 bachelor's, 24 master's and 23 doctoral rows of the Sun Yat-sen list have blank major names in the readable text of the PDF and were left out."
+    ],
+    "notes": [
+      "Funding type: stored value is 'other'; the sources describe separate components and no amounts for tuition.",
+      "Programme names are copied from the Sun Yat-sen University 2026 list as the PDF shows them; some are the university's own wording (for example 'Computer Class', 'Chemical Engineering and Technics').",
+      "The embassy of the PRC in the US notice read is for the 2027/28 year and says it accepts only Type A applications; its agency number is 8401."
+    ]
+  }
+]

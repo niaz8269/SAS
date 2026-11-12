@@ -1,0 +1,624 @@
+[
+ {
+  "external_key": "bn-bdgs-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+    "publisher": "Ministry of Foreign Affairs, Brunei Darussalam",
+    "publisher_type": "government",
+    "note": "BDGS 2026/2027 call: eligibility, dates, how to apply, documents, institutions, benefits, terms"
+   },
+   {
+    "url": "https://www.mfa.gov.bn/pages/scholarship.aspx",
+    "publisher": "Ministry of Foreign Affairs, Brunei Darussalam",
+    "publisher_type": "government",
+    "note": "Scholarship list page that links the BDGS 2026/2027 application"
+   },
+   {
+    "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf",
+    "publisher": "Universiti Brunei Darussalam",
+    "publisher_type": "university",
+    "note": "UBD programmes for 2025/2026, entry requirements, durations, UBD online application"
+   },
+   {
+    "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf",
+    "publisher": "Universiti Islam Sultan Sharif Ali",
+    "publisher_type": "university",
+    "note": "UNISSA list of programmes offered for BDGS"
+   },
+   {
+    "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf",
+    "publisher": "Universiti Teknologi Brunei",
+    "publisher_type": "university",
+    "note": "UTB programme list 2024 with durations"
+   },
+   {
+    "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf",
+    "publisher": "Kolej Universiti Perguruan Ugama Seri Begawan",
+    "publisher_type": "university",
+    "note": "KUPU SB programmes and entry requirements for BDGS 2023/2024 (in Malay)"
+   }
+  ],
+  "summary": "The Government of Brunei Darussalam Scholarship for Foreign Students (BDGS) is offered by Brunei's Ministry of Foreign Affairs for the 2026/2027 session. It lets international students study a diploma, an undergraduate degree or a master's at five Bruneian institutions. The scholarship is meant mainly for students coming to study in Brunei for the first time. It covers tuition, a monthly personal allowance, a meals allowance, an annual book allowance, accommodation, insurance, and economy airfare to and from Brunei.",
+  "eligibility_notes": "The scholarship is for international students. Bruneians, Brunei permanent residents, and international students who are studying or have studied at a Brunei tertiary institution cannot apply. It is meant mainly for students studying in Brunei for the first time. Applications that are not eligible are rejected.\n\nEnglish proficiency: the call accepts one of GCE O-Level English with credit 6, IGCSE English as a second language grade C, IELTS 6.0, or TOEFL 550. UBD's own programme list also accepts Band B2 in the UBD English Proficiency Test and names grade B for IGCSE; check the rule of the institution you apply to.\n\nAcademic entry rules are set by each institution. At UBD, undergraduate entry is by A-Level points or the IB Diploma (and for Business and Digital Science an O-Level credit 6 in Mathematics); master's entry is normally a relevant bachelor's degree with Honours (second class or above), though applicants without it may be considered with relevant work experience. At KUPU SB, entry is tied to Islamic education qualifications, a qualifying and health test, and ability to read the Qur'an and write Jawi (list for 2023/2024).\n\nApplicants may be called to an interview and may sit a written test in English, Malay or Arabic, depending on the programme. Some programmes also need a medical fitness examination (UBD Health Science) or an entrance exam (some UBD Digital Science routes).",
+  "age_experience_notes": "No older than 25 for diploma and undergraduate programmes, and no older than 35 for master's programmes, on 1 July of the year the course starts. Work experience is not required by the call; UBD may admit master's applicants without an Honours degree if they have relevant experience.",
+  "funding_summary": "The scholarship pays tuition (including acceptance, examination, registration and orientation fees) for the length of the programme, economy airfare to Brunei before the course and home after it, a monthly personal allowance of BND 500, a monthly meals allowance of BND 150, a book allowance of BND 600 per year, accommodation at the residential college, comprehensive insurance, and a baggage shipment allowance on completion. Programme lengths run from about 1 year to 5 years depending on the institution and level.",
+  "programmes_note": "Each institution publishes its own list; the call links them. UBD offers six undergraduate degrees (Arts, Science, Business, Engineering, Health Science, Digital Science, each with majors) taking 8 semesters, except Applied Artificial Intelligence at 6 semesters. UBD master's programmes are by coursework (12 or 18 months) or by research (24 months); research areas include anthropology, art, English literature and linguistics, geography, history, Malay language and literature, sociology, biology, chemistry, mathematics, biotechnology, nursing, public health, pharmacy, education, Islamic studies, chemical and systems engineering, energy and materials, Asian studies and digital science fields. UNISSA lists Islamic, Shariah, law, Arabic, development, Islamic finance, halal science, Islamic media and agriculture programmes. UTB lists 26 undergraduate engineering, business, science, design and computing programmes and 12 postgraduate programmes. KUPU SB lists religious teacher education diplomas, bachelor's and master's. The Politeknik Brunei brochure was too large to open, so its diploma programmes are not listed here.",
+  "institutions_note": "Five institutions: Universiti Brunei Darussalam (UBD), Universiti Islam Sultan Sharif Ali (UNISSA), Universiti Teknologi Brunei (UTB), Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB) and Politeknik Brunei. Applicants complete the BDGS form and also apply to the institution: UBD and UTB through their own online application systems, and KUPU SB through its online admission application. The programme lists on the ministry page are for earlier years (UBD 2025/2026, UTB 2024, KUPU SB 2023/2024), so check what is open for 2026/2027.",
+  "levels": [
+   {
+    "code": "diploma",
+    "confirmed": true,
+    "summary": {
+     "detail": "The call covers diploma study. The KUPU SB list shows two Diploma Tertinggi Perguruan Ugama programmes of 3 years, taught in Malay (Arabic for Islamic courses in the Arabic education diploma). Politeknik Brunei diplomas are part of the call but its brochure was not readable. Age limit 25.",
+     "source_text": "Diploma, Undergraduate Degree and Postgraduate Master's Degree",
+     "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+    },
+    "programmes": [
+     {
+      "name": "Diploma Tertinggi Perguruan Ugama (Pendidikan Islam)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "3 years (6 semesters) full time, taught in Malay. Entry: a Diploma Perguruan Ugama or equivalent, a Sijil Pelajaran Ugama Brunei considered by the admissions committee, or an A-Level pass in Usuluddin or Shariah plus the Brunei religious primary school certificate. Candidates must read the Qur'an well, read and write Jawi, and pass a qualifying and health test. List for 2023/2024.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     },
+     {
+      "name": "Diploma Tertinggi Perguruan Ugama (Pendidikan Bahasa Arab)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "3 years full time; Islamic studies courses are taught in Arabic. Same entry rules as above.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     }
+    ]
+   },
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Undergraduate degrees at UBD (8 semesters; Applied AI 6), UNISSA, UTB (3 to 4 years) and KUPU SB (4 years). UBD entry: A-Level points (for example 160 for two passes or 200 for three) or IB Diploma 24 points, plus an English qualification. Age limit 25. The list shows 25 of the programmes; UTB has 26 undergraduate programmes and UNISSA lists more Shariah, finance and agriculture degrees, all in the institutions' lists.",
+     "source_text": "Programmes Offer for 2025-2026; UNISSA list; UTB Programmes 2024; KUPU SB list",
+     "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+    },
+    "programmes": [
+     {
+      "name": "Bachelor of Arts",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "Majors: Geography, Environment and Development Studies; History and International Studies; Sociology and Anthropology; English Studies; Malay Language and Linguistics; Malay Literature; Design and Creative Industries; Brunei Studies. 8 semesters (4 years). Entry: A-Level (160 points for two passes or 200 for three) or IB Diploma with 24 points; Brunei Studies also needs at least a C6 in Bahasa Melayu.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Bachelor of Science",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "Majors: Applied Physics; Biology; Chemistry; Mathematics; Geology. 8 semesters. Entry: A-Level (160 points for two passes or 200 for three) including at least two of Biology, Mathematics, Chemistry, Physics, Computing and Geography; or IB with 24 points.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Bachelor of Business",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "Majors: Business Administration; Economics; Accounting and Finance; Entrepreneurship. 8 semesters. Entry: O-Level credit 6 in Mathematics plus A-Level (160 points for two passes or 200 for three) or IB with 24 points.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Bachelor of Engineering",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "Concentrations: Energy Systems Engineering; Information and Communication Systems Engineering; Manufacturing Systems Engineering. 8 semesters. Entry: 260 A-Level points for three passes including Mathematics and Physics or Chemistry, or IB with 30 points; interview required.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Bachelor of Health Science",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "Majors: Biomedical Science; Pharmacy; Nursing/Midwifery. 8 semesters. Entry depends on the major (for example 240 A-Level points for Biomedical Science, 300 for Pharmacy, 220 for Nursing/Midwifery); multiple mini-interview and a medical fitness examination.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Bachelor of Digital Science",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "Majors: Computer Science; Data Science; Artificial Intelligence (AI) and Robotics; Cybersecurity and Forensics; Applied Artificial Intelligence (6 semesters; the others 8). Entry: O-Level credit 6 in Mathematics plus A-Level in science subjects, with an entrance exam for lower points.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Bachelor of Tahfiz and Qira'at",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Usuluddin.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Usuluddin",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Usuluddin.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Shariah (Fiqh and Judiciary)",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Shariah.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Shariah (Fiqh and Usul)",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Shariah.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Laws (LLB) and Bachelor of Shariah Law (BSL)",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Sultan Haji Hassanal Bolkiah Faculty of Law. 5 years.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Arabic Language and Translation",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Arabic Language.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Islamic History and Civilisation",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Islamic Development Management.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Development Management",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Islamic Development Management. 3 years.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Science in Islamic Finance",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Islamic Economics and Finance.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Business Management",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Islamic Economics and Finance.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Islamic Economics",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Islamic Economics and Finance.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Halal Science",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Halalan Thayyiban Research Centre. 3 years.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Bachelor of Engineering (Hons) in Chemical Engineering",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Undergraduate list 2024; durations are 3 to 4 years across the list.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Bachelor of Engineering (Hons) in Civil Engineering",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Undergraduate list 2024.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Bachelor of Engineering (Hons) in Electrical and Electronic Engineering",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Undergraduate list 2024.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Bachelor of Engineering (Hons) in Mechanical Engineering",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Undergraduate list 2024.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Bachelor of Science (Hons) in Computing (Major in Data Analytics or Major in Software Development)",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Undergraduate list 2024.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Sarjana Muda Perguruan Ugama (Pendidikan Islam) dengan Minor",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "4 years (8 semesters), taught in Malay. List for 2023/2024. Entry includes a Diploma Tertinggi Perguruan Ugama, an equivalent Islamic qualification, or A-Level passes with Usuluddin or Shariah; candidates must read the Qur'an well, read and write Jawi, and pass a qualifying and health test.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     },
+     {
+      "name": "Sarjana Muda Perguruan Ugama (Pendidikan Bahasa Arab)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "4 years (8 semesters), taught in Arabic for Islamic studies courses. Needs at least Jayyid in Arabic language and grammar. List for 2023/2024.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     }
+    ]
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Master's at UBD (coursework 12 or 18 months; research 24 months), UNISSA, UTB (1 or 2 years) and KUPU SB (1.5 to 2 years). UBD entry: normally a relevant bachelor's with Honours (second class or above) and English proficiency; research applicants upload a research proposal. Age limit 35. The list shows 25 of the programmes; the institutions' lists have many more, especially UBD and UNISSA research master's.",
+     "source_text": "Graduate Programmes; Entry Requirements",
+     "url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+    },
+    "programmes": [
+     {
+      "name": "Master of Business Administration",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, UBD School of Business and Economics. 12 or 18 months.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Management",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework (also by research), UBD School of Business and Economics.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Logistics",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, UBD School of Business and Economics.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Applied Economics",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, UBD School of Business and Economics.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Islamic Finance",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, UBD School of Business and Economics.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Public Health",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, PAPRSB Institute of Health Science.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Nursing",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, PAPRSB Institute of Health Science.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Digital Public Health",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, PAPRSB Institute of Health Science.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master in Counselling",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, Sultan Hassanal Bolkiah Institute of Education.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Science in Petroleum Geosciences",
+      "institution": "Universiti Brunei Darussalam (UBD)",
+      "detail": "By coursework, Faculty of Science.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+     },
+     {
+      "name": "Master of Science (By Coursework) in Management and Technology",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Full time. UTB list 2024; master's durations on the list are 1 or 2 years.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Master of Science (By Coursework) in Computing and Information Systems",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Full time.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Master of Science (By Coursework) in Cyber Security",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Full time.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Master of Science (By Coursework) in Communication",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Full time.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Master of Science (By Coursework) in Civil Engineering",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Full time.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Master of Science (By Coursework) in Mechanical Engineering",
+      "institution": "Universiti Teknologi Brunei (UTB)",
+      "detail": "Full time.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/UTB%20Programmes%202024.pdf"
+     },
+     {
+      "name": "Master of Usuluddin (by Coursework and Dissertation)",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Usuluddin; also by coursework only or by research.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Master of Shariah (by Coursework and Dissertation)",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Faculty of Shariah; also by research.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Master of Laws (International Law) (by Coursework and Dissertation)",
+      "institution": "Universiti Islam Sultan Sharif Ali (UNISSA)",
+      "detail": "Sultan Haji Hassanal Bolkiah Faculty of Law; Intellectual Property Law and a research option also listed.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/BDGS%20Lampiran%20-%20Senarai%20Program.pdf"
+     },
+     {
+      "name": "Sarjana Perguruan Ugama (Usuluddin)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "Master's, 1.5 to 2 years full time; taught in Malay (Arabic for Arabic-language fields). Entry: a KUPU SB Sarjana Muda with CGPA of at least 3.00 or an equivalent Islamic education degree with Jayyid. A research proposal is uploaded with the online application. List for 2023/2024.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     },
+     {
+      "name": "Sarjana Perguruan Ugama (Syariah)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "Master's, same rules as above.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     },
+     {
+      "name": "Sarjana Perguruan Ugama (Pendidikan Islam)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "Master's, same rules as above.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     },
+     {
+      "name": "Sarjana Perguruan Ugama (Sejarah dan Tamadun Islam)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "Master's, same rules as above.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     },
+     {
+      "name": "Sarjana Perguruan Ugama (Bahasa Arab)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "Master's, same rules as above.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     },
+     {
+      "name": "Sarjana Perguruan Ugama (Kajian Ahli Sunnah Waljamaah)",
+      "institution": "Kolej Universiti Perguruan Ugama Seri Begawan (KUPU SB)",
+      "detail": "Master's, same rules as above.",
+      "source_text": "Programme list for BDGS",
+      "url": "https://www.mfa.gov.bn/Shared%20Documents/KUPU%20SB%20-%20BDGS202324%20(Program).pdf"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx",
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Tuition exemption, including acceptance, examination, registration and orientation fees, for the duration of the programme",
+    "conditions": null
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "Personal allowance BND 500 per month; meals allowance BND 150 per month",
+    "conditions": null
+   },
+   {
+    "type": "accommodation",
+    "coverage": "covered",
+    "limit_text": "Accommodation at the university's or polytechnic's residential college",
+    "conditions": "No accommodation is provided for a spouse or children."
+   },
+   {
+    "type": "travel",
+    "coverage": "covered",
+    "limit_text": "Economy-class airfare to Brunei before the course and back home after it",
+    "conditions": "Baggage shipment allowance on completion: up to BND 250 for ASEAN countries, up to BND 500 for other countries."
+   },
+   {
+    "type": "insurance",
+    "coverage": "covered",
+    "limit_text": "Comprehensive insurance for the scholarship period; extra cover is advised at the recipient's own cost",
+    "conditions": "Complimentary treatment at Brunei government hospitals was stated in earlier data and could not be re-confirmed on a readable page (carried over from stored data)."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "Book allowance BND 600 per year",
+    "conditions": null
+   },
+   {
+    "type": "other",
+    "coverage": "not_covered",
+    "limit_text": "No marriage or child allowances",
+    "conditions": "Family members are discouraged from accompanying the recipient."
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "other",
+    "text": "BDGS online application form (the ministry's online form), completed before applying to the institution.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Identification cards.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Certified true copies of academic qualifications and supporting documents: certificates, testimonials and transcripts.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Certified English translations of any document not in English.",
+    "conditional_rule": "Documents not in English",
+    "mandatory": true
+   },
+   {
+    "document_type": "passport",
+    "text": "Certified true copies of the birth certificate and the passport.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "reference",
+    "text": "References from referees, written on the reference letter form (C1 and C2).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Separate online application to the chosen institution, with academic documents uploaded: UBD and UTB through their own systems; KUPU SB through its online admission application. An incomplete or only-saved application is not processed.",
+    "conditional_rule": "UBD, UTB and KUPU SB applicants",
+    "mandatory": true
+   },
+   {
+    "document_type": "research_proposal",
+    "text": "Research proposal (title, rationale, aims and method, literature review, preliminary bibliography, timetable, table of contents, special requirements).",
+    "conditional_rule": "UBD Master by Research and KUPU SB master's applicants",
+    "mandatory": true
+   },
+   {
+    "document_type": "language_certificate",
+    "text": "Proof of English: GCE O-Level credit 6, IGCSE English (second language), IELTS 6.0 or TOEFL 550 (UBD also accepts UBD English test Band B2).",
+    "conditional_rule": "Where the institution requires it",
+    "mandatory": true
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Check eligibility and the institution's programme list",
+    "detail": "Confirm that you have not studied in Brunei, meet the age limit on 1 July of the year the course starts, and have the English proof. Read the programme and entry-requirement list of each institution you may apply to.",
+    "source_url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+   },
+   {
+    "phase": "apply",
+    "title": "Complete the BDGS online application form",
+    "detail": "The call page says the form opened on 15 December 2025 and gives 15 February 2026 as the closing date; both have passed. Prepare identification, certified copies of qualifications, birth certificate and passport, and referee letters on forms C1 and C2.",
+    "source_url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+   },
+   {
+    "phase": "apply",
+    "title": "Apply separately to the institution",
+    "detail": "UBD and UTB applicants also complete the institution's own online application and upload documents; KUPU SB uses its online admission application, with a research proposal for master's study. Master by Research applicants to UBD upload a research proposal. Incomplete applications are void. Each institution publishes its own opening and closing dates.",
+    "source_url": "https://www.mfa.gov.bn/Shared%20Documents/UBD%20-%20Programmes%20Offer%20for%202025-2026.pdf"
+   },
+   {
+    "phase": "selection",
+    "title": "Interview and written test where required",
+    "detail": "Applicants may be called to an interview at places the institutions set, and may sit a written test in English, Malay or Arabic where the programme requires it. Some programmes add a multiple mini-interview and a medical fitness examination.",
+    "source_url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+   },
+   {
+    "phase": "selection",
+    "title": "Decision by the Government",
+    "detail": "The Government may reject any application and its decisions are final; disputes are not entertained. Successful applicants are contacted for the next stage of selection, and unsuccessful applicants are told by email.",
+    "source_url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+   },
+   {
+    "phase": "after_award",
+    "title": "Accept the offer and sign the declaration",
+    "detail": "The full terms and conditions are given only after an offer, and a signed declaration is required on acceptance.",
+    "source_url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+   },
+   {
+    "phase": "after_award",
+    "title": "Follow the scholarship terms during study",
+    "detail": "Recipients may not hold another scholarship, fellowship, grant or loan without prior approval of the Ministry of Foreign Affairs, and may not take paid employment, including work at a foreign mission in Brunei. They must follow scholarship and university rules, local customs and law, avoid political activity, and take a health screening if asked. Breaking these terms can end the scholarship.",
+    "source_url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+   },
+   {
+    "phase": "after_award",
+    "title": "Leave Brunei when the programme ends",
+    "detail": "After completing the programme, recipients must leave Brunei immediately. Economy airfare home and a baggage shipment allowance are given on completion.",
+    "source_url": "https://www.mfa.gov.bn/pages/online-bdgs.aspx"
+   }
+  ],
+  "not_stated": [
+   "Number of scholarships offered",
+   "Date results are announced",
+   "Opening and closing dates for the institutional applications (the UBD list says to see its website)",
+   "Politeknik Brunei programmes and entry requirements (its brochure could not be opened)",
+   "Entry requirements for UNISSA and UTB programmes (their lists name programmes but not entry rules)",
+   "Whether the 2026/2027 offer uses the same programme lists as the earlier years shown",
+   "Return or service obligation after graduation (beyond leaving Brunei)",
+   "How renewal or academic progress is assessed"
+  ],
+  "fetch_problems": [
+   "The UBD scholarship page was showing a maintenance notice, so it was not used.",
+   "The Politeknik Brunei brochure was too large to fetch and the Politeknik website refused the connection.",
+   "The ministry scholarship page only links to an application portal that needs a login, which was not opened.",
+   "The reference letter form (C1 and C2) is a Word file and was not opened."
+  ],
+  "notes": [
+   "The call page title says the 2026/2027 session but its text says the academic year starts in July or August 2025; the dates on the page (open 15 December 2025, close 15 February 2026) are used as printed.",
+   "The stored record said age under 25; the call page says no older than 25 for diploma and undergraduate programmes and no older than 35 for master's.",
+   "The call page gives IGCSE grade C as the English requirement while the UBD programme list gives grade B; both are stated above.",
+   "The stored note that treatment at Brunei government hospitals is complimentary came from a UBD page that is currently under maintenance and was carried over from stored data, not re-confirmed.",
+   "Programme lists come from documents dated for earlier sessions; they may have changed for 2026/2027."
+  ]
+ }
+]

@@ -1,0 +1,189 @@
+[
+ {
+  "external_key": "za-mandela-rhodes-2028",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://www.ru.ac.za/researchgateway/postgraduates/funding/external/",
+    "publisher": "Rhodes University",
+    "publisher_type": "university",
+    "note": "Postgraduate external funding page: the Mandela Rhodes call for the Class of 2027 (dates, eligibility, benefits, selection stages)"
+   },
+   {
+    "url": "https://uct.ac.za/sites/default/files/media/documents/uct_ac_za/49/MRF-introduction.pdf",
+    "publisher": "University of Cape Town (hosting the Mandela Rhodes Foundation introduction sheet)",
+    "publisher_type": "university",
+    "note": "Introduction sheet for the Class of 2025 call: financial support, leadership programme, eligibility and selection criteria"
+   },
+   {
+    "url": "https://www.news.uct.ac.za/article/-2026-04-29-ucts-largest-mandela-rhodes-cohort-yet",
+    "publisher": "University of Cape Town",
+    "publisher_type": "university",
+    "note": "UCT news, April 2026: what the scholarship and its leadership programme are, 2026 cohort"
+   },
+   {
+    "url": "https://www.wits.ac.za/study-at-wits/financial-aid-and-scholarships-administration/scholarships-and-bursaries/",
+    "publisher": "University of the Witwatersrand",
+    "publisher_type": "university",
+    "note": "Wits postgraduate scholarships page: Mandela Rhodes entry"
+   }
+  ],
+  "summary": "The Mandela Rhodes Scholarship is the flagship programme of the Mandela Rhodes Foundation, which was founded in 2002 by Nelson Mandela to build leadership across Africa. It gives young citizens of African countries funding for a one-year Honours or a master's degree of up to two years at a recognised South African institution, in any field, together with a year-long leadership development programme of workshops, mentoring and a pan-African network. Applicants need strong academic results and a record of leadership. This record is for the Class of 2028, whose applications open on 9 March 2027 according to the stored data.",
+  "eligibility_notes": "Open to citizens of any African country. Citizens living or studying abroad also qualify (carried over from stored data).\n\nAge 19 to 29 (the Foundation's sheet and two universities give this range; the Wits page says under 30).\n\nAcademic: a first degree with above-average results, that is 70% or an upper second. The stored data says the degree must be held by 1 January 2028, so final-year students finishing in 2027 can apply.\n\nLeadership: applicants must already have taken on leadership and made an impact on their campus or community, and must show commitment to the Foundation's principles of reconciliation, education, entrepreneurship and leadership. The Foundation also looks for curiosity about the inner work of leadership: building self-awareness, learning from the diversity of the cohort, and accepting complexity.\n\nStudy: postgraduate Honours (one year) or master's (one or two years, up to two) at a recognised South African institution. Per the stored data, distance learning, study in the home country and undergraduate study are not allowed, and English at postgraduate level is needed.",
+  "age_experience_notes": "Age 19 to 29 in the year of application, as the sheets state; the stored data adds that applicants must be under 30 when they take up the scholarship. No work experience requirement is stated.",
+  "funding_summary": "The scholarship pays tuition and registration fees, allowances for study materials, research and medical aid, accommodation and meals, a personal allowance, and economy-class travel between the home country and the South African university at the start and end of the degree for international scholars, plus the leadership development programme. Funding lasts for the length of the degree: one year for Honours, one or two years for a master's, with a maximum of two years.",
+  "programmes_note": "Any field of study, at Honours or master's level, at a recognised South African institution. The Foundation does not restrict the subject. Applicants state a proposed course of study.",
+  "institutions_note": "The stored data lists 24 institutions as places of study: AFDA, Cape Peninsula University of Technology, Durban University of Technology, Mangosuthu University of Technology, Monash University, Nelson Mandela University, North West University, Rhodes University, Tshwane University of Technology, University of Cape Town, University of Fort Hare, University of the Free State, University of Johannesburg, University of KwaZulu-Natal, University of Mpumalanga, University of Limpopo, University of Pretoria, Stellenbosch University, University of the Western Cape, University of the Witwatersrand, University of Venda, University of Zululand, Vaal University of Technology, Walter Sisulu University. This list could not be re-checked because the Foundation website was not readable; universities' pages confirm study at a recognised South African institution.",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Postgraduate study in any field: a one-year Honours degree or a master's of one or two years, at a recognised South African institution, taught in English. The scholarship does not fund undergraduate study. Entry: a first degree with 70% or an upper second.",
+     "source_text": "one-year Honours degree or a two-year Masters degree in any field",
+     "url": "https://uct.ac.za/sites/default/files/media/documents/uct_ac_za/49/MRF-introduction.pdf"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [],
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Tuition and registration fees, paid to the institution",
+    "conditions": "For the length of the degree, up to two years in total."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "covered",
+    "limit_text": "Accommodation and meals, as set by the Foundation",
+    "conditions": null
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "Personal allowance, plus allowances for study materials and research (amounts not stated)",
+    "conditions": null
+   },
+   {
+    "type": "insurance",
+    "coverage": "covered",
+    "limit_text": "Medical aid allowance",
+    "conditions": null
+   },
+   {
+    "type": "travel",
+    "coverage": "covered",
+    "limit_text": "Economy-class travel between the home country and the South African university at the start and end of the degree",
+    "conditions": "For scholars from outside South Africa."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "Leadership development programme: workshops (online or in person), mentoring and a pan-African network",
+    "conditions": "Runs for a year."
+   },
+   {
+    "type": "other",
+    "coverage": "not_covered",
+    "limit_text": "University application fees, SAQA verification costs, visa costs and passports",
+    "conditions": "Carried over from stored data; not re-confirmed on a page read this time."
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "reference",
+    "text": "Three recommendation letters in English, uploaded by the recommenders through the application platform.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Degree completion certificates, in English.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "transcript",
+    "text": "Academic transcripts, in English.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "passport",
+    "text": "Identity document and passport scans.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "statement",
+    "text": "Two essays: one on your personal journey and one on a question about the Foundation's principles.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Proposed course of study (proof of a university application is not required).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "SAQA verification of qualifications from outside South Africa, which can take 4 to 8 weeks.",
+    "conditional_rule": "Non-South African qualifications",
+    "mandatory": false
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Check eligibility and gather documents",
+    "detail": "Confirm you are an African citizen aged 19 to 29 with a first degree at 70% or an upper second (or in your final year), and have leadership experience. Prepare transcripts, certificates, ID, two essays, three referees, and a proposed course of study. Stored data says applications for the Class of 2028 open on 9 March 2027; no closing date is stated in the data held.",
+    "source_url": "https://www.ru.ac.za/researchgateway/postgraduates/funding/external/"
+   },
+   {
+    "phase": "apply",
+    "title": "Submit the application on the Foundation's online platform",
+    "detail": "Applications are made online through the Mandela Rhodes Foundation's application system. Your three recommenders upload their letters on the platform (carried over from stored data). Universities' pages for the Class of 2027 call say applications opened on 9 March 2026 and closed on 14 April 2026.",
+    "source_url": "https://www.ru.ac.za/researchgateway/postgraduates/funding/external/"
+   },
+   {
+    "phase": "selection",
+    "title": "Multi-stage selection",
+    "detail": "In the Class of 2027 call the selection ran in stages from July to October 2026. The Foundation looks for leadership already shown and impact on campus or community, plus commitment to reconciliation, education and entrepreneurship, and openness to personal growth. Dates for the Class of 2028 are not stated in the data held.",
+    "source_url": "https://www.ru.ac.za/researchgateway/postgraduates/funding/external/"
+   },
+   {
+    "phase": "selection",
+    "title": "Final interview in South Africa",
+    "detail": "Final interviews for the Class of 2027 call took place in South Africa in October 2026. The pages read say nothing more about the interview format or when results are announced.",
+    "source_url": "https://www.ru.ac.za/researchgateway/postgraduates/funding/external/"
+   },
+   {
+    "phase": "after_award",
+    "title": "Study at a South African institution and join the leadership programme",
+    "detail": "Scholars study Honours or a master's in South Africa and take part in a year-long leadership programme of residential workshops, mentoring and a pan-African network, grounded in reconciliation, education, entrepreneurship and leadership.",
+    "source_url": "https://www.news.uct.ac.za/article/-2026-04-29-ucts-largest-mandela-rhodes-cohort-yet"
+   }
+  ],
+  "not_stated": [
+   "Closing date and selection dates for the Class of 2028",
+   "How the award is paid out in practice (amounts of allowances)",
+   "Number of scholarships per year (UCT news says a cohort of 40 scholars in 2026, which is not a stated annual quota)",
+   "Any service or return obligation after the award",
+   "Whether proof of admission to a South African university is needed at application (stored data says not; the Class of 2027 notice speaks of admission to Honours or master's study)"
+  ],
+  "fetch_problems": [
+   "Every page of the Mandela Rhodes Foundation website I tried (apply page, scholarship page, terms and conditions PDF, French apply page, a news article and an uploaded PDF) returned nothing to the fetch tool, so none could be read. I did not try to get round this; two further attempts with other tools were blocked by the permission checker as bot-check circumvention and were not retried.",
+   "The facts that rest on the Foundation website (nationality details, 1 January 2028 degree date, distance learning and home-country study, three letters, two essays, SAQA, exclusions, the Class of 2028 opening date, the list of 24 institutions) are carried over from stored data (last read from official Foundation pages on 24 October 2026).",
+   "The 2009-era Mandela Rhodes brochure hosted by the University of Pretoria was read but not used because it is outdated."
+  ],
+  "notes": [
+   "Facts marked 'carried over from stored data' could not be re-confirmed this time because the Foundation website could not be read.",
+   "Sources read are university pages; the funder's own pages are not repeated here, but they were the stored sources.",
+   "The Wits page says applicants are under 30 and full-time Wits students; the Foundation sheet says 19 to 29. The 19 to 29 range is used.",
+   "The Class of 2027 call (Rhodes University page) gave a closing time on the closing date; no time is stated in this record."
+  ]
+ }
+]

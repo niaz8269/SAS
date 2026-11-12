@@ -1,0 +1,72 @@
+[{
+  "external_key": "ca-pearson-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://future.utoronto.ca/pearson/about/", "publisher": "University of Toronto, Future Students", "publisher_type": "university", "note": "Main page: eligibility, benefits, nomination, application steps, deadlines, decisions, rules"},
+    {"url": "https://future.utoronto.ca/pearson/", "publisher": "University of Toronto, Future Students", "publisher_type": "university", "note": "Overview and links for the Lester B. Pearson International Scholarship"},
+    {"url": "https://future.utoronto.ca/pearson-scholarships", "publisher": "University of Toronto, Future Students", "publisher_type": "university", "note": "Become a Pearson Scholar: four steps and dates for the 2026 cycle"},
+    {"url": "https://internationalexperience.utoronto.ca/global-experiences/global-scholarships/lester-b-pearson-scholarship", "publisher": "University of Toronto, Centre for International Experience (Pearson Program Office)", "publisher_type": "university", "note": "What scholars receive after arrival: orientation, advisor, mentoring and enrichment"},
+    {"url": "https://apply.adm.utoronto.ca/register/pearson-inquiry", "publisher": "University of Toronto, Enrolment Services", "publisher_type": "university", "note": "Inquiry form page: eligibility, what is and is not covered, application fee, number of awards"},
+    {"url": "https://future.utoronto.ca/scholarships-international-students", "publisher": "University of Toronto, Future Students", "publisher_type": "university", "note": "International scholarships page: Pearson is nomination only; other entrance awards are separate"},
+    {"url": "https://future.utoronto.ca/protect-yourself-from-fraud", "publisher": "University of Toronto, Future Students", "publisher_type": "university", "note": "Agents, application fees and scholarship offers before admission"},
+    {"url": "https://future.utoronto.ca/how-to-apply", "publisher": "University of Toronto, Future Students", "publisher_type": "university", "note": "General undergraduate application steps (OUAC then applicant portal)"}
+  ],
+  "summary": "The Lester B. Pearson International Scholarship is the University of Toronto's top award for international undergraduates. About 37 students are chosen each year for first-entry bachelor's study at the University of Toronto. A student cannot apply directly: their current secondary school must nominate them (one nominee per school), and they must then apply for admission and complete a scholarship application. The award pays tuition, books, incidental fees and full residence support for four years.",
+  "eligibility_notes": "You must be an international student, meaning a non-Canadian who needs a study permit. Canadian citizens, permanent residents and dual citizens are not eligible.\n\nYou must be in your final year of senior secondary school in 2026/2027, or have graduated no earlier than June 2026, and be starting undergraduate study at the University of Toronto in September 2027. You are not eligible if you are already in post-secondary study, or will start post-secondary study in January 2027 at the University of Toronto or anywhere else. You must apply to at least one University of Toronto first-entry undergraduate programme.\n\nNomination: only your current secondary school can nominate you, through an online process, and each school can nominate one student a year. Without a nomination you cannot be considered. A school that took part in the previous year does not need to sign up again; other schools apply to take part. The University of Toronto does not work with agents or third parties for this scholarship, and generative AI tools such as ChatGPT must not be used to create application content; breaking this rule leads to disqualification.\n\nSelection looks for exceptional academic achievement, creativity, leadership within your school, and potential to contribute positively to the global community, with emphasis on your impact on school and community life. English language and school-level admission requirements are those of the University of Toronto admission process (not read in detail).",
+  "age_experience_notes": "",
+  "funding_summary": "Covers tuition, books, incidental fees and full residence support for four years of first-entry undergraduate study at the University of Toronto. The inquiry page says visa fees, travel, relocation, living costs during breaks and the admission application fee are not covered.",
+  "programmes_note": "Any first-entry undergraduate programme at the University of Toronto. You may list up to three programme areas in the admission application, but the scholarship applies only to your top choice at the time decisions are made.",
+  "institutions_note": "Tenable only at the University of Toronto. Nomination comes from the student's secondary school, not from an embassy or agent.",
+  "levels": [
+    {
+      "code": "bachelor",
+      "confirmed": true,
+      "summary": {"detail": "First-entry undergraduate programmes at the University of Toronto, starting in September 2027. Four years of tuition, books, incidental fees and full residence support. Taught in English.", "source_text": "Tenable only at U of T, for first-entry undergraduate programs", "url": "https://future.utoronto.ca/pearson/about/"},
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": ["master", "doctorate", "postdoctoral", "diploma"],
+  "catalogue_url": "https://future.utoronto.ca/pearson/about/",
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Tuition for four years", "conditions": "Tenable only at the University of Toronto for first-entry undergraduate programmes."},
+    {"type": "other", "coverage": "covered", "limit_text": "Books and incidental fees for four years", "conditions": null},
+    {"type": "accommodation", "coverage": "covered", "limit_text": "Full residence support for four years", "conditions": null},
+    {"type": "travel", "coverage": "not_covered", "limit_text": "Travel and relocation are not covered", "conditions": null},
+    {"type": "living_allowance", "coverage": "not_covered", "limit_text": "Living costs during breaks are not covered", "conditions": "No stipend is named on the pages read."},
+    {"type": "other", "coverage": "not_covered", "limit_text": "Visa fees and the admission application fee (about CAD 180, cannot be waived) are not covered", "conditions": null},
+    {"type": "other", "coverage": "covered", "limit_text": "Pearson Program Office support: welcome events in September, a one-to-one advisor met every semester for four years, peer and faculty mentoring, enrichment activities and an optional professional development plan", "conditions": "Support, not cash. No conditions for keeping the scholarship are stated on the pages read."}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "Nomination from your current secondary school through the school's online nomination (one nominee per school per year). Schools that took part before get the nomination form from 6 July 2026; new schools could apply to take part by noon Eastern on 9 October 2026.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "University of Toronto undergraduate admission application, submitted through the Ontario Universities' Application Centre (OUAC) by 16 October 2026, then documents uploaded in the Join U of T portal. The admission application fee is about CAD 180 and cannot be waived.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Pearson scholarship application and all required documentation, completed through a private link that your nominating school provides after you apply for admission. Deadline 6 November 2026. The pages I read do not list the individual documents; they are shown in the private link.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "language_certificate", "text": "English proof as required for University of Toronto admission, unless exempt. The details are on the admission pages, which I did not read in full.", "conditional_rule": "If English is not your first language", "mandatory": false}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Ask your school to nominate you", "detail": "Ask your counsellor, principal or head of school whether the school takes part. Schools that took part before receive the nomination form from 6 July 2026; other schools can apply to join by noon Eastern on 9 October 2026. The school nominates only one student per year and can nominate you before you apply to the University of Toronto.", "source_url": "https://future.utoronto.ca/pearson/about/"},
+    {"phase": "apply", "title": "Apply for admission to the University of Toronto", "detail": "Submit the OUAC application by 16 October 2026 for at least one first-entry undergraduate programme starting in September 2027. You can list up to three areas but the scholarship applies only to your top choice. You cannot submit the scholarship application until you have applied for admission.", "source_url": "https://future.utoronto.ca/pearson-scholarships"},
+    {"phase": "apply", "title": "Complete the Pearson scholarship application", "detail": "After you apply and are nominated, your school sends a private link to the scholarship application. Complete it and submit all required documentation by 6 November 2026. Do not use generative AI to create application content. The university says it does not use agents or third parties and warns against anyone who asks for fees or offers false acceptances.", "source_url": "https://future.utoronto.ca/pearson/about/"},
+    {"phase": "selection", "title": "Competition among nominees", "detail": "The school chooses its one top candidate, and the University of Toronto assesses nominees on exceptional academic achievement, creativity, leadership within the school and potential to contribute to the global community. About 37 Pearson Scholars are named each year (one section of the inquiry page says 38).", "source_url": "https://future.utoronto.ca/pearson/about/"},
+    {"phase": "selection", "title": "Decisions", "detail": "Recipients are notified from the end of January 2027 and all nominees are told by April 2027.", "source_url": "https://future.utoronto.ca/pearson/about/"},
+    {"phase": "after_award", "title": "Accept your place and begin in September 2027", "detail": "Scholars start first-entry undergraduate study at the University of Toronto in September 2027. The page does not describe how to accept the scholarship; contact the Pearson team at the address the university gives for questions.", "source_url": "https://internationalexperience.utoronto.ca/global-experiences/global-scholarships/lester-b-pearson-scholarship"},
+    {"phase": "after_award", "title": "Join the Pearson scholar programme", "detail": "The Pearson Program Office runs a September orientation and welcome reception, one-to-one check-ins with an advisor every semester for all four years, a peer mentor in first year, a faculty mentor from second year, enrichment activities (leadership, careers, alumni networking, graduate school, entrepreneurship), a monthly social committee and an optional professional development plan. No renewal or performance conditions are stated.", "source_url": "https://internationalexperience.utoronto.ca/global-experiences/global-scholarships/lester-b-pearson-scholarship"}
+  ],
+  "not_stated": [
+    "The individual documents, essays or references in the scholarship application (shown only in the private link)",
+    "Conditions to keep the scholarship (GPA, progress, enrolment) after the first year",
+    "Whether the award covers health insurance for international students",
+    "Dollar value of the award",
+    "How the university ranks nominees and who sits on the selection committee",
+    "Exact English language scores and secondary school requirements (the pages link to separate admission pages that were not read in full)",
+    "Which campuses the scholarship is held at (only 'first-entry undergraduate programs at U of T' is stated)"
+  ],
+  "fetch_problems": [
+    "The future.utoronto.ca 'how-to-apply' page under the Pearson section returned HTTP 404.",
+    "Pages for international admission requirements and English requirements were linked but not opened in full."
+  ],
+  "notes": [
+    "The dates are for the 2026-2027 cycle (entry September 2027). The 2028-entry dates were not on the pages read.",
+    "The inquiry page reports about 37 awards in one place and 38 in another; the main Pearson page says about 37.",
+    "Stored data and the pages agree on benefits and eligibility. The inquiry page adds exclusions (visa fees, travel, relocation, living costs during breaks, application fee) that were not stored before."
+  ]
+}]

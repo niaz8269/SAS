@@ -14,7 +14,11 @@
     $degreeWords = ['bachelor' => 'bachelor', 'master' => 'masters', 'doctorate' => 'phd', 'postdoctoral' => 'postdoctoral', 'diploma' => 'diploma'];
     $browse = $landing->filter(fn ($p) => ($p['type'] === 'in' && $cycle->destinations->contains('slug', $p['slug']))
         || ($p['type'] === 'for' && $cycle->degreeLevels->contains(fn ($d) => ($degreeWords[$d->code] ?? null) === $p['slug']))
-        || ($p['type'] === 'funding' && $p['slug'] === 'fully-funded' && $cycle->fundingLabel() === 'Fully funded'))->values();
+        || ($p['type'] === 'funding' && $p['slug'] === 'fully-funded' && $cycle->fundingLabel() === 'Fully funded')
+        || ($p['type'] === 'subject' && $cycle->subjects->contains('slug', $p['slug']))
+        || ($p['type'] === 'from' && ! $cycle->any_nationality && $cycle->nationalities->contains('slug', $p['slug']))
+        || ($p['type'] === 'open' && $cycle->any_nationality)
+        || ($p['type'] === 'guide' && in_array($cycle->id, $p['ids'], true)))->values();
     $guides = $cycle->destinations->filter(fn ($d) => $d->is_destination && $d->guidance_published);
 @endphp
 <x-layouts.public :title="$metaTitle" :description="\App\Support\Html::text($cycle->summary ?: $programme->summary, 155) ?: $facts->description($cycle)">
@@ -53,7 +57,7 @@
             @if ($browse->isNotEmpty() || $guides->isNotEmpty())
                 <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
                     @foreach ($guides as $g)<a class="font-semibold text-navy-700 underline" href="{{ route('destinations.show', $g) }}">Study in {{ $g->name }}: costs and guidance</a>@endforeach
-                    @foreach ($browse as $b)<a class="font-semibold text-navy-700 underline" href="{{ $b['url'] }}">More {{ mb_strtolower($b['label']) }}</a>@endforeach
+                    @foreach ($browse as $b)<a class="font-semibold text-navy-700 underline" href="{{ $b['url'] }}">{{ $b['type'] === 'guide' ? $b['label'].': requirements and deadlines' : 'More '.mb_strtolower($b['label']) }}</a>@endforeach
                 </p>
             @endif
         </div>
@@ -220,6 +224,23 @@
                     @endforeach</ul>
                 @endif
             </section>
+
+            @php($stepsByPhase = $cycle->applicationSteps->groupBy('phase'))
+            @if ($stepsByPhase->isNotEmpty())
+                <section aria-labelledby="process" class="card p-6">
+                    <h2 id="process" class="text-xl font-bold">Application process</h2>
+                    @foreach (\App\Models\CycleApplicationStep::PHASES as $phase => $heading)
+                        @if ($stepsByPhase->has($phase))
+                            <h3 class="mt-4 font-semibold">{{ $heading }}</h3>
+                            <ol class="mt-2 list-decimal space-y-2 pl-5 text-sm leading-6">
+                                @foreach ($stepsByPhase[$phase] as $step)
+                                    <li><span class="font-medium">{{ $step->title }}</span>@if ($step->detail)<span class="text-ink">: {{ $step->detail }}</span>@endif</li>
+                                @endforeach
+                            </ol>
+                        @endif
+                    @endforeach
+                </section>
+            @endif
 
             @if ($faq)
                 <section aria-labelledby="quick-answers" class="card p-6">

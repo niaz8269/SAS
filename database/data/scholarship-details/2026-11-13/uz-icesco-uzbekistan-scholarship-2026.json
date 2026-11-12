@@ -1,0 +1,79 @@
+[{
+  "external_key": "uz-icesco-uzbekistan-scholarship-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/", "publisher": "ICESCO (Islamic World Educational, Scientific and Cultural Organization)", "publisher_type": "funder", "note": "Announcement of 27 March 2026: five scholarships at two universities, benefits, deadline"},
+    {"url": "https://icesco.org/en/international-scholarships/", "publisher": "ICESCO", "publisher_type": "funder", "note": "Programme listing: universities, programmes and deadline"},
+    {"url": "https://icesco.org/tashkent-state-medical-university", "publisher": "ICESCO - programme page for Tashkent State Medical University", "publisher_type": "funder", "note": "Eligibility, English level, benefits, document format rules, dates, interview"},
+    {"url": "https://icesco.org/central-asian-university-for-environmental-and-climate-change-studies", "publisher": "ICESCO - programme page for the Central Asian University for Environmental and Climate Change Studies", "publisher_type": "funder", "note": "Eligibility, English options, entrance exam, benefits, document format rules, dates, interview"},
+    {"url": "https://icesco.org/en/who-we-are/member-states/", "publisher": "ICESCO", "publisher_type": "funder", "note": "List of 53 member states"},
+    {"url": "https://www.education.go.ug/wp-content/uploads/2026/04/ADVERT-FOR-ICESCO-UZBEKISTAN-SCHOLARSHIPS-2026.pdf", "publisher": "Ministry of Education and Sports of Uganda", "publisher_type": "government", "note": "National notice of 2 April 2026: academic year 2026/2027, slots per university, programme names, deadline, national submission step"},
+    {"url": "https://greenuniversity.uz/en/menu/admission-procedure", "publisher": "Central Asian University for Environmental and Climate Change Studies (Green University)", "publisher_type": "university", "note": "The university's general 2026/2027 admission procedure, including rules for foreign state-grant applicants (may not be specific to the ICESCO scholarship)"},
+    {"url": "https://greenuniversity.uz/en/entrance-exams", "publisher": "Central Asian University for Environmental and Climate Change Studies (Green University)", "publisher_type": "university", "note": "Entrance exam format and English options"},
+    {"url": "https://greenuniversity.uz/en/under", "publisher": "Central Asian University for Environmental and Climate Change Studies (Green University)", "publisher_type": "university", "note": "Bachelor's programme descriptions"}
+  ],
+  "summary": "A joint scholarship of ICESCO and the Uzbek Ministry of Higher Education, Science and Innovations for outstanding students from ICESCO member states. In its first phase it offers five scholarships at bachelor's level at two universities in Uzbekistan: three in General Medicine at Tashkent State Medical University and two at the Central Asian University for Environmental and Climate Change Studies (Green University). It covers tuition, student housing, a monthly stipend and health services in public institutions. Applications ran from 1 March to 15 May 2026.",
+  "eligibility_notes": "Applicants must be nationals of an ICESCO member state (53 states are listed on ICESCO's member-state page). The scholarship targets outstanding or academically strong students and is for bachelor's study only.\n\nTashkent State Medical University (3 places, General Medicine): English at B1 level or higher, which the page equates to IELTS 5.0 or an equivalent score.\n\nGreen University (2 places, environment-related bachelor's programmes): English proof as one of IELTS 5.5 or higher, TOEFL PBT 453, CBT 133 or iBT 46 or higher, or a certificate of graduation from an international secondary school where all teaching was in English. Applicants without a valid certificate sit the university entrance exam, which is in IELTS-like format (listening, reading, writing, speaking) on environment, ecology and climate change topics.\n\nCandidates may be invited to an interview after applying. Documents must be clear and legible, in English or with a certified English translation, as PDF files of at most 5 MB each.\n\nNo age limit and no minimum grade for the scholarship are stated on the ICESCO pages. The number of places is small (five in total) and the second phase is not described.",
+  "age_experience_notes": "No age limit and no work experience requirement are stated on the pages read.",
+  "funding_summary": "Each scholarship covers tuition fees, student housing, a monthly stipend and access to health coverage through public healthcare institutions. The stipend amount, the length of funding and travel costs are not stated on the pages read.",
+  "programmes_note": "Bachelor's only. Tashkent State Medical University: General Medicine (3 places). Green University: Environmental and Sustainable Management; Environment and Economics; Ecology and Public Administration (2 places in total, not divided between the three programmes on the pages read). The ICESCO announcement words the last programme as Environmental Science and Public Administration, while its own programme list and the Ugandan notice say Ecology and Public Administration. All Green University programmes are taught in English per the university's pages.",
+  "institutions_note": "Two universities in Uzbekistan in the first phase: Tashkent State Medical University and the Central Asian University for Environmental and Climate Change Studies (also called Green University or Central Asian Green University, under the National Committee on Ecology and Climate Change). The applicant chooses one of the two when applying.",
+  "levels": [
+    {
+      "code": "bachelor",
+      "confirmed": true,
+      "summary": {"detail": "Five bachelor's scholarships in the first phase: 3 in General Medicine at Tashkent State Medical University and 2 in environment-related programmes at Green University. English proficiency is required. Duration is not stated on the ICESCO pages.", "source_text": "Announcement, first phase of the programme", "url": "https://icesco.org/en/2026/03/27/icesco-and-uzbekistan-launch-scholarship-programme-for-outstanding-students-in-the-islamic-world/"},
+      "programmes": [
+        {"name": "General Medicine", "institution": "Tashkent State Medical University", "detail": "Bachelor's; 3 scholarships; English B1 or higher (IELTS 5.0 or equivalent)", "source_text": "Bachelor's in General Medicine", "url": "https://icesco.org/en/international-scholarships/"},
+        {"name": "Environmental and Sustainable Management", "institution": "Central Asian University for Environmental and Climate Change Studies", "detail": "Bachelor's (BSc Hons); 2 scholarships shared across the three programmes; taught in English", "source_text": "Environmental and Sustainable Management", "url": "https://icesco.org/en/international-scholarships/"},
+        {"name": "Environment and Economics", "institution": "Central Asian University for Environmental and Climate Change Studies", "detail": "Bachelor's; shares the 2 scholarships; taught in English", "source_text": "Environment and Economics", "url": "https://icesco.org/en/international-scholarships/"},
+        {"name": "Ecology and Public Administration", "institution": "Central Asian University for Environmental and Climate Change Studies", "detail": "Bachelor's (BSc Hons); shares the 2 scholarships; taught in English; the ICESCO announcement words it as Environmental Science and Public Administration", "source_text": "Ecology and Public Administration", "url": "https://icesco.org/en/international-scholarships/"}
+      ]
+    }
+  ],
+  "levels_not_offered": [],
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Tuition fees", "conditions": "The pages say full tuition coverage; the length of funding is not stated."},
+    {"type": "accommodation", "coverage": "covered", "limit_text": "Student housing", "conditions": null},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "Monthly stipend; amount not stated", "conditions": null},
+    {"type": "insurance", "coverage": "covered", "limit_text": "Medical services at a public healthcare institution", "conditions": "Described as access to health coverage through public healthcare institutions only."},
+    {"type": "travel", "coverage": "unknown", "limit_text": "Travel to Uzbekistan is not mentioned", "conditions": null}
+  ],
+  "requirements": [
+    {"document_type": "language_certificate", "text": "Proof of English. Tashkent State Medical University: B1 or higher (IELTS 5.0 or equivalent). Green University: IELTS 5.5 or higher, TOEFL PBT 453 / CBT 133 / iBT 46, or a certificate from a fully English-taught international secondary school; if none, take the university entrance exam (IELTS-like format on environment, ecology and climate change).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Format rules for every document: clear and legible, in English or with a certified English translation, PDF format, at most 5 MB per file. The ICESCO pages do not give the list of documents; it is inside the online application.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "passport", "text": "Passport, photo (3x4 cm), English CV and English motivation essay of 250 to 300 words, as listed in the Green University's general rules for foreign applicants for state grants.", "conditional_rule": "Green University applicants; the rule comes from the university's own admission page and may not match the ICESCO form", "mandatory": false},
+    {"document_type": "degree_certificate", "text": "Secondary school certificate or degree with a notarised English translation, per the Green University's general rules for foreign applicants.", "conditional_rule": "Green University applicants; confirm in the ICESCO application", "mandatory": false}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Check you are a national of an ICESCO member state", "detail": "Only nationals of the 53 ICESCO member states can apply. Choose between the two universities: Tashkent State Medical University for General Medicine, or Green University for its environment-related programmes.", "source_url": "https://icesco.org/en/international-scholarships/"},
+    {"phase": "apply", "title": "Prepare English proof and documents", "detail": "Prepare proof of English for the chosen university and your documents as clear PDFs of at most 5 MB each, in English or with a certified English translation. Green University applicants without a valid English certificate must sit the university entrance exam.", "source_url": "https://icesco.org/central-asian-university-for-environmental-and-climate-change-studies"},
+    {"phase": "apply", "title": "Submit the application through ICESCO's online application", "detail": "Applications opened on 1 March 2026 and the deadline was 15 May 2026; early submission is strongly encouraged. Some national ministries add their own step: Uganda's Ministry of Education asked applicants to print the online application with attachments and deliver a copy to the ministry.", "source_url": "https://www.education.go.ug/wp-content/uploads/2026/04/ADVERT-FOR-ICESCO-UZBEKISTAN-SCHOLARSHIPS-2026.pdf"},
+    {"phase": "selection", "title": "Possible interview and entrance exam", "detail": "After you submit, you may be invited to an interview. Green University applicants without a valid English certificate take the entrance exam. The ICESCO pages do not describe scoring or who makes the final choice.", "source_url": "https://icesco.org/tashkent-state-medical-university"},
+    {"phase": "selection", "title": "University evaluation rules (Green University, general foreign grant rules)", "detail": "In the university's general rules for foreign applicants for state grants, selection is out of 100 with a minimum of 70: interview up to 70 points (subject knowledge up to 40, logical thinking up to 20, motivation up to 10) and essay up to 30 points; ties go to the higher GPA. The university does not say this applies to the ICESCO places.", "source_url": "https://greenuniversity.uz/en/menu/admission-procedure"},
+    {"phase": "after_award", "title": "Enrolment steps are not described by ICESCO", "detail": "The ICESCO pages say nothing about results, acceptance, visa, arrival or obligations. Green University's general rules say enrolment of foreign grant holders is finalised after signing a Grant Agreement and submitting original notarised and translated documents, and the rector then issues the enrolment order.", "source_url": "https://greenuniversity.uz/en/menu/admission-procedure"}
+  ],
+  "not_stated": [
+    "The list of documents in the ICESCO online application",
+    "Amount of the monthly stipend and how long the scholarship is paid",
+    "Programme duration at either university",
+    "Whether travel or visa costs are covered",
+    "Minimum grades or age limits for the scholarship",
+    "Selection criteria, who decides, and when results are published",
+    "How the two Green University places are split between the three programmes",
+    "Renewal conditions and obligations of scholarship holders",
+    "Information about a second phase of the programme"
+  ],
+  "fetch_problems": [
+    "The ICESCO scholarship listing page shows only the overview and two university entries; the application form itself was not opened.",
+    "The Tashkent State Medical University admissions page opened was the Autumn 2025 general international intake (online interview, health certificate, A-1 visa) and is not tied to the ICESCO places, so it was not used for facts.",
+    "Third-party pages were ignored."
+  ],
+  "notes": [
+    "Green University's own entrance-exam page lists IELTS 6.0 or TOEFL iBT 61 as the English options for its general admission, whereas ICESCO's programme page for the scholarship says IELTS 5.5 and TOEFL iBT 46. The file follows the ICESCO page for the scholarship.",
+    "The university's own bachelor's page lists four programmes (Ecology and Public Administration, Environmental and Sustainable Management, Jurisprudence, Green Economy); the ICESCO listing names three programmes, including Environment and Economics.",
+    "The Ugandan Ministry of Education notice gives the academic year as 2026/2027, which the ICESCO pages do not state.",
+    "This file lists each benefit separately instead of giving a single funding label, as the brief requires.",
+    "Stored stipend and travel gaps are unchanged: none of the pages read gives them."
+  ]
+}]

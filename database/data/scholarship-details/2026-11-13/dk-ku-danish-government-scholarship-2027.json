@@ -1,0 +1,73 @@
+[{
+  "external_key": "dk-ku-danish-government-scholarship-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://www.ku.dk/studies/masters/application-and-admission/scholarships", "publisher": "University of Copenhagen", "publisher_type": "university", "note": "Scholarship terms: eligibility, exclusions, selection, benefits, notification"},
+    {"url": "https://www.ku.dk/studies/masters/science-scholarships", "publisher": "University of Copenhagen", "note": "Danish Government Scholarship value (tuition waiver, 22 months of living costs, DKK 11,225 per month at 2026 level), eligibility and how to be considered", "publisher_type": "university"},
+    {"url": "https://www.ku.dk/studies/admission/scholarships-for-full-degree-students", "publisher": "University of Copenhagen", "publisher_type": "university", "note": "Same scholarship terms, cross-checked"},
+    {"url": "https://www.ku.dk/studies/masters/application-and-admission/tuition-fees-and-scholarships", "publisher": "University of Copenhagen", "publisher_type": "university", "note": "Application fee, tuition fee payment rules and refund rules for non-EU/EEA applicants"},
+    {"url": "https://www.ku.dk/studies/masters/important-dates-and-deadlines", "publisher": "University of Copenhagen", "publisher_type": "university", "note": "Application, reply and acceptance dates for the September and February intakes"},
+    {"url": "https://www.ku.dk/studies/masters/application-and-admission", "publisher": "University of Copenhagen", "publisher_type": "university", "note": "Application steps, document formats, diploma and transcript rules"}
+  ],
+  "summary": "The Danish Government Scholarships at the University of Copenhagen (UCPH) are competitive awards for highly talented master's students from countries outside the EU, EEA and Switzerland. There is no separate scholarship application: every eligible non-EU/EEA applicant who is offered a place on a UCPH master's programme is considered automatically. The award is a full tuition fee waiver plus a contribution to basic living expenses for 22 months.",
+  "eligibility_notes": "The applicant must be a citizen of a country outside the EU, EEA and Switzerland, must be admitted to a master's programme at UCPH, and must hold (or be granted) a time-limited residence permit for studying a higher education programme in Denmark.\n\nNot eligible: people who have a legal claim to the rights of Danish citizens; people who qualify for a grant under the Danish State Educational Grant and Loan Scheme (SU); and non-EU/EEA citizens who were given a residence permit at admission as the child of a foreign citizen who holds a permit under a specific section of the Danish Aliens Consolidation Act.\n\nThe scholarships are meant for students with outstanding academic records. Selection follows the selection criteria of each programme, and financial need is not taken into account. University Management decides each year which programmes offer scholarships, and the number of scholarships is limited.",
+  "age_experience_notes": "",
+  "funding_summary": "A full tuition fee waiver and a contribution to basic living expenses for 22 months, at DKK 11,225 per month at the 2026 level (the rate may change). The official pages do not state taxes, other costs covered, or conditions for continuing after the first year.",
+  "programmes_note": "Any UCPH master's (MA/MSc) programme where University Management has decided to offer scholarships that year. The pages read do not list which programmes offer scholarships, so the offer depends on the programme you apply to. Up to three programmes can be ranked in one application round.",
+  "institutions_note": "University of Copenhagen only.",
+  "levels": [
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {
+        "detail": "Open to non-EU/EEA/Swiss citizens admitted to a UCPH master's programme (MA or MSc). Most UCPH master's programmes are 120 ECTS (four semesters); some are 75 ECTS. The scholarship gives a full tuition fee waiver and 22 months of basic living expenses.",
+        "source_text": "Danish Government Scholarship",
+        "url": "https://www.ku.dk/studies/masters/science-scholarships"
+      },
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": ["bachelor", "doctorate"],
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Full tuition fee waiver", "conditions": "Only for programmes where University Management has decided to offer scholarships that year. An unaccepted offer is revoked and passed to another applicant."},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "Basic living expenses for 22 months, DKK 11,225 per month at the 2026 level", "conditions": "The rate is the 2026 level and may change. Tax treatment is not stated on the pages read."},
+    {"type": "other", "coverage": "not_covered", "limit_text": "Application fee for non-EU/EEA/Swiss applicants: DKK 1,120 per application round", "conditions": "The scholarship pages do not say the application fee is waived for scholarship candidates. It is paid before applying, in DKK, whether you apply to one, two or three programmes."}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "No separate scholarship application and no extra scholarship documents. You are considered through your master's admission application.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "degree_certificate", "text": "Bachelor's diploma (or proof of completion). If you receive an offer, proof that you have completed the degree is needed by 20 September; a copy, an email confirmation from your university or an online verification link is accepted. A diploma not in English, Danish, Swedish or Norwegian needs an official English translation from the institution or a certified translator.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "transcript", "text": "Full academic transcripts showing all attempts, dates and results.", "conditional_rule": "International applicants", "mandatory": true},
+    {"document_type": "language_certificate", "text": "Proof of language skills as set by the programme you apply to. Requirements are programme-specific and are not listed on the scholarship pages.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Assessment of an international master's degree by the Danish Agency for Higher Education and Science, where it may be needed; a declaration of passed modules from any uncompleted master's programme at the same level (mandatory) or at a different level (voluntary).", "conditional_rule": "Only if you already hold a master's degree or earlier master's modules", "mandatory": false},
+    {"document_type": "other", "text": "Time-limited Danish residence permit for studying higher education (needed to be eligible for the scholarship).", "conditional_rule": "After admission, for non-EU/EEA students", "mandatory": true},
+    {"document_type": "other", "text": "All files must be PDF, JPEG, JPG, PNG or XLSX. Word files are not accepted.", "conditional_rule": null, "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Apply for admission to a UCPH master's programme", "detail": "Non-EU/EEA applicants apply through the UCPH application portal for the September start. The portal opens on 15 November and the application and documents are due 15 January, 23:59 CET. You can rank up to three master's programmes for the same intake and change priorities until the deadline. Pay the DKK 1,120 application fee (webshop, DKK only, payment link from 15 November) before submitting.", "source_url": "https://www.ku.dk/studies/masters/application-and-admission"},
+    {"phase": "apply", "title": "Upload the documents each programme asks for", "detail": "Check the document requirements on your programme page, and upload diploma, full transcripts and language proof in an accepted file format. Missing items are requested through the portal. Late applications are generally not accepted; extensions are only for exceptional documented circumstances.", "source_url": "https://www.ku.dk/studies/masters/application-and-admission"},
+    {"phase": "apply", "title": "Do not send a separate scholarship application", "detail": "All eligible non-EU/EEA applicants who are offered admission are considered automatically for a Danish Government Scholarship. There is no scholarship form.", "source_url": "https://www.ku.dk/studies/masters/application-and-admission/scholarships"},
+    {"phase": "selection", "title": "Admission and scholarship are decided from your academic record", "detail": "Awards follow each programme's selection criteria and are meant for students with outstanding academic records; financial need is not considered. University Management decides each year which programmes offer scholarships, and the number is limited.", "source_url": "https://www.ku.dk/studies/masters/science-scholarships"},
+    {"phase": "selection", "title": "Read the admission reply and any scholarship offer in the portal", "detail": "For the September intake, non-EU/EEA admission replies are sent on 13 March and the study place must be accepted or declined by 18 March, or you will not be admitted. Students nominated for a scholarship are informed through the application portal. All messages come through the portal with email notifications that can land in spam.", "source_url": "https://www.ku.dk/studies/masters/important-dates-and-deadlines"},
+    {"phase": "after_award", "title": "Accept the scholarship offer by the stated deadline", "detail": "If you do not accept the scholarship offer by the deadline given to you, it is revoked and passed to another applicant.", "source_url": "https://www.ku.dk/studies/masters/application-and-admission/scholarships"},
+    {"phase": "after_award", "title": "Secure the study residence permit and send proof of your degree", "detail": "A time-limited Danish study residence permit is a condition of the scholarship. Proof that your bachelor's degree is complete is needed by 20 September if you were admitted on a pending basis.", "source_url": "https://www.ku.dk/studies/masters/application-and-admission"},
+    {"phase": "after_award", "title": "Know the tuition payment rules before the waiver is confirmed", "detail": "Non-EU/EEA students who are not exempt must pay the first year's tuition before studies start (for a 1 September start, semesters 1 and 2 are due 15 April). No instalments are allowed. The scholarship pages do not say how a waiver is applied to payments already made, so ask the university.", "source_url": "https://www.ku.dk/studies/masters/application-and-admission/tuition-fees-and-scholarships"}
+  ],
+  "not_stated": [
+    "Number of Danish Government Scholarships per faculty or in total",
+    "Tax treatment of the living-expense contribution",
+    "Conditions for the second year (progress, ECTS, grade requirements)",
+    "Which programmes offer scholarships in the 2027 round",
+    "Date scholarship nominations are sent",
+    "Whether travel, insurance or visa costs are covered",
+    "Whether the application fee is waived for scholarship candidates"
+  ],
+  "fetch_problems": [
+    "The old studies.ku.dk programme pages redirect to the new ku.dk pages (301). The earlier faculty-by-faculty rules (Science, Social Sciences, Theology) were not found on the current official pages I read.",
+    "The Fulbright and country-specific scholarship sections of the main scholarships page were read but are not part of this scheme."
+  ],
+  "notes": [
+    "Carried over from stored data (not re-confirmed on the pages read now): faculty-specific rules such as Science awards for first-priority applicants with a very high bachelor GPA, Social Sciences generally 2-3 awards and September intake only, Theology partial tuition waivers only, second-year awards depending on passed ECTS. Current official pages describe the award as a full tuition waiver plus 22 months of living expenses, so the stored 'partial' coverage was replaced.",
+    "Date pages for 2027 show 15 January 2027 deadline pattern but the page does not name the year; the admission reply date 13 March is from the page as read.",
+    "The important-dates page is inconsistent about the February-intake deadline for non-EU applicants; the September intake is the one relevant to this scholarship cycle."
+  ]
+}]

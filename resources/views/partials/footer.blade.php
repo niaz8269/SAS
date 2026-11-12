@@ -52,7 +52,7 @@
             </ul>
         </div>
     </div>
-    @php($popular = app(\App\Domain\Seo\Landing::class)->pages()->sortByDesc('count')->take(14))
+    @php($popular = app(\App\Domain\Seo\Landing::class)->pages()->groupBy('type')->flatMap(fn ($group) => $group->sortByDesc('count')->take(3))->sortBy(fn ($p) => [empty($p['priority']) ? 1 : 0, -$p['count']])->values())
     @if ($popular->isNotEmpty())
         <nav aria-label="Popular scholarship searches" class="border-t border-navy-800">
             <div class="container-page py-6">

@@ -7,6 +7,7 @@ use App\Enums\PublicationState;
 use App\Filament\Resources\ScholarshipCycles\Pages\CreateScholarshipCycle;
 use App\Filament\Resources\ScholarshipCycles\Pages\EditScholarshipCycle;
 use App\Filament\Resources\ScholarshipCycles\Pages\ListScholarshipCycles;
+use App\Filament\Resources\ScholarshipCycles\RelationManagers\ApplicationStepsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\BenefitsRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\CriteriaRelationManager;
 use App\Filament\Resources\ScholarshipCycles\RelationManagers\DeadlinesRelationManager;
@@ -141,7 +142,7 @@ class ScholarshipCycleResource extends Resource
     {
         return [
             RoutesRelationManager::class, DeadlinesRelationManager::class, MilestonesRelationManager::class, OfferingsRelationManager::class, EvidenceRelationManager::class, BenefitsRelationManager::class,
-            RequirementsRelationManager::class, CriteriaRelationManager::class, ReviewsRelationManager::class, DocumentRulesRelationManager::class,
+            RequirementsRelationManager::class, ApplicationStepsRelationManager::class, CriteriaRelationManager::class, ReviewsRelationManager::class, DocumentRulesRelationManager::class,
         ];
     }
 

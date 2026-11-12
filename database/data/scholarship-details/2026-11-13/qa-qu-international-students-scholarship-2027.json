@@ -1,0 +1,387 @@
+[
+ {
+  "external_key": "qa-qu-international-students-scholarship-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types",
+    "publisher": "Qatar University",
+    "publisher_type": "university",
+    "note": "Scholarship types page: International Students Scholarship details, requirements, continuation rules, how to apply, FAQ, general conditions"
+   },
+   {
+    "url": "https://www.qu.edu.qa/sites/en_US/students/international-students/important-dates",
+    "publisher": "Qatar University, Scholarships and International Admissions Section",
+    "publisher_type": "university",
+    "note": "International students: visa rules for scholarship applicants, residence permit, annual ticket, graduate timeline, post-arrival steps, FAQ"
+   },
+   {
+    "url": "https://www.qu.edu.qa/en-us/students/admission/undergraduate/admission-requirements/Pages/high-school-applicants.aspx",
+    "publisher": "Qatar University",
+    "publisher_type": "university",
+    "note": "Undergraduate required documents: online application fee, photo, passport copy, international applicant steps"
+   },
+   {
+    "url": "https://www.qu.edu.qa/en-us/students/admission/undergraduate",
+    "publisher": "Qatar University",
+    "publisher_type": "university",
+    "note": "Undergraduate admission percentages for Fall 2027, competency requirements, application timeline for Spring 2027"
+   },
+   {
+    "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors",
+    "publisher": "Qatar University",
+    "publisher_type": "university",
+    "note": "List of majors by college"
+   },
+   {
+    "url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/Pages/scholarships-timeline.aspx",
+    "publisher": "Qatar University",
+    "publisher_type": "university",
+    "note": "Scholarship timeline (read: lists dates for Qatar residents only; no dates for international applicants)"
+   }
+  ],
+  "summary": "Qatar University gives a competitive International Students Scholarship to international applicants to its undergraduate programmes who have a high school average of at least 95%. It exempts the student from tuition and textbook fees, pays a monthly salary of QR 500, provides shared university housing with transport to campus, gives an annual round-trip air ticket and arranges a residence permit under QU sponsorship. The student must keep a cumulative GPA of at least 3.0 out of 4.0 and pass at least 12 credit hours each semester.",
+  "eligibility_notes": "The scholarship is for international students applying to undergraduate programmes. Applicants must hold a high school certificate or its equivalent with a minimum high school average of 95%, must receive final acceptance to the university and must meet the admission requirements of the college they applied to (all applicants need 12 years of formal education with certified results). Selection is competitive.\n\nStudents who transfer from another university, visiting students, non-degree applicants and applicants seeking a second bachelor's degree are not eligible for QU academic scholarships. The applicant cannot hold this scholarship together with another sponsorship or scholarship. The page says the scholarship committee may also look at English test scores (IELTS or TOEFL) and mathematics scores (SAT, ACT or the QU Math placement test) or other scores it selects, but the FAQ says none of these certificates is required.\n\nFor admission itself, from Fall 2027 the minimum high school percentage is 75% for most colleges, 80% for Pharmacy and 90% for Medicine and Dental Medicine. Colleges such as Engineering, Health Sciences, Nursing, Pharmacy, Medicine and Dental Medicine ask for English and mathematics competency (for example IELTS 5.5 or TOEFL iBT 61 for Health Sciences, Nursing and Pharmacy; IELTS 6 or TOEFL iBT 68 for Medicine and Dental Medicine) or the Foundation Program. International students in the Foundation Program must finish it in two semesters.\n\nThe scholarship is for the undergraduate level only; the FAQ says the only scholarship at graduate level is for the Diploma programmes in the College of Education, and the international students page says no scholarships are available for Master's and PhD applicants. The FAQ says the scholarships cover all bachelor majors.",
+  "age_experience_notes": "No age limit or work experience is stated for this scholarship.",
+  "funding_summary": "The scholarship covers tuition fees and textbook fees, a monthly salary of QR 500, shared student housing with transport to and from campus, an annual round-trip air ticket and a residence permit under QU sponsorship. The FAQ says the scholarship covers summer courses, which do not count against the total scholarship courses that cover only the Fall and Spring terms. It lasts while the student meets the continuation conditions and finishes within the study plan period (the proposed length of the programme plus up to one year in the Foundation Program), and the maximum duration does not include summer or winter courses. Fees for course drops after the add/drop period are not covered.",
+  "programmes_note": "Undergraduate programmes in 12 colleges: Arts and Sciences, Business and Economics, Dental Medicine, Education, Engineering, Health Sciences, Law, Medicine, Nursing, Pharmacy, Sharia and Islamic Studies and Sport Sciences. The FAQ says scholarships cover all the bachelor majors. The list below shows the first 25 majors named on the university majors page; it is not the full programme list. The full list of programmes is shown on the undergraduate admission page, which loads it dynamically.",
+  "institutions_note": "Held only at Qatar University, Doha, Qatar. Applicants choose a college when they apply and must meet that college's requirements. If a student moves to another major, the scholarship is extended through the system to cover the new major's terms.",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "International applicants to undergraduate programmes. High school average of at least 95%; final acceptance; meets the chosen college's admission requirements. Benefits: tuition and textbook fee exemption, QR 500 monthly salary, student housing (two per room) with transport, annual round-trip air ticket, residence permit under QU sponsorship. Must keep cumulative GPA 3.0 out of 4.0, pass at least 12 credit hours per semester and stay registered continuously in Fall and Spring until graduation. Teaching language is not stated on the scholarship page.",
+     "source_text": "International Students Scholarship",
+     "url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types"
+    },
+    "programmes": [
+     {
+      "name": "Arabic Language",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Chemistry",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Environmental Sciences",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "History",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Strategic Communication, Journalism and Digital Media",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Mathematics",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Statistics",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Social Work",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Policy Planning and Development",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Biology",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "English Literature and Linguistics",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Fine Arts",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Physics",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Psychology",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Sociology",
+      "institution": "Qatar University",
+      "detail": "College of Arts and Sciences; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Accounting",
+      "institution": "Qatar University",
+      "detail": "College of Business and Economics; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Marketing",
+      "institution": "Qatar University",
+      "detail": "College of Business and Economics; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Management",
+      "institution": "Qatar University",
+      "detail": "College of Business and Economics; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Economics",
+      "institution": "Qatar University",
+      "detail": "College of Business and Economics; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Finance",
+      "institution": "Qatar University",
+      "detail": "College of Business and Economics; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Management Information Systems",
+      "institution": "Qatar University",
+      "detail": "College of Business and Economics; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "General Dental Medicine",
+      "institution": "Qatar University",
+      "detail": "College of Dental Medicine; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Special Education",
+      "institution": "Qatar University",
+      "detail": "College of Education; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Art Education",
+      "institution": "Qatar University",
+      "detail": "College of Education; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     },
+     {
+      "name": "Secondary Education",
+      "institution": "Qatar University",
+      "detail": "College of Education; the names come from the majors page and do not form the full list of undergraduate programmes",
+      "source_text": "Available Majors",
+      "url": "https://www.qu.edu.qa/en-us/students/registration/majors-and-minors"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "master",
+   "doctorate"
+  ],
+  "catalogue_url": "https://www.qu.edu.qa/en-us/students/admission/undergraduate",
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Exemption from tuition fees and from textbook fees",
+    "conditions": "Covers the Fall and Spring terms of the study plan; the FAQ says summer courses are also covered but are not counted in the total scholarship courses. Fees for dropping courses after the add/drop period are not covered."
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "QR 500 monthly salary",
+    "conditions": "The page says the monthly salary is part of the International Students Scholarship; the number of months per year is not stated."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "covered",
+    "limit_text": "Student housing (two students per room) including transportation to and from campus",
+    "conditions": "The university housing definition on the same page says free accommodation includes meals and transport for students who meet all the conditions; the scholarship row itself lists only housing and transport."
+   },
+   {
+    "type": "travel",
+    "coverage": "covered",
+    "limit_text": "Annual round-trip air ticket from Doha to the town nearest the student's home",
+    "conditions": "Given once a year after the Spring semester final exams, to students who meet the conditions."
+   },
+   {
+    "type": "insurance",
+    "coverage": "unknown",
+    "limit_text": "Health insurance is not listed as a scholarship benefit",
+    "conditions": "The university health centre serves students with a valid QU ID card; international students must give a Health Certificate from the Medical Commission after arrival."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "Residence permit under QU sponsorship; QU arranges the student visa for scholarship recipients",
+    "conditions": "The student visa is valid for the student only and gives no right to sponsor family members. The residence permit must be cancelled or transferred after graduation."
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "other",
+    "text": "Online admission application with the 'Scholarship Application' section completed, during the announced application period. The undergraduate online application costs QR 200 and the fee is not refunded.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "transcript",
+    "text": "Original high school transcript, sent by post to the university's Admission Department during the application period for international students. An international application is not considered without the original transcript and either a visa application or the scholarship request.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "High school certificate or equivalent with an average of at least 95% and 12 years of formal education, with results certified by the appropriate education body. Applicants with British school or IB results may send predicted grades for provisional admission.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "photo",
+    "text": "Passport-size photograph uploaded in the online application.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "passport",
+    "text": "Copy of passport uploaded in the online application (non-Qatari applicants upload a passport copy in place of a Qatar ID).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Official English or mathematics test reports (IELTS, TOEFL, SAT, ACT or QU placement test) are not required for the scholarship but may be considered by the committee; colleges with competency requirements ask for them or the Foundation Program.",
+    "conditional_rule": "Colleges with English and mathematics requirements",
+    "mandatory": false
+   },
+   {
+    "document_type": "medical",
+    "text": "Health Certificate from the Medical Commission Authority, submitted to the Admission Department to complete the admission file; the university helps admitted international students do this after arrival in Qatar.",
+    "conditional_rule": "After arrival, for admitted international students",
+    "mandatory": true
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Check you meet the 95% average and college requirements",
+    "detail": "You need a high school certificate or equivalent with an average of at least 95% and must meet the admission requirements of the college you choose. The scholarship is for applicants to undergraduate programmes: transfer, visiting, non-degree and second-bachelor applicants are not eligible.",
+    "source_url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types"
+   },
+   {
+    "phase": "apply",
+    "title": "Apply online and tick the scholarship application",
+    "detail": "Use the online admission application and complete its Scholarship Application section during the announced application period for international students. Pay the QR 200 non-refundable application fee, upload a passport-size photo and a passport copy. International applicants who do not hold a Qatar residence permit and want only a scholarship do not complete the separate visa application.",
+    "source_url": "https://www.qu.edu.qa/en-us/students/admission/undergraduate/admission-requirements/Pages/high-school-applicants.aspx"
+   },
+   {
+    "phase": "apply",
+    "title": "Post the original high school transcript to the Admission Department",
+    "detail": "Send the original high school transcript and the other required documents to Qatar University's Admission Department in Doha during the international application period. The application is not considered without it.",
+    "source_url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types"
+   },
+   {
+    "phase": "selection",
+    "title": "Committee review and conditional acceptance",
+    "detail": "Scholarship applications are evaluated after the online scholarship deadline, on a competitive basis. The committee may consider IELTS or TOEFL, SAT, ACT or QU Math placement scores and other criteria it decides. Nominated students first get an initial conditional acceptance letter.",
+    "source_url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types"
+   },
+   {
+    "phase": "selection",
+    "title": "Visa processing and final decision by email",
+    "detail": "After the admission decision the university applies for the student visa for scholarship recipients, and the final admission and scholarship decisions are sent by email according to the announced timeline. The pages do not give dates for undergraduate international applicants: the Spring 2027 page says the dates are not yet determined, and the Fall 2027 international timeline lists only graduate dates.",
+    "source_url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types"
+   },
+   {
+    "phase": "after_award",
+    "title": "Arrive, attend orientation and get the residence permit",
+    "detail": "The start may be postponed for one semester with the committee's approval. After arrival new international students must attend the international orientation and convert the entry visa into a residence permit under QU sponsorship within one month: a medical examination, fingerprinting and a blood type certificate. The student must leave Qatar within 48 hours if the medical examination is failed and may not travel outside Qatar before receiving the residence card. The university can meet students living in the dormitory at the airport.",
+    "source_url": "https://www.qu.edu.qa/sites/en_US/students/international-students/important-dates"
+   },
+   {
+    "phase": "after_award",
+    "title": "Keep the scholarship through the study plan",
+    "detail": "Keep a cumulative GPA of at least 3.0 out of 4.0, pass at least 12 credit hours in each regular semester, stay registered in Fall and Spring until graduation and finish within the study plan period. A scholarship warning follows a shortfall; two warnings or failing the first semester end the scholarship, the residence is cancelled and a one-way ticket home is given while QU is the sponsor, unless the student pays all costs as a paying student. After graduation the residence permit must be cancelled or transferred to a personal sponsor or company.",
+    "source_url": "https://www.qu.edu.qa/en-us/students/admission/scholarships/types"
+   }
+  ],
+  "not_stated": [
+   "Application opening and closing dates and the decision date for international undergraduate applicants for 2027 (Spring 2027 dates 'not yet determined'; Fall 2027 international timeline lists only graduate dates).",
+   "The number of months per year the QR 500 salary is paid, and whether meals are provided to scholarship holders in housing.",
+   "Whether health insurance is provided.",
+   "Teaching language of undergraduate programmes and the full list of undergraduate programmes (the programme list on the admission page is loaded dynamically).",
+   "Minimum English test score for the scholarship itself (committee may consider scores; none is required).",
+   "Number of scholarships awarded to international applicants (the university says about 400 scholarship recipients per year across all scholarship types)."
+  ],
+  "fetch_problems": [
+   "The fetch tool could not verify the university site certificate, so the pages were read with a direct download and saved as text; content was read in full.",
+   "The dynamic programme list on the undergraduate admission page did not load, so only the majors page names were used."
+  ],
+  "notes": [
+   "Stored requirement 'health certificate issued inside Qatar, not older than six months' applies to applicants living in Qatar; for international applicants the university asks for a Health Certificate from the Medical Commission after arrival. Replaced here.",
+   "Stored 'passport copy' and 'original high school transcript by post' re-confirmed. Stored benefits re-confirmed. Stored 'finished within study plan' re-confirmed.",
+   "From Fall 2027 the general minimum admission percentage is 75% (was 70% up to Spring 2027), but the scholarship needs 95%.",
+   "The university's definition of 'University Housing' says it includes meals and transport, while the scholarship benefit row lists only housing and transport."
+  ]
+ }
+]

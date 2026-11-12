@@ -1,0 +1,393 @@
+[
+ {
+  "external_key": "ae-uaeu-graduate-research-fellowship-international-phd-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml",
+    "publisher": "United Arab Emirates University, College of Graduate Studies",
+    "publisher_type": "university",
+    "note": "Fellowship page: benefits, eligibility, selection factors, duration, duties, how to apply (page footer dated 15 March 2026)"
+   },
+   {
+    "url": "https://www.uaeu.ac.ae/en/cgs/gr_fellowships.shtml",
+    "publisher": "United Arab Emirates University, College of Graduate Studies",
+    "publisher_type": "university",
+    "note": "Parent page for the Graduate Research Fellowships: same rules, leave of absence rule, extension up to two semesters"
+   },
+   {
+    "url": "https://www.uaeu.ac.ae/en/cgs/admission.shtml",
+    "publisher": "United Arab Emirates University, College of Graduate Studies",
+    "publisher_type": "university",
+    "note": "PhD admission requirements, English test, document list, how to apply, degree equivalency"
+   },
+   {
+    "url": "https://www.uaeu.ac.ae/en/cgs/pdf/admission-deadlines-for-2026-2027.pdf",
+    "publisher": "United Arab Emirates University, College of Graduate Studies",
+    "publisher_type": "university",
+    "note": "Admission deadlines AY 2026-2027: PhD dates TBA; programme list with full-time or part-time study type"
+   },
+   {
+    "url": "https://www.uaeu.ac.ae/en/cgs/scholarship.shtml",
+    "publisher": "United Arab Emirates University, College of Graduate Studies",
+    "publisher_type": "university",
+    "note": "Overview of UAEU scholarships, fellowships and assistantships (budget-dependent, no guarantee)"
+   },
+   {
+    "url": "https://www.uaeu.ac.ae/en/cgs/phd_fellowship_all.shtml",
+    "publisher": "United Arab Emirates University, College of Graduate Studies",
+    "publisher_type": "university",
+    "note": "Read to tell apart the separate PhD Fellowship (all nationalities); not the source of this scholarship's facts"
+   },
+   {
+    "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml",
+    "publisher": "United Arab Emirates University, College of Graduate Studies",
+    "publisher_type": "university",
+    "note": "List of PhD programmes"
+   }
+  ],
+  "summary": "The United Arab Emirates University (UAEU) College of Graduate Studies gives Graduate Research Fellowships to eligible international PhD students. The fellowship is a partial package: it includes a full tuition waiver and health insurance (for international students, only when UAEU sponsors the visa). Holders must study full-time, work at least 10 hours a week as a research assistant to their supervisor and publish one paper in a refereed, indexed journal. It runs for up to 4 years.",
+  "eligibility_notes": "The fellowship is for international PhD students at UAEU. All applicants must enrol full-time in at least 9 graduate credits per semester, must not be financially sponsored by any other organisation and must hold no active employment. They must have a GPA of 3.5 or higher in the master's degree, and must keep a GPA of 3.5 or higher at PhD level.\n\nFor international students the selection also considers the ranking and research classification of the institution that awarded the master's degree, the applicant's earlier research experience and how relevant it is to UAEU research, and the publication record.\n\nOpportunities are normally available when a student is admitted to the PhD programme. The number of awards each year depends on available funds. UAEU says in general that all scholarships and fellowships depend on budget and that meeting the minimum requirements does not guarantee approval.\n\nTo be admitted to the PhD, applicants must also meet the general PhD admission rules: a master's degree with cumulative GPA 3.0 out of 4.0 or equivalent and a bachelor's degree with 2.5 out of 4.0 or equivalent, both from accredited universities recognised by the UAE Ministry of Education; IELTS Academic 6.5 or higher (or equivalent) for English-taught programmes or an English dissertation, with a score less than two years old; and any higher or extra standards that individual colleges set. English test exemptions exist for native English speakers with a master's from an English-medium institution in an English-speaking country, and for applicants who show IELTS Academic 6.0 or equivalent at admission to an English-medium master's.",
+  "age_experience_notes": "No age limit is stated. Prior research experience and publications count in selection, but no minimum amount of experience is stated.",
+  "funding_summary": "The award is a partial package of a full tuition waiver and health insurance. It lasts a maximum of 4 years. A faculty member can ask for an extension with documented justification: the fellowship page says one semester, the parent fellowship page says up to two semesters, requested in the final semester of the award. The award stays valid only if the student meets the eligibility rules every semester and receives a very good performance appraisal from the supervisor. If a holder takes official leave, the stipend and any housing allowance are suspended and the award period is extended by the leave period. The pages name a stipend and a housing allowance in the leave rule but give no amount for either.",
+  "programmes_note": "The fellowship pages name no fields and set no discipline restriction. The list below is UAEU's list of PhD programmes (26 programmes; the first 25 in source order are shown, the 26th is Doctor of Philosophy in Physics). The pages do not say whether every programme is covered by this fellowship. The fellowship itself needs full-time study.",
+  "institutions_note": "The fellowship is held only at the United Arab Emirates University; the PhD programmes in the 2026-2027 deadlines document are offered in Al Ain.",
+  "levels": [
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "International PhD students, full-time (at least 9 graduate credits per semester). Award up to 4 years with full tuition waiver and health insurance (international students only if UAEU sponsors the visa). Duties: at least 10 hours per week as research assistant throughout the year, and one paper in a refereed, indexed journal in the research discipline. Teaching language is not stated on the fellowship pages.",
+     "source_text": "Graduate Research Fellowships for International PhD Students",
+     "url": "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml"
+    },
+    "programmes": [
+     {
+      "name": "Doctor of Philosophy in Language and Literacy Education",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Education",
+      "source_text": "Doctor of Philosophy in Language and Literacy Education",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Mathematics Education",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Education",
+      "source_text": "Doctor of Philosophy in Mathematics Education",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Science Education",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Education",
+      "source_text": "Doctor of Philosophy in Science Education",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Leadership and Policy Studies in Education",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Education",
+      "source_text": "Doctor of Philosophy in Leadership and Policy Studies in Education",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Special Education",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Education",
+      "source_text": "Doctor of Philosophy in Special Education",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Environmental Engineering",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Engineering",
+      "source_text": "Doctor of Philosophy in Environmental Engineering",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Architectural Engineering",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Engineering",
+      "source_text": "Doctor of Philosophy in Architectural Engineering",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Civil Engineering",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Engineering",
+      "source_text": "Doctor of Philosophy in Civil Engineering",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Chemical Engineering",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Engineering",
+      "source_text": "Doctor of Philosophy in Chemical Engineering",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Electrical Engineering",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Engineering",
+      "source_text": "Doctor of Philosophy in Electrical Engineering",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Water Resources",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Engineering",
+      "source_text": "Doctor of Philosophy in Water Resources",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Mechanical Engineering",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Engineering",
+      "source_text": "Doctor of Philosophy in Mechanical Engineering",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Horticultural Science",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Agriculture and Veterinary Medicine",
+      "source_text": "Doctor of Philosophy in Horticultural Science",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Food Science and Technology",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Agriculture and Veterinary Medicine",
+      "source_text": "Doctor of Philosophy in Food Science and Technology",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Geographic Information Science",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Humanities and Social Sciences",
+      "source_text": "Doctor of Philosophy in Geographic Information Science",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Informatics and Computing",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Computing and Artificial Intelligence",
+      "source_text": "Doctor of Philosophy in Informatics and Computing",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Law",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Law",
+      "source_text": "Doctor of Philosophy in Law",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Biomedical Sciences",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Medicine and Health Sciences",
+      "source_text": "Doctor of Philosophy in Biomedical Sciences",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Public Health",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Medicine and Health Sciences",
+      "source_text": "Doctor of Philosophy in Public Health",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Nutritional Sciences",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Medicine and Health Sciences",
+      "source_text": "Doctor of Philosophy in Nutritional Sciences",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Cellular and Molecular Biology",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Science",
+      "source_text": "Doctor of Philosophy in Cellular and Molecular Biology",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Ecology and Environmental Sciences",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Science",
+      "source_text": "Doctor of Philosophy in Ecology and Environmental Sciences",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Chemistry",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Science",
+      "source_text": "Doctor of Philosophy in Chemistry",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Geosciences",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Science",
+      "source_text": "Doctor of Philosophy in Geosciences",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     },
+     {
+      "name": "Doctor of Philosophy in Mathematics",
+      "institution": "United Arab Emirates University",
+      "detail": "College of Science",
+      "source_text": "Doctor of Philosophy in Mathematics",
+      "url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml"
+     }
+    ]
+   }
+  ],
+  "catalogue_url": "https://www.uaeu.ac.ae/en/cgs/programs.shtml",
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Full tuition waiver, up to 4 years",
+    "conditions": "Valid only while the student meets the eligibility rules every semester and gets a very good supervisor appraisal at the end of each semester; forfeited automatically if not."
+   },
+   {
+    "type": "insurance",
+    "coverage": "covered",
+    "limit_text": "Health insurance",
+    "conditions": "For international students only if their visa is sponsored by UAEU."
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "unknown",
+    "limit_text": "No stipend amount is stated for this fellowship",
+    "conditions": "The leave-of-absence rule mentions a stipend and housing allowance being suspended, but no amounts are given."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "unknown",
+    "limit_text": "No housing is listed in the package; a housing allowance is mentioned only in the leave rule, with no amount",
+    "conditions": null
+   },
+   {
+    "type": "travel",
+    "coverage": "unknown",
+    "limit_text": "No travel or airfare support is listed",
+    "conditions": null
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "other",
+    "text": "Completed fellowship application form, submitted with all required documents. The fellowship page does not list the documents, and the form file could not be opened.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Certified copies of the master's and bachelor's degree certificates.",
+    "conditional_rule": "PhD admission",
+    "mandatory": true
+   },
+   {
+    "document_type": "transcript",
+    "text": "Certified copies of the master's and bachelor's transcripts.",
+    "conditional_rule": "PhD admission",
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Equivalency (certificate recognition) letter for the previous degree from the UAE Ministry of Education.",
+    "conditional_rule": "PhD admission; for degrees not from an accredited UAE-recognised institution",
+    "mandatory": true
+   },
+   {
+    "document_type": "language_certificate",
+    "text": "English proficiency certificate (IELTS Academic or TOEFL); IELTS Academic 6.5 or equivalent, less than two years old. Not needed if an exemption applies.",
+    "conditional_rule": "English-taught programmes or English dissertation",
+    "mandatory": true
+   },
+   {
+    "document_type": "reference",
+    "text": "Two letters of recommendation.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "cv",
+    "text": "Curriculum vitae.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "passport",
+    "text": "Copy of valid passport.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "photo",
+    "text": "Personal photo.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Copy of UAE residence ID card.",
+    "conditional_rule": "UAE residents",
+    "mandatory": true
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Contact the college or department you want to join",
+    "detail": "UAEU advises applicants to contact the college or department they wish to join before applying. Check that your master's GPA is at least 3.5 and that you can study full-time with no other sponsor or job.",
+    "source_url": "https://www.uaeu.ac.ae/en/cgs/admission.shtml"
+   },
+   {
+    "phase": "apply",
+    "title": "Apply online for PhD admission and prepare the documents",
+    "detail": "Apply for the PhD through the UAEU online application portal with the certified degree certificates and transcripts, the Ministry of Education equivalency letter, English test, two recommendation letters, CV, passport copy and photo. The 2026-2027 deadlines document lists the PhD dates for Fall 2027 as TBA (not yet announced); it also says complete applications received after the deadline go to the next cycle.",
+    "source_url": "https://www.uaeu.ac.ae/en/cgs/pdf/admission-deadlines-for-2026-2027.pdf"
+   },
+   {
+    "phase": "apply",
+    "title": "Complete and submit the fellowship application form",
+    "detail": "Fill in the Graduate Research Scholarship/Fellowship application form and submit it with all required documents. Fellowships are normally offered at the time of admission to the PhD programme. The pages state no fellowship deadline.",
+    "source_url": "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml"
+   },
+   {
+    "phase": "selection",
+    "title": "Admission and fellowship selection",
+    "detail": "Applicants must meet the GPA rules, and selection also looks at the ranking and research classification of the master's institution, research experience relevant to UAEU research, and publications. The number of awards depends on available funds and meeting the minimum does not guarantee approval.",
+    "source_url": "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml"
+   },
+   {
+    "phase": "after_award",
+    "title": "Do the research-assistant work and publish a paper",
+    "detail": "Holders work at least 10 hours per week through the year as a research assistant for the faculty supervisor, publish one paper in a refereed, indexed journal in their discipline, and take part in research-training activities where possible. Other paid work is allowed only at UAEU (for example teaching or administrative assistant), up to 10 hours per week in total, with written permission from the fellowship supervisor sent to the College of Graduate Studies.",
+    "source_url": "https://www.uaeu.ac.ae/en/cgs/grf_int_phds.shtml"
+   },
+   {
+    "phase": "after_award",
+    "title": "Keep the award each semester",
+    "detail": "Each semester the supervisor sends an evaluation to the College of Graduate Studies and the student must get a very good appraisal, stay full-time with at least 9 credits and keep a GPA of 3.5 or higher. A student who fails a condition loses the award automatically and is told by the College. The award lasts up to 4 years, with a possible extension requested by a faculty member with justification, and is extended by the length of any approved official leave.",
+    "source_url": "https://www.uaeu.ac.ae/en/cgs/gr_fellowships.shtml"
+   }
+  ],
+  "not_stated": [
+   "Application deadline for the fellowship and for Fall 2027 PhD admission (PhD dates are TBA in the 2026-2027 deadlines document).",
+   "Amount of any stipend or housing allowance, and whether this fellowship pays either.",
+   "Travel or airfare support, and visa costs.",
+   "The list of documents for the fellowship application form (the form file linked from the fellowship page returned a not-found page).",
+   "Which PhD programmes the fellowship applies to; teaching language; interview process; when results are announced.",
+   "PhD application fee (the admission page gives none for PhD)."
+  ],
+  "fetch_problems": [
+   "The fellowship application form file linked from the fellowship page returned a 404 page, so the form's contents and document list could not be read."
+  ],
+  "notes": [
+   "The fellowship page says an extension is one semester; the parent fellowship page says one extension of up to two semesters. Both are reported as stated.",
+   "The separate UAEU PhD Fellowship (all nationalities) has different rules (master's GPA 3.3, priority sectors, stipend, 4 years); it is not described here.",
+   "Stored data (full waiver up to 4 years, health insurance, no stipend stated, form required) re-confirmed from the fellowship page."
+  ]
+ }
+]

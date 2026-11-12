@@ -1,0 +1,169 @@
+[
+ {
+  "external_key": "pk-hec-allama-iqbal-central-asia-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/default.aspx",
+    "publisher": "Higher Education Commission (HEC), Pakistan",
+    "publisher_type": "government",
+    "note": "Scheme page: number of awards, levels, fields, benefits, eligible countries"
+   },
+   {
+    "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/Eligibility-Criteria.aspx",
+    "publisher": "Higher Education Commission (HEC), Pakistan",
+    "publisher_type": "government",
+    "note": "Eligibility: academic requirements and equivalence certificate"
+   },
+   {
+    "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/Application-Process.aspx",
+    "publisher": "Higher Education Commission (HEC), Pakistan",
+    "publisher_type": "government",
+    "note": "Application process"
+   },
+   {
+    "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/Pages/default.aspx",
+    "publisher": "Higher Education Commission (HEC), Pakistan",
+    "publisher_type": "government",
+    "note": "Programme overview: four components of the Central Asia and Friendly Countries initiative"
+   },
+   {
+    "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/Pages/USEP.aspx",
+    "publisher": "Higher Education Commission (HEC), Pakistan",
+    "publisher_type": "government",
+    "note": "Undergraduate Semester Exchange Program (a separate one-semester exchange, not the degree scholarship)"
+   },
+   {
+    "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/Pages/PHE.aspx",
+    "publisher": "Higher Education Commission (HEC), Pakistan",
+    "publisher_type": "government",
+    "note": "Pakistan Higher Education Expo in Central Asia and friendly countries"
+   },
+   {
+    "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/Pages/Contact-us.aspx",
+    "publisher": "Higher Education Commission (HEC), Pakistan",
+    "publisher_type": "government",
+    "note": "Contact office"
+   }
+  ],
+  "summary": "The Allama Muhammad Iqbal Scholarship for Central Asia and Friendly Countries is a five-year Higher Education Commission (HEC) initiative of the Government of Pakistan. HEC offers 350 scholarships for students from Central Asian and other friendly countries to study at top-ranked Pakistani universities. The scheme page lists undergraduate study in seven field groups and also mentions postgraduate and doctoral programmes. The award covers tuition, a monthly stipend, an accommodation allowance and airfare as per HEC policy.",
+  "eligibility_notes": "HEC says it encourages applications from Central Asia (Azerbaijan, Kazakhstan, Uzbekistan, Tajikistan, Kyrgyzstan, Turkmenistan) and from friendly countries (Jordan, Maldives, Uganda, Sudan, Congo, Angola, Nigeria, Ethiopia, Kenya, Rwanda, Turkiye, Yemen, Syria, Iran, Malaysia, Zimbabwe and the Russian Federation). The page says applicants are \"encouraged\", so it is not written as a strict nationality restriction. It names \"Congo\" without saying which country. (The page itself misspells Ethiopia and Rwanda.)\n\nBachelor's level: GCE A-Level or an equivalent exam in the subjects the programme requires, with at least 60% marks. For Engineering: pre-engineering A-Level or equivalent with at least 65%.\n\nSuccessful candidates must provide an Equivalence Certificate from IBCC Pakistan after the award.\n\nThe eligibility page gives no criteria for master's or doctoral applicants, no age limit, no language test and no work experience rule.",
+  "age_experience_notes": "",
+  "funding_summary": "The pages name four components: tuition fees, a monthly stipend, an accommodation allowance and airfare as per HEC policy. They give no amounts, no number of years per level and no detail on airfare (one way or return).",
+  "programmes_note": "HEC lists seven field groups: Engineering and Technology; Information Technology and Computer Science; Allied Health Sciences; Agriculture and Veterinary Sciences; Business and Management Sciences; Social Sciences and Humanities; Arts, Design and Architecture. No individual programmes are listed. The scheme page is inconsistent on levels: its introduction names undergraduate, postgraduate and doctoral programmes, its \"Degree Programs Offered\" section lists only undergraduate (bachelor's), and the overview page says undergraduate and graduate.",
+  "institutions_note": "Top-ranked Pakistani universities. No list of universities is given on the pages read, and the pages do not say how a university is allocated.",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "The only level listed under Degree Programs Offered. Entry: GCE A-Level or equivalent in the required subjects with at least 60% marks; 65% in pre-engineering for Engineering. Seven field groups are named; no individual programmes.",
+     "source_text": "Degree Programs Offered: Undergraduate (Bachelor's Degree)",
+     "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/default.aspx"
+    },
+    "programmes": []
+   },
+   {
+    "code": "master",
+    "confirmed": false,
+    "summary": {
+     "detail": "The introduction of the scheme page and the overview page mention postgraduate or graduate study, but the Degree Programs Offered section lists only undergraduate study and no entry criteria are given for master's applicants. Not confirmed.",
+     "source_text": "Introduction mentions postgraduate programmes",
+     "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/default.aspx"
+    },
+    "programmes": []
+   },
+   {
+    "code": "doctorate",
+    "confirmed": false,
+    "summary": {
+     "detail": "Only the introduction of the scheme page mentions doctoral programmes; the Degree Programs Offered section lists only undergraduate study and no criteria are given. Not confirmed.",
+     "source_text": "Introduction mentions doctoral programmes",
+     "url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/default.aspx"
+    },
+    "programmes": []
+   }
+  ],
+  "levels_not_offered": [],
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Tuition fees",
+    "conditions": null
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "Monthly stipend (amount not stated)",
+    "conditions": null
+   },
+   {
+    "type": "accommodation",
+    "coverage": "covered",
+    "limit_text": "Accommodation allowance (amount not stated)",
+    "conditions": null
+   },
+   {
+    "type": "travel",
+    "coverage": "covered",
+    "limit_text": "Airfare, as per HEC policy (route and number of tickets not stated)",
+    "conditions": null
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "other",
+    "text": "Online application on the HEC scholarship portal. The Application Process page lists no documents.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Equivalence Certificate from IBCC Pakistan, supplied after the award.",
+    "conditional_rule": "Successful candidates after the award",
+    "mandatory": false
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Apply online on the HEC scholarship portal",
+    "detail": "The Application Process page names applying online through the official HEC scholarship portal as the first step. It gives no deadline, form fields or document list. Check that your country is among those HEC encourages and that you meet the A-Level or equivalent mark for your field.",
+    "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/Application-Process.aspx"
+   },
+   {
+    "phase": "selection",
+    "title": "Appear in tests or interviews if required",
+    "detail": "The second step is to appear in tests or interviews, where applicable. The pages give no test format, dates, criteria or who decides.",
+    "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/Application-Process.aspx"
+   },
+   {
+    "phase": "after_award",
+    "title": "Provide the IBCC Equivalence Certificate",
+    "detail": "Successful candidates must supply an Equivalence Certificate from IBCC Pakistan after they are awarded the scholarship. Selected students then study at a top-ranked Pakistani university; the pages say nothing more about enrolment, visas, arrival or conditions.",
+    "source_url": "https://www.hec.gov.pk/english/scholarshipsgrants/CAFC/AMIC/Pages/Eligibility-Criteria.aspx"
+   }
+  ],
+  "not_stated": [
+   "Application deadline and selection dates",
+   "Eligibility criteria and age limits for master's and doctoral applicants",
+   "Whether master's and doctoral levels are actually offered",
+   "Amounts of the stipend and accommodation allowance and the length of funding",
+   "A document list, language test, test or interview details, and who decides",
+   "Which universities and programmes are offered and how placement is done",
+   "Which countries are strictly eligible (the page says encouraged) and which Congo is meant",
+   "Visa, insurance, arrival, renewal and return obligations"
+  ],
+  "fetch_problems": [
+   "The scholarship portal home page returned only its title, with no scheme details.",
+   "The Ministry of Foreign Affairs notice for the Ashgabat mission could not be opened (certificate error), so it was not used.",
+   "The programme flyer PDF linked from the overview page was not opened."
+  ],
+  "notes": [
+   "The Undergraduate Semester Exchange Program (one-semester exchange; 450 inbound and 600 outbound places over five years) and the Higher Education Expo and Leadership Training are separate components of the initiative and are not the degree scholarship; they are not used for the fields above.",
+   "The overview page uses a blanket funding label for the scheme; it is not repeated here. Components are listed one by one.",
+   "Eligible country wording is copied as printed; ISO codes are not given because of the Congo ambiguity and the word \"encouraged\"."
+  ]
+ }
+]

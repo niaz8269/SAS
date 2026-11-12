@@ -1,0 +1,69 @@
+[{
+  "external_key": "gb-clarendon-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://www.law.ox.ac.uk/admissions/scholarships-index/other-sources-funding-index/clarendon-scholarships", "publisher": "University of Oxford (Faculty of Law)", "publisher_type": "university", "note": "Eligibility, coverage, nomination and no-separate-application rule as the Law Faculty states them"},
+    {"url": "https://theology.web.ox.ac.uk/funding", "publisher": "University of Oxford (Faculty of Theology and Religion)", "publisher_type": "university", "note": "No nationality/residence/subject limits, which courses are covered, coverage, automatic consideration, January deadline"},
+    {"url": "https://www.english.ox.ac.uk/funding-scholarships", "publisher": "University of Oxford (Faculty of English)", "publisher_type": "university", "note": "Faculty nomination and Humanities Division selection panel; about 35 awards a year in the Humanities Division"},
+    {"url": "https://www.wolfson.ox.ac.uk/scholarships/", "publisher": "Wolfson College, University of Oxford", "publisher_type": "university", "note": "Automatic consideration, Dec/Jan deadline, award value linked to UKRI minimum doctoral stipend (2026-27 figure), part-time study support grant, college awards linked to Clarendon"},
+    {"url": "https://www.chch.ox.ac.uk/college/graduate/fees-scholarships-and-funding", "publisher": "Christ Church, University of Oxford", "publisher_type": "university", "note": "Home, ROI, Islands and Overseas applicants eligible; award duration up to four years depending on fee liability; college-linked Clarendon awards"},
+    {"url": "https://www.univ.ox.ac.uk/wp-content/uploads/2026/09/Graduate_Studentships-and-Scholarships-2027-28_v1.pdf", "publisher": "University College, University of Oxford", "publisher_type": "university", "note": "College-linked Clarendon awards for October 2027 entry; all nationalities eligible"},
+    {"url": "https://www.spi.ox.ac.uk/funding-and-scholarships", "publisher": "University of Oxford (Department of Social Policy and Intervention)", "publisher_type": "university", "note": "Selection on academic excellence and potential; department funding deadline for 2027 entry"},
+    {"url": "https://www.bsg.ox.ac.uk/study/dphil/dphil-fees-and-funding", "publisher": "University of Oxford (Blavatnik School of Government)", "publisher_type": "university", "note": "Purpose of the scheme; fees plus a set amount for living costs; no separate application"}
+  ],
+  "summary": "The Clarendon Fund is the University of Oxford's graduate scholarship scheme for new Master's and DPhil students. It aims to let the most academically able students study at Oxford, whatever their country or subject. There is no separate scholarship application: every applicant who applies to an eligible course by the course's December or January deadline is considered. Awards pay the course fee and a grant towards living costs.",
+  "eligibility_notes": "Open to applicants for graduate study at Oxford. There are no limits on nationality, country of ordinary residence or field of study. All full-time and part-time DPhil and Master's courses are covered. Applicants with Home, Republic of Ireland, Islands or Overseas fee status can all be considered.\n\nYou are considered automatically if you apply to your course by the December or January deadline that applies to that course. Scholars are chosen for outstanding academic merit and potential, and the competition is described as highly competitive.\n\nNot eligible: holders of a deferred graduate offer, and current Oxford students who will simply continue the same degree. A current Master's student who applies for a DPhil or a second Master's can be considered. As a guideline, most scholars hold at least a first class degree or equivalent (for example GPA 3.7 out of 4); a strong Master's can offset a weaker first degree.",
+  "age_experience_notes": "",
+  "funding_summary": "A Clarendon award pays the course fee and a grant towards living costs. For full-time scholars the living grant is set by reference to the UKRI minimum doctoral stipend. Both are paid for the period in which the scholar is liable for fees, which can be up to four years on a DPhil. Part-time scholars receive a study support grant that is a share of the full-time rate rather than the full amount.",
+  "programmes_note": "All full-time and part-time DPhil and Master's courses are eligible; the scheme is not limited by subject. The scheme is for new courses.",
+  "institutions_note": "Tenable at the University of Oxford only. Oxford colleges and faculties also add their own awards that are linked to Clarendon, for example Wolfson College (several named scholarships for 2027-28), Christ Church (eight awards, normally one in each of four divisions) and University College (one award in the Humanities and one in the Social Sciences for October 2027 entry). These need no separate application: they use the same graduate application and deadline.",
+  "levels": [
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {"detail": "All full-time and part-time Master's courses at Oxford are eligible; no subject restriction. Course fee covered and a living-costs grant for the period of fee liability. Part-time scholars receive a study support grant.", "source_text": "all full-time and part-time DPhil and Master's courses", "url": "https://theology.web.ox.ac.uk/funding"},
+      "programmes": []
+    },
+    {
+      "code": "doctorate",
+      "confirmed": true,
+      "summary": {"detail": "All full-time and part-time DPhil courses at Oxford are eligible; no subject restriction. Award length follows the fee liability period, up to four years depending on the course.", "source_text": "Up to four years, depending on the period of fee liability", "url": "https://www.chch.ox.ac.uk/college/graduate/fees-scholarships-and-funding"},
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": [],
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Course fee (the Law Faculty page lists course fees)", "conditions": "Paid for the full fee liability period. Home and Overseas fee status are both listed as eligible."},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "Grant for living costs, set by reference to the UKRI minimum doctoral stipend: GBP 21,805 in 2026-27 (Wolfson College page); the stored figure for 2025-26 is at least GBP 20,780", "conditions": "Full-time scholars. Paid for the fee liability period; up to four years on a DPhil depending on the course. Part-time scholars receive a study support grant that is a proportion of this rate (stored data: a sixth, a third or a half)."},
+    {"type": "other", "coverage": "unknown", "limit_text": "Travel, visa, health surcharge, insurance and accommodation are not mentioned on the pages read", "conditions": "Not stated on the official pages that could be read."}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "No separate scholarship application and no separate scholarship documents. The Oxford graduate course application is used, with the documents that your course asks for (for example transcripts, references, personal statement, research proposal where required).", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Applicants must meet the course's December or January deadline. The list of documents belongs to each course and was not readable on the central Oxford pages (blocked); check the course page for the exact list.", "conditional_rule": null, "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Apply to an eligible Oxford course by its deadline", "detail": "Submit the normal Oxford graduate application for a new full-time or part-time Master's or DPhil by the December or January deadline of your course. No separate Clarendon application exists; applicants who meet the deadline are considered automatically. Faculty pages for Law and Theology name the January deadline; Social Policy and Intervention gives a department date in January 2027.", "source_url": "https://www.wolfson.ox.ac.uk/scholarships/"},
+    {"phase": "apply", "title": "Check college-linked and named Clarendon awards", "detail": "Colleges such as Wolfson, Christ Church and University College add awards linked to Clarendon. They also need no separate application: the same graduate application and deadline are used, and those colleges describe their awards on their own pages.", "source_url": "https://www.chch.ox.ac.uk/college/graduate/fees-scholarships-and-funding"},
+    {"phase": "selection", "title": "Faculty assesses and nominates candidates", "detail": "Your admitting faculty or department assesses your application as part of normal admissions and decides whom to nominate for a Clarendon scholarship. In the Humanities Division a divisional selection panel then chooses among the nominated candidates; the English Faculty states about 35 awards a year in that division. Selection is on academic merit and potential.", "source_url": "https://www.english.ox.ac.uk/funding-scholarships"},
+    {"phase": "selection", "title": "Wait for the result; no news by mid-June means no award", "detail": "Stored data (carried over from the central Oxford pages): most first Clarendon offers are sent by the end of April, and an applicant not contacted by mid-June should assume the application was unsuccessful. The faculty pages read do not give result dates.", "source_url": "https://www.law.ox.ac.uk/admissions/scholarships-index/other-sources-funding-index/clarendon-scholarships"},
+    {"phase": "after_award", "title": "Award runs for the period of fee liability", "detail": "A scholar receives the course fee and a living grant for the fee liability period (up to four years on a DPhil depending on the course). Terms of acceptance, payment dates and obligations are set in the offer letter and are not described on the pages read.", "source_url": "https://www.chch.ox.ac.uk/college/graduate/fees-scholarships-and-funding"}
+  ],
+  "not_stated": [
+    "The central Oxford Clarendon pages (overview, applicant pages, timeline, FAQ) could not be read, so number of awards (stored: over 200 a year), the exact UKRI-linked part-time rates, deferred-offer and current-student exclusions, and the result dates are carried over from stored data.",
+    "Language-test requirement and minimum scores: not stated on the pages read.",
+    "Age limit or work-experience requirement: not stated.",
+    "Travel, visa, health surcharge and accommodation support: not mentioned.",
+    "Conditions after award (acceptance form, progress or return obligations): not stated on the pages read.",
+    "Exact closing times: only one department page states a time (Social Policy and Intervention, 7 January 2027, midday UK time); no university-wide time was read."
+  ],
+  "fetch_problems": [
+    "Every central Oxford page returned HTTP 403 to the fetch tool (Clarendon overview, applicants, full-time, part-time, timeline, FAQ, and the shorter clarendon address). Not bypassed. Facts were taken from faculty, department and college pages that restate the scheme.",
+    "A funding PDF from University College was read as extracted text only for its Clarendon paragraphs."
+  ],
+  "notes": [
+    "Carried over from stored data (central Oxford page, read 2026-10-24): over 200 awards a year; exclusions for deferred-offer holders and current students continuing the same degree; first-class guideline with GPA 3.7 example; stored living-grant floor of GBP 20,780 for 2025-26; part-time grant shares; milestones (April offers, mid-June).",
+    "Wolfson College gives GBP 21,805 for 2026-27 as the UKRI minimum doctoral stipend; this is newer than the stored 2025-26 figure. The living grant for a 2027-28 start is not stated on any page read.",
+    "The English Faculty page says the Humanities Division makes about 35 Clarendon awards; the central page figure (over 200) covers all divisions and was not re-read.",
+    "The Social Policy and Intervention page still says over 100 awards a year; this looks older than the central figure."
+  ]
+}]

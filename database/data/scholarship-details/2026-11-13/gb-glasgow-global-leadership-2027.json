@@ -1,0 +1,363 @@
+[
+    {
+        "external_key":  "gb-glasgow-global-leadership-2027",
+        "checked_on":  "2026-11-13",
+        "sources":  [
+                        {
+                            "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/",
+                            "publisher":  "University of Glasgow",
+                            "publisher_type":  "university",
+                            "note":  "Scholarship page for 2027/28: eligibility, number of awards, value, eligible programmes, how to apply, rules on combining awards"
+                        },
+                        {
+                            "url":  "https://www.gla.ac.uk/scholarships/howtoapply/",
+                            "publisher":  "University of Glasgow",
+                            "publisher_type":  "university",
+                            "note":  "How the scholarship portal works, documents, timing, decisions, deposits, key rules"
+                        },
+                        {
+                            "url":  "https://www.gla.ac.uk/postgraduate/how-to-apply-for-a-postgraduate-taught-degree/before-you-apply/",
+                            "publisher":  "University of Glasgow",
+                            "publisher_type":  "university",
+                            "note":  "Documents for the taught Master\u0027s programme application"
+                        },
+                        {
+                            "url":  "https://www.gla.ac.uk/postgraduate/taught/apply/",
+                            "publisher":  "University of Glasgow",
+                            "publisher_type":  "university",
+                            "note":  "Steps of the programme application and what follows an offer"
+                        }
+                    ],
+        "summary":  "The Global Leadership Scholarship is a tuition fee discount of GBP 10,000 from the University of Glasgow for International and EU fee students starting a full-time, one-year, in-person taught Master\u0027s in any discipline in September 2027 (academic session 2027/2028). There are 350 awards. Applicants need grades equivalent to UK first class honours and an offer of a place. The discount applies to one year only.",
+        "eligibility_notes":  "You must have International or EU fee status and hold an offer of a place for a full-time one-year Master\u0027s programme starting September 2027.\n\nYou must show academic excellence, with grades equivalent to UK first class honours. The page does not give a country-by-country grade conversion; the scholarship FAQ says eligibility varies and points applicants who are unsure to the criteria or to the university.\n\nOnly one-year, full-time, in-person Master\u0027s programmes qualify. Diplomas and certificates are not eligible. Book and Paper Conservation MPhil and Textile Conservation MPhil are also eligible, with the discount applied to the first year only.\n\nThe page carries an \u0027Eligible countries/regions\u0027 list of about 190 countries and territories; it does not say whether this refers to nationality, residence or fee status, and the United Kingdom is not on it.\n\nYou cannot hold more than one University of Glasgow discount or scholarship, and they cannot be combined with external partnership discounts. The only exception is the Alumni Discount. If you are offered more than one, the lower value award is removed from your account.\n\nYour offer conditions, including English language requirements, do not affect how the scholarship application is assessed. You do not need an offer to apply for a scholarship, but you need a submitted programme application.",
+        "age_experience_notes":  "",
+        "funding_summary":  "A GBP 10,000 tuition fee waiver, given as a tuition fee discount for one year only. No other cost is described as covered.",
+        "programmes_note":  "Any discipline, as long as the programme is a one-year, full-time, in-person Master\u0027s on the published eligible list (the list spans arts, business, engineering, law, medicine, science, social sciences and education, and includes MBA and some Dumfries campus programmes). Diplomas and certificates are not eligible. The full list is on the scholarship page.",
+        "institutions_note":  "University of Glasgow only, including its Dumfries campus for the programmes marked so on the list.",
+        "levels":  [
+                       {
+                           "code":  "master",
+                           "confirmed":  true,
+                           "summary":  {
+                                           "detail":  "Full-time, one-year, in-person taught Master\u0027s starting September 2027; Book and Paper Conservation MPhil and Textile Conservation MPhil also qualify with the discount applied to year one only. Diplomas and certificates excluded.",
+                                           "source_text":  "postgraduate taught Masters programme in any discipline",
+                                           "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                       },
+                           "programmes":  [
+                                              {
+                                                  "name":  "AI in Education",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Adult Learning, Community Development \u0026 Youth Work",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Advanced Functional Materials",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Advanced Imaging \u0026 Sensing",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Advanced Mathematics / Advanced Applied Mathematics",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Advanced Nursing Science",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Advanced Practice in Health Care",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Advanced Statistics",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Aerospace Engineering",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Aerospace Engineering \u0026 Management",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Ancient Cultures",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Animal Welfare Science, Ethics \u0026 Law",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Applied Conservation Science",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Applied Linguistics",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Applied Neuropsychology",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Archaeology",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Archives, Records, \u0026 Information Management",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Art History",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Art History: Dress \u0026 Textile Histories",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Art History: Technical Art History, Making \u0026 Meaning",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Astrophysics",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Behavioural Science",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Bioinformatics",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Biomedical Engineering",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              },
+                                              {
+                                                  "name":  "Biomedical Sciences",
+                                                  "institution":  "University of Glasgow",
+                                                  "detail":  "1-year full-time in-person Master\u0027s",
+                                                  "source_text":  "Eligible programmes list",
+                                                  "url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                              }
+                                          ]
+                       }
+                   ],
+        "levels_not_offered":  [
+                                   "bachelor",
+                                   "doctorate"
+                               ],
+        "catalogue_url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/",
+        "benefits":  [
+                         {
+                             "type":  "tuition",
+                             "coverage":  "partial",
+                             "limit_text":  "GBP 10,000 tuition fee waiver",
+                             "conditions":  "Awarded as a tuition fee discount for one year only. It cannot be combined with other University discounts or scholarships except the Alumni Discount; the lower value award is deleted if two are offered."
+                         },
+                         {
+                             "type":  "accommodation",
+                             "coverage":  "unknown",
+                             "limit_text":  "Not stated as part of the award",
+                             "conditions":  "The page describes a tuition fee discount only."
+                         },
+                         {
+                             "type":  "living_allowance",
+                             "coverage":  "unknown",
+                             "limit_text":  "Not stated as part of the award",
+                             "conditions":  "The page describes a tuition fee discount only."
+                         },
+                         {
+                             "type":  "travel",
+                             "coverage":  "unknown",
+                             "limit_text":  "Not stated as part of the award",
+                             "conditions":  "The page describes a tuition fee discount only."
+                         },
+                         {
+                             "type":  "insurance",
+                             "coverage":  "unknown",
+                             "limit_text":  "Not stated as part of the award",
+                             "conditions":  "The page describes a tuition fee discount only."
+                         }
+                     ],
+        "requirements":  [
+                             {
+                                 "document_type":  "other",
+                                 "text":  "A submitted application for an eligible one-year full-time in-person Master\u0027s programme starting September 2027. You need your application number and student ID to register on the Scholarship Portal. An offer is not needed to apply for the scholarship.",
+                                 "conditional_rule":  null,
+                                 "mandatory":  true
+                             },
+                             {
+                                 "document_type":  "other",
+                                 "text":  "The online scholarship application in the Scholarship Portal. Any extra documents are listed on the application form; the pages read do not list them.",
+                                 "conditional_rule":  null,
+                                 "mandatory":  true
+                             },
+                             {
+                                 "document_type":  "degree_certificate",
+                                 "text":  "For the programme application: a scanned colour copy of your official degree certificate(s) if the degree is already complete, with official English translations of anything not in English.",
+                                 "conditional_rule":  "needed for the programme application, not stated as a separate scholarship document",
+                                 "mandatory":  false
+                             },
+                             {
+                                 "document_type":  "transcript",
+                                 "text":  "For the programme application: official academic transcript(s) showing all subjects studied and grades, with official English translation if needed. If you cannot give everything at once, a full current transcript is required and the rest can be uploaded later.",
+                                 "conditional_rule":  "needed for the programme application, not stated as a separate scholarship document",
+                                 "mandatory":  false
+                             },
+                             {
+                                 "document_type":  "reference",
+                                 "text":  "For the programme application: reference(s).",
+                                 "conditional_rule":  "programme application",
+                                 "mandatory":  false
+                             },
+                             {
+                                 "document_type":  "language_certificate",
+                                 "text":  "For the programme application: evidence of English language ability if required; offers are normally conditional on meeting the requirement by the date in the offer letter, and some programmes require a test at the time of application. This does not affect the scholarship assessment.",
+                                 "conditional_rule":  "if the programme requires it",
+                                 "mandatory":  false
+                             },
+                             {
+                                 "document_type":  "passport",
+                                 "text":  "For the programme application: a copy of the passport photo page.",
+                                 "conditional_rule":  "non-UK applicants only",
+                                 "mandatory":  false
+                             }
+                         ],
+        "application_steps":  [
+                                  {
+                                      "phase":  "apply",
+                                      "title":  "Apply for your Master\u0027s programme",
+                                      "detail":  "Submit your application to an eligible one-year full-time in-person Master\u0027s starting September 2027. You then receive an application number and a student ID. An offer is not needed to apply for the scholarship, but a submitted programme application is.",
+                                      "source_url":  "https://www.gla.ac.uk/scholarships/howtoapply/"
+                                  },
+                                  {
+                                      "phase":  "apply",
+                                      "title":  "Register on the Scholarship Portal",
+                                      "detail":  "Use the Apply button on the scholarship page, register on the Scholarship Portal with your application number and student ID, add your programme and submit the scholarship application. The scholarship is now open; add a separate scholarship application for each programme.",
+                                      "source_url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                  },
+                                  {
+                                      "phase":  "apply",
+                                      "title":  "Pay your programme deposit while you wait",
+                                      "detail":  "You must pay your programme deposit while waiting for the scholarship decision, in line with the University\u0027s admissions policy. Reapplication for the same cycle is not allowed and duplicate applications are not considered.",
+                                      "source_url":  "https://www.gla.ac.uk/scholarships/howtoapply/"
+                                  },
+                                  {
+                                      "phase":  "selection",
+                                      "title":  "Rolling decisions within 6 weeks",
+                                      "detail":  "The scholarship is awarded on a rolling basis, so every applicant receives a decision within 6 weeks of receiving their programme offer or submitting their scholarship application, whichever is later. The closing date will be confirmed in due course, usually in late August. Your offer conditions, including English requirements, do not affect the assessment.",
+                                      "source_url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                  },
+                                  {
+                                      "phase":  "selection",
+                                      "title":  "Check for clashing awards",
+                                      "detail":  "Discounts and scholarships cannot be combined with each other or with external partnership discounts, except the Alumni Discount. If you are offered more than one, the lower value award is deleted. Accepting one scholarship does not stop you applying for others.",
+                                      "source_url":  "https://www.gla.ac.uk/scholarships/globalleadershipscholarship/"
+                                  },
+                                  {
+                                      "phase":  "after_award",
+                                      "title":  "Take up your offer and enrol",
+                                      "detail":  "Respond to your programme offer, pay the deposit if one is required, register online before the course starts, and, as an international applicant, obtain a CAS and apply for a visa. The scholarship offer cannot be deferred; if you move to a later year you can reapply when applications open.",
+                                      "source_url":  "https://www.gla.ac.uk/postgraduate/taught/apply/"
+                                  }
+                              ],
+        "not_stated":  [
+                           "Exact closing date (the page says it will be confirmed, usually in late August)",
+                           "What the eligible countries list refers to (nationality, residence or fee status)",
+                           "How the first-class equivalent grade is converted for each country",
+                           "Whether any documents are needed in the scholarship form beyond the programme application",
+                           "Renewal or progress conditions (the award is for one year only)",
+                           "Obligations on awardees",
+                           "English test names and scores (set by each programme; not on the pages read)",
+                           "Programme application fee"
+                       ],
+        "fetch_problems":  [
+                               "The postgraduate how-to-apply page at /postgraduate/taught/howtoapply/ returned 404; the working pages are the ones listed as sources."
+                           ],
+        "notes":  [
+                      "Stored summary said the scholarship opens \u0027not announced yet\u0027: the page now says it is open and awarded on a rolling basis.",
+                      "Stored number of awards (350), value (GBP 10,000), one-year limit and the no-combination rule were re-read and confirmed.",
+                      "The eligible programmes list is long; only the first 25 are included, in the page\u0027s order, and the rest are on the scholarship page."
+                  ]
+    }
+]

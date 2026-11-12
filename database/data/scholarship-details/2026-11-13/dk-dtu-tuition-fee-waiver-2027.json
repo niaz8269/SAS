@@ -1,0 +1,71 @@
+[{
+  "external_key": "dk-dtu-tuition-fee-waiver-2027",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://www.dtu.dk/english/education/graduate/fees-and-funding/tuition_fee_waivers", "publisher": "Technical University of Denmark (DTU)", "publisher_type": "university", "note": "Waiver terms, how to apply, selection criteria, process"},
+    {"url": "https://dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/Important-dates-and-deadlines-Autumn", "publisher": "Technical University of Denmark (DTU)", "publisher_type": "university", "note": "Autumn intake dates: portal opening, deadline, waiver announcement month, payment date"},
+    {"url": "https://www.dtu.dk/english/education/graduate/fees-and-funding/how-to-pay-tuition-fees", "publisher": "Technical University of Denmark (DTU)", "publisher_type": "university", "note": "Tuition fee amount and payment rules"},
+    {"url": "https://www.dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/required-documents", "publisher": "Technical University of Denmark (DTU)", "publisher_type": "university", "note": "Required and optional application documents, application fee"},
+    {"url": "https://www.dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/language-test-requirements", "publisher": "Technical University of Denmark (DTU)", "publisher_type": "university", "note": "Accepted English tests and minimum scores"},
+    {"url": "https://www.dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure", "publisher": "Technical University of Denmark (DTU)", "publisher_type": "university", "note": "Overview of the MSc application steps"}
+  ],
+  "summary": "DTU, the Technical University of Denmark, awards a limited number of merit-based tuition fee waivers each year to new MSc students from outside the EU/EEA. A waiver covers the tuition fee for two years and is only available for the autumn intake. You request it by submitting a separate statement with your MSc application.",
+  "eligibility_notes": "Open to non-EU/EEA applicants with excellent academic performance who apply to a DTU MSc programme for the autumn intake. Waivers are not offered for the spring intake.\n\nYou must apply by the 15 January deadline, even if your programme allows a later general application deadline. Your application must include a separate personal statement saying clearly that you are applying for the tuition fee waiver; without it you are not considered.\n\nYou must also meet the normal MSc entry requirements, including the English requirement: IELTS Academic 6.5 overall with at least 6.0 in each section; TOEFL iBT 92 overall with at least 22 per section (tests taken before 21 January 2026) or 4.5 overall with at least 4.0 per section (tests taken on or after 21 January 2026); or Cambridge C1 Advanced or C2 Proficiency with a score of 180. DTU grants no exemptions from these scores.",
+  "age_experience_notes": "",
+  "funding_summary": "The waiver covers the tuition fee for two years. DTU's tuition fee for non-EU/EEA MSc students is EUR 7,500 per semester (about EUR 30,000 for a two-year MSc). The waiver pages do not say that living costs, accommodation or travel are covered.",
+  "programmes_note": "DTU MSc programmes, autumn intake only. The page does not restrict the waiver to particular programmes.",
+  "institutions_note": "Technical University of Denmark (DTU) only.",
+  "levels": [
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {
+        "detail": "Waivers are for new non-EU/EEA applicants to DTU MSc programmes starting in the autumn semester. The tuition fee is waived for two years.",
+        "source_text": "Tuition fee waivers for non-EU/EEA MSc students",
+        "url": "https://www.dtu.dk/english/education/graduate/fees-and-funding/tuition_fee_waivers"
+      },
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": ["bachelor", "doctorate"],
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Tuition fee waived for two years (the normal fee is EUR 7,500 per semester)", "conditions": "Autumn intake only. Granted formally once you accept your offer of admission. A very limited number are awarded."},
+    {"type": "living_allowance", "coverage": "not_covered", "limit_text": "No living allowance is described", "conditions": "The waiver pages mention tuition only."},
+    {"type": "other", "coverage": "not_covered", "limit_text": "Application fee of EUR 100 for non-EU/EEA applicants", "conditions": "Paid with your application; the pages read do not say it is waived or refunded for waiver recipients."}
+  ],
+  "requirements": [
+    {"document_type": "statement", "text": "Separate tuition fee waiver statement, submitted separately from the application, stating clearly that you request a waiver. Focus on your bachelor-level academic achievements, not on your motivation for DTU. Include grades (GPA or equivalent), research experience or publications, and also relevant work or teaching experience and competition awards or extracurricular activities as they apply.", "conditional_rule": "Non-EU/EEA applicants requesting a waiver", "mandatory": true},
+    {"document_type": "transcript", "text": "Bachelor academic documents: for a completed degree, a certified diploma and certified academic transcripts officially translated into English by your university or an authorised translator; for an ongoing degree, certified transcripts with an English translation.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "GPA translation document, if your grading scale is not explained on your transcripts.", "conditional_rule": "Only if the grading scale is not explained", "mandatory": false},
+    {"document_type": "cv", "text": "CV (résumé).", "conditional_rule": "Applicants who are not Danish-degree holders (listed as 'other applicants')", "mandatory": true},
+    {"document_type": "other", "text": "DTU's qualification template, filled in completely including the ECTS conversion, uploaded as a spreadsheet (.xlsx), not a PDF.", "conditional_rule": "Listed for 'other applicants'", "mandatory": true},
+    {"document_type": "other", "text": "Course descriptions for all courses, in English (self-translation accepted), combined with the official online course link into one PDF.", "conditional_rule": "Listed for 'other applicants'", "mandatory": true},
+    {"document_type": "reference", "text": "Two recommendation letters for specific programmes only: Biomedical Engineering, Civil Engineering, Design and Innovation, Engineering Acoustics, Mechanical Engineering, and Sustainable Energy Technologies.", "conditional_rule": "International applicants to those programmes", "mandatory": true},
+    {"document_type": "language_certificate", "text": "English test result uploaded by you as the official score report by the application deadline: IELTS Academic, TOEFL iBT or Cambridge C1 Advanced / C2 Proficiency. IELTS and TOEFL are valid for 2 years from the test date; DTU does not receive results directly. Cambridge results must be shared with DTU through the Cambridge English Results Service.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Proof of payment of the EUR 100 application fee (non-EU/EEA applicants).", "conditional_rule": "Non-EU/EEA applicants", "mandatory": true},
+    {"document_type": "other", "text": "Optional: study-related work experience and research, internship or publication evidence, each combined into one PDF; Honours Programme motivation letter if you apply to the Honours Programme.", "conditional_rule": "Optional", "mandatory": false}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Apply to a DTU MSc programme for the autumn intake by 15 January", "detail": "Create an account in the DTU application system, complete the online form, upload the documents and review before submitting. The portal opens on 1 December. The 15 January deadline applies to waiver applicants even if the programme has a later general deadline. Pay the application fee and meet the language test requirement by the deadline.", "source_url": "https://dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/Important-dates-and-deadlines-Autumn"},
+    {"phase": "apply", "title": "Upload the separate tuition fee waiver statement", "detail": "Submit a separate personal statement with your application that clearly says you are applying for the waiver, focused on your bachelor-level academic achievements. Without it your application is not considered for a waiver. Do not upload documents after submitting; DTU lists this as a common mistake.", "source_url": "https://www.dtu.dk/english/education/graduate/fees-and-funding/tuition_fee_waivers"},
+    {"phase": "selection", "title": "DTU assesses admission first", "detail": "DTU first assesses your application for admission through the normal process. Only if you are admitted is your waiver statement assessed separately.", "source_url": "https://www.dtu.dk/english/education/graduate/fees-and-funding/tuition_fee_waivers"},
+    {"phase": "selection", "title": "Waiver decided on academic merit", "detail": "Criteria: grades (GPA or equivalent), the ranking of the university that awarded your bachelor's degree, research experience or publications, relevant work experience, relevant teaching experience, and awards from academic competitions or other extracurricular activities. Waivers are announced in April for eligible non-EU/EEA applicants; no notification date is given on the waiver page.", "source_url": "https://dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/Important-dates-and-deadlines-Autumn"},
+    {"phase": "after_award", "title": "Accept your offer of admission", "detail": "If a waiver is awarded, it is formally granted once you accept your offer of admission.", "source_url": "https://www.dtu.dk/english/education/graduate/fees-and-funding/tuition_fee_waivers"},
+    {"phase": "after_award", "title": "Pay any tuition due and send final documents", "detail": "The tuition fee payment deadline for autumn starters is 1 May, with no instalments or extensions; payment secures the place. The final diploma, diploma supplement or completed transcripts are due 15 July, and the autumn semester starts 1 September. The pages read do not explain how payment works when a waiver is granted, so confirm with DTU.", "source_url": "https://dtu.dk/english/education/graduate/admission-and-deadlines/application_procedure/apply/Important-dates-and-deadlines-Autumn"}
+  ],
+  "not_stated": [
+    "Number of waivers awarded",
+    "Exact date waiver decisions are announced (only 'April' on the dates page)",
+    "How a waiver interacts with the 1 May tuition payment deadline",
+    "Conditions for keeping the waiver in the second year",
+    "Whether the application fee is refunded to waiver recipients",
+    "Any cap on the waiver per programme or nationality"
+  ],
+  "fetch_problems": [
+    "No page failed to open. The fees-and-funding overview and the application-procedure overview give only summaries; details came from the subpages listed in sources."
+  ],
+  "notes": [
+    "Stored data said the application documents beyond the statement were not known; the required-documents page now lists them (some marked for 'other applicants' only, meaning those without a Danish degree).",
+    "The language page lists two TOEFL iBT score scales depending on whether the test was taken before or after 21 January 2026."
+  ]
+}]

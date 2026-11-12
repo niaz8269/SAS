@@ -1,0 +1,327 @@
+[
+ {
+  "external_key": "eu-erasmus-mundus-jm",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters",
+    "publisher": "Erasmus+ programme (European Commission)",
+    "publisher_type": "funder",
+    "note": "Overview for students: who can apply, how to apply, scholarships, duration, degree awarded"
+   },
+   {
+    "url": "https://erasmus-plus.ec.europa.eu/opportunities/individuals/students/erasmus-mundus-joint-masters-scholarships",
+    "publisher": "Erasmus+ programme (European Commission)",
+    "publisher_type": "funder",
+    "note": "Scholarship overview (no amounts on this page)"
+   },
+   {
+    "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+    "publisher": "European Education and Culture Executive Agency (EACEA)",
+    "publisher_type": "funder",
+    "note": "Catalogue of Erasmus Mundus Joint Masters, filters, programme names"
+   },
+   {
+    "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en?page=1",
+    "publisher": "European Education and Culture Executive Agency (EACEA)",
+    "publisher_type": "funder",
+    "note": "Second page of the catalogue listing"
+   },
+   {
+    "url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/erasmus-mundus-action",
+    "publisher": "Erasmus+ programme (European Commission)",
+    "publisher_type": "funder",
+    "note": "Programme Guide: scholarship amount, fee rules, student selection, compulsory mobility, top-ups"
+   }
+  ],
+  "summary": "Erasmus Mundus Joint Masters are international master's programmes designed and delivered jointly by at least three higher education institutions from at least three countries, funded through Erasmus+ grants to those institutions. Students from anywhere in the world can apply if they hold a bachelor's degree (or are in their final year and will graduate before the programme starts). Applicants apply directly to the consortium running the programme they choose. Some programmes offer scholarships to the best-ranked students.",
+  "eligibility_notes": "You must hold a bachelor's degree (first degree) or be in your final year of bachelor's studies and graduate before the master's starts. A bachelor's-equivalent level of learning can also qualify if it is officially recognised under the national legislation and practice of the country that awards the degree. Students from all over the world are welcome.\n\nEach programme sets its own entry requirements, subjects, teaching language and scholarship availability, shown on its own website. The scheme pages read state no age limit, no work-experience rule, no nationality limit for applying and no language test at scheme level.\n\nFor scholarships (Programme Guide): the scholarship is for full-time students; a student who already received an Erasmus Mundus Joint Master scholarship cannot receive another; and no more than 10% of the scholarships of a programme may go to candidates of the same nationality (this does not apply to top-up scholarships). Not every programme offers scholarships: some have no scholarships because their funding has ended or because they temporarily use the Erasmus Mundus name after funding.",
+  "age_experience_notes": "No age limit and no work-experience requirement are stated on the scheme pages read.",
+  "funding_summary": "Where a programme offers a scholarship, the Erasmus+ page says it covers participation costs and contributes to travel, visa costs and a living allowance. The Programme Guide sets the scholarship at a maximum of EUR 1,400 per month for the length of the programme (12, 18 or 24 months), to cover travel, visa, installation and subsistence costs, paid in full and only to full-time students. It can be reduced if prior learning is recognised, with a minimum of one academic year. Projects cannot charge tuition fees or other mandatory participation costs to scholarship holders, and cannot charge application fees. Students without a scholarship are not covered by these rules and should check each programme's website for what they must pay.",
+  "programmes_note": "Master's level only, 1 to 2 academic years (60, 90 or 120 ECTS credits; 12, 18 or 24 months). The catalogue can be filtered by keyword, country, duration and credits, participating university, year of project selection (2018 to 2026) and field of study (for example Agro, AI, Food, Mech, Nucl, Space, Water, Art, Chemistry, Economic Sciences, Education, Environmental and Geosciences, History, Information Science and Engineering, Information Technology, Med, Law, Life Sciences, Literature, Mathematics, Physics, Political Science, Psychology, Social Sciences and Humanities). The catalogue read on 2026-11-13 listed 226 programmes over 12 pages of 20; the first 25 are included here.",
+  "institutions_note": "Each Joint Master is run by a consortium of at least 3 institutions from at least 3 countries, with associated partners from academia and beyond. The consortium for each programme and its participating universities are shown on the programme's website, reached from the catalogue. Students must study in at least two countries during the programme (see the after-award steps).",
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Integrated international master's of 1 to 2 academic years (60, 90 or 120 ECTS), typically combining study periods, research, traineeship and thesis preparation and defence. Graduates receive either a joint degree (one certificate issued on behalf of at least two institutions) or multiple degrees (at least two certificates from two institutions in the consortium), as set out in the study agreement signed at the start. Teaching language is set by each programme.",
+     "source_text": "Jointly designed and delivered by a group of higher education institutions",
+     "url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters"
+    },
+    "programmes": [
+     {
+      "name": "European Master in Law, Data and Artificial Intelligence (EMILDAI)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Joint International Master in Semiconductor ChipS Integration and Innovation (SSI2)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Master in Nuclear Decommissioning and Environmental Remediation (MINDER)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "European Master in Migration and Intercultural Relations (EMMIR)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Responsible Leadership in Cultural and Religious Heritage (RELIC)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Master of Science in Geospatial Technologies (GeoTech)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Applied Biodiversity Management and Resilient Ecosystem Transitions (BIOVERTE)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Erasmus Mundus Joint Master in Economics of Globalisation and European Integration (EGEI)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Master in Infectious Diseases and One Health (IDOH Next)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Erasmus Mundus Joint Master in Food Innovation and Product Design (FIPDes)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "European Master in Advanced Solid Mechanics (STRAINS)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Chemical Nano-Engineering (CNE)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Navigating AI Business Transformation in the EU (NavigAIte EU)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Sustainable Ocean Services and Marine EnviRonment (sosMER)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Erasmus Mundus Joint Master in Multilingualism and Cultural Diversity (MultiDiverse)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Law and Gender, Intersectionality and Diversity (LAWGID)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "International Master in Contemporary Challenges in the World of Work (WOCC)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "InterCultural Leadership in Digital Era International Master (CLIDE)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Erasmus Mundus Joint Master in Sustainable Transportation and Electric Power Systems (EMJM STEPS)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "European Politics and Society: Václav Havel Joint Master Degree (EPS)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Erasmus Mundus Joint Master in Insects as Solutions for a Sustainable Future (ISSF)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Renewable Energy and Sustainable COnstruction, RESCO (RESCO)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Erasmus Mundus Joint Master Degree in Sports Ethics and Integrity (MAiSI)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "Erasmus Mundus Masters in Journalism, Media and Globalisation (Mundus Journalism) (EMMA)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     },
+     {
+      "name": "European Masters in Earthen Architecture and Construction (TERRA)",
+      "detail": "Listed in the Erasmus Mundus catalogue; duration, language and entry rules are on the programme's own website",
+      "source_text": "Erasmus Mundus catalogue listing",
+      "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [],
+  "catalogue_url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en",
+  "benefits": [
+   {
+    "type": "tuition",
+    "coverage": "partial",
+    "limit_text": "Participation costs covered by a scholarship, where the programme offers one",
+    "conditions": "Programme Guide: projects cannot charge tuition fees or other mandatory participation costs to scholarship holders. Not every programme offers scholarships; students without one should check the programme website."
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "partial",
+    "limit_text": "Scholarship of up to EUR 1,400 per month for the length of the programme (maximum is EUR 1,400 x number of months of the programme)",
+    "conditions": "Paid in full only to full-time students and covers the whole programme; reduced if prior learning is recognised, with a minimum of one academic year. The amount is a combined contribution to travel, visa, installation and subsistence costs."
+   },
+   {
+    "type": "travel",
+    "coverage": "partial",
+    "limit_text": "Contribution to travel costs from the scholarship (no separate amount stated)",
+    "conditions": "Included in the EUR 1,400 per month; no separate travel amount is stated."
+   },
+   {
+    "type": "other",
+    "coverage": "partial",
+    "limit_text": "Contribution to visa costs and installation costs from the scholarship (no separate amount stated)",
+    "conditions": "Included in the EUR 1,400 per month."
+   },
+   {
+    "type": "other",
+    "coverage": "partial",
+    "limit_text": "Top-up scholarships for students from eligible third countries in regions 1, 3, 5, 6, 8, 9, 10 and 11",
+    "conditions": "The Programme Guide mentions up to 18 NDICI-funded and up to 3 IPA III-funded scholarships; amounts of the top-ups are not stated on the page read."
+   },
+   {
+    "type": "other",
+    "coverage": "partial",
+    "limit_text": "Special needs support for students with disabilities, from EUR 3,000 to EUR 60,000",
+    "conditions": "Applicants request a maximum of two unit costs at the highest level (2 x EUR 60,000) at application stage."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "unknown",
+    "limit_text": "Not listed separately; subsistence and installation costs are part of the monthly scholarship",
+    "conditions": "Students without a scholarship should check the programme website."
+   },
+   {
+    "type": "insurance",
+    "coverage": "unknown",
+    "limit_text": "Not mentioned on the scheme pages read",
+    "conditions": null
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "other",
+    "text": "The scheme pages name no document list. Each master's website lists the documents, entry requirements and application steps with and without a scholarship, so check the programme before applying.",
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Proof that you hold a bachelor's degree (first degree) or an officially recognised equivalent, or that you are in your last year and will graduate before the master's starts. The accepted form of proof is set by each programme.",
+    "mandatory": true
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Search the catalogue and pick a programme",
+    "detail": "Browse the Erasmus Mundus catalogue with its filters (field, country, duration, university, year of selection). Each entry links to the programme's official website, which gives course details, partner universities, entry requirements and application steps with and without a scholarship.",
+    "source_url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+   },
+   {
+    "phase": "apply",
+    "title": "Check entry rules and scholarship availability on the programme site",
+    "detail": "Entry requirements, subjects, teaching language and whether scholarships exist are set by each programme. Some programmes have no scholarships because their funding period has ended. The catalogue advises contacting the consortium directly with questions.",
+    "source_url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+   },
+   {
+    "phase": "apply",
+    "title": "Apply directly to the institution running the programme",
+    "detail": "There is no central application. Applications usually run between October and January for courses starting the following academic year. Selected programmes cannot charge application fees (Programme Guide).",
+    "source_url": "https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters"
+   },
+   {
+    "phase": "selection",
+    "title": "The consortium selects students",
+    "detail": "Selection is the sole responsibility of the consortium and must be organised transparently, impartially and equitably. Scholarships go to the best-ranked students worldwide, and no more than 10% of a programme's scholarships may go to the same nationality (except top-ups). The scheme pages do not describe criteria, interviews or dates; these are on each programme's site.",
+    "source_url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/erasmus-mundus-action"
+   },
+   {
+    "phase": "after_award",
+    "title": "Sign the Student Agreement at enrolment",
+    "detail": "Each student signs a Student Agreement with the consortium when enrolling; the template must be published on the programme website. It sets out whether you receive a joint degree or multiple degrees.",
+    "source_url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/erasmus-mundus-action"
+   },
+   {
+    "phase": "after_award",
+    "title": "Complete study periods in at least two countries",
+    "detail": "All enrolled students, with or without a scholarship, must complete at least two study periods in two countries, at least one in an EU Member State or associated third country, and both different from the country of residence at enrolment. Each period is at least one semester (30 ECTS, or 20 ECTS for 60-ECTS programmes). Virtual mobility cannot replace these periods.",
+    "source_url": "https://erasmus-plus.ec.europa.eu/programme-guide/part-b/key-action-2/erasmus-mundus-action"
+   }
+  ],
+  "not_stated": [
+   "Entry requirements, document list, language test and scores (set by each programme; no scheme-level list)",
+   "Exact application deadlines and selection dates (only 'usually October to January' is stated)",
+   "Separate amounts for travel, visa and installation (only the combined EUR 1,400 per month maximum)",
+   "Amounts of the regional top-up scholarships",
+   "Any age limit or work-experience requirement",
+   "How many masters one student may apply to (the Programme Guide page read says nothing on this)",
+   "Which programmes currently offer scholarships (see each programme's site)"
+  ],
+  "fetch_problems": [
+   "The catalogue pages were read as summaries; only pages 1 and 2 of the 12 listing pages were opened, so only 25 of 226 programmes are named. Programme websites were not opened.",
+   "The Programme Guide page does not state its edition year; its call ID (ERASMUS-EDU-2026-PEX-EMJM-MOB) suggests 2026."
+  ],
+  "notes": [
+   "The catalogue read on 2026-11-13 listed 226 programmes (stored data said 218).",
+   "The EUR 1,400 per month figure is from the Programme Guide Erasmus Mundus action page; the Erasmus+ student pages give no amounts. Programmes may state their own figures; editors should check a programme site before quoting it as the amount a student gets.",
+   "The student page says it was last updated 26 June 2025."
+  ]
+ }
+]

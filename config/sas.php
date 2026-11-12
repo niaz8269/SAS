@@ -1,6 +1,9 @@
 <?php
 
 return [
+    // The enquiry pop-up on the home page for visitors who are not signed in. Set SAS_APPLY_POPUP=false to switch it off without a release.
+    'apply_popup' => env('SAS_APPLY_POPUP', true),
+
     'brand' => [
         // The owner's spelling is intentional and must be preserved.
         'name' => 'SAS – Scholarships Application Services',

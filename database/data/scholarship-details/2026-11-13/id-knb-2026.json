@@ -1,0 +1,816 @@
+[
+ {
+  "external_key": "id-knb-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+   {
+    "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing",
+    "publisher": "Directorate General of Higher Education, Ministry of Higher Education, Science and Technology, Indonesia",
+    "publisher_type": "government",
+    "note": "KNB Scholarship 2026 Application Guidelines (78-page PDF linked from the KNB site). Read in full: introduction, structure, coverage, requirements per level, how to apply, 2026 schedule, FAQ, annex of 47 universities and 1,173 programmes."
+   },
+   {
+    "url": "https://knb.kemdiktisaintek.go.id/api/files/bd39ee16-dee9-463d-8766-a0984f228f08.pdf",
+    "publisher": "Directorate General of Higher Education, Ministry of Higher Education, Science and Technology, Indonesia",
+    "publisher_type": "government",
+    "note": "KNB 2025 Application Guidelines (previous year), read to compare rules. Its requirements pages are images; read as page images."
+   },
+   {
+    "url": "https://knb.kemdiktisaintek.go.id/api/files/2c96299d-0989-4c34-8dbf-0ad45da78c28.pdf",
+    "publisher": "Directorate General of Higher Education, Research and Technology, Indonesia",
+    "publisher_type": "government",
+    "note": "KNB 2023 Application Guidelines (older edition), compared only; not used for current facts."
+   },
+   {
+    "url": "https://knb.kemdiktisaintek.go.id/",
+    "publisher": "Ministry of Higher Education, Science and Technology, Indonesia - KNB Scholarship website",
+    "publisher_type": "government",
+    "note": "Official KNB site. Pages are rendered by script; the site's public data feed (landing content, application periods) was read: 2026/2027 call dates, partner list, announcement titles."
+   }
+  ],
+  "summary": "KNB (Kemitraan Negara Berkembang, Developing Countries Partnership) is the Indonesian government scholarship, run by the Directorate General of Higher Education under the Ministry of Higher Education, Science and Technology. It is for foreign nationals from developing countries, or countries with bilateral relations with Indonesia, who want a bachelor's, master's or doctoral degree at one of 47 host universities in Indonesia (1,173 programme entries in the 2026 guidelines). Awardees first take up to one year of Indonesian language and preparatory study, then study in Bahasa Indonesia. It covers tuition and a set of allowances, health insurance and economy flights.",
+  "eligibility_notes": "Applicants must be foreign nationals. Indonesian citizens cannot apply, and refugees or stateless persons cannot apply. The scheme is for developing countries or countries with diplomatic relations with Indonesia; which home countries are accepted is based on recommendations of the Ministry of Foreign Affairs. The guidelines do not print a list of eligible countries; the annex of Indonesian representatives (embassies and consulates) lists the countries each office handles.\n\nLevel rules: bachelor applicants must hold a high school degree, master's applicants a bachelor's degree, and doctoral applicants a master's degree. Nobody can apply for a level for which they already hold a degree; if this is found after acceptance the person is investigated and may be sanctioned. The programme chosen must match the previous degree, because the scholarship does not provide matriculation for unrelated programmes. Minimum GPA is 2.75 for bachelor's and 3.00 for master's and doctoral (stated in the FAQ).\n\nAge limits (2026): 21 for bachelor, 35 for master, 40 for doctorate, no more than 31 December 2026. The FAQ says the system automatically filters applicants by the age limit.\n\nEnglish: minimum TOEFL ITP, TOEFL iBT, IELTS or TOEIC scores per level (see levels), certificate obtained within the last 2 years. Other equivalent English tests such as Duolingo are accepted if they assess writing, listening and speaking. Applicants from English-speaking countries, or enrolled in English-taught programmes, may submit official proof from their home university instead of a test.\n\nPassport: an official passport (not a diplomatic or work passport) valid at least until 31 December 2027. The FAQ also says at least 2 years of validity, and applicants renewing a passport cannot apply. Name, date of birth, place of birth, nationality and passport number on the application must match the passport exactly (a one-day birth date difference caused by time zones is tolerated); mismatches lead to disqualification.\n\nOther conditions in the 2026 guidelines: applicants must be willing not to marry or be engaged to a de facto person who holds or is eligible to hold Indonesian citizenship or permanent residency, or to another scholarship recipient; willing to not be pregnant during the scholarship; and not currently in or about to undergo military service until the end of the scholarship period. Applicants from or living in Africa must be willing to attach a Yellow Fever vaccination certificate. Awardees cannot bring family to Indonesia, cannot get married during studies, and must return home within 60 days after the programme ends, as long as their residence permit has not expired. Withdrawing or failing to meet the selection requirements after selection leads to blacklisting from future KNB selections and may require returning funds received. Soliciting is prohibited.",
+  "age_experience_notes": "Maximum age at the application: 21 (bachelor), 35 (master), 40 (doctorate), no more than 31 December 2026. No work experience requirement is stated; applicants who are not working give a statement letter instead of an employer recommendation.",
+  "funding_summary": "The award pays tuition for the Indonesian language programme and the academic programme (regular classes, not international classes), a settlement allowance on arrival, a monthly living allowance, a monthly research and book allowance, health insurance, funding to publish a scientific article (once, master and doctoral only), and economy airline tickets for arrival and for return, including local transport. Funding length matches the programme: up to 12 months of Indonesian language and preparatory study, then at most 48 months for a bachelor's (8 semesters), 24 months for a master's (4 semesters) and 48 months for a doctorate (8 semesters). The guidelines state no amounts. Anything else is a personal expense paid by the student.",
+  "programmes_note": "The 2026 annex lists 1,173 programme entries across the host universities: 434 bachelor, 519 master, 212 doctor, plus 7 applied bachelor entries. Not every university offers every level; check the university and programme in the annex before choosing. Once admitted, the university and the study programme cannot be changed. The first 25 entries per level in the annex order are copied here; the full list is in the 2026 guidelines.",
+  "institutions_note": "47 host universities in 2026 (the 2025 guidelines named 34). The 2026 list: Institut Pertanian Bogor, Institut Teknologi Bandung, Institut Teknologi Sepuluh Nopember, Politeknik Elektronika Negeri Surabaya, Politeknik Negeri Malang, Universitas Airlangga, Universitas Andalas, Universitas Atma Jaya Yogyakarta, Universitas Brawijaya, Universitas Dian Nuswantoro, Universitas Diponegoro, Universitas Gadjah Mada, Universitas Gunadarma, Universitas Hasanuddin, Universitas Indonesia, Universitas Islam Bandung, Universitas Islam Indonesia, Universitas Islam Malang, Universitas Islam Sultan Agung, Universitas Jenderal Soedirman, Universitas Katolik Indonesia Atma Jaya, Universitas Katolik Parahyangan, Universitas Lampung, Universitas Muhammadiyah Malang, Universitas Muhammadiyah Purwokerto, Universitas Muhammadiyah Surakarta, Universitas Muhammadiyah Yogyakarta, Universitas Muslim Indonesia, Universitas Negeri Jakarta, Universitas Negeri Jember, Universitas Negeri Malang, Universitas Negeri Padang, Universitas Negeri Semarang, Universitas Negeri Surabaya, Universitas Negeri Yogyakarta, Universitas Padjadjaran, Universitas Pembangunan Nasional Veteran Jawa Timur, Universitas Pendidikan Indonesia, Universitas Sanata Dharma, Universitas Sebelas Maret, Universitas Siliwangi, Universitas Sumatera Utara, Universitas Syiah Kuala, Universitas Telkom, Universitas Trisakti, Universitas Udayana, Universitas Wijaya Kusuma Surabaya. The applicant picks a university and programme when applying, and the universities run the academic selection.",
+  "levels": [
+   {
+    "code": "bachelor",
+    "confirmed": true,
+    "summary": {
+     "detail": "Maximum age 21, and no more than 31 December 2026. Holder of a high school degree; a bachelor's holder cannot apply for the bachelor's scholarship. English minimum: TOEFL ITP 477, TOEFL iBT 53, IELTS 5.5 or TOEIC 510 (or equivalent), certificate obtained within the last 2 years. Scholarship runs for a maximum of 8 semesters (48 months) after up to 12 months of Indonesian language and preparatory study. Minimum GPA 2.75 (FAQ). Classes are in Bahasa Indonesia at regular classes.",
+     "source_text": "Requirements section for the Bachelor degree scholarship",
+     "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+    },
+    "programmes": [
+     {
+      "name": "Agroindustrial Engineering",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Biology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Business",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Accounting",
+      "institution": "Universitas Airlangga",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Aquaculture",
+      "institution": "Universitas Airlangga",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Management",
+      "institution": "Universitas Airlangga",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Psychology",
+      "institution": "Universitas Airlangga",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Islamic Economic",
+      "institution": "Universitas Airlangga",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Public Administration",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Agribusiness",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Agrotechnology",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Accounting",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Pharmacy",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "International Relations",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Communication Science",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Political Science",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Management",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Plant Protection",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Indonesian Literature",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Information System",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Electrical Engineering",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Industrial Engineering",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Computer Engineering",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Mechanical Engineering",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Agricultural and Biosystems Engineering",
+      "institution": "Universitas Andalas",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     }
+    ]
+   },
+   {
+    "code": "master",
+    "confirmed": true,
+    "summary": {
+     "detail": "Maximum age 35, no more than 31 December 2026. Holder of a bachelor's degree; a master's holder cannot apply for the master's scholarship. English minimum: TOEFL ITP 500, TOEFL iBT 61, IELTS 6.0 or TOEIC 575 (or equivalent), obtained within the last 2 years. Scholarship runs for a maximum of 4 semesters (24 months) after up to 12 months of Indonesian language and preparatory study. Minimum GPA 3.00 (FAQ). Classes are in Bahasa Indonesia at regular classes.",
+     "source_text": "Requirements section for the Master degree scholarship",
+     "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+    },
+    "programmes": [
+     {
+      "name": "Biochemistry",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Plant Biology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Biotechnology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Resource and Environmental Economics",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Aquaculture Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Veterinary Biomedical Sciences",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Seed Science and Technology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Economics",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Agricultural Economics",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Nutrition Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Computer Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Nutrition and Feed Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Forest Management Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Natural Resources and Environmental Management",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Coastal and Marine Resources Management",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Regional Planning Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Animal Production Science and Technology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Soil Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Chemistry",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Development Communication Sciences",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Agro-Maritime Logistics",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Microbiology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Plant Breeding and Biotechnology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Agribusiness",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Tropical Silviculture",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "summary": {
+     "detail": "Maximum age 40, no more than 31 December 2026. Holder of a master's degree; a doctorate holder cannot apply. Needs a recommendation letter from a potential research supervisor at the same university chosen, and a statement of purpose (dissertation proposal). English minimum: TOEFL ITP 530, TOEFL iBT 71, IELTS 6.0 or TOEIC 640 (or equivalent), obtained within the last 2 years. Two schemes exist in the 2025 guidelines: doctorate by research, and doctorate by coursework plus research. Maximum 8 semesters (48 months) after up to 12 months of Indonesian language and preparatory study. Minimum GPA 3.00 (FAQ).",
+     "source_text": "Requirements section for the Doctor degree scholarship",
+     "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+    },
+    "programmes": [
+     {
+      "name": "Plant Biology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Agricultural Economics",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Phytopathology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Aquaculture Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Food Science",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Natural Resources and Environmental Management",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Animal Production Science and Technology",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Veterinary Biomedical Sciences",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Agribusiness",
+      "institution": "Institut Pertanian Bogor",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Geodesy and Geomatics Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Geological Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Earth Sciences",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Nuclear Science and Technology",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Mathematics",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Physics",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Chemistry",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Astronomy",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Chemical Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Industrial Engineering and Management",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Engineering Physics",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Mechanical Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Materials Science and Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Aerospace Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Civil Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     },
+     {
+      "name": "Environmental Engineering",
+      "institution": "Institut Teknologi Bandung",
+      "detail": "",
+      "source_text": "Annex: University, Program and Program Study list",
+      "url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+     }
+    ]
+   }
+  ],
+  "levels_not_offered": [
+   "postdoctoral"
+  ],
+  "catalogue_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing",
+  "benefits": [
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "Settlement allowance (amount not stated)",
+    "conditions": "Given to new students on arrival in Indonesia."
+   },
+   {
+    "type": "tuition",
+    "coverage": "covered",
+    "limit_text": "Tuition fee in the Indonesian language (BIPA) programme and the academic programme, for the duration of the scholarship",
+    "conditions": "Regular classes, not international classes. Duration: BIPA up to 12 months; bachelor max 48 months (8 semesters); master max 24 months (4 semesters); doctorate max 48 months (8 semesters)."
+   },
+   {
+    "type": "living_allowance",
+    "coverage": "covered",
+    "limit_text": "Monthly living allowance (amount not stated)",
+    "conditions": "Paid from arrival, for as long as the student lives in Indonesia during the scholarship, in both BIPA and the academic programme."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "Monthly research and book allowance (amount not stated)",
+    "conditions": "Paid during BIPA and the academic programme for the duration of the scholarship."
+   },
+   {
+    "type": "insurance",
+    "coverage": "covered",
+    "limit_text": "Health insurance",
+    "conditions": "Covers illness (outpatient and inpatient) and accidents, following the insurance provider's policy. Not for aesthetic treatment."
+   },
+   {
+    "type": "other",
+    "coverage": "covered",
+    "limit_text": "Funding for publishing a scientific article, once",
+    "conditions": "Once during the scholarship period, for master's and doctoral students."
+   },
+   {
+    "type": "travel",
+    "coverage": "covered",
+    "limit_text": "Economy class airline ticket from the home country's international airport to Indonesia, with local transport to the host university; economy return ticket with local transport from the host university to the Indonesian international airport",
+    "conditions": "Return ticket is booked by the host university after the graduation certificate is issued. The student must return home no later than 60 days after the programme ends, while the residence permit is valid, and must apply for an Exit Permit Only (EPO). Programme completion is not necessarily graduation or a graduation ceremony."
+   },
+   {
+    "type": "accommodation",
+    "coverage": "unknown",
+    "limit_text": "Not part of the coverage list",
+    "conditions": "FAQ: dormitory availability depends on the university and follows each university's policy."
+   },
+   {
+    "type": "other",
+    "coverage": "not_covered",
+    "limit_text": "Dependants and family",
+    "conditions": "There is no provision for dependants or family. The scholarship gives no financial or pastoral support to them and does not endorse their visa applications or provide travel. All other expenses are personal expenses of the student."
+   }
+  ],
+  "requirements": [
+   {
+    "document_type": "cv",
+    "text": "Curriculum vitae in English or Bahasa Indonesia.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "language_certificate",
+    "text": "English proficiency test result (TOEFL ITP, TOEFL iBT, IELTS or TOEIC, or an equivalent test), obtained within the last 2 years. Minimum scores: bachelor TOEFL ITP 477 / iBT 53 / IELTS 5.5 / TOEIC 510; master ITP 500 / iBT 61 / IELTS 6.0 / TOEIC 575; doctorate ITP 530 / iBT 71 / IELTS 6.0 / TOEIC 640.",
+    "conditional_rule": "Not needed for applicants from English-speaking countries or from English-taught programmes who attach official proof from their home university.",
+    "mandatory": true
+   },
+   {
+    "document_type": "reference",
+    "text": "Recommendation letter from the Indonesian Embassy or Consulate General of the applicant's country of origin (not country of residence), in English or Bahasa. It must be signed in the selection year (2026). Honorary consuls cannot issue it. Applicants cannot register online without it.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "reference",
+    "text": "Recommendation letter from the employer or immediate supervisor, in English or Bahasa. If currently unemployed, a statement letter saying the applicant is not working and is free to accept the scholarship.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "reference",
+    "text": "Academic recommendation letter from the previous school or university, in English or Bahasa, signed by the head of the institution.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "degree_certificate",
+    "text": "Scanned academic certificate and transcript of the previous degree (high school for bachelor, bachelor for master, master for doctorate), in English or Bahasa, legalised by the Ministry of Education and the Ministry of Foreign Affairs of the applicant's country. A graduation statement or yudisium letter cannot replace them.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "passport",
+    "text": "Official passport (not diplomatic or work passport) valid at least until 31 December 2027. Personal data in the application must match the passport exactly.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Video of at most 5 minutes in English or Bahasa, uploaded to YouTube, with the link entered in the applicant's KNB account. It covers: the applicant's profile; why they choose to study in Indonesia with KNB; why they choose the university and programme.",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "medical",
+    "text": "Certified medical report in English or Bahasa, issued within the last 3 months: physical examination, infectious disease tests (tuberculosis, syphilis, HIV/AIDS, Ebola, Mpox), mental health test, and a negative drug test (amphetamine, methamphetamine, marijuana, morphine, benzodiazepines).",
+    "conditional_rule": null,
+    "mandatory": true
+   },
+   {
+    "document_type": "other",
+    "text": "Yellow Fever vaccination certificate.",
+    "conditional_rule": "Applicants who come from or live in Africa.",
+    "mandatory": false
+   },
+   {
+    "document_type": "reference",
+    "text": "Recommendation letter from a potential research supervisor at the same partner university the applicant chooses, in English or Bahasa.",
+    "conditional_rule": "Doctoral applicants only.",
+    "mandatory": false
+   },
+   {
+    "document_type": "statement",
+    "text": "Statement of purpose (dissertation proposal): purpose of study, how the interest in studying in Indonesia and the chosen research topic arose, and plans for the academic future. In English or Bahasa.",
+    "conditional_rule": "Doctoral applicants only.",
+    "mandatory": false
+   },
+   {
+    "document_type": "other",
+    "text": "Complete the online application form. Scan all documents as .jpeg or .jpg, at most 300 kb per file. One applicant may have only one account, so check that everything is complete and correct before finishing registration.",
+    "conditional_rule": null,
+    "mandatory": true
+   }
+  ],
+  "application_steps": [
+   {
+    "phase": "apply",
+    "title": "Download the KNB Offering Letter from the KNB website",
+    "detail": "All applications are online through the KNB Scholarship website. Download the KNB Scholarship Offering Letter. Collect information on the universities and programmes first, because the university and programme cannot be changed once you are admitted.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   },
+   {
+    "phase": "apply",
+    "title": "Request the recommendation letter from the Indonesian Embassy",
+    "detail": "Contact the Indonesian Embassy or Consulate General of your country of origin (any Indonesian embassy accredited to your country if none is there) and send the offering letter, passport, CV, English test, employer and academic recommendation letters, certificates and transcripts, medical report and, for doctoral applicants, the supervisor letter and statement of purpose. The embassy reviews grades, diploma, institution, work history and document validity, runs background checks and may interview you, then issues the letter if you pass.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   },
+   {
+    "phase": "apply",
+    "title": "Register online and upload all documents",
+    "detail": "With the embassy letter signed in the selection year, register on the KNB website and upload the scanned documents (.jpg or .jpeg, up to 300 kb each) and the video link. One account per applicant. For 2026/2027 the application window was 2 February to 31 March 2026.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   },
+   {
+    "phase": "selection",
+    "title": "Administration selection by the embassy and the Directorate",
+    "detail": "Documents are verified by the Indonesian Embassy, the Ministry of Higher Education, Science and Technology and the university. 2026 schedule: administration selection by the Indonesian Embassy 6 to 17 April 2026; administration selection by the Directorate of Institutional Affairs 20 to 30 April 2026.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   },
+   {
+    "phase": "selection",
+    "title": "Academic selection, interview and psychological test",
+    "detail": "The universities carry out academic selection, which includes an online interview and a psychological test for potential candidates. 2026 schedule: 4 to 22 May 2026.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   },
+   {
+    "phase": "selection",
+    "title": "Results are published online",
+    "detail": "Results are shown on the KNB website, sent to the registered email, and announced through the Indonesian publication network. The 2026 announcement was scheduled for 19 June 2026, and the KNB site posted further batch announcements for 2026. Awardees cannot change university or programme after confirmation.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   },
+   {
+    "phase": "after_award",
+    "title": "Re-register and prepare immigration documents",
+    "detail": "Re-registration was 22 to 26 June 2026. Then the immigration documents for the student visa were submitted from 20 July to 21 August 2026.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   },
+   {
+    "phase": "after_award",
+    "title": "Arrive in Indonesia and start Indonesian language classes",
+    "detail": "Arrival was scheduled for 24 to 31 August 2026 and the Indonesian language (BIPA) programme started in September 2026. BIPA lasts up to one year and must be passed before academic study; academic classes are in Bahasa Indonesia at regular classes. A preparatory programme may follow, set by the university.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   },
+   {
+    "phase": "after_award",
+    "title": "Study, keep good results, and return home on time",
+    "detail": "Awardees are expected to keep a good academic record. All research is held in Indonesia. They cannot bring family or marry during studies, and must return home within 60 days after the programme ends. Withdrawing or failing to meet requirements after selection leads to blacklisting and possible repayment of funds received.",
+    "source_url": "https://drive.google.com/file/d/12ue18PSUyGxby7mzDY7XlIXQx6npxwcs/view?usp=sharing"
+   }
+  ],
+  "not_stated": [
+   "Amounts of the settlement allowance, monthly living allowance and research and book allowance (the guidelines name them without figures)",
+   "A list of eligible countries (the guideline says home countries are chosen on advice of the Ministry of Foreign Affairs)",
+   "Number of scholarships offered",
+   "A closing time of day for the application window",
+   "How many applicants proceed at each selection stage, or the scoring criteria for academic selection",
+   "Obligations after return home such as service periods (only the return-home deadline and blacklisting rules are stated)"
+  ],
+  "fetch_problems": [
+   "KNB site pages (home and post pages) load their text by script, so WebFetch returned only 'Loading'. The site's own public data feed was read instead, plus the official PDFs. The individual 2026 announcement posts (batches I to IV) were not read, so result counts and dates beyond the guideline schedule are not confirmed.",
+   "The 2026 guidelines are hosted on Google Drive (linked from the official KNB site). The file was downloaded and read directly. The key pages of the 2025 file are images and were read as page images.",
+   "The separate 'Application Information' second file on the KNB site is a 5-page image-only PDF with no text layer and was not read; the infographic and the FAQ Drive link were not opened."
+  ],
+  "notes": [
+   "Corrections to stored data: age limits are 21 (bachelor), 35 (master), 40 (doctorate), not 25/35/40; host universities number 47 in 2026 (stored data said 34, from 2025). The stored 'universities' list is the 2025 list of 34 and should be replaced by the 47 named in institutions_note.",
+   "Stored statement 'Minimum GPA 2.75 bachelor, 3.00 master and doctoral' is confirmed by the 2026 FAQ. Stored English scores are replaced by the per-level minimums.",
+   "Passport validity: the requirements say valid at least until 31 December 2027, the FAQ says at least 2 years. Both are stated in eligibility; meeting both is safest.",
+   "The official site's landing page still shows older text: 'Maximum age is 26 years old' under a bachelor highlight and IBT TOEFL 80 / IELTS 6.0 / TOEIC 700. It disagrees with the 2026 guidelines, which are used here.",
+   "The 2026 application round closed on 31 March 2026; the site data shows the 2026 period as closed. Dates for the next call are not on the pages read.",
+   "Stored 'teaching_language: Indonesian' is confirmed. Applied bachelor (7 entries) appear in the 2026 annex as a separate programme type and are not listed under bachelor here.",
+   "Contact: Directorate of Institutional Affairs, Directorate General of Higher Education, 6th Floor Building D, Jalan Jenderal Sudirman, Senayan, Jakarta 10270; email knb@kemdiktisaintek.go.id."
+  ]
+ }
+]

@@ -24,6 +24,21 @@ class LandingController extends Controller
         return $this->show('funding', $funding);
     }
 
+    public function subject(string $subject)
+    {
+        return $this->show('subject', $subject);
+    }
+
+    public function from(string $country)
+    {
+        return $this->show('from', $country);
+    }
+
+    public function open()
+    {
+        return $this->show('open', 'any-nationality');
+    }
+
     private function show(string $type, string $slug)
     {
         $page = $this->landing->find($type, $slug);

@@ -1,0 +1,71 @@
+[{
+  "external_key": "kz-kimep-international-students-grant-2026",
+  "checked_on": "2026-11-13",
+  "sources": [
+    {"url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad", "publisher": "KIMEP University, Financial Aid", "publisher_type": "university", "note": "Grant page: eligibility, 10 grants, 50% tuition, documents, how to apply, retention and exclusions (2026-2027 call)"},
+    {"url": "https://www.kimep.kz/prospective-students/en/financial-aid/", "publisher": "KIMEP University, Financial Aid", "publisher_type": "university", "note": "General financial aid rules: competition, no guarantee of aid, registration form, office contacts"},
+    {"url": "https://www.kimep.kz/prospective-students/en/financial-aid/results/", "publisher": "KIMEP University, Financial Aid", "publisher_type": "university", "note": "Grant results list for 2026-2027 (valid as of 18 August 2026); no ranking method given"},
+    {"url": "https://www.kimep.kz/prospective-students/en/financial-aid/funding-opportunities/", "publisher": "KIMEP University, Financial Aid", "publisher_type": "university", "note": "Tuition payment options and other funding sources; no grant rules"},
+    {"url": "http://www.kimep.kz/prospective-students/en/high-school-graduates/", "publisher": "KIMEP University, Admissions", "publisher_type": "university", "note": "Admission steps for school and college graduates: online application, medical documents, English placement, acceptance and contract"},
+    {"url": "http://www.kimep.kz/prospective-students/en/high-school-graduates/application/", "publisher": "KIMEP University, Admissions", "publisher_type": "university", "note": "Application deadlines for Spring, Summer and Fall 2027 intakes"}
+  ],
+  "summary": "KIMEP University in Almaty, Kazakhstan, offers a limited number of tuition grants to international students who start a bachelor's programme straight after finishing secondary or vocational school. The page I read is the 2026-2027 call: 10 grants, each covering half of tuition for four academic years. Applicants must not be citizens of Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan or Uzbekistan, and need a school certificate average of 4.50 out of 5.00 and a stated level of English. The grant does not cover living costs.",
+  "eligibility_notes": "Citizenship: any country except Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan and Uzbekistan (citizens of those countries fall under other KIMEP grants).\n\nEducation: you must be a 2026 graduate of secondary or vocational school (the page's wording on this line is short and ends with the year). Your school certificate must show an average of at least 4.50 out of 5.00 (90%); every grade on every page of the certificate counts.\n\nEnglish: you need one of IELTS Academic 5.5 with no band below 5.0; TOEFL iBT 3.5 (Reading 3.5, Listening 3, Speaking 3, Writing 3); Duolingo 95 with no section below 90; CEFR B2; Cambridge FCE 160; LanguageCert Academic 60; or PTE Academic 39. Note that the page lists a certificate as 'if available' in the documents, so ask the Financial Aid Office what to do if you have no certificate yet.\n\nExtra considerations: the page mentions national or international academic achievements in the last three years (olympiad or competition prizes), and says the Financial Aid Office may add criteria such as English level, grades for classes 5 to 11 or 12, or an interview. KIMEP says it does not guarantee aid to every applicant and may change terms, criteria and procedures.\n\nTo keep the grant: take a full load in both fall and spring (at least 4 courses or 12 credits); keep a GPA of at least 3.50 after each semester (3.00 for the Law BLLB and International Law BIL programmes); retaken and withdrawn courses do not count. The page does not say what happens if you fall below these limits.",
+  "age_experience_notes": "",
+  "funding_summary": "The grant covers 50% of tuition for 4 academic years and cannot be extended. It does not cover a stipend, housing, student and medical fees, fines, library fees, deposits or other charges. It is held only while the load and GPA conditions are met.",
+  "programmes_note": "The grant page does not limit the grant to a field; it is for undergraduate (bachelor's) entry at KIMEP. Law (BLLB) and International Law (BIL) have a lower GPA threshold of 3.00 for keeping the grant. No programme list is given on the grant page.",
+  "institutions_note": "KIMEP University in Almaty, Kazakhstan only.",
+  "levels": [
+    {
+      "code": "bachelor",
+      "confirmed": true,
+      "summary": {"detail": "Undergraduate (bachelor's) entry at KIMEP for 2026 secondary and vocational school graduates. 10 grants of 50% of tuition, each held for 4 academic years without extension. Teaching language is English; classes are taught in English and English level decides placement (a Foundation programme with three English levels exists). The grant page names no specific programme.", "source_text": "International Students Grant (Undergraduate)", "url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"},
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": ["master", "doctorate", "postdoctoral", "diploma"],
+  "catalogue_url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad",
+  "benefits": [
+    {"type": "tuition", "coverage": "partial", "limit_text": "50% of tuition for 4 academic years (not extendable)", "conditions": "Kept only while you take at least 4 courses or 12 credits in fall and spring and keep GPA of at least 3.50 after each semester (3.00 for Law BLLB and International Law BIL); retaken and withdrawn courses do not count. You pay the other 50% of tuition."},
+    {"type": "living_allowance", "coverage": "not_covered", "limit_text": "No stipend", "conditions": null},
+    {"type": "accommodation", "coverage": "not_covered", "limit_text": "Housing is not covered", "conditions": null},
+    {"type": "insurance", "coverage": "not_covered", "limit_text": "Student and medical fees are not covered", "conditions": null},
+    {"type": "other", "coverage": "not_covered", "limit_text": "Fines, library fees, deposits and other charges are not covered", "conditions": null}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "Completed online registration form for the grant, in the English version of the KIMEP financial aid registration system. This is separate from the admission application.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "passport", "text": "Electronic copy of your ID or passport.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "language_certificate", "text": "Valid copy of an English test certificate (IELTS Academic, TOEFL iBT, Duolingo, CEFR, Cambridge FCE, LanguageCert Academic or PTE Academic).", "conditional_rule": "Listed on the page for applicants who have one", "mandatory": false},
+    {"document_type": "transcript", "text": "Copy of your school certificate (attestat) together with the appendix showing all grades.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Copies of certificates for prizes in national or international olympiads and competitions from the last three years.", "conditional_rule": "If you have any", "mandatory": false},
+    {"document_type": "other", "text": "Separate KIMEP admission steps (not the grant form): online application with scanned ID, English certificates and a photo; school certificate and appendix; medical documents (form 075/u, fluorography, vaccination card); English placement test or a valid certificate; and a signed education services contract after acceptance. The admission page is written mainly for Kazakhstan citizens, so ask the admissions office what applies to foreign citizens.", "conditional_rule": "Admission, not the grant", "mandatory": false}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Check you fit the grant rules", "detail": "You must be a 2026 secondary or vocational school graduate, not a citizen of Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan or Uzbekistan, with a school certificate average of at least 4.50 out of 5.00 and one of the English test levels listed. The call I read is for 2026 entry; no 2027 call has been announced.", "source_url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"},
+    {"phase": "apply", "title": "Fill in the grant registration form and upload documents", "detail": "Complete the registration form in the English version of the financial aid system and upload your ID or passport, English test certificate if you have one, school certificate with appendix, and any competition prize certificates from the last three years. The 2026 call accepted applications up to and including 12 July 2026.", "source_url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"},
+    {"phase": "apply", "title": "Apply for KIMEP admission separately", "detail": "Financial aid is reviewed separately from admission and admission does not guarantee a grant. Apply through the KIMEP online application, send the admission documents, and take the English placement test unless you hold a valid certificate that exempts you. The admissions deadlines page lists 15 August 2027 as the closing date for bachelor's applicants for Fall 2027.", "source_url": "http://www.kimep.kz/prospective-students/en/high-school-graduates/"},
+    {"phase": "selection", "title": "Competition for the 10 grants", "detail": "The financial aid page says grants are given through a competition that looks at academic performance and national and international achievements from the past three years. The Financial Aid Office may add criteria such as English level, grades for classes 5 to 11 or 12, or an interview. No ranking method or timetable is published for this grant.", "source_url": "https://www.kimep.kz/prospective-students/en/financial-aid/"},
+    {"phase": "selection", "title": "Results", "detail": "KIMEP publishes a results page by study level and award percentage; the 2026-2027 list was valid as of 18 August 2026 and does not show a separate list for the international students grant. Contact the Financial Aid Office for your own result.", "source_url": "https://www.kimep.kz/prospective-students/en/financial-aid/results/"},
+    {"phase": "after_award", "title": "Accept admission and sign the contract", "detail": "If admitted, the acceptance arrives by email and in the applicant portal. You sign the education services contract and bring two signed copies to the Admissions Committee before course registration closes, then register for courses.", "source_url": "http://www.kimep.kz/prospective-students/en/high-school-graduates/"},
+    {"phase": "after_award", "title": "Keep the grant for four years", "detail": "Take at least 4 courses or 12 credits in each fall and spring semester and keep a GPA of at least 3.50 after each semester (3.00 for Law BLLB and International Law BIL). Retaken and withdrawn courses do not count. The grant lasts 4 academic years and cannot be extended.", "source_url": "https://www.kimep.kz/prospective-students/en/financial-aid/scholarships-for-newly-admitted-students/?degree=ugrad"}
+  ],
+  "not_stated": [
+    "How the 10 winners are ranked and scored, and when winners are told",
+    "What happens if a student falls below the credit or GPA rules (loss, probation or reduction)",
+    "Whether the 3.50 GPA is a semester GPA or a cumulative GPA (the page says a GPA of at least 3.50 after each semester)",
+    "The closing date and opening date of the 2027 call (only the 2026 call, closing 12 July 2026, is on the page)",
+    "Tuition amounts on the pages read",
+    "Whether the grant can be combined with other KIMEP aid for international students",
+    "A required interview (only said that the Financial Aid Office may add one)",
+    "Medical, visa and registration rules for foreign students (the admission page read is written for Kazakhstan citizens)"
+  ],
+  "fetch_problems": [
+    "The older admission policy PDF found for KIMEP is for academic year 2013-14 and was not used. The page language on some KIMEP pages is Kazakh, so wording was checked from the English page text returned by the fetch tool.",
+    "The results page and the grant page are in part Kazakh-language; the fetch tool translated them."
+  ],
+  "notes": [
+    "The stored data said 'semester GPA'. The official page says a GPA of at least 3.50 'after each semester' and does not clearly say semester or cumulative; I kept the page's wording.",
+    "Stored data said the grant requires 'TOEFL iBT 3.5, Duolingo 95, CEFR B2'. The page also lists Cambridge FCE 160, LanguageCert Academic 60 and PTE Academic 39 and gives TOEFL section minimums (Reading 3.5, Listening 3, Speaking 3, Writing 3); TOEFL scoring on the page appears to use the newer 1 to 6 scale. Duolingo has a no-section-below-90 rule.",
+    "The stored intake text says the 2027 call is not announced; that is still the case on the pages I read."
+  ]
+}]
