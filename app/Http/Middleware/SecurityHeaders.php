@@ -16,6 +16,11 @@ class SecurityHeaders
         $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
         $response->headers->set('Referrer-Policy', 'strict-origin-when-cross-origin');
         $response->headers->set('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=()');
+        // A baseline policy that does not restrict scripts or styles (the pages use inline ones): other sites cannot frame ours, a planted <base> or <object> tag has no effect.
+        $response->headers->set('Content-Security-Policy', "frame-ancestors 'self'; base-uri 'self'; object-src 'none'");
+        $response->headers->set('Cross-Origin-Opener-Policy', 'same-origin-allow-popups');
+        $response->headers->set('X-Permitted-Cross-Domain-Policies', 'none');
+        header_remove('X-Powered-By'); // the PHP version is of use only to someone looking for a known flaw
         if ($request->secure() && app()->isProduction()) {
             $response->headers->set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
         }

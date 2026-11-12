@@ -14,6 +14,7 @@ use App\Http\Controllers\EmailWebhookController;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoicePdfController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Partner\AgentAccountController;
 use App\Http\Controllers\Partner\AgentApplicationController;
@@ -37,6 +38,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class)->name('home');
 
 Route::get('/scholarships', [ScholarshipController::class, 'index'])->name('scholarships.index');
+// Landing pages made from the published scholarships (App\Domain\Seo\Landing). They come before the two-part scholarship address below so "in" and "for" are never read as a programme.
+Route::get('/scholarships/in/{country}', [LandingController::class, 'destination'])->where('country', '[a-z0-9-]+')->name('landing.destination');
+Route::get('/scholarships/for/{degree}', [LandingController::class, 'degree'])->where('degree', 'bachelor|masters|phd|postdoctoral|diploma')->name('landing.degree');
+Route::get('/scholarships/{funding}', [LandingController::class, 'funding'])->where('funding', 'fully-funded|partial-funding|tuition-covered')->name('landing.funding');
 Route::get('/scholarships/{programme:slug}/{cycle}', [ScholarshipController::class, 'show'])->middleware('throttle:240,1')->name('scholarships.show'); // each view writes an analytics row, so the rate is capped per address
 Route::get('/go/{route}', [ScholarshipController::class, 'out'])->middleware('throttle:120,1')->name('scholarships.out');
 

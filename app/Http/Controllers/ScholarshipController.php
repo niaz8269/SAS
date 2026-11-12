@@ -9,6 +9,7 @@ use App\Models\SavedScholarship;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
 use App\Models\ScholarshipRoute;
+use App\Support\Crawler;
 use Illuminate\Support\Facades\DB;
 
 class ScholarshipController extends Controller
@@ -37,14 +38,19 @@ class ScholarshipController extends Controller
             return redirect()->route('scholarships.show', [$programme->slug, $current], 301);
         }
 
-        AnalyticsEvent::create(['name' => 'scholarship_view', 'cycle_id' => $cycle->id]);
+        // A view is a person reading the page: not a search-engine crawler, not a HEAD check (each of those is also a database write on a shared SQLite file).
+        if (Crawler::isHumanView(request())) {
+            AnalyticsEvent::create(['name' => 'scholarship_view', 'cycle_id' => $cycle->id]);
+        }
 
         $newer = $cycle->publication_state === PublicationState::Archived
             ? ScholarshipCycle::visible()->where('programme_id', $programme->id)->where('intake_year', '>', $cycle->intake_year)->orderBy('intake_year')->first()
             : null;
         $related = ScholarshipCycle::visible()->where('id', '!=', $cycle->id)
             ->whereHas('destinations', fn ($q) => $q->whereIn('countries.id', $cycle->destinations->pluck('id')))
-            ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities'])->limit(3)->get();
+            ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities'])->limit(12)->get()
+            // Same destination first, and among those the ones that share a degree level: six, so a reader and a crawler both have more to follow.
+            ->sortByDesc(fn ($r) => $r->degreeLevels->pluck('id')->intersect($cycle->degreeLevels->pluck('id'))->count())->take(6)->values();
 
         $user = auth()->user();
         $match = $user ? $matching->evaluate($user->studentProfile, $cycle) : null;

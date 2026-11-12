@@ -31,7 +31,8 @@
             @endif
 
             <section class="mt-8" aria-labelledby="dest-scholarships"><div class="flex flex-wrap items-end justify-between gap-2"><h2 id="dest-scholarships" class="section-title">Scholarships in {{ $country->name }}</h2>
-                <a class="text-sm font-semibold text-navy-700 underline" href="{{ route('scholarships.index', ['destination' => [$country->slug]]) }}">See all &rarr;</a></div>
+                @php($landingPage = app(\App\Domain\Seo\Landing::class)->forCountry($country->slug))
+                <a class="text-sm font-semibold text-navy-700 underline" href="{{ $landingPage ? $landingPage['url'] : route('scholarships.index', ['destination' => [$country->slug]]) }}">See all {{ $landingPage ? $landingPage['count'].' ' : '' }}&rarr;</a></div>
                 @if ($cycles->isEmpty())
                     <p class="card mt-4 p-6 text-sm text-muted">No published scholarships for {{ $country->name }} yet. <a class="text-navy-700 underline" href="{{ route('contact', ['category' => 'advisory']) }}">Ask us</a> and we will look into it.</p>
                 @else

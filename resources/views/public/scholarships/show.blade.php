@@ -5,9 +5,21 @@
     $institutions = $cycle->universities->isNotEmpty() ? $cycle->universities : $programme->universities;
     $title = $programme->title.' '.$cycle->keyLabel();
     $metaTitle = \Illuminate\Support\Str::limit($programme->title, 48, '…', true).' '.$cycle->intake_year; // search results show about 60 characters: the full name stays in the heading
+    if (mb_strlen($metaTitle.': deadline and requirements') <= 58) { $metaTitle .= ': deadline and requirements'; } // the two things people search for, added only when the title is short enough
+    $facts = app(\App\Domain\Seo\ScholarshipFacts::class);
+    $glance = $facts->glance($cycle);
+    $faq = $facts->faq($cycle);
+    $landing = app(\App\Domain\Seo\Landing::class)->pages();
+    // Landing pages this scholarship belongs to: its destinations and degree levels (only those that have a page).
+    $degreeWords = ['bachelor' => 'bachelor', 'master' => 'masters', 'doctorate' => 'phd', 'postdoctoral' => 'postdoctoral', 'diploma' => 'diploma'];
+    $browse = $landing->filter(fn ($p) => ($p['type'] === 'in' && $cycle->destinations->contains('slug', $p['slug']))
+        || ($p['type'] === 'for' && $cycle->degreeLevels->contains(fn ($d) => ($degreeWords[$d->code] ?? null) === $p['slug']))
+        || ($p['type'] === 'funding' && $p['slug'] === 'fully-funded' && $cycle->fundingLabel() === 'Fully funded'))->values();
+    $guides = $cycle->destinations->filter(fn ($d) => $d->is_destination && $d->guidance_published);
 @endphp
-<x-layouts.public :title="$metaTitle" :description="\App\Support\Html::text($cycle->summary ?: $programme->summary, 155)">
+<x-layouts.public :title="$metaTitle" :description="\App\Support\Html::text($cycle->summary ?: $programme->summary, 155) ?: $facts->description($cycle)">
     <x-slot:head>
+        @if ($faq)<x-jsonld :data="['@type' => 'FAQPage', 'mainEntity' => collect($faq)->map(fn ($qa) => ['@type' => 'Question', 'name' => $qa[0], 'acceptedAnswer' => ['@type' => 'Answer', 'text' => $qa[1]]])->all()]" />@endif
         <script type="application/ld+json">{!! json_encode(['@@context' => 'https://schema.org', '@type' => 'BreadcrumbList', 'itemListElement' => [
             ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')],
             ['@type' => 'ListItem', 'position' => 2, 'name' => 'Scholarships', 'item' => route('scholarships.index')],
@@ -34,6 +46,16 @@
             <img src="{{ $programme->imageUrl($cycle) }}" alt="" class="mt-4 aspect-video w-full max-w-xl rounded-xl border border-line object-cover" width="960" height="540">
             <p class="mt-1 text-lg text-muted">{{ $programme->funder?->name }} @if($cycle->destinations->isNotEmpty()) · {{ $cycle->destinations->pluck('name')->implode(', ') }} @endif</p>
             @if ($cycle->summary)<div class="rich mt-4">{!! \App\Support\Html::rich($cycle->summary) !!}</div>@endif
+            <div class="mt-4 max-w-3xl rounded-xl border border-line bg-navy-50/60 p-4">
+                <h2 class="text-base font-bold">At a glance</h2>
+                <p class="mt-1 text-base leading-7">{{ $glance }}</p>
+            </div>
+            @if ($browse->isNotEmpty() || $guides->isNotEmpty())
+                <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+                    @foreach ($guides as $g)<a class="font-semibold text-navy-700 underline" href="{{ route('destinations.show', $g) }}">Study in {{ $g->name }}: costs and guidance</a>@endforeach
+                    @foreach ($browse as $b)<a class="font-semibold text-navy-700 underline" href="{{ $b['url'] }}">More {{ mb_strtolower($b['label']) }}</a>@endforeach
+                </p>
+            @endif
         </div>
     </section>
 
@@ -198,6 +220,15 @@
                     @endforeach</ul>
                 @endif
             </section>
+
+            @if ($faq)
+                <section aria-labelledby="quick-answers" class="card p-6">
+                    <h2 id="quick-answers" class="text-xl font-bold">Quick answers</h2>
+                    <dl class="mt-3 space-y-4">
+                        @foreach ($faq as [$q, $a])<div><dt class="font-semibold">{{ $q }}</dt><dd class="mt-1 text-sm leading-6">{{ $a }}</dd></div>@endforeach
+                    </dl>
+                </section>
+            @endif
 
             <section aria-labelledby="verification" class="card p-6">
                 <h2 id="verification" class="text-xl font-bold">Sources and verification</h2>

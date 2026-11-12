@@ -39,12 +39,13 @@ class Sitemap
     /** Cache keys a change to published content must clear. */
     public static function cacheKeys(): array
     {
-        return array_merge(['sitemap', 'blog.feed'], array_map(fn ($s) => 'sitemap.'.$s, array_keys(self::SECTIONS)));
+        return array_merge(['sitemap', 'blog.feed', 'landing.pages'], array_map(fn ($s) => 'sitemap.'.$s, array_keys(self::SECTIONS)));
     }
 
     public static function forget(): void
     {
         Cache::deleteMultiple(self::cacheKeys());
+        Cache::forever('landing.version', microtime(true)); // the written text of the landing pages is cached under this version, so a new one makes them rewrite
     }
 
     /** The XML index that lists one file per section. */
@@ -129,6 +130,8 @@ class Sitemap
             return collect(); // a list page with nothing on it is not worth a search engine's visit
         }
         $entries = collect([[route('scholarships.index'), $cycles->pluck('updated_at')->filter()->max(), 'All scholarships']]);
+        // Landing pages (by destination, degree level, funding) exist only while they have enough scholarships, so they come and go with the data.
+        app(Landing::class)->pages()->each(fn ($p) => $entries->push([$p['url'], $p['updated'] ? Carbon::parse($p['updated']) : null, $p['label']]));
         $cycles->each(fn ($c) => $entries->push([route('scholarships.show', [$c->programme->slug, $c->slug]), $c->updated_at, $c->label()]));
 
         return $entries;

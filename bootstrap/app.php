@@ -2,6 +2,7 @@
 
 use App\Http\Middleware\EnsureAgent;
 use App\Http\Middleware\EnsureUserIsActive;
+use App\Http\Middleware\NoSessionForCrawlers;
 use App\Http\Middleware\ResolveStudentContext;
 use App\Http\Middleware\SecurityHeaders;
 use Illuminate\Foundation\Application;
@@ -18,7 +19,8 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->alias(['active' => EnsureUserIsActive::class, 'student.context' => ResolveStudentContext::class, 'agent' => EnsureAgent::class]);
         $middleware->preventRequestForgery(except: ['webhooks/*']); // authenticated by HMAC signature instead
-        $middleware->web(append: [SecurityHeaders::class, EnsureUserIsActive::class]);
+        // First in the group, so it runs before the session starts (see the class for why crawlers get an in-memory session).
+        $middleware->web(prepend: [NoSessionForCrawlers::class], append: [SecurityHeaders::class, EnsureUserIsActive::class]);
         // Links in emails (password reset, verification) are built from the request host, so only the site's own host names are answered.
         // Local development and the automated tests are left alone by the framework.
         $middleware->trustHosts(at: fn () => array_merge(

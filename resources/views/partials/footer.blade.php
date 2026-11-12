@@ -52,6 +52,17 @@
             </ul>
         </div>
     </div>
+    @php($popular = app(\App\Domain\Seo\Landing::class)->pages()->sortByDesc('count')->take(14))
+    @if ($popular->isNotEmpty())
+        <nav aria-label="Popular scholarship searches" class="border-t border-navy-800">
+            <div class="container-page py-6">
+                <h2 class="mb-3 text-sm font-semibold text-white">Popular scholarship searches</h2>
+                <ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                    @foreach ($popular as $p)<li><a class="hover:underline" href="{{ $p['url'] }}">{{ $p['label'] }}</a></li>@endforeach
+                </ul>
+            </div>
+        </nav>
+    @endif
     <div class="border-t border-navy-800">
         <p class="container-page py-4 text-xs text-navy-300">
             &copy; {{ now()->year }} {{ config('sas.brand.name') }}. Scholarship details are summarised from official sources and can change: always confirm the latest details with us or the funder.

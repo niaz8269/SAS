@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Domain\Catalogue\UniversityOverview;
 use App\Models\University;
 use App\Models\UniversityProgramme;
 use Illuminate\Http\Request;
@@ -40,8 +41,11 @@ class CatalogueController extends Controller
         $query = $this->programmeFilters($university->programmes()->where('published', true), $data);
         $counts = $university->programmes()->where('published', true)->selectRaw('level, count(*) as c')->groupBy('level')->pluck('c', 'level');
 
+        $university->load('country');
+
         return view('public.universities.show', [
-            'university' => $university->load('country'),
+            'university' => $university,
+            'overview' => app(UniversityOverview::class)->for($university, collect([$university->city, $university->province])->filter()->unique()->implode(', ')),
             'programmes' => $query->orderBy('level')->orderByRaw('COALESCE(name_en, name_zh)')->paginate(40)->withQueryString(),
             'levelCounts' => $counts,
             'filters' => ['q' => trim((string) ($data['q'] ?? '')), 'level' => $data['level'] ?? '', 'language' => $data['language'] ?? '', 'csc' => (bool) ($data['csc'] ?? false)],

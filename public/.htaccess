@@ -5,6 +5,17 @@
 
     RewriteEngine On
 
+    # Defence against a planted file: the only script the web server may run from this folder is the front controller (index.php).
+    # Any other .php, .phtml or .phar address is refused, wherever the file sits (also under /storage, where uploaded pictures go).
+    RewriteCond %{REQUEST_URI} \.(php[0-9]?|phtml|phar)$ [NC]
+    RewriteCond %{REQUEST_URI} !^/index\.php$
+    RewriteRule ^ - [F,L]
+
+    # No folder is ever listed. ("Options -Indexes" above is skipped on hosts that do not load mod_negotiation, which is how /images/ and /storage/ were listed.)
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteCond %{REQUEST_URI} !^/?$
+    RewriteRule ^ - [F,L]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

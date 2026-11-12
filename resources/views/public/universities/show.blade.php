@@ -48,6 +48,23 @@
         </div>
     </section>
 
+    @if ($overview && $programmes->currentPage() === 1) {{-- the summary belongs to the page itself, not to every numbered page of the list --}}
+        <section class="container-page py-8" aria-labelledby="about-h">
+            <h2 id="about-h" class="section-title">About {{ $university->name }}</h2>
+            @if ($overview['paragraphs'])
+                <div class="mt-3 max-w-3xl space-y-2 text-base leading-7 text-ink">
+                    @foreach ($overview['paragraphs'] as $p)<p>{{ $p }}</p>@endforeach
+                </div>
+            @endif
+            @if ($overview['nearby']->isNotEmpty())
+                <h3 class="mt-6 text-lg font-bold">More universities in {{ $overview['nearbyIn'] }}</h3>
+                <ul class="mt-2 flex flex-wrap gap-2 text-sm">
+                    @foreach ($overview['nearby'] as $n)<li><a class="badge-neutral hover:underline" href="{{ route('universities.show', $n->slug) }}">{{ $n->name }}</a></li>@endforeach
+                </ul>
+            @endif
+        </section>
+    @endif
+
     @if ($feeStructures->isNotEmpty())
         @include('public.universities._medicine', ['place' => $place])
     @endif

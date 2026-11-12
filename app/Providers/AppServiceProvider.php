@@ -43,6 +43,13 @@ class AppServiceProvider extends ServiceProvider
 {
     public function register(): void
     {
+        // The cache (and the request rate limiter that uses it) is rebuildable data, so it does not belong in the single SQLite file the site's real data lives in:
+        // every cached page and every rate-limit count was a write that locked that file, and a busy moment gave visitors "database is locked" errors.
+        // Files in storage/framework/cache take its place on the live site. (Sessions stay in the database on purpose: signing a person out works by deleting their row.)
+        if ($this->app->isProduction() && config('cache.default') === 'database') {
+            config(['cache.default' => 'file']);
+        }
+
         $this->app->bind(Scanner::class, function () {
             if (config('sas.uploads.scanner') === 'fake') {
                 abort_if($this->app->isProduction(), 500, 'The fake scanner must never run in production.');
