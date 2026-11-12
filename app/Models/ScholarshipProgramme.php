@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ * @property string|null $image_path The programme's own picture from the media library (column added by 2026_11_04_000001_scholarship_programme_images).
+ */
 class ScholarshipProgramme extends Model
 {
     use HasFactory;

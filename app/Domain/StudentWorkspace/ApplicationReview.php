@@ -24,27 +24,31 @@ class ApplicationReview
     /** @return list<string> what still stands in the way of sending the application; empty means it can be sent */
     public function problems(ApplicationPlan $plan): array
     {
-        $plan->loadMissing('cycle.degreeLevels', 'cycle.destinations', 'cycle.programme.hostCountry');
-        $problems = [];
         if (! $plan->isEditable()) {
             return ['This application is already with SAS.'];
         }
-        if ($plan->cycle->degreeLevels->count() > 1 && ! $plan->degree_level_id) {
-            $problems[] = 'Choose the degree you are applying for (Degree and language).';
-        }
-        if (count($this->languages->optionsFor($plan->cycle)) > 1 && ! $plan->study_language) {
-            $problems[] = 'Choose the language you want to study in (Degree and language).';
-        }
-        $missing = $this->forms->missing($this->forms->formFor($plan->user));
-        if ($missing) {
-            $problems[] = 'Your details are not complete: '.implode(', ', array_slice($missing, 0, 6)).(count($missing) > 6 ? ' and '.(count($missing) - 6).' more' : '').'.';
-        }
-        $docs = $this->requirements->progress($this->requirements->forPlan($plan));
-        if ($docs['missing']) {
-            $problems[] = 'Mandatory documents are missing (Documents): '.implode(', ', $docs['missing']).'. Upload each one, or tick "I cannot provide it now" and write the reason.';
-        }
 
-        return $problems;
+        return array_values(array_filter($this->parts($plan)));
+    }
+
+    /**
+     * What is missing in each part of an application, by page: 'level' and 'language' (Degree and language), 'details' (Your details) and 'documents' (Documents).
+     * A part that is complete is null. The pages use this to tick only what is really done, and problems() to say what stops the sending.
+     *
+     * @return array{level: ?string, language: ?string, details: ?string, documents: ?string}
+     */
+    public function parts(ApplicationPlan $plan): array
+    {
+        $plan->loadMissing('cycle.degreeLevels', 'cycle.destinations', 'cycle.programme.hostCountry');
+        $missing = $this->forms->missing($this->forms->formFor($plan->user));
+        $docs = $this->requirements->progress($this->requirements->forPlan($plan));
+
+        return [
+            'level' => $plan->cycle->degreeLevels->count() > 1 && ! $plan->degree_level_id ? 'Choose the degree you are applying for (Degree and language).' : null,
+            'language' => count($this->languages->optionsFor($plan->cycle)) > 1 && ! $plan->study_language ? 'Choose the language you want to study in (Degree and language).' : null,
+            'details' => $missing ? 'Your details are not complete: '.implode(', ', array_slice($missing, 0, 6)).(count($missing) > 6 ? ' and '.(count($missing) - 6).' more' : '').'.' : null,
+            'documents' => $docs['missing'] ? 'Mandatory documents are missing (Documents): '.implode(', ', $docs['missing']).'. Upload each one, or tick "I cannot provide it now" and write the reason.' : null,
+        ];
     }
 
     public function submit(ApplicationPlan $plan, User $actor): ApplicationPlan

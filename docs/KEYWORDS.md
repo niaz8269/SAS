@@ -28,8 +28,10 @@
 ### Why there is no "fully funded scholarships" page yet
 31 published scholarships have funding type "full", but none is marked as verified fully funded (`fully_funded_verified`). By the site's own rule (DIR-04) they are not labelled "Fully funded", so the page `/scholarships/fully-funded` does not exist and no text claims it. When staff verify the covered costs of a call in the Admin, that call is labelled, and the page appears automatically once 3 calls are verified. That is the single highest-value data task for the phrase "fully funded scholarships".
 
-## Suggested wording for the pages you edit in the Admin (Page text)
-The text of these pages is edited in the Admin, so it is yours to approve. Use the phrases once, in plain sentences.
+## Wording for the list pages (applied by a migration on 13 November)
+The wording below is now in the site: the migration `2026_12_11_000001_keyword_wording_for_page_text` rewrites a page text block only while it is still the original text, so anything staff edited in the Admin is left alone. To change a heading or intro later, edit it in the Admin (Page text). Use the phrases once, in plain sentences.
+
+Headings now in the site (an earlier draft of the wording follows below and is superseded by these): "Scholarship directory: scholarships for international students"; "Study destinations: country guides for studying abroad"; "Study abroad services: support beyond the scholarship"; "Resources: scholarship guides and study abroad advice"; "Universities in China for international students"; "Search programmes: degree programmes at universities in China". The home description now begins "Verified scholarships for international students, drawn from official sources...".
 - **Scholarships hub** heading: "Scholarships for international students"; intro: "Search scholarships to study abroad, with the deadline, who can apply and the documents required, each checked against the official source and dated. Filter by destination, degree level, subject and funding."
 - **Universities hub**: "Universities in China for international students": "Browse universities in China that welcome international students, with the programmes they list, the teaching languages (including programmes taught in English), the listed tuition and which programmes are open to Chinese Government Scholarship applicants."
 - **Programmes**: "Search degree programmes at universities in China": "Search bachelor's, master's and doctorate programmes at universities in China by subject, level and teaching language."

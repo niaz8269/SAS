@@ -103,6 +103,22 @@ class ApplyProgressTest extends TestCase
         $this->get(route('student.applications.show', $plan))->assertOk()->assertSee('Needs changes')->assertSee('SAS returned this application');
     }
 
+    public function test_a_tick_in_the_application_bar_means_the_work_of_that_page_is_done(): void
+    {
+        [$student, $plan] = $this->readyPlan();
+        $this->actingAs($student)->get(route('student.applications.materials', $plan))->assertOk()
+            ->assertSee('(done) </span>Your details', false)->assertSee('(done) </span>Documents', false)->assertDontSee('(done) </span>Send to SAS', false);
+
+        // A student who has filled in nothing and uploaded nothing gets no ticks, however far along the pages they are.
+        $other = User::factory()->create();
+        $otherPlan = app(PlanService::class)->create($other, $plan->cycle);
+        $this->actingAs($other)->get(route('student.applications.submit', $otherPlan))->assertOk()
+            ->assertDontSee('(done) </span>Your details', false)->assertDontSee('(done) </span>Documents', false);
+
+        app(ApplicationReview::class)->submit($plan, $student);
+        $this->actingAs($student)->get(route('student.applications.show', $plan))->assertOk()->assertSee('(done) </span>Send to SAS', false);
+    }
+
     public function test_application_pages_use_the_student_menu_with_the_same_four_steps(): void
     {
         [$student, $plan] = $this->readyPlan();

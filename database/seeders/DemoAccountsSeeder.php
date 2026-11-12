@@ -33,7 +33,7 @@ class DemoAccountsSeeder extends Seeder
         $codes = collect(range(1, 8))->map(fn ($i) => sprintf('demo-code-%04d', $i))->all();
 
         // The retired demo staff (editor, reviewer, finance, service manager, specialist) are removed: staff now work in three roles.
-        User::whereIn('email', array_map(fn ($r) => 'demo-'.$r.'@example.test', ['editor', 'reviewer', 'finance', 'service_manager', 'specialist']))->each->delete();
+        User::whereIn('email', array_map(fn ($r) => 'demo-'.$r.'@example.test', ['editor', 'reviewer', 'finance', 'service_manager', 'specialist']))->get()->each->delete();
 
         foreach ([Role::SuperAdmin, Role::Administrator, Role::Advisor] as $role) {
             $user = User::firstOrCreate(['email' => 'demo-'.$role->value.'@example.test'], ['name' => 'Demo '.$role->label(), 'password' => $password]);

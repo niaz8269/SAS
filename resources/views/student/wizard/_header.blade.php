@@ -21,11 +21,16 @@
 @endif
 
 @if ($step > 0)
+    @php
+        // A tick means the work of that page is really done (the same checks decide whether the application can be sent); an application already with SAS has all of them.
+        $parts = $plan->isEditable() ? app(\App\Domain\StudentWorkspace\ApplicationReview::class)->parts($plan) : ['level' => null, 'language' => null, 'details' => null, 'documents' => null];
+        $done = [1 => $parts['level'] === null && $parts['language'] === null, 2 => $parts['details'] === null, 3 => $parts['documents'] === null, 4 => ! $plan->isEditable()];
+    @endphp
     <ol class="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-4" aria-label="Pages of this application">
         @foreach ($steps as $n => [$label, $route])
             <li><a href="{{ $ctx->route($route, $plan) }}" @if ($step === $n) aria-current="step" @endif
-                   class="flex min-h-11 items-center gap-2 rounded-lg border px-3 py-2 text-sm font-semibold transition {{ $step === $n ? 'border-navy-700 bg-navy-700 text-white' : ($step > $n ? 'border-navy-200 bg-navy-50 text-navy-900 hover:bg-navy-100' : 'border-line bg-white text-ink hover:bg-navy-50') }}">
-                @if ($step > $n)<span class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy-700 text-xs text-white" aria-hidden="true">✓</span>@endif{{ $label }}</a></li>
+                   class="flex min-h-11 items-center gap-2 rounded-lg border px-3 py-2 text-sm font-semibold transition {{ $step === $n ? 'border-navy-700 bg-navy-700 text-white' : ($done[$n] ? 'border-navy-200 bg-navy-50 text-navy-900 hover:bg-navy-100' : 'border-line bg-white text-ink hover:bg-navy-50') }}">
+                @if ($done[$n])<span class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full {{ $step === $n ? 'bg-white text-navy-800' : 'bg-navy-700 text-white' }} text-xs" aria-hidden="true">✓</span><span class="sr-only">(done) </span>@endif{{ $label }}</a></li>
         @endforeach
     </ol>
 @endif

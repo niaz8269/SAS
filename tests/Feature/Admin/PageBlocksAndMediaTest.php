@@ -35,9 +35,9 @@ class PageBlocksAndMediaTest extends TestCase
 
     public function test_every_list_page_still_shows_its_original_wording_by_default(): void
     {
-        $this->get('/services')->assertOk()->assertSee('Support beyond the scholarship');
+        $this->get('/services')->assertOk()->assertSee('Study abroad services: support beyond the scholarship');
         $this->get('/destinations')->assertOk()->assertSee('Study destinations')->assertSee('Destination guides will appear here');
-        $this->get('/resources')->assertOk()->assertSee('Practical guides for international students.');
+        $this->get('/resources')->assertOk()->assertSee('Practical guides for international students on scholarships');
         $this->get('/contact')->assertOk()->assertSee('Contact us')->assertSee('Other ways to reach us')->assertSee('Request a consultation');
         $this->get('/scholarships')->assertOk()->assertSee('Scholarship directory');
     }
@@ -51,7 +51,7 @@ class PageBlocksAndMediaTest extends TestCase
             ->assertHasNoFormErrors();
 
         $this->get('/services')->assertSee('What we can do for you')->assertSee('Plain help, no promises.')->assertSee('Meta text for search engines.', false)
-            ->assertDontSee('Support beyond the scholarship');
+            ->assertDontSee('support beyond the scholarship');
     }
 
     public function test_added_blocks_appear_above_or_below_and_can_be_hidden_or_deleted(): void
@@ -147,7 +147,7 @@ class PageBlocksAndMediaTest extends TestCase
         config(['cache.default' => 'file', 'cache.stores.file.path' => storage_path('framework/cache/test-'.uniqid())]);
         \Cache::flush();
         foreach (range(1, 2) as $_) {
-            $this->get('/services')->assertOk()->assertSee('Support beyond the scholarship');
+            $this->get('/services')->assertOk()->assertSee('Study abroad services: support beyond the scholarship');
             $this->get('/')->assertOk()->assertSee('A world of possibilities.');
         }
         \Cache::flush();
