@@ -29,10 +29,13 @@ class LandingController extends Controller
         $page = $this->landing->find($type, $slug);
         abort_if($page === null, 404); // fewer than the minimum number of scholarships: no page, no thin content
 
+        $cycles = $this->landing->query($page)->paginate(24)->withQueryString();
+        abort_if($cycles->currentPage() > max(1, $cycles->lastPage()), 404); // a page number past the end would be an empty page that search engines could index
+
         return view('public.scholarships.landing', [
             'page' => $page,
             'content' => $this->landing->content($page),
-            'cycles' => $this->landing->query($page)->paginate(24)->withQueryString(),
+            'cycles' => $cycles,
             'neighbours' => $this->landing->neighbours($page),
         ]);
     }

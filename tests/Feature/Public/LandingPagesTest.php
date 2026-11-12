@@ -52,6 +52,17 @@ class LandingPagesTest extends TestCase
         $this->assertStringContainsString('"@type":"ItemList"', $page->getContent());
     }
 
+    public function test_a_page_number_past_the_end_is_not_found(): void
+    {
+        foreach (['A', 'B', 'C'] as $x) {
+            $this->cycle($x.' Award', 'Japan');
+        }
+        Cache::flush();
+        $this->get('/scholarships/in/japan')->assertOk();
+        $this->get('/scholarships/in/japan?page=1')->assertOk();
+        $this->get('/scholarships/in/japan?page=2')->assertNotFound();
+    }
+
     public function test_the_page_lists_only_published_scholarships_and_a_draft_does_not_count(): void
     {
         $this->cycle('Alpha Award', 'Japan');
