@@ -105,14 +105,16 @@ class EnquiryController extends Controller
             'contact_preference' => ! empty($data['whatsapp']) ? 'phone' : 'email'];
         $consent = 'I agree that SAS may contact me about this enquiry by email'.(! empty($data['whatsapp']) ? ' or on the WhatsApp number I gave' : '').'.';
 
-        [$enquiry] = $this->record($request, $payload, $consent);
+        // The pop-up's enquiries always go to the enquiries mailbox (and to the staff alert address too, if that is a different one).
+        [$enquiry] = $this->record($request, $payload, $consent, array_unique(array_filter([config('sas.enquiry_email'), config('sas.staff_notification_email')])));
 
         return response()->json(['ok' => true, 'reference' => $enquiry->reference]);
     }
 
     /** Stores an enquiry, then queues the emails. @return array{0: Enquiry, 1: string} the enquiry and its private view link */
-    private function record(Request $request, array $data, string $consentText): array
+    private function record(Request $request, array $data, string $consentText, ?array $notify = null): array
     {
+        $notify ??= array_filter([config('sas.staff_notification_email')]);
         $token = Str::random(40);
         $duplicate = Enquiry::where('email', $data['email'])->where('category', $data['category'])->where('created_at', '>', now()->subDays(7))->first();
 
@@ -139,7 +141,7 @@ class EnquiryController extends Controller
         // Queued after the enquiry is stored. A mail failure is retried by the queue and never rolls the enquiry back.
         $link = route('enquiries.show', ['enquiry' => $enquiry->public_id, 'token' => $token]);
         Mail::to($enquiry->email)->queue(new EnquiryReceived($enquiry, $link));
-        if ($staff = config('sas.staff_notification_email')) {
+        foreach ($notify as $staff) {
             Mail::to($staff)->queue(new StaffEnquiryAlert($enquiry));
         }
 

@@ -6,6 +6,7 @@ use App\Models\Enquiry;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -28,7 +29,11 @@ class StaffEnquiryAlert extends Mailable implements ShouldQueue
 
     public function envelope(): Envelope
     {
-        return new Envelope(subject: 'New enquiry '.$this->enquiry->reference.' ('.$this->enquiry->category.')');
+        // Replying to this email answers the person who asked.
+        return new Envelope(
+            replyTo: [new Address($this->enquiry->email, $this->enquiry->name)],
+            subject: 'New enquiry '.$this->enquiry->reference.' ('.$this->enquiry->category.')',
+        );
     }
 
     public function content(): Content

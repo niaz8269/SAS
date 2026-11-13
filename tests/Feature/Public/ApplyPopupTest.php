@@ -3,6 +3,7 @@
 namespace Tests\Feature\Public;
 
 use App\Mail\EnquiryReceived;
+use App\Mail\StaffEnquiryAlert;
 use App\Models\Enquiry;
 use App\Models\User;
 use Database\Seeders\TaxonomySeeder;
@@ -63,6 +64,13 @@ class ApplyPopupTest extends TestCase
             $this->assertStringContainsString($line, $enquiry->message);
         }
         Mail::assertQueued(EnquiryReceived::class);
+
+        // The pop-up's enquiries always reach the enquiries mailbox, with the visitor's details, and replying answers the visitor.
+        Mail::assertQueued(StaffEnquiryAlert::class, fn (StaffEnquiryAlert $m) => $m->hasTo('enquiry@sas.cas.moe') && $m->hasReplyTo('aisha@example.com'));
+        $html = (new StaffEnquiryAlert($enquiry))->render();
+        foreach (['Aisha Khan', 'aisha@example.com', '+92 300 1234567', 'Nationality: Pakistan'] as $text) {
+            $this->assertStringContainsString($text, $html);
+        }
     }
 
     public function test_whatsapp_and_the_choices_are_optional_but_name_nationality_email_and_consent_are_not(): void

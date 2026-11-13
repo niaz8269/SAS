@@ -1,10 +1,19 @@
 <x-mail::message>
 # New enquiry {{ $enquiry->reference }}
 
-Category: {{ $enquiry->category }}
-Contact preference: {{ $enquiry->contact_preference }}
+**Name:** {{ $enquiry->name }}
+**Email:** {{ $enquiry->email }}
+@if ($enquiry->phone)
+**Phone / WhatsApp:** {{ $enquiry->phone }}
+@endif
+**Category:** {{ $enquiry->category }}
+**Prefers contact by:** {{ $enquiry->contact_preference }}
 
-Open the staff admin to read and assign it.
+**Message**
+
+{{ $enquiry->message }}
+
+The person agreed to be contacted about this enquiry. Reply to this email to answer them, or open the staff admin to assign it.
 
 <x-mail::button :url="url('/admin')">Open admin</x-mail::button>
 </x-mail::message>
