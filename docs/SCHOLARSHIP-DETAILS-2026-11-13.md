@@ -96,3 +96,20 @@ The importer does not change closing dates or the funding label, so these need a
 - Whether to roll the SJTU and ZJU records to the 2027 intake.
 - Whether the "full" funding type on cn-csc-2026, se-si-scholarship, us-rotary-peace-fellowship (and others) should stay: none is labelled "Fully funded" (none is verified), but the stored type says full.
 - Closing dates and milestones listed above (most are for cycles that have since closed or whose dates moved).
+
+## Majors and programmes of every scholarship (14 to 15 November 2026)
+
+Students search by major, not by scholarship name, but the first pass stored at most 25 programmes per degree level (and none for 52 scholarships). A second pass collected **every major each official source names**, per degree level and institution, and recorded whether the field of study is limited or open.
+
+**Result (published scholarships):** 90 of 116 now name majors (before: 19); 54,706 programme lines (before: 1,579); 26 are marked open to any subject (only where an official source says so); 86 carry subject categories for the subject filter. A search for "computer science" finds 75 scholarships worldwide and 11 for China (before: 21 and 5); "law" 77 and 15; "nursing" 71 and 9.
+
+**How it works:** each scholarship page shows its first 30 programmes per level and links to a searchable page of all of them (/scholarships/{programme}/{cycle}/majors, in the sitemap when there are more than 30); the scholarship search covers every programme name; the Programmes page (search a subject at universities in China) shows the scholarships that can pay for it. Files: database/data/scholarship-details/2026-11-14-majors, loaded by six migrations (2026_12_14_00000N_load_scholarship_majors_part_N), so that a time-out on the server can be resumed.
+
+**Big complete lists** (official portals or Excel/PDF annexes): Korea GKS 10,641 department lines at about 80 universities; Russia 15,965 programmes at 449 universities (names in Russian); Türkiye Burslari 6,485; Romania 3,460; Indonesia KNB 1,173 (all 47 universities); Taiwan MOE 670; Saudi MOE 463; Hungary 465; Sweden SI 515; Poland NAWA 404; Czech Republic 254; Commonwealth Shared 217; Erasmus Mundus 226; Glasgow 210; Copenhagen 120.
+
+**Partial lists** (the official source publishes no single list, or part of it cannot be read; each file's 
+otes say which): the Chinese government scholarships (CSC main call 701 lines from 13 universities, Type A 720 from 5, Type B from 6, Silk Road from 22, Shanghai from 4 of 31 universities, Beijing from 2), Manaaki (subject keywords per country, not programmes), NL Scholarship (institutions that name programmes), GOI-IES (lists the institutions publish), Hong Kong PhD Fellowship (CityU missing).
+
+**Judgement calls:** "open to any subject" was removed for GOI-IES, the Swiss Excellence Scholarship, Schwarzman and the Research Training Program, because the wording does not fund every subject for every applicant. The Weidenfeld-Hoffmann list (30 rows from scholar profiles) and the Trinity course list (derived by the researcher, not official) were **not** loaded; their stored data stays. Indonesia KNB, Fundación Carolina and Helsinki were stored as "any subject" and are now "limited to the listed programmes", as their official pages say.
+
+**Still needs a person with a normal browser** (blocked by a browser check, a login, a captcha or a file that will not download): the University of Oxford site (Weidenfeld-Hoffmann, Reach Oxford, Clarendon, Rhodes course list); UCD Eligible Programmes 2027/28 PDF; University of Melbourne; MBZUAI; the CSC portals (campuschina.org, csc.edu.cn) and Jilin University's catalogue (captcha), Chongqing and Nanjing Normal; CityU Hong Kong; Mexico's SIGCA list and Brazil's PEC-G list (login or captcha); Chile's Annex 1; Kazakhstan's Study In portal; the Cambridge "See full list" course lists; the Marshall course search; Universitaly; Fulbright's per-country pages; the ICCR A2A portal; Israel (removed).

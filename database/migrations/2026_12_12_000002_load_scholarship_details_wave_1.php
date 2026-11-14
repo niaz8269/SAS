@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
 
 /**
  * Loads the complete details of the published scholarships as their official sources state them (13 November 2026): funding components, required
@@ -14,6 +15,10 @@ return new class extends Migration
 {
     public function up(): void
     {
+        if (! DB::table('scholarship_cycles')->exists()) {
+            return; // an empty database (a new install or a test): there is nothing to fill in, and the files are large
+        }
+
         $files = glob(database_path('data/scholarship-details/2026-11-13/*.json')) ?: [];
         sort($files);
         if ($files !== []) {

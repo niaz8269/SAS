@@ -9,6 +9,7 @@ use App\Models\CycleBenefit;
 use App\Models\CycleRequirement;
 use App\Models\ScholarshipCycle;
 use App\Models\SourceEvidence;
+use App\Models\Subject;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
@@ -67,6 +68,14 @@ class ImportScholarshipDetails extends Command
                 $requirements = $this->requirements($e['requirements'] ?? []);
                 $sources = $this->sources($e['sources'] ?? [], $e['checked_on'] ?? null);
                 $text = collect(self::TEXT_FIELDS)->filter(fn ($f) => filled($e[$f] ?? null))->mapWithKeys(fn ($f) => [$f => trim((string) $e[$f])])->all();
+                // Where a file asks for it, the real limit on the field of study is written at the top of the programmes note, so students see what "any subject" covers.
+                if (! empty($e['show_subject_rule']) && filled($e['subject_rule'] ?? null)) {
+                    $rule = 'Field of study: '.trim($e['subject_rule']);
+                    $note = (string) ($text['programmes_note'] ?? $cycle->programmes_note);
+                    if (! str_contains($note, $rule)) {
+                        $text['programmes_note'] = trim($rule."\n\n".$note);
+                    }
+                }
                 $this->line(sprintf('%s: %d steps, %d benefits, %d documents, %d sources, text: %s', $cycle->external_key, count($steps), count($benefits), count($requirements), count($sources), implode(', ', array_keys($text)) ?: 'none'));
                 if ($dry) {
                     continue;
@@ -79,7 +88,15 @@ class ImportScholarshipDetails extends Command
                     if (! empty($e['checked_on']) && strtotime($e['checked_on'])) {
                         $cycle->last_verified_at = $e['checked_on'];
                     }
+                    // "Any subject" only where the official source says the scholarship does not limit the field of study.
+                    if (isset($e['any_subject']) && is_bool($e['any_subject'])) {
+                        $cycle->any_subject = $e['any_subject'];
+                    }
                     $cycle->save();
+                    // Subject categories (from the taxonomy) that the listed majors fall in: added, never removed, so staff choices stay.
+                    if (! empty($e['subject_slugs']) && is_array($e['subject_slugs'])) {
+                        $cycle->subjects()->syncWithoutDetaching(Subject::whereIn('slug', $e['subject_slugs'])->pluck('id')->all());
+                    }
                     if ($steps) {
                         $cycle->applicationSteps()->delete();
                         foreach ($steps as $i => $s) {

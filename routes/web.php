@@ -47,6 +47,7 @@ Route::get('/scholarships/from/{country}', [LandingController::class, 'from'])->
 Route::get('/scholarships/any-nationality', [LandingController::class, 'open'])->name('landing.open');
 Route::get('/chinese-government-scholarship', CscGuideController::class)->name('csc.guide');
 Route::get('/scholarships/{funding}', [LandingController::class, 'funding'])->where('funding', 'fully-funded|partial-funding|tuition-covered')->name('landing.funding');
+Route::get('/scholarships/{programme:slug}/{cycle}/majors', [ScholarshipController::class, 'majors'])->name('scholarships.majors');
 Route::get('/scholarships/{programme:slug}/{cycle}', [ScholarshipController::class, 'show'])->middleware('throttle:240,1')->name('scholarships.show'); // each view writes an analytics row, so the rate is capped per address
 Route::get('/go/{route}', [ScholarshipController::class, 'out'])->middleware('throttle:120,1')->name('scholarships.out');
 

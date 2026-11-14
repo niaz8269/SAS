@@ -74,6 +74,22 @@ class ImportScholarshipDetailsTest extends TestCase
         $this->assertSame(1, $cycle->evidence()->where('url', 'https://example.gov/scholarship')->count());
     }
 
+    public function test_the_real_limit_of_an_open_subject_is_written_on_the_page_once(): void
+    {
+        $this->seed(TaxonomySeeder::class);
+        $cycle = ScholarshipCycle::factory()->published()->create(['external_key' => 'test-details-1', 'programmes_note' => 'Courses are chosen by each institution.']);
+        $entry = ['external_key' => 'test-details-1', 'any_subject' => true, 'show_subject_rule' => true, 'subject_rule' => 'Open to any discipline, but it funds one degree only.'];
+        $file = $this->file([$entry]);
+
+        $this->artisan('sas:import-details', ['files' => [$file]])->assertSuccessful();
+        $this->artisan('sas:import-details', ['files' => [$file]])->assertSuccessful(); // again: not written twice
+
+        $cycle->refresh();
+        $this->assertTrue($cycle->any_subject);
+        $this->assertSame("Field of study: Open to any discipline, but it funds one degree only.\n\nCourses are chosen by each institution.", $cycle->programmes_note);
+        $this->get(route('scholarships.show', [$cycle->programme->slug, $cycle->slug]))->assertOk()->assertSee('Field of study: Open to any discipline, but it funds one degree only.');
+    }
+
     public function test_a_section_that_is_not_in_the_file_is_left_alone(): void
     {
         $this->seed(TaxonomySeeder::class);

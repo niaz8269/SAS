@@ -23,7 +23,7 @@ class UnpublishIsraelScholarshipsTest extends TestCase
 
         $this->assertSame(PublicationState::Draft, $cycle->fresh()->publication_state);
         $this->get($url)->assertNotFound();
-        $this->assertStringNotContainsString($cycle->slug, $this->sitemapXml('scholarships'));
+        $this->assertStringNotContainsString($url, $this->sitemapXml('scholarships'));
         $this->assertSame(PublicationState::Published, $other->fresh()->publication_state, 'other scholarships are not touched');
     }
 }

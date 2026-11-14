@@ -16,18 +16,25 @@ class SearchIndexer
     public function text(ScholarshipCycle $cycle): string
     {
         $cycle->loadMissing(['programme.funder', 'programme.universities']);
-        $cycle->load(['universities', 'subjects.aliases']);
+        $cycle->load(['universities', 'subjects.aliases', 'offerings', 'degreeLevels']);
 
+        // Short, high-value words first (names, subjects, the programmes and majors each scholarship offers), long prose after them, so the length limit only ever cuts prose.
         $parts = [
-            $cycle->programme->title, Html::text($cycle->programme->summary), $cycle->programme->funder?->name,
-            Html::text($cycle->summary), Html::text($cycle->funding_summary), Html::text($cycle->eligibility_notes), Html::text($cycle->programmes_note),
-            ...$cycle->programme->universities->pluck('name')->all(),
-            ...$cycle->universities->pluck('name')->all(),
+            $cycle->programme->title, $cycle->programme->funder?->name,
             ...$cycle->subjects->pluck('name')->all(),
             ...$cycle->subjects->flatMap(fn ($s) => $s->aliases->pluck('alias'))->all(),
+            ...$cycle->degreeLevels->pluck('name')->all(),
+            // Each distinct programme name once (a scholarship can name the same major at hundreds of universities); the long details only for short lists.
+            ...$cycle->offerings->pluck('name')->filter()->unique()->all(),
+            ...$cycle->offerings->pluck('institution')->filter()->unique()->all(),
+            ...($cycle->offerings->count() <= 300 ? $cycle->offerings->pluck('detail')->filter()->all() : []),
+            ...$cycle->programme->universities->pluck('name')->all(),
+            ...$cycle->universities->pluck('name')->all(),
+            Html::text($cycle->programme->summary), Html::text($cycle->summary), Html::text($cycle->programmes_note), Html::text($cycle->institutions_note),
+            Html::text($cycle->funding_summary), Html::text($cycle->eligibility_notes),
         ];
 
-        return mb_substr(mb_strtolower(implode(' ', array_filter(array_unique(array_map('strval', array_filter($parts)))))), 0, 8000);
+        return mb_substr(mb_strtolower(implode(' ', array_filter(array_unique(array_map('strval', array_filter($parts)))))), 0, 80000);
     }
 
     public function reindex(ScholarshipCycle $cycle): void

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Domain\Catalogue\UniversityOverview;
+use App\Domain\Scholarship\ScholarshipsForMajor;
 use App\Models\University;
 use App\Models\UniversityProgramme;
 use Illuminate\Http\Request;
@@ -67,7 +68,14 @@ class CatalogueController extends Controller
             $query->whereHas('university', fn ($u) => $u->where('province', $data['province']));
         }
 
+        // The scholarships that can pay for what was searched (shown above the programmes), so a subject search never ends at universities alone.
+        $searched = trim((string) ($data['q'] ?? '')) !== '' || ! empty($data['csc']) || ! empty($data['level']);
+        $forMajor = $searched
+            ? app(ScholarshipsForMajor::class)->for(trim((string) ($data['q'] ?? '')), (string) ($data['level'] ?? ''), (clone $query)->where('csc_eligible', true)->exists())
+            : null;
+
         return view('public.programmes.index', [
+            'forMajor' => $forMajor,
             'programmes' => $query->orderByRaw('COALESCE(name_en, name_zh)')->orderBy('id')->paginate(30)->withQueryString(),
             'provinces' => Cache::remember('catalogue.provinces', 3600, fn () => University::inCatalogue()->whereNotNull('province')->distinct()->orderBy('province')->pluck('province')->all()),
             'languages' => UniversityProgramme::languageLabels(),

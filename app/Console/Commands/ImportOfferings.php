@@ -56,7 +56,7 @@ class ImportOfferings extends Command
                     if (! empty($s['detail']) || ! empty($s['source_text'])) {
                         $rows[] = $this->row($cycle, $levels[$code], null, null, $s['detail'] ?? null, $s['source_text'] ?? null, $s['url'] ?? null, $sort += 10);
                     }
-                    foreach (array_slice($lv['programmes'] ?? [], 0, 25) as $p) {
+                    foreach (array_slice($lv['programmes'] ?? [], 0, 8000) as $p) {
                         if (blank($p['name'] ?? null)) {
                             continue;
                         }
@@ -91,10 +91,12 @@ class ImportOfferings extends Command
                                 (clone $stored)->whereNull('name')->delete();
                                 $levelRows = $levelRows->whereNull('name');
                             } else {
-                                $stored->delete();
+                                // A file that only supplies programmes keeps the level's stored summary line.
+                                ($levelRows->whereNull('name')->isNotEmpty() ? $stored : $stored->whereNotNull('name'))->delete();
                             }
-                            foreach ($levelRows as $r) {
-                                CycleOffering::create($r);
+                            // In batches: some scholarships name more than a thousand programmes.
+                            foreach ($levelRows->values()->chunk(250) as $chunk) {
+                                CycleOffering::insert($chunk->map(fn ($r) => $r + ['created_at' => now(), 'updated_at' => now()])->all());
                             }
                         }
                     }

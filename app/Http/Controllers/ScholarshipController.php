@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Domain\StudentWorkspace\MatchingService;
 use App\Enums\PublicationState;
 use App\Models\AnalyticsEvent;
+use App\Models\DegreeLevel;
 use App\Models\SavedScholarship;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipProgramme;
 use App\Models\ScholarshipRoute;
 use App\Support\Crawler;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ScholarshipController extends Controller
@@ -63,6 +65,28 @@ class ScholarshipController extends Controller
     }
 
     /** CORE-02 / ANA-01: record the official-link click (no personal data) then send the visitor to the official page. */
+    /** Every programme or major the scholarship names, by degree level, with a word search: students look for their major, not for a scholarship's name. */
+    public function majors(Request $request, ScholarshipProgramme $programme, string $cycle)
+    {
+        $cycle = ScholarshipCycle::where('programme_id', $programme->id)->where('slug', $cycle)
+            ->whereIn('publication_state', [PublicationState::Published->value, PublicationState::Archived->value])->whereNotNull('published_at')
+            ->with(['programme.funder', 'degreeLevels'])->firstOrFail();
+
+        $data = $request->validate(['q' => 'nullable|string|max:80', 'level' => 'nullable|string|max:32']);
+        $q = trim((string) ($data['q'] ?? ''));
+        $level = (string) ($data['level'] ?? '');
+
+        $base = $cycle->offerings()->whereNotNull('name')->with('degreeLevel');
+        $counts = $cycle->offerings()->whereNotNull('name')->selectRaw('degree_level_id, count(*) as n')->groupBy('degree_level_id')->pluck('n', 'degree_level_id');
+        $levels = DegreeLevel::whereIn('id', $counts->keys())->orderBy('id')->get()->mapWithKeys(fn ($l) => [$l->slug => ['name' => $l->name, 'count' => (int) $counts[$l->id]]]);
+        $rows = $base->when($level !== '', fn ($w) => $w->whereHas('degreeLevel', fn ($l) => $l->where('slug', $level)))
+            ->when($q !== '', fn ($w) => $w->where(fn ($x) => $x->where('name', 'like', '%'.addcslashes($q, '%_\\').'%')->orWhere('institution', 'like', '%'.addcslashes($q, '%_\\').'%')))
+            ->orderBy('degree_level_id')->orderBy('sort')->orderBy('id')->paginate(100)->withQueryString();
+        abort_if($levels->isEmpty() || $rows->currentPage() > max(1, $rows->lastPage()), 404);
+
+        return view('public.scholarships.majors', ['cycle' => $cycle, 'programme' => $programme, 'rows' => $rows, 'levels' => $levels, 'q' => $q, 'level' => $level]);
+    }
+
     public function out(ScholarshipRoute $route)
     {
         $route->load('cycle');

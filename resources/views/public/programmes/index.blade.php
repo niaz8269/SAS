@@ -22,6 +22,7 @@
         </form>
 
         @include('public.programmes._notice')
+        @include('public.programmes._scholarships')
         <p class="mt-4 text-sm text-muted" aria-live="polite">{{ number_format($programmes->total()) }} {{ \Illuminate\Support\Str::plural('programme', $programmes->total()) }}</p>
 
         @if ($programmes->isEmpty())

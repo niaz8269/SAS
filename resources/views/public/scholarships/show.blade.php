@@ -150,25 +150,40 @@
                 @if ($cycle->institutions_note)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->institutions_note) !!}</div>@endif
                 @if ($unis->isEmpty() && ! $cycle->institutions_note)<p class="mt-3 text-sm text-muted">Participating universities: not confirmed.</p>@endif
                 <h3 class="mt-5 font-semibold">Degrees and programmes offered</h3>
-                @php($offerings = $cycle->offerings()->with('degreeLevel')->get()->groupBy('degree_level_id'))
-                @forelse ($offerings as $rows)
-                    @php($summary = $rows->firstWhere('name', null))
-                    @php($named = $rows->whereNotNull('name'))
+                {{-- Only counts and the first 30 programmes per level are read here: a scholarship can name thousands (the full list is a page of its own). --}}
+                <?php
+                    $summaries = $cycle->offerings()->whereNull('name')->get()->keyBy('degree_level_id');
+                    $counts = $cycle->offerings()->whereNotNull('name')->selectRaw('degree_level_id, count(*) as n')->groupBy('degree_level_id')->pluck('n', 'degree_level_id');
+                    $levelIds = $summaries->keys()->merge($counts->keys())->unique()->sort()->values();
+                    $levelModels = \App\Models\DegreeLevel::whereIn('id', $levelIds)->get()->keyBy('id');
+                ?>
+                @forelse ($levelIds as $levelId)
+                    <?php
+                        $level = $levelModels[$levelId];
+                        $summary = $summaries->get($levelId);
+                        $total = (int) ($counts[$levelId] ?? 0);
+                        $named = $total ? $cycle->offerings()->where('degree_level_id', $levelId)->whereNotNull('name')->orderBy('sort')->orderBy('id')->limit(30)->get() : collect();
+                    ?>
                     <div class="mt-3 rounded-lg border border-line p-4">
-                        <h4 class="font-semibold">{{ $rows->first()->degreeLevel->name }}</h4>
+                        <h4 class="font-semibold">{{ $level->name }}</h4>
                         @if ($summary?->detail)<p class="mt-1 text-sm">{{ $summary->detail }}</p>@endif
                         @if ($named->isNotEmpty())
-                            <ul class="mt-2 list-disc space-y-1 pl-5 text-sm">
+                            <p class="mt-2 text-sm text-muted">{{ number_format($total) }} {{ \Illuminate\Support\Str::plural('programme', $total) }} listed.</p>
+                            <ul class="mt-1 list-disc space-y-1 pl-5 text-sm">
                                 @foreach ($named as $o)
                                     <li>@if ($o->source_url)<a class="text-navy-700 underline" href="{{ $o->source_url }}" rel="noopener nofollow" target="_blank">{{ $o->name }}</a>@else{{ $o->name }}@endif @if ($o->institution)<span class="text-muted">({{ $o->institution }})</span>@endif @if ($o->detail)<span class="text-muted">: {{ $o->detail }}</span>@endif</li>
                                 @endforeach
                             </ul>
+                            @if ($total > 30)
+                                <p class="mt-2 text-sm"><a class="font-semibold text-navy-700 underline" href="{{ route('scholarships.majors', [$programme->slug, $cycle->slug, 'level' => $level->slug]) }}">See all {{ number_format($total) }} {{ $level->name }} programmes and search them &rarr;</a></p>
+                            @endif
                         @endif
                     </div>
                 @empty
                     @if ($cycle->degreeLevels->isNotEmpty())<p class="mt-2 text-sm">Degree levels: {{ $cycle->degreeLevels->pluck('name')->implode(', ') }}. Programme details: not confirmed.</p>@endif
                 @endforelse
-                @if ($cycle->programmes_note)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->programmes_note) !!}</div>@elseif ($offerings->isEmpty())<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
+                <?php $noOfferings = $levelIds->isEmpty(); ?>
+                @if ($cycle->programmes_note)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->programmes_note) !!}</div>@elseif ($noOfferings)<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
                 @if (str_contains($programme->title, 'Chinese Government Scholarship') || str_contains((string) $programme->funder?->name, 'China Scholarship Council'))
                     <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('programmes.index', ['csc' => 1]) }}">Browse programmes listed as open to Chinese Government Scholarship applicants</a></p>
                 @endif
