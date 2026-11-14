@@ -18,7 +18,7 @@
                     @if (! empty($profile['established_year']))<div><dt class="font-semibold">Founded</dt><dd>{{ $profile['established_year'] }}</dd></div>@endif
                     @if (! empty($profile['institution_type']))<div><dt class="font-semibold">Type</dt><dd>{{ $profile['institution_type'] }}</dd></div>@endif
                     @if (! empty($profile['students_note']))<div><dt class="font-semibold">Students</dt><dd>{{ $profile['students_note'] }}</dd></div>@endif
-                    @if (array_key_exists('moe_english_mbbs', $profile) && $profile['moe_english_mbbs'])<div><dt class="font-semibold">Ministry of Education</dt><dd>Approved to enrol international students for English-taught medicine @if (! empty($profile['moe_source_url'])) (<a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ $profile['moe_source_url'] }}">source</a>) @endif</dd></div>@endif
+                    @if (array_key_exists('moe_english_mbbs', $profile) && $profile['moe_english_mbbs'])<div><dt class="font-semibold">Ministry of Education</dt><dd>Approved to enrol international students for English-taught medicine @if (! empty($profile['moe_source_url'])) (<a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ config('sas.official_link') }}">source</a>) @endif</dd></div>@endif
                     @if (! empty($profile['accommodation_note']))<div><dt class="font-semibold">Accommodation</dt><dd>{{ $profile['accommodation_note'] }}</dd></div>@endif
                 </dl>
                 @if (! empty($profile['summary']))<div class="rich mt-3 text-sm text-muted">{!! \App\Support\Html::rich($profile['summary']) !!}</div>@endif
@@ -35,7 +35,7 @@
                             @if ($s->eligibility)<div><span class="text-muted">Who can get it:</span><div class="rich">{!! \App\Support\Html::rich($s->eligibility) !!}</div></div>@endif
                             <p class="mt-1 text-xs text-muted">
                                 @if ($s->source_type === 'supplied') From the university's fee sheet given to SAS.
-                                @elseif ($s->source_url) Source: <a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ $s->source_url }}">{{ $s->source_label ?: 'official page' }}</a>@if ($s->checked_on), read {{ $s->checked_on->format('j F Y') }}@endif.
+                                @elseif ($s->source_url) Source: <a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ config('sas.official_link') }}">{{ $s->source_label ?: 'official page' }}</a>@if ($s->checked_on), read {{ $s->checked_on->format('j F Y') }}@endif.
                                 @endif
                             </p>
                         </li>
@@ -97,7 +97,7 @@
                         @endif
                     </div>
                 </div>
-                <p class="mt-4 border-t border-line pt-3 text-xs text-muted">Source: {{ $fs->sourceLabelText() }}@if ($fs->source_url && $fs->source_type !== 'supplied'): <a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ $fs->source_url }}">official page</a>@endif.</p>
+                <p class="mt-4 border-t border-line pt-3 text-xs text-muted">Source: {{ $fs->sourceLabelText() }}@if ($fs->source_url && $fs->source_type !== 'supplied'): <a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ config('sas.official_link') }}">official page</a>@endif.</p>
             </article>
         @endforeach
 
@@ -115,7 +115,7 @@
                             @foreach ($recognitions as $r)
                                 <li><span class="font-medium">{{ $r['body'] }}</span>
                                     @if (($r['status'] ?? '') === 'verified')<span class="badge-green ml-1">checked by SAS</span>@else<span class="badge-neutral ml-1">stated by the university, not checked by SAS</span>@endif
-                                    @if (! empty($r['source_url']))<a class="ml-1 text-xs text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ $r['source_url'] }}">{{ $r['source_label'] ?? 'source' }}</a>@endif
+                                    @if (! empty($r['source_url']))<a class="ml-1 text-xs text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ config('sas.official_link') }}">{{ $r['source_label'] ?? 'source' }}</a>@endif
                                     @if (! empty($r['note']))<span class="block text-xs text-muted">{{ $r['note'] }}</span>@endif
                                 </li>
                             @endforeach

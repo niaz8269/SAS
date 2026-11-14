@@ -10,7 +10,7 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Cache;
 use Tests\TestCase;
 
-/** A scholarship that names many majors: the page shows the first 30 per level, a full searchable list is one click away and is in the sitemap. */
+/** A scholarship that names many majors: the page shows the first 12 per level, a full searchable list is one click away and is in the sitemap. */
 class ScholarshipMajorsPageTest extends TestCase
 {
     use RefreshDatabase;
@@ -35,7 +35,7 @@ class ScholarshipMajorsPageTest extends TestCase
         $cycle = $this->cycleWithMajors(60);
         $show = route('scholarships.show', [$cycle->programme->slug, $cycle->slug]);
 
-        $this->get($show)->assertOk()->assertSee('61 programmes listed')->assertSee('Major Number 30')->assertDontSee('Major Number 45')
+        $this->get($show)->assertOk()->assertSee('61 programmes listed')->assertSee('Major Number 12')->assertDontSee('Major Number 30')
             ->assertSee('See all 61', false)->assertSee(route('scholarships.majors', [$cycle->programme->slug, $cycle->slug, 'level' => 'master']), false);
 
         $list = route('scholarships.majors', [$cycle->programme->slug, $cycle->slug]);
@@ -47,7 +47,7 @@ class ScholarshipMajorsPageTest extends TestCase
 
     public function test_the_full_list_is_in_the_sitemap_only_when_the_page_does_not_show_everything(): void
     {
-        $many = $this->cycleWithMajors(40);
+        $many = $this->cycleWithMajors(20);
         $this->assertStringContainsString(route('scholarships.majors', [$many->programme->slug, $many->slug]), $this->sitemapXml('scholarships'));
 
         $few = ScholarshipCycle::factory()->published()->create();

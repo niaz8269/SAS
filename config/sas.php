@@ -4,6 +4,9 @@ return [
     // The enquiry pop-up on the home page for visitors who are not signed in. Set SAS_APPLY_POPUP=false to switch it off without a release.
     'apply_popup' => env('SAS_APPLY_POPUP', true),
 
+    // Where every link to an official or university website on the public pages goes (the stored source addresses are kept in the data, not shown).
+    'official_link' => env('SAS_OFFICIAL_LINK', 'https://www.cas.moe'),
+
     'brand' => [
         // The owner's spelling is intentional and must be preserved.
         'name' => 'SAS – Scholarships Application Services',

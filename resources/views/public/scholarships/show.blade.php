@@ -31,7 +31,18 @@
         ]], JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) !!}</script>
     </x-slot:head>
 
-    <section class="border-b border-line bg-white">
+    @php
+        $next = $svc->nextClosing($cycle)?->format('j F Y');
+        $facts = array_filter([
+            'Funder' => $programme->funder?->name,
+            'Where' => $cycle->destinations->isNotEmpty() ? $cycle->destinations->pluck('name')->take(3)->implode(', ').($cycle->destinations->count() > 3 ? ' +'.($cycle->destinations->count() - 3) : '') : null,
+            'Degree levels' => $cycle->degreeLevels->pluck('name')->implode(', ') ?: null,
+            'Funding' => $cycle->fundingLabel() === 'Funding details not confirmed' ? null : $cycle->fundingLabel(),
+            'Next closing date' => $next,
+        ]);
+        $jump = array_filter(['timeline' => 'Timeline', 'institutions' => 'Programmes', 'funding' => 'Funding', 'eligibility' => 'Eligibility', 'requirements' => 'Documents', 'process' => $cycle->applicationSteps->isNotEmpty() ? 'How to apply' : null, 'quick-answers' => $faq ? 'Quick answers' : null, 'verification' => 'Sources']);
+    @endphp
+    <section class="border-b border-line bg-gradient-to-b from-navy-50/70 to-white">
         <div class="container-page py-8">
             <nav aria-label="Breadcrumb" class="text-sm text-muted"><a class="hover:underline" href="{{ route('home') }}">Home</a> / <a class="hover:underline" href="{{ route('scholarships.index') }}">Scholarships</a> / <span aria-current="page">{{ $programme->title }}</span></nav>
             @if ($archived)
@@ -40,38 +51,52 @@
                     @if ($newer) <a class="underline" href="{{ route('scholarships.show', [$programme->slug, $newer->slug]) }}">See the {{ $newer->intake_year }} cycle</a>. @endif
                 </div>
             @endif
-            <div class="mt-3 flex flex-wrap gap-2">
-                @if ($cycle->sponsored)<span class="badge-warn">{{ $cycle->sponsored_label ?: 'Sponsored' }}</span>@endif
-                <span class="badge-neutral">{{ $cycle->intake_year }} intake{{ $cycle->intake_term ? ' · '.$cycle->intake_term : '' }}</span>
-                <span class="badge-green">{{ $cycle->fundingLabel() }}</span>
-                @if ($cycle->needsRecheck())<span class="badge-warn">Needs recheck</span>@endif
+            <div class="mt-4 grid gap-8 lg:grid-cols-[1fr_19rem] lg:items-start">
+                <div class="min-w-0">
+                    <div class="flex flex-wrap gap-2">
+                        @if ($cycle->sponsored)<span class="badge-warn">{{ $cycle->sponsored_label ?: 'Sponsored' }}</span>@endif
+                        <span class="badge-neutral">{{ $cycle->intake_year }} intake{{ $cycle->intake_term ? ' · '.$cycle->intake_term : '' }}</span>
+                        <span class="badge-green">{{ $cycle->fundingLabel() }}</span>
+                        @if ($cycle->needsRecheck())<span class="badge-warn">Needs recheck</span>@endif
+                    </div>
+                    <h1 class="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl">{{ $programme->title }}</h1>
+                    @if ($cycle->summary)<x-readmore height="9rem" class="mt-4 max-w-3xl"><div class="rich text-base leading-7">{!! \App\Support\Html::rich($cycle->summary) !!}</div></x-readmore>@endif
+                    @if ($facts)
+                        <h2 class="mt-6 text-xs font-semibold uppercase tracking-wide text-muted">At a glance</h2>
+                        <dl class="mt-2 grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
+                            @foreach ($facts as $label => $value)
+                                <div class="rounded-lg border border-line bg-white px-3 py-2.5"><dt class="text-xs font-semibold uppercase tracking-wide text-muted">{{ $label }}</dt><dd class="mt-0.5 text-sm font-semibold text-ink">{{ $value }}</dd></div>
+                            @endforeach
+                        </dl>
+                    @endif
+                    <p class="mt-4 max-w-3xl text-sm leading-6 text-muted">{{ $glance }}</p>
+                    @if ($browse->isNotEmpty() || $guides->isNotEmpty())
+                        <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
+                            @foreach ($guides as $g)<a class="font-semibold text-navy-700 underline" href="{{ route('destinations.show', $g) }}">Study in {{ $g->name }}: costs and guidance</a>@endforeach
+                            @foreach ($browse as $b)<a class="font-semibold text-navy-700 underline" href="{{ $b['url'] }}">{{ $b['type'] === 'guide' ? $b['label'].': requirements and deadlines' : 'More '.mb_strtolower($b['label']) }}</a>@endforeach
+                        </p>
+                    @endif
+                </div>
+                <img src="{{ $programme->imageUrl($cycle) }}" alt="" class="hidden aspect-[4/3] w-full rounded-xl border border-line object-cover shadow-sm lg:block" width="640" height="480">
             </div>
-            <h1 class="mt-3 text-3xl font-extrabold sm:text-4xl">{{ $programme->title }}</h1>
-            <img src="{{ $programme->imageUrl($cycle) }}" alt="" class="mt-4 aspect-video w-full max-w-xl rounded-xl border border-line object-cover" width="960" height="540">
-            <p class="mt-1 text-lg text-muted">{{ $programme->funder?->name }} @if($cycle->destinations->isNotEmpty()) · {{ $cycle->destinations->pluck('name')->implode(', ') }} @endif</p>
-            @if ($cycle->summary)<div class="rich mt-4">{!! \App\Support\Html::rich($cycle->summary) !!}</div>@endif
-            <div class="mt-4 max-w-3xl rounded-xl border border-line bg-navy-50/60 p-4">
-                <h2 class="text-base font-bold">At a glance</h2>
-                <p class="mt-1 text-base leading-7">{{ $glance }}</p>
-            </div>
-            @if ($browse->isNotEmpty() || $guides->isNotEmpty())
-                <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
-                    @foreach ($guides as $g)<a class="font-semibold text-navy-700 underline" href="{{ route('destinations.show', $g) }}">Study in {{ $g->name }}: costs and guidance</a>@endforeach
-                    @foreach ($browse as $b)<a class="font-semibold text-navy-700 underline" href="{{ $b['url'] }}">{{ $b['type'] === 'guide' ? $b['label'].': requirements and deadlines' : 'More '.mb_strtolower($b['label']) }}</a>@endforeach
-                </p>
-            @endif
         </div>
     </section>
 
-    <div class="container-page grid gap-8 py-8 lg:grid-cols-[1fr_21.25rem]">
-        <div class="space-y-8">
+    {{-- A menu that stays in view while reading, so a long page is never a wall: every section is one click away. --}}
+    <nav aria-label="On this page" class="sticky z-30 border-b border-line bg-white/95 backdrop-blur" style="top: var(--site-header, 4rem)">
+        <div class="container-page flex gap-1 overflow-x-auto py-2 text-sm [scrollbar-width:thin]">
+            @foreach ($jump as $id => $label)<a href="#{{ $id }}" onclick="var e=document.getElementById('{{ $id }}');var d=e&&e.closest('details');if(d){d.open=true}" class="shrink-0 rounded-full px-3 py-1.5 font-medium text-ink hover:bg-navy-50 hover:text-navy-700">{{ $label }}</a>@endforeach
+        </div>
+    </nav>
+    <div class="container-page grid grid-cols-[minmax(0,1fr)] gap-8 py-8 lg:grid-cols-[minmax(0,1fr)_21.25rem]">
+        <div class="min-w-0 space-y-8">
             {{-- Full timeline (DIR-07): every stage is shown; a stage the source does not date says so. Routes are never merged into one misleading date. --}}
             @php
                 $ms = $cycle->milestones->groupBy('kind');
                 $stage = function ($kinds) use ($ms) { return collect($kinds)->flatMap(fn ($k) => $ms->get($k, collect()))->values(); };
             @endphp
             <section aria-labelledby="timeline" class="card p-6">
-                <h2 id="timeline" class="text-xl font-bold">Application timeline</h2>
+                <h2 id="timeline" class="scroll-mt-36 text-xl font-bold">Application timeline</h2>
                 <ol class="mt-4 space-y-3">
                     <li class="rounded-lg border border-line p-4">
                         <h3 class="font-semibold">Applications open</h3>
@@ -135,8 +160,8 @@
                 <p class="mt-4 text-xs text-muted">Where the source does not state a time we show the date only and do not assume an hour. "Not announced yet" means the source gives no date. Dates can change: ask us for the latest.</p>
             </section>
 
-            <section aria-labelledby="institutions" class="card p-6">
-                <h2 id="institutions" class="text-xl font-bold">Universities and programmes</h2>
+            <details open x-data x-init="if (window.innerWidth < 768) $el.removeAttribute('open')" aria-labelledby="institutions" class="group card p-6">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 md:pointer-events-none md:cursor-default [&::-webkit-details-marker]:hidden"><h2 id="institutions" class="scroll-mt-36 text-xl font-bold">Universities and programmes</h2><span aria-hidden="true" class="shrink-0 text-2xl leading-none text-navy-700 transition group-open:rotate-45 md:hidden">+</span></summary>
                 @php($unis = $institutions)
                 @if ($unis->isNotEmpty())
                     <h3 class="mt-3 font-semibold">Universities included</h3>
@@ -147,50 +172,64 @@
                     </ul>
                     @if ($unis->count() > 12)<p class="mt-2 text-sm text-muted">and {{ $unis->count() - 12 }} more. <a class="text-navy-700 underline" href="{{ route('universities.index') }}">Browse all universities</a>.</p>@endif
                 @endif
-                @if ($cycle->institutions_note)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->institutions_note) !!}</div>@endif
+                @if ($cycle->institutions_note)<x-readmore height="7rem" class="mt-3"><div class="rich text-sm leading-6">{!! \App\Support\Html::rich($cycle->institutions_note) !!}</div></x-readmore>@endif
                 @if ($unis->isEmpty() && ! $cycle->institutions_note)<p class="mt-3 text-sm text-muted">Participating universities: not confirmed.</p>@endif
                 <h3 class="mt-5 font-semibold">Degrees and programmes offered</h3>
-                {{-- Only counts and the first 30 programmes per level are read here: a scholarship can name thousands (the full list is a page of its own). --}}
+                {{-- Only counts and the first programmes per level are read here: a scholarship can name thousands (the full list is a page of its own). --}}
                 <?php
                     $summaries = $cycle->offerings()->whereNull('name')->get()->keyBy('degree_level_id');
                     $counts = $cycle->offerings()->whereNotNull('name')->selectRaw('degree_level_id, count(*) as n')->groupBy('degree_level_id')->pluck('n', 'degree_level_id');
                     $levelIds = $summaries->keys()->merge($counts->keys())->unique()->sort()->values();
                     $levelModels = \App\Models\DegreeLevel::whereIn('id', $levelIds)->get()->keyBy('id');
+                    $firstTab = $levelIds->first();
                 ?>
-                @forelse ($levelIds as $levelId)
-                    <?php
-                        $level = $levelModels[$levelId];
-                        $summary = $summaries->get($levelId);
-                        $total = (int) ($counts[$levelId] ?? 0);
-                        $named = $total ? $cycle->offerings()->where('degree_level_id', $levelId)->whereNotNull('name')->orderBy('sort')->orderBy('id')->limit(30)->get() : collect();
-                    ?>
-                    <div class="mt-3 rounded-lg border border-line p-4">
-                        <h4 class="font-semibold">{{ $level->name }}</h4>
-                        @if ($summary?->detail)<p class="mt-1 text-sm">{{ $summary->detail }}</p>@endif
-                        @if ($named->isNotEmpty())
-                            <p class="mt-2 text-sm text-muted">{{ number_format($total) }} {{ \Illuminate\Support\Str::plural('programme', $total) }} listed.</p>
-                            <ul class="mt-1 list-disc space-y-1 pl-5 text-sm">
-                                @foreach ($named as $o)
-                                    <li>@if ($o->source_url)<a class="text-navy-700 underline" href="{{ $o->source_url }}" rel="noopener nofollow" target="_blank">{{ $o->name }}</a>@else{{ $o->name }}@endif @if ($o->institution)<span class="text-muted">({{ $o->institution }})</span>@endif @if ($o->detail)<span class="text-muted">: {{ $o->detail }}</span>@endif</li>
+                @if ($levelIds->isNotEmpty())
+                    <div x-data="{ tab: {{ (int) $firstTab }} }" class="mt-3">
+                        @if ($levelIds->count() > 1)
+                            <div role="tablist" aria-label="Degree level" class="flex flex-wrap gap-2 border-b border-line pb-3">
+                                @foreach ($levelIds as $levelId)
+                                    <button type="button" role="tab" :aria-selected="tab === {{ (int) $levelId }}" @click="tab = {{ (int) $levelId }}"
+                                        :class="tab === {{ (int) $levelId }} ? 'bg-navy-700 text-white' : 'bg-navy-50 text-navy-800 hover:bg-navy-100'" class="rounded-full px-4 py-1.5 text-sm font-semibold">
+                                        {{ $levelModels[$levelId]->name }}@if (($counts[$levelId] ?? 0) > 0)<span class="ml-1 font-normal opacity-80">{{ number_format($counts[$levelId]) }}</span>@endif
+                                    </button>
                                 @endforeach
-                            </ul>
-                            @if ($total > 30)
-                                <p class="mt-2 text-sm"><a class="font-semibold text-navy-700 underline" href="{{ route('scholarships.majors', [$programme->slug, $cycle->slug, 'level' => $level->slug]) }}">See all {{ number_format($total) }} {{ $level->name }} programmes and search them &rarr;</a></p>
-                            @endif
+                            </div>
                         @endif
+                        @foreach ($levelIds as $levelId)
+                            <?php
+                                $level = $levelModels[$levelId];
+                                $summary = $summaries->get($levelId);
+                                $total = (int) ($counts[$levelId] ?? 0);
+                                $named = $total ? $cycle->offerings()->where('degree_level_id', $levelId)->whereNotNull('name')->orderBy('sort')->orderBy('id')->limit(12)->get() : collect();
+                            ?>
+                            <div role="tabpanel" @if ($levelIds->count() > 1) x-show="tab === {{ (int) $levelId }}" @if (! $loop->first) x-cloak @endif @endif class="pt-4">
+                                @if ($levelIds->count() === 1)<h4 class="font-semibold">{{ $level->name }}</h4>@endif
+                                @if ($summary?->detail)<p class="max-w-3xl text-sm leading-6 text-ink">{{ $summary->detail }}</p>@endif
+                                @if ($named->isNotEmpty())
+                                    <p class="mt-3 text-xs font-semibold uppercase tracking-wide text-muted">{{ number_format($total) }} {{ \Illuminate\Support\Str::plural('programme', $total) }} listed{{ $total > 12 ? ', first 12 shown' : '' }}</p>
+                                    <ul class="mt-2 grid gap-2 sm:grid-cols-2">
+                                        @foreach ($named as $o)
+                                            <li class="rounded-lg border border-line bg-white px-3 py-2 text-sm"><span class="font-medium text-ink">{{ $o->name }}</span>@if ($o->institution)<span class="mt-0.5 block text-xs text-muted">{{ $o->institution }}</span>@endif</li>
+                                        @endforeach
+                                    </ul>
+                                    @if ($total > 12)
+                                        <p class="mt-3"><a class="inline-flex items-center gap-1 rounded-lg bg-navy-700 px-4 py-2 text-sm font-semibold text-white hover:bg-navy-800" href="{{ route('scholarships.majors', [$programme->slug, $cycle->slug, 'level' => $level->slug]) }}">See all {{ number_format($total) }} {{ $level->name }} programmes and search them &rarr;</a></p>
+                                    @endif
+                                @endif
+                            </div>
+                        @endforeach
                     </div>
-                @empty
-                    @if ($cycle->degreeLevels->isNotEmpty())<p class="mt-2 text-sm">Degree levels: {{ $cycle->degreeLevels->pluck('name')->implode(', ') }}. Programme details: not confirmed.</p>@endif
-                @endforelse
-                <?php $noOfferings = $levelIds->isEmpty(); ?>
-                @if ($cycle->programmes_note)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->programmes_note) !!}</div>@elseif ($noOfferings)<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
+                @elseif ($cycle->degreeLevels->isNotEmpty())
+                    <p class="mt-2 text-sm">Degree levels: {{ $cycle->degreeLevels->pluck('name')->implode(', ') }}. Programme details: not confirmed.</p>
+                @endif                <?php $noOfferings = $levelIds->isEmpty(); ?>
+                @if ($cycle->programmes_note)<x-readmore height="7rem" class="mt-4"><div class="rich text-sm leading-6">{!! \App\Support\Html::rich($cycle->programmes_note) !!}</div></x-readmore>@elseif ($noOfferings)<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
                 @if (str_contains($programme->title, 'Chinese Government Scholarship') || str_contains((string) $programme->funder?->name, 'China Scholarship Council'))
                     <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('programmes.index', ['csc' => 1]) }}">Browse programmes listed as open to Chinese Government Scholarship applicants</a></p>
                 @endif
-            </section>
+            </details>
             <section aria-labelledby="funding" class="card p-6">
-                <h2 id="funding" class="text-xl font-bold">Funding</h2>
-                @if ($cycle->funding_summary)<div class="rich mt-2">{!! \App\Support\Html::rich($cycle->funding_summary) !!}</div>@endif
+                <h2 id="funding" class="scroll-mt-36 text-xl font-bold">Funding</h2>
+                @if ($cycle->funding_summary)<x-readmore height="8rem" class="mt-2"><div class="rich text-sm leading-6">{!! \App\Support\Html::rich($cycle->funding_summary) !!}</div></x-readmore>@endif
                 @if ($cycle->benefits->isEmpty())
                     <p class="mt-2 text-sm text-muted">Funding components: Not confirmed.</p>
                 @else
@@ -206,8 +245,8 @@
                 @if ($cycle->funding_type === 'full' && ! $cycle->fully_funded_verified)<p class="mt-2 text-xs text-muted">Full funding has not been verified for this call, so it is not labelled "Fully funded".</p>@endif
             </section>
 
-            <section aria-labelledby="eligibility" class="card p-6">
-                <h2 id="eligibility" class="text-xl font-bold">Eligibility</h2>
+            <details open x-data x-init="if (window.innerWidth < 768) $el.removeAttribute('open')" aria-labelledby="eligibility" class="group card p-6">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 md:pointer-events-none md:cursor-default [&::-webkit-details-marker]:hidden"><h2 id="eligibility" class="scroll-mt-36 text-xl font-bold">Eligibility</h2><span aria-hidden="true" class="shrink-0 text-2xl leading-none text-navy-700 transition group-open:rotate-45 md:hidden">+</span></summary>
                 <dl class="mt-3 grid gap-x-6 gap-y-3 text-sm sm:grid-cols-2">
                     <div><dt class="font-semibold">Eligible nationalities</dt><dd>
                         @if ($cycle->any_nationality) Any nationality{{ $cycle->excludedNationalities->isNotEmpty() ? ' except '.$cycle->excludedNationalities->pluck('name')->implode(', ') : '' }}
@@ -225,12 +264,12 @@
                         <li>{{ match($c->type) { 'min_gpa' => 'Academic grade', 'language' => 'Language: '.$c->unit, 'age' => 'Age', default => ucfirst($c->type) } }} {{ $c->operator }} {{ $c->value }}@if($c->type === 'min_gpa') ({{ $c->unit }})@endif</li>
                     @endforeach</ul>
                 @endif
-                @if ($cycle->eligibility_notes)<div class="rich mt-3 text-sm">{!! \App\Support\Html::rich($cycle->eligibility_notes) !!}</div>@endif
-                @if ($cycle->age_experience_notes)<div class="rich mt-2 text-sm">{!! \App\Support\Html::rich($cycle->age_experience_notes) !!}</div>@endif
-            </section>
+                @if ($cycle->eligibility_notes)<x-readmore height="14rem" class="mt-3"><div class="rich text-sm leading-6">{!! \App\Support\Html::rich($cycle->eligibility_notes) !!}</div></x-readmore>@endif
+                @if ($cycle->age_experience_notes)<x-readmore height="7rem" class="mt-3"><div class="rich text-sm leading-6">{!! \App\Support\Html::rich($cycle->age_experience_notes) !!}</div></x-readmore>@endif
+            </details>
 
-            <section aria-labelledby="requirements" class="card p-6">
-                <h2 id="requirements" class="text-xl font-bold">Required documents</h2>
+            <details open x-data x-init="if (window.innerWidth < 768) $el.removeAttribute('open')" aria-labelledby="requirements" class="group card p-6">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 md:pointer-events-none md:cursor-default [&::-webkit-details-marker]:hidden"><h2 id="requirements" class="scroll-mt-36 text-xl font-bold">Required documents</h2><span aria-hidden="true" class="shrink-0 text-2xl leading-none text-navy-700 transition group-open:rotate-45 md:hidden">+</span></summary>
                 @if ($cycle->requirements->isEmpty())
                     <p class="mt-2 text-sm text-muted">Not confirmed. See the official source.</p>
                 @else
@@ -238,12 +277,12 @@
                         <li class="flex gap-2"><span aria-hidden="true" class="text-navy-700">&#10003;</span><span>{{ $r->text }} @if(! $r->mandatory)<span class="badge-neutral">optional</span>@endif @if($r->conditional_rule)<span class="text-muted">({{ $r->conditional_rule }})</span>@endif</span></li>
                     @endforeach</ul>
                 @endif
-            </section>
+            </details>
 
             @php($stepsByPhase = $cycle->applicationSteps->groupBy('phase'))
             @if ($stepsByPhase->isNotEmpty())
                 <section aria-labelledby="process" class="card p-6">
-                    <h2 id="process" class="text-xl font-bold">Application process</h2>
+                    <h2 id="process" class="scroll-mt-36 text-xl font-bold">Application process</h2>
                     @foreach (\App\Models\CycleApplicationStep::PHASES as $phase => $heading)
                         @if ($stepsByPhase->has($phase))
                             <h3 class="mt-4 font-semibold">{{ $heading }}</h3>
@@ -259,15 +298,20 @@
 
             @if ($faq)
                 <section aria-labelledby="quick-answers" class="card p-6">
-                    <h2 id="quick-answers" class="text-xl font-bold">Quick answers</h2>
-                    <dl class="mt-3 space-y-4">
-                        @foreach ($faq as [$q, $a])<div><dt class="font-semibold">{{ $q }}</dt><dd class="mt-1 text-sm leading-6">{{ $a }}</dd></div>@endforeach
-                    </dl>
+                    <h2 id="quick-answers" class="scroll-mt-36 text-xl font-bold">Quick answers</h2>
+                    <div class="mt-3 divide-y divide-line rounded-lg border border-line">
+                        @foreach ($faq as [$q, $a])
+                            <details class="group px-4 py-3" @if ($loop->first) open @endif>
+                                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 font-semibold text-ink marker:content-none"><span>{{ $q }}</span><span aria-hidden="true" class="shrink-0 text-navy-700 transition group-open:rotate-45">+</span></summary>
+                                <p class="mt-2 text-sm leading-6 text-ink">{{ $a }}</p>
+                            </details>
+                        @endforeach
+                    </div>
                 </section>
             @endif
 
-            <section aria-labelledby="verification" class="card p-6">
-                <h2 id="verification" class="text-xl font-bold">Sources and verification</h2>
+            <details open x-data x-init="if (window.innerWidth < 768) $el.removeAttribute('open')" aria-labelledby="verification" class="group card p-6">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 md:pointer-events-none md:cursor-default [&::-webkit-details-marker]:hidden"><h2 id="verification" class="scroll-mt-36 text-xl font-bold">Sources and verification</h2><span aria-hidden="true" class="shrink-0 text-2xl leading-none text-navy-700 transition group-open:rotate-45 md:hidden">+</span></summary>
                 <p class="mt-2 text-sm">
                     @if ($cycle->last_verified_at) Last verified against the official source on <strong>{{ $cycle->last_verified_at->format('j F Y') }}</strong>.
                     @else Not yet verified. @endif
@@ -275,10 +319,10 @@
                 </p>
                 <ul class="mt-2 space-y-1 text-sm">@foreach ($cycle->evidence as $e)
                     <li>{{ $e->publisher }} <span class="text-muted">({{ str_replace('_', ' ', $e->publisher_type) }}, checked {{ $e->checked_at->format('j M Y') }})</span> —
-                        <a class="text-navy-700 underline" href="{{ $e->url }}" rel="noopener nofollow" target="_blank">{{ parse_url($e->url, PHP_URL_HOST) }}</a></li>
+                        <a class="text-navy-700 underline" href="{{ config('sas.official_link') }}" rel="noopener" target="_blank">www.cas.moe</a></li>
                 @endforeach</ul>
                 <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('corrections.create', ['cycle' => $cycle->id]) }}">Report an error or an update</a></p>
-            </section>
+            </details>
         </div>
 
         <aside class="space-y-5" aria-label="Actions">

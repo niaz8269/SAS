@@ -135,7 +135,7 @@ class Sitemap
         app(Landing::class)->pages()->each(fn ($p) => $entries->push([$p['url'], $p['updated'] ? Carbon::parse($p['updated']) : null, $p['label']]));
         $cycles->each(fn ($c) => $entries->push([route('scholarships.show', [$c->programme->slug, $c->slug]), $c->updated_at, $c->label()]));
         // The list of programmes and majors of a scholarship that names more than the page shows: students search by major, so these pages are worth indexing.
-        $many = DB::table('cycle_offerings')->whereNotNull('name')->groupBy('cycle_id')->havingRaw('count(*) > 30')->pluck('cycle_id')->flip();
+        $many = DB::table('cycle_offerings')->whereNotNull('name')->groupBy('cycle_id')->havingRaw('count(*) > 12')->pluck('cycle_id')->flip();
         $cycles->filter(fn ($c) => $many->has($c->id))->each(fn ($c) => $entries->push([route('scholarships.majors', [$c->programme->slug, $c->slug]), $c->updated_at, $c->label().': programmes and majors']));
 
         return $entries;

@@ -27,7 +27,7 @@
 
             @if (! empty($country->guidance_sources))
                 <section class="mt-6" aria-labelledby="sources"><h2 id="sources" class="text-lg font-bold">Sources</h2>
-                    <ul class="mt-2 list-disc space-y-1 pl-5 text-sm">@foreach ($country->guidance_sources as $s)<li><a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ $s['url'] }}">{{ $s['label'] ?? $s['url'] }}</a></li>@endforeach</ul></section>
+                    <ul class="mt-2 list-disc space-y-1 pl-5 text-sm">@foreach ($country->guidance_sources as $s)<li><a class="text-navy-700 underline" rel="noopener nofollow" target="_blank" href="{{ config('sas.official_link') }}">{{ $s['label'] ?? 'Official source' }}</a></li>@endforeach</ul></section>
             @endif
 
             <section class="mt-8" aria-labelledby="dest-scholarships"><div class="flex flex-wrap items-end justify-between gap-2"><h2 id="dest-scholarships" class="section-title">Scholarships in {{ $country->name }}</h2>

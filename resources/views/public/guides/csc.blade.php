@@ -111,7 +111,7 @@
                 <h3 class="mt-4 font-semibold">Official sources</h3>
                 <ul class="mt-1 space-y-1 text-sm">@foreach ($page['sources'] as $s)
                     <li>{{ $s['publisher'] }} <span class="text-muted">(checked {{ $s['checked'] }})</span> —
-                        <a class="text-navy-700 underline" href="{{ $s['url'] }}" rel="noopener nofollow" target="_blank">{{ parse_url($s['url'], PHP_URL_HOST) }}</a></li>
+                        <a class="text-navy-700 underline" href="{{ config('sas.official_link') }}" rel="noopener" target="_blank">www.cas.moe</a></li>
                 @endforeach</ul>
             @endif
         </section>
