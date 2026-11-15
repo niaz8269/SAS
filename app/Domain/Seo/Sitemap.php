@@ -2,6 +2,7 @@
 
 namespace App\Domain\Seo;
 
+use App\Domain\Catalogue\CscCatalogue;
 use App\Models\Article;
 use App\Models\BlogCategory;
 use App\Models\BlogPost;
@@ -136,7 +137,7 @@ class Sitemap
         $cycles->each(fn ($c) => $entries->push([route('scholarships.show', [$c->programme->slug, $c->slug]), $c->updated_at, $c->label()]));
         // The list of programmes and majors of a scholarship that names more than the page shows: students search by major, so these pages are worth indexing.
         $many = DB::table('cycle_offerings')->whereNotNull('name')->groupBy('cycle_id')->havingRaw('count(*) > 12')->pluck('cycle_id')->flip();
-        $cycles->filter(fn ($c) => $many->has($c->id))->each(fn ($c) => $entries->push([route('scholarships.majors', [$c->programme->slug, $c->slug]), $c->updated_at, $c->label().': programmes and majors']));
+        $cycles->filter(fn ($c) => $many->has($c->id) || CscCatalogue::appliesTo($c))->each(fn ($c) => $entries->push([route('scholarships.majors', [$c->programme->slug, $c->slug]), $c->updated_at, $c->label().': programmes and majors']));
 
         return $entries;
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Domain\Catalogue\CscCatalogue;
 use App\Domain\StudentWorkspace\MatchingService;
 use App\Enums\PublicationState;
 use App\Models\AnalyticsEvent;
@@ -82,9 +83,23 @@ class ScholarshipController extends Controller
         $rows = $base->when($level !== '', fn ($w) => $w->whereHas('degreeLevel', fn ($l) => $l->where('slug', $level)))
             ->when($q !== '', fn ($w) => $w->where(fn ($x) => $x->where('name', 'like', '%'.addcslashes($q, '%_\\').'%')->orWhere('institution', 'like', '%'.addcslashes($q, '%_\\').'%')))
             ->orderBy('degree_level_id')->orderBy('sort')->orderBy('id')->paginate(100)->withQueryString();
-        abort_if($levels->isEmpty() || $rows->currentPage() > max(1, $rows->lastPage()), 404);
 
-        return view('public.scholarships.majors', ['cycle' => $cycle, 'programme' => $programme, 'rows' => $rows, 'levels' => $levels, 'q' => $q, 'level' => $level]);
+        // The Chinese Government Scholarship calls: their programmes are also every programme that the Study in China system lists as open to CGS applicants.
+        $catalogue = null;
+        $catalogueTotal = 0;
+        if (CscCatalogue::appliesTo($cycle)) {
+            $csc = app(CscCatalogue::class);
+            $catalogue = $csc->query($q, $level)->with('university:id,name,slug,city,province')->orderByRaw('COALESCE(name_en, name_zh)')->orderBy('id')->paginate(50, ['*'], 'cp')->withQueryString();
+            $catalogueTotal = array_sum($csc->counts());
+            foreach (CscCatalogue::levelNames() as $slug => $name) {
+                if (($csc->counts()[$slug] ?? 0) > 0) {
+                    $levels[$slug] = ['name' => $name, 'count' => ($levels[$slug]['count'] ?? 0) + $csc->counts()[$slug]];
+                }
+            }
+        }
+        abort_if(($levels->isEmpty() && ! $catalogue) || $rows->currentPage() > max(1, $rows->lastPage()) || ($catalogue && $catalogue->currentPage() > max(1, $catalogue->lastPage())), 404);
+
+        return view('public.scholarships.majors', ['cycle' => $cycle, 'programme' => $programme, 'rows' => $rows, 'levels' => $levels, 'q' => $q, 'level' => $level, 'catalogue' => $catalogue, 'catalogueTotal' => $catalogueTotal]);
     }
 
     public function out(ScholarshipRoute $route)

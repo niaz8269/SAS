@@ -4,6 +4,7 @@ namespace App\Domain\Scholarship;
 
 use App\Enums\ApplicationStatus;
 use App\Models\ScholarshipCycle;
+use App\Models\UniversityProgramme;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -25,12 +26,17 @@ class ScholarshipSearch
         if ($f['q'] !== '') {
             // One EXISTS against the narrow index table; every term must appear (AND).
             $terms = preg_split('/\s+/', mb_strtolower($f['q']));
-            $q->whereExists(function ($s) use ($terms) {
+            $inIndex = function ($s) use ($terms) {
                 $s->selectRaw('1')->from('cycle_search_index')->whereColumn('cycle_search_index.cycle_id', 'scholarship_cycles.id');
                 foreach ($terms as $term) {
                     $s->where('cycle_search_index.search_text', 'like', '%'.str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $term).'%');
                 }
-            });
+            };
+            // The Chinese Government Scholarship calls also take every programme the Study in China system lists as open to CGS applicants (about 54,800),
+            // which is not copied into the index: a major found there brings those calls into the results.
+            $cscHit = $this->catalogueHasMajor($terms);
+            $q->where(fn (Builder $w) => $w->whereExists($inIndex)
+                ->when($cscHit, fn (Builder $x) => $x->orWhereHas('programme', fn ($p) => $p->where('title', 'like', 'Chinese Government Scholarship%'))));
         }
         if ($f['destination']) {
             $q->whereHas('destinations', fn ($x) => $x->whereIn('countries.slug', $f['destination']));
@@ -92,6 +98,22 @@ class ScholarshipSearch
         }
 
         return $this->sort($q, $f);
+    }
+
+    /** Does a programme open to CGS applicants carry every one of these words in its English or Chinese name? */
+    private function catalogueHasMajor(array $terms): bool
+    {
+        $terms = array_values(array_filter($terms, fn ($t) => $t !== ''));
+        if ($terms === []) {
+            return false;
+        }
+
+        return UniversityProgramme::query()->public()->where('csc_eligible', true)->where(function ($w) use ($terms) {
+            foreach ($terms as $term) {
+                $like = '%'.addcslashes($term, '%_\\').'%';
+                $w->where(fn ($x) => $x->where('name_en', 'like', $like)->orWhere('name_zh', 'like', $like));
+            }
+        })->exists();
     }
 
     public function paginate(array $f, int $perPage = 12): LengthAwarePaginator

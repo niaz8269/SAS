@@ -223,8 +223,21 @@
                     <p class="mt-2 text-sm">Degree levels: {{ $cycle->degreeLevels->pluck('name')->implode(', ') }}. Programme details: not confirmed.</p>
                 @endif                <?php $noOfferings = $levelIds->isEmpty(); ?>
                 @if ($cycle->programmes_note)<x-readmore height="7rem" class="mt-4"><div class="rich text-sm leading-6">{!! \App\Support\Html::rich($cycle->programmes_note) !!}</div></x-readmore>@elseif ($noOfferings)<p class="mt-2 text-sm text-muted">Programmes and fields: not confirmed.</p>@endif
-                @if (str_contains($programme->title, 'Chinese Government Scholarship') || str_contains((string) $programme->funder?->name, 'China Scholarship Council'))
-                    <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('programmes.index', ['csc' => 1]) }}">Browse programmes listed as open to Chinese Government Scholarship applicants</a></p>
+                @if (\App\Domain\Catalogue\CscCatalogue::appliesTo($cycle))
+                    <?php $cscCounts = array_filter(app(\App\Domain\Catalogue\CscCatalogue::class)->counts()); $cscNames = \App\Domain\Catalogue\CscCatalogue::levelNames(); ?>
+                    @if ($cscCounts)
+                        <div class="mt-5 rounded-lg border border-line bg-navy-50/50 p-4">
+                            <h4 class="font-semibold">Programmes open to Chinese Government Scholarship applicants</h4>
+                            <p class="mt-1 text-sm leading-6 text-muted">{{ number_format(array_sum($cscCounts)) }} programmes at {{ number_format(app(\App\Domain\Catalogue\CscCatalogue::class)->universities()) }} universities in China are listed by the Study in China system as open to Chinese Government Scholarship applicants. Search them by your major.</p>
+                            <ul class="mt-3 flex flex-wrap gap-2">
+                                @foreach ($cscCounts as $slug => $n)
+                                    <li><a class="inline-block rounded-full bg-white px-3 py-1 text-sm font-semibold text-navy-800 ring-1 ring-line hover:bg-navy-100" href="{{ route('scholarships.majors', [$programme->slug, $cycle->slug, 'level' => $slug]) }}">{{ $cscNames[$slug] }} <span class="font-normal text-muted">{{ number_format($n) }}</span></a></li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @else
+                        <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('programmes.index', ['csc' => 1]) }}">Browse programmes listed as open to Chinese Government Scholarship applicants</a></p>
+                    @endif
                 @endif
             </details>
             <section aria-labelledby="funding" class="card p-6">
@@ -309,20 +322,6 @@
                     </div>
                 </section>
             @endif
-
-            <details open x-data x-init="if (window.innerWidth < 768) $el.removeAttribute('open')" aria-labelledby="verification" class="group card p-6">
-                <summary class="flex cursor-pointer list-none items-center justify-between gap-3 md:pointer-events-none md:cursor-default [&::-webkit-details-marker]:hidden"><h2 id="verification" class="scroll-mt-36 text-xl font-bold">Sources and verification</h2><span aria-hidden="true" class="shrink-0 text-2xl leading-none text-navy-700 transition group-open:rotate-45 md:hidden">+</span></summary>
-                <p class="mt-2 text-sm">
-                    @if ($cycle->last_verified_at) Last verified against the official source on <strong>{{ $cycle->last_verified_at->format('j F Y') }}</strong>.
-                    @else Not yet verified. @endif
-                    @if ($cycle->needsRecheck()) <span class="badge-warn">Needs recheck</span> @endif
-                </p>
-                <ul class="mt-2 space-y-1 text-sm">@foreach ($cycle->evidence as $e)
-                    <li>{{ $e->publisher }} <span class="text-muted">({{ str_replace('_', ' ', $e->publisher_type) }}, checked {{ $e->checked_at->format('j M Y') }})</span> —
-                        <a class="text-navy-700 underline" href="{{ config('sas.official_link') }}" rel="noopener" target="_blank">www.cas.moe</a></li>
-                @endforeach</ul>
-                <p class="mt-3 text-sm"><a class="text-navy-700 underline" href="{{ route('corrections.create', ['cycle' => $cycle->id]) }}">Report an error or an update</a></p>
-            </details>
         </div>
 
         <aside class="space-y-5" aria-label="Actions">
