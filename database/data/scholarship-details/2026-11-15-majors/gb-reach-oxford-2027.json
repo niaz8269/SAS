@@ -1,0 +1,376 @@
+[
+    {
+        "external_key": "gb-reach-oxford-2027",
+        "checked_on": "2026-11-15",
+        "sources": [
+            {
+                "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing",
+                "publisher": "University of Oxford",
+                "publisher_type": "university",
+                "note": "The University's undergraduate course listing (52 entries), read in a normal browser on 15 November 2026"
+            },
+            {
+                "url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford",
+                "publisher": "University of Oxford",
+                "publisher_type": "university",
+                "note": "Reach Oxford page: \"Subject: All subjects in the course listing, except medicine\""
+            },
+            {
+                "url": "https://www.seh.ox.ac.uk/study/undergraduate/undergraduate-finance",
+                "publisher": "St Edmund Hall, University of Oxford",
+                "publisher_type": "university",
+                "note": "College description of the scheme and its benefits"
+            },
+            {
+                "url": "https://lincoln.ox.ac.uk/600/global-lincoln/undergraduate-scholarships/",
+                "publisher": "Lincoln College, University of Oxford",
+                "publisher_type": "university",
+                "note": "How the scheme is funded at college level"
+            },
+            {
+                "url": "https://www.merton.ox.ac.uk/undergraduate-support",
+                "publisher": "Merton College, University of Oxford",
+                "publisher_type": "university",
+                "note": "College description of the Reach scholarship"
+            }
+        ],
+        "subject_rule": "All subjects in the University's undergraduate course listing except medicine (the University's Reach Oxford page).",
+        "any_subject": false,
+        "levels": [
+            {
+                "code": "bachelor",
+                "confirmed": true,
+                "programmes": [
+                    {
+                        "name": "Archaeology and Anthropology",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Asian and Middle Eastern Studies",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Biochemistry (Molecular and Cellular)",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Biology",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Biomedical Sciences",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Chemistry",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Classical Archaeology and Ancient History",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Classics",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Classics and Asian and Middle Eastern Studies",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Classics and English",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Classics and Modern Languages",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Computer Science",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Computer Science and Philosophy",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Earth Sciences (Geology)",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Economics and Management",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Engineering Science",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "English and Modern Languages",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "English Language and Literature",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "European and Middle Eastern Languages",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Fine Art",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Geography",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "History",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "History (Ancient and Modern)",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "History and Economics",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "History and English",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "History and Modern Languages",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "History and Politics",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "History of Art",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Human Sciences",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Law (Jurisprudence)",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Materials Science",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Mathematics / Mathematics and Statistics",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Mathematics and Computer Science",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Mathematics and Philosophy",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Modern Languages",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Modern Languages and Linguistics",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Music",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Philosophy and Modern Languages",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Philosophy and Theology",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Philosophy, Politics and Economics",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Physics",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Physics and Philosophy",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Psychology (Experimental)",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Psychology, Philosophy and Linguistics",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Religion and Asian and Middle Eastern Studies",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    },
+                    {
+                        "name": "Theology and Religion",
+                        "institution": "University of Oxford",
+                        "detail": "BA or other undergraduate degree as listed by the University",
+                        "source_text": "",
+                        "url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing"
+                    }
+                ]
+            }
+        ],
+        "catalogue_url": "https://www.ox.ac.uk/admissions/undergraduate/courses/course-listing",
+        "notes": [
+            "The 52 entries of the course listing were read; the two Medicine entries are left out because the page excludes medicine, and the four Foundation Year entries are left out because the page says the scholarship supports the undergraduate degree after the Foundation Year, so 46 courses are recorded."
+        ],
+        "not_stated": [],
+        "fetch_problems": []
+    }
+]
