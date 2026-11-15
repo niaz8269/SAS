@@ -1,0 +1,1301 @@
+[
+    {
+        "external_key": "gb-cambridge-trust-masters-studentship-intl-2027",
+        "checked_on": "2026-11-15",
+        "sources": [
+            {
+                "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026",
+                "publisher": "University of Cambridge (Postgraduate Funding Search)",
+                "publisher_type": "university",
+                "note": "The \"Cambridge Trust Masters Studentship (International Fees)\" entry: its list of covered courses (179 courses), opened in a normal browser on 15 November 2026"
+            },
+            {
+                "url": "https://www.cambridgetrust.org/scholarship/cambridge-masters-studentship-international/",
+                "publisher": "Cambridge Commonwealth, European & International Trust",
+                "publisher_type": "funder",
+                "note": "Studentship page: one-year postgraduate study in any subject, excluding premium rate courses and part-time MSt; MASt eligible; refers to the Postgraduate Course Directory"
+            },
+            {
+                "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026",
+                "publisher": "University of Cambridge",
+                "publisher_type": "university",
+                "note": "Funding Search listing: says 179 courses are covered; the list does not open"
+            },
+            {
+                "url": "https://www.postgraduate.study.cam.ac.uk/funding",
+                "publisher": "University of Cambridge",
+                "publisher_type": "university",
+                "note": "Funding overview page: describes the Funding Search; gives no per-scholarship course list"
+            }
+        ],
+        "subject_rule": "Open to any subject: the Trust says the studentships are for one-year postgraduate study in any subject, excluding premium rate courses and any part-time MSt courses (MASt courses are eligible).",
+        "any_subject": true,
+        "levels": [
+            {
+                "code": "master",
+                "confirmed": true,
+                "programmes": [
+                    {
+                        "name": "MASt in Astrophysics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MASt in Earth Sciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MASt in Mathematics (Applied Mathematics)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MASt in Mathematics (Mathematical Statistics)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MASt in Mathematics (Pure Mathematics)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MASt in Mathematics (Theoretical Physics)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MASt in Physics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Advanced Chemical Engineering",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Advanced Computer Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Advanced Materials for the Energy Transition",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in African Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in American History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Anglo-Saxon, Norse and Celtic",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Anthropocene Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Archaeological Research",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Archaeological Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Archaeology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Architecture and Urban Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (Chinese Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (Classical Islamic History and Culture)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (East Asian Popular Culture Across Time)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (Hebrew and Pre-Modern Jewish History and Culture)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (Hebrew and Semitic Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (Japanese Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (Korean Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (Modern Middle Eastern Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies (Muslim-Jewish Relations)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies by Research (Chinese Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies by Research (Japanese Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies by Research (Korean Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Asian and Middle Eastern Studies by Research (Middle Eastern Studies)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Assyriology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Astronomy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Anthropological Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Biochemistry) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Genetics) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (MRC Laboratory of Molecular Biology) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (MRC Toxicology Unit) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Pathology) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Pharmacology) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Physiology, Development and Neuroscience) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Plant Sciences) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Psychology) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Sanger Institute) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Stem Cell Biology) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Veterinary Medicine) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Science (Zoology) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Sciences (Basic & Translational Neuroscience) by advanced study",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Sciences (Biomolecular Science) by advanced study",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Sciences (Cell Science) by advanced study",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Sciences (Crop Science) by advanced study",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Sciences (Developmental Biology) by advanced study",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Sciences (Infection Biology and Molecular Immunology) by advanced study",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biological Sciences (Reproduction and Embryogenesis) by advanced study",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Bioscience Enterprise",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Biotechnology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Brain Health & Disease: Clinical Neurosciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Cancer Biology and Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Chemical Engineering and Biotechnology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Chemistry",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Classics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Cognitive Neurosciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Computational Biology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Conservation Leadership",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Criminology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Data Intensive Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Development Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Digital Humanities",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Digital Policy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Early Modern History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Earth Sciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Economic Research",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Economic and Social History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Economics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Economics and Data Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Arts, Creativity & Education)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Critical Approaches to Children's Literature)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Education, Globalisation and International Development)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Educational Policy, Leadership and Improvement) full-time",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Educational Policy, Leadership and Improvement) part-time",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Knowledge, Power and Politics)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Mathematics Education)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Primary Education)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Psychology and Education) full time",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Education (Research in Second Language Education)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Electrical and Electronic Engineering",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Energy Technologies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Engineering",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Engineering for Sustainable Development",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in English Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Environmental Policy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Ethics of AI, Data and Algorithms",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Film and Screen Studies by Advanced Study",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Film and Screen Studies by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Finance",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Finance and Economics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Foundations of Clinical Psychology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Genomic Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Geography",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Global History of Art and Architecture",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Global Risk and Resilience",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Health, Medicine and Society",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Heritage Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in History and Philosophy of Science and Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Human Evolutionary Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Human-Inspired Artificial Intelligence",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Industrial Systems, Manufacture, and Management",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Innovation, Strategy and Organisation",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Land Economy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Land Economy Research",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Latin American Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Latin American Studies (by thesis only)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Linguistics and Language Sciences (Research)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Linguistics and Language Sciences (Taught)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Literature, Culture and Thought (Research)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Literature, Culture and Thought (Taught)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Machine Learning and Machine Intelligence",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Management",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Materials Science and Metallurgy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Mathematics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (CIMR)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (CRUK CI)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Cambridge Mind and Brain Institute)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Clinical Biochemistry)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Clinical Neurosciences)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Genomic Medicine)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Haematology)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Medicine)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Obstetrics and Gynaecology)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Oncology)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Paediatrics)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Psychiatry)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Radiology)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medical Science (Surgery)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Medieval History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Micro and Nanotechnology Enterprise",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Modern British History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Modern European History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Modern South Asian Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Molecular Mechanisms of Human Disease",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Multi-disciplinary Gender Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Music",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in NeuroAI and Intelligent Systems",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Nuclear Energy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Obesity, Endocrinology and Metabolism",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Past and Future Climates",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Philosophy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Physics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Planetary Science and Life in the Universe",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Planning, Growth and Regeneration",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Polar Studies (Scott Polar Research Institute)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Political Thought and Intellectual History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Politics and International Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Population Health Sciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Precision Medical Imaging and AI",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Public Policy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Quantitative Climate and Environmental Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Real Estate Finance",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Scientific Computing",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Social Anthropological Research",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Social Anthropology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Sociology (Political and Economic Sociology)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Sociology (The Sociology of Marginality and Exclusion)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Sociology (The Sociology of Media and Culture)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Stem Cell Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Strategy, Marketing, Operations and Organisational Behaviour",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Technology Policy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Theology, Religion and Philosophy of Religion",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Therapeutic Sciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Translating Medical Device & Advanced Therapy Research",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Translational Medical Research",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Veterinary Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in Veterinary Science (Physiology, Development and Neuroscience) by thesis",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MPhil in World History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MRes in Genomic Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MRes in Photonic and Electronic Systems",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "MRes in Sensor Technologies and Applications",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "Master of Corporate Law (MCL)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    },
+                    {
+                        "name": "Master of Law (LLM)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026"
+                    }
+                ]
+            }
+        ],
+        "catalogue_url": "https://www.student-funding.cam.ac.uk/fund/cambridge-masters-studentship-international-2026",
+        "notes": [
+            "The courses are the University of Cambridge Funding Search list of courses covered by this award (179 courses), copied as published on 15 November 2026. Course names are the University's own."
+        ],
+        "not_stated": [],
+        "fetch_problems": []
+    }
+]

@@ -1,0 +1,846 @@
+[
+    {
+        "external_key": "gb-cambridge-trust-international-2027",
+        "checked_on": "2026-11-15",
+        "sources": [
+            {
+                "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+                "publisher": "University of Cambridge (Postgraduate Funding Search)",
+                "publisher_type": "university",
+                "note": "The \"Cambridge Trust International Scholarship\" entry: its list of covered courses (114 courses), opened in a normal browser on 15 November 2026"
+            },
+            {
+                "url": "https://www.cambridgetrust.org/scholarship/cambridge-international-scholarship/",
+                "publisher": "Cambridge Commonwealth, European & International Trust",
+                "publisher_type": "funder",
+                "note": "Scholarship page: tenable in any subject excluding premium rate courses; refers to the Postgraduate Course Directory"
+            },
+            {
+                "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+                "publisher": "University of Cambridge",
+                "publisher_type": "university",
+                "note": "Funding Search listing: tenable in any subject excluding premium rate courses; says 114 courses are covered but the list does not open"
+            },
+            {
+                "url": "https://www.postgraduate.study.cam.ac.uk/funding",
+                "publisher": "University of Cambridge",
+                "publisher_type": "university",
+                "note": "Funding overview page: describes the Funding Search; gives no per-scholarship course list"
+            }
+        ],
+        "subject_rule": "Open to any subject: the Trust and the University's Funding Search both say the scholarship is tenable at any Cambridge College in any subject, excluding premium rate courses (the Trust names MBA and MFin as examples).",
+        "any_subject": true,
+        "levels": [
+            {
+                "code": "doctorate",
+                "confirmed": true,
+                "programmes": [
+                    {
+                        "name": "BBSRC DFA PhD in Plant Biosystems Design (Plant Sciences)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "BBSRC DTP PhD in Biological Sciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "BBSRC IDLA PhD in Biological Science (BioSCaPe)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "BBSRC IDLA PhD in Transformative Technologies for Pharmaceutical Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "CDT MPhil + PhD in Computational Methods for Materials Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "CRUK Cambridge Centre MRes + PhD in Cancer Biology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "Clinical School MBPhD Programme",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC CDT MRes + PhD in Future Infrastructure and Built Environment",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC CDT MRes + PhD in Future Infrastructure and Built Environment (part time)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC CDT MRes + PhD in Photonic and Electronic Systems",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC CDT MRes + PhD in Sensor Technologies and Applications",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC CDT PhD in 2D Materials of Tomorrow",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC CDT PhD in Aerosol Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC CDT PhD in Developing National Capability for Materials 4.0",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC CDT PhD in Superconductivity: Enabling Transformative Technologies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC DFA PhD in Accelerating Nuclear Development and Applications",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "EPSRC DFA PhD in Applied Nuclear Physics and Technology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "MRes + PhD in Management Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in AI and Society",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Anglo-Saxon, Norse and Celtic",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Antarctic Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Applied Mathematics and Theoretical Physics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Archaeology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Architecture",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Asian and Middle Eastern Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Astronomy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biochemistry",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biological Anthropology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biological Science (Babraham Institute)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biological Science (EBI)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biological Science (MRC Laboratory of Molecular Biology)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biological Science (MRC Toxicology Unit)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biological Science (Sanger Institute)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biological Sciences at the Department of Veterinary Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biostatistics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Biotechnology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Cardiovascular Research",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Chemical Engineering",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Chemistry",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Classics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Clinical Biochemistry",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Clinical Neurosciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Computation, Cognition and Language",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Computer Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Criminology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Development Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Digital Humanities",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Earth Sciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Economics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Education (full time)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Education (part time)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Engineering",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Engineering (Industrial)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in English",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Experimental Cardiovascular Research",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Film and Screen Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in French",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Genetics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Genomic Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Geography",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in German",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Global Risk and Resilience",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Haematology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in History",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in History and Philosophy of Science",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in History of Art",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Human-Inspired Artificial Intelligence",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Infection and Immunity",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Interdisciplinary Nanoscience and Nanotechnology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Italian",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Land Economy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Latin American Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Law",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Linguistics: Theoretical and Applied Linguistics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Literature, Culture and Thought",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Management Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Materials Science and Metallurgy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Medical Science (CIMR)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Medical Science (CRUK CI)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Medical Science (Cambridge Mind and Brain Institute)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Medical Science (Clinical Biochemistry - IMS Epidemiology)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Multi-disciplinary Gender Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Music",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Obstetrics and Gynaecology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Oncology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Paediatrics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Pathology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Pharmacology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Philosophy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Physics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Physiology, Development and Neuroscience",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Plant Sciences",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Polar Studies (Scott Polar Research Institute)",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Politics and International Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Portuguese",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Programme for Health Professionals",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Psychiatry",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Psychology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Public Health and Primary Care",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Public Policy",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Pure Mathematics and Mathematical Statistics",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Radiology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Slavonic Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Social Anthropology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Sociology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Spanish",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Stem Cell Biology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Surgery",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Sustainable Energy Materials Innovation",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Theology and Religious Studies",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Veterinary Medicine",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "PhD in Zoology",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    },
+                    {
+                        "name": "UKRI AI CDT PhD in Decision Making for Complex Systems",
+                        "institution": "University of Cambridge",
+                        "detail": "",
+                        "source_text": "",
+                        "url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026"
+                    }
+                ]
+            }
+        ],
+        "catalogue_url": "https://www.student-funding.cam.ac.uk/fund/cambridge-international-scholarship-2026",
+        "notes": [
+            "The courses are the University of Cambridge Funding Search list of courses covered by this award (114 courses), copied as published on 15 November 2026. Course names are the University's own."
+        ],
+        "not_stated": [],
+        "fetch_problems": []
+    }
+]
