@@ -13,6 +13,8 @@
     // The menu is edited in the Admin. Home is drawn as an icon, and Resources, Blogs, About and Contact share one "More" dropdown (grouped by their address, so a label changed in the Admin still lands in the right place).
     $pathOf = fn ($i) => '/'.trim((string) parse_url($i['url'], PHP_URL_PATH), '/');
     $moreItems = array_values(array_filter($nav, fn ($i) => in_array($pathOf($i), ['/resources', '/blog', '/about', '/contact'], true)));
+    $moreOrder = ['/about' => 0, '/resources' => 1, '/blog' => 2, '/contact' => 3]; // About first, then the rest in their usual order
+    usort($moreItems, fn ($x, $y) => ($moreOrder[$pathOf($x)] ?? 9) <=> ($moreOrder[$pathOf($y)] ?? 9));
     $navView = [];
     $moreAdded = false;
     foreach ($nav as $i) {
@@ -82,17 +84,19 @@
             <ul class="flex items-center gap-0.5 whitespace-nowrap text-[0.8125rem] font-medium min-[1200px]:text-base">
                 @foreach ($navView as $entry)
                     @if (isset($entry['more']))
-                        <li class="relative" x-data="{ more: false }" @click.outside="more = false" @keydown.escape="more = false">
-                            <button type="button" @click="more = ! more" :aria-expanded="more.toString()" aria-haspopup="true" aria-controls="nav-more" aria-label="More pages" title="More"
+                        <li class="relative" x-data="{ more: false }" @mouseenter="more = true" @mouseleave="more = false" @click.outside="more = false" @keydown.escape="more = false">
+                            <button type="button" @click="window.matchMedia('(hover: hover)').matches ? (more = true) : (more = ! more)" :aria-expanded="more.toString()" aria-haspopup="true" aria-controls="nav-more" aria-label="More pages" title="More"
                                     class="group relative inline-flex items-center gap-0.5 rounded-lg px-1.5 py-2 transition hover:bg-navy-50 hover:text-navy-800 {{ $moreActive ? 'text-navy-800' : 'text-navy-700' }}">
                                 <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
                                 <svg class="h-4 w-4 transition" :class="more && 'rotate-180'" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
                                 <span class="absolute inset-x-1.5 -bottom-0.5 h-0.5 rounded-full bg-gold transition {{ $moreActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-60' }}" aria-hidden="true"></span></button>
-                            <ul id="nav-more" x-show="more" x-cloak x-transition.opacity class="absolute right-0 z-50 mt-1 min-w-[12rem] rounded-xl border border-line bg-white p-2 text-base shadow-lg" style="top:100%">
+                            <div class="absolute right-0 z-50" style="top:100%;padding-top:0.25rem" x-show="more" x-cloak x-transition.opacity>
+                            <ul id="nav-more" class="min-w-[12rem] rounded-xl border border-line bg-white p-2 text-base shadow-lg">
                                 @foreach ($entry['more'] as $m)
                                     <li><a href="{{ $m['url'] }}" @if($m['new_tab']) target="_blank" rel="noopener" @endif @if($m['active']) aria-current="page" @endif class="block rounded-md px-3 py-2 hover:bg-navy-50 hover:text-navy-800 {{ $m['active'] ? 'bg-navy-50 font-semibold text-navy-800' : 'text-ink' }}">{{ $m['label'] }}</a></li>
                                 @endforeach
                             </ul>
+                            </div>
                         </li>
                     @else
                         @php($item = $entry['item'])

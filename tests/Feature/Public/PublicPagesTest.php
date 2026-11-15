@@ -56,6 +56,9 @@ class PublicPagesTest extends TestCase
         foreach (['/resources', '/blog', '/about', '/contact'] as $path) {
             $this->assertMatchesRegularExpression('~<ul id="nav-more".*href="[^"]*'.preg_quote($path, '~').'"~s', $nav[0]);
         }
+        $this->assertLessThan(strpos($nav[0], '/resources"'), strpos($nav[0], '/about"', strpos($nav[0], 'id="nav-more"'))); // About is the first entry of the dropdown
+        $this->assertStringContainsString('@mouseenter="more = true"', $nav[0]);  // it also opens on hover
+        $this->assertStringContainsString('@mouseleave="more = false"', $nav[0]);
         $this->assertDoesNotMatchRegularExpression('~</ul>\s*</li>\s*<li><a href="[^"]*/(resources|blog|about|contact)"~', $nav[0]); // none of the four is left outside the dropdown
     }
 
