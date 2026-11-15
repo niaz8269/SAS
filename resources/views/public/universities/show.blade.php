@@ -2,7 +2,7 @@
     $place = collect([$university->city, $university->province])->filter()->unique()->implode(', ');
     $total = $levelCounts->sum();
 @endphp
-<x-layouts.public :title="$university->name" :description="\App\Support\Html::text($university->summary, 155) ?: \Illuminate\Support\Str::limit($university->name.($place ? ' in '.$place : '').': programmes, tuition and teaching languages for international students.', 155)">
+<x-layouts.public :title="\Illuminate\Support\Str::limit($university->name, 58, '…', true)" :description="\App\Support\Html::text($university->summary, 155) ?: \Illuminate\Support\Str::limit($university->name.($place ? ' in '.$place : '').': programmes, tuition and teaching languages for international students.', 155)">
     <x-slot:head>
         <x-jsonld :data="array_filter(['@type' => 'CollegeOrUniversity', 'name' => $university->name, 'alternateName' => $university->name_zh ?: null, 'url' => route('universities.show', $university->slug), 'image' => url($university->imageUrl()), 'description' => \App\Support\Html::text($university->summary) ?: null, 'address' => array_filter(['@type' => 'PostalAddress', 'addressLocality' => $university->city, 'addressRegion' => $university->province, 'addressCountry' => $university->country?->code ?: 'CN'])])" />
         <x-jsonld :data="['@type' => 'BreadcrumbList', 'itemListElement' => [['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => route('home')], ['@type' => 'ListItem', 'position' => 2, 'name' => 'Universities', 'item' => route('universities.index')], ['@type' => 'ListItem', 'position' => 3, 'name' => $university->name]]]" />

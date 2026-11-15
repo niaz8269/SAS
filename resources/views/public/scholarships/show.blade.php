@@ -4,7 +4,12 @@
     $deadlinesByRoute = $cycle->currentDeadlines->groupBy(fn ($d) => $d->route_id ?? 0);
     $institutions = $cycle->universities->isNotEmpty() ? $cycle->universities : $programme->universities;
     $title = $programme->title.' '.$cycle->keyLabel();
-    $metaTitle = \Illuminate\Support\Str::limit($programme->title, 48, '…', true).' '.$cycle->intake_year; // search results show about 60 characters: the full name stays in the heading
+    $shortTitle = \Illuminate\Support\Str::limit($programme->title, 48, '…', true); // search results show about 60 characters: the full name stays in the heading
+    // Two scholarships of one programme family differ only at the end ("..., Republic of Chile" and "..., Nelson Mandela"): keep that end so their titles stay different.
+    if (mb_strlen($programme->title) > 48 && str_contains($programme->title, ', ') && mb_strlen($tail = trim(preg_replace('/\s*\(.*\)\s*$/', '', substr(strrchr($programme->title, ','), 1)))) <= 22) {
+        $shortTitle = \Illuminate\Support\Str::limit(trim(substr($programme->title, 0, strrpos($programme->title, ','))), 46 - mb_strlen($tail), '…', true).', '.$tail;
+    }
+    $metaTitle = $shortTitle.' '.$cycle->intake_year;
     if (mb_strlen($metaTitle.': deadline and requirements') <= 58) { $metaTitle .= ': deadline and requirements'; } // the two things people search for, added only when the title is short enough
     $facts = app(\App\Domain\Seo\ScholarshipFacts::class);
     $glance = $facts->glance($cycle);
