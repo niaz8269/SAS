@@ -31,4 +31,5 @@
             <p class="text-xs text-muted">Sending an enquiry is free and does not commit you to anything. Online ordering is not available yet.</p>
         </aside>
     </div>
+    <x-scholarship-browse />
 </x-layouts.public>

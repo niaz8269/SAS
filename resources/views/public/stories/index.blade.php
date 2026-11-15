@@ -15,4 +15,5 @@
             <div class="mt-6">{{ $stories->links('pagination::tailwind') }}</div>
         @endif
     </section>
+    <x-scholarship-browse />
 </x-layouts.public>

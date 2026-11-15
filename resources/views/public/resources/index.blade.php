@@ -18,4 +18,5 @@
         @endif
     </section>
     <x-page-blocks page="resources" position="bottom" />
+    <x-scholarship-browse />
 </x-layouts.public>

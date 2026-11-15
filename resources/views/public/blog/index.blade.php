@@ -40,4 +40,5 @@
             <div class="mt-6">{{ $posts->links('pagination::tailwind') }}</div>
         @endif
     </section>
+    @if ($q === '')<x-scholarship-browse />@endif
 </x-layouts.public>
