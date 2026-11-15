@@ -1,0 +1,35 @@
+[
+ {
+  "external_key": "es-aecid-africa-med-master-2026",
+  "checked_on": "2026-11-16",
+  "sources": [
+   {
+    "url": "https://www.exteriores.gob.es/Embajadas/maputo/es/Comunicacion/Noticias/Documents/Convocatoria%20de%20Becas%20MAEC-AECID%20para%20la%20ciudadan%c3%ada%20de%20pa%c3%adses%20de%20%c3%81frica%20y%20Oriente%20Medio_%20Programa%20%c3%81frica-Med%20Master%20%281%29.pdf",
+    "publisher": "AECID call resolution for the Africa-Med Master programme 2026-2027, as hosted by the Spanish embassy in Maputo",
+    "publisher_type": "embassy",
+    "note": "Call text: up to 30 grants for official in-person master's degrees of at most 60 ECTS in Spain; the applicant must already hold admission to the master's; no list of master's or universities is attached"
+   },
+   {
+    "url": "https://www.aecid.es/en/preguntas-frecuentes-becas-para-ciudadanos-de-america-latina-%C3%A1frica-y-asia",
+    "publisher": "AECID",
+    "publisher_type": "government",
+    "note": "FAQ says admission to the master's is arranged by the applicant directly with the chosen university, separate from the grant application"
+   }
+  ],
+  "subject_rule": "Open: any official in-person university master's (up to 60 ECTS) at a Spanish university, in a field matching the applicant's academic or professional profile and the Spanish Cooperation priorities in the applicant's country. The call names no universities or master's programmes.",
+  "any_subject": true,
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "programmes": []
+   }
+  ],
+  "notes": "No list of eligible universities or master's programmes exists in the call; applicants choose their own and need a 2026-2027 admission before applying. Scoring weighs the fit between the chosen master's, the applicant's job and Spanish Cooperation priorities.",
+  "not_stated": [
+   "List of eligible universities",
+   "List of eligible master's programmes"
+  ],
+  "fetch_problems": []
+ }
+]
