@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "ca-pearson-2027",
+    "milestones": [
+      {
+        "kind": "results",
+        "label": "First scholarship recipients start to be notified",
+        "date_type": "month",
+        "starts_on": "2027-01-01",
+        "ends_on": null,
+        "time_text": "From the end of January 2027",
+        "source_text": "The University of Toronto's Pearson page (official) says recipients begin to be notified at the end of January 2027. It lists no interview or finalist-event dates.",
+        "source_url": "https://future.utoronto.ca/scholarships/lester-b-pearson-international-scholarship-program"
+      },
+      {
+        "kind": "results",
+        "label": "All nominees have been notified of their decision",
+        "date_type": "month",
+        "starts_on": "2027-04-01",
+        "ends_on": null,
+        "time_text": "By April 2027",
+        "source_text": "Official University of Toronto page: every nominee will have heard the outcome by April 2027.",
+        "source_url": "https://future.utoronto.ca/scholarships/lester-b-pearson-international-scholarship-program"
+      }
+    ]
+  }
+]

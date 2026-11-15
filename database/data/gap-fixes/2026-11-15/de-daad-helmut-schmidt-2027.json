@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "de-daad-helmut-schmidt-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Selection committee meets for the 2027 intake",
+        "date_type": "range",
+        "starts_on": "2026-10-01",
+        "ends_on": "2026-11-30",
+        "time_text": "October/November 2026",
+        "source_text": "The DAAD call text says a committee of professors from the participating master's courses and DAAD representatives selects candidates in October/November 2026. Read from a copy of the call hosted on a third-party site (the text is the DAAD's own).",
+        "source_url": "https://indesgua.org.gt/wp-content/plugins/download-attachments/includes/download.php?id=26346"
+      },
+      {
+        "kind": "results",
+        "label": "Applicants informed of the selection outcome",
+        "date_type": "range",
+        "starts_on": "2026-12-01",
+        "ends_on": "2027-01-31",
+        "time_text": "December 2026 / January 2027",
+        "source_text": "The DAAD call text says all applicants are informed in writing after selection ends, expected in December 2026/January 2027. Read from a copy of the call hosted on a third-party site (the text is the DAAD's own). A university programme page gives roughly the end of December 2026.",
+        "source_url": "https://indesgua.org.gt/wp-content/plugins/download-attachments/includes/download.php?id=26346"
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+[
+    {
+        "external_key": "jp-mext-embassy-undergraduate-2027",
+        "teaching_language": "Japanese: all classes are in Japanese after a one-year Japanese preparatory course, except for direct placement at universities that need no Japanese",
+        "milestones": [
+            {
+                "kind": "opens",
+                "label": "Recruitment for the 2027 intake at each Japanese embassy or consulate",
+                "date_type": "range",
+                "starts_on": "2026-04-01",
+                "ends_on": "2026-05-31",
+                "time_text": "April to May 2026",
+                "source_text": "The official Study in Japan page says recruitment for students arriving in April 2027 runs from April to May 2026 at each Japanese mission.",
+                "source_url": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-undergraduate.html"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline (set by each Japanese embassy or consulate)",
+                "date_type": "route_dependent",
+                "starts_on": null,
+                "ends_on": null,
+                "time_text": "Varies by country",
+                "source_text": "The official page says the process and schedule differ by country and tells applicants to contact their own Japanese mission. As an example, the Japanese embassy in the UAE listed 22 May 2026.",
+                "source_url": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-undergraduate.html"
+            },
+            {
+                "kind": "results",
+                "label": "Final selection results sent through the Japanese mission",
+                "date_type": "month",
+                "starts_on": "2027-02-01",
+                "ends_on": null,
+                "time_text": "After February 2027",
+                "source_text": "The official application guidelines say applicants are told the final result by the mission after February 2027.",
+                "source_url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/2027_Guidelines_Undergraduate_E.pdf"
+            }
+        ]
+    }
+]

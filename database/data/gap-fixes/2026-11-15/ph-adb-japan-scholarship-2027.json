@@ -1,0 +1,17 @@
+[
+ {
+  "external_key": "ph-adb-japan-scholarship-2027",
+  "milestones": [
+   {
+    "kind": "other",
+    "label": "Application deadline (set by each partner university, no single ADB date)",
+    "date_type": "route_dependent",
+    "starts_on": null,
+    "ends_on": null,
+    "time_text": "Varies by university and intake",
+    "source_text": "ADB's official pages say candidates apply to the partner university, which sets its own deadline, and papers should reach it at least six months before the intake. Example from a university page: Nagoya University GSID took ADB-JSP applications for April 2027 from 1 to 16 June 2026.",
+    "source_url": "https://www.adb.org/work-with-us/careers/japan-scholarship-program/institutions"
+   }
+  ]
+ }
+]

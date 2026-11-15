@@ -1,0 +1,48 @@
+[
+    {
+        "external_key": "ae-mbzuai-graduate-funding-2027",
+        "teaching_language": "English",
+        "milestones": [
+            {
+                "kind": "opens",
+                "label": "Graduate admission portal opens for Fall 2027 (PhD programmes)",
+                "date_type": "exact",
+                "starts_on": "2026-09-01",
+                "ends_on": null,
+                "time_text": "1 September 2026",
+                "source_text": "MBZUAI's PhD programme page lists this opening date (official; read through a search excerpt because the site blocked direct fetching). Some MSc pages give 7 September 2026, and Computational Biology and Applied AI open later.",
+                "source_url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline for Fall 2027 graduate admission",
+                "date_type": "exact",
+                "starts_on": "2026-12-15",
+                "ends_on": null,
+                "time_text": "15 December 2026, 5 p.m. GST",
+                "source_text": "MBZUAI's graduate pages (official; read through search excerpts) give this closing date for most programmes. Computational Biology closes 22 January 2027 and the Master in Applied AI closes 28 February 2027.",
+                "source_url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions"
+            },
+            {
+                "kind": "results",
+                "label": "Admission decisions sent (Fall 2027)",
+                "date_type": "exact",
+                "starts_on": "2027-03-31",
+                "ends_on": null,
+                "time_text": "By 31 March 2027",
+                "source_text": "MBZUAI's PhD page (official; search excerpt) says decisions go out no later than this date. A second source, a scholarship news site, reports the same date.",
+                "source_url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions"
+            },
+            {
+                "kind": "other",
+                "label": "Deadline to respond to an offer (Fall 2027)",
+                "date_type": "exact",
+                "starts_on": "2027-04-15",
+                "ends_on": null,
+                "time_text": "15 April 2027",
+                "source_text": "MBZUAI's graduate pages (official; search excerpt) list this as the offer response date for most programmes.",
+                "source_url": "https://mbzuai.ac.ae/admissions/graduate-phd-admissions"
+            }
+        ]
+    }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "external_key": "kz-nu-abay-kunanbayev-scholarship-2027",
+        "milestones": [
+            {
+                "kind": "opens",
+                "label": "Applications for 2027-2028 undergraduate and foundation programmes (Kazakhstan citizens and international applicants from visa-free countries)",
+                "date_type": "range",
+                "starts_on": "2026-10-01",
+                "ends_on": "2027-08-31",
+                "time_text": "October 2026 to August 2027",
+                "source_text": "Nazarbayev University's regular admissions page (official) gives this application period; applicants from countries needing a visa before arrival have dates still to be announced. Master's and PhD dates for 2027-28 are also not yet announced.",
+                "source_url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/"
+            },
+            {
+                "kind": "test",
+                "label": "Deadline for IELTS/TOEFL results to reach the university (2027-2028 undergraduate and foundation)",
+                "date_type": "exact",
+                "starts_on": "2027-06-01",
+                "ends_on": null,
+                "time_text": "1 June 2027, 2 p.m. Astana time",
+                "source_text": "Nazarbayev University's regular admissions page (official) gives this date for English test results.",
+                "source_url": "https://nu.edu.kz/admissions/how-to-apply/foundation-undergraduate/regular-admissions/"
+            }
+        ]
+    }
+]

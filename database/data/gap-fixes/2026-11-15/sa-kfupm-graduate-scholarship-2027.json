@@ -1,0 +1,28 @@
+[
+    {
+        "external_key": "sa-kfupm-graduate-scholarship-2027",
+        "teaching_language": "English",
+        "milestones": [
+            {
+                "kind": "opens",
+                "label": "Applications open for MS (thesis-based) and PhD programmes",
+                "date_type": "exact",
+                "starts_on": "2026-11-01",
+                "ends_on": null,
+                "time_text": "1 November 2026",
+                "source_text": "The College of Graduate and Interdisciplinary Studies apply page (official) lists this opening date for thesis-based MS and PhD applications.",
+                "source_url": "https://cgis.kfupm.edu.sa/apply"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline for MS (thesis-based) and PhD programmes",
+                "date_type": "exact",
+                "starts_on": "2026-12-15",
+                "ends_on": null,
+                "time_text": "15 December 2026",
+                "source_text": "The College of Graduate and Interdisciplinary Studies apply page (official) lists this closing date. Project-based MS programmes run a separate window from 3 January to 10 February 2027.",
+                "source_url": "https://cgis.kfupm.edu.sa/apply"
+            }
+        ]
+    }
+]

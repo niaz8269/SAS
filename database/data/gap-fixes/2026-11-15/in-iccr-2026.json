@@ -1,0 +1,27 @@
+[
+ {
+  "external_key": "in-iccr-2026",
+  "milestones": [
+   {
+    "kind": "opens",
+    "label": "A2A portal opens for ICCR 2026-27 applications (date differs by embassy notice)",
+    "date_type": "route_dependent",
+    "starts_on": null,
+    "ends_on": null,
+    "time_text": "23 to 27 February 2026",
+    "source_text": "Indian missions give different opening dates: 27 February 2026 on the Maputo High Commission notice and 23 February 2026 on the Chicago Consulate General notice.",
+    "source_url": "https://www.hcimaputo.gov.in/section/news/iccr-india-africa-maitri-scholarships-for-2026-27/"
+   },
+   {
+    "kind": "other",
+    "label": "Application deadline for ICCR 2026-27 (differs by scheme and mission)",
+    "date_type": "route_dependent",
+    "starts_on": null,
+    "ends_on": null,
+    "time_text": "15 April 2026 in the Maitri timeline; 31 May 2026 for the AYUSH scheme",
+    "source_text": "The Maputo notice lists 15 April 2026 as the student deadline for the India-Africa Maitri scheme, and the Warsaw embassy gives 31 May 2026 for the AYUSH scheme, so applicants should check their own Indian mission.",
+    "source_url": "https://www.hcimaputo.gov.in/section/news/iccr-india-africa-maitri-scholarships-for-2026-27/"
+   }
+  ]
+ }
+]

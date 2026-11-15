@@ -1,0 +1,48 @@
+[
+  {
+    "external_key": "us-jjwbgsp-2027",
+    "teaching_language": "Language of the chosen participating master's programme (set by the host university)",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Window 1 applications open for the 2027 call",
+        "date_type": "date_only",
+        "starts_on": "2027-01-18",
+        "ends_on": null,
+        "time_text": "18 January 2027",
+        "source_text": "The World Bank's JJ/WBGSP page (official) lists Window 1 as 18 January to 26 February 2027; which window applies depends on the programme.",
+        "source_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, Window 1",
+        "date_type": "date_only",
+        "starts_on": "2027-02-26",
+        "ends_on": null,
+        "time_text": "26 February 2027",
+        "source_text": "Official World Bank page: Window 1 closes on 26 February 2027.",
+        "source_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp"
+      },
+      {
+        "kind": "opens",
+        "label": "Window 2 applications open for the 2027 call",
+        "date_type": "date_only",
+        "starts_on": "2027-03-29",
+        "ends_on": null,
+        "time_text": "29 March 2027",
+        "source_text": "Official World Bank page: Window 2 runs 29 March to 21 May 2027, for the programmes assigned to that window.",
+        "source_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, Window 2",
+        "date_type": "date_only",
+        "starts_on": "2027-05-21",
+        "ends_on": null,
+        "time_text": "21 May 2027",
+        "source_text": "Official World Bank page: Window 2 closes on 21 May 2027. The page gives no result date, only that winners are told soon after the Steering Committee approves them.",
+        "source_url": "https://www.worldbank.org/en/programs/scholarships/jj-wbgsp"
+      }
+    ]
+  }
+]

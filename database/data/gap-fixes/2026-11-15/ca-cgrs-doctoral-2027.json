@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "ca-cgrs-doctoral-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline (applying directly to the agency; most applicants go through their university, which sets an earlier internal deadline)",
+        "date_type": "date_only",
+        "starts_on": "2026-10-17",
+        "ends_on": null,
+        "time_text": "17 October 2026, 8:00 pm ET (the agency moves a weekend deadline to the next business day)",
+        "source_text": "The official NSERC programme page gives 17 October at 8:00 pm ET for direct applications and says institutions set their own, earlier dates; the page does not print the year, which one scholarship guide gives as 2026 for the 2027 competition. University internal deadlines in September 2026 include Western 18 September, Waterloo 22 September and Windsor 29 September.",
+        "source_url": "https://nserc-crsng.canada.ca/en/funding-opportunity/canada-graduate-research-scholarship-doctoral-program"
+      },
+      {
+        "kind": "results",
+        "label": "Results sent to applicants",
+        "date_type": "date_only",
+        "starts_on": "2027-04-30",
+        "ends_on": null,
+        "time_text": "By 30 April 2027",
+        "source_text": "The official NSERC page says applicants are told by 30 April; Western University's graduate page (university) gives 30 April 2027 for this competition. The University of Victoria says results usually come mid to late May, so the exact day may slip.",
+        "source_url": "https://nserc-crsng.canada.ca/en/funding-opportunity/canada-graduate-research-scholarship-doctoral-program"
+      }
+    ]
+  }
+]

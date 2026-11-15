@@ -1,0 +1,22 @@
+[{
+  "external_key": "us-humphrey-fellowship-2027",
+  "milestones": [{
+    "kind": "other",
+    "label": "Application deadline for the 2027-28 call (set by each country's Fulbright Commission or U.S. Embassy; already passed)",
+    "date_type": "route_dependent",
+    "starts_on": null,
+    "ends_on": null,
+    "time_text": "Varies by country; July to August 2026 (India: 9 July 2026)",
+    "source_text": "USIEF, the Fulbright commission in India (official partner), lists 9 July 2026 as its closing date for the 2027-28 Humphrey call. A funding-news aggregator reports other countries' deadlines between mid-July and end of August 2026. The Humphrey programme office itself defers to local commissions and embassies for dates. The 2028-29 call has not been announced.",
+    "source_url": "https://www.usief.org.in/?p=201"
+  }, {
+    "kind": "results",
+    "label": "Finalists told of selection (2027-28 call)",
+    "date_type": "month",
+    "starts_on": "2027-04-01",
+    "ends_on": null,
+    "time_text": "April 2027",
+    "source_text": "USIEF India says it expects the selection notice from Washington in April 2027 and will then tell finalists; the fellowship starts in August or September 2027. This is the Indian commission's timeline; other countries may differ.",
+    "source_url": "https://www.usief.org.in/?p=201"
+  }]
+}]

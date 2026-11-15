@@ -1,0 +1,47 @@
+[
+  {
+    "external_key": "cn-schwarzman-2028",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Application period opens for the Class of 2028-2029 (global applicants)",
+        "date_type": "month",
+        "starts_on": "2027-04-01",
+        "ends_on": null,
+        "time_text": "April 2027",
+        "source_text": "The official Schwarzman Scholars admissions page lists April 2027 as the start of the application period for the class starting in August 2028, for applicants from outside China.",
+        "source_url": "https://www.schwarzmanscholars.org/admissions/"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline for global applicants (month only: September 2027; day not published)",
+        "date_type": "month",
+        "starts_on": "2027-09-01",
+        "ends_on": null,
+        "time_text": "September 2027",
+        "source_text": "The official page gives only the closing month, September 2027, for global applicants. No day is stated.",
+        "source_url": "https://www.schwarzmanscholars.org/admissions/"
+      },
+      {
+        "kind": "interview",
+        "label": "Selection cycle and interviews (global applicants)",
+        "date_type": "range",
+        "starts_on": "2027-10-01",
+        "ends_on": "2027-11-30",
+        "time_text": "October to November 2027",
+        "source_text": "The official page names October to November 2027 as the selection cycle for global applicants and says a selected number of candidates are interviewed in late October and early November.",
+        "source_url": "https://www.schwarzmanscholars.org/admissions/"
+      },
+      {
+        "kind": "other",
+        "label": "Application period for applicants with Chinese citizenship (Mainland, Hong Kong, Macau, Taiwan)",
+        "date_type": "range",
+        "starts_on": "2027-03-01",
+        "ends_on": "2027-05-31",
+        "time_text": "March to May 2027",
+        "source_text": "The official page gives a separate, earlier window of March to May 2027 for applicants with Chinese citizenship, with selection in June to July 2027.",
+        "source_url": "https://www.schwarzmanscholars.org/admissions/"
+      }
+    ]
+  }
+]

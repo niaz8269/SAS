@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "dk-ku-danish-government-scholarship-2027",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Application portal opens for non-EU/EEA master's applicants (September 2027 start)",
+        "date_type": "date_only",
+        "starts_on": "2026-11-15",
+        "ends_on": null,
+        "time_text": "15 November 2026",
+        "source_text": "The University of Copenhagen important-dates page (official) lists 15 November as the portal opening for non-EU/EEA applicants; the page does not print the year.",
+        "source_url": "https://www.ku.dk/studies/admission/masters-important-dates-and-deadlines"
+      },
+      {
+        "kind": "results",
+        "label": "Admission decisions sent to non-EU/EEA applicants (no separate scholarship notification date is published)",
+        "date_type": "date_only",
+        "starts_on": "2027-03-12",
+        "ends_on": null,
+        "time_text": "12 March 2027 (decisions sent on a rolling basis)",
+        "source_text": "The university pages (official) say decisions go to non-EU applicants for a September start by 12 March and the place must be accepted by 18 March. They do not say when scholarship nominees are told.",
+        "source_url": "https://www.ku.dk/studies/contact/questions-and-answers-about-masters-programmes"
+      }
+    ]
+  }
+]

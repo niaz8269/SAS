@@ -1,0 +1,17 @@
+[
+ {
+  "external_key": "id-knb-2026",
+  "milestones": [
+   {
+    "kind": "other",
+    "label": "Application deadline (reported by Sanata Dharma University and scholarship sites, not confirmed by the funder), KNB 2026",
+    "date_type": "date_only",
+    "starts_on": "2026-03-31",
+    "ends_on": null,
+    "time_text": null,
+    "source_text": "A university page and scholarship sites report that 2026 applications stayed open until 31 March 2026 on the KNB portal. The portal itself did not load, and no 2027 call was found.",
+    "source_url": "https://unit.usd.ac.id/en/kemitraan-negara-berkembang-knb/"
+   }
+  ]
+ }
+]

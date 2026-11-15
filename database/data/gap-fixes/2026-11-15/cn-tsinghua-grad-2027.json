@@ -1,0 +1,17 @@
+[
+  {
+    "external_key": "cn-tsinghua-grad-2027",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Application period for 2027 entry (deadlines set per school and department)",
+        "date_type": "range",
+        "starts_on": "2026-09-01",
+        "ends_on": "2027-02-28",
+        "time_text": "generally September 2026 to February 2027",
+        "source_text": "Tsinghua's graduate admissions site says the application period is generally September to the following February, with exact deadlines and batches set by each school or department in its programme catalogue. No university-wide closing date is published.",
+        "source_url": "https://yz.tsinghua.edu.cn/en/Admissions/How_to_Apply.htm"
+      }
+    ]
+  }
+]

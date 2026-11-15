@@ -1,0 +1,18 @@
+[
+  {
+    "external_key": "ae-khalifa-university-graduate-scholarship-international-2027",
+    "teaching_language": "English",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline for Fall 2027 PhD admission (scholarship needs no separate application)",
+        "date_type": "exact",
+        "starts_on": "2027-02-01",
+        "ends_on": null,
+        "time_text": "1 February 2027",
+        "source_text": "Khalifa University's postgraduate admissions page (official) says Fall 2027 PhD applications close on this date and that Master's applications have not opened yet. Its FAQ says scholarship consideration is part of admission.",
+        "source_url": "https://www.ku.ac.ae/postgraduate-admissions"
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "external_key": "ca-ubc-international-scholars-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline (extended: apply to UBC and submit the award application by 2 December 2026, 12:00 noon Pacific)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-02",
+        "ends_on": null,
+        "time_text": "2 December 2026, 12:00 PM PT (extended)",
+        "source_text": "UBC's International Scholars page (official) shows the final, extended deadline as 2 December 2026 at noon Pacific. Some scholarship sites still quote the earlier 15 November date.",
+        "source_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/"
+      },
+      {
+        "kind": "other",
+        "label": "Supporting documents deadline (transcripts, certificates, English test)",
+        "date_type": "date_only",
+        "starts_on": "2027-01-31",
+        "ends_on": null,
+        "time_text": "31 January 2027",
+        "source_text": "Official UBC page: required documents are due 31 January 2027.",
+        "source_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/"
+      },
+      {
+        "kind": "interview",
+        "label": "Video interview invitations (selected applicants only; one week to complete)",
+        "date_type": "range",
+        "starts_on": "2027-01-01",
+        "ends_on": "2027-03-31",
+        "time_text": "January to March 2027",
+        "source_text": "UBC (official) says some applicants may be invited to a recorded video interview between January and March 2027 and get one week to complete it. An interview is not guaranteed.",
+        "source_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/"
+      },
+      {
+        "kind": "results",
+        "label": "Results released on a rolling basis; award decisions emailed early to mid April",
+        "date_type": "range",
+        "starts_on": "2027-02-01",
+        "ends_on": "2027-04-30",
+        "time_text": "February to April 2027 (decisions announced early to mid April 2027)",
+        "source_text": "Official UBC page: results go out on a rolling basis from February to April 2027, and the award decisions are announced by email in early to mid April.",
+        "source_url": "https://you.ubc.ca/financial-planning/scholarships-awards-international-students/international-scholars/"
+      }
+    ]
+  }
+]

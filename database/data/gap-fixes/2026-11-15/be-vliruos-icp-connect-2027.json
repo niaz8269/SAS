@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "be-vliruos-icp-connect-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline for the 2027-2028 ICP Connect call (reported by scholarship sites, not confirmed by the funder; some programmes set earlier deadlines)",
+        "date_type": "date_only",
+        "starts_on": "2027-02-28",
+        "ends_on": null,
+        "time_text": "28 February 2027",
+        "source_text": "Two scholarship sites (opportunitiesforafricans.com and afterschoolafrica.com) give 28 February 2027 as the general deadline; one site also notes individual universities may close earlier, for example 1 February 2027 for one Hasselt programme. The VLIR-UOS call page could not be opened.",
+        "source_url": "https://www.afterschoolafrica.com/123043/vlir-uos-icp-connect-scholarships-for-master-programmes-2027-2028/"
+      },
+      {
+        "kind": "results",
+        "label": "Selection results communicated (reported by one scholarship guide, not confirmed by the funder)",
+        "date_type": "month",
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "time_text": "No later than mid-May 2027",
+        "source_text": "One scholarship guide reports that successful and waitlisted candidates are emailed by mid-May 2027 at the latest.",
+        "source_url": "https://guides.scholarshipunion.com/vlir-uos/faq.html"
+      }
+    ]
+  }
+]

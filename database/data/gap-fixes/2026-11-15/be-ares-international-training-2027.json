@@ -1,0 +1,51 @@
+[
+  {
+    "external_key": "be-ares-international-training-2027",
+    "nationality_codes": [
+      "BJ",
+      "BF",
+      "BI",
+      "CM",
+      "ET",
+      "GN",
+      "CI",
+      "KE",
+      "MG",
+      "ML",
+      "MA",
+      "MZ",
+      "NE",
+      "CD",
+      "RW",
+      "SN",
+      "ZA",
+      "TZ",
+      "TN",
+      "UG",
+      "ZW",
+      "BO",
+      "CU",
+      "EC",
+      "HT",
+      "PE",
+      "KH",
+      "ID",
+      "NP",
+      "PH",
+      "VN",
+      "PS"
+    ],
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Next call (2028-2029) expected to open",
+        "date_type": "month",
+        "starts_on": "2027-08-01",
+        "ends_on": null,
+        "time_text": "August 2027",
+        "source_text": "The ARES page for the 2027-2028 call (official) says that call is closed and names August 2027 as the next call.",
+        "source_url": "https://ares-ac.be/en/international-training-scholarships-2027-2028"
+      }
+    ]
+  }
+]

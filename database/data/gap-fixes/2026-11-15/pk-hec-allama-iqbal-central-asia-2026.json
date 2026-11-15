@@ -1,0 +1,41 @@
+[
+ {
+  "external_key": "pk-hec-allama-iqbal-central-asia-2026",
+  "nationality_codes": [
+   "AZ",
+   "KZ",
+   "UZ",
+   "TJ",
+   "KG",
+   "TM",
+   "JO",
+   "MV",
+   "UG",
+   "SD",
+   "AO",
+   "NG",
+   "ET",
+   "KE",
+   "RW",
+   "TR",
+   "YE",
+   "SY",
+   "IR",
+   "MY",
+   "ZW",
+   "RU"
+  ],
+  "milestones": [
+   {
+    "kind": "other",
+    "label": "Application deadline, 2026 call",
+    "date_type": "date_only",
+    "starts_on": "2026-08-10",
+    "ends_on": null,
+    "time_text": null,
+    "source_text": "A Pakistani foreign ministry request to missions (official) says applications close on 10 August 2026; scholarship sites repeat the date.",
+    "source_url": "https://pakembminsk.org/wp-content/uploads/2026/07/Allama-Muhammad-Iqbal-Scholarship.pdf"
+   }
+  ]
+ }
+]

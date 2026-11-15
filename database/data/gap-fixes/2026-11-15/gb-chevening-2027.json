@@ -1,0 +1,67 @@
+[
+  {
+    "external_key": "gb-chevening-2027",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Applications open for the 2027/28 cycle",
+        "date_type": "month",
+        "starts_on": "2026-08-01",
+        "ends_on": null,
+        "time_text": "August 2026",
+        "source_text": "Chevening's application timeline (official) says applications open in August 2026; several news sites report 4 August 2026.",
+        "source_url": "https://chevening.org/scholarships/application-timeline"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (2027/28 cycle; exact day and time are on each country page, 11:00 UTC)",
+        "date_type": "month",
+        "starts_on": "2026-10-01",
+        "ends_on": null,
+        "time_text": "October 2026",
+        "source_text": "Chevening's timeline (official) gives October 2026 with a 11:00 UTC cut-off and sends applicants to their country page for the exact day; several outlets report 6 October 2026.",
+        "source_url": "https://chevening.org/scholarships/application-timeline"
+      },
+      {
+        "kind": "other",
+        "label": "Embassies shortlist candidates and invite them to interview",
+        "date_type": "month",
+        "starts_on": "2027-02-01",
+        "ends_on": null,
+        "time_text": "Mid-February 2027",
+        "source_text": "Chevening (official) says British embassies and high commissions shortlist and invite candidates to interview from mid-February 2027.",
+        "source_url": "https://chevening.org/scholarships/application-timeline"
+      },
+      {
+        "kind": "interview",
+        "label": "Interviews at British embassies and high commissions",
+        "date_type": "range",
+        "starts_on": "2027-03-01",
+        "ends_on": "2027-04-30",
+        "time_text": "March to April 2027",
+        "source_text": "Chevening (official) places interviews in March and April 2027.",
+        "source_url": "https://chevening.org/scholarships/application-timeline"
+      },
+      {
+        "kind": "results",
+        "label": "Interview results announced",
+        "date_type": "month",
+        "starts_on": "2027-06-01",
+        "ends_on": null,
+        "time_text": "From mid-June 2027",
+        "source_text": "Chevening (official) says results start to be announced from mid-June 2027.",
+        "source_url": "https://chevening.org/scholarships/application-timeline"
+      },
+      {
+        "kind": "other",
+        "label": "Deadline for a first unconditional UK university offer",
+        "date_type": "date_only",
+        "starts_on": "2027-07-08",
+        "ends_on": null,
+        "time_text": "8 July 2027, 17:00 BST",
+        "source_text": "Chevening (official) says successful candidates need at least one unconditional UK university offer by 17:00 BST on 8 July 2027.",
+        "source_url": "https://chevening.org/scholarships/application-timeline"
+      }
+    ]
+  }
+]

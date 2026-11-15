@@ -1,0 +1,28 @@
+[
+ {
+  "external_key": "tw-icdf-scholarship-2027",
+  "teaching_language": "English",
+  "milestones": [
+   {
+    "kind": "opens",
+    "label": "Applications open for the 2027 TaiwanICDF scholarship",
+    "date_type": "date_only",
+    "starts_on": "2026-12-01",
+    "ends_on": null,
+    "time_text": null,
+    "source_text": "TaiwanICDF's own Apply Now page (official) gives the 2027 application window as 1 December 2026 to 15 March 2027. The funder's guidebook says all training is conducted in English.",
+    "source_url": "https://www.icdf.org.tw/wSite/np?ctNode=31566&CtUnit=368&BaseDSD=7&mp=2"
+   },
+   {
+    "kind": "other",
+    "label": "Application deadline, 2027 TaiwanICDF scholarship",
+    "date_type": "date_only",
+    "starts_on": "2027-03-15",
+    "ends_on": null,
+    "time_text": null,
+    "source_text": "Closing date of the same official window (1 December 2026 to 15 March 2027); applicants must also meet each partner university's own deadline.",
+    "source_url": "https://www.icdf.org.tw/wSite/np?ctNode=31566&CtUnit=368&BaseDSD=7&mp=2"
+   }
+  ]
+ }
+]

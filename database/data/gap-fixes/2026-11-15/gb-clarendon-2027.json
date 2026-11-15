@@ -1,0 +1,17 @@
+[
+  {
+    "external_key": "gb-clarendon-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline (course funding deadline, December 2026 or January 2027 depending on the course)",
+        "date_type": "route_dependent",
+        "starts_on": null,
+        "ends_on": null,
+        "time_text": "December 2026 or January 2027, by course",
+        "source_text": "There is no separate Clarendon form; Oxford applicants are considered if they apply by the funding deadline of their course. One Oxford department (Social Policy and Intervention) states noon UK time on 7 January 2027 for its courses; a scholarship site reports the range is December 2026 or January 2027 (unofficial).",
+        "source_url": "https://www.spi.ox.ac.uk/node/2036"
+      }
+    ]
+  }
+]

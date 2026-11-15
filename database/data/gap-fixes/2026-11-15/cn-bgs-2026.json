@@ -1,0 +1,17 @@
+[
+  {
+    "external_key": "cn-bgs-2026",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline depends on the host institution",
+        "date_type": "route_dependent",
+        "starts_on": null,
+        "ends_on": null,
+        "time_text": "set by each Beijing institution",
+        "source_text": "The Beijing municipal government's English portal says each host institution sets its own application deadline and that materials must arrive before the date the institution states. No single city-wide date is published.",
+        "source_url": "https://english.beijing.gov.cn/studyinginbeijing/news/202601/t20260123_4459326.html"
+      }
+    ]
+  }
+]

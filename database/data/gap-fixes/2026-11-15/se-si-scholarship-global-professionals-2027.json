@@ -1,0 +1,17 @@
+[
+  {
+    "external_key": "se-si-scholarship-global-professionals-2027",
+    "milestones": [
+      {
+        "kind": "results",
+        "label": "Scholarship recipients announced (reported by scholarship sites, not confirmed by the Swedish Institute)",
+        "date_type": "date_only",
+        "starts_on": "2027-04-22",
+        "ends_on": null,
+        "time_text": "22 April 2027",
+        "source_text": "One scholarship guide (fellowshipsguide.com) and other listings report 22 April 2027 as the announcement date; si.se could not be opened to confirm it. Another guide only says April 2027.",
+        "source_url": "https://fellowshipsguide.com/?p=7661"
+      }
+    ]
+  }
+]

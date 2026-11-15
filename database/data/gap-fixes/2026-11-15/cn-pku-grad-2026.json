@@ -1,0 +1,67 @@
+[
+  {
+    "external_key": "cn-pku-grad-2026",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Applications open for 2027 entry (international graduate students)",
+        "date_type": "date_only",
+        "starts_on": "2026-10-26",
+        "ends_on": null,
+        "time_text": "26 October 2026, Beijing time",
+        "source_text": "Peking University's international students office says the 2027-entry application period for international master's and doctoral applicants starts on 26 October 2026. Two scholarship websites (After School Africa, DAAD Scholarship) report the same window.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline for 2027 entry (international graduate students)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "time_text": "25 December 2026, Beijing time",
+        "source_text": "Peking University's international students office gives 25 December 2026 as the closing date of the general application. No separate scholarship deadline is given on the page; scholarship consideration follows the same application.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      },
+      {
+        "kind": "interview",
+        "label": "Second examination round run by the schools and departments",
+        "date_type": "range",
+        "starts_on": "2027-01-01",
+        "ends_on": "2027-03-31",
+        "time_text": "January to March 2027",
+        "source_text": "The university says each school or department holds a second-round assessment between January and March 2027 and publishes its own dates.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      },
+      {
+        "kind": "results",
+        "label": "Preliminary admission lists published",
+        "date_type": "month",
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "time_text": "before the end of May 2027",
+        "source_text": "Schools and departments post their preliminary admission lists before the end of May 2027, according to the university.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      },
+      {
+        "kind": "other",
+        "label": "Original documents due from pre-admitted candidates",
+        "date_type": "date_only",
+        "starts_on": "2027-05-31",
+        "ends_on": null,
+        "time_text": "31 May 2027",
+        "source_text": "Candidates who are pre-admitted must send their original documents by 31 May 2027 (university notice).",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      },
+      {
+        "kind": "results",
+        "label": "Admission notices issued",
+        "date_type": "month",
+        "starts_on": "2027-06-01",
+        "ends_on": null,
+        "time_text": "late June 2027",
+        "source_text": "The university says admission notices are issued in late June 2027, with enrolment in early September 2027.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      }
+    ]
+  }
+]

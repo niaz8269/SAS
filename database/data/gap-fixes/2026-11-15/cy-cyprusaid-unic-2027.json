@@ -1,0 +1,17 @@
+[
+  {
+    "external_key": "cy-cyprusaid-unic-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline for the Spring 2027 intake",
+        "date_type": "date_only",
+        "starts_on": "2026-11-06",
+        "ends_on": null,
+        "time_text": "6 November 2026",
+        "source_text": "The University of Nicosia CyprusAid announcement (official) gives 6 November 2026 for the Spring 2027 intake. It says applicants hear the outcome electronically but gives no result date. Some aggregator pages disagree on dates.",
+        "source_url": "https://www.unic.ac.cy/university-of-nicosia-announces-cyprusaid-scholarship-opportunities-for-students-from-selected-countries/"
+      }
+    ]
+  }
+]

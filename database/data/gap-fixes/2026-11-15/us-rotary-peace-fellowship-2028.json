@@ -1,0 +1,22 @@
+[{
+  "external_key": "us-rotary-peace-fellowship-2028",
+  "milestones": [{
+    "kind": "opens",
+    "label": "Applications open for the 2028-29 Rotary Peace Fellowship",
+    "date_type": "month",
+    "starts_on": "2027-02-01",
+    "ends_on": null,
+    "time_text": "February 2027",
+    "source_text": "Rotary's own peace-fellowship pages (official) state the 2027-28 form is closed and the 2028-29 form will go online in February 2027. Rotary's standing announcement describes a yearly window starting 1 February.",
+    "source_url": "https://www.rotary.org/en/our-programs/peace-fellowships"
+  }, {
+    "kind": "other",
+    "label": "Application deadline (Rotary's standing annual closing date; the 2028-29 form is not live yet)",
+    "date_type": "date_only",
+    "starts_on": "2027-05-15",
+    "ends_on": null,
+    "time_text": "15 May 2027 (expected)",
+    "source_text": "Rotary's application announcement (official, read through search results because the page itself blocked fetching) says applications are accepted from 1 February and must be in by 15 May each year. Several scholarship sites repeat 15 May 2027, but one independent guide notes Rotary has not yet published the exact 2027 dates, so treat this as expected, not confirmed.",
+    "source_url": "https://www.rotary.org/en/our-programs/peace-fellowships"
+  }]
+}]

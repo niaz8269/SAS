@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "gb-edinburgh-doctoral-college-2027",
+    "milestones": [
+      {
+        "kind": "interview",
+        "label": "Online interviews, Edinburgh College of Art applicants only",
+        "date_type": "month",
+        "starts_on": "2027-04-01",
+        "ends_on": null,
+        "time_text": "Early to mid April 2027",
+        "source_text": "The Edinburgh College of Art page (official, one school of the university) says shortlisted candidates are interviewed online in early to mid April 2027; other schools set their own timetables.",
+        "source_url": "https://www.eca.ed.ac.uk/scholarship/edinburgh-doctoral-college-scholarship"
+      },
+      {
+        "kind": "results",
+        "label": "Outcome, Edinburgh College of Art applicants only",
+        "date_type": "month",
+        "starts_on": "2027-04-30",
+        "ends_on": null,
+        "time_text": "By late April 2027",
+        "source_text": "The Edinburgh College of Art page (official) says all of its applicants hear the outcome by late April 2027.",
+        "source_url": "https://www.eca.ed.ac.uk/scholarship/edinburgh-doctoral-college-scholarship"
+      }
+    ]
+  }
+]

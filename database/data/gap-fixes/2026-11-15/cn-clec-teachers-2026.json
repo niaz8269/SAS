@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "cn-clec-teachers-2026",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Online application system opens on the CLEC site (2026 cycle)",
+        "date_type": "date_only",
+        "starts_on": "2026-03-01",
+        "ends_on": null,
+        "time_text": "1 March 2026",
+        "source_text": "Shanghai Jiao Tong University's page for this scholarship says the online application on chinese.cn became available from 1 March 2026; applicants also apply to the host university.",
+        "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/798"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline depends on the host university and intake",
+        "date_type": "route_dependent",
+        "starts_on": null,
+        "ends_on": null,
+        "time_text": "set by each host university",
+        "source_text": "Host universities set their own closing dates by intake. Zhejiang Gongshang University, for instance, lists 15 May 2026 for September 2026 starts and 31 October 2026 for March 2027 starts.",
+        "source_url": "https://sie.zjgsu.edu.cn/gjen/_t75/InternationalChineseLanguageTeacherswConfuciusInstitutewScholarship/list.htm"
+      }
+    ]
+  }
+]

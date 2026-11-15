@@ -1,0 +1,27 @@
+[
+ {
+  "external_key": "kr-gks-2027",
+  "milestones": [
+   {
+    "kind": "opens",
+    "label": "Applications open for the 2027 call, undergraduate embassy track (GKS-U)",
+    "date_type": "date_only",
+    "starts_on": "2026-09-15",
+    "ends_on": null,
+    "time_text": "15 September 2026, 11:00 Korea time",
+    "source_text": "A Korean consulate notice (official, Korean foreign ministry) gives the online application window for the 2027 undergraduate call as 15 to 30 September 2026. No 2027 graduate call had been published when checked.",
+    "source_url": "https://www.mofa.go.kr/ca-en/brd/m_5231/view.do?seq=761813"
+   },
+   {
+    "kind": "other",
+    "label": "Application deadline, 2027 undergraduate embassy track (GKS-U)",
+    "date_type": "date_only",
+    "starts_on": "2026-09-30",
+    "ends_on": null,
+    "time_text": "30 September 2026, 18:00 Korea time",
+    "source_text": "The same official consulate notice says online applications close at 18:00 Korea time on 30 September 2026. The graduate (GKS-G) 2027 call has not been announced, so no graduate dates are recorded.",
+    "source_url": "https://www.mofa.go.kr/ca-en/brd/m_5231/view.do?seq=761813"
+   }
+  ]
+ }
+]

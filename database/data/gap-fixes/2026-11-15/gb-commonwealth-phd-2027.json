@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "gb-commonwealth-phd-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Nominating bodies send their chosen candidates to the CSC",
+        "date_type": "month",
+        "starts_on": "2026-12-01",
+        "ends_on": null,
+        "time_text": "December 2026",
+        "source_text": "The Commonwealth Scholarship Commission (official PhD page) says nominators pass their candidates to it in December 2026; a nomination does not guarantee an award.",
+        "source_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/"
+      },
+      {
+        "kind": "results",
+        "label": "Outcome of the 2027/28 call",
+        "date_type": "month",
+        "starts_on": "2027-07-01",
+        "ends_on": null,
+        "time_text": "By July 2027",
+        "source_text": "The Commonwealth Scholarship Commission (official) says applicants should hear the outcome by July 2027.",
+        "source_url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships/"
+      }
+    ]
+  }
+]

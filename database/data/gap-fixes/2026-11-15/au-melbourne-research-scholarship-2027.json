@@ -1,0 +1,57 @@
+[
+  {
+    "external_key": "au-melbourne-research-scholarship-2027",
+    "milestones": [
+      {
+        "kind": "results",
+        "label": "Outcomes of Round 1 for 2027 commencement",
+        "date_type": "exact",
+        "starts_on": "2026-12-18",
+        "ends_on": null,
+        "time_text": "By 18 December 2026",
+        "source_text": "The University of Melbourne's PhD (Medicine, Dentistry and Health Sciences) course page (official; read through a search excerpt) lists this outcome date. Dates differ by faculty.",
+        "source_url": "https://study.unimelb.edu.au/find/courses/graduate/doctor-of-philosophy-medicine-dentistry-and-health-sciences/fees/"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, Round 2 for 2027 commencement",
+        "date_type": "exact",
+        "starts_on": "2027-01-31",
+        "ends_on": null,
+        "time_text": "31 January 2027",
+        "source_text": "The University of Melbourne's PhD (Medicine, Dentistry and Health Sciences) course page (official; search excerpt) lists this closing date for Round 2. Other faculties set their own dates; applicants are considered automatically for the scholarship.",
+        "source_url": "https://study.unimelb.edu.au/find/courses/graduate/doctor-of-philosophy-medicine-dentistry-and-health-sciences/fees/"
+      },
+      {
+        "kind": "results",
+        "label": "Outcomes of Round 2 for 2027 commencement",
+        "date_type": "exact",
+        "starts_on": "2027-03-26",
+        "ends_on": null,
+        "time_text": "By 26 March 2027",
+        "source_text": "The University of Melbourne's PhD (Medicine, Dentistry and Health Sciences) course page (official; search excerpt) lists this outcome date.",
+        "source_url": "https://study.unimelb.edu.au/find/courses/graduate/doctor-of-philosophy-medicine-dentistry-and-health-sciences/fees/"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, Round 3 for 2027 commencement",
+        "date_type": "exact",
+        "starts_on": "2027-05-15",
+        "ends_on": null,
+        "time_text": "15 May 2027",
+        "source_text": "The University of Melbourne's PhD (Medicine, Dentistry and Health Sciences) course page (official; search excerpt) lists this closing date for Round 3. Other faculties set their own dates.",
+        "source_url": "https://study.unimelb.edu.au/find/courses/graduate/doctor-of-philosophy-medicine-dentistry-and-health-sciences/fees/"
+      },
+      {
+        "kind": "results",
+        "label": "Outcomes of Round 3 for 2027 commencement",
+        "date_type": "exact",
+        "starts_on": "2027-07-16",
+        "ends_on": null,
+        "time_text": "By 16 July 2027",
+        "source_text": "The University of Melbourne's PhD (Medicine, Dentistry and Health Sciences) course page (official; search excerpt) lists this outcome date.",
+        "source_url": "https://study.unimelb.edu.au/find/courses/graduate/doctor-of-philosophy-medicine-dentistry-and-health-sciences/fees/"
+      }
+    ]
+  }
+]

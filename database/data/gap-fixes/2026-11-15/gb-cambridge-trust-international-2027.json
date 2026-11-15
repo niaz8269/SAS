@@ -1,0 +1,27 @@
+[
+  {
+    "external_key": "gb-cambridge-trust-international-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline (Cambridge Trust awards: the course's funding deadline in the University of Cambridge Course Directory)",
+        "date_type": "route_dependent",
+        "starts_on": "2026-12-08",
+        "ends_on": "2027-01-06",
+        "time_text": "8 December 2026 or 6 January 2027, by course",
+        "source_text": "The Cambridge Trust (official) says the deadline is the funding deadline shown on each course page in the Course Directory. The two dates for the 2027 cycle, 8 December 2026 and 6 January 2027, are the ones Gates Cambridge (official) publishes for those same Cambridge course funding deadlines and that scholarship sites report for Cambridge Trust awards.",
+        "source_url": "https://www.cambridgetrust.org/postgraduate-applicants/"
+      },
+      {
+        "kind": "results",
+        "label": "Cambridge Trust funding decisions",
+        "date_type": "range",
+        "starts_on": "2027-02-15",
+        "ends_on": "2027-07-31",
+        "time_text": "Mid-February to end of July 2027",
+        "source_text": "The Cambridge Trust (official) says most awards are made in February and March, partner-funded awards often between April and June, and that no news by the end of July means the application was unsuccessful.",
+        "source_url": "https://www.cambridgetrust.org/postgraduate-applicants/"
+      }
+    ]
+  }
+]

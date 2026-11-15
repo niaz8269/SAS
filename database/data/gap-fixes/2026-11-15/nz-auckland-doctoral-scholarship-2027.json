@@ -1,0 +1,47 @@
+[
+    {
+        "external_key": "nz-auckland-doctoral-scholarship-2027",
+        "milestones": [
+            {
+                "kind": "other",
+                "label": "Application deadline, Round 2 (University of Auckland Doctoral Scholarship)",
+                "date_type": "exact",
+                "starts_on": "2027-02-01",
+                "ends_on": null,
+                "time_text": "1 February 2027",
+                "source_text": "The University of Auckland's doctoral scholarships page (official) lists this as the Round 2 closing date. Round 1 closed on 1 November 2026.",
+                "source_url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/postgraduate-scholarships/doctoral-scholarships.html"
+            },
+            {
+                "kind": "results",
+                "label": "Scholarship offers for Round 2 made by",
+                "date_type": "exact",
+                "starts_on": "2027-04-01",
+                "ends_on": null,
+                "time_text": "By 1 April 2027",
+                "source_text": "The University of Auckland's doctoral scholarships page (official) lists this offer date for Round 2.",
+                "source_url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/postgraduate-scholarships/doctoral-scholarships.html"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline, Round 3 (University of Auckland Doctoral Scholarship)",
+                "date_type": "exact",
+                "starts_on": "2027-05-01",
+                "ends_on": null,
+                "time_text": "1 May 2027",
+                "source_text": "The University of Auckland's doctoral scholarships page (official) lists this as the Round 3 closing date; offers by 1 July 2027.",
+                "source_url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/postgraduate-scholarships/doctoral-scholarships.html"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline, Round 4 (University of Auckland Doctoral Scholarship)",
+                "date_type": "exact",
+                "starts_on": "2027-08-01",
+                "ends_on": null,
+                "time_text": "1 August 2027",
+                "source_text": "The University of Auckland's doctoral scholarships page (official) lists this as the Round 4 closing date; offers by 1 October 2027. One faculty page advises international applicants new to NZ visas to use the earlier rounds.",
+                "source_url": "https://www.auckland.ac.nz/en/study/scholarships-and-awards/scholarship-types/postgraduate-scholarships/doctoral-scholarships.html"
+            }
+        ]
+    }
+]

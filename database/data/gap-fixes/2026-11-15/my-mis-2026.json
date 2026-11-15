@@ -1,0 +1,38 @@
+[
+ {
+  "external_key": "my-mis-2026",
+  "teaching_language": "English (applicants must prove English proficiency and submit documents and the research proposal in English; the guideline names no separate teaching language)",
+  "milestones": [
+   {
+    "kind": "opens",
+    "label": "Applications open for MIS 2026/2027 (reported by Universiti Sains Malaysia and MastersPortal, not confirmed by the funder)",
+    "date_type": "date_only",
+    "starts_on": "2026-03-04",
+    "ends_on": null,
+    "time_text": null,
+    "source_text": "Reported by a Universiti Sains Malaysia school page and MastersPortal; the ministry's own page only says the round is closed. One listing gives 6 March instead.",
+    "source_url": "https://indtech.usm.my/index.php/info-gateway/in-the-news/1323-the-application-for-the-malaysia-international-scholarship-mis-2026-2027-is-now-open"
+   },
+   {
+    "kind": "other",
+    "label": "Application deadline (reported by Universiti Sains Malaysia, UNITEN and MastersPortal, not confirmed by the funder), MIS 2026/2027",
+    "date_type": "date_only",
+    "starts_on": "2026-04-03",
+    "ends_on": null,
+    "time_text": null,
+    "source_text": "Three unofficial sources (a Malaysian university school page, a second Malaysian university and a scholarship portal) give 3 April 2026. The official MOHE portal states that applications for 2026/2027 are closed.",
+    "source_url": "https://uniten.edu.my/financial-assistance/list-of-financial-assistance/malaysia-international-scholarship-mis"
+   },
+   {
+    "kind": "results",
+    "label": "Status-checking period on the MOHE portal for 2026/2027 applicants",
+    "date_type": "range",
+    "starts_on": "2026-10-08",
+    "ends_on": "2026-12-31",
+    "time_text": null,
+    "source_text": "The official MOHE MIS portal says applicants can check their status from 8 October to 31 December 2026.",
+    "source_url": "https://biasiswa.mohe.gov.my/INTER/index.php"
+   }
+  ]
+ }
+]

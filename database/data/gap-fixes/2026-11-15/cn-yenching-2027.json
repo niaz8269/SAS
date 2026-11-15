@@ -1,0 +1,37 @@
+[
+  {
+    "external_key": "cn-yenching-2027",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Applications open for the 2027 cohort",
+        "date_type": "date_only",
+        "starts_on": "2026-09-01",
+        "ends_on": null,
+        "time_text": "1 September 2026",
+        "source_text": "The Yenching Academy's own admissions page says it takes applications for the 2027 cohort of Yenching Scholars from 1 September 2026.",
+        "source_url": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline for international applicants",
+        "date_type": "exact",
+        "starts_on": "2026-11-30",
+        "ends_on": null,
+        "time_text": "30 November 2026, 9:00 am Beijing time",
+        "source_text": "The Yenching Academy's admissions page gives this as the closing time for international candidates.",
+        "source_url": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline for Hong Kong, Macao and Taiwan applicants",
+        "date_type": "exact",
+        "starts_on": "2027-01-08",
+        "ends_on": null,
+        "time_text": "8 January 2027, 12:00 noon Beijing time",
+        "source_text": "The same official page sets a later closing time for applicants from Hong Kong, Macao and Taiwan. It gives no interview or decision dates.",
+        "source_url": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm"
+      }
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+    {
+        "external_key": "om-squ-international-postgraduate-scholarship-2027",
+        "milestones": [
+            {
+                "kind": "opens",
+                "label": "Postgraduate applications open for 2027/2028",
+                "date_type": "exact",
+                "starts_on": "2026-10-15",
+                "ends_on": null,
+                "time_text": "15 October 2026",
+                "source_text": "SQU's admission requests page (official) lists the postgraduate application window starting on this date. The scholarship needs no separate application; nomination is automatic.",
+                "source_url": "https://umis.squ.edu.om/UI/Admission/AdmissionRequests.aspx"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline for postgraduate admission 2027/2028",
+                "date_type": "exact",
+                "starts_on": "2027-01-14",
+                "ends_on": null,
+                "time_text": "14 January 2027",
+                "source_text": "SQU's admission requests page (official) lists this as the end of the postgraduate application window.",
+                "source_url": "https://umis.squ.edu.om/UI/Admission/AdmissionRequests.aspx"
+            }
+        ]
+    }
+]

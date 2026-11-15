@@ -1,0 +1,38 @@
+[
+ {
+  "external_key": "hk-hkpfs-2027",
+  "teaching_language": "English",
+  "milestones": [
+   {
+    "kind": "opens",
+    "label": "Applications open for the 2027/28 HKPFS",
+    "date_type": "date_only",
+    "starts_on": "2026-09-01",
+    "ends_on": null,
+    "time_text": null,
+    "source_text": "PolyU's HKPFS page (a participating university) says the application period starts on 1 September 2026.",
+    "source_url": "https://www.polyu.edu.hk/gs/hkpfs/"
+   },
+   {
+    "kind": "other",
+    "label": "Application deadline for the 2027/28 HKPFS",
+    "date_type": "date_only",
+    "starts_on": "2026-12-01",
+    "ends_on": null,
+    "time_text": "12:00 noon Hong Kong time for the initial application to the Research Grants Council; 23:59 for the full university application",
+    "source_text": "HKU and PolyU pages (university sources) both give 1 December 2026 for the initial and full applications.",
+    "source_url": "https://gradsch.hku.hk/hkpfs"
+   },
+   {
+    "kind": "results",
+    "label": "Results announced by the Research Grants Council",
+    "date_type": "range",
+    "starts_on": "2027-04-01",
+    "ends_on": "2027-05-31",
+    "time_text": "April to May 2027",
+    "source_text": "PolyU's page says the RGC announces results in April to May 2027.",
+    "source_url": "https://www.polyu.edu.hk/gs/hkpfs/"
+   }
+  ]
+ }
+]

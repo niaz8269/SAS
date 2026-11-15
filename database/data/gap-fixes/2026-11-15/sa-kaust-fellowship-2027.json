@@ -1,0 +1,27 @@
+[
+    {
+        "external_key": "sa-kaust-fellowship-2027",
+        "milestones": [
+            {
+                "kind": "results",
+                "label": "Admission decisions released (Spring 2027 intake, PhD only, Round 1)",
+                "date_type": "exact",
+                "starts_on": "2026-11-19",
+                "ends_on": null,
+                "time_text": "19 November 2026",
+                "source_text": "KAUST's own admission timeline page (official) gives this as the release date for Round 1 decisions. It lists no interview dates; the process page only says shortlisted candidates get an online interview with faculty.",
+                "source_url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines"
+            },
+            {
+                "kind": "results",
+                "label": "Admission decisions released (Fall 2027 intake, MS, MS/PhD and PhD, Round 2)",
+                "date_type": "exact",
+                "starts_on": "2027-02-25",
+                "ends_on": null,
+                "time_text": "25 February 2027",
+                "source_text": "KAUST's own admission timeline page (official) gives this as the release date for Round 2 decisions. No interview dates are published; shortlisted applicants are invited to an online interview after faculty review.",
+                "source_url": "https://admissions.kaust.edu.sa/how-to-apply/admission-timelines"
+            }
+        ]
+    }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "external_key": "gb-weidenfeld-hoffmann-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline (course funding deadline, reported by scholarship sites, not confirmed by the funder)",
+        "date_type": "route_dependent",
+        "starts_on": null,
+        "ends_on": null,
+        "time_text": "December 2026 or January 2027, by course",
+        "source_text": "Two scholarship sites (scholarshipscentral.com and opportunityinside.com, unofficial) say applicants must apply by the December or January funding deadline of their Oxford course; one gives 8 January 2027 for the Said Business School MBA.",
+        "source_url": "https://www.scholarshipscentral.com/blog/weidenfeld-hoffmann-scholarship"
+      },
+      {
+        "kind": "interview",
+        "label": "Online interviews for shortlisted candidates (reported by scholarship sites)",
+        "date_type": "month",
+        "starts_on": "2027-04-01",
+        "ends_on": null,
+        "time_text": "April 2027",
+        "source_text": "Two scholarship sites (unofficial) report that shortlisted candidates are likely interviewed online in April 2027.",
+        "source_url": "https://www.scholarshipscentral.com/blog/weidenfeld-hoffmann-scholarship"
+      },
+      {
+        "kind": "results",
+        "label": "Decisions (reported by scholarship sites)",
+        "date_type": "month",
+        "starts_on": "2027-05-31",
+        "ends_on": null,
+        "time_text": "By the end of May 2027",
+        "source_text": "Two scholarship sites (unofficial) report decisions are expected by the end of May 2027 and that silence by then means an unsuccessful application.",
+        "source_url": "https://opportunityinside.com/scholarships/weidenfeld-hoffmann-scholarship-oxford-uk-2027.html"
+      }
+    ]
+  }
+]

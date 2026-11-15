@@ -1,0 +1,38 @@
+[
+    {
+        "external_key": "jp-mext-embassy-research-2027",
+        "teaching_language": "Set by the accepting Japanese university: applicants need enough Japanese or English to work with their advisor, and up to six months of Japanese preparatory education is given where needed",
+        "milestones": [
+            {
+                "kind": "opens",
+                "label": "Call for applications opens at each Japanese embassy or consulate (2027 intake)",
+                "date_type": "month",
+                "starts_on": "2026-04-01",
+                "ends_on": null,
+                "time_text": "Around mid-April 2026",
+                "source_text": "The official MEXT application guidelines say the call opens around mid-April 2026 at each Japanese mission; each mission sets its own submission deadline.",
+                "source_url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline (set by each Japanese embassy or consulate)",
+                "date_type": "route_dependent",
+                "starts_on": null,
+                "ends_on": null,
+                "time_text": "Varies by country",
+                "source_text": "The official guidelines say the closing date, first-screening dates and result dates differ from one Japanese mission to another, so applicants must check their own mission.",
+                "source_url": "https://www.studyinjapan.go.jp/en/smap-stopj-applications-research.html"
+            },
+            {
+                "kind": "results",
+                "label": "Notification of final selection and university placement",
+                "date_type": "range",
+                "starts_on": "2027-01-01",
+                "ends_on": "2027-03-31",
+                "time_text": "January to March 2027",
+                "source_text": "The official guidelines schedule final results, sent through the Japanese mission, for January to March 2027.",
+                "source_url": "https://www.studyinjapan.go.jp/en/_mt/2026/04/01-2027_Research_Guidelines_E.pdf"
+            }
+        ]
+    }
+]

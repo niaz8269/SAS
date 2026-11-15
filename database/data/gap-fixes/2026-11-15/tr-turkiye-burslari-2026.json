@@ -1,0 +1,47 @@
+[
+    {
+        "external_key": "tr-turkiye-burslari-2026",
+        "milestones": [
+            {
+                "kind": "opens",
+                "label": "Next general application opens",
+                "date_type": "month",
+                "starts_on": null,
+                "ends_on": null,
+                "time_text": "10 January (year not printed on the page)",
+                "source_text": "The Türkiye Scholarships application calendar (official) shows the upcoming general application window starting 10 January; the page does not print the year and no separate 2027 notice was found.",
+                "source_url": "https://www.turkiyeburslari.gov.tr/calendar"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline (next general application)",
+                "date_type": "month",
+                "starts_on": null,
+                "ends_on": null,
+                "time_text": "20 February (year not printed on the page)",
+                "source_text": "The official application calendar shows the general application window closing on 20 February; the year is not printed.",
+                "source_url": "https://www.turkiyeburslari.gov.tr/calendar"
+            },
+            {
+                "kind": "interview",
+                "label": "Interviews for the next general application",
+                "date_type": "month",
+                "starts_on": null,
+                "ends_on": null,
+                "time_text": "April to June",
+                "source_text": "The official calendar lists interviews from April to June, after evaluation in March-April.",
+                "source_url": "https://www.turkiyeburslari.gov.tr/calendar"
+            },
+            {
+                "kind": "results",
+                "label": "Results announced",
+                "date_type": "month",
+                "starts_on": null,
+                "ends_on": null,
+                "time_text": "Early August",
+                "source_text": "The official calendar lists results in early August.",
+                "source_url": "https://www.turkiyeburslari.gov.tr/calendar"
+            }
+        ]
+    }
+]

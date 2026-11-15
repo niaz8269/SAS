@@ -1,0 +1,28 @@
+[
+  {
+    "external_key": "qa-hbku-graduate-scholarship-international-2027",
+    "teaching_language": "English (a few programmes, such as translation and interpreting, also work in Arabic)",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Online graduate application opens",
+        "date_type": "exact",
+        "starts_on": "2026-10-01",
+        "ends_on": null,
+        "time_text": "1 October 2026",
+        "source_text": "HBKU's graduate admissions page (official) says the online application opens to the public on this date.",
+        "source_url": "https://www.hbku.edu.qa/en/graduate-admissions"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline for international graduate applicants",
+        "date_type": "exact",
+        "starts_on": "2027-02-01",
+        "ends_on": null,
+        "time_text": "1 February 2027",
+        "source_text": "HBKU's graduate admissions page (official) gives this deadline for international applicants. Qatari and resident applicants seeking funding have until 15 March 2027. The page does not state which intake it is for.",
+        "source_url": "https://www.hbku.edu.qa/en/graduate-admissions"
+      }
+    ]
+  }
+]

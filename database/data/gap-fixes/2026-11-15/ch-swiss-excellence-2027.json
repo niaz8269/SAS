@@ -1,0 +1,37 @@
+[
+  {
+    "external_key": "ch-swiss-excellence-2027",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Applications open for the 2027-2028 call",
+        "date_type": "date_only",
+        "starts_on": "2026-08-20",
+        "ends_on": null,
+        "time_text": "20 August 2026",
+        "source_text": "The Swiss State Secretariat for Education page (official) says applications are open from 20 August 2026.",
+        "source_url": "https://www.sbfi.admin.ch/sbfi/en/home/bildung/stipendien/eskas.html"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline",
+        "date_type": "route_dependent",
+        "starts_on": null,
+        "ends_on": null,
+        "time_text": "Depends on country of origin",
+        "source_text": "The official page says deadlines are published per country of origin, so no single date applies. Third-party and embassy-linked notices mention 10 and 20 November 2026 for some countries.",
+        "source_url": "https://www.sbfi.admin.ch/sbfi/en/home/bildung/stipendien/eskas.html"
+      },
+      {
+        "kind": "results",
+        "label": "Federal Commission announces award decisions",
+        "date_type": "month",
+        "starts_on": "2027-05-01",
+        "ends_on": null,
+        "time_text": "By the end of May (2027)",
+        "source_text": "The official page says the commission announces its decisions by the end of May at the latest; the page is titled for the 2027-2028 awards but does not print the year.",
+        "source_url": "https://www.sbfi.admin.ch/sbfi/en/home/bildung/stipendien/eskas.html"
+      }
+    ]
+  }
+]

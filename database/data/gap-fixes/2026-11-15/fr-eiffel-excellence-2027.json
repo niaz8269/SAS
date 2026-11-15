@@ -1,0 +1,38 @@
+[
+  {
+    "external_key": "fr-eiffel-excellence-2027",
+    "teaching_language": "Depends on the host programme: French or English (a French certificate is asked for French-taught programmes)",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "2027 call opens (French institutions nominate candidates)",
+        "date_type": "month",
+        "starts_on": "2026-10-01",
+        "ends_on": null,
+        "time_text": "October 2026",
+        "source_text": "Campus France's Eiffel page (official) gives October 2026 as the opening of the 2027 call. Students cannot apply directly; French institutions submit the files.",
+        "source_url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (institutions' files received by Campus France)",
+        "date_type": "date_only",
+        "starts_on": "2027-01-06",
+        "ends_on": null,
+        "time_text": "6 January 2027 (inclusive)",
+        "source_text": "Campus France's Eiffel page (official) sets this as the deadline for files to reach Campus France; universities set earlier internal deadlines, for example 20 November 2026 at one university.",
+        "source_url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence"
+      },
+      {
+        "kind": "results",
+        "label": "Results published",
+        "date_type": "date_only",
+        "starts_on": "2027-04-12",
+        "ends_on": null,
+        "time_text": "From 12 April 2027",
+        "source_text": "Campus France's Eiffel page (official) says results are published from 12 April 2027.",
+        "source_url": "https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence"
+      }
+    ]
+  }
+]

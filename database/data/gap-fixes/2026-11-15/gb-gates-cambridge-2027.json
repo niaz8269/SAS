@@ -1,0 +1,57 @@
+[
+  {
+    "external_key": "gb-gates-cambridge-2027",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Applications open for 2027 entry (both rounds)",
+        "date_type": "date_only",
+        "starts_on": "2026-09-11",
+        "ends_on": null,
+        "time_text": "11 September 2026",
+        "source_text": "Gates Cambridge's timeline page (official) says applications open on 11 September 2026.",
+        "source_url": "https://www.gatescambridge.org/apply/timeline/"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (US citizens resident in the USA)",
+        "date_type": "date_only",
+        "starts_on": "2026-10-14",
+        "ends_on": null,
+        "time_text": "14 October 2026, 23:59 UK time",
+        "source_text": "Gates Cambridge (official) gives 14 October 2026 for the earlier round, covering US citizens living in the US; all documents including references are due.",
+        "source_url": "https://www.gatescambridge.org/apply/timeline/"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (all other applicants; set by the course funding deadline)",
+        "date_type": "route_dependent",
+        "starts_on": "2026-12-08",
+        "ends_on": "2027-01-06",
+        "time_text": "8 December 2026 or 6 January 2027, 23:59 UK time",
+        "source_text": "Gates Cambridge (official) says the later round closes on 8 December 2026 or 6 January 2027, whichever the Cambridge Course Directory lists as the course's funding deadline.",
+        "source_url": "https://www.gatescambridge.org/apply/timeline/"
+      },
+      {
+        "kind": "results",
+        "label": "Scholarship offers, US citizens round",
+        "date_type": "month",
+        "starts_on": "2027-02-01",
+        "ends_on": null,
+        "time_text": "By early February 2027",
+        "source_text": "Gates Cambridge (official) says offers in the earlier round go out by early February 2027, after applicants are notified of shortlisting by 14 December 2026.",
+        "source_url": "https://www.gatescambridge.org/apply/timeline/"
+      },
+      {
+        "kind": "results",
+        "label": "Scholarship offers, later round",
+        "date_type": "month",
+        "starts_on": "2027-04-01",
+        "ends_on": null,
+        "time_text": "By early April 2027",
+        "source_text": "Gates Cambridge (official) says offers in the later round go out by early April 2027, after applicants are notified by 8 March 2027.",
+        "source_url": "https://www.gatescambridge.org/apply/timeline/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "external_key": "za-mandela-rhodes-2028",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Round Two notification",
+        "date_type": "month",
+        "starts_on": "2027-07-01",
+        "ends_on": null,
+        "time_text": "Mid-July 2027",
+        "source_text": "The Mandela Rhodes Foundation (official) says applicants learn in mid-July whether they reached Round Two.",
+        "source_url": "https://www.mandelarhodes.org/scholarship/apply/"
+      },
+      {
+        "kind": "other",
+        "label": "Round Three notification",
+        "date_type": "month",
+        "starts_on": "2027-07-01",
+        "ends_on": null,
+        "time_text": "End of July 2027",
+        "source_text": "Official Foundation page: Round Three outcomes are sent at the end of July.",
+        "source_url": "https://www.mandelarhodes.org/scholarship/apply/"
+      },
+      {
+        "kind": "other",
+        "label": "Invitation to the final-round interview (or unsuccessful notice)",
+        "date_type": "month",
+        "starts_on": "2027-08-01",
+        "ends_on": null,
+        "time_text": "End of August 2027",
+        "source_text": "Official Foundation page: final-round invitations go out at the end of August.",
+        "source_url": "https://www.mandelarhodes.org/scholarship/apply/"
+      },
+      {
+        "kind": "interview",
+        "label": "Final-round interviews in South Africa (applicants abroad are flown in)",
+        "date_type": "month",
+        "starts_on": "2027-10-01",
+        "ends_on": null,
+        "time_text": "October 2027",
+        "source_text": "Official Foundation page: final interviews are held in South Africa in October; applicants based abroad who reach this stage are brought in for an in-person interview.",
+        "source_url": "https://www.mandelarhodes.org/scholarship/apply/"
+      },
+      {
+        "kind": "results",
+        "label": "Selected scholars notified",
+        "date_type": "month",
+        "starts_on": "2027-10-01",
+        "ends_on": null,
+        "time_text": "End of October 2027",
+        "source_text": "Official Foundation page: successful candidates hear at the end of October, then secure university admission and a visa for a January start.",
+        "source_url": "https://www.mandelarhodes.org/scholarship/apply/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,87 @@
+[
+  {
+    "external_key": "cn-csc-2026",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Applications open for the 2027/28 call (embassy notices)",
+        "date_type": "month",
+        "starts_on": "2026-10-01",
+        "ends_on": null,
+        "time_text": "October 2026",
+        "source_text": "Chinese embassy notices dated 23 to 30 October 2026 (for example Indonesia, Maldives, Timor-Leste and South Sudan) state that applications for the 2027/28 Chinese Government Scholarship are open; no single worldwide opening day is given.",
+        "source_url": "https://id.china-embassy.gov.cn/eng/sgdt/202610/t20261027_12047753.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline depends on the route (Type A: country; Type B: host university)",
+        "date_type": "route_dependent",
+        "starts_on": null,
+        "ends_on": null,
+        "time_text": "set by each embassy or university",
+        "source_text": "Embassies and consulates set separate closing dates for the 2027/28 Type A call, and each host university sets its own date for Type B. Official examples follow.",
+        "source_url": "https://id.china-embassy.gov.cn/eng/sgdt/202610/t20261027_12047753.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (route example: Indonesia, embassy route, 2027/28 call)",
+        "date_type": "date_only",
+        "starts_on": "2027-02-14",
+        "ends_on": null,
+        "time_text": "before 14 February 2027",
+        "source_text": "Official notice of the Chinese embassy in Indonesia (27 October 2026) says online applications for the 2027/28 year must be in before 14 February 2027; the embassy then forwards recommended files to the China Scholarship Council between 15 February and 1 March 2027, and results are checked in July to August 2027. Other countries set their own dates.",
+        "source_url": "https://id.china-embassy.gov.cn/eng/sgdt/202610/t20261027_12047753.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (route example: Maldives, embassy route, 2027/28 call)",
+        "date_type": "date_only",
+        "starts_on": "2027-01-29",
+        "ends_on": null,
+        "time_text": "29 January 2027",
+        "source_text": "Official notice of the Chinese embassy in the Maldives (25 October 2026) gives 29 January 2027 as the closing date for the 2027/28 year and says applications are already open.",
+        "source_url": "https://mv.china-embassy.gov.cn/eng/sgsd/202610/t20261025_12046428.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (route example: Canada, Montreal consulate route, 2027/28 call)",
+        "date_type": "date_only",
+        "starts_on": "2027-02-10",
+        "ends_on": null,
+        "time_text": "10 February 2027",
+        "source_text": "Official notice of the Chinese Consulate General in Montreal (5 November 2026) gives 10 February 2027 as the online closing date for Canadian citizens applying through Type A.",
+        "source_url": "https://montreal.china-consulate.gov.cn/jy/202611/t20261105_12053500.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (route example: Timor-Leste, ministry route, 2027/28 call)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-20",
+        "ends_on": null,
+        "time_text": "before 20 December 2026",
+        "source_text": "Official notice of the Chinese embassy in Timor-Leste (23 October 2026) says applications and documents must reach the Timorese higher-education ministry before 20 December 2026.",
+        "source_url": "https://tl.china-embassy.gov.cn/eng/xwdt/202610/t20261023_12045707.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (Type B example: Peking University, 2027 entry)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "time_text": "25 December 2026, Beijing time",
+        "source_text": "Peking University's international students office gives 25 December 2026 as the closing date of its graduate application, which includes scholarship consideration.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (Type B example: Zhejiang University, doctoral)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-31",
+        "ends_on": null,
+        "time_text": "31 December 2026",
+        "source_text": "Zhejiang University's International College gives 31 December 2026 for the university route of the Chinese Government Scholarship.",
+        "source_url": "http://iczu.zju.edu.cn/admissionsen/95468/list.htm"
+      }
+    ]
+  }
+]

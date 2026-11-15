@@ -1,0 +1,17 @@
+[
+  {
+    "external_key": "eu-erasmus-mundus-jm",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application window for the 2027/28 intake (each joint master sets its own deadline)",
+        "date_type": "route_dependent",
+        "starts_on": "2026-10-01",
+        "ends_on": "2027-01-31",
+        "time_text": "Mostly October 2026 to January 2027",
+        "source_text": "The EACEA catalogue page (official) says most master's programmes take applications between October and January for the following academic year and sends applicants to each programme's website; one scholarship site (globaladmissions.com, unofficial) reports scholarship results usually come between February and April.",
+        "source_url": "https://www.eacea.ec.europa.eu/scholarships/emjmd-catalogue_en"
+      }
+    ]
+  }
+]

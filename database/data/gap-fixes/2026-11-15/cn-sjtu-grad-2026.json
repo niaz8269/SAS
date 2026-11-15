@@ -1,0 +1,57 @@
+[
+  {
+    "external_key": "cn-sjtu-grad-2026",
+    "milestones": [
+      {
+        "kind": "opens",
+        "label": "Applications open for 2027 international graduate admissions",
+        "date_type": "date_only",
+        "starts_on": "2026-11-05",
+        "ends_on": null,
+        "time_text": "5 November 2026, Beijing time",
+        "source_text": "Shanghai Jiao Tong University's official 2027 international graduate guide says applications open on 5 November 2026.",
+        "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/271"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, Chinese Government Scholarship via the university (first round)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-15",
+        "ends_on": null,
+        "time_text": "15 December 2026, Beijing time",
+        "source_text": "The official SJTU guide names 15 December 2026 as the first-round deadline for applicants seeking the Chinese Government Scholarship through the university.",
+        "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/271"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, Chinese Government Scholarship via the university (final)",
+        "date_type": "date_only",
+        "starts_on": "2027-02-15",
+        "ends_on": null,
+        "time_text": "15 February 2027, Beijing time",
+        "source_text": "The official SJTU guide names 15 February 2027 as the last date for the Chinese Government Scholarship through the university.",
+        "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/271"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, Shanghai Government Scholarship and SJTU Scholarships",
+        "date_type": "date_only",
+        "starts_on": "2027-03-31",
+        "ends_on": null,
+        "time_text": "31 March 2027, Beijing time",
+        "source_text": "The official SJTU guide names 31 March 2027 as the deadline for the Shanghai Government Scholarship and the SJTU Scholarships.",
+        "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/271"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, self-funded applicants",
+        "date_type": "date_only",
+        "starts_on": "2027-05-31",
+        "ends_on": null,
+        "time_text": "31 May 2027, Beijing time",
+        "source_text": "The official SJTU guide names 31 May 2027 as the deadline for self-funded applicants. The page gives no interview or result dates; results are viewed in the application system.",
+        "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/271"
+      }
+    ]
+  }
+]

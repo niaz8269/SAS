@@ -1,0 +1,17 @@
+[
+  {
+    "external_key": "gb-commonwealth-shared-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Universities nominate their chosen candidates to the CSC",
+        "date_type": "month",
+        "starts_on": "2027-03-01",
+        "ends_on": null,
+        "time_text": "March 2027",
+        "source_text": "The Commonwealth Scholarship Commission (official) says each participating university runs its own selection and sends its nominees to the CSC in March 2027.",
+        "source_url": "https://cscuk.fcdo.gov.uk/shared"
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "external_key": "br-pec-pg-2027",
+        "milestones": [
+            {
+                "kind": "other",
+                "label": "Institutions' proposal window (universities and research institutes apply to CNPq to host PEC-PG students; not a student deadline)",
+                "date_type": "range",
+                "starts_on": "2026-06-29",
+                "ends_on": "2026-08-13",
+                "time_text": "29 June to 13 August 2026",
+                "source_text": "The CNPq page for call 16/2026 (official) shows the institutional registration window as 29 June to 13 August 2026. This is the step where Brazilian universities and institutes ask for scholarship quotas.",
+                "source_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-16-2026/chamada-publica-cnpq-N-16-2026"
+            },
+            {
+                "kind": "results",
+                "label": "CNPq publishes the decision on which institutions take part (and so which programmes can take PEC-PG students)",
+                "date_type": "month",
+                "starts_on": "2026-12-01",
+                "ends_on": null,
+                "time_text": "December 2026",
+                "source_text": "The Brazilian foreign ministry's PEC-PG page (official, read through a search summary because the page itself showed a verification screen) puts the final list of selected institutions in December 2026.",
+                "source_url": "https://www.gov.br/mre/en/subjects/culture-and-education/educational-themes/study-opportunities-for-international-applicants/pec-pg-graduate/selection-process-2"
+            },
+            {
+                "kind": "other",
+                "label": "Application deadline for students: not announced; each selected institution sets its own selection schedule",
+                "date_type": "not_announced",
+                "starts_on": null,
+                "ends_on": null,
+                "time_text": "Not announced",
+                "source_text": "Section 2.2 of CNPq call 16/2026 (official) says the schedule for choosing master's and doctoral candidates will be published later by the selected institutions and CNPq.",
+                "source_url": "https://www.gov.br/cnpq/pt-br/chamadas/todas-as-chamadas/chamadas-2026/chamada-no-16-2026/ChamadaPblica_CNPq_CAPES_MRE_16_2026_2717524.pdf"
+            },
+            {
+                "kind": "other",
+                "label": "Scholarship selection and start window",
+                "date_type": "range",
+                "starts_on": "2027-03-01",
+                "ends_on": "2028-03-31",
+                "time_text": "March 2027 to March 2028",
+                "source_text": "The foreign ministry's PEC-PG page (official, via search summary) lists March 2027 to March 2028 as the period for choosing scholars and starting the scholarships; one scholarship guide (unofficial) reports the same.",
+                "source_url": "https://www.gov.br/mre/en/subjects/culture-and-education/educational-themes/study-opportunities-for-international-applicants/pec-pg-graduate/selection-process-2"
+            }
+        ]
+    }
+]

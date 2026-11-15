@@ -1,0 +1,37 @@
+[
+  {
+    "external_key": "cn-sgs-2026",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline depends on the university",
+        "date_type": "route_dependent",
+        "starts_on": null,
+        "ends_on": null,
+        "time_text": "set by each of the Shanghai institutions",
+        "source_text": "The Study in Shanghai platform of the Shanghai government says each participating university sets its own application window for 2027 and refers applicants to the university admissions pages; the windows differ from institution to institution.",
+        "source_url": "https://www.study-shanghai.cn"
+      },
+      {
+        "kind": "other",
+        "label": "Application window at Shanghai Maritime University (2027 intake)",
+        "date_type": "range",
+        "starts_on": "2026-12-01",
+        "ends_on": "2027-04-30",
+        "time_text": "1 December 2026 to 30 April 2027",
+        "source_text": "Shanghai Maritime University's own page gives this period for applications for its 2027 intake.",
+        "source_url": "https://en.shmtu.edu.cn/2024/0311/c6274a230382/page.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline for the Shanghai Government Scholarship at Shanghai Jiao Tong University (graduate, 2027)",
+        "date_type": "date_only",
+        "starts_on": "2027-03-31",
+        "ends_on": null,
+        "time_text": "31 March 2027, Beijing time",
+        "source_text": "SJTU's official 2027 international graduate guide gives 31 March 2027 for the Shanghai Government Scholarship and SJTU Scholarships.",
+        "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/271"
+      }
+    ]
+  }
+]

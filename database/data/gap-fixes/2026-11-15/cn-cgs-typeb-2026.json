@@ -1,0 +1,47 @@
+[
+  {
+    "external_key": "cn-cgs-typeb-2026",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline depends on the host university (Type B)",
+        "date_type": "route_dependent",
+        "starts_on": null,
+        "ends_on": null,
+        "time_text": "set by each Chinese university",
+        "source_text": "Type B is applied for through the host university, so each university sets its own closing date. Official examples for the 2027 intake are listed in the following entries.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (university example: Peking University, 2027 entry)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-25",
+        "ends_on": null,
+        "time_text": "25 December 2026, Beijing time",
+        "source_text": "Peking University's international students office gives 25 December 2026 as the closing date of its general graduate application, which also covers scholarship consideration.",
+        "source_url": "https://isd.pku.edu.cn/en/detail.php?id=839"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (university example: Zhejiang University, doctoral, Type B)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-31",
+        "ends_on": null,
+        "time_text": "31 December 2026",
+        "source_text": "Zhejiang University's International College lists 31 December 2026 as the deadline for the Chinese Government Scholarship through its university route (doctoral programmes).",
+        "source_url": "http://iczu.zju.edu.cn/admissionsen/95468/list.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (university example: Shanghai Jiao Tong University, final date)",
+        "date_type": "date_only",
+        "starts_on": "2027-02-15",
+        "ends_on": null,
+        "time_text": "15 February 2027, Beijing time",
+        "source_text": "Shanghai Jiao Tong University's guide gives 15 December 2026 as the first round and 15 February 2027 as the final date for the Chinese Government Scholarship through the university.",
+        "source_url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/271"
+      }
+    ]
+  }
+]

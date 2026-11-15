@@ -1,0 +1,37 @@
+[
+  {
+    "external_key": "cn-zju-doctoral-2026",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline, doctoral programmes (2027 intake, general)",
+        "date_type": "date_only",
+        "starts_on": "2027-02-28",
+        "ends_on": null,
+        "time_text": "28 February 2027",
+        "source_text": "Zhejiang University's International College gives 28 February 2027 as the general closing date for doctoral applications for the 2027 intake; enrolment is expected in early September 2027.",
+        "source_url": "http://iczu.zju.edu.cn/admissionsen/95468/list.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline for doctoral programmes with a later cut-off",
+        "date_type": "date_only",
+        "starts_on": "2027-05-31",
+        "ends_on": null,
+        "time_text": "31 May 2027",
+        "source_text": "The same page says some programmes close later, on 31 May 2027, and tells applicants to check the programme catalogue.",
+        "source_url": "http://iczu.zju.edu.cn/admissionsen/95468/list.htm"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline, Chinese Government Scholarship via the university (Type B)",
+        "date_type": "date_only",
+        "starts_on": "2026-12-31",
+        "ends_on": null,
+        "time_text": "31 December 2026",
+        "source_text": "The page names 31 December 2026 for the Type B university route. For the bilateral Type A route it gives no date and refers applicants to their home-country authority.",
+        "source_url": "http://iczu.zju.edu.cn/admissionsen/95468/list.htm"
+      }
+    ]
+  }
+]

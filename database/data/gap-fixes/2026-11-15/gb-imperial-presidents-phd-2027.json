@@ -1,0 +1,67 @@
+[
+  {
+    "external_key": "gb-imperial-presidents-phd-2027",
+    "milestones": [
+      {
+        "kind": "other",
+        "label": "Application deadline (round 1 for 2027 entry)",
+        "date_type": "date_only",
+        "starts_on": "2026-11-02",
+        "ends_on": null,
+        "time_text": "2 November 2026, 23:59 UK time",
+        "source_text": "Imperial College London's page for the President's PhD Scholarships (official) lists round 1 as closing on 2 November 2026 at 23:59 UK time.",
+        "source_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/"
+      },
+      {
+        "kind": "results",
+        "label": "Decisions for round 1",
+        "date_type": "date_only",
+        "starts_on": "2027-01-31",
+        "ends_on": null,
+        "time_text": "By 31 January 2027",
+        "source_text": "Imperial (official) says round 1 decisions are due by 31 January 2027.",
+        "source_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (round 2 for 2027 entry)",
+        "date_type": "date_only",
+        "starts_on": "2027-01-11",
+        "ends_on": null,
+        "time_text": "11 January 2027, 23:59 UK time",
+        "source_text": "Imperial College London's page for the President's PhD Scholarships (official) lists round 2 as closing on 11 January 2027 at 23:59 UK time.",
+        "source_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/"
+      },
+      {
+        "kind": "results",
+        "label": "Decisions for round 2",
+        "date_type": "date_only",
+        "starts_on": "2027-04-15",
+        "ends_on": null,
+        "time_text": "By 15 April 2027",
+        "source_text": "Imperial (official) says round 2 decisions are due by 15 April 2027.",
+        "source_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/"
+      },
+      {
+        "kind": "other",
+        "label": "Application deadline (round 3 for 2027 entry)",
+        "date_type": "date_only",
+        "starts_on": "2027-03-01",
+        "ends_on": null,
+        "time_text": "1 March 2027, 23:59 UK time",
+        "source_text": "Imperial College London's page for the President's PhD Scholarships (official) lists round 3 as closing on 1 March 2027 at 23:59 UK time.",
+        "source_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/"
+      },
+      {
+        "kind": "results",
+        "label": "Decisions for round 3",
+        "date_type": "date_only",
+        "starts_on": "2027-05-31",
+        "ends_on": null,
+        "time_text": "By 31 May 2027",
+        "source_text": "Imperial (official) says round 3 decisions are due by 31 May 2027.",
+        "source_url": "https://www.imperial.ac.uk/study/fees-and-funding/postgraduate-doctoral/grants-scholarships/presidents-phd/"
+      }
+    ]
+  }
+]
