@@ -1,0 +1,50 @@
+[{
+  "external_key": "au-melbourne-research-scholarship-2027",
+  "checked_on": "2026-11-15",
+  "sources": [
+    {"url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship", "publisher": "University of Melbourne", "publisher_type": "university", "note": "The University's own Melbourne Research Scholarship page: benefits, eligibility, selection, how to apply"}
+  ],
+  "summary": "The Melbourne Research Scholarship is offered to high-achieving domestic and international students who are enrolling in a graduate research degree at the University of Melbourne (a research master's or a doctorate). No separate application is needed: students who apply for a graduate research course by its closing date are considered automatically. It combines a full fee offset with a living stipend and, for international students who need a student visa, Overseas Student Health Cover. About 350 awards are offered, worth 100% fee remission and up to AUD 138,000.",
+  "eligibility_notes": "To be considered you must have applied for, and meet the entry requirements for, a graduate research degree at the University of Melbourne, or be currently enrolled in one. The scholarship is offered to students ranked highest by the relevant selection panels on their academic results for previous study and their research potential in their field. Factors such as completion of a degree at the same level as the research course, relevant professional experience, refereed publications, specialist medical qualifications or composition of original music may be taken into consideration. The scholarship is subject to the Graduate Research Scholarships Terms and Conditions (as amended). Open to domestic and international students.",
+  "funding_summary": "Full fee offset for up to two years (Masters by Research) or up to four years (doctorate), plus a fortnightly stipend of AUD 41,100 per year pro rata (2027 full-time rate) for up to two years (Masters by Research) or up to 3.5 years (doctorate). The living allowance may be indexed annually and includes limited paid sick, parental and partner leave. A one-off relocation allowance of AUD 2,000 (moving from a State or Territory other than Victoria) or AUD 3,000 (moving from outside Australia). Overseas Student Health Cover Single Membership for international students who need a student visa. Domestic research students receive a Research Training Program Scholarship (Fee offset) with their course offer.",
+  "programmes_note": "Graduate research degrees (Masters by Research and doctorates) at the University of Melbourne. The University's page does not list individual programmes.",
+  "institutions_note": "University of Melbourne only.",
+  "levels": [
+    {
+      "code": "master",
+      "confirmed": true,
+      "summary": {"detail": "Masters by Research: full fee offset for up to two years and a stipend for up to two years.", "source_text": "Full fee offset for up to two years for students undertaking a Masters by Research degree", "url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship"},
+      "programmes": []
+    },
+    {
+      "code": "doctorate",
+      "confirmed": true,
+      "summary": {"detail": "Doctoral degree: full fee offset for up to four years and a stipend for up to 3.5 years.", "source_text": "up to four years for students undertaking a doctoral degree", "url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship"},
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": ["bachelor"],
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "100% fee offset: up to two years (Masters by Research) or up to four years (doctorate)", "conditions": "Domestic research students receive a Research Training Program Scholarship (Fee offset) with their course offer."},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "AUD 41,100 per year pro rata (2027 full-time rate), paid fortnightly, for up to two years (Masters by Research) or up to 3.5 years (doctorate)", "conditions": "May be indexed annually; includes limited paid sick, parental and partner leave."},
+    {"type": "travel", "coverage": "partial", "limit_text": "One-off relocation allowance of AUD 2,000 (moving from a State or Territory other than Victoria) or AUD 3,000 (moving from outside Australia)", "conditions": null},
+    {"type": "insurance", "coverage": "covered", "limit_text": "Overseas Student Health Cover Single Membership for international students who need a student visa to study in Australia", "conditions": "Single membership only."}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "An application for, and meeting the entry requirements of, a graduate research degree at the University of Melbourne (or current enrolment in one). There is no separate scholarship application.", "conditional_rule": null, "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Apply for a graduate research course by its closing date", "detail": "If you have applied for a graduate research course by the application closing date for that course, you do not need to apply for this scholarship. Within seven days of submitting your course application you receive confirmation that you will be automatically considered for a range of graduate research scholarships.", "source_url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship"},
+    {"phase": "apply", "title": "If you deferred or are already enrolled", "detail": "If you have deferred your commencement or are currently enrolled in a graduate research course and wish to be reconsidered for a scholarship, the application process may vary by enrolling Faculty; see the University's Graduate Research Scholarship Applications page.", "source_url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship"},
+    {"phase": "selection", "title": "Selection panels rank applicants", "detail": "Relevant selection panels rank applicants on their academic results for previous study and their research potential in their field. About 350 awards are offered.", "source_url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship"},
+    {"phase": "selection", "title": "Outcome", "detail": "Domestic students receive an offer of a Research Training Program Scholarship (Fee Offset) with their course offer. Offers of Graduate Research Scholarships that provide a stipend and fee offset are made separately, around the same time as course offers.", "source_url": "https://scholarships.unimelb.edu.au/awards/melbourne-research-scholarship"}
+  ],
+  "not_stated": [
+    "Closing dates of graduate research courses (they differ by course)",
+    "The detailed award conditions, which are in the Graduate Research Scholarships Terms and Conditions"
+  ],
+  "fetch_problems": [],
+  "notes": [
+    "Read in a normal browser on 15 November 2026 from the University of Melbourne's own scholarship page."
+  ]
+}]

@@ -1,0 +1,48 @@
+[{
+  "external_key": "gb-reach-oxford-2027",
+  "checked_on": "2026-11-15",
+  "sources": [
+    {"url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford", "publisher": "University of Oxford", "publisher_type": "university", "note": "The University's own Reach Oxford Scholarship page: eligibility, award, how to apply, selection timing"},
+    {"url": "https://www.seh.ox.ac.uk/study/undergraduate/undergraduate-finance", "publisher": "St Edmund Hall, University of Oxford", "publisher_type": "university", "note": "College description of the scheme and its benefits"},
+    {"url": "https://lincoln.ox.ac.uk/600/global-lincoln/undergraduate-scholarships/", "publisher": "Lincoln College, University of Oxford", "publisher_type": "university", "note": "How the scheme is funded at college level"},
+    {"url": "https://www.merton.ox.ac.uk/undergraduate-support", "publisher": "Merton College, University of Oxford", "publisher_type": "university", "note": "College description of the Reach scholarship"}
+  ],
+  "summary": "The Reach Oxford Scholarship (formerly the Oxford Student Scholarship) is offered to undergraduate students from low-income countries who, for political or financial reasons, or because suitable educational facilities do not exist, cannot study for a degree in their own country. It covers course fees, a grant for living costs and one return air fare per year, for 3 or 4 years depending on course length. Around 2-3 awards are made each year. A student must first apply to Oxford and hold an offer of a place before the scholarship can be considered.",
+  "eligibility_notes": "Applicants must be nationals of a country that receives official development assistance from the OECD Development Assistance Committee; the University lists the countries on its Reach Oxford page.\n\nLevel of study: undergraduate, new students. Subject: all subjects in the course listing, except medicine. Not all colleges can offer a Reach Oxford Scholarship every year; if the college that accepts you does not take part, you can still apply and, if successful, you are transferred to a college that does.\n\nThe scheme is only suitable for candidates who have received an offer and who are of the highest academic ability. Financial need, social commitment and lack of ability to study for a degree in their own country are also major criteria. Applicants should intend to return to their country after their studies. Priority is given to students who have not studied at undergraduate level before. The University cannot consider scholarship applications from students who have not been offered a place.",
+  "funding_summary": "Course fees, a grant for living costs and one return air fare per year, for 3 or 4 years depending on course length. One college describes it as full remission of University and College fees plus grants towards living and travel expenses. The scheme is funded jointly by the University, the colleges and, at some colleges, donations from current students.",
+  "programmes_note": "All subjects in the Oxford undergraduate course listing, except medicine.",
+  "institutions_note": "University of Oxford. Not every college can offer the scholarship every year; a successful applicant at a non-participating college is transferred to a participating one. Colleges named as taking part include St Edmund Hall, Lincoln College, Merton College, Oriel College and St John's College.",
+  "levels": [
+    {
+      "code": "bachelor",
+      "confirmed": true,
+      "summary": {"detail": "Undergraduate study at Oxford for new students from low-income countries who hold an Oxford offer. Duration of the award is 3 or 4 years depending on course length. All subjects in the course listing are covered except medicine.", "source_text": "Level of study: Undergraduate. Duration: 3 or 4 years depending on course length.", "url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford"},
+      "programmes": []
+    }
+  ],
+  "levels_not_offered": ["master", "doctorate"],
+  "benefits": [
+    {"type": "tuition", "coverage": "covered", "limit_text": "Course fees", "conditions": "For 3 or 4 years depending on course length. One college describes this as full remission of University and College fees."},
+    {"type": "living_allowance", "coverage": "covered", "limit_text": "A grant for living costs", "conditions": "The amount is not stated on the page read. Receipt of the award in later years depends on satisfactory academic progress."},
+    {"type": "travel", "coverage": "covered", "limit_text": "One return air fare per year", "conditions": "Stated on the University's Reach Oxford page."}
+  ],
+  "requirements": [
+    {"document_type": "other", "text": "An offer of a place on an Oxford undergraduate course. The University cannot consider scholarship applications from students who have not been offered a place.", "conditional_rule": null, "mandatory": true},
+    {"document_type": "other", "text": "Nationality of a country that receives official development assistance from the OECD Development Assistance Committee (the list is on the University's Reach Oxford page).", "conditional_rule": null, "mandatory": true}
+  ],
+  "application_steps": [
+    {"phase": "apply", "title": "Apply to Oxford and obtain an offer of a place", "detail": "You must apply for admission to the University and be offered a place before you can be considered for a Reach Oxford Scholarship. The University cannot consider scholarship applications from students without an offer.", "source_url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford"},
+    {"phase": "apply", "title": "Apply for the scholarship by the scholarship deadline", "detail": "Applications for 2026 entry are closed. Details on how to apply for 2027 entry will be made available on the University's page in January 2027. The scholarship deadline for 2027 entry is 26 January 2027. If you hold an offer for deferred entry, apply in January of the year you will start your course; if you apply for the Astrophoria Foundation Year Programme, apply in January of the year you will start your undergraduate degree. An undergraduate scholarship application can be considered only once.", "source_url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford"},
+    {"phase": "selection", "title": "Selection", "detail": "For 2027 entry, the selection process takes place in April 2027. Competition is very high and the University has no additional funding for candidates who are not offered a scholarship.", "source_url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford"},
+    {"phase": "selection", "title": "Outcome", "detail": "Applicants are informed of the outcome by the end of May 2027 (for 2027 entry).", "source_url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford"},
+    {"phase": "after_award", "title": "Study at a participating college and report each year", "detail": "Scholars are hosted at a college that takes part, and are transferred between colleges if needed. Scholars write an annual report about their academic and social activities and achievements, and receipt of the award in later years is subject to satisfactory academic progress.", "source_url": "https://www.ox.ac.uk/admissions/undergraduate/fees-and-funding/oxford-bursaries-and-scholarships/reach-oxford"}
+  ],
+  "not_stated": [
+    "The amount of the living-costs grant",
+    "The exact time of day of the 2027 deadline and the documents asked for in the scholarship application (to be published on the page in January 2027)"
+  ],
+  "fetch_problems": [],
+  "notes": [
+    "Read in a normal browser on 15 November 2026 from the University of Oxford's own Reach Oxford Scholarship page."
+  ]
+}]
