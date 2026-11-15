@@ -10,6 +10,23 @@
         $desc = rtrim($desc, ' .').'. Page '.$pageNo.'.';
     }
     $nav = \App\Domain\Site\Site::menu('header');
+    // The menu is edited in the Admin. Home is drawn as an icon, and Resources, Blogs, About and Contact share one "More" dropdown (grouped by their address, so a label changed in the Admin still lands in the right place).
+    $pathOf = fn ($i) => '/'.trim((string) parse_url($i['url'], PHP_URL_PATH), '/');
+    $moreItems = array_values(array_filter($nav, fn ($i) => in_array($pathOf($i), ['/resources', '/blog', '/about', '/contact'], true)));
+    $navView = [];
+    $moreAdded = false;
+    foreach ($nav as $i) {
+        if (in_array($pathOf($i), ['/resources', '/blog', '/about', '/contact'], true)) {
+            if (! $moreAdded) {
+                $navView[] = ['more' => $moreItems];
+                $moreAdded = true;
+            }
+
+            continue;
+        }
+        $navView[] = ['item' => $i, 'home' => $pathOf($i) === '/'];
+    }
+    $moreActive = collect($moreItems)->contains(fn ($i) => $i['active']);
 @endphp
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="ltr">
@@ -63,10 +80,27 @@
 
         <nav aria-label="Primary" class="hidden min-w-0 flex-1 justify-center min-[1100px]:flex">
             <ul class="flex items-center gap-0.5 whitespace-nowrap text-[0.8125rem] font-medium min-[1200px]:text-base">
-                @foreach ($nav as $item)
-                    <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif
-                           class="group relative block rounded-lg px-1.5 py-2 transition hover:bg-navy-50 min-[1200px]:px-1.5 hover:text-navy-800 {{ $item['active'] ? 'font-semibold text-navy-800' : 'text-ink' }}">{{ $item['label'] }}
-                           <span class="absolute inset-x-1.5 -bottom-0.5 min-[1200px]:inset-x-1.5 h-0.5 rounded-full bg-gold transition {{ $item['active'] ? 'opacity-100' : 'opacity-0 group-hover:opacity-60' }}" aria-hidden="true"></span></a></li>
+                @foreach ($navView as $entry)
+                    @if (isset($entry['more']))
+                        <li class="relative" x-data="{ more: false }" @click.outside="more = false" @keydown.escape="more = false">
+                            <button type="button" @click="more = ! more" :aria-expanded="more.toString()" aria-haspopup="true" aria-controls="nav-more" aria-label="More pages" title="More"
+                                    class="group relative inline-flex items-center gap-0.5 rounded-lg px-1.5 py-2 transition hover:bg-navy-50 hover:text-navy-800 {{ $moreActive ? 'text-navy-800' : 'text-navy-700' }}">
+                                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+                                <svg class="h-4 w-4 transition" :class="more && 'rotate-180'" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                                <span class="absolute inset-x-1.5 -bottom-0.5 h-0.5 rounded-full bg-gold transition {{ $moreActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-60' }}" aria-hidden="true"></span></button>
+                            <ul id="nav-more" x-show="more" x-cloak x-transition.opacity class="absolute right-0 z-50 mt-1 min-w-[12rem] rounded-xl border border-line bg-white p-2 text-base shadow-lg" style="top:100%">
+                                @foreach ($entry['more'] as $m)
+                                    <li><a href="{{ $m['url'] }}" @if($m['new_tab']) target="_blank" rel="noopener" @endif @if($m['active']) aria-current="page" @endif class="block rounded-md px-3 py-2 hover:bg-navy-50 hover:text-navy-800 {{ $m['active'] ? 'bg-navy-50 font-semibold text-navy-800' : 'text-ink' }}">{{ $m['label'] }}</a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @else
+                        @php($item = $entry['item'])
+                        <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif @if($entry['home']) aria-label="{{ $item['label'] }}" title="{{ $item['label'] }}" @endif
+                               class="group relative block rounded-lg px-1.5 py-2 transition hover:bg-navy-50 min-[1200px]:px-1.5 hover:text-navy-800 {{ $item['active'] ? 'font-semibold text-navy-800' : 'text-ink' }}">
+                               @if ($entry['home'])<svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg>@else{{ $item['label'] }}@endif
+                               <span class="absolute inset-x-1.5 -bottom-0.5 min-[1200px]:inset-x-1.5 h-0.5 rounded-full bg-gold transition {{ $item['active'] ? 'opacity-100' : 'opacity-0 group-hover:opacity-60' }}" aria-hidden="true"></span></a></li>
+                    @endif
                 @endforeach
             </ul>
         </nav>
@@ -89,8 +123,21 @@
     <div id="mobile-nav" x-show="open" x-cloak x-transition.opacity class="border-t border-line bg-white min-[1100px]:hidden" x-trap.noscroll="open">
         <nav aria-label="Mobile" class="container-page py-4">
             <ul class="space-y-1 text-base font-medium">
-                @foreach ($nav as $item)
-                    <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif class="block rounded-md px-3 py-3 hover:bg-navy-50 {{ $item['active'] ? 'bg-navy-50 text-navy-800' : '' }}">{{ $item['label'] }}</a></li>
+                @foreach ($navView as $entry)
+                    @if (isset($entry['more']))
+                        <li x-data="{ more: {{ $moreActive ? 'true' : 'false' }} }">
+                            <button type="button" @click="more = ! more" :aria-expanded="more.toString()" aria-controls="mobile-more" class="flex w-full items-center justify-between rounded-md px-3 py-3 text-left hover:bg-navy-50 {{ $moreActive ? 'text-navy-800' : '' }}">More
+                                <svg class="h-5 w-5 transition" :class="more && 'rotate-180'" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg></button>
+                            <ul id="mobile-more" x-show="more" x-cloak class="mt-1 space-y-1 border-l border-line pl-3">
+                                @foreach ($entry['more'] as $m)
+                                    <li><a href="{{ $m['url'] }}" @if($m['new_tab']) target="_blank" rel="noopener" @endif @if($m['active']) aria-current="page" @endif class="block rounded-md px-3 py-3 hover:bg-navy-50 {{ $m['active'] ? 'bg-navy-50 text-navy-800' : '' }}">{{ $m['label'] }}</a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @else
+                        @php($item = $entry['item'])
+                        <li><a href="{{ $item['url'] }}" @if($item['new_tab']) target="_blank" rel="noopener" @endif @if($item['active']) aria-current="page" @endif class="flex items-center gap-2 rounded-md px-3 py-3 hover:bg-navy-50 {{ $item['active'] ? 'bg-navy-50 text-navy-800' : '' }}">@if ($entry['home'])<svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg>@endif{{ $item['label'] }}</a></li>
+                    @endif
                 @endforeach
             </ul>
             <div class="mt-4 grid gap-2">

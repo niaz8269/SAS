@@ -8,6 +8,7 @@ use App\Models\AnalyticsEvent;
 use App\Models\Article;
 use App\Models\Country;
 use App\Models\CycleBenefit;
+use App\Models\MenuItem;
 use App\Models\ScholarshipCycle;
 use App\Models\ScholarshipRoute;
 use App\Models\Service;
@@ -16,6 +17,7 @@ use App\Models\UniversityProgramme;
 use App\Models\User;
 use App\Support\Html;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Cache;
 use Tests\Concerns\BuildsScholarships;
 use Tests\TestCase;
 
@@ -35,6 +37,26 @@ class PublicPagesTest extends TestCase
             ->assertSee('Ask our team a question')->assertSee('Create a free account to apply')->assertSee('Application timeline')->assertSee('Universities and programmes')
             ->assertDontSee('Apply on official website')->assertDontSee('apply.example.org')->assertDontSee('/go/', false)
             ->assertSee('does not send anything to the funder'); // applying here never implies submission
+    }
+
+    public function test_the_navbar_shows_home_as_an_icon_and_groups_resources_blogs_about_and_contact_in_one_dropdown(): void
+    {
+        MenuItem::query()->where('location', 'header')->delete();
+        foreach ([['Home', '/'], ['Scholarships', '/scholarships'], ['Resources', '/resources'], ['Blogs', '/blog'], ['About', '/about'], ['Contact', '/contact']] as $n => [$label, $url]) {
+            MenuItem::create(['location' => 'header', 'label' => $label, 'url' => $url, 'new_tab' => false, 'visible' => true, 'sort' => ($n + 1) * 10]);
+        }
+        Cache::forget('site.menus');
+
+        $html = $this->get('/about')->assertOk()->getContent();
+        preg_match('~<nav aria-label="Primary".*?</nav>~s', $html, $nav);
+
+        $this->assertStringContainsString('aria-label="Home"', $nav[0]);      // the icon link keeps a name for screen readers
+        $this->assertStringNotContainsString('>Home<', preg_replace('/\s+/', '', $nav[0]) ?? '');
+        $this->assertSame(1, substr_count($nav[0], 'aria-controls="nav-more"'));
+        foreach (['/resources', '/blog', '/about', '/contact'] as $path) {
+            $this->assertMatchesRegularExpression('~<ul id="nav-more".*href="[^"]*'.preg_quote($path, '~').'"~s', $nav[0]);
+        }
+        $this->assertDoesNotMatchRegularExpression('~</ul>\s*</li>\s*<li><a href="[^"]*/(resources|blog|about|contact)"~', $nav[0]); // none of the four is left outside the dropdown
     }
 
     public function test_the_homepage_has_a_fixed_whatsapp_button_that_follows_the_configured_number(): void
