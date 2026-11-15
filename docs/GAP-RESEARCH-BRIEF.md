@@ -18,7 +18,7 @@ Each scholarship is named by its `external_key` with the gaps found by an audit 
 - `progs`: a list of eligible programmes/majors/courses where one is published anywhere (the programme's own pages, partner universities, embassy annexes, directories). Skip it if the scholarship is open to any subject, or if the list would be tens of thousands of rows from a commercial directory.
 
 ## Output 1: gap-fix file (one per scholarship that has something to add)
-Path: `C:\Users\82335\Projects\sas\database\data\gap-fixes\2026-11-15\<external_key>.json`
+Path: `C:\Users\82335\Projects\sas\database\data\gap-fixes\2026-11-15b\<external_key>.json` (second round; the folder `2026-11-15` was already loaded)
 ```json
 [{
   "external_key": "xx-example-2027",
@@ -42,9 +42,14 @@ Path: `C:\Users\82335\Projects\sas\database\data\gap-fixes\2026-11-15\<external_
 - Only dates for the latest call (not past years). The importer never changes the status, a confirmed deadline or the funding type.
 
 ## Output 2: majors file (only for scholarships with a real list of programmes)
-Path: `C:\Users\82335\Projects\sas\database\data\scholarship-details\2026-11-15-majors\<external_key>.json`
+Path: `C:\Users\82335\Projects\sas\database\data\scholarship-details\2026-11-15-majors-b\<external_key>.json` (second round; the folder `2026-11-15-majors` was already loaded)
 Same format as the existing files in `database\data\scholarship-details\2026-11-14-majors\` (read one small example, for instance `gb-gates-cambridge-2027.json` or `jp-unesco-keizo-obuchi-2027.json`): `external_key`, `checked_on` ("2026-11-15"), `sources` (each `url`, `publisher`, `publisher_type` one of government/university/funder/embassy/aggregator, `note` in your own words), `subject_rule` (own words), `any_subject`, `levels` (each `code` bachelor/master/doctorate/diploma, `confirmed`, `programmes` with `name`, `institution`, `detail`, `source_text` empty string, `url`), `notes`, `not_stated`, `fetch_problems`.
 Programme and university names are facts and are copied as they are; any description (`detail`, notes) is your own words.
+
+## Second round notes (2026-11-15, later)
+- The first round skipped some scholarships because the official page was blocked or the source gave regions. Try again with other routes: the funder's own partner-country or eligible-country list (PDF or page), embassy pages, the national scholarship portal, university partner pages, Wikipedia-style lists of participating countries, and reputable scholarship sites. A country list is a fact; list the countries the source names. If a source gives a region ("Africa", "developing countries") and a separate official list of the countries in it (for example the OECD DAC list, the UN list, or the funder's own list), use that list and say which list in `source_text`... but put countries only where the funder's rule clearly points to that list.
+- For `progs` on very large lists (hundreds of programmes) include what a published list gives; for scholarships that fund any subject at any partner institution, skip.
+- The earlier ban on Chrome tools stays; use WebSearch and WebFetch.
 
 ## Final message
 Reply in under 200 words: for each scholarship, which of lang/nat/dates/progs you filled, and which you could not find (one short reason). No file contents.

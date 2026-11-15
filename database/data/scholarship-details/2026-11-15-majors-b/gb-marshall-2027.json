@@ -1,0 +1,2394 @@
+[
+ {
+  "external_key": "gb-marshall-2027",
+  "checked_on": "2026-11-15",
+  "sources": [
+   {
+    "url": "https://marshallscholarship.org/?p=1545",
+    "publisher": "Marshall Aid Commemoration Commission",
+    "publisher_type": "funder",
+    "note": "The Commission's page of UK institutions where awards are available (about 164 institutions per the page, plus a short second list of other British institutions); read through a page summary, so spelling follows the page"
+   },
+   {
+    "url": "https://www.marshallscholarship.org/partners/partner-universities",
+    "publisher": "Marshall Aid Commemoration Commission",
+    "publisher_type": "funder",
+    "note": "Partner universities by region; partner awards come out of the same 40-50 annual awards"
+   },
+   {
+    "url": "https://www.marshallscholarship.org/wp-content/uploads/2026/05/2027-Rules-for-Marshall-Scholarship-Candidates_final.pdf",
+    "publisher": "Marshall Aid Commemoration Commission",
+    "publisher_type": "funder",
+    "note": "2027 Rules for candidates: course types not funded"
+   }
+  ],
+  "subject_rule": "Study in almost any discipline at graduate level at a British university; whole course types are excluded (professional degrees in medicine, dentistry, veterinary science and law, MBA, postgraduate diplomas and certificates, part-time and distance learning), per the 2027 Rules.",
+  "any_subject": false,
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "programmes": [
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Aberdeen",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Abertay Dundee",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Aberystwyth University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Anglia Ruskin University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of the Arts London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Camberwell College of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Central St Martins College of Art and Design",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Chelsea College of Art and Design",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "London College of Communication",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "London College of Fashion",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Wimbledon College of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Arts University College Bournemouth",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Aston University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Bangor University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Bath Spa University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Bath",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Bedfordshire",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Birmingham",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Birmingham City University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Bishop Grosseteste University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Bolton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Bournemouth University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Bradford",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Brighton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Bristol",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Brunel University London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Buckingham",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Bucks New University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Cambridge",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; Oxford and Cambridge colleges are handled separately from partnership awards",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Canterbury Christ Church University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Cardiff University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Central Lancashire",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Chester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Chichester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Coventry University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Cranfield University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University for the Creative Arts",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Cumbria",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "De Montfort University, Leicester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Derby",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Dundee",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Durham University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of East Anglia",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of East London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Edge Hill University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Edinburgh",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Edinburgh Napier University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Essex",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Exeter",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Falmouth University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Glasgow",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Glasgow Caledonian University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Glasgow School of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Gloucestershire",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Greenwich",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Guildhall School of Music and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Harper Adams University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Heriot-Watt University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Hertfordshire",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Huddersfield",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Hull",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Imperial College London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Keele University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Kent",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Kingston University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Lancaster University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Leeds",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Leeds Beckett University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Leeds Trinity University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Leicester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Lincoln",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Liverpool",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Liverpool Hope University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Liverpool John Moores University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Birkbeck, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "The Central School of Speech and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "City St Georges, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Courtauld Institute of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Goldsmiths, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Heythrop College",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Institute of Advanced Legal Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "The Institute of Cancer Research",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Institute of Classical Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Institute of Commonwealth Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Institute of English Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Institute of Historical Research",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Institute of Latin American Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Institute of Modern languages Research",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "King’s College London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "London School of Economics and Political Science",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "London School of Hygiene and Tropical Medicine",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Queen Mary, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal Academy of Music",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "The Royal Central School of Speech and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal Holloway, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal Veterinary College",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "The School of Oriental and African Studies (SOAS)",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "The School of Pharmacy",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University College London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Warburg Institute",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "London Academy of Music and Dramatic Arts (LAMDA)",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "London Metropolitan University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "London Southbank University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Loughborough University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Manchester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Manchester Metropolitan University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Middlesex University London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Newcastle University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Newman University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Northampton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Northumbria University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Norwich University of the Arts",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Nottingham",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Nottingham Trent University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "The Open University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; research degrees only, per the list",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Oxford",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; Oxford and Cambridge colleges are handled separately from partnership awards",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Oxford Brookes University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Plymouth",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Portsmouth",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Queen Margaret University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Queen’s University of Belfast",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Reading",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Robert Gordon University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Roehampton University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal Agricultural University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal Academy of Dramatic Art (RADA)",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal College of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal College of Music",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal Conservatoire of Scotland",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal Northern College of Music",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Royal Welsh College of Music and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of St Andrews",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of St Mark and St John",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "St Mary’s University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Salford",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Sheffield",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Sheffield Hallam University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Southampton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Southampton Solent University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of South Wales",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Staffordshire University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Stirling",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Strathclyde",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Sunderland",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Surrey",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Sussex",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Swansea University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Teesside",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Ulster University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Wales Trinity St David",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Warwick",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of West of England, Bristol",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of West London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of West of Scotland",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Westminster",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Winchester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Wolverhampton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of Worcester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "University of York",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "York St John University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Architectural Association",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Christie’s Education",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Leeds College of Music",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "London Film School",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Ravensbourne",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Sotheby’s Institute of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible master's course (graduate degree)",
+      "institution": "Trinity Laban Conservatoire of Music and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     }
+    ]
+   },
+   {
+    "code": "doctorate",
+    "confirmed": true,
+    "programmes": [
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Aberdeen",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Abertay Dundee",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Aberystwyth University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Anglia Ruskin University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of the Arts London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Camberwell College of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Central St Martins College of Art and Design",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Chelsea College of Art and Design",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "London College of Communication",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "London College of Fashion",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Wimbledon College of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Arts University College Bournemouth",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Aston University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Bangor University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Bath Spa University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Bath",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Bedfordshire",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Birmingham",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Birmingham City University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Bishop Grosseteste University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Bolton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Bournemouth University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Bradford",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Brighton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Bristol",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Brunel University London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Buckingham",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Bucks New University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Cambridge",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; Oxford and Cambridge colleges are handled separately from partnership awards",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Canterbury Christ Church University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Cardiff University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Central Lancashire",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Chester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Chichester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Coventry University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Cranfield University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University for the Creative Arts",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Cumbria",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "De Montfort University, Leicester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Derby",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Dundee",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Durham University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of East Anglia",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of East London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Edge Hill University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Edinburgh",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Edinburgh Napier University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Essex",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Exeter",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Falmouth University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Glasgow",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Glasgow Caledonian University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Glasgow School of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Gloucestershire",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Greenwich",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Guildhall School of Music and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Harper Adams University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Heriot-Watt University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Hertfordshire",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Huddersfield",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Hull",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Imperial College London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Keele University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Kent",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Kingston University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Lancaster University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Leeds",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Leeds Beckett University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Leeds Trinity University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Leicester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Lincoln",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Liverpool",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Liverpool Hope University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Liverpool John Moores University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Birkbeck, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "The Central School of Speech and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "City St Georges, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Courtauld Institute of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Goldsmiths, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Heythrop College",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Institute of Advanced Legal Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "The Institute of Cancer Research",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Institute of Classical Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Institute of Commonwealth Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Institute of English Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Institute of Historical Research",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Institute of Latin American Studies",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Institute of Modern languages Research",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "King’s College London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "London School of Economics and Political Science",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "London School of Hygiene and Tropical Medicine",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Queen Mary, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal Academy of Music",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "The Royal Central School of Speech and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal Holloway, University of London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal Veterinary College",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "The School of Oriental and African Studies (SOAS)",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "The School of Pharmacy",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University College London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Warburg Institute",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "London Academy of Music and Dramatic Arts (LAMDA)",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "London Metropolitan University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "London Southbank University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Loughborough University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Manchester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Manchester Metropolitan University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Middlesex University London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Newcastle University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Newman University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Northampton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Northumbria University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Norwich University of the Arts",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Nottingham",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Nottingham Trent University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "The Open University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; research degrees only, per the list",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Oxford",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; Oxford and Cambridge colleges are handled separately from partnership awards",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Oxford Brookes University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Plymouth",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Portsmouth",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Queen Margaret University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Queen’s University of Belfast",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Reading",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Robert Gordon University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Roehampton University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal Agricultural University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal Academy of Dramatic Art (RADA)",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal College of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal College of Music",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal Conservatoire of Scotland",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal Northern College of Music",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Royal Welsh College of Music and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of St Andrews",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of St Mark and St John",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "St Mary’s University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Salford",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Sheffield",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Sheffield Hallam University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Southampton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Southampton Solent University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of South Wales",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Staffordshire University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Stirling",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Strathclyde",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Sunderland",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Surrey",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Sussex",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Swansea University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Teesside",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Ulster University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Wales Trinity St David",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Warwick",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of West of England, Bristol",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of West London",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of West of Scotland",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Westminster",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Winchester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Wolverhampton",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of Worcester",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "University of York",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available; also a Marshall partner university",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "York St John University",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Architectural Association",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Christie’s Education",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Leeds College of Music",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "London Film School",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Ravensbourne",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Sotheby’s Institute of Art",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     },
+     {
+      "name": "Eligible doctoral research",
+      "institution": "Trinity Laban Conservatoire of Music and Drama",
+      "detail": "Listed by the Commission as a UK institution where Marshall awards are available",
+      "source_text": "",
+      "url": "https://marshallscholarship.org/?p=1545"
+     }
+    ]
+   }
+  ],
+  "catalogue_url": "https://marshallscholarship.org/?p=1545",
+  "notes": [
+   "The rows are institutions, not courses: the Commission publishes a list of institutions and a course-type rule, with no catalogue of subjects. The page says that if an institution is missing, applicants can contact the Commission.",
+   "The same institution list is recorded under master's and doctorate because the page does not split it by level; the Open University is marked research degrees only on the page.",
+   "Doctoral funding is for up to three years; master's for one or two years (Marshall site).",
+   "The list contains specialist art, music and drama institutions and several University of London institutes; some may not run courses that meet the Rules."
+  ],
+  "not_stated": [
+   "Per-course approvals",
+   "Any priority subjects"
+  ],
+  "fetch_problems": [
+   "The Marshall course search is an interactive tool and was not used; the list was read from the institutions page through a page summary, which may have shortened or merged entries."
+  ]
+ }
+]

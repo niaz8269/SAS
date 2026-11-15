@@ -1,0 +1,662 @@
+[
+ {
+  "external_key": "gb-commonwealth-masters-2027",
+  "checked_on": "2026-11-15",
+  "sources": [
+   {
+    "url": "https://cscuk.fcdo.gov.uk/uk-universities/",
+    "publisher": "Commonwealth Scholarship Commission in the UK (FCDO)",
+    "publisher_type": "funder",
+    "note": "Lists the 89 UK universities that have signed an agreement with the Commission; the page says Master's and PhD scholars are only placed at these universities"
+   },
+   {
+    "url": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+    "publisher": "Commonwealth Scholarship Commission in the UK (FCDO)",
+    "publisher_type": "funder",
+    "note": "Programme page: one-year taught master's under six development themes; no list of courses"
+   }
+  ],
+  "subject_rule": "No list of courses: study must fit one of the six CSC development themes and be a taught master's at one of the 89 agreement universities (MBAs and research master's are not funded).",
+  "any_subject": false,
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "programmes": [
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Aberystwyth University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Anglia Ruskin University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Aston University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Bangor University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Bath Spa University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Bournemouth University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Brunel University London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Cardiff University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Cardiff Metropolitan University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "City St George’s, University of London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Cranfield University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Durham University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Edge Hill University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Edinburgh Napier University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Glasgow Caledonian University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Goldsmiths, University of London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Harper Adams University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Imperial College London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Keele University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "King’s College London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Kingston University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Lancaster University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Leeds Beckett University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Liverpool Hope University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Liverpool John Moores University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Liverpool School of Tropical Medicine",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "London School of Economics and Political Science",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "London School of Hygiene and Tropical Medicine",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Loughborough University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Manchester Metropolitan University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Newcastle University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Northumbria University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Queen Margaret University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Queen Mary, University of London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Queen’s University Belfast",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Robert Gordon University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Royal Holloway, University of London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Royal Veterinary College",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Sheffield Hallam University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "SOAS, University of London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Staffordshire University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Swansea University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Teesside University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "The Glasgow School of Art",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "Ulster University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University College London",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Aberdeen",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Bath",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Birmingham",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Bradford",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Brighton",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Bristol",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Cambridge",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Chester",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of East Anglia",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Edinburgh",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Essex",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Exeter",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Glasgow",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Greenwich",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Hertfordshire",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Huddersfield",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Hull",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Kent",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Leeds",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Leicester",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Liverpool",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Manchester",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Northampton",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Nottingham",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Oxford",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Plymouth",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Portsmouth",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Reading",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Salford",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Sheffield",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Southampton",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of St Andrews",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Stirling",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Strathclyde",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Surrey",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Sussex",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of the West of England",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of the West of Scotland",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Warwick",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Westminster",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of Worcester",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "University of York",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     },
+     {
+      "name": "Taught master's fitting a CSC development theme",
+      "institution": "York St John University",
+      "detail": "Agreement university of the Commission; the specific course is chosen by the applicant",
+      "source_text": "",
+      "url": "https://cscuk.fcdo.gov.uk/uk-universities/"
+     }
+    ]
+   }
+  ],
+  "catalogue_url": "https://cscuk.fcdo.gov.uk/uk-universities/",
+  "notes": [
+   "The rows are the institutions only; the Commission publishes no per-course list for this award (its separate per-course list belongs to the Commonwealth Shared Scholarships). Each row uses a generic programme name for that reason.",
+   "The list matches the 89 universities already held in the 2026-11-14 file and was re-read on the Commission's universities page on 2026-11-15."
+  ],
+  "not_stated": [
+   "Per-course approvals at each university"
+  ],
+  "fetch_problems": []
+ }
+]

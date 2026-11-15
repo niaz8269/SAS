@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "yanbian-university",
+    "summary": "Yanbian University is a public university in Yanji, the capital of the Yanbian Korean Autonomous Prefecture in Jilin Province. It was founded in 1949 and is funded jointly by the Jilin provincial government and the Ministry of Education. Sources describe it as a comprehensive university, and it was one of the first universities set up in an ethnic autonomous region of China. It is part of the Double First-Class programme, and one source says international students are welcome to apply.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Yanbian_University",
+      "https://www.chinaservicesinfo.com/s/202305/31/WS6476fbb7498ea274927bc564/yanbian-university.html",
+      "https://timeshighereducation.com/world-university-rankings/yanbian-university"
+    ]
+  },
+  {
+    "slug": "yantai-university",
+    "summary": "Yantai University is a public university in the Laishan District of Yantai, Shandong Province. It was founded in July 1984 with help from Peking University and Tsinghua University, and in 2001 two provincial schools, one for building materials and one for fisheries, were merged into it. It is described as a key comprehensive university in Shandong and enrols more than 30,000 full-time students at all levels. It also admits international students and teaches them Chinese.",
+    "website": "https://www.ytu.edu.cn",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Yantai_University",
+      "https://www.chinaservicesinfo.com/s/201905/16/WS6478824b498ea274927bc7cd/yantai-university.html"
+    ]
+  },
+  {
+    "slug": "zhejiang-gongshang-university",
+    "summary": "Zhejiang Gongshang University is a provincial public university in Hangzhou, Zhejiang Province. Its roots go back to 1911, when it began as a school of commerce, and it is often described as one of the earliest business schools in China. It became the Hangzhou Institute of Commerce in 1980 and took its present name in 2004. Its main campus is in the Xiasha Higher Education Park, and it teaches across fields including economics, management, law and engineering.",
+    "website": "https://www.zjgsu.edu.cn",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Zhejiang_Gongshang_University",
+      "https://m.sicas.cn/University/NewsDetail/4398",
+      "https://www.edarabia.com/zhejiang-gongshang-university-hangzhou-china/"
+    ]
+  },
+  {
+    "slug": "renmin-university-of-china",
+    "summary": "Renmin University of China is a public university in Beijing and a national leader in the humanities and social sciences. Its roots lie in wartime schools set up in northern Shaanxi and Yan'an, and it formally opened on 3 October 1950 after several predecessor institutions were brought together. In 1954 it became one of six national key universities, and it is part of China's Double First-Class initiative.",
+    "website": "https://www.ruc.edu.cn",
+    "sources": [
+      "https://en.ruc.edu.cn/History.html",
+      "https://en.wikipedia.org/wiki/Renmin_University_of_China",
+      "https://en.ruc.edu.cn/"
+    ]
+  },
+  {
+    "slug": "shanghai-university-of-traditional-chinese-medicine",
+    "summary": "Shanghai University of Traditional Chinese Medicine is a public university in Shanghai, with its campus in the Zhangjiang Hi-Tech Park in Pudong. It was founded in 1956 and is counted among the first four traditional Chinese medicine colleges in China, although some sources trace its lineage to an earlier school in the 1910s. It is on the Double First-Class list and has nine affiliated hospitals. An International Education College serves overseas students, and acupuncture is taught in English.",
+    "website": "https://www.shutcm.edu.cn",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Shanghai_University_of_Chinese_Medicine",
+      "https://xxgk.shutcm.edu.cn/2021/1021/c1625a137360/page.htm",
+      "https://xxgk.shutcm.edu.cn/_t89/2019/1022/c1625a116475/page.htm"
+    ]
+  }
+]
+

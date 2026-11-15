@@ -1,0 +1,378 @@
+[
+ {
+  "external_key": "gb-chevening-2027",
+  "checked_on": "2026-11-15",
+  "sources": [
+   {
+    "url": "https://www.chevening.org/partners",
+    "publisher": "Chevening Secretariat (FCDO)",
+    "publisher_type": "funder",
+    "note": "Partners page: UK universities shown as offering partner-funded Chevening awards (47 entries read, through a page summary)"
+   },
+   {
+    "url": "https://www.chevening.org/scholarships/guidance/courses/",
+    "publisher": "Chevening Secretariat (FCDO)",
+    "publisher_type": "funder",
+    "note": "Course rules: any eligible course at any UK university; partner universities are not required"
+   },
+   {
+    "url": "https://www.chevening.org/scholarships/find-a-course/",
+    "publisher": "Chevening Secretariat (FCDO)",
+    "publisher_type": "funder",
+    "note": "Course finder for eligible master's courses at every UK university; a search tool run by a third-party data supplier, not a list"
+   }
+  ],
+  "subject_rule": "Open: any Chevening-eligible taught master's (full-time, nine to twelve months, autumn start, UK-based) at any UK university; no subject restriction is stated.",
+  "any_subject": true,
+  "levels": [
+   {
+    "code": "master",
+    "confirmed": true,
+    "programmes": [
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Newman University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Cranfield University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "SOAS University of London",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Aberystwyth University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University College London",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Birkbeck, University of London",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Bradford",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Royal Holloway, University of London",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Aston University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Greenwich",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of the West of England, Bristol",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Leicester",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Bedfordshire",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Imperial College London",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Loughborough University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of St Andrews",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Lancaster University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Bangor University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Nottingham Trent University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Oxford",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of York",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Essex",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Newcastle University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Bath",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Warwick",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Stirling",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Sussex",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Surrey",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Southampton",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of South Wales",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Reading",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Nottingham",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Leeds",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Kent",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Glasgow",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Exeter",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Dundee",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Birmingham",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Bristol",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Swansea University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Robert Gordon University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Queen Mary University of London",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Durham University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "University of Cambridge",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Cardiff University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Bournemouth University",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     },
+     {
+      "name": "Chevening partner award (any eligible taught master's)",
+      "institution": "Brunel University London",
+      "detail": "Shown on Chevening's partners page as a university offering a partner-funded award. Applicants are not limited to partner universities, and funding for them is the same",
+      "source_text": "",
+      "url": "https://www.chevening.org/partners"
+     }
+    ]
+   }
+  ],
+  "catalogue_url": "https://www.chevening.org/scholarships/find-a-course/",
+  "notes": [
+   "These rows are NOT the eligibility list: Chevening is open to courses at every UK university. They are only the universities currently shown as partners, so they should not be presented as the only eligible institutions.",
+   "A partner award requires listing that university as first choice, per Chevening's guidance (search summary, not re-read in full).",
+   "The partners page names 'Birmingham Newman University', which looks like Newman University in Birmingham; the name is shortened to Newman University here. 'Trinity College, University of Oxford' is recorded as University of Oxford. One further partner shown there, a business school, is not a university and was left out.",
+   "Page read through a summary tool, so the list may be incomplete."
+  ],
+  "not_stated": [
+   "A complete list of eligible courses (only the third-party course finder exists)"
+  ],
+  "fetch_problems": [
+   "The course finder is an interactive search and could not be read as a list."
+  ]
+ }
+]
