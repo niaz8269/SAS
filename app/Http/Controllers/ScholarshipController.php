@@ -51,7 +51,7 @@ class ScholarshipController extends Controller
             : null;
         $related = ScholarshipCycle::visible()->where('id', '!=', $cycle->id)
             ->whereHas('destinations', fn ($q) => $q->whereIn('countries.id', $cycle->destinations->pluck('id')))
-            ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities'])->limit(12)->get()
+            ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities', 'benefits'])->limit(12)->get()
             // Same destination first, and among those the ones that share a degree level: six, so a reader and a crawler both have more to follow.
             ->sortByDesc(fn ($r) => $r->degreeLevels->pluck('id')->intersect($cycle->degreeLevels->pluck('id'))->count())->take(6)->values();
 

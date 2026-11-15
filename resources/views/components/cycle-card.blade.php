@@ -19,7 +19,7 @@
     <dl class="mt-3 grid grid-cols-2 gap-x-3 gap-y-1 text-sm">
         <div><dt class="sr-only">Destination</dt><dd>{{ $cycle->destinations->pluck('name')->implode(', ') ?: 'Destination not confirmed' }}</dd></div>
         <div><dt class="sr-only">Degree</dt><dd>{{ $cycle->degreeLevels->pluck('name')->implode(', ') ?: 'Degree not confirmed' }}</dd></div>
-        <div><dt class="sr-only">Funding</dt><dd class="font-medium text-navy-800">{{ $cycle->fundingLabel() }}</dd></div>
+        <div><dt class="sr-only">Funding</dt><dd class="font-medium text-navy-800">{{ $cycle->fundingSummaryLabel() }}</dd></div>
         <div><dt class="sr-only">Cycle</dt><dd>{{ $cycle->intake_year }} intake{{ $cycle->intake_term ? ' · '.$cycle->intake_term : '' }}</dd></div>
     </dl>
     <x-deadline :cycle="$cycle" class="mt-3" />

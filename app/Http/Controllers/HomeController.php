@@ -20,7 +20,7 @@ class HomeController extends Controller
 {
     public function __invoke(DeadlineService $deadlines)
     {
-        $with = ['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities'];
+        $with = ['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities', 'benefits'];
         $now = now();
 
         // PUB-02: placements are managed by staff flags. Promoted items must not be overdue for recheck (DATA-04).

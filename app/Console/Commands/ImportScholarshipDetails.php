@@ -35,7 +35,7 @@ class ImportScholarshipDetails extends Command
 
     private const TEXT_FIELDS = ['summary', 'eligibility_notes', 'age_experience_notes', 'programmes_note', 'institutions_note', 'funding_summary'];
 
-    private const PUBLISHER_TYPES = ['government', 'university', 'funder', 'embassy'];
+    private const PUBLISHER_TYPES = ['government', 'university', 'funder', 'embassy', 'aggregator'];
 
     public function handle(SearchIndexer $indexer): int
     {

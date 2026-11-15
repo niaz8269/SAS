@@ -124,6 +124,21 @@ class PublicPagesTest extends TestCase
         $this->get($this->url($unverified))->assertDontSee('>Fully funded<', false);
     }
 
+    public function test_unconfirmed_funding_names_what_the_benefits_cover_without_saying_fully_funded(): void
+    {
+        $cycle = $this->publishedCycle(['funding_type' => 'other', 'fully_funded_verified' => false]);
+        $this->assertSame('Funding details not confirmed', $cycle->fundingSummaryLabel());
+
+        CycleBenefit::create(['cycle_id' => $cycle->id, 'type' => 'tuition', 'coverage' => 'covered']);
+        CycleBenefit::create(['cycle_id' => $cycle->id, 'type' => 'living_allowance', 'coverage' => 'covered']);
+        CycleBenefit::create(['cycle_id' => $cycle->id, 'type' => 'travel', 'coverage' => 'partial']);
+        $cycle = $cycle->fresh();
+
+        $this->assertSame('Covers tuition and a living allowance', $cycle->fundingSummaryLabel());
+        $this->assertSame('Funding details not confirmed', $cycle->fundingLabel());
+        $this->get($this->url($cycle))->assertOk()->assertSee('Covers tuition and a living allowance')->assertDontSee('>Fully funded<', false);
+    }
+
     public function test_routes_with_different_deadlines_stay_separate(): void
     {
         $cycle = $this->publishedCycle();

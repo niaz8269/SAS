@@ -66,7 +66,7 @@ class Landing
     public function query(array $page): Builder
     {
         return ScholarshipCycle::visible()->whereIn('id', $page['ids'])
-            ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities'])
+            ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities', 'benefits'])
             ->orderByRaw('next_closing_sort IS NULL')->orderBy('next_closing_sort')->orderBy('id');
     }
 

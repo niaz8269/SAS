@@ -21,7 +21,7 @@ class ScholarshipSearch
     {
         $f = $this->clean($f);
         $q = ScholarshipCycle::query()->visible()
-            ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities']);
+            ->with(['programme.funder', 'destinations', 'degreeLevels', 'currentDeadlines', 'universities', 'programme.universities', 'benefits']);
 
         if ($f['q'] !== '') {
             // One EXISTS against the narrow index table; every term must appear (AND).

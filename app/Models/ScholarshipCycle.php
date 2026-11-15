@@ -193,6 +193,27 @@ class ScholarshipCycle extends Model
         };
     }
 
+    /**
+     * What to show beside the scholarship: the funding label, or, while the funding is not confirmed as "fully funded" or another type,
+     * what the stored benefits cover ("Covers tuition, living allowance and travel"). Only items the sources state as covered are named;
+     * the words "fully funded" are never used here (that stays tied to verification, DIR-04).
+     */
+    public function fundingSummaryLabel(): string
+    {
+        $label = $this->fundingLabel();
+        if ($label !== 'Funding details not confirmed') {
+            return $label;
+        }
+        $names = ['tuition' => 'tuition', 'accommodation' => 'accommodation', 'living_allowance' => 'a living allowance', 'insurance' => 'health insurance', 'travel' => 'travel'];
+        $covered = $this->benefits->where('coverage', 'covered')->pluck('type')->unique()->filter(fn ($t) => isset($names[$t]))->map(fn ($t) => $names[$t])->values();
+        if ($covered->isEmpty()) {
+            return $label;
+        }
+        $list = $covered->count() > 1 ? $covered->slice(0, -1)->implode(', ').' and '.$covered->last() : $covered->first();
+
+        return 'Covers '.$list;
+    }
+
     /** The plain name students see: the scholarship's title, without the internal cycle key. */
     /** When a web address changes, the old one is remembered so links already shared or indexed still arrive (ScholarshipController::show redirects them). */
     protected static function booted(): void

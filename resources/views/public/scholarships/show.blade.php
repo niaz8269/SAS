@@ -56,7 +56,7 @@
                     <div class="flex flex-wrap gap-2">
                         @if ($cycle->sponsored)<span class="badge-warn">{{ $cycle->sponsored_label ?: 'Sponsored' }}</span>@endif
                         <span class="badge-neutral">{{ $cycle->intake_year }} intake{{ $cycle->intake_term ? ' · '.$cycle->intake_term : '' }}</span>
-                        <span class="badge-green">{{ $cycle->fundingLabel() }}</span>
+                        <span class="badge-green">{{ $cycle->fundingSummaryLabel() }}</span>
                         @if ($cycle->needsRecheck())<span class="badge-warn">Needs recheck</span>@endif
                     </div>
                     <h1 class="mt-3 text-3xl font-extrabold leading-tight sm:text-4xl">{{ $programme->title }}</h1>
