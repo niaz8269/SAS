@@ -19,6 +19,7 @@ class EditUser extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
+            UserResource::archiveAction()->successRedirectUrl(UserResource::getUrl('index')),
             Action::make('sendResetLink')
                 ->label('Send password reset link')
                 ->icon('heroicon-o-envelope')
@@ -72,13 +73,16 @@ class EditUser extends EditRecord
             abort_if($record->id === $actor->id, 422, 'You cannot change your own status.');
             if ($data['status'] === 'suspended') {
                 $record->suspend(); // also ends every session
+            } elseif ($data['status'] === 'archived') {
+                abort_unless($actor->can('roles.manage'), 403);
+                $record->archive(); // signed out, roles removed, row kept
             } else {
                 $record->forceFill(['status' => 'active', 'suspended_at' => null])->save();
             }
             AuditLog::record('user.status', $record, null, ['status' => $data['status']]);
         }
 
-        if ($actor->can('roles.manage') && array_key_exists('roles', $data)) {
+        if ($actor->can('roles.manage') && array_key_exists('roles', $data) && ! $record->isArchived()) { // a deleted account keeps no roles
             $new = collect($data['roles'] ?? [])->filter(fn ($r) => in_array($r, config('sas.staff_roles'), true))->values();
             $old = $record->userRoles->pluck('role')->filter(fn ($r) => in_array($r, config('sas.staff_roles'), true))->values();
             if ($new->sort()->values()->all() !== $old->sort()->values()->all()) {

@@ -166,6 +166,23 @@ class User extends Authenticatable implements FilamentUser, HasAppAuthentication
         DB::table('sessions')->where('user_id', $this->id)->delete();
     }
 
+    /**
+     * "Deleting" a user from the Admin: the person can no longer sign in and every role is removed, but the row stays so the leads,
+     * applications, reviews and audit entries that name them keep working. Setting the status back to Active (and granting roles again) restores them.
+     */
+    public function archive(): void
+    {
+        $this->userRoles()->delete();
+        $this->forceFill(['status' => 'archived', 'suspended_at' => now()])->save();
+        DB::table('sessions')->where('user_id', $this->id)->delete();
+        $this->unsetRelation('userRoles');
+    }
+
+    public function isArchived(): bool
+    {
+        return $this->status === 'archived';
+    }
+
     public function studentProfile(): HasOne
     {
         return $this->hasOne(StudentProfile::class);

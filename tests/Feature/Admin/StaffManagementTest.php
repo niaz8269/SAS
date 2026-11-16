@@ -120,6 +120,95 @@ class StaffManagementTest extends TestCase
         Notification::assertSentTo($counsellor, ResetPassword::class);
     }
 
+    public function test_the_super_admin_deletes_a_user_which_archives_the_account_and_keeps_their_data(): void
+    {
+        $super = $this->actAs(Role::SuperAdmin);
+        $counsellor = User::factory()->role(Role::Advisor)->create(['email' => 'c@sas.test']);
+        $student = User::factory()->create(['counsellor_id' => $counsellor->id]);
+        DB::table('sessions')->insert(['id' => 'xyz', 'user_id' => $counsellor->id, 'payload' => '', 'last_activity' => time()]);
+
+        Livewire::test(ListUsers::class)->callTableAction('archiveUser', $counsellor)->assertNotified();
+
+        $counsellor->refresh();
+        $this->assertSame('archived', $counsellor->status);
+        $this->assertFalse($counsellor->isStaff());
+        $this->assertSame([], $counsellor->fresh()->roleKeys());
+        $this->assertDatabaseMissing('sessions', ['id' => 'xyz']);
+        $this->assertSame($counsellor->id, $student->fresh()->counsellor_id); // the row stays, so what points at it still works
+        $this->assertDatabaseHas('audits', ['action' => 'user.archived']);
+
+        // hidden from the default list, found under "Deleted only"
+        Livewire::test(ListUsers::class)->assertCanNotSeeTableRecords([$counsellor])->assertCanSeeTableRecords([$super])
+            ->filterTable('archived', true)->assertCanSeeTableRecords([$counsellor]);
+
+        // restoring: set the status back to Active, then grant roles again
+        Livewire::test(EditUser::class, ['record' => $counsellor->getKey()])
+            ->fillForm(['name' => $counsellor->name, 'status' => 'active', 'roles' => ['advisor']])->call('save')->assertHasNoFormErrors();
+        $this->assertTrue($counsellor->fresh()->isStaff());
+    }
+
+    public function test_only_the_super_admin_can_delete_users_and_nobody_can_delete_themselves(): void
+    {
+        $admin = $this->actAs(Role::Administrator);
+        $counsellor = User::factory()->role(Role::Advisor)->create();
+        Livewire::test(ListUsers::class)->assertTableActionHidden('archiveUser', $counsellor);
+        Livewire::test(EditUser::class, ['record' => $counsellor->getKey()])->assertActionHidden('archiveUser');
+
+        auth()->logout();
+        $super = $this->actAs(Role::SuperAdmin);
+        Livewire::test(ListUsers::class)->assertTableActionHidden('archiveUser', $super)->assertTableActionVisible('archiveUser', $admin);
+        Livewire::test(EditUser::class, ['record' => $counsellor->getKey()])->callAction('archiveUser')->assertNotified();
+        $this->assertSame('archived', $counsellor->fresh()->status);
+        $this->assertTrue($super->fresh()->isStaff());
+    }
+
+    public function test_a_deleted_account_cannot_sign_in_to_the_admin(): void
+    {
+        $user = User::factory()->role(Role::Administrator)->create(['email' => 'gone@sas.test']);
+        $user->archive();
+        Filament::setCurrentPanel('admin');
+        $this->assertFalse($user->fresh()->canAccessPanel(Filament::getCurrentPanel()));
+        $this->assertFalse($user->fresh()->hasPermission('users.manage'));
+    }
+
+    public function test_the_reset_command_keeps_one_super_admin_deletes_other_staff_and_keeps_students_and_their_data(): void
+    {
+        Notification::fake();
+        $owner = User::factory()->role(Role::SuperAdmin)->create(['email' => 'owner@sas.test']);
+        $admin = User::factory()->role(Role::Administrator)->create(['email' => 'admin@sas.test']);
+        $counsellor = User::factory()->role(Role::Advisor)->create(['email' => 'counsellor@sas.test']);
+        $student = User::factory()->create(['email' => 'student@example.test', 'counsellor_id' => $counsellor->id]);
+        $partner = User::factory()->role(Role::PartnerManager)->create(['email' => 'agent@example.test']);
+
+        // without --yes nothing changes
+        $this->artisan('sas:reset-staff', ['email' => 'Boss@Cas.example', 'name' => 'The Boss'])->assertSuccessful();
+        $this->assertSame(5, User::count());
+
+        $this->artisan('sas:reset-staff', ['email' => 'Boss@Cas.example', 'name' => 'The Boss', '--yes' => true])->assertSuccessful();
+
+        $boss = User::where('email', 'boss@cas.example')->firstOrFail();
+        Notification::assertSentTo($boss, ResetPassword::class);
+        $this->assertTrue($boss->isStaff());
+        $this->assertSame(['super_admin'], $boss->roleKeys());
+        $this->assertSame(1, User::whereHas('userRoles', fn ($q) => $q->whereIn('role', config('sas.staff_roles')))->count());
+        foreach ([$owner, $admin, $counsellor] as $gone) {
+            $this->assertDatabaseMissing('users', ['id' => $gone->id]);
+        }
+        $this->assertDatabaseHas('users', ['id' => $student->id, 'counsellor_id' => null]); // the student stays; only the assigned name is empty
+        $this->assertDatabaseHas('users', ['id' => $partner->id]);
+        $this->assertDatabaseHas('audits', ['action' => 'user.staff_reset']);
+
+        // running it again with the same email changes nothing more
+        $this->artisan('sas:reset-staff', ['email' => 'boss@cas.example', 'name' => 'x', '--yes' => true, '--no-mail' => true])->assertSuccessful();
+        $this->assertSame(3, User::count());
+    }
+
+    public function test_the_reset_command_refuses_a_student_email(): void
+    {
+        User::factory()->create(['email' => 'student@example.test'])->studentProfile()->create(['first_name' => 'S']);
+        $this->artisan('sas:reset-staff', ['email' => 'student@example.test', 'name' => 'x', '--yes' => true])->assertFailed();
+    }
+
     public function test_the_starter_command_creates_exactly_one_of_each_with_passwords_only_in_a_private_file(): void
     {
         $file = sys_get_temp_dir().'/starter-'.uniqid().'.txt';
