@@ -15,8 +15,12 @@ use App\Models\ServiceCase;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
-/** ADM-01. Which tiles a staff member sees depends on their permissions. */
+/**
+ * ADM-01. Which tiles a staff member sees depends on their permissions. A tile appears only when it has something to say: a count of
+ * zero is left out, so the dashboard shows what needs doing instead of a wall of zeros. Things that need action come first.
+ */
 class OperationsOverview extends StatsOverviewWidget
 {
     protected static ?int $sort = 1;
@@ -25,58 +29,67 @@ class OperationsOverview extends StatsOverviewWidget
 
     protected ?string $heading = 'Operations';
 
+    protected int|array|null $columns = 4;
+
     protected function getStats(): array
     {
         $user = auth()->user();
-        $stats = [];
+        /** @var list<array{0:string,1:int|float,2:?string,3:?string,4:string}> label, number, description, colour, kind (action|info) */
+        $rows = [];
+        $add = function (string $label, int|float $n, ?string $description = null, ?string $color = null, string $kind = 'action') use (&$rows) {
+            $rows[] = [$label, $n, $description, $color, $kind];
+        };
 
         if ($user->can('content.review') || $user->can('content.draft')) {
-            $stats[] = Stat::make('Awaiting review', ScholarshipCycle::where('publication_state', PublicationState::InReview->value)->count())
-                ->description('Listings submitted by editors');
-            $stats[] = Stat::make('Pending changes to live listings', CycleRevision::where('status', 'pending')->count())
-                ->description('Proposed edits waiting for a second person');
-            $stats[] = Stat::make('Overdue source checks', ScholarshipCycle::visible()->where('review_due_at', '<', now())->count())
-                ->description('Shown as "Needs recheck" and not promoted')->color('warning');
-            $stats[] = Stat::make('Closing in 7 days', ScholarshipCycle::visible()->whereBetween('next_closing_sort', [now(), now()->addDays(7)])->count())
-                ->description('Confirmed deadlines only');
+            $add('Awaiting review', ScholarshipCycle::where('publication_state', PublicationState::InReview->value)->count(), 'Listings submitted by editors');
+            $add('Pending changes to live listings', CycleRevision::where('status', 'pending')->count(), 'Waiting for a second person');
+            $add('Overdue source checks', ScholarshipCycle::visible()->where('review_due_at', '<', now())->count(), 'Shown as "Needs recheck"', 'warning');
+            $add('Closing in 7 days', ScholarshipCycle::visible()->whereBetween('next_closing_sort', [now(), now()->addDays(7)])->count(), 'Confirmed deadlines only');
         }
         if ($user->can('corrections.manage')) {
-            $stats[] = Stat::make('Correction reports', CorrectionReport::whereIn('status', ['new', 'reviewing'])->count())->description('Open reports')->color('danger');
+            $add('Correction reports', CorrectionReport::whereIn('status', ['new', 'reviewing'])->count(), 'Open reports', 'danger');
         }
         if ($user->can('enquiries.view_all')) {
-            $stats[] = Stat::make('Unassigned enquiries', Enquiry::whereNull('owner_id')->whereNotIn('status', ['closed', 'converted'])->count())->color('warning');
-            $answered = Enquiry::whereNotNull('first_response_at')->where('created_at', '>', now()->subDays(30))->get();
-            $stats[] = Stat::make('Avg first response (30 d)', $answered->isEmpty() ? 'n/a' : round($answered->avg(fn ($e) => $e->created_at->diffInMinutes($e->first_response_at)) / 60, 1).' h');
+            $add('Unassigned enquiries', Enquiry::whereNull('owner_id')->whereNotIn('status', ['closed', 'converted'])->count(), null, 'warning');
         } elseif ($user->can('enquiries.assigned')) {
-            $stats[] = Stat::make('My open enquiries', Enquiry::where('owner_id', $user->id)->whereNotIn('status', ['closed', 'converted'])->count());
+            $add('My open enquiries', Enquiry::where('owner_id', $user->id)->whereNotIn('status', ['closed', 'converted'])->count(), null, null, 'info');
         }
         if ($user->can('cases.manage') || $user->can('cases.assigned')) {
             $cases = ServiceCase::query()->when(! $user->can('cases.manage'), fn ($q) => $q->where('advisor_id', $user->id));
-            $stats[] = Stat::make($user->can('cases.manage') ? 'Open student cases' : 'My open cases', (clone $cases)->whereNotIn('status', ['closed', 'withdrawn', 'rejected', 'accepted'])->count())->description('New, in progress or submitted');
-            $stats[] = Stat::make('Waiting for an outcome', (clone $cases)->where('status', 'submitted')->count())->description('Submitted to the funder');
             if ($user->can('cases.manage')) {
-                $stats[] = Stat::make('Applications to review', ApplicationPlan::where('stage', 'submitted')->count())->description('Sent by students or agents')->color('warning');
+                $add('Applications to review', ApplicationPlan::where('stage', 'submitted')->count(), 'Sent by students or agents', 'warning');
             }
-            $stats[] = Stat::make('Students waiting for a reply', (clone $cases)->where('awaiting_reply', true)->count())->description('Open the case and answer under Messages')->color('warning');
+            $add('Students waiting for a reply', (clone $cases)->where('awaiting_reply', true)->count(), 'Answer under Messages in the case', 'warning');
             if ($user->can('cases.manage')) {
-                $stats[] = Stat::make('Cases without a counsellor', ServiceCase::whereNull('advisor_id')->whereNotIn('status', ['closed', 'withdrawn', 'rejected'])->count())->color('warning');
+                $add('Cases without a counsellor', ServiceCase::whereNull('advisor_id')->whereNotIn('status', ['closed', 'withdrawn', 'rejected'])->count(), null, 'warning');
             }
+            $add($user->can('cases.manage') ? 'Open student cases' : 'My open cases', (clone $cases)->whereNotIn('status', ['closed', 'withdrawn', 'rejected', 'accepted'])->count(), 'New, in progress or submitted', null, 'info');
+            $add('Waiting for an outcome', (clone $cases)->where('status', 'submitted')->count(), 'Submitted to the funder', null, 'info');
         }
         if ($user->can('finance.view')) {
-            $due = Invoice::where('status', 'issued')->sum('amount_cents');
-            $stats[] = Stat::make('Awaiting payment', Invoice::money((int) $due))->description(Invoice::where('status', 'issued')->count().' invoices');
-            $stats[] = Stat::make('Refunds due', Invoice::where('refund_status', 'due')->count())->description(Invoice::money((int) Invoice::where('refund_status', 'due')->sum('refund_cents')))->color(Invoice::where('refund_status', 'due')->exists() ? 'danger' : 'success');
+            $issued = Invoice::where('status', 'issued');
+            $add('Awaiting payment', (int) (clone $issued)->sum('amount_cents') / 100, (clone $issued)->count().' '.Str::plural('invoice', (clone $issued)->count()), null, 'info');
+            $refunds = Invoice::where('refund_status', 'due');
+            $add('Refunds due', (clone $refunds)->count(), Invoice::money((int) (clone $refunds)->sum('refund_cents')), 'danger');
         }
         if ($user->can('documents.manage')) {
-            $stats[] = Stat::make('Scholarships without document rules', ScholarshipProgramme::whereHas('cycles', fn ($q) => $q->visible())->whereDoesntHave('documentRules')->count())
-                ->description('Students get the default document list')->color('warning');
+            $add('Scholarships without document rules', ScholarshipProgramme::whereHas('cycles', fn ($q) => $q->visible())->whereDoesntHave('documentRules')->count(), 'Students get the default list', 'warning');
         }
         if ($user->can('reports.view')) {
-            $stats[] = Stat::make('Failed jobs', DB::table('failed_jobs')->count())->color(DB::table('failed_jobs')->count() ? 'danger' : 'success');
-            $stats[] = Stat::make('Failed reminders', NotificationEvent::where('status', 'failed')->count());
-            $stats[] = Stat::make('Active application plans', ApplicationPlan::whereNotIn('status', ['withdrawn', 'unsuccessful'])->count());
+            $add('Failed jobs', DB::table('failed_jobs')->count(), null, 'danger');
+            $add('Failed reminders', NotificationEvent::where('status', 'failed')->count(), null, 'danger');
+            $add('Active application plans', ApplicationPlan::whereNotIn('status', ['withdrawn', 'unsuccessful'])->count(), null, null, 'info');
         }
 
-        return $stats ?: [Stat::make('Welcome', 'Nothing assigned to you yet')];
+        // Only tiles with something to say; what needs action first, then the running totals. Money is shown as money.
+        $rows = array_values(array_filter($rows, fn ($r) => $r[1] > 0));
+        usort($rows, fn ($a, $b) => [$a[4] === 'action' ? 0 : 1] <=> [$b[4] === 'action' ? 0 : 1]);
+        $stats = [];
+        foreach (array_slice($rows, 0, 8) as [$label, $n, $description, $color]) {
+            $value = $label === 'Awaiting payment' ? Invoice::money((int) round($n * 100)) : (is_float($n) ? (string) $n : number_format($n));
+            $stats[] = Stat::make($label, $value)->description($description)->color($color);
+        }
+
+        return $stats ?: [Stat::make('All clear', 'Nothing needs you right now')->color('success')];
     }
 }

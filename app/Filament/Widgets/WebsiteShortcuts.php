@@ -20,7 +20,7 @@ use Filament\Widgets\Widget;
 /** Dashboard start point: one-click links to every editable part of the public website. */
 class WebsiteShortcuts extends Widget
 {
-    protected static ?int $sort = 0;
+    protected static ?int $sort = 4;
 
     protected static bool $isLazy = false;
 

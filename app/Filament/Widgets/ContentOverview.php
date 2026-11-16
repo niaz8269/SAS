@@ -13,14 +13,16 @@ use App\Models\UniversityProgramme;
 use Filament\Widgets\StatsOverviewWidget;
 use Filament\Widgets\StatsOverviewWidget\Stat;
 
-/** What is on the website right now, at a glance. */
+/** What is on the website right now, at a glance. Sections that are still empty (no articles yet, for example) are left out. */
 class ContentOverview extends StatsOverviewWidget
 {
     protected static ?int $sort = 2;
 
     protected static bool $isLazy = false;
 
-    protected ?string $heading = 'Website content';
+    protected ?string $heading = 'Website';
+
+    protected int|array|null $columns = 4;
 
     public static function canView(): bool
     {
@@ -34,13 +36,21 @@ class ContentOverview extends StatsOverviewWidget
         $live = ScholarshipCycle::where('publication_state', PublicationState::Published->value)->count();
         $drafts = ScholarshipCycle::whereIn('publication_state', [PublicationState::Draft->value, PublicationState::InReview->value])->count();
 
-        return [
-            Stat::make('Live scholarships', $live)->description($drafts.' draft or in review')->icon('heroicon-o-academic-cap'),
-            Stat::make('Universities', University::count())->description(number_format(UniversityProgramme::count()).' programmes')->icon('heroicon-o-building-library'),
-            Stat::make('Articles published', Article::published()->count())->icon('heroicon-o-newspaper'),
-            Stat::make('Custom pages live', CmsPage::published()->count())->icon('heroicon-o-document-text'),
-            Stat::make('Testimonials public', Testimonial::visible()->count())->description('Only with recorded consent')->icon('heroicon-o-chat-bubble-bottom-center-text'),
-            Stat::make('Media files', MediaFile::count())->icon('heroicon-o-photo'),
+        $stats = [
+            Stat::make('Live scholarships', number_format($live))->description($drafts ? $drafts.' draft or in review' : 'All published')->icon('heroicon-o-academic-cap'),
+            Stat::make('Universities', number_format(University::count()))->description(number_format(UniversityProgramme::count()).' programmes')->icon('heroicon-o-building-library'),
         ];
+        foreach ([
+            ['Articles published', Article::published()->count(), 'heroicon-o-newspaper', null],
+            ['Custom pages live', CmsPage::published()->count(), 'heroicon-o-document-text', null],
+            ['Testimonials public', Testimonial::visible()->count(), 'heroicon-o-chat-bubble-bottom-center-text', 'Only with recorded consent'],
+            ['Media files', MediaFile::count(), 'heroicon-o-photo', null],
+        ] as [$label, $n, $icon, $hint]) {
+            if ($n > 0) {
+                $stats[] = Stat::make($label, number_format($n))->description($hint)->icon($icon);
+            }
+        }
+
+        return $stats;
     }
 }
