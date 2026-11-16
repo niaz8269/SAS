@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\ScholarshipProgrammes;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\ScholarshipProgrammes\Pages\ManageScholarshipProgrammes;
 use App\Filament\Support\MediaPicker;
 use App\Models\ScholarshipProgramme;
@@ -23,6 +24,10 @@ use Illuminate\Support\Str;
 /** The enduring programme. Annual calls live in Scholarship cycles (DATA-01). */
 class ScholarshipProgrammeResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Scholarship programmes';
+
     use ChecksPermission;
 
     protected static ?string $model = ScholarshipProgramme::class;

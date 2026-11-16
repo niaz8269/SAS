@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Announcements;
 
 use App\Domain\Admin\Announcements;
 use App\Domain\Journey\Journey;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Announcements\Pages\ManageAnnouncements;
 use App\Models\Announcement;
 use App\Models\PartnerOrganisation;
@@ -28,13 +29,17 @@ use InvalidArgumentException;
 /** Messages to a group of students, for example when a deadline changes. Save, check who it reaches, then send once. */
 class AnnouncementResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Announcements';
+
     protected static ?string $model = Announcement::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedMegaphone;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
 
-    protected static ?int $navigationSort = 10;
+    protected static ?int $navigationSort = 7;
 
     protected static ?string $modelLabel = 'announcement';
 

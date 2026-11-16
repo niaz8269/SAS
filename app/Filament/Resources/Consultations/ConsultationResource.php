@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Consultations;
 
 use App\Domain\Editorial\AuditLog;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Consultations\Pages\ManageConsultations;
 use App\Models\Consultation;
 use App\Models\User;
@@ -24,6 +25,10 @@ use Illuminate\Database\Eloquent\Model;
 /** BOOK-01: staff turn a request into a confirmed appointment by choosing a specific time. */
 class ConsultationResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Consultations';
+
     protected static ?string $model = Consultation::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCalendarDays;

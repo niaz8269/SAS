@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Users;
 
 use App\Domain\Editorial\AuditLog;
 use App\Enums\Role;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Users\Pages\EditUser;
 use App\Filament\Resources\Users\Pages\ListUsers;
 use App\Models\User;
@@ -31,6 +32,12 @@ use Illuminate\Validation\Rules\Password as PasswordRule;
 /** AUTH-05: managing users (users.manage) is separate from granting roles (roles.manage, super administrators only). */
 class UserResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Users';
+
+    protected static ?int $navigationSort = 1;
+
     protected static ?string $model = User::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUsers;
@@ -129,7 +136,7 @@ class UserResource extends Resource
             TextColumn::make('name')->searchable()->sortable(),
             TextColumn::make('email')->searchable(),
             TextColumn::make('roles')->label('Roles')->state(fn (User $u) => $u->userRoles->pluck('role')->map(fn ($r) => Role::tryFrom($r)?->label() ?? $r)->all())->badge()->placeholder('Student'),
-            TextColumn::make('status')->badge()->formatStateUsing(fn ($s) => $s === 'archived' ? 'Deleted' : ucfirst((string) $s))->color(fn ($s) => $s === 'active' ? 'success' : ($s === 'archived' ? 'gray' : 'danger')),
+            TextColumn::make('status')->badge()->formatStateUsing(fn ($state) => $state === 'archived' ? 'Deleted' : ucfirst((string) $state))->color(fn ($state) => $state === 'active' ? 'success' : ($state === 'archived' ? 'gray' : 'danger')),
             IconColumn::make('email_verified_at')->label('Verified')->boolean()->getStateUsing(fn (User $u) => $u->email_verified_at !== null),
             IconColumn::make('mfa')->label('MFA')->boolean()->getStateUsing(fn (User $u) => filled($u->app_authentication_secret)),
             TextColumn::make('created_at')->date()->sortable(),

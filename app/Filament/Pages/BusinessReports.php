@@ -11,11 +11,13 @@ use Illuminate\Support\Carbon;
 /** For admins: enquiries, students, cases, applications, money and agents for a date range, on screen and as CSV. */
 class BusinessReports extends Page
 {
+    protected static ?string $navigationLabel = 'Business reports';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedPresentationChartLine;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
+    protected static string|\UnitEnum|null $navigationGroup = 'Reports';
 
-    protected static ?int $navigationSort = 8;
+    protected static ?int $navigationSort = 1;
 
     protected static ?string $title = 'Reports';
 

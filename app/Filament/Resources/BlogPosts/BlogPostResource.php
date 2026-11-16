@@ -4,6 +4,7 @@ namespace App\Filament\Resources\BlogPosts;
 
 use App\Domain\Editorial\AuditLog;
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\BlogPosts\Pages\CreateBlogPost;
 use App\Filament\Resources\BlogPosts\Pages\EditBlogPost;
 use App\Filament\Resources\BlogPosts\Pages\ListBlogPosts;
@@ -35,6 +36,7 @@ use Illuminate\Support\Str;
 class BlogPostResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = BlogPost::class;
 
@@ -44,9 +46,9 @@ class BlogPostResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedPencilSquare;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Blog';
+    protected static string|\UnitEnum|null $navigationGroup = 'Content';
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 2;
 
     protected static function permission(): string
     {

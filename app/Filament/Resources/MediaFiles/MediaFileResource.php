@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\MediaFiles;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\MediaFiles\Pages\ManageMediaFiles;
 use App\Models\MediaFile;
 use BackedEnum;
@@ -21,6 +22,7 @@ use Filament\Tables\Table;
 class MediaFileResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = MediaFile::class;
 
@@ -57,7 +59,7 @@ class MediaFileResource extends Resource
                     ->defaultImageUrl('data:image/svg+xml;utf8,'.rawurlencode('<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56"><rect width="56" height="56" rx="8" fill="#888" fill-opacity=".3"/><text x="28" y="33" font-size="14" text-anchor="middle" fill="#888">PDF</text></svg>')),
                 TextColumn::make('name')->searchable()->sortable(),
                 TextColumn::make('mime')->label('Type')->badge()->color('gray'),
-                TextColumn::make('size')->formatStateUsing(fn ($s) => $s >= 1048576 ? round($s / 1048576, 1).' MB' : max(1, round($s / 1024)).' KB')->sortable(),
+                TextColumn::make('size')->formatStateUsing(fn ($state) => $state >= 1048576 ? round($state / 1048576, 1).' MB' : max(1, round($state / 1024)).' KB')->sortable(),
                 TextColumn::make('address')->label('Address')->getStateUsing(fn (MediaFile $r) => $r->url())->copyable()->copyMessage('Address copied')->limit(36)->toggleable(),
                 TextColumn::make('created_at')->since()->sortable(),
             ])

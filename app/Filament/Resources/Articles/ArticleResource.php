@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Articles;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Articles\Pages\ManageArticles;
 use App\Models\Article;
 use BackedEnum;
@@ -26,6 +27,12 @@ use Illuminate\Support\Str;
 /** ADM-03 guides. Editors draft; only people who can publish may set an article to Published. Every save keeps a revision. */
 class ArticleResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Articles';
+
+    protected static ?int $navigationSort = 1;
+
     use ChecksPermission;
 
     protected static ?string $model = Article::class;

@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\PageBlocks;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\PageBlocks\Pages\ManagePageBlocks;
 use App\Filament\Support\MediaPicker;
 use App\Filament\Support\SafeUrl;
@@ -31,6 +32,7 @@ use Illuminate\Database\Eloquent\Model;
 class PageBlockResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = PageBlock::class;
 
@@ -38,11 +40,11 @@ class PageBlockResource extends Resource
 
     protected static string|\UnitEnum|null $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 4;
 
     protected static ?string $modelLabel = 'page section';
 
-    protected static ?string $navigationLabel = 'Other pages';
+    protected static ?string $navigationLabel = 'Page text';
 
     protected static function permission(): string
     {
@@ -84,7 +86,7 @@ class PageBlockResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('page')->badge()->formatStateUsing(fn ($s) => PageBlock::PAGES[$s] ?? $s)->sortable(),
+                TextColumn::make('page')->badge()->formatStateUsing(fn ($state) => PageBlock::PAGES[$state] ?? $state)->sortable(),
                 TextColumn::make('label')->searchable()->wrap(),
                 TextColumn::make('section_type')->label('Type')->badge()->color('gray')->getStateUsing(fn (PageBlock $r) => $r->isBuiltIn() ? 'built-in' : 'added ('.$r->position.')'),
                 ToggleColumn::make('enabled')->label('Visible')->disabled(fn (?PageBlock $record) => ! static::allowed() || $record?->key === 'intro'),

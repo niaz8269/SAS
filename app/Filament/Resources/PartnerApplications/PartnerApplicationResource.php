@@ -4,6 +4,7 @@ namespace App\Filament\Resources\PartnerApplications;
 
 use App\Domain\Agents\PartnerApplications;
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\PartnerApplications\Pages\ManagePartnerApplications;
 use App\Models\PartnerApplication;
 use BackedEnum;
@@ -25,6 +26,7 @@ use Illuminate\Database\Eloquent\Model;
 class PartnerApplicationResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = PartnerApplication::class;
 
@@ -103,7 +105,7 @@ class PartnerApplicationResource extends Resource
             TextColumn::make('agency_country')->label('Country')->searchable(),
             TextColumn::make('applicant_name')->label('Applicant')->searchable(),
             TextColumn::make('applicant_email')->label('Email')->searchable(),
-            TextColumn::make('status')->badge()->color(fn ($s) => match ($s) {
+            TextColumn::make('status')->badge()->color(fn ($state) => match ($state) {
                 'pending' => 'warning', 'approved' => 'success', default => 'gray'
             }),
         ])->filters([SelectFilter::make('status')->options(['pending' => 'Waiting', 'approved' => 'Approved', 'rejected' => 'Rejected'])->default('pending')])

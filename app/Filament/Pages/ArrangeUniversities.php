@@ -8,13 +8,15 @@ use Illuminate\Database\Eloquent\Builder;
 
 class ArrangeUniversities extends ArrangePage
 {
+    protected static string|\UnitEnum|null $navigationGroup = 'Reference data';
+
     protected static ?string $title = 'Order of universities';
 
     protected static ?string $navigationLabel = 'Order universities';
 
     protected static ?string $slug = 'order-universities';
 
-    protected static ?int $navigationSort = 12;
+    protected static ?int $navigationSort = 5;
 
     protected function modelClass(): string
     {

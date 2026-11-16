@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\UniversityScholarships;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\UniversityScholarships\Pages\ManageUniversityScholarships;
 use App\Filament\Support\Rich;
 use App\Models\UniversityScholarship;
@@ -28,6 +29,10 @@ use Illuminate\Support\Collection;
 /** Scholarships open to international students at one university. A university without one is not listed in the medical section. */
 class UniversityScholarshipResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?int $navigationSort = 4;
+
     use ChecksPermission;
 
     protected static ?string $model = UniversityScholarship::class;
@@ -69,7 +74,7 @@ class UniversityScholarshipResource extends Resource
             ->columns([
                 TextColumn::make('university.name')->label('University')->searchable()->sortable(),
                 TextColumn::make('name')->searchable()->wrap(),
-                TextColumn::make('provider')->badge()->formatStateUsing(fn ($s) => UniversityScholarship::PROVIDERS[$s] ?? $s),
+                TextColumn::make('provider')->badge()->formatStateUsing(fn ($state) => UniversityScholarship::PROVIDERS[$state] ?? $state),
                 TextColumn::make('amount_text')->label('Amount')->wrap()->placeholder('-'),
                 IconColumn::make('published')->label('Public')->boolean(),
             ])

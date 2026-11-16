@@ -29,6 +29,8 @@ use Filament\Support\Icons\Heroicon;
  */
 class SiteSettings extends Page
 {
+    protected static ?string $navigationLabel = 'Site settings';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCog6Tooth;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Website';

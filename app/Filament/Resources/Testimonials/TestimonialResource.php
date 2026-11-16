@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Testimonials;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Testimonials\Pages\ManageTestimonials;
 use App\Filament\Support\MediaPicker;
 use App\Models\Testimonial;
@@ -32,14 +33,15 @@ use Filament\Tables\Table;
 class TestimonialResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = Testimonial::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedChatBubbleBottomCenterText;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Website';
+    protected static string|\UnitEnum|null $navigationGroup = 'Content';
 
-    protected static ?int $navigationSort = 7;
+    protected static ?int $navigationSort = 6;
 
     protected static ?string $modelLabel = 'story or testimonial';
 

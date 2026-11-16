@@ -5,6 +5,7 @@ namespace App\Filament\Resources\Enquiries;
 use App\Domain\Admin\Desk;
 use App\Domain\Editorial\AuditLog;
 use App\Enums\EnquiryStatus;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Enquiries\Pages\EditEnquiry;
 use App\Filament\Resources\Enquiries\Pages\ListEnquiries;
 use App\Filament\Resources\Enquiries\RelationManagers\MessagesRelationManager;
@@ -33,6 +34,10 @@ use Illuminate\Support\Collection;
 /** ORD-01 enquiry lifecycle. Access follows EnquiryPolicy: staff only see what they are assigned unless they hold enquiries.view_all. */
 class EnquiryResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Enquiries';
+
     protected static ?string $model = Enquiry::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedInboxArrowDown;

@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Funders;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Funders\Pages\ManageFunders;
 use App\Models\Funder;
 use BackedEnum;
@@ -18,6 +19,12 @@ use Filament\Tables\Table;
 
 class FunderResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Funders';
+
+    protected static ?int $navigationSort = 8;
+
     use ChecksPermission;
 
     protected static ?string $model = Funder::class;

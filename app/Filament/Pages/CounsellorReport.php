@@ -10,11 +10,13 @@ use Filament\Support\Icons\Heroicon;
 /** For managers: how each counsellor's students are doing. */
 class CounsellorReport extends Page
 {
+    protected static ?string $navigationLabel = 'Counsellor report';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedChartBar;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
+    protected static string|\UnitEnum|null $navigationGroup = 'Reports';
 
-    protected static ?int $navigationSort = 8;
+    protected static ?int $navigationSort = 2;
 
     protected static ?string $title = 'Counsellor report';
 

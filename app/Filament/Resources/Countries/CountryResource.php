@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Countries;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Countries\Pages\ManageCountries;
 use App\Filament\Support\MediaPicker;
 use App\Models\Country;
@@ -31,6 +32,12 @@ use Illuminate\Support\Collection;
 /** Countries double as nationality values and, when flagged, as study-destination pages (PUB-04). */
 class CountryResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Destinations';
+
+    protected static ?int $navigationSort = 6;
+
     use ChecksPermission;
 
     protected static ?string $model = Country::class;
@@ -56,7 +63,7 @@ class CountryResource extends Resource
         return $schema->components([
             Section::make('Country')->columns(2)->schema([
                 TextInput::make('name')->required(),
-                TextInput::make('code')->label('ISO code')->required()->length(2)->unique(ignoreRecord: true)->dehydrateStateUsing(fn ($s) => strtoupper($s)),
+                TextInput::make('code')->label('ISO code')->required()->length(2)->unique(ignoreRecord: true)->dehydrateStateUsing(fn ($state) => strtoupper($state)),
                 TextInput::make('slug')->required()->alphaDash()->unique(ignoreRecord: true),
                 TextInput::make('demonym')->label('Nationality adjective'),
                 TagsInput::make('official_languages')->label('Official language(s)')->placeholder('Add a language')->columnSpanFull()

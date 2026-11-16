@@ -40,7 +40,7 @@ class MilestonesRelationManager extends CycleRelationManager
     public function table(Table $table): Table
     {
         return $table->reorderable('sort')->defaultSort('sort')->columns([
-            TextColumn::make('kind')->badge()->formatStateUsing(fn ($s) => CycleMilestone::KINDS[$s] ?? $s),
+            TextColumn::make('kind')->badge()->formatStateUsing(fn ($state) => CycleMilestone::KINDS[$state] ?? $state),
             TextColumn::make('label')->placeholder('—'),
             TextColumn::make('when')->label('When')->state(fn (CycleMilestone $r) => $r->display())->wrap(),
             TextColumn::make('source_text')->label('As published')->limit(50),

@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ApplicationReviews;
 
 use App\Domain\Documents\Requirements;
 use App\Domain\StudentWorkspace\ApplicationReview;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\ApplicationReviews\Pages\ListApplicationReviews;
 use App\Filament\Resources\Students\StudentResource;
 use App\Models\ApplicationPlan;
@@ -27,13 +28,15 @@ use InvalidArgumentException;
  */
 class ApplicationReviewResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
     protected static ?string $model = ApplicationPlan::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentCheck;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 5;
 
     protected static ?string $modelLabel = 'application';
 

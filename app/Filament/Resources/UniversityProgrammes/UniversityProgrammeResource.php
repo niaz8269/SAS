@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\UniversityProgrammes;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\UniversityProgrammes\Pages\ManageUniversityProgrammes;
 use App\Models\UniversityProgramme;
 use BackedEnum;
@@ -27,6 +28,12 @@ use Illuminate\Support\Collection;
 /** The programmes a university lists on the official study-in-China system. Staff can correct names and details; imports never overwrite staff-entered English names. */
 class UniversityProgrammeResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'University programmes';
+
+    protected static ?int $navigationSort = 2;
+
     use ChecksPermission;
 
     protected static ?string $model = UniversityProgramme::class;
@@ -67,8 +74,8 @@ class UniversityProgrammeResource extends Resource
                 TextColumn::make('name_en')->label('Programme')->getStateUsing(fn (UniversityProgramme $r) => $r->displayName())->description(fn (UniversityProgramme $r) => $r->name_en ? $r->name_zh : null)
                     ->searchable(['name_en', 'name_zh'])->wrap(),
                 TextColumn::make('name_en_source')->label('English name')->badge()->placeholder('missing')->toggleable()
-                    ->formatStateUsing(fn ($s) => ['official' => 'official', 'translated' => 'to verify', 'staff' => 'checked by staff'][$s] ?? $s)
-                    ->color(fn ($s) => match ($s) {
+                    ->formatStateUsing(fn ($state) => ['official' => 'official', 'translated' => 'to verify', 'staff' => 'checked by staff'][$state] ?? $state)
+                    ->color(fn ($state) => match ($state) {
                         'official', 'staff' => 'success', 'translated' => 'warning', default => 'gray'
                     }),
                 TextColumn::make('name_en_official')->label('Official site wording')->placeholder('—')->wrap()->toggleable(isToggledHiddenByDefault: true),

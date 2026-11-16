@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Imports;
 
 use App\Domain\Editorial\ImportTemplates;
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Imports\Pages\CreateImport;
 use App\Filament\Resources\Imports\Pages\ListImports;
 use App\Filament\Resources\Imports\Pages\ViewImport;
@@ -23,6 +24,10 @@ use Illuminate\Database\Eloquent\Model;
 /** IMP-01..03 staging area: upload, validate, preview, then commit. Imports can only create or update drafts. */
 class ImportResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Imports';
+
     use ChecksPermission;
 
     protected static ?string $model = Import::class;
@@ -65,7 +70,7 @@ class ImportResource extends Resource
             TextColumn::make('created_at')->dateTime('j M Y H:i')->sortable(),
             TextColumn::make('kind')->label('Kind')->formatStateUsing(fn ($state) => ImportTemplates::KINDS[$state] ?? $state)->badge()->color('gray'),
             TextColumn::make('filename'),
-            TextColumn::make('status')->badge()->color(fn ($s) => match ($s) {
+            TextColumn::make('status')->badge()->color(fn ($state) => match ($state) {
                 'committed' => 'success', 'validated' => 'info', 'failed' => 'danger', default => 'gray'
             }),
             TextColumn::make('total_rows')->label('Rows'), TextColumn::make('valid_rows')->label('Valid'), TextColumn::make('error_rows')->label('Errors')->color('danger'),

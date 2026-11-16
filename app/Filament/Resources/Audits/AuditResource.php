@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Audits;
 
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Audits\Pages\ManageAudits;
 use App\Models\Audit;
 use App\Models\User;
@@ -17,10 +18,15 @@ use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 /** Append-only. There is no create, edit or delete (SCHEMA-05). */
 class AuditResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?int $navigationSort = 2;
+
     protected static ?string $model = Audit::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedShieldCheck;
@@ -76,11 +82,11 @@ class AuditResource extends Resource
         return $table->columns([
             TextColumn::make('created_at')->dateTime('j M Y H:i:s')->sortable(),
             TextColumn::make('actor.name')->label('Actor')->placeholder('System'),
-            TextColumn::make('action')->badge()->searchable(),
+            TextColumn::make('action')->badge()->color('gray')->formatStateUsing(fn ($state) => Str::ucfirst(str_replace(['.', '_'], ' ', (string) $state)))->searchable(),
             TextColumn::make('auditable_type')->label('Record')->formatStateUsing(fn ($s, Audit $a) => class_basename((string) $s).' #'.$a->auditable_id),
             TextColumn::make('student')->label('Student')->state(fn (Audit $a) => $a->auditable_type === (new User)->getMorphClass() ? User::find($a->auditable_id)?->name : null)->placeholder('-')->toggleable(),
-            TextColumn::make('before')->formatStateUsing(fn ($s) => $s ? json_encode($s) : '')->limit(60)->toggleable(),
-            TextColumn::make('after')->formatStateUsing(fn ($s) => $s ? json_encode($s) : '')->limit(60)->toggleable(),
+            TextColumn::make('before')->formatStateUsing(fn ($state) => $state ? json_encode($state) : '')->limit(60)->toggleable(isToggledHiddenByDefault: true),
+            TextColumn::make('after')->formatStateUsing(fn ($state) => $state ? json_encode($state) : '')->limit(60)->toggleable(isToggledHiddenByDefault: true),
             TextColumn::make('reason')->limit(60)->wrap(),
         ])->filters([
             SelectFilter::make('actor_id')->label('Staff member')->options(fn () => User::whereIn('id', Audit::query()->select('actor_id')->whereNotNull('actor_id'))->orderBy('name')->pluck('name', 'id')->all())->searchable(),

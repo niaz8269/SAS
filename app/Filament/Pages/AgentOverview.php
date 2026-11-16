@@ -10,11 +10,13 @@ use Filament\Support\Icons\Heroicon;
 /** For admins: how each recruiting agency is doing. */
 class AgentOverview extends Page
 {
+    protected static ?string $navigationLabel = 'Agent overview';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingOffice2;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Recruiting agents';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 3;
 
     protected static ?string $title = 'Agent overview';
 

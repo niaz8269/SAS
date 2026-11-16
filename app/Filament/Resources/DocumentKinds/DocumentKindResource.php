@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\DocumentKinds;
 
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\DocumentKinds\Pages\CreateDocumentKind;
 use App\Filament\Resources\DocumentKinds\Pages\EditDocumentKind;
 use App\Filament\Resources\DocumentKinds\Pages\ListDocumentKinds;
@@ -29,13 +30,15 @@ use Illuminate\Support\Str;
  */
 class DocumentKindResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
     protected static ?string $model = DocumentKind::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentCheck;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
+    protected static string|\UnitEnum|null $navigationGroup = 'Reference data';
 
-    protected static ?int $navigationSort = 6;
+    protected static ?int $navigationSort = 10;
 
     protected static ?string $modelLabel = 'document type';
 

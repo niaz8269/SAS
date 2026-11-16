@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\CorrectionReports;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\CorrectionReports\Pages\ManageCorrectionReports;
 use App\Models\CorrectionReport;
 use BackedEnum;
@@ -20,6 +21,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class CorrectionReportResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Correction reports';
+
     use ChecksPermission;
 
     protected static ?string $model = CorrectionReport::class;
@@ -60,7 +65,7 @@ class CorrectionReportResource extends Resource
             TextColumn::make('created_at')->since()->sortable(),
             TextColumn::make('cycle.programme.title')->label('Listing')->placeholder('General'),
             TextColumn::make('message')->limit(80)->wrap(),
-            TextColumn::make('status')->badge()->color(fn ($s) => match ($s) {
+            TextColumn::make('status')->badge()->color(fn ($state) => match ($state) {
                 'new' => 'danger', 'reviewing' => 'warning', 'resolved' => 'success', default => 'gray'
             }),
         ])->filters([SelectFilter::make('status')->options(['new' => 'New', 'reviewing' => 'Reviewing', 'resolved' => 'Resolved', 'rejected' => 'Rejected'])->default('new')])

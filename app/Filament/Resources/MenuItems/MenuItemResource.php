@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\MenuItems;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\MenuItems\Pages\ManageMenuItems;
 use App\Filament\Support\SafeUrl;
 use App\Models\MenuItem;
@@ -25,6 +26,7 @@ use Filament\Tables\Table;
 class MenuItemResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = MenuItem::class;
 
@@ -32,7 +34,7 @@ class MenuItemResource extends Resource
 
     protected static string|\UnitEnum|null $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 4;
+    protected static ?int $navigationSort = 3;
 
     protected static ?string $modelLabel = 'menu link';
 
@@ -58,7 +60,7 @@ class MenuItemResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('location')->badge()->formatStateUsing(fn ($s) => MenuItem::LOCATIONS[$s] ?? $s)->sortable(),
+                TextColumn::make('location')->badge()->formatStateUsing(fn ($state) => MenuItem::LOCATIONS[$state] ?? $state)->sortable(),
                 TextColumn::make('label')->searchable(),
                 TextColumn::make('url')->label('Address')->limit(50),
                 ToggleColumn::make('visible')->disabled(fn () => ! static::allowed()),

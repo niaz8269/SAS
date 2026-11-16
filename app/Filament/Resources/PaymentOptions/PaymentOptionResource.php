@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\PaymentOptions;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\PaymentOptions\Pages\ManagePaymentOptions;
 use App\Filament\Support\SafeUrl;
 use App\Models\PaymentOption;
@@ -25,6 +26,7 @@ use Filament\Tables\Table;
 class PaymentOptionResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = PaymentOption::class;
 
@@ -32,7 +34,7 @@ class PaymentOptionResource extends Resource
 
     protected static string|\UnitEnum|null $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 5;
+    protected static ?int $navigationSort = 7;
 
     protected static ?string $modelLabel = 'payment option';
 

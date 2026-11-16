@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Subjects;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Subjects\Pages\ManageSubjects;
 use App\Models\Subject;
 use BackedEnum;
@@ -19,6 +20,12 @@ use Filament\Tables\Table;
 
 class SubjectResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Subjects';
+
+    protected static ?int $navigationSort = 9;
+
     use ChecksPermission;
 
     protected static ?string $model = Subject::class;

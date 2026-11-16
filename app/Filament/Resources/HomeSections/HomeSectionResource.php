@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\HomeSections;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\HomeSections\Pages\ManageHomeSections;
 use App\Filament\Support\MediaPicker;
 use App\Filament\Support\SafeUrl;
@@ -26,6 +27,7 @@ use Illuminate\Database\Eloquent\Model;
 class HomeSectionResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     public const BUILT_IN = ['hero', 'degrees', 'featured', 'closing_soon', 'destinations', 'services', 'how', 'resources', 'blog', 'consultation', 'trust', 'testimonials', 'stats', 'universities'];
 

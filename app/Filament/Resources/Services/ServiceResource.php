@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Services;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Services\Pages\ManageServices;
 use App\Models\Service;
 use BackedEnum;
@@ -24,6 +25,12 @@ use Filament\Tables\Table;
 /** SVC-01. Leave price and turnaround blank until the owner approves them: the page then says "Request a quotation". */
 class ServiceResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Services';
+
+    protected static ?int $navigationSort = 4;
+
     use ChecksPermission;
 
     protected static ?string $model = Service::class;

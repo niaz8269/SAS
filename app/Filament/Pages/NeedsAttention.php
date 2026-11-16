@@ -11,6 +11,8 @@ use Filament\Support\Icons\Heroicon;
 /** For admins: everything that is unassigned, late or overdue, in one list with a link to each item. */
 class NeedsAttention extends Page
 {
+    protected static ?string $navigationLabel = 'Needs attention';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBellAlert;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Service desk';

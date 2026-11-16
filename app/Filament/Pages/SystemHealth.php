@@ -17,11 +17,13 @@ use Illuminate\Support\Str;
 /** For the super admin: is the site healthy, when was the last backup, and a button to take one now. */
 class SystemHealth extends Page
 {
+    protected static ?string $navigationLabel = 'System health';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedHeart;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Administration';
 
-    protected static ?int $navigationSort = 20;
+    protected static ?int $navigationSort = 4;
 
     protected static ?string $title = 'System health';
 

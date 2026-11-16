@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\AvailabilitySlots;
 
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\AvailabilitySlots\Pages\ManageAvailabilitySlots;
 use App\Models\AvailabilitySlot;
 use BackedEnum;
@@ -17,6 +18,8 @@ use Illuminate\Database\Eloquent\Model;
 /** The times a counsellor is free for a call. Students book them from their workspace; a booking appears in My calendar. */
 class AvailabilitySlotResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
     protected static ?string $model = AvailabilitySlot::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClock;

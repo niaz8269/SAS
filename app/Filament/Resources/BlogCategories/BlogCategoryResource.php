@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\BlogCategories;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\BlogCategories\Pages\ManageBlogCategories;
 use App\Models\BlogCategory;
 use BackedEnum;
@@ -19,6 +20,7 @@ use Illuminate\Support\Str;
 class BlogCategoryResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = BlogCategory::class;
 
@@ -28,9 +30,9 @@ class BlogCategoryResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedTag;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Blog';
+    protected static string|\UnitEnum|null $navigationGroup = 'Content';
 
-    protected static ?int $navigationSort = 2;
+    protected static ?int $navigationSort = 3;
 
     protected static function permission(): string
     {

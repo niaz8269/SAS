@@ -9,13 +9,15 @@ use Illuminate\Database\Eloquent\Builder;
 
 class ArrangeScholarships extends ArrangePage
 {
+    protected static string|\UnitEnum|null $navigationGroup = 'Editorial';
+
     protected static ?string $title = 'Order of scholarships';
 
     protected static ?string $navigationLabel = 'Order scholarships';
 
     protected static ?string $slug = 'order-scholarships';
 
-    protected static ?int $navigationSort = 13;
+    protected static ?int $navigationSort = 5;
 
     protected function modelClass(): string
     {

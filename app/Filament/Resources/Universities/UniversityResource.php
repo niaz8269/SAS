@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\Universities;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Universities\Pages\ManageUniversities;
 use App\Filament\Support\MediaPicker;
 use App\Filament\Support\Rich;
@@ -30,6 +31,12 @@ use Illuminate\Support\Collection;
 
 class UniversityResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Universities';
+
+    protected static ?int $navigationSort = 1;
+
     use ChecksPermission;
 
     protected static ?string $model = University::class;
@@ -85,8 +92,8 @@ class UniversityResource extends Resource
             ->columns([
                 TextColumn::make('name')->label('Name (English)')->searchable()->sortable(),
                 TextColumn::make('name_en_source')->label('English name')->badge()->placeholder('—')->toggleable()
-                    ->formatStateUsing(fn ($s) => ['official' => 'official', 'translated' => 'to verify', 'staff' => 'checked by staff'][$s] ?? $s)
-                    ->color(fn ($s) => match ($s) {
+                    ->formatStateUsing(fn ($state) => ['official' => 'official', 'translated' => 'to verify', 'staff' => 'checked by staff'][$state] ?? $state)
+                    ->color(fn ($state) => match ($state) {
                         'official', 'staff' => 'success', 'translated' => 'warning', default => 'gray'
                     }),
                 TextColumn::make('name_zh')->label('Chinese name')->searchable()->toggleable(),

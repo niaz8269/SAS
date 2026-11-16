@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\ReplyTemplates;
 
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\ReplyTemplates\Pages\ManageReplyTemplates;
 use App\Models\ReplyTemplate;
 use BackedEnum;
@@ -20,13 +21,15 @@ use Illuminate\Database\Eloquent\Builder;
 /** Saved replies for messages to students. Shared ones are for everyone who counsels; your own are only yours. */
 class ReplyTemplateResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
     protected static ?string $model = ReplyTemplate::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedChatBubbleBottomCenterText;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
 
-    protected static ?int $navigationSort = 7;
+    protected static ?int $navigationSort = 6;
 
     protected static ?string $modelLabel = 'reply template';
 

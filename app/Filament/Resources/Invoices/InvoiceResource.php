@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Invoices;
 
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Invoices\Pages\ListInvoices;
 use App\Filament\Resources\ServiceCases\RelationManagers\InvoiceActions;
 use App\Filament\Resources\ServiceCases\RelationManagers\InvoiceColumns;
@@ -17,6 +18,8 @@ use Illuminate\Database\Eloquent\Builder;
 /** Finance view of every invoice: record payments, cancel unpaid invoices, record refunds. Access follows InvoicePolicy. */
 class InvoiceResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
     protected static ?string $model = Invoice::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBanknotes;

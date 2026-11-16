@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\UniversityFeeStructures;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\UniversityFeeStructures\Pages\ManageUniversityFeeStructures;
 use App\Models\UniversityFeeStructure;
 use App\Models\UniversityProgramme;
@@ -30,6 +31,10 @@ use Illuminate\Support\Collection;
 /** What a medical programme costs a student, per university and intake. Only the university's and the government's charges, never an agent's. */
 class UniversityFeeStructureResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?int $navigationSort = 3;
+
     use ChecksPermission;
 
     protected static ?string $model = UniversityFeeStructure::class;
@@ -92,7 +97,7 @@ class UniversityFeeStructureResource extends Resource
                 TextColumn::make('programme_name')->label('Programme')->searchable()->wrap(),
                 TextColumn::make('intake_label')->label('Intake'),
                 TextColumn::make('tuition_amount')->label('Tuition')->formatStateUsing(fn ($state, UniversityFeeStructure $r) => $r->money($r->tuitionPerYear()))->placeholder('-'),
-                TextColumn::make('source_type')->label('Source')->badge()->formatStateUsing(fn ($s) => ['university' => 'university', 'government' => 'government', 'supplied' => 'fee sheet'][$s] ?? $s),
+                TextColumn::make('source_type')->label('Source')->badge()->formatStateUsing(fn ($state) => ['university' => 'university', 'government' => 'government', 'supplied' => 'fee sheet'][$state] ?? $state),
                 IconColumn::make('published')->label('Public')->boolean(),
                 IconColumn::make('has_scholarship')->label('Has scholarship')->boolean()->getStateUsing(fn (UniversityFeeStructure $r) => $r->university->scholarships()->where('published', true)->exists()),
             ])

@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ServiceCases;
 
 use App\Domain\Admin\Desk;
 use App\Domain\Cases\CaseService;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\ServiceCases\Pages\CreateServiceCase;
 use App\Filament\Resources\ServiceCases\Pages\EditServiceCase;
 use App\Filament\Resources\ServiceCases\Pages\ListServiceCases;
@@ -40,13 +41,15 @@ use Illuminate\Support\Collection;
 /** One scholarship application SAS supports for a student: status, counsellor and fees. Access follows ServiceCasePolicy. */
 class ServiceCaseResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
     protected static ?string $model = ServiceCase::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBriefcase;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
 
-    protected static ?int $navigationSort = 3;
+    protected static ?int $navigationSort = 4;
 
     protected static ?string $modelLabel = 'case';
 

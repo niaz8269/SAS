@@ -4,6 +4,7 @@ namespace App\Filament\Resources\ScholarshipCycles;
 
 use App\Enums\ApplicationStatus;
 use App\Enums\PublicationState;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\ScholarshipCycles\Pages\CreateScholarshipCycle;
 use App\Filament\Resources\ScholarshipCycles\Pages\EditScholarshipCycle;
 use App\Filament\Resources\ScholarshipCycles\Pages\ListScholarshipCycles;
@@ -43,6 +44,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class ScholarshipCycleResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Scholarship cycles';
+
     protected static ?string $model = ScholarshipCycle::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedClipboardDocumentCheck;

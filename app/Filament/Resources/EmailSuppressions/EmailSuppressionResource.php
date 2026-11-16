@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\EmailSuppressions;
 
 use App\Domain\Communication\EmailSuppressions;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\EmailSuppressions\Pages\ManageEmailSuppressions;
 use App\Models\EmailSuppression;
 use BackedEnum;
@@ -17,6 +18,12 @@ use Illuminate\Database\Eloquent\Model;
 /** Addresses blocked after hard bounces or complaints. Staff can lift a block (audited) once the mailbox is confirmed working. */
 class EmailSuppressionResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Email suppressions';
+
+    protected static ?int $navigationSort = 3;
+
     protected static ?string $model = EmailSuppression::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedNoSymbol;
@@ -52,7 +59,7 @@ class EmailSuppressionResource extends Resource
     {
         return $table->columns([
             TextColumn::make('email')->searchable(),
-            TextColumn::make('reason')->badge()->color(fn ($s) => $s === 'complaint' ? 'danger' : 'warning'),
+            TextColumn::make('reason')->badge()->color(fn ($state) => $state === 'complaint' ? 'danger' : 'warning'),
             TextColumn::make('source'),
             TextColumn::make('created_at')->dateTime('j M Y H:i')->sortable(),
             TextColumn::make('lifted_at')->dateTime('j M Y H:i')->placeholder('Active'),

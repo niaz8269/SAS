@@ -6,6 +6,7 @@ use App\Domain\Admin\Desk;
 use App\Domain\Applications\ApplicationFormService;
 use App\Domain\Counselling\Counselling;
 use App\Domain\Counselling\StudentGaps;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\Students\Pages\ListStudents;
 use App\Filament\Resources\Students\Pages\ViewStudent;
 use App\Filament\Resources\Students\RelationManagers\AgentMessagesRelationManager;
@@ -49,13 +50,15 @@ use InvalidArgumentException;
  */
 class StudentResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
     protected static ?string $model = Student::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedUserGroup;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
 
-    protected static ?int $navigationSort = 1;
+    protected static ?int $navigationSort = 3;
 
     protected static ?string $modelLabel = 'student';
 

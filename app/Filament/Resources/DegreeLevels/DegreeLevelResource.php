@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\DegreeLevels;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\DegreeLevels\Pages\ManageDegreeLevels;
 use App\Models\DegreeLevel;
 use BackedEnum;
@@ -17,6 +18,12 @@ use Filament\Tables\Table;
 
 class DegreeLevelResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
+    protected static ?string $navigationLabel = 'Degree levels';
+
+    protected static ?int $navigationSort = 7;
+
     use ChecksPermission;
 
     protected static ?string $model = DegreeLevel::class;

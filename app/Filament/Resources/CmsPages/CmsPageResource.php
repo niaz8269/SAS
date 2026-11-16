@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\CmsPages;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\CmsPages\Pages\ManageCmsPages;
 use App\Models\CmsPage;
 use BackedEnum;
@@ -24,6 +25,7 @@ use Filament\Tables\Table;
 class CmsPageResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     public const REPLACES = ['about' => '/about', 'privacy' => '/legal/privacy', 'terms' => '/legal/terms', 'refunds' => '/legal/refunds', 'accessibility' => '/legal/accessibility'];
 
@@ -31,7 +33,7 @@ class CmsPageResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedDocumentText;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Website';
+    protected static string|\UnitEnum|null $navigationGroup = 'Content';
 
     protected static ?int $navigationSort = 5;
 

@@ -12,11 +12,13 @@ use Filament\Support\Icons\Heroicon;
 /** The next 30 days as one agenda: consultations, follow-ups the counsellor set, and closing dates of their students' unfinished applications. */
 class CounsellorCalendar extends Page
 {
+    protected static ?string $navigationLabel = 'My calendar';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedCalendarDays;
 
     protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
 
-    protected static ?int $navigationSort = 9;
+    protected static ?int $navigationSort = 8;
 
     protected static ?string $title = 'My calendar';
 

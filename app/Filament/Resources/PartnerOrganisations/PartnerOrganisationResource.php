@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\PartnerOrganisations;
 
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\PartnerOrganisations\Pages\CreatePartnerOrganisation;
 use App\Filament\Resources\PartnerOrganisations\Pages\EditPartnerOrganisation;
 use App\Filament\Resources\PartnerOrganisations\Pages\ListPartnerOrganisations;
@@ -23,6 +24,8 @@ use Filament\Tables\Table;
 /** Organisations (universities, funders, agents) that send scholarship information. Their people sign in at /partner. */
 class PartnerOrganisationResource extends Resource
 {
+    use TitlesFromNavigationLabel;
+
     protected static ?string $model = PartnerOrganisation::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedBuildingOffice2;

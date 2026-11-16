@@ -3,6 +3,7 @@
 namespace App\Filament\Resources\TrustItems;
 
 use App\Filament\Concerns\ChecksPermission;
+use App\Filament\Concerns\TitlesFromNavigationLabel;
 use App\Filament\Resources\TrustItems\Pages\ManageTrustItems;
 use App\Filament\Support\MediaPicker;
 use App\Filament\Support\SafeUrl;
@@ -24,6 +25,7 @@ use Filament\Tables\Table;
 class TrustItemResource extends Resource
 {
     use ChecksPermission;
+    use TitlesFromNavigationLabel;
 
     protected static ?string $model = TrustItem::class;
 
@@ -31,7 +33,7 @@ class TrustItemResource extends Resource
 
     protected static string|\UnitEnum|null $navigationGroup = 'Website';
 
-    protected static ?int $navigationSort = 8;
+    protected static ?int $navigationSort = 5;
 
     protected static ?string $modelLabel = 'trust item';
 
@@ -59,7 +61,7 @@ class TrustItemResource extends Resource
     {
         return $table
             ->columns([
-                TextColumn::make('kind')->badge()->formatStateUsing(fn ($s) => TrustItem::KINDS[$s] ?? $s),
+                TextColumn::make('kind')->badge()->formatStateUsing(fn ($state) => TrustItem::KINDS[$state] ?? $state),
                 TextColumn::make('title')->searchable(),
                 TextColumn::make('text')->limit(60)->wrap(),
                 ToggleColumn::make('enabled')->label('Visible')->disabled(fn () => ! static::allowed()),

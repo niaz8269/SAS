@@ -12,6 +12,7 @@ use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Filament\Navigation\NavigationGroup;
 use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
@@ -47,11 +48,22 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->profile() // where staff set up and manage their authenticator app
             ->defaultThemeMode(ThemeMode::Light) // the light SAS look, like the agent and student portals; staff can still switch to dark
-            ->colors(['primary' => Color::hex('#428bb6'), 'warning' => Color::hex('#caa249')])
+            ->colors(['primary' => Color::hex('#1c4b95'), 'warning' => Color::hex('#caa249')]) // the navy of the SAS logo and public site, so buttons and links look like one product
             ->renderHook(PanelsRenderHook::HEAD_END, fn () => view('filament.sas-style'))
             ->favicon(fn () => Site::mediaUrl('favicon_path') ?? asset('images/favicon-64.png'))
             ->font('Inter Variable', url: asset('fonts/inter.css'), provider: LocalFontProvider::class)
-            ->navigationGroups(['Website', 'Editorial', 'Service desk', 'Finance', 'Recruiting agents', 'Content', 'Reference data', 'Administration'])
+            // Daily work first, then the content people write, then how the site looks, then the money and the set-up. Rarely used groups start folded.
+            ->navigationGroups([
+                NavigationGroup::make('Service desk'),
+                NavigationGroup::make('Editorial'),
+                NavigationGroup::make('Content'),
+                NavigationGroup::make('Website'),
+                NavigationGroup::make('Recruiting agents')->collapsed(),
+                NavigationGroup::make('Finance')->collapsed(),
+                NavigationGroup::make('Reports')->collapsed(),
+                NavigationGroup::make('Reference data')->collapsed(),
+                NavigationGroup::make('Administration')->collapsed(),
+            ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([Dashboard::class])

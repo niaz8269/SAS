@@ -10,11 +10,13 @@ use Filament\Support\Icons\Heroicon;
 /** For admins: who has how much on their plate, so new work goes to the least busy person. */
 class CounsellorWorkload extends Page
 {
+    protected static ?string $navigationLabel = 'Workload';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedScale;
 
-    protected static string|\UnitEnum|null $navigationGroup = 'Service desk';
+    protected static string|\UnitEnum|null $navigationGroup = 'Reports';
 
-    protected static ?int $navigationSort = 7;
+    protected static ?int $navigationSort = 3;
 
     protected static ?string $title = 'Workload';
 

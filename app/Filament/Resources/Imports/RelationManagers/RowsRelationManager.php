@@ -24,7 +24,7 @@ class RowsRelationManager extends RelationManager
     {
         return $table->columns([
             TextColumn::make('row_number')->label('Row')->sortable(),
-            TextColumn::make('status')->badge()->color(fn ($s) => $s === 'valid' ? 'success' : 'danger'),
+            TextColumn::make('status')->badge()->color(fn ($state) => $state === 'valid' ? 'success' : 'danger'),
             TextColumn::make('action')->badge()->placeholder('-'),
             TextColumn::make('item')->label('Item')->limit(60)->getStateUsing(function ($record) {
                 $p = $record->payload ?? [];
