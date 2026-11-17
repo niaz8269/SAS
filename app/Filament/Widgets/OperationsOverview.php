@@ -23,7 +23,7 @@ use Illuminate\Support\Str;
  */
 class OperationsOverview extends StatsOverviewWidget
 {
-    protected static ?int $sort = 1;
+    protected static ?int $sort = 2;
 
     protected static bool $isLazy = false;
 

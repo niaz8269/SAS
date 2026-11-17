@@ -9,7 +9,7 @@ use Filament\Widgets\Widget;
 /** A one-line reminder on the admin dashboard that links to the Needs attention list. */
 class AdminAttention extends Widget
 {
-    protected static ?int $sort = 0;
+    protected static ?int $sort = 1;
 
     protected static bool $isLazy = false;
 

@@ -3,6 +3,7 @@
 namespace App\Providers\Filament;
 
 use App\Domain\Site\Site;
+use App\Filament\Pages\Dashboard;
 use App\Filament\Widgets\OperationsOverview;
 use App\Http\Middleware\SecurityHeaders;
 use Filament\Auth\MultiFactor\App\AppAuthentication;
@@ -13,7 +14,6 @@ use Filament\Http\Middleware\AuthenticateSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Navigation\NavigationGroup;
-use Filament\Pages\Dashboard;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
@@ -48,7 +48,7 @@ class AdminPanelProvider extends PanelProvider
             ->login()
             ->profile() // where staff set up and manage their authenticator app
             ->defaultThemeMode(ThemeMode::Light) // the light SAS look, like the agent and student portals; staff can still switch to dark
-            ->colors(['primary' => Color::hex('#1c4b95'), 'warning' => Color::hex('#caa249')]) // the navy of the SAS logo and public site, so buttons and links look like one product
+            ->colors(['primary' => Color::hex('#17367b'), 'warning' => Color::hex('#caa249')]) // the navy of the SAS logo and public site, so buttons and links look like one product
             ->renderHook(PanelsRenderHook::HEAD_END, fn () => view('filament.sas-style'))
             ->favicon(fn () => Site::mediaUrl('favicon_path') ?? asset('images/favicon-64.png'))
             ->font('Inter Variable', url: asset('fonts/inter.css'), provider: LocalFontProvider::class)

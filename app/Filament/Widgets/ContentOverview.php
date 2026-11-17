@@ -16,7 +16,7 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
 /** What is on the website right now, at a glance. Sections that are still empty (no articles yet, for example) are left out. */
 class ContentOverview extends StatsOverviewWidget
 {
-    protected static ?int $sort = 2;
+    protected static ?int $sort = 4;
 
     protected static bool $isLazy = false;
 

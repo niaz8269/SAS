@@ -9,7 +9,7 @@ use Filament\Widgets\Widget;
 /** The counsellor's work list for today: who is waiting, who is due, who has gone quiet, and which deadlines are close. */
 class CounsellorToday extends Widget
 {
-    protected static ?int $sort = 1;
+    protected static ?int $sort = 2;
 
     protected static bool $isLazy = false;
 

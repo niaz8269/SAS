@@ -1,0 +1,112 @@
+/*
+ * SAS staff admin: the shell and the shared surfaces.
+ * Light, calm and business-like: white cards on a pale blue-grey page, navy for emphasis, soft borders, generous spacing, one type scale.
+ * Loaded after Filament's own stylesheet from resources/views/filament/sas-style.blade.php. Plain CSS (no build step).
+ */
+:root {
+    --sas-navy: #17367b;
+    --sas-navy-soft: #e9effc;
+    --sas-ink: #18212f;
+    --sas-muted: #647087;
+    --sas-line: #e5e9f2;
+    --sas-page: #f5f7fb;
+    --sas-card: #ffffff;
+    --sas-radius: 1rem;
+    --sas-shadow: 0 1px 2px rgba(16, 24, 40, .04), 0 1px 3px rgba(16, 24, 40, .05);
+    --sas-sidebar: 17.5rem;
+}
+
+html:not(.dark) .fi-body { background: var(--sas-page); color: var(--sas-ink); font-feature-settings: 'cv11', 'ss01'; }
+
+/* ---------- Top bar: the logo sits over the sidebar column, the rest carries search and the account ---------- */
+html:not(.dark) .fi-topbar { background: #fff; border-bottom: 1px solid var(--sas-line); box-shadow: none; min-height: 4.5rem; padding-inline: 0; }
+html:not(.dark) .fi-topbar nav { padding-inline: 1.5rem; min-height: 4.5rem; }
+html:not(.dark) .fi-topbar .fi-logo { padding-right: 1rem; }
+html:not(.dark) .fi-topbar-open-sidebar-btn, html:not(.dark) .fi-topbar-close-sidebar-btn { color: var(--sas-muted); }
+html:not(.dark) .fi-global-search-field .fi-input-wrp { background: var(--sas-page); border: 1px solid var(--sas-line); border-radius: 999px; box-shadow: none; min-width: 20rem; }
+html:not(.dark) .fi-global-search-field input { font-size: .9rem; }
+html:not(.dark) .fi-user-menu .fi-avatar { background: var(--sas-navy); color: #fff; font-weight: 600; }
+
+/* ---------- Sidebar ---------- */
+html:not(.dark) .fi-sidebar { width: var(--sas-sidebar); background: #fff; border-right: 1px solid var(--sas-line); box-shadow: none; }
+html:not(.dark) .fi-sidebar-nav { padding: 1.25rem 1rem 2rem; row-gap: 1.25rem; }
+html:not(.dark) .fi-sidebar-group-label { font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: #6b778c; }
+html:not(.dark) .fi-sidebar-group-btn { padding: .25rem .75rem; }
+html:not(.dark) .fi-sidebar-item-btn { border-radius: .65rem; padding: .55rem .75rem; gap: .75rem; color: #3a4659; font-weight: 500; font-size: .92rem; transition: background-color .15s, color .15s; }
+html:not(.dark) .fi-sidebar-item-btn:hover { background: #f1f4fa; color: var(--sas-ink); }
+html:not(.dark) .fi-sidebar-item.fi-active > .fi-sidebar-item-btn { background: var(--sas-navy-soft); }
+html:not(.dark) .fi-sidebar-item.fi-active .fi-sidebar-item-label { color: var(--sas-navy); font-weight: 600; }
+html:not(.dark) .fi-sidebar-item.fi-active .fi-icon { color: var(--sas-navy); }
+html:not(.dark) .fi-sidebar-item .fi-icon { color: #7b879b; width: 1.25rem; height: 1.25rem; }
+html:not(.dark) .fi-sidebar-item-badge { border-radius: 999px; }
+
+/* ---------- Page ---------- */
+html:not(.dark) .fi-main { padding-block: 2rem; max-width: 100rem; }
+html:not(.dark) .fi-header { margin-bottom: .25rem; }
+html:not(.dark) .fi-header-heading { font-size: 1.85rem; line-height: 2.25rem; font-weight: 700; letter-spacing: -.02em; color: var(--sas-ink); }
+html:not(.dark) .fi-header-subheading { color: var(--sas-muted); font-size: .95rem; margin-top: .25rem; }
+html:not(.dark) .fi-breadcrumbs-item-label { color: var(--sas-muted); font-size: .8rem; font-weight: 500; }
+
+/* ---------- Cards ---------- */
+html:not(.dark) .fi-section,
+html:not(.dark) .fi-ta-ctn,
+html:not(.dark) .fi-wi-stats-overview-stat,
+html:not(.dark) .fi-fo-wizard,
+html:not(.dark) .fi-in-section { background: var(--sas-card); border: 1px solid var(--sas-line); border-radius: var(--sas-radius); box-shadow: var(--sas-shadow); }
+html:not(.dark) .fi-section-header-heading { font-size: 1.05rem; font-weight: 600; color: var(--sas-ink); }
+html:not(.dark) .fi-section-header-description { color: var(--sas-muted); }
+
+/* ---------- Key figures ---------- */
+html:not(.dark) .fi-wi-stats-overview-stat { padding: 1.35rem 1.5rem; }
+html:not(.dark) .fi-wi-stats-overview-stat-label { color: var(--sas-muted); font-size: .9rem; font-weight: 500; }
+html:not(.dark) .fi-wi-stats-overview-stat-value { color: var(--sas-navy); font-size: 2.25rem; line-height: 2.5rem; font-weight: 700; letter-spacing: -.03em; }
+html:not(.dark) .fi-wi-stats-overview-stat-description { color: var(--sas-muted); font-size: .8rem; }
+html:not(.dark) .fi-wi-stats-overview-stat .fi-icon { color: var(--sas-navy); }
+html:not(.dark) .fi-wi-stats-overview-header-heading { font-size: 1.05rem; font-weight: 600; color: var(--sas-ink); }
+
+/* ---------- Tables ---------- */
+html:not(.dark) .fi-ta-header-cell { background: #f8f9fc; color: #5a667b; font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+html:not(.dark) .fi-ta-cell { color: var(--sas-ink); }
+html:not(.dark) .fi-ta-cell, html:not(.dark) .fi-ta-header-cell { padding-block: .8rem; }
+html:not(.dark) .fi-ta-row { border-color: #eef1f6; }
+html:not(.dark) .fi-ta-row:hover { background: #f8faff; }
+html:not(.dark) .fi-ta-header-ctn { border-bottom: 1px solid #eef1f6; }
+html:not(.dark) .fi-ta-empty-state-heading { color: var(--sas-ink); font-weight: 600; }
+
+/* ---------- Controls ---------- */
+html:not(.dark) .fi-btn { border-radius: .65rem; font-weight: 500; }
+html:not(.dark) .fi-btn.fi-color-primary:not(.fi-outlined) { background: var(--sas-navy); }
+html:not(.dark) .fi-btn.fi-color-primary:not(.fi-outlined):hover { background: #102a63; }
+html:not(.dark) .fi-link.fi-color-primary, html:not(.dark) .fi-ta-text-item .fi-link { color: var(--sas-navy); }
+html:not(.dark) .fi-badge { border-radius: .5rem; font-weight: 500; }
+html:not(.dark) .fi-input-wrp, html:not(.dark) .fi-select-input { border-radius: .65rem; }
+html:not(.dark) .fi-input-wrp:focus-within { box-shadow: 0 0 0 3px rgba(23, 54, 123, .15); border-color: var(--sas-navy); }
+html:not(.dark) .fi-fo-field-label-content { color: #36415a; font-weight: 500; }
+html:not(.dark) .fi-tabs { border-radius: .85rem; }
+html:not(.dark) .fi-modal-window { border-radius: 1.1rem; }
+html:not(.dark) .fi-no-notification { border-radius: .85rem; }
+
+/* ---------- Dashboard pieces made in this project ---------- */
+.sas-greeting h2 { font-size: 1.85rem; line-height: 2.25rem; font-weight: 700; letter-spacing: -.02em; color: var(--sas-ink); }
+.sas-greeting p { color: var(--sas-muted); margin-top: .25rem; font-size: .98rem; }
+.sas-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(11.5rem, 1fr)); gap: 1.1rem; }
+.sas-kpi { background: #fff; border: 1px solid var(--sas-line); border-radius: var(--sas-radius); box-shadow: var(--sas-shadow); padding: 1.3rem 1.4rem; display: block; text-decoration: none; color: inherit; transition: box-shadow .15s, transform .15s; }
+a.sas-kpi:hover { box-shadow: 0 4px 14px rgba(16, 24, 40, .08); transform: translateY(-1px); }
+.sas-kpi-top { display: flex; align-items: center; justify-content: space-between; color: var(--sas-muted); font-size: .92rem; font-weight: 500; }
+.sas-kpi-top svg { width: 1.2rem; height: 1.2rem; color: var(--sas-navy); }
+.sas-kpi-value { margin-top: .55rem; font-size: 2.3rem; line-height: 2.6rem; font-weight: 700; letter-spacing: -.03em; color: var(--sas-navy); }
+.sas-kpi-note { margin-top: .15rem; color: var(--sas-muted); font-size: .82rem; }
+.sas-kpi.is-warn .sas-kpi-value { color: #a05a00; }
+.sas-kpi.is-bad .sas-kpi-value { color: #b42318; }
+.sas-card-title { font-size: 1.05rem; font-weight: 600; color: var(--sas-ink); }
+
+@media (max-width: 1023px) {
+    html:not(.dark) .fi-main { padding-block: 1.25rem; }
+    html:not(.dark) .fi-header-heading { font-size: 1.5rem; }
+    html:not(.dark) .fi-global-search-field .fi-input-wrp { min-width: 0; }
+}
+
+/* A stats widget keeps its heading but its figures stand as their own cards: no card around the cards. */
+html:not(.dark) .fi-section:has(.fi-wi-stats-overview-stat) { background: transparent; border: 0; box-shadow: none; }
+html:not(.dark) .fi-section:has(.fi-wi-stats-overview-stat) > .fi-section-content-ctn { padding: 0; border: 0; }
+html:not(.dark) .fi-section:has(.fi-wi-stats-overview-stat) > .fi-section-header { padding: 0 0 .75rem; }

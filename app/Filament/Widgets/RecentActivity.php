@@ -11,7 +11,7 @@ use Illuminate\Support\Str;
 /** The latest changes made by staff. Visible to anyone allowed to read the audit trail. */
 class RecentActivity extends TableWidget
 {
-    protected static ?int $sort = 5;
+    protected static ?int $sort = 7;
 
     protected static bool $isLazy = false;
 

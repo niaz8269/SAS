@@ -9,7 +9,7 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
 /** ANA-01 baseline (last 30 days). Counts only; the underlying events hold no personal data. Four numbers that tell the story. */
 class FunnelOverview extends StatsOverviewWidget
 {
-    protected static ?int $sort = 3;
+    protected static ?int $sort = 5;
 
     protected static bool $isLazy = false;
 
