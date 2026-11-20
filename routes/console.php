@@ -16,3 +16,4 @@ Schedule::command('queue:prune-failed --hours=720')->daily();
 if (config('sas.queue_via_cron') && config('queue.default') !== 'sync') {
     Schedule::command('queue:work --stop-when-empty --max-time=55 --tries=3 --backoff=60 --queue=default,mail,reminders,scanning')->everyMinute()->withoutOverlapping(2);
 }
+Schedule::command('sas:indexnow')->dailyAt('04:15')->onOneServer(); // new and changed pages to Bing and the other IndexNow engines

@@ -33,6 +33,10 @@ return [
         'agency_service' => (int) env('SAS_FEE_AGENCY_SERVICE', 500),
     ],
 
+    // IndexNow (Bing, Yandex, Seznam and others; Bing's index also feeds ChatGPT search and Copilot). The key is public by design:
+    // the same value is served as public/<key>.txt so the search engines can check the pings come from this site.
+    'indexnow_key' => env('SAS_INDEXNOW_KEY', '725924c995aa30d6f8c92c8522f2dc2d'),
+
     // Contact details (editable in the admin under Website, Site settings; these are the defaults).
     'contact_email' => env('SAS_CONTACT_EMAIL', 'info@sas.cas.moe'),
     'enquiry_email' => env('SAS_ENQUIRY_EMAIL', 'enquiry@sas.cas.moe'),

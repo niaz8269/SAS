@@ -48,6 +48,9 @@
                         <select id="h-sub" name="subject[]" class="input"><option value="">Any field of study</option>@foreach($subjects as $sub)<option value="{{ $sub->slug }}">{{ $sub->name }}</option>@endforeach</select></div>
                     <button class="btn-primary btn-lg col-span-2 w-full lg:col-span-1 lg:w-auto">Find scholarships <span aria-hidden="true">&rarr;</span></button>
                 </div>
+                @if (app(\App\Domain\Seo\PakistanHub::class)->find(null))
+                    <p class="mt-3 text-sm [@media(max-height:760px)]:hidden">Applying from Pakistan? <a class="font-semibold text-navy-700 underline" href="{{ route('pakistan.hub') }}">Scholarships for Pakistani students</a></p>
+                @endif
             </form>
         </div>
     </section>

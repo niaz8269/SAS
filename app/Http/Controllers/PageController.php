@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Domain\Seo\Landing;
 use App\Models\Article;
 use App\Models\CmsPage;
 use App\Models\Country;
@@ -9,6 +10,7 @@ use App\Models\MediaFile;
 use App\Models\ScholarshipCycle;
 use App\Models\Service;
 use App\Models\University;
+use Illuminate\Support\Facades\Cache;
 
 /** Public editorial pages: destinations, services, resources and static pages. */
 class PageController extends Controller
@@ -88,6 +90,42 @@ class PageController extends Controller
     public function cms(string $slug)
     {
         return $this->cmsOverride($slug) ?? abort(404);
+    }
+
+    /**
+     * /llms.txt: a short, plain description of the site and its most useful pages for AI assistants (ChatGPT, Claude, Gemini, Perplexity)
+     * and their crawlers. Made from the live data, so the counts and links are always current.
+     */
+    public function llms()
+    {
+        $text = Cache::remember('llms.txt.'.Cache::get('landing.version', 0), 600, function () {
+            $brand = config('sas.brand.name');
+            $live = ScholarshipCycle::visible()->count();
+            $pages = app(Landing::class)->pages();
+            $line = fn (array $p) => '- ['.$p['title'].']('.$p['url'].'): '.$p['count'].' '.($p['count'] === 1 ? 'listing' : 'listings');
+
+            $out = ['# '.$brand, '',
+                '> '.$brand.' (SAS) is a directory of '.$live.' scholarships for international students, with deadlines, eligible nationalities, what the funding covers, required documents and the official source of each, plus paid help with applications. Reading the listings is free and needs no account.', '',
+                'Each listing is checked against the funder\'s or university\'s own page and shows the date it was last checked. Deadlines are stored with their time zone; a listing whose check is overdue is marked "Needs recheck". "Fully funded" is shown only when tuition and a living allowance are verified as covered.', '',
+                '## For students from Pakistan', ''];
+            foreach ($pages->where('type', 'pk')->sortBy(fn ($p) => [$p['facet'] === null ? 0 : 1, -$p['count']]) as $p) {
+                $out[] = $line($p);
+            }
+            $out = array_merge($out, ['', '## Guides', '']);
+            foreach ($pages->where('type', 'guide') as $p) {
+                $out[] = $line($p);
+            }
+            $out = array_merge($out, ['- [All scholarships, searchable by destination, nationality, degree and subject]('.route('scholarships.index').')', '- [Universities and programmes]('.route('universities.index').')', '- [Study destinations]('.route('destinations.index').')', '', '## Scholarships by destination, degree and funding', '']);
+            foreach ($pages->whereIn('type', ['in', 'for', 'funding', 'open'])->sortByDesc('count') as $p) {
+                $out[] = $line($p);
+            }
+            $out = array_merge($out, ['', '## About and help', '',
+                '- [How listings are verified]('.route('about').')', '- [Services: scholarship advice, applications, documents, attestation, visas]('.route('services.index').')', '- [Contact]('.route('contact').')', '- [Full site map]('.route('sitemap').')', '']);
+
+            return implode("\n", $out);
+        });
+
+        return response($text, 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
     }
 
     public function robots()

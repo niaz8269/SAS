@@ -17,6 +17,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\InvoicePdfController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PakistanHubController;
 use App\Http\Controllers\Partner\AgentAccountController;
 use App\Http\Controllers\Partner\AgentApplicationController;
 use App\Http\Controllers\Partner\AgentExportController;
@@ -43,6 +44,10 @@ Route::get('/scholarships', [ScholarshipController::class, 'index'])->name('scho
 Route::get('/scholarships/in/{country}', [LandingController::class, 'destination'])->where('country', '[a-z0-9-]+')->name('landing.destination');
 Route::get('/scholarships/for/{degree}', [LandingController::class, 'degree'])->where('degree', 'bachelor|masters|phd|postdoctoral|diploma')->name('landing.degree');
 Route::get('/scholarships/subject/{subject}', [LandingController::class, 'subject'])->where('subject', '[a-z0-9-]+')->name('landing.subject');
+// Scholarships for Pakistani students (App\Domain\Seo\PakistanHub). The general nationality page for Pakistan redirects here, so there is one page, not two.
+Route::get('/scholarships-for-pakistani-students', [PakistanHubController::class, 'hub'])->name('pakistan.hub');
+Route::get('/scholarships-for-pakistani-students/{facet}', [PakistanHubController::class, 'facet'])->where('facet', 'ms|phd|bs|fully-funded|in-[a-z0-9-]+')->name('pakistan.facet');
+Route::permanentRedirect('/scholarships/from/pakistan', '/scholarships-for-pakistani-students');
 Route::get('/scholarships/from/{country}', [LandingController::class, 'from'])->where('country', '[a-z0-9-]+')->name('landing.from');
 Route::get('/scholarships/any-nationality', [LandingController::class, 'open'])->name('landing.open');
 Route::get('/chinese-government-scholarship', CscGuideController::class)->name('csc.guide');
@@ -80,6 +85,7 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap')
 Route::get('/sitemap-{section}.xml', [SitemapController::class, 'section'])->where('section', '[a-z]+')->name('sitemap.section');
 Route::get('/site-map', [SitemapController::class, 'page'])->name('site-map');
 Route::get('/robots.txt', [PageController::class, 'robots'])->name('robots');
+Route::get('/llms.txt', [PageController::class, 'llms'])->name('llms');
 
 Route::get('/contact', [EnquiryController::class, 'create'])->name('contact');
 Route::post('/enquiries', [EnquiryController::class, 'store'])->middleware('throttle:enquiries')->name('enquiries.store');

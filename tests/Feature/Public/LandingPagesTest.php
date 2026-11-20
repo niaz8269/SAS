@@ -125,23 +125,23 @@ class LandingPagesTest extends TestCase
 
     public function test_a_nationality_page_lists_only_scholarships_that_name_the_country_and_points_to_the_open_ones(): void
     {
-        $pakistan = Country::where('name', 'Pakistan')->first();
+        $nigeria = Country::where('name', 'Nigeria')->first();
         foreach (['A', 'B', 'C'] as $x) {
-            $this->cycle($x.' Named Award', 'Japan')->nationalities()->sync([$pakistan->id]);
+            $this->cycle($x.' Named Award', 'Japan')->nationalities()->sync([$nigeria->id]);
         }
         foreach (['X', 'Y', 'Z'] as $x) {
             $this->cycle($x.' Open Award', 'Japan', 'master', ['any_nationality' => true]);
         }
         Cache::flush();
 
-        $page = $this->get('/scholarships/from/pakistan')->assertOk()
-            ->assertSee('Scholarships for Pakistani Students')
-            ->assertSee('SAS lists 3 published scholarships that name Pakistan among the nationalities they accept. 3 more are open to students of any nationality.')
+        $page = $this->get('/scholarships/from/nigeria')->assertOk()
+            ->assertSee('Scholarships for Nigerian Students')
+            ->assertSee('SAS lists 3 published scholarships that name Nigeria among the nationalities they accept. 3 more are open to students of any nationality.')
             ->assertSee('A Named Award')->assertDontSee('X Open Award');
         $this->assertStringContainsString('"@type":"FAQPage"', $page->getContent());
         $this->get('/scholarships/from/france')->assertNotFound(); // not one of the countries with a page
         $this->get('/scholarships/any-nationality')->assertOk()->assertSee('Scholarships Open to Students of Any Nationality')->assertSee('X Open Award')->assertDontSee('A Named Award');
-        $this->assertStringContainsString('/scholarships/from/pakistan', $this->sitemapXml('scholarships'));
+        $this->assertStringContainsString('/scholarships/from/nigeria', $this->sitemapXml('scholarships'));
     }
 
     public function test_the_chinese_government_scholarship_guide_is_written_from_the_stored_calls(): void

@@ -23,6 +23,7 @@
         || ($p['type'] === 'subject' && $cycle->subjects->contains('slug', $p['slug']))
         || ($p['type'] === 'from' && ! $cycle->any_nationality && $cycle->nationalities->contains('slug', $p['slug']))
         || ($p['type'] === 'open' && $cycle->any_nationality)
+        || ($p['type'] === 'pk' && $p['facet'] === null && app(\App\Domain\Seo\PakistanHub::class)->isEligible($cycle))
         || ($p['type'] === 'guide' && in_array($cycle->id, $p['ids'], true)))->values();
     $guides = $cycle->destinations->filter(fn ($d) => $d->is_destination && $d->guidance_published);
 @endphp
@@ -78,7 +79,7 @@
                     @if ($browse->isNotEmpty() || $guides->isNotEmpty())
                         <p class="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm">
                             @foreach ($guides as $g)<a class="font-semibold text-navy-700 underline" href="{{ route('destinations.show', $g) }}">Study in {{ $g->name }}: costs and guidance</a>@endforeach
-                            @foreach ($browse as $b)<a class="font-semibold text-navy-700 underline" href="{{ $b['url'] }}">{{ $b['type'] === 'guide' ? $b['label'].': requirements and deadlines' : 'More '.mb_strtolower($b['label']) }}</a>@endforeach
+                            @foreach ($browse as $b)<a class="font-semibold text-navy-700 underline" href="{{ $b['url'] }}">{{ $b['type'] === 'guide' ? $b['label'].': requirements and deadlines' : ($b['type'] === 'pk' ? 'Open to Pakistani students: more scholarships' : 'More '.mb_strtolower($b['label'])) }}</a>@endforeach
                         </p>
                     @endif
                 </div>

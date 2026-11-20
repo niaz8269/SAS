@@ -129,11 +129,19 @@ class Landing
         }
         // Only the scholarships that NAME the country are listed; the many open to any nationality have one shared page, so country pages are never copies of each other.
         foreach (Country::whereIn('slug', self::NATIONALITIES)->get(['id', 'name', 'slug', 'demonym']) as $country) {
+            if ($country->slug === 'pakistan') {
+                continue; // Pakistan has its own, fuller hub (PakistanHub) instead of the general nationality page
+            }
             $set = $cycles->filter(fn ($c) => $c->nationalities->contains('id', $country->id));
             $who = $country->demonym ? $country->demonym.' students' : 'students from '.$country->name;
             $add('from', $country->slug, route('landing.from', $country->slug), 'Scholarships for '.$who, 'Scholarships for '.Str::replaceLast('students', 'Students', $who), 'scholarships for '.$who, $set, $country->name);
         }
         $add('open', 'any-nationality', route('landing.open'), 'Scholarships open to any nationality', 'Scholarships Open to Students of Any Nationality', 'scholarships open to any nationality', $cycles->where('any_nationality', true));
+
+        // Scholarships for Pakistani students: the hub and its facets join the same lists (sitemap, footer, site map, links between pages).
+        foreach (app(PakistanHub::class)->pages() as $p) {
+            $pages[] = $p;
+        }
 
         // The Chinese Government Scholarship guide has its own layout (see CscGuide) but joins the same lists: sitemap, site map and footer.
         $csc = app(CscGuide::class)->summary();
