@@ -9,7 +9,7 @@
     <p style="margin:.75rem 0"><a href="{{ route('review.preview', $plan->public_id) }}" target="_blank" rel="noopener" style="text-decoration:underline">Open the application form (printable)</a> &middot; <a href="{{ route('review.download', $plan->public_id) }}" style="text-decoration:underline">Download the SAS application form (PDF)</a></p>
 
     <h3 style="margin:1rem 0 .25rem;font-weight:600">Documents</h3>
-    <p style="color:#6b7280;margin:0 0 .5rem">{{ $progress['ready'] }} of {{ $progress['required'] }} mandatory documents provided@if ($progress['excused']), {{ $progress['excused'] }} excused with a reason @endif.</p>
+    <p style="color:#6b7280;margin:0 0 .5rem">{{ $progress['ready'] }} of {{ $progress['required'] }} mandatory documents provided{{ $progress['excused'] ? ', '.$progress['excused'].' excused with a reason' : '' }}.</p>
     <table style="width:100%;border-collapse:collapse">
         <tbody>
         @foreach ($rows as $r)

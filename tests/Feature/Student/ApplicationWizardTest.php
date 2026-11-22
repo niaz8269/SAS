@@ -165,6 +165,26 @@ class ApplicationWizardTest extends TestCase
         $this->put(route('student.applications.form.update', $plan), ['sections' => ['contact' => ['phone' => '123456']]])->assertRedirect();
     }
 
+    public function test_staff_can_open_a_submitted_application_and_see_its_documents_including_excused_ones(): void
+    {
+        Notification::fake();
+        $student = User::factory()->create();
+        $plan = app(PlanService::class)->create($student, $this->cycle());
+        $this->completeForm($student);
+        $passport = DocumentKind::where('key', 'passport')->value('id');
+        $this->actingAs($student)->put(route('student.applications.reasons', $plan), ['cannot' => [$passport => '1'], 'reason' => [$passport => 'My passport is being renewed.']]);
+        app(ApplicationReview::class)->submit($plan->refresh(), $student);
+
+        $this->actingAs($this->staff(Role::Administrator));
+        Livewire::test(ListApplicationReviews::class)->mountTableAction('details', $plan)->assertHasNoErrors();
+
+        // The pop-up's content, exactly as the Open action builds it (a template error here once broke every Open click).
+        $rows = app(Requirements::class)->forPlan($plan->refresh());
+        $html = view('filament.application-review', ['plan' => $plan, 'rows' => $rows, 'progress' => app(Requirements::class)->progress($rows)])->render();
+        $this->assertStringContainsString('mandatory documents provided, 1 excused with a reason.', $html);
+        $this->assertStringContainsString('My passport is being renewed.', $html);
+    }
+
     public function test_staff_return_with_remarks_or_pass_and_the_right_people_are_told(): void
     {
         Notification::fake();
